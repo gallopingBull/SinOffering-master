@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 216b58d62ca9465489b40ceb6e3972f7, type: 3}
+  m_Name: WeaponData_Shotgun
+  m_EditorClassIdentifier: 
+  WeaponPrice: 25
+  AttributeDataList:
+  - UpgradeType: 0
+    AttributePrice: 15
+    AttributeValue: 0.18
+    AttributeLevel: 1
+  - UpgradeType: 0
+    AttributePrice: 25
+    AttributeValue: 0.2
+    AttributeLevel: 2
+  - UpgradeType: 0
+    AttributePrice: 35
+    AttributeValue: 0.25
+    AttributeLevel: 3
+  - UpgradeType: 1
+    AttributePrice: 15
+    AttributeValue: 1.15
+    AttributeLevel: 1
+  - UpgradeType: 1
+    AttributePrice: 25
+    AttributeValue: 1.3
+    AttributeLevel: 2
+  - UpgradeType: 1
+    AttributePrice: 35
+    AttributeValue: 1.75
+    AttributeLevel: 3
+  - UpgradeType: 2
+    AttributePrice: 35
+    AttributeValue: 7
+    AttributeLevel: 1
+  - UpgradeType: 2
+    AttributePrice: 50
+    AttributeValue: 9
+    AttributeLevel: 2
+  - UpgradeType: 2
+    AttributePrice: 75
+    AttributeValue: 12
+    AttributeLevel: 3

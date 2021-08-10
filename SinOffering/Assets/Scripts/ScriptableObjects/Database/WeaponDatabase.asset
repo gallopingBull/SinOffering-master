@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97179b4648ca86947a6ca4e8fc096cfd, type: 3}
+  m_Name: WeaponDatabase
+  m_EditorClassIdentifier: 
+  keys:
+  - Shotgun
+  - Gattling Gun
+  - RPG
+  - Dual Pistols
+  - Disc Launcher
+  values:
+  - {fileID: 11400000, guid: 1ee21732bb2cc75408bd747ca93bda1f, type: 2}
+  - {fileID: 11400000, guid: 5a24c1dd837ac3b4d8cca89c10493e57, type: 2}
+  - {fileID: 11400000, guid: 1945e095c0a5fcf42be1cc6521fe89fe, type: 2}
+  - {fileID: 11400000, guid: ebf10699134603940802e11393ac62e6, type: 2}
+  - {fileID: 11400000, guid: a923bf9a6828e17408d4195e2d5ae331, type: 2}

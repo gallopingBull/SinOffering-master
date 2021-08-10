@@ -1,0 +1,1752 @@
+fileFormatVersion: 2
+guid: 664708cfcf542634099fa7893b2b8477
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8045245811744812268
+    second: s4m_ur4i_metroid-scifi-tileset_0
+  - first:
+      213: 1240283067533465120
+    second: s4m_ur4i_metroid-scifi-tileset_1
+  - first:
+      213: 8540235037875505343
+    second: s4m_ur4i_metroid-scifi-tileset_2
+  - first:
+      213: 508688628000478647
+    second: s4m_ur4i_metroid-scifi-tileset_3
+  - first:
+      213: 4495807337789696562
+    second: s4m_ur4i_metroid-scifi-tileset_4
+  - first:
+      213: 728909416102059059
+    second: s4m_ur4i_metroid-scifi-tileset_5
+  - first:
+      213: 2498074383252531608
+    second: s4m_ur4i_metroid-scifi-tileset_6
+  - first:
+      213: -8268352517302926539
+    second: s4m_ur4i_metroid-scifi-tileset_7
+  - first:
+      213: -7739200081072074980
+    second: s4m_ur4i_metroid-scifi-tileset_8
+  - first:
+      213: 8608420242616816754
+    second: s4m_ur4i_metroid-scifi-tileset_9
+  - first:
+      213: 2317494744918155347
+    second: s4m_ur4i_metroid-scifi-tileset_10
+  - first:
+      213: 3311579465913494639
+    second: s4m_ur4i_metroid-scifi-tileset_11
+  - first:
+      213: -4457086596600093180
+    second: s4m_ur4i_metroid-scifi-tileset_12
+  - first:
+      213: 3811103298512142124
+    second: s4m_ur4i_metroid-scifi-tileset_13
+  - first:
+      213: -7050160593800243033
+    second: s4m_ur4i_metroid-scifi-tileset_14
+  - first:
+      213: -1205910501506804217
+    second: s4m_ur4i_metroid-scifi-tileset_15
+  - first:
+      213: 9101327098124941603
+    second: s4m_ur4i_metroid-scifi-tileset_16
+  - first:
+      213: -8298870083964264094
+    second: s4m_ur4i_metroid-scifi-tileset_17
+  - first:
+      213: -7074025199538837691
+    second: s4m_ur4i_metroid-scifi-tileset_18
+  - first:
+      213: 810543160459112082
+    second: s4m_ur4i_metroid-scifi-tileset_19
+  - first:
+      213: -7467052787838636321
+    second: s4m_ur4i_metroid-scifi-tileset_20
+  - first:
+      213: -937248888868384468
+    second: s4m_ur4i_metroid-scifi-tileset_21
+  - first:
+      213: 5410513607767413802
+    second: s4m_ur4i_metroid-scifi-tileset_22
+  - first:
+      213: 4598444049692534449
+    second: s4m_ur4i_metroid-scifi-tileset_23
+  - first:
+      213: -5757564848011299814
+    second: s4m_ur4i_metroid-scifi-tileset_24
+  - first:
+      213: 8938135635467559002
+    second: s4m_ur4i_metroid-scifi-tileset_25
+  - first:
+      213: -6974948791854670243
+    second: s4m_ur4i_metroid-scifi-tileset_26
+  - first:
+      213: 6141284492559128219
+    second: s4m_ur4i_metroid-scifi-tileset_27
+  - first:
+      213: -4841575684430191307
+    second: s4m_ur4i_metroid-scifi-tileset_28
+  - first:
+      213: 9097954487704086074
+    second: s4m_ur4i_metroid-scifi-tileset_29
+  - first:
+      213: -675775579675660790
+    second: s4m_ur4i_metroid-scifi-tileset_30
+  - first:
+      213: 5185897638194446852
+    second: s4m_ur4i_metroid-scifi-tileset_31
+  - first:
+      213: 2575251134314447574
+    second: s4m_ur4i_metroid-scifi-tileset_32
+  - first:
+      213: -1684971733138162339
+    second: s4m_ur4i_metroid-scifi-tileset_33
+  - first:
+      213: 4867003390368571485
+    second: s4m_ur4i_metroid-scifi-tileset_34
+  - first:
+      213: 6445531911808958819
+    second: s4m_ur4i_metroid-scifi-tileset_35
+  - first:
+      213: -590014075740192169
+    second: s4m_ur4i_metroid-scifi-tileset_36
+  - first:
+      213: -4518559229960989624
+    second: s4m_ur4i_metroid-scifi-tileset_37
+  - first:
+      213: -9001863372869808023
+    second: s4m_ur4i_metroid-scifi-tileset_38
+  - first:
+      213: -616818593223306170
+    second: s4m_ur4i_metroid-scifi-tileset_39
+  - first:
+      213: -7887474377857347142
+    second: s4m_ur4i_metroid-scifi-tileset_40
+  - first:
+      213: -322363667201740806
+    second: s4m_ur4i_metroid-scifi-tileset_41
+  - first:
+      213: 3583945092653427043
+    second: s4m_ur4i_metroid-scifi-tileset_42
+  - first:
+      213: -5044967962811337354
+    second: s4m_ur4i_metroid-scifi-tileset_43
+  - first:
+      213: -921561562908175332
+    second: s4m_ur4i_metroid-scifi-tileset_44
+  - first:
+      213: -6294132874315947971
+    second: s4m_ur4i_metroid-scifi-tileset_45
+  - first:
+      213: -7149752763982691060
+    second: s4m_ur4i_metroid-scifi-tileset_46
+  - first:
+      213: -8395081491021985810
+    second: s4m_ur4i_metroid-scifi-tileset_47
+  - first:
+      213: -2565637153418563992
+    second: s4m_ur4i_metroid-scifi-tileset_48
+  - first:
+      213: 8313309297091630858
+    second: s4m_ur4i_metroid-scifi-tileset_49
+  - first:
+      213: -6832532909159441413
+    second: s4m_ur4i_metroid-scifi-tileset_50
+  - first:
+      213: 4585749962527971777
+    second: s4m_ur4i_metroid-scifi-tileset_51
+  - first:
+      213: -7836363795931774643
+    second: s4m_ur4i_metroid-scifi-tileset_52
+  - first:
+      213: -5807176065339922500
+    second: s4m_ur4i_metroid-scifi-tileset_53
+  - first:
+      213: 8399608483381138619
+    second: s4m_ur4i_metroid-scifi-tileset_54
+  - first:
+      213: 6858896817334923056
+    second: s4m_ur4i_metroid-scifi-tileset_55
+  - first:
+      213: -401766310353376306
+    second: s4m_ur4i_metroid-scifi-tileset_56
+  - first:
+      213: 8544205257514967808
+    second: s4m_ur4i_metroid-scifi-tileset_57
+  - first:
+      213: 45041843431031880
+    second: s4m_ur4i_metroid-scifi-tileset_58
+  - first:
+      213: 7203869879159240627
+    second: s4m_ur4i_metroid-scifi-tileset_59
+  - first:
+      213: 9129305585390383052
+    second: s4m_ur4i_metroid-scifi-tileset_60
+  - first:
+      213: -6047664895309172272
+    second: s4m_ur4i_metroid-scifi-tileset_61
+  - first:
+      213: 6585133983613554313
+    second: s4m_ur4i_metroid-scifi-tileset_62
+  - first:
+      213: 2424015215899080362
+    second: s4m_ur4i_metroid-scifi-tileset_63
+  - first:
+      213: -8138545110983881208
+    second: s4m_ur4i_metroid-scifi-tileset_64
+  - first:
+      213: 2389915824508416357
+    second: s4m_ur4i_metroid-scifi-tileset_65
+  - first:
+      213: 2943305938490959147
+    second: s4m_ur4i_metroid-scifi-tileset_66
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 219
+        width: 150
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cecafb3b07476af60800000000000000
+      internalID: 8045245811744812268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 209
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026934de0ee563110800000000000000
+      internalID: 1240283067533465120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_2
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 211
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb80ae2d482058670800000000000000
+      internalID: 8540235037875505343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 209
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5df3dac993f0700800000000000000
+      internalID: 508688628000478647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_4
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 216
+        width: 70
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23aac8334f0546e30800000000000000
+      internalID: 4495807337789696562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 241
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c5334804b9d1a00800000000000000
+      internalID: 728909416102059059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_6
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 262
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899254c8a61faa220800000000000000
+      internalID: 2498074383252531608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_7
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 262
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533c3707139e04d80800000000000000
+      internalID: -8268352517302926539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_8
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 249
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f4602c786d89490800000000000000
+      internalID: -7739200081072074980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_9
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 218
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274157ee990477770800000000000000
+      internalID: 8608420242616816754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_10
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 251
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3506eaf1135692020800000000000000
+      internalID: 2317494744918155347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_11
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 242
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c604f8af715fd20800000000000000
+      internalID: 3311579465913494639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_12
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 220
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4062f74ea5f3522c0800000000000000
+      internalID: -4457086596600093180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_13
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 245
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2fb2260242c3e430800000000000000
+      internalID: 3811103298512142124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_14
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 220
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a854151b4cc82e90800000000000000
+      internalID: -7050160593800243033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_15
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 225
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70616ceb9ceb34fe0800000000000000
+      internalID: -1205910501506804217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_16
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 252
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329bf5c56c86e4e70800000000000000
+      internalID: 9101327098124941603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_17
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 236
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 261a130c0ad74dc80800000000000000
+      internalID: -8298870083964264094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_18
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 220
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54763519f8304dd90800000000000000
+      internalID: -7074025199538837691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_19
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 210
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ea942c5b0af3b00800000000000000
+      internalID: 810543160459112082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_20
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 212
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdea9c53d03bf5890800000000000000
+      internalID: -7467052787838636321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_21
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 214
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21ded0f9193ef2f0800000000000000
+      internalID: -937248888868384468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_22
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 171
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a24d46bc571061b40800000000000000
+      internalID: 5410513607767413802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_23
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 208
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6ae65ef74f0df30800000000000000
+      internalID: 4598444049692534449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 162
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14b20f86450910b0800000000000000
+      internalID: -5757564848011299814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_25
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 204
+        width: 16
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50ed421103aa0c70800000000000000
+      internalID: 8938135635467559002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_26
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 144
+        width: 76
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e56f65701043f90800000000000000
+      internalID: -6974948791854670243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_27
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 176
+        width: 6
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b961a9345b93a3550800000000000000
+      internalID: 6141284492559128219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_28
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 186
+        width: 38
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535ae5811944fccb0800000000000000
+      internalID: -4841575684430191307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_29
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 128
+        width: 51
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36e54e476d624e70800000000000000
+      internalID: 9097954487704086074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_30
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 114
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e6c81d0b92f96f0800000000000000
+      internalID: -675775579675660790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_31
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 149
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4020e160d6208f740800000000000000
+      internalID: 5185897638194446852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_32
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 121
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d20c3c23412db320800000000000000
+      internalID: 2575251134314447574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_33
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 147
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5db9b5d227cd98e0800000000000000
+      internalID: -1684971733138162339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_34
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 141
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d506a8b0cc11b8340800000000000000
+      internalID: 4867003390368571485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_35
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 99
+        width: 110
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36141d7bf11237950800000000000000
+      internalID: 6445531911808958819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_36
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 127
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752860bf259dfc7f0800000000000000
+      internalID: -590014075740192169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_37
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 116
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844dc99125ada41c0800000000000000
+      internalID: -4518559229960989624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_38
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 116
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960de7fc4f4f21380800000000000000
+      internalID: -9001863372869808023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_39
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 73
+        width: 35
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 644911ce1ce9077f0800000000000000
+      internalID: -616818593223306170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_40
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 64
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab151dcc7df0a8290800000000000000
+      internalID: -7887474377857347142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_41
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 66
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: affa2ffd3fbb68bf0800000000000000
+      internalID: -322363667201740806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_42
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 81
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369ac1eb21bbcb130800000000000000
+      internalID: 3583945092653427043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_43
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 5
+        width: 58
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67577610e5cacf9b0800000000000000
+      internalID: -5044967962811337354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_44
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 99
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14543424a4f533f0800000000000000
+      internalID: -921561562908175332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_45
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 102
+        width: 4
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d302a41af7fb6a8a0800000000000000
+      internalID: -6294132874315947971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_46
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 86
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05c1fefdb9f6cc90800000000000000
+      internalID: -7149752763982691060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_47
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 90
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee78d2becddae7b80800000000000000
+      internalID: -8395081491021985810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_48
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 91
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e21ff2a96056cd0800000000000000
+      internalID: -2565637153418563992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_49
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 80
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a07591982cece5370800000000000000
+      internalID: 8313309297091630858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_50
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 86
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb9269f487fd21a0800000000000000
+      internalID: -6832532909159441413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_51
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 66
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c99d396b4bd3af30800000000000000
+      internalID: 4585749962527971777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_52
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 60
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4141cc75a4af3390800000000000000
+      internalID: -7836363795931774643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_53
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 62
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb76345e224c86fa0800000000000000
+      internalID: -5807176065339922500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_54
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 29
+        width: 5
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb45a40a967619470800000000000000
+      internalID: 8399608483381138619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_55
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 25
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f2e4cb052bf2f50800000000000000
+      internalID: 6858896817334923056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_56
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 28
+        width: 15
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecbeaac5ba3ac6af0800000000000000
+      internalID: -401766310353376306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_57
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 3
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003643e996d139670800000000000000
+      internalID: 8544205257514967808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_58
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 2
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8444cb5615500a000800000000000000
+      internalID: 45041843431031880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_59
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b73c63cc7949f360800000000000000
+      internalID: 7203869879159240627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_60
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfee2f8f0fc1be70800000000000000
+      internalID: 9129305585390383052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_61
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 9
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d13f72d1d0621ca0800000000000000
+      internalID: -6047664895309172272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_62
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 9
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e83a3f778136b50800000000000000
+      internalID: 6585133983613554313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_63
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 4
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa67ec1fef4d3a120800000000000000
+      internalID: 2424015215899080362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_64
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e405767541e0f80800000000000000
+      internalID: -8138545110983881208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_65
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561b8e2b7cfaa2120800000000000000
+      internalID: 2389915824508416357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_metroid-scifi-tileset_66
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 0
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b252d012829b8d820800000000000000
+      internalID: 2943305938490959147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
