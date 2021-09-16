@@ -5,16 +5,13 @@ using UnityEngine.EventSystems;
 using Cinemachine;
 using UnityEngine;
 
-//weapon/ability menu manager
+// weapon/ability menu manager
 public class LevelSelection : MonoBehaviour
 {
     private GameManager gm;
     public CinemachineVirtualCamera menuCamera;
 
     public GameObject menu;
-
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +43,7 @@ public class LevelSelection : MonoBehaviour
             CameraManager.instance.SetCamera(menuCamera);
         }
 
-        //play some enter menu transition animation 
+        // play some enter menu transition animation 
     }
 
 
