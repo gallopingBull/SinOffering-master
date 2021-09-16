@@ -6,12 +6,20 @@ public class PlayerAttributes
 
     //float max_health = 0;
     //float mana = 0;
+    //
+
 
 
     //float airControl; //maybe...
     //int equipmentSize; //maybe...
 
-    //bool doubleJumpedUnlocked = false;
+}
+
+[System.Serializable]
+public class PlayerAbilities
+{
+
+    //bool doubleJumpedUnlocked = fals  e;
 
 
     //bool double_evade = false; 
@@ -24,8 +32,5 @@ public class PlayerAttributes
     //float dashAttack_time; //timer before dash attack ecexutes automatically
     //bool dashSlamUnlocked = false;
     //bool dashMeleeEndUnlocked = false; //ability that gives the player an oppurtunity
-                                        //to immidetely follow the dash attack with a stronger melee attack
-
-
-
+    //to immidetely follow the dash attack with a stronger melee attack
 }

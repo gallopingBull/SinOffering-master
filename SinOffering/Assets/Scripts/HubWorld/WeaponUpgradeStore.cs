@@ -121,7 +121,7 @@ public class WeaponUpgradeStore : MonoBehaviour
 
         int weaponAttributeLvl = 0;
 
-        //get weapon/weapon attribute/and weapon attribute level
+        // get weapon/weapon attribute/and weapon attribute level
         for (int i = 0; i < weapons.Length; i++)
         {
             if (weapons[i].GetComponent<Weapon>().GetWeaponName() == _weaponName)
@@ -132,7 +132,7 @@ public class WeaponUpgradeStore : MonoBehaviour
             }
         }
 
-        //get price
+        // get price
         for (int i = 0; i < attributes.Length; i++)
         {
             if (attributes[i].UpgradeType == upgradeType)

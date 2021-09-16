@@ -4,8 +4,6 @@
  * (map select, weapon pruchase/upgrade, and abiliy purchase/upgrade, etc).
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DisplayButton : MonoBehaviour
@@ -38,7 +36,8 @@ public class DisplayButton : MonoBehaviour
         {
             if (isLevelSelection)
             {
-                if (!ButtonPrompt.activeInHierarchy)
+                if (!ButtonPrompt.activeInHierarchy && 
+                    (!NewMenu[0].activeSelf && !NewMenu[1].activeSelf))
                     ButtonPrompt.SetActive(true);
 
                 if (ButtonPrompt.activeInHierarchy && Input.GetButtonDown("Jump"))
@@ -49,6 +48,7 @@ public class DisplayButton : MonoBehaviour
                     ButtonPrompt.SetActive(false);
                 }
             }
+
             if(((int)menuType == 0 || (int)menuType == 1) &&
                 !isLevelSelection)
             {

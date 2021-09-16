@@ -93,7 +93,7 @@ MonoBehaviour:
     m_Left: 0
     m_Right: 0
     m_Top: 0
-    m_Bottom: 0
+    m_Bottom: 150
   m_ChildAlignment: 1
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
@@ -110,6 +110,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8554751509298295173}
     m_Modifications:
+    - target: {fileID: 543838756777238292, guid: 3d5a679f5c52fae4d80a08671fb0b19c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 543838756777238292, guid: 3d5a679f5c52fae4d80a08671fb0b19c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 543838756777238292, guid: 3d5a679f5c52fae4d80a08671fb0b19c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 543838756777238292, guid: 3d5a679f5c52fae4d80a08671fb0b19c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -190
+      objectReference: {fileID: 0}
     - target: {fileID: 1989620761533466667, guid: 3d5a679f5c52fae4d80a08671fb0b19c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -198,6 +214,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ability_Name_Level_Button
       objectReference: {fileID: 0}
+    - target: {fileID: 8798084981039556607, guid: 3d5a679f5c52fae4d80a08671fb0b19c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 43e323b8717ff784d8dbf705b66ab6a7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d5a679f5c52fae4d80a08671fb0b19c, type: 3}
 --- !u!224 &1140689858501418259 stripped

@@ -54,7 +54,7 @@ public class LevelSelection : MonoBehaviour
     {
         if (menuCamera != null)
         {
-            //switch back to main camera (maybe move this back to cam manager)
+            // switch back to main camera (maybe move this back to cam manager)
             CameraManager.instance.MainCam.Priority = 12;
             CameraManager.instance.GetCurrentCam().Priority = 10;
             CameraManager.instance.SetCamera(CameraManager.instance.MainCam);
