@@ -45,7 +45,7 @@ public class EnemyController : Entity {
     // Update is called once per frame
     protected override void FixedUpdate()
     {
-        if (!isGhost && !gm.paused)
+        if (!isGhost && !gameManager.paused)
         {
             CheckIfFalling();
             GravityModifier();
@@ -54,7 +54,7 @@ public class EnemyController : Entity {
     }
     private void Update()
     {
-        if (gm.paused)
+        if (gameManager.paused)
             return;
         
         if (CanMove)
@@ -133,7 +133,7 @@ public class EnemyController : Entity {
 
                 BloodActorSprite.gameObject.SetActive(false);
                 DeParentCaller();
-                Target.GetComponent<PlayerController>().CurEnemyKills++;
+                gameManager.CurEnemyKills++;
                 camManager.RemoveCameraTargets(gameObject.transform);
 
                 print("entity (" + gameObject.name + ") getting destoryed- Explode()");
@@ -151,7 +151,7 @@ public class EnemyController : Entity {
             { 
                 Instantiate(PS_BloodExplosion, transform.position, transform.rotation);
 
-                Target.GetComponent<PlayerController>().CurEnemyKills++;
+                gameManager.CurEnemyKills++;
 
                 BloodActorSprite.gameObject.SetActive(false);
                 DeParentCaller();
@@ -186,7 +186,7 @@ public class EnemyController : Entity {
                 BloodActorSprite.gameObject.SetActive(false);
                 DeParentCaller();
 
-                Target.GetComponent<PlayerController>().CurEnemyKills++;
+                gameManager.CurEnemyKills++;
 
                 print("entity (" + gameObject.name + ") getting destoryed- DashKilled()");
                 Destroy(gameObject);

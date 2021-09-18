@@ -12,17 +12,17 @@ public class PlayerController : Entity, IWeaponStoreCustomer
 
     public bool dying = false;
 
-    //PlayerController stats
-    public float AirControl = 0; //keep value between 0 (no air control) and 1 (full air control)
+    // PlayerController stats
+    public float AirControl = 0; // keep value between 0 (no air control) and 1 (full air control)
 
-    //handles input from user 
+    // handles input from user 
     public bool InputEnabled = true;
     [HideInInspector]
     public InputHandler inputHandler;
     private List<ICommand> commands;
 
     [HideInInspector]
-    public bool AbilitiesEnabled = true; //turn off when player in areas that they can't use special abilities
+    public bool AbilitiesEnabled = true; // turn off when player in areas that they can't use special abilities
 
     [HideInInspector]
     public bool CanDoubleJump = false;
@@ -30,9 +30,9 @@ public class PlayerController : Entity, IWeaponStoreCustomer
     public bool JumpButtonHeldDown = false;
 
     //[HideInInspector]
-    public float delay = 0f; //delay between jump input
+    public float delay = 0f; // delay between jump input
     //[HideInInspector]
-    public float MAX_delay = .3f; //delay between jump input
+    public float MAX_delay = .3f; // delay between jump input
     //[HideInInspector]
     public bool delayComplete = true; 
 
@@ -55,26 +55,10 @@ public class PlayerController : Entity, IWeaponStoreCustomer
     public GameObject button;
 
     [HideInInspector]
-    public StateManager sm;
+    public StateManager StateManager;
     [HideInInspector]
     public InputDelay InputDelay;
 
-
-    /**
-     * This variables will be global variables stores in a base gm class, or base player/account class.
-     * 
-     * Move them there once it's figured out where they should go
-     * 
-     */
-    
-    [HideInInspector]
-    public int CurEnemyKills;
-
-
-    /**
-     *
-     *
-    */
 
     #endregion
 
@@ -82,30 +66,29 @@ public class PlayerController : Entity, IWeaponStoreCustomer
 
     private void Awake() { instance = this; }
     // Update is called once per frame
-    //***USE ONLY FOR PHYSICS CALCULATIONS***\\\
+    // ***USE ONLY FOR PHYSICS CALCULATIONS*** \\\
     protected override void FixedUpdate()
     {
         inputHandler.InputDelay();
         //InputDelay2();
-        //InputDelay.InputDelayHandler(state); //manages delay timers for several different input/actions
+        //InputDelay.InputDelayHandler(state); // manages delay timers for several different input/actions
         CheckIfFalling();
         GravityModifier();
         CheckFloor();
     }
   
-    //***USE ONLY FOR INPUT***\\\
+    // ***USE ONLY FOR INPUT*** \\\
     private void Update()
     {
         xRaw = Input.GetAxisRaw("Horizontal");
         yRaw = Input.GetAxisRaw("Vertical");
         //InputDelay2();
-        //InputDelay.InputDelayHandler(state); //manages delay timers for several different input/actions
+        //InputDelay.InputDelayHandler(state); // manages delay timers for several different input/actions
         
-        //print("PlayerController.cs -> Update(): " + Time.realtimeSinceStartup);
         if (inputHandler)
             InputHandler();
 
-        //spawn dust trails
+        // spawn dust trails
         if (state == State.running && IsGrounded)
         {
             if (EnableDustTrails)
@@ -114,7 +97,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer
                 {
                     if (stepRate > 0)
                     {
-                        //print("counting down until next dust taril spawns");
                         stepRate -= Time.deltaTime;
                         return;
                     }
@@ -135,41 +117,38 @@ public class PlayerController : Entity, IWeaponStoreCustomer
 
     protected override void InitActor()
     {
-        sm = GetComponent<StateManager>();
+        StateManager = GetComponent<StateManager>();
 
+        #region testing
         /*
         button = GameObject.Find("Image_Button");
         if(TestInfo.EnableDebugInfo){
             button.SetActive(false);
         }*/
-
+        #endregion
+        
         SetDefaultSpeed();
         animator = GetComponentInChildren<Animator>();
         inputHandler = GetComponent<InputHandler>();
         weaponManager = GetComponent<WeaponManager>();
-        ps = GetComponent<ParticleSystem>();
+        ps = GetComponent<ParticleSystem>(); 
         InputDelay = GetComponent<InputDelay>();
-        //weaponManager.SetWeapon(1);
     }
 
-    //Called when Player has been killed.
+    // Called when Player has been killed.
     public override void Killed()
     {
-        if (gm != null && !isInvincible)
+        if (gameManager != null && !isInvincible)
         {
             dying = true;
             if (GetComponent<DashCommand>().RadialMenu.activeInHierarchy)
-            {
                 GetComponent<DashCommand>().DisableDashAttack();
-            }
-            gm.FailedGame();
+            gameManager.FailedGame();
         }
-        //Debug.LogError("Killed()from playercontroller.cs");
+
         BloodActorSprite.gameObject.SetActive(false);
         DeParentCaller();
-
         Destroy(gameObject, .1f);
-        //Destroy(gameObject);
     }
 
     private void InputHandler()
@@ -179,14 +158,12 @@ public class PlayerController : Entity, IWeaponStoreCustomer
         if (commands != null)
         {
             for (int i = 0; i < commands.Count; i++)
-            {
                 commands[i].Execute();
-            }
             commands.Clear();
         }
     }
 
-    //only used to prevent jump spamming
+    // delay thats prevents input spamming
     private void InputDelay2()
     {
         switch (state)
@@ -316,39 +293,31 @@ public class PlayerController : Entity, IWeaponStoreCustomer
         InputEnabled = false;
     }
     
-    //testing store stuff below
 
-    
-
-    //store functions (might want to move this interface in its own class,
-    //and ill call a getter on it to get all nesecarry values)
+    // store functions (might want to move this interface in its own class,
+    // and ill call a getter on it to get all nesecarry values)
     void IWeaponStoreCustomer.PurchaseWeapon(string _weaponName)
     {
-
         foreach (GameObject weapon in weaponManager.Weapons)
         {
             if (weapon.GetComponent<Weapon>().GetWeaponName() == _weaponName)
-            {
                 weapon.GetComponent<Weapon>().WeaponAttributes.WeaponPurchased = true;
-            }
         }
-        Debug.Log("Purchased: " + _weaponName);
+        //Debug.Log("Purchased: " + _weaponName);
     }
 
     bool IWeaponStoreCustomer.CanPurchaseWeapon(int _price)
     {
-        //check if already purchased or if
-        //player has enough silver for weapon
+        // check if already purchased or if
+        // player has enough silver for weapon
 
-        if (gm.TotalSilver >= _price)
+        if (gameManager.TotalSilver >= _price)
         {
-            //Debug.Log("You have enough money to purchase");
-            gm.TotalSilver -= _price;
+            gameManager.TotalSilver -= _price;
             return true;
         }
         else
         {
-            //Debug.Log("Not enough silver to purchase");
             return false;
         }
     }
@@ -378,18 +347,14 @@ public class PlayerController : Entity, IWeaponStoreCustomer
     }
     bool IWeaponStoreCustomer.CanPurchaseWeaponUpgrade(int _price)
     {
-        Debug.Log("silver: " + gm.TotalSilver);
-        if (gm.TotalSilver >= _price)
+        //Debug.Log("silver: " + gm.TotalSilver);
+        if (gameManager.TotalSilver >= _price)
         {
-            gm.TotalSilver -= _price;
-            Debug.Log("You have enough money to purchase");
+            gameManager.TotalSilver -= _price;
+            //Debug.Log("You have enough money to purchase");
             return true;
         }
-        else
-        {
-            Debug.Log("Not enough silver to purchase");
-            return false;
-        }
+        return false;
     }
     #endregion
 }

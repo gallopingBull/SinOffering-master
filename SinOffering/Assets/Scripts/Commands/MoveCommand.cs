@@ -56,7 +56,7 @@ public class MoveCommand : ICommand {
                 */
                 GetComponent<Entity>().rb.velocity = new Vector3(GetComponent<Entity>().dir * GetComponent<Entity>().Speed * (Time.fixedDeltaTime*TimeScale.player), GetComponent<Entity>().rb.velocity.y);
 
-                GetComponent<PlayerController>().sm.EnterState(Entity.State.running);
+                GetComponent<PlayerController>().StateManager.EnterState(Entity.State.running);
             }
 
             //deacelerate horizontal movement while player is in air falling allows for some Air Control

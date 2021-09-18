@@ -155,15 +155,15 @@ public class WeaponUpgradeStore : MonoBehaviour
                 + " Level: " + weaponAttributeLvl 
                 + " || weaponType: " + _weaponName);
 
-            //refactor or find another method to change the button color
-            //when upgrade is purchased. I think maybe applying
-            //some observer patter for buttons. idk...
+            // refactor or find another method to change the button color
+            // when upgrade is purchased. I think maybe applying
+            // some observer patter for buttons. idk...
             _button.InitUpgradeButton(weapon, weaponData);
         }
         silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI();
     }
 
-    //customer/player is assigned at store trigger (DisplayButton.cs)
+    // customer/player is assigned at store trigger (DisplayButton.cs)
     public void AssignCustomer(IWeaponStoreCustomer _customer)
     {
         customer = _customer;

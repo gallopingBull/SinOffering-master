@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AlterShield : MonoBehaviour
 {
-    private PlayerController pc;
+    GameManager gameManager;
 
     private int curkill;
     private int difference;
@@ -12,14 +12,14 @@ public class AlterShield : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        pc = PlayerController.instance;
+        gameManager = GameManager.instance;
         killRequired = GetComponentInParent<Crates>().EnemyKilledMAX;
-        difference = pc.CurEnemyKills;
+        difference = gameManager.CurEnemyKills;
     }
 
     private void Update()
     {
-        curkill = (pc.CurEnemyKills - difference);
+        curkill = (gameManager.CurEnemyKills - difference);
         if (curkill >= killRequired)
         {
             Destroy(gameObject);

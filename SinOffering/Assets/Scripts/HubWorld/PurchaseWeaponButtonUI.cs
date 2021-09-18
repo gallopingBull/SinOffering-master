@@ -6,7 +6,7 @@ public class PurchaseWeaponButtonUI : MonoBehaviour
 {
     public string ItemName;
 
-    //UI Elements
+    // UI Elements
     [HideInInspector]
     public TextMeshProUGUI ItemName_Text;
     [HideInInspector]

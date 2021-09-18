@@ -9,7 +9,7 @@ public class Crates : MonoBehaviour {
     public AudioClip crateObtainedClip;
 
     private PlayerController player;
-    private GameManager gm;
+    private GameManager gameManager;
 
     private int maxWeaponIndex;
 
@@ -27,8 +27,8 @@ public class Crates : MonoBehaviour {
     private void Awake()
     {
         player = PlayerController.instance;
-        gm = GameManager.instance;
-        difference = player.CurEnemyKills;
+        gameManager = GameManager.instance;
+        difference = gameManager.CurEnemyKills;
     }
 
     private void Start()
@@ -43,18 +43,18 @@ public class Crates : MonoBehaviour {
         {
             if (isAlter)
             {
-                curkill = (player.CurEnemyKills - difference);
+                curkill = (gameManager.CurEnemyKills - difference);
                 if (curkill >= EnemyKilledMAX)
                 {
                     SoundManager.PlaySound(crateObtainedClip);
-                    gm.AddPoint();
+                    gameManager.AddPoint();
                     GenerateWeapon();
                 }
             }
             else
             {
                 SoundManager.PlaySound(crateObtainedClip);
-                gm.AddPoint();
+                gameManager.AddPoint();
                 GenerateWeapon();
             }
         }
@@ -66,9 +66,8 @@ public class Crates : MonoBehaviour {
         randWeapon = Random.Range(0, maxWeaponIndex);
 
         while (player.weaponManager.GetComponent<WeaponManager>().CurWeapon == randWeapon)
-        {
             randWeapon = Random.Range(0, maxWeaponIndex);
-        }
+
         prevWeapon = player.weaponManager.GetComponent<WeaponManager>().CurWeapon;
         player.weaponManager.GetComponent<WeaponManager>().EquipWeapon(randWeapon);
         Destroy(gameObject);
@@ -76,20 +75,6 @@ public class Crates : MonoBehaviour {
 
     private void AddCrateToCamTargets()
     {
-
-        gm.camManager.AddCameraTargets(gameObject.transform, 30f);
-
-        /*
-        if (MultiTargetCam.instance.enabled &&
-            MultiTargetCam.instance.AddCrates)
-        {
-            MultiTargetCam.instance.targets.Add(gameObject.transform);
-        }
-        */
+        gameManager.camManager.AddCameraTargets(gameObject.transform, 30f);
     }
-
-    /*private Weapon GenerateWeapon()
-    {
-        return weapon = Weapons[Random.Range(0, Weapons.Length)]; 
-    }*/
 }

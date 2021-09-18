@@ -29,7 +29,7 @@ public class JumpCommand : ICommand {
         
             pc.rb.AddForce(Vector3.up * pc.JumpSpeed);
             //change state
-            pc.sm.EnterState(Entity.State.Jumping);
+            pc.StateManager.EnterState(Entity.State.Jumping);
             return;
         }
 
@@ -47,7 +47,7 @@ public class JumpCommand : ICommand {
                     
                 pc.rb.AddForce(Vector3.up * pc.JumpSpeed);
                 //change state
-                pc.sm.EnterState(Entity.State.Jumping);
+                pc.StateManager.EnterState(Entity.State.Jumping);
                 return;
                
             }
@@ -71,7 +71,7 @@ public class JumpCommand : ICommand {
 
                     pc.rb.AddForce(Vector3.up * pc.JumpSpeed);
                     //change state
-                    pc.sm.EnterState(Entity.State.Jumping);
+                    pc.StateManager.EnterState(Entity.State.Jumping);
                 }
                 return;
             }

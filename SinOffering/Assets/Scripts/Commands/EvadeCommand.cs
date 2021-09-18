@@ -77,7 +77,7 @@ public class EvadeCommand : ICommand {
 
         //pc.rb.velocity = Vector3.zero; 
         
-        pc.sm.EnterState(Entity.State.evading);
+        pc.StateManager.EnterState(Entity.State.evading);
         EvadeCount++;
         evadeCollider.transform.position = pc.transform.position;
         evadeCollider.transform.parent = pc.transform;
@@ -144,7 +144,7 @@ public class EvadeCommand : ICommand {
         }*/
         yield return new WaitForSeconds(.3f);
        
-        pc.sm.ExitState(Entity.State.evading);
+        pc.StateManager.ExitState(Entity.State.evading);
         evadeCollider.transform.parent = null;
         evadeCollider.transform.position = new Vector3(100, 100, 100);
         StopCoroutine("EvadeComplete");

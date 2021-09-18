@@ -160,7 +160,7 @@ public class DashCommand : ICommand
                     RadialCounterBar.fillAmount = radialCounterValue;
                 }
 
-                pc.sm.ExitState(Entity.State.dashing);
+                pc.StateManager.ExitState(Entity.State.dashing);
                 dashState = DashState.completed;
 
                 if (dashState != DashState.inDashAttack &&
@@ -376,7 +376,7 @@ public class DashCommand : ICommand
     private IEnumerator Dashing()
     {
         dashState = DashState.inDashAttack;
-        pc.sm.EnterState(Entity.State.dashing);
+        pc.StateManager.EnterState(Entity.State.dashing);
 
         if (targets.Count > 0)
         {
@@ -421,7 +421,7 @@ public class DashCommand : ICommand
         yield return new WaitForSeconds(.01f); //delay before dash attack finishes
         DisableDashAttack();
 
-        pc.sm.ExitState(Entity.State.dashing);
+        pc.StateManager.ExitState(Entity.State.dashing);
         dashState = DashState.completed;
 
         StopCoroutine(Dashing());

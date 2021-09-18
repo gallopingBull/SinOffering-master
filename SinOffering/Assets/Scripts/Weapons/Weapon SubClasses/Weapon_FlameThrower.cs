@@ -32,7 +32,7 @@ public class Weapon_FlameThrower : Weapon {
                      AmmountCamShake, SmoothTransition);
     }
 
-    protected override void MoveToSocket(int dir)
+    protected override void MoveWeaponToSocket(int dir)
     {
         if (dir == 1)
         {

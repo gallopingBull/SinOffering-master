@@ -5,7 +5,7 @@ public class Weapon_DualPistols : Weapon {
     public override void InitWeapon() {
         MaxAmmo = Ammo;
     }
-    public override void FlipWeapon(int dir) { }
+    public override void FlipWeaponSprite(int dir) { }
 
     public override void FireWeapon()
     {

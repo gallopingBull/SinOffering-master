@@ -17,12 +17,8 @@ public class DisplayButton : MonoBehaviour
         WeaponUpgradeMenu,
         AbilityUpgradeMenus
     }
-
     public MenuType menuType;
-
-
     private MenuManager weaponMenuManager;
-
 
     private void Start()
     {
@@ -42,7 +38,7 @@ public class DisplayButton : MonoBehaviour
 
                 if (ButtonPrompt.activeInHierarchy && Input.GetButtonDown("Jump"))
                 {
-                    //stop player
+                    // stop player
                     PlayerController.instance.rb.velocity = Vector3.zero;
                     NewMenu[0].SetActive(true);
                     ButtonPrompt.SetActive(false);
@@ -57,13 +53,12 @@ public class DisplayButton : MonoBehaviour
 
                 if (ButtonPrompt.activeInHierarchy && Input.GetButtonDown("Jump"))
                 {
-                    //assign customer
+                    // assign customer
                     IWeaponStoreCustomer customer = other.GetComponent<IWeaponStoreCustomer>();
                     weaponMenuManager.GetComponent<WeaponStore>().AssignCustomer(customer);
                     weaponMenuManager.GetComponent<WeaponUpgradeStore>().AssignCustomer(customer);
                     
-                    
-                    //stop player
+                    // stop player
                     PlayerController.instance.rb.velocity = Vector3.zero;
                     weaponMenuManager.EnterState((int)MenuManager.UpgradeMenu.StoreSelectionMenu);
                     ButtonPrompt.SetActive(false);
@@ -76,11 +71,11 @@ public class DisplayButton : MonoBehaviour
 
                 if (ButtonPrompt.activeInHierarchy && Input.GetButtonDown("Jump"))
                 {
-                    //assign customer
+                    // assign customer
                     //IWeaponStoreCustomer customer = other.GetComponent<IWeaponStoreCustomer>();
                     //weaponMenuManager.GetComponent<WeaponStore>().AssignCustomer(customer);
 
-                    //stop player
+                    // stop player
                     PlayerController.instance.rb.velocity = Vector3.zero;
                     weaponMenuManager.EnterState((int)MenuManager.UpgradeMenu.AbilityUpgradeMenu);
                     ButtonPrompt.SetActive(false);

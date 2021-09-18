@@ -12,7 +12,7 @@ public class Weapon_Laser : Weapon {
 
     public override void InitWeapon()
     {
-        FlipWeapon(pc.dir);
+        FlipWeaponSprite(pc.dir);
         ModifyEntitySpeed(JumpSpeedModifier, RunSpeedModifier);
     }
     public override void FireWeapon()
@@ -31,7 +31,7 @@ public class Weapon_Laser : Weapon {
                      AmmountCamShake, SmoothTransition);
     }
 
-    protected override void MoveToSocket(int dir)
+    protected override void MoveWeaponToSocket(int dir)
     {
         //print("moce to socket called in weapoin_laser");
         if (dir == 1)

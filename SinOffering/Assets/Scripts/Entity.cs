@@ -59,7 +59,7 @@ public abstract class Entity : MonoBehaviour {
 
     protected float xPos, yPos; //actor's position for the next frame
 
-    protected GameManager gm;
+    protected GameManager gameManager;
     protected CameraManager camManager;
     public List<Collider> colliders;
 
@@ -100,7 +100,7 @@ public abstract class Entity : MonoBehaviour {
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        gm = GameManager.instance;
+        gameManager = GameManager.instance;
         camManager = CameraManager.instance; 
 
         InitActor();
@@ -320,7 +320,7 @@ public abstract class Entity : MonoBehaviour {
                 //flip weapon sprite
                 if (GetComponent<PlayerController>().EquippedWeapon != null)
                 {
-                    GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeapon(GetComponent<PlayerController>().dir);
+                    GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(GetComponent<PlayerController>().dir);
                 }
             }
         }
@@ -336,7 +336,7 @@ public abstract class Entity : MonoBehaviour {
                 //flip weapon sprite
                 if (GetComponent<PlayerController>().EquippedWeapon != null)
                 {
-                    GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeapon(GetComponent<PlayerController>().dir);
+                    GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(GetComponent<PlayerController>().dir);
                 }
             }
         }

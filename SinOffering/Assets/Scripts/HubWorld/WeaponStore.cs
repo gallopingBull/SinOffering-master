@@ -19,9 +19,8 @@ public class WeaponStore : MonoBehaviour
 
     public void InitWeaponStore(GameObject menu)
     {
-        //buttons for weapon or upgrades that haven't been purchased yet
-        //should be made interactable reading in data from inventory.CS
-        //...
+        // buttons for weapon or upgrades that haven't been purchased yet
+        // should be made interactable reading in data from inventory.CS ...
 
         if (menuButtons.Length == 0)
             SetMenuButtons(menu);
@@ -51,7 +50,7 @@ public class WeaponStore : MonoBehaviour
         }
     }
 
-    //initilaize buttons' with weapon   data 
+    // initilaize buttons with correct weapon data 
     public void InitButton(PurchaseWeaponButtonUI _button, WeaponData _weaponData, string _weaponName, bool purchased)
     {
         _button.ItemName_Text.text = _weaponName;
@@ -77,7 +76,7 @@ public class WeaponStore : MonoBehaviour
         }
     }
 
-    //customer/player is assigned at store trigger (DisplayButton.cs)
+    // customer/player is assigned at store trigger (DisplayButton.cs)
     public void AssignCustomer(IWeaponStoreCustomer _customer)
     {
         customer = _customer;

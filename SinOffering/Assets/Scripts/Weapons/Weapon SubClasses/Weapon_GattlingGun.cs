@@ -35,7 +35,7 @@ public class Weapon_GattlingGun : Weapon {
         weaponReady = true;
         weaponCharged = false;
         canFire = false;
-        FlipWeapon(pc.dir);
+        FlipWeaponSprite(pc.dir);
         ModifyEntitySpeed(JumpSpeedModifier, RunSpeedModifier);
     }
 
@@ -43,7 +43,7 @@ public class Weapon_GattlingGun : Weapon {
 
 
 
-    protected override void MoveToSocket(int dir)
+    protected override void MoveWeaponToSocket(int dir)
     {
         /*if (muzzleFire_Light != null)
         {

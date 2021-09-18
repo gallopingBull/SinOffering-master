@@ -4,6 +4,7 @@ using TMPro;
 
 public class PurchaseUpgradeButtonUI : MonoBehaviour
 {
+    #region variables
     [HideInInspector]
     public string WeaponName;
     [HideInInspector]
@@ -11,8 +12,7 @@ public class PurchaseUpgradeButtonUI : MonoBehaviour
     
     public WeaponUpgradeTypes.UpgradeType UpgradeType;
     
-
-    //UI Elements
+    // UI Elements
     [HideInInspector]
     public TextMeshProUGUI UpgradeName_Text;
 
@@ -42,7 +42,9 @@ public class PurchaseUpgradeButtonUI : MonoBehaviour
     private bool buttonInit = false;
 
     public bool ButtonInit { get => buttonInit; private set => buttonInit = value; }
+    #endregion
 
+    #region functions
     private void Awake()
     {
         Upgrade_Button = GetComponent<Button>();
@@ -72,8 +74,6 @@ public class PurchaseUpgradeButtonUI : MonoBehaviour
         NextUpgradeVal_Text = 
             transform.Find("Next Level UI Upgrades").transform.Find("Text_UpgradeValue").GetComponent<TextMeshProUGUI>();
     }
-
-
 
     public void InitUpgradeButton(Weapon weapon, WeaponData _weaponData)
     {
@@ -112,4 +112,6 @@ public class PurchaseUpgradeButtonUI : MonoBehaviour
         for (int i = 0; i < level; i++)
             UpgradeLevelImages[i].color = Color.red;
     }
+
+    #endregion
 }

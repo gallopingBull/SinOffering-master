@@ -8,11 +8,11 @@ public class Weapon_RPG : Weapon {
     public override void InitWeapon()
     {
         MaxAmmo = Ammo;
-        FlipWeapon(pc.dir);
+        FlipWeaponSprite(pc.dir);
         ModifyEntitySpeed(JumpSpeedModifier, RunSpeedModifier);
     }
 
-    protected override void MoveToSocket(int dir)
+    protected override void MoveWeaponToSocket(int dir)
     {
         /*
         if (muzzleFire_Light != null)

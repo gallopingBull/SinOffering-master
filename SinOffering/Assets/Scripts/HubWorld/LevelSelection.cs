@@ -25,8 +25,8 @@ public class LevelSelection : MonoBehaviour
         if (Input.GetButtonDown("Fire2"))
         {
             PlayerController.instance.EnableInput();
-            //play some buttton animation 
-            //play some exit menu transition animation 
+            // play some buttton animation 
+            // play some exit menu transition animation 
             gameObject.SetActive(false);
 
         }

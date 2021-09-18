@@ -11,11 +11,10 @@ public class GameManager : MonoBehaviour {
 
     public bool paused; 
     public bool SpawnCrates = false; 
-    //crate spawn  locations
+    // crate spawn  locations
     public Transform[] spawnLocs;
     private int lastSpawnLoc;
     public GameObject Crate;
-
 
     public bool gameCompleted;
 
@@ -80,29 +79,21 @@ public class GameManager : MonoBehaviour {
         pointsText = GameObject.Find("Text_PointsHUD").GetComponent<Text>();
         instance = this;
     }
-    // Use this for initialization
+
     void Start () {
         camManager = CameraManager.instance;
-        /*
-        if (!SoundManager.MusicSource.isPlaying) {
-
-            SoundManager.PlayMusicTrack();
-        }*/
+        
+        //if (!SoundManager.MusicSource.isPlaying)
+            //SoundManager.PlayMusicTrack();
 
         if (SpawnCrates)
-        {
             Invoke("SpawnCrate", 1f);
-        }
-            
     }
 	
-	// Update is called once per frame
 	void FixedUpdate () {
         if (points == MaxPoints)
-        {
-           WonGame();
-        }
-	}
+            WonGame();
+    }
 
     private void WonGame()
     {
@@ -110,9 +101,7 @@ public class GameManager : MonoBehaviour {
         {
             Time.timeScale = 1f;
             if (RadialMenu.activeInHierarchy)
-            {
                 RadialMenu.SetActive(false);
-            }
         }
       
         gameCompleted = true;
@@ -169,16 +158,12 @@ public class GameManager : MonoBehaviour {
 
     private void SpawnCrate()
     {
-
         int locIndex = Random.Range(0, spawnLocs.Length);
 
         while (locIndex == lastSpawnLoc)
-        {
             locIndex = Random.Range(0, spawnLocs.Length);
-        }
-        //print("localIndex: " + locIndex);
+
         Instantiate(Crate, spawnLocs[locIndex].position, spawnLocs[locIndex].rotation);
- 
         lastSpawnLoc = locIndex;
     }
 }

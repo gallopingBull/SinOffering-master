@@ -122,7 +122,6 @@ public class MenuManager : MonoBehaviour
         switch ((UpgradeMenu)state)
         {
             case UpgradeMenu.StoreSelectionMenu:
-                Debug.Log("exit state - storeSelectionMenu");
                 HideMenu(state);
                 if (closeMenu)
                 {
@@ -138,32 +137,26 @@ public class MenuManager : MonoBehaviour
             case UpgradeMenu.WeaponPurchaseMenu:
                 HideMenu(state);
                 HideMenu(menus.Length - 1);
-
-
                 EnterState((int)UpgradeMenu.StoreSelectionMenu);
                 break;  
-            case UpgradeMenu.WeaponUpgradeMenu:
 
+            case UpgradeMenu.WeaponUpgradeMenu:
                 GetComponent<WeaponUpgradeStore>().ResetMenu();
                 HideMenu(state);
                 HideMenu(menus.Length - 1);
-
                 EnterState((int)UpgradeMenu.StoreSelectionMenu);
                 break;
 
             case UpgradeMenu.AbilityUpgradeMenu:
                 HideMenu(0);
-
                 yield return new WaitForSeconds(.25f);
                 SwitchToMainCamera();
                 closeMenu = false;
-      
                 yield return new WaitForSeconds(.5f);
                 EnablePrompt = true;
                 PlayerController.instance.EnableInput();
                 break;
 
-            
             default:
                 break;
         }
@@ -188,13 +181,13 @@ public class MenuManager : MonoBehaviour
     }
     private void HideMenu(int index)
     {
-        //play some buttton animation 
-        //play some exit menu transition animation 
+        // play some buttton animation 
+        // play some exit menu transition animation 
         menus[index].SetActive(false);
     }
     private void DisplayMenu(int index)
     {
-        //play some enter menu transition animation 
+        // play some enter menu transition animation 
         menus[index].SetActive(true);
     }
     private void InitStore(GameObject menu, UpgradeMenu _menu)
