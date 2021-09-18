@@ -2069,7 +2069,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponHeight: 0.1
-  speed: 1
 --- !u!4 &242246496 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4682259121930826, guid: f0a2d0555798fcb4e8e37723ae88a02b, type: 3}
@@ -4148,7 +4147,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponHeight: 0.1
-  speed: 1
 --- !u!4 &433336431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4173982503607974, guid: 3e58316648a83424688565adaceb19fe, type: 3}
@@ -6993,7 +6991,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponHeight: 0.1
-  speed: 1
 --- !u!1 &847193833
 GameObject:
   m_ObjectHideFlags: 0
@@ -7183,7 +7180,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponHeight: 0.1
-  speed: 1
 --- !u!1001 &855103984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8637,7 +8633,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponHeight: 0.1
-  speed: 1
 --- !u!1001 &950868549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10524,6 +10519,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1052624439}
     m_Modifications:
+    - target: {fileID: 546543049, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 240950235}
+    - target: {fileID: 546543049, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 240950235}
+    - target: {fileID: 546543049, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 546543049, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetPosition
+      objectReference: {fileID: 0}
     - target: {fileID: 787066038, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: menuCameras.Array.data[0]
       value: 
@@ -10536,6 +10547,38 @@ PrefabInstance:
       propertyPath: menuCameras.Array.data[2]
       value: 
       objectReference: {fileID: 195470969}
+    - target: {fileID: 1016923664, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 847301432}
+    - target: {fileID: 1016923664, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 847301432}
+    - target: {fileID: 1016923664, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016923664, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetPosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055213038, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 430762291}
+    - target: {fileID: 1055213038, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 430762291}
+    - target: {fileID: 1055213038, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055213038, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetPosition
+      objectReference: {fileID: 0}
     - target: {fileID: 1079665464, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -10636,6 +10679,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 717630153}
+    - target: {fileID: 5329070555518875932, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: WeaponHeight
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329070555644734535, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: WeaponHeight
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329070556185421417, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: WeaponHeight
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329070556924100873, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: speed
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329070556924100873, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: WeaponHeight
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329070557423058299, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: WeaponHeight
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 5769250402269947642, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 

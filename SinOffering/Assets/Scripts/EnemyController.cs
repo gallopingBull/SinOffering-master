@@ -89,7 +89,6 @@ public class EnemyController : Entity {
 
     public void ChangeSprite()
     {
-        //print("change sprite called");
         GetComponentInChildren<SpriteRenderer>().sprite = slicedSprite;
     }
 
@@ -100,8 +99,7 @@ public class EnemyController : Entity {
         {
             Speed = Speed * AggroSpeedMultiplier;
             life = life * AggroLifeMultiplier;
-            EnableFire(); 
-            //GetComponentInChildren<SpriteRenderer>().color = Color.red; 
+            EnableFire();
         }
     }
 

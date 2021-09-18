@@ -1,21 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// 
+/// moves weapon sprite objects in scene for weapon store to show
+/// purchase_weapon_button is seleceted. 
+/// 
+/// </summary>
 public class ChangeWeaponPosition : MonoBehaviour
 {
     public float WeaponHeight = 1f;
-    public float speed = 1f;
-    private bool canMove = false; 
+    
     private Vector3 originalPos;
+    private GameObject spriteObect;
+    
+    //public float speed = 1f;
+    //private bool canMove = false; 
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         originalPos = transform.position; 
     }
 
-    // Update is called once per frame
+    #region smooth interpolation test
+
     /*void Update()
     {
         if (canMove)
@@ -37,19 +44,16 @@ public class ChangeWeaponPosition : MonoBehaviour
         } 
     }*/
 
+    #endregion  
+
     public void MoveWeapon()
     {
-        //canMove = true;
-
         transform.position = Vector3.MoveTowards(transform.position,
             new Vector3(originalPos.x, originalPos.y + WeaponHeight, originalPos.z),
             1);
-
     }
     public void ResetPosition()
     {
         transform.position = Vector3.MoveTowards(transform.position, originalPos, 1);
-        //canMove = true;
-        
     }
 }

@@ -1935,6 +1935,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3311543451945702957}
     m_Modifications:
+    - target: {fileID: 2585636, guid: 462ebc1591899b341926407a9cbc50fb, type: 3}
+      propertyPath: speed
+      value: 11.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585636, guid: 462ebc1591899b341926407a9cbc50fb, type: 3}
+      propertyPath: WeaponHeight
+      value: 14.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 544816650, guid: 462ebc1591899b341926407a9cbc50fb, type: 3}
+      propertyPath: speed
+      value: 11.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 544816650, guid: 462ebc1591899b341926407a9cbc50fb, type: 3}
+      propertyPath: WeaponHeight
+      value: 14.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 687450961, guid: 462ebc1591899b341926407a9cbc50fb, type: 3}
+      propertyPath: speed
+      value: 11.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 687450961, guid: 462ebc1591899b341926407a9cbc50fb, type: 3}
+      propertyPath: WeaponHeight
+      value: 14.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517956918, guid: 462ebc1591899b341926407a9cbc50fb, type: 3}
+      propertyPath: speed
+      value: 11.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517956918, guid: 462ebc1591899b341926407a9cbc50fb, type: 3}
+      propertyPath: WeaponHeight
+      value: 14.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950339908, guid: 462ebc1591899b341926407a9cbc50fb, type: 3}
+      propertyPath: speed
+      value: 11.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950339908, guid: 462ebc1591899b341926407a9cbc50fb, type: 3}
+      propertyPath: WeaponHeight
+      value: 14.24
+      objectReference: {fileID: 0}
     - target: {fileID: 5329070555489537224, guid: 462ebc1591899b341926407a9cbc50fb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0

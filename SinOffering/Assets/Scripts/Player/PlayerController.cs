@@ -151,6 +151,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer
         Destroy(gameObject, .1f);
     }
 
+    // handles command buffer
     private void InputHandler()
     {
         commands = inputHandler.HandleInput();
@@ -280,7 +281,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer
            delay = 0;
        }*/
     }
-
 
     public void EnableInput()
     {
