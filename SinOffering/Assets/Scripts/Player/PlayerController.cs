@@ -305,7 +305,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer
         }
         //Debug.Log("Purchased: " + _weaponName);
     }
-
     bool IWeaponStoreCustomer.CanPurchaseWeapon(int _price)
     {
         // check if already purchased or if
@@ -321,7 +320,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer
             return false;
         }
     }
-
     void IWeaponStoreCustomer.PurchaseWeaponUpgrade(string _weaponName, WeaponUpgradeTypes.UpgradeType upgradeType)
     {
         foreach (GameObject weapon in weaponManager.Weapons)

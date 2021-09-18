@@ -2,10 +2,9 @@ using System.Collections.Generic;
 using System.Collections;
 using Cinemachine;
 using UnityEngine.UI;
-
 using UnityEngine;
 
-//weapon/ability menu manager
+// weapon/ability menu manager
 public class MenuManager : MonoBehaviour
 {
     [HideInInspector]
@@ -28,10 +27,8 @@ public class MenuManager : MonoBehaviour
     private float Delay = 1f;
     private bool closeMenu = false;
 
-
     private Dictionary<string, WeaponData> weaponDatabase;
     private WeaponData weaponData;
-
 
     private void Start()
     {
@@ -41,30 +38,21 @@ public class MenuManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire2"))
         {
-            //this gets executed twice with weapon upgrade store.
-            Debug.Log("press back");
-            Debug.Log("closeMenu (precondition) = " + closeMenu);
-            if ((int)currentMenu == 0 
-                && menus[0].activeInHierarchy)
-            {
+            // press back button while in menu this gets 
+            // executed twice with weapon upgrade store.
+            if ((int)currentMenu == 0 && menus[0].activeInHierarchy)
                 closeMenu = true;
-                Debug.Log("closeMenu (post-condition) = " + closeMenu);
-            }
-                
+
             ExitState((int)currentMenu);
         }
     }
-
-
     public void EnterState(int state)
     {
         PlayerController.instance.DisableInput();
-
         currentMenu = (UpgradeMenu)state;
         Debug.Log("enterstate() || state = " + (UpgradeMenu)state);
         StartCoroutine("Enter_State");
     }
-
     private IEnumerator Enter_State()
     {
         switch (currentMenu)
@@ -112,7 +100,6 @@ public class MenuManager : MonoBehaviour
         }
         StopCoroutine("Enter_State");
     }
-
     public void ExitState(int state)
     {
         StartCoroutine(Exit_State(state));   
@@ -168,10 +155,8 @@ public class MenuManager : MonoBehaviour
         {
             CameraManager.instance.GetCurrentCam().Priority = 0;
             menuCameras[index].Priority = 12;
-
             CameraManager.instance.SetCamera(menuCameras[index]);
         }
-        
     }
     private void SwitchToMainCamera()
     {
@@ -204,7 +189,6 @@ public class MenuManager : MonoBehaviour
             case UpgradeMenu.WeaponUpgradeMenu:
                 GetComponent<WeaponUpgradeStore>().InitWeaponUpgradeStore(menu);
                 break;
-
 
             case UpgradeMenu.AbilityUpgradeMenu:
                 //GetComponent<WeaponUpgradeStore>().InitWeaponUpgradeStore(menu);
