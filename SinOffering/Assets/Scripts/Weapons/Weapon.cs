@@ -51,7 +51,7 @@ public abstract class Weapon : MonoBehaviour
     public GameObject SpawnLocL, SpawnLocR;
 
     // Variables for weapon spread
-    //public bool EnableSpread; //whether or not the weapon has any projectile spread
+    //public bool EnableSpread; // whether or not the weapon has any projectile spread
     public float MinSpread, MaxSpread;
 
     public AudioClip fireClip;
@@ -289,12 +289,10 @@ public abstract class Weapon : MonoBehaviour
             canFire = true;
         }
     }
-
     protected virtual void PPMCaller()
     {
         postProcessManager.OnFire(.5f, 1, true);
     }
-
     protected Quaternion CalculateSpread()
     {
         Vector3 randDir = (Vector3.right).normalized;
@@ -302,7 +300,6 @@ public abstract class Weapon : MonoBehaviour
         float spread = Random.Range(MinSpread, MaxSpread);
         return Quaternion.Euler(new Vector3(0, 0, angle + spread));
     }
-
 
     #endregion
 }

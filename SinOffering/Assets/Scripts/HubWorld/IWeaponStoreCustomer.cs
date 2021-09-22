@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//player uses this interface
+// player implements this interface for weapon store
 public interface IWeaponStoreCustomer 
 {
     void PurchaseWeapon(string _weaponName);

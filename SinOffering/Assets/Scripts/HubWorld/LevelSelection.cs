@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using Cinemachine;
 using UnityEngine;
 
-// Enable Level selection menu
+// open and close Level selection menu
 public class LevelSelection : MonoBehaviour
 {
     private GameManager gameManager;

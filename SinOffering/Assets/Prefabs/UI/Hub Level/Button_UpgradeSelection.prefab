@@ -1670,7 +1670,7 @@ GameObject:
   - component: {fileID: 8659883436991194701}
   - component: {fileID: 5642894050067788429}
   - component: {fileID: 2143260738339318050}
-  - component: {fileID: 4494864184144867620}
+  - component: {fileID: 390277013072738015}
   m_Layer: 19
   m_Name: Button_UpgradeSelection
   m_TagString: Untagged
@@ -1797,7 +1797,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4494864184144867620
+--- !u!114 &390277013072738015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1806,13 +1806,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7212766694023960195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f8556c597336e048b794b582346b4b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 52b67dbeb46c321438bfc789e14895a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponName: 
   UpgradeName: 
   UpgradeType: 0
-  UpgradeLevel: 1
   UpgradeName_Text: {fileID: 0}
   WeapomName_Text: {fileID: 0}
   Price_Text: {fileID: 0}

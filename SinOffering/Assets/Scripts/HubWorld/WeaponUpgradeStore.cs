@@ -81,7 +81,7 @@ public class WeaponUpgradeStore : MonoBehaviour
             if (i > weapons.Length)
                 return;
 
-            PurchaseUpgradeButtonUI[] upgradeButton = upgradePanels[i].gameObject.GetComponentsInChildren<PurchaseUpgradeButtonUI>();
+            WeaponUpgradeButton[] upgradeButton = upgradePanels[i].gameObject.GetComponentsInChildren<WeaponUpgradeButton>();
 
             for (int j = 0; j < upgradeButton.Length; j++)
             {
@@ -100,9 +100,9 @@ public class WeaponUpgradeStore : MonoBehaviour
         }
     }
 
-    public void InitUpgradeButton(PurchaseUpgradeButtonUI _button, WeaponData _weaponData, Weapon _weapon)
+    public void InitUpgradeButton(WeaponUpgradeButton _button, WeaponData _weaponData, Weapon _weapon)
     {
-        PurchaseUpgradeButtonUI tmpButton = _button;
+        WeaponUpgradeButton tmpButton = _button;
 
         tmpButton.InitUpgradeButton(_weapon, _weaponData);
 
@@ -110,7 +110,7 @@ public class WeaponUpgradeStore : MonoBehaviour
             _button.UpgradeType, _button)); 
     }
 
-    private void PurchaseWeaponUpgrade(string _weaponName, WeaponUpgradeTypes.UpgradeType upgradeType, PurchaseUpgradeButtonUI _button)
+    private void PurchaseWeaponUpgrade(string _weaponName, WeaponUpgradeTypes.UpgradeType upgradeType, WeaponUpgradeButton _button)
     {
         var attributes = weaponDatabase[_weaponName].AttributeDataList;
         WeaponData weaponData = weaponDatabase[_weaponName];

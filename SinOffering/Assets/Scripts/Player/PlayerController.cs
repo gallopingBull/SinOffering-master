@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : Entity, IWeaponStoreCustomer
+public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCustomer
 {
     #region variables
 
@@ -354,6 +354,16 @@ public class PlayerController : Entity, IWeaponStoreCustomer
         }
         return false;
     }
+
+    void IAttributeStoreCustomer.PurchaseUpgrade(string _upgradeName)
+    {
+        throw new System.NotImplementedException();
+    }
+    bool IAttributeStoreCustomer.CanPurchaseUpgrade(int _price)
+    {
+        throw new System.NotImplementedException();
+    }
+
     #endregion
 }
    

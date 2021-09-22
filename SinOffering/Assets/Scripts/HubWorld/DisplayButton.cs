@@ -3,7 +3,7 @@
  * that prompt will enable another menu to render
  * (map select, weapon pruchase/upgrade, and abiliy purchase/upgrade, etc).
  */
-
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class DisplayButton : MonoBehaviour
@@ -72,8 +72,8 @@ public class DisplayButton : MonoBehaviour
                 if (ButtonPrompt.activeInHierarchy && Input.GetButtonDown("Jump"))
                 {
                     // assign customer
-                    //IWeaponStoreCustomer customer = other.GetComponent<IWeaponStoreCustomer>();
-                    //weaponMenuManager.GetComponent<WeaponStore>().AssignCustomer(customer);
+                    IAttributeStoreCustomer customer = other.GetComponent<IAttributeStoreCustomer>();
+                    weaponMenuManager.GetComponent<AttributeUpgradeStore>().AssignCustomer(customer);
 
                     // stop player
                     PlayerController.instance.rb.velocity = Vector3.zero;

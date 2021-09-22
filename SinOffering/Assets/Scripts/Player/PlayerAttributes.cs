@@ -19,8 +19,7 @@ public class PlayerAttributes
 public class PlayerAbilities
 {
 
-    //bool doubleJumpedUnlocked = fals  e;
-
+    //bool doubleJumpedUnlocked = false;
 
     //bool double_evade = false; 
     //float evade_delay = 2.5f; 

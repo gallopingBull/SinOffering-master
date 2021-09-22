@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class PurchaseUpgradeButtonUI : MonoBehaviour
+public class WeaponUpgradeButton : MonoBehaviour
 {
     #region variables
     [HideInInspector]
