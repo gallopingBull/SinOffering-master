@@ -4,8 +4,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// WeaponDatabase
-// work around to expose both keys/values inside a dictionary in the unity inspector
+//WeaponDatabase
+//work around to expose both keys/values inside a dictionary in the unity inspector
 
 public class Database : MonoBehaviour, ISerializationCallbackReceiver
 {
@@ -17,12 +17,10 @@ public class Database : MonoBehaviour, ISerializationCallbackReceiver
     private DatabaseScriptableObject inventoryData;
 
     [SerializeField]
-    private List<string> keys = new List<string>(); // list to to "expose" keys for dictionary in editor
+    private List<string> keys = new List<string>(); //list to to "expose" keys for dictionary in editor
 
     [SerializeField]
-    private List<WeaponData> values = new List<WeaponData>(); // list to to "expose" values for dictionary in editor
-    [SerializeField]
-    private List<object> valuesObject = new List<object>(); // list to to "expose" values for dictionary in editor
+    private List<WeaponData> values = new List<WeaponData>(); //list to to "expose" values for dictionary in editor
 
     //[SerializeReference]
     //private Dictionary<string, IList> weapons = new Dictionary<string, dynamic>();
@@ -55,10 +53,10 @@ public class Database : MonoBehaviour, ISerializationCallbackReceiver
 
     public void OnAfterDeserialize()
     {
-        // keep empty
+        //keep empty
     }
 
-    // this is used to fuck with keys/values in the inspector
+    //this is used to fuck with keys/values in the inspector
     public void DeserializeDictionary()
     {
         weapons = new Dictionary<string, WeaponData>();
@@ -76,7 +74,7 @@ public class Database : MonoBehaviour, ISerializationCallbackReceiver
         modifyValues = false;
     }
 
-    // this is used to get dictionary at runtime
+    //this is used to get dictionary at runtime
     public Dictionary<string, WeaponData> GetWeaponDatabase()
     {
         weapons = new Dictionary<string, WeaponData>();
