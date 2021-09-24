@@ -1,9 +1,7 @@
 [System.Serializable]
-public class AttributeUpgradeData 
+public class AttributeUpgradeData : UpgradeDataTemplate
 {
-    public int upgradeLevel = 1;
-    public int upgradePrice = 0;
-    public float value = 0;
+
 }
 
 

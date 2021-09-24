@@ -4,7 +4,6 @@ using UnityEngine;
 public class AttributeData : ScriptableObject
 {
     public AttributeUpgradeTypes.UpgradeType UpgradeType;
-    public int upgradePrice; //price for store to get
 
     [SerializeField]
     public AttributeUpgradeData[] AttributeDataList;

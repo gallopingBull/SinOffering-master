@@ -4,7 +4,8 @@ using UnityEngine;
 [System.Serializable]
 public class WeaponAttributes
 {
-    //[HideInInspector]
+    #region variables
+
     [SerializeField]
     public WeaponData weaponData;
     private Dictionary<string, WeaponData> weaponDatabase;
@@ -54,7 +55,9 @@ public class WeaponAttributes
     public float DurationCamShake, AmmountCamShake;
     public bool SmoothTransition = false;
 
+    #endregion
 
+    #region functions
     public void InitWeaponAttributes()
     {
         //using an IDatabase
@@ -69,11 +72,10 @@ public class WeaponAttributes
 
     private void GetWeaponAttributeDataFromDatabase(string _weaponName)
     {
-        //using an IDatabase
+        // using an IDatabase
         weaponDatabase = Database._instance.GetWeaponDatabase();
         //Debug.Log("setting data for: " + _weaponName);
         weaponData = weaponDatabase[_weaponName];
-
     }
 
 
@@ -109,7 +111,6 @@ public class WeaponAttributes
 
     private void SetFireRateValue(int _fireRateLevel)
     {
-   
         for (int i = 0; i < weaponData.AttributeDataList.Length; i++)
         {
             if (weaponData.AttributeDataList[i].UpgradeType == WeaponUpgradeTypes.UpgradeType.FireRate && 
@@ -155,5 +156,6 @@ public class WeaponAttributes
         tmpDic.Add(WeaponUpgradeTypes.UpgradeType.WeaponDamage, WeaponDamageLevel);
         return tmpDic;
     }
+    #endregion
 }
 

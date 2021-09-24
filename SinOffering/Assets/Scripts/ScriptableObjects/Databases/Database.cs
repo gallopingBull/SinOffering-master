@@ -1,6 +1,7 @@
 //https://github.com/SunnyValleyStudio/unity_dictionary_visible_in_inspector_tutorial
 //https://www.youtube.com/watch?v=OGnhLL4q_F8&t=146s
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -53,10 +54,10 @@ public class Database : MonoBehaviour, ISerializationCallbackReceiver
 
     public void OnAfterDeserialize()
     {
-        //keep empty
+        // keep empty
     }
 
-    //this is used to fuck with keys/values in the inspector
+    // this is used to fuck with keys/values in the inspector
     public void DeserializeDictionary()
     {
         weapons = new Dictionary<string, WeaponData>();
@@ -74,7 +75,7 @@ public class Database : MonoBehaviour, ISerializationCallbackReceiver
         modifyValues = false;
     }
 
-    //this is used to get dictionary at runtime
+    // this is used to get dictionary at runtime
     public Dictionary<string, WeaponData> GetWeaponDatabase()
     {
         weapons = new Dictionary<string, WeaponData>();
@@ -90,4 +91,17 @@ public class Database : MonoBehaviour, ISerializationCallbackReceiver
         }
         return weapons;
     }
+}
+
+[System.Serializable]
+public class UpgradeDataTemplate   
+{   
+    public int AttributePrice;
+    public float AttributeValue;
+    public int AttributeLevel;
+}
+
+[System.Serializable]
+public class DataTemplate{
+
 }

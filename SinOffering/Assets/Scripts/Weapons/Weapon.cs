@@ -4,11 +4,13 @@ using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
 {
+
+    #region variables
+
     // these should be moved to 
     private bool _weaponPurchased;
     private bool _secondaryFire;
 
-    #region variables
     [HideInInspector]
     public enum WeaponTypes
     {

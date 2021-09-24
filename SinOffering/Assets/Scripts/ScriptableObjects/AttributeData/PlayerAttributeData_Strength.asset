@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28ab99b88499e904fbb9f6ae8d5d668b, type: 3}
-  m_Name: PlayerAttributeData
+  m_Name: PlayerAttributeData_Strength
   m_EditorClassIdentifier: 
   UpgradeType: 3
   upgradePrice: 0
   AttributeDataList:
-  - {fileID: 0}
-  - {fileID: 0}
+  - upgradeLevel: 1
+    upgradePrice: 0
+    value: 0
+  - upgradeLevel: 1
+    upgradePrice: 0
+    value: 0
