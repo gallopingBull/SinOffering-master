@@ -75,25 +75,25 @@ public class PurchaseUpgradeButtonUI : MonoBehaviour
             transform.Find("Next Level UI Upgrades").transform.Find("Text_UpgradeValue").GetComponent<TextMeshProUGUI>();
     }
 
-    public void InitUpgradeButton(Weapon weapon, WeaponData _weaponData)
+    public void InitUpgradeButton(Weapon weapon, ScriptableObject _data)
     {
         Awake();
-
+        WeaponData tmpData = _data as WeaponData;
         int tmpLevel = weapon.WeaponAttributes.GetWeaponAttributeLevels()[UpgradeType];
 
-        for (int i = 0; i <_weaponData.AttributeDataList.Length; i++)
+        for (int i = 0; i <tmpData.AttributeDataList.Length; i++)
         {
-            if (UpgradeType == _weaponData.AttributeDataList[i].UpgradeType &&
-                _weaponData.AttributeDataList[i].AttributeLevel == tmpLevel)
+            if (UpgradeType == tmpData.AttributeDataList[i].UpgradeType &&
+                tmpData.AttributeDataList[i].AttributeLevel == tmpLevel)
             {
-                CurUpgradeVal_Text.text = _weaponData.AttributeDataList[i].AttributeValue.ToString();
+                CurUpgradeVal_Text.text = tmpData.AttributeDataList[i].AttributeValue.ToString();
                 CurUpgradeLevel_Text.text = tmpLevel.ToString();
                 if (tmpLevel < 3)
                 {
-                    Price_Text.text = _weaponData.AttributeDataList[i + 1].AttributePrice.ToString();
+                    Price_Text.text = tmpData.AttributeDataList[i + 1].AttributePrice.ToString();
 
                     NextUpgradeLevel_Text.text = (tmpLevel + 1).ToString();
-                    NextUpgradeVal_Text.text = _weaponData.AttributeDataList[i+1].AttributeValue.ToString();
+                    NextUpgradeVal_Text.text = tmpData.AttributeDataList[i+1].AttributeValue.ToString();
                 }
                 else
                 {

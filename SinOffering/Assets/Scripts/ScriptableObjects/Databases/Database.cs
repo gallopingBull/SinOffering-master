@@ -5,8 +5,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//WeaponDatabase
-//work around to expose both keys/values inside a dictionary in the unity inspector
+// WeaponDatabase
+// work around to expose both keys/values inside a dictionary in the unity inspector
 
 public class Database : MonoBehaviour, ISerializationCallbackReceiver
 {
@@ -18,16 +18,13 @@ public class Database : MonoBehaviour, ISerializationCallbackReceiver
     private DatabaseScriptableObject inventoryData;
 
     [SerializeField]
-    private List<string> keys = new List<string>(); //list to to "expose" keys for dictionary in editor
+    private List<string> keys = new List<string>(); // list to to "expose" keys for dictionary in editor
 
     [SerializeField]
     private List<WeaponData> values = new List<WeaponData>(); //list to to "expose" values for dictionary in editor
 
     //[SerializeReference]
     //private Dictionary<string, IList> weapons = new Dictionary<string, dynamic>();
-    //[SerializeReference]
-    //private Dictionary<string, object> weapons = new Dictionary<string, object>();
-
 
     [SerializeReference]
     private Dictionary<string, WeaponData> weapons = new Dictionary<string, WeaponData>();
@@ -99,9 +96,4 @@ public class UpgradeDataTemplate
     public int AttributePrice;
     public float AttributeValue;
     public int AttributeLevel;
-}
-
-[System.Serializable]
-public class DataTemplate{
-
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine;
@@ -8,13 +9,14 @@ using UnityEngine;
 public class AttributeUpgradeStore : MonoBehaviour
 {
     private IAttributeStoreCustomer customer;
-    private Dictionary<string, WeaponData> weaponDatabase;
+    private Dictionary<string, WeaponData> attributeDatabase;
     public Button[] menuButtons = null;
     private GameObject silverValueUI;
 
     void Start()
     {
-        weaponDatabase = Database._instance.GetWeaponDatabase();
+        attributeDatabase = Database._instance.GetWeaponDatabase();
+        //attributeDatabase = GameObject.Find("AttributeDatabase").GetComponent<Database>();
         silverValueUI = GameObject.Find("Text_SilverValue");
     }
 
@@ -41,10 +43,9 @@ public class AttributeUpgradeStore : MonoBehaviour
                     if (weapons[j].GetComponent<Weapon>().WeaponAttributes.WeaponPurchased)
                         menuButtons[i].interactable = false;
 
-                    WeaponData weaponData;
-                    weaponData = weaponDatabase[weaponName];
-                    InitButton(button, weaponData, weaponName,
-                        weapons[j].GetComponent<Weapon>().WeaponAttributes.WeaponPurchased);
+                    //AttributeUpgradeData attributeData = attributeDatabase[weaponName] as AttributeUpgradeButton;
+                    //InitButton(button, attributeData, weaponName,
+                        //weapons[j].GetComponent<Weapon>().WeaponAttributes.WeaponPurchased);
 
                     break;
                 }
@@ -53,7 +54,7 @@ public class AttributeUpgradeStore : MonoBehaviour
     }
 
     // initilaize buttons with correct weapon data 
-    public void InitButton(PurchaseWeaponButtonUI _button, WeaponData _weaponData, string _weaponName, bool purchased)
+    public void InitButton(PurchaseWeaponButtonUI _button, AttributeUpgradeData _attributeData, string _weaponName, bool purchased)
     {
         _button.ItemName_Text.text = _weaponName;
         if (purchased)
@@ -61,13 +62,14 @@ public class AttributeUpgradeStore : MonoBehaviour
             _button.gameObject.GetComponent<PurchaseWeaponButtonUI>().Price_Text.text = "purchased";
             return;
         }
-        _button.Price_Text.text = _weaponData.WeaponPrice.ToString();
+        _button.Price_Text.text = _attributeData.AttributePrice.ToString();
         _button.gameObject.GetComponent<Button>().onClick.AddListener(() => PurchaseUpgrade(_weaponName, _button.transform.gameObject.GetComponent<Button>()));
     }
 
     public void PurchaseUpgrade(string _weaponName, Button _button)
     {
-        int price = weaponDatabase[_weaponName].WeaponPrice;
+        List<KeyValuePair<string, WeaponData>> tmpList = attributeDatabase.ToList();
+        int price = 0; // get price
 
         if (customer.CanPurchaseUpgrade(price))
         {

@@ -6,7 +6,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "Database", menuName = "DataObjects/Database")]
 
-public class DatabaseScriptableObject : ScriptableObject
+public class DatabaseScriptableObject: ScriptableObject
 {
     [SerializeField]
     private List<string> keys = new List<string>();

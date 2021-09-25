@@ -2992,17 +2992,15 @@ MonoBehaviour:
   modifyValues: 0
   inventoryData: {fileID: 11400000, guid: 8beff19d77d85754d9cf99f1fb49caaa, type: 2}
   keys:
-  - Shotgun
-  - Gattling Gun
-  - RPG
-  - Dual Pistols
-  - Disc Launcher
+  - Health
+  - Mana
+  - Speed
+  - Strength
   values:
   - {fileID: 11400000, guid: 1ee21732bb2cc75408bd747ca93bda1f, type: 2}
   - {fileID: 11400000, guid: 5a24c1dd837ac3b4d8cca89c10493e57, type: 2}
   - {fileID: 11400000, guid: 1945e095c0a5fcf42be1cc6521fe89fe, type: 2}
   - {fileID: 11400000, guid: ebf10699134603940802e11393ac62e6, type: 2}
-  - {fileID: 11400000, guid: a923bf9a6828e17408d4195e2d5ae331, type: 2}
 --- !u!4 &338871295 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4006510038024346, guid: a0aa2525ba693f54db86d05aa66bde7d, type: 3}
@@ -5076,11 +5074,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2462355665883507930, guid: 1d9c878a281c1bf4491cf99404263a2d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000021498736
+      value: 0.0000000021498745
       objectReference: {fileID: 0}
     - target: {fileID: 2462355665883507930, guid: 1d9c878a281c1bf4491cf99404263a2d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -6.302002e-11
+      value: 6.302005e-11
       objectReference: {fileID: 0}
     - target: {fileID: 2462355665883507933, guid: 1d9c878a281c1bf4491cf99404263a2d, type: 3}
       propertyPath: m_LookAt
@@ -21074,31 +21072,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.1967926
+      value: -16.23
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6900601
+      value: 0.619
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.8454876
+      value: -2.1399999
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70793086
+      value: 0.7509271
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.08984238
+      value: 0.0029187982
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6945331
+      value: -0.6603737
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.09157554
+      value: 0.0025668237
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -21118,7 +21116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274667, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: far clip plane
-      value: 1000
+      value: 1038.02
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274671, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_Name

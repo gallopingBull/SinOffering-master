@@ -20,6 +20,7 @@ public class WeaponUpgradeStore : MonoBehaviour
     private void Start()
     {
         weaponDatabase = Database._instance.GetWeaponDatabase();
+        //weaponDatabase = GameObject.Find("WeaponDatabase").GetComponent<Database>();
     }
 
     public void InitWeaponUpgradeStore(GameObject _menu)
@@ -90,7 +91,7 @@ public class WeaponUpgradeStore : MonoBehaviour
                 if (weapons[i].GetComponent<Weapon>().WeaponAttributes.WeaponPurchased)
                 {
                     WeaponData weaponData;
-                    weaponData = weaponDatabase[weaponName];
+                    weaponData = weaponDatabase[weaponName] as WeaponData;
 
                     upgradeButton[j].GetComponent<Button>().interactable = true;
                     if(!upgradeButton[j].ButtonInit)
@@ -100,11 +101,11 @@ public class WeaponUpgradeStore : MonoBehaviour
         }
     }
 
-    public void InitUpgradeButton(PurchaseUpgradeButtonUI _button, WeaponData _weaponData, Weapon _weapon)
+    public void InitUpgradeButton(PurchaseUpgradeButtonUI _button, ScriptableObject _data, Weapon _weapon)
     {
         PurchaseUpgradeButtonUI tmpButton = _button;
 
-        tmpButton.InitUpgradeButton(_weapon, _weaponData);
+        tmpButton.InitUpgradeButton(_weapon, _data);
 
         tmpButton.Upgrade_Button.onClick.AddListener(() => PurchaseWeaponUpgrade(_weapon.GetWeaponName(), 
             _button.UpgradeType, _button)); 
@@ -112,8 +113,9 @@ public class WeaponUpgradeStore : MonoBehaviour
 
     private void PurchaseWeaponUpgrade(string _weaponName, WeaponUpgradeTypes.UpgradeType upgradeType, PurchaseUpgradeButtonUI _button)
     {
-        var attributes = weaponDatabase[_weaponName].AttributeDataList;
-        WeaponData weaponData = weaponDatabase[_weaponName];
+
+        WeaponData weaponData = weaponDatabase[_weaponName] as WeaponData;
+        var attributes = weaponData.AttributeDataList;
         Weapon weapon = null;
 
         int price = 0;

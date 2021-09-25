@@ -39,7 +39,7 @@ public class WeaponStore : MonoBehaviour
                     if (weapons[j].GetComponent<Weapon>().WeaponAttributes.WeaponPurchased)
                         menuButtons[i].interactable = false;
                     
-                    WeaponData weaponData; 
+                    WeaponData weaponData;  
                     weaponData = weaponDatabase[weaponName];
                     InitButton(button, weaponData, weaponName,
                         weapons[j].GetComponent<Weapon>().WeaponAttributes.WeaponPurchased);
@@ -65,7 +65,7 @@ public class WeaponStore : MonoBehaviour
 
     public void PurchaseWeapon(string _weaponName, Button _button)
     {
-        int price = weaponDatabase[_weaponName].WeaponPrice;
+        int price = 0;//weaponDatabase[_weaponName].WeaponPrice;
 
         if (customer.CanPurchaseWeapon(price))
         {

@@ -54,7 +54,6 @@ public class WeaponAttributes
     //is firing
     public float DurationCamShake, AmmountCamShake;
     public bool SmoothTransition = false;
-
     #endregion
 
     #region functions
@@ -74,6 +73,7 @@ public class WeaponAttributes
     {
         // using an IDatabase
         weaponDatabase = Database._instance.GetWeaponDatabase();
+        //weaponDatabase = GameObject.Find("WeaponDatabase").GetComponent<Database>();
         //Debug.Log("setting data for: " + _weaponName);
         weaponData = weaponDatabase[_weaponName];
     }

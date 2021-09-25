@@ -6,13 +6,9 @@ public class PlayerAttributes
 
     //float max_health = 0;
     //float mana = 0;
-    //
-
-
-
-    //float airControl; //maybe...
-    //int equipmentSize; //maybe...
-
+    
+    //float airControl; // maybe...
+    //int equipmentSize; // maybe...
 }
 
 [System.Serializable]
