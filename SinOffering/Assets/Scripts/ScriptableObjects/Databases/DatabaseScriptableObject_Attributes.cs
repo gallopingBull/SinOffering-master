@@ -4,17 +4,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Database", menuName = "DataObjects/Database")]
+[CreateAssetMenu(fileName = "Database_Attributes_SO)", menuName = "DataObjects/Database/Database_Attributes_SO")]
 
-public class DatabaseScriptableObject: ScriptableObject
+public class DatabaseScriptableObject_Attributes: ScriptableObject
 {
     [SerializeField]
     private List<string> keys = new List<string>();
     
     //make this a generic type so this SO can be used for a varitey of types
     [SerializeField]
-    private List<WeaponData> values = new List<WeaponData>();
+    private List<AttributeData> values = new List<AttributeData>();
 
     public List<string> Keys {   get => keys; set => keys = value; }
-    public List<WeaponData> Values { get => values; set => values = value; }
+    public List<AttributeData> Values { get => values; set => values = value; }
 }

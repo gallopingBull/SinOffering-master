@@ -8,10 +8,10 @@ using UnityEngine;
 // WeaponDatabase
 // work around to expose both keys/values inside a dictionary in the unity inspector
 
-public class Database : MonoBehaviour, ISerializationCallbackReceiver
+public class WeaponDatabase: MonoBehaviour, ISerializationCallbackReceiver
 {
     public bool modifyValues;
-    public static Database _instance;
+    public static WeaponDatabase _instance;
 
     //WeaponDatabaseSO
     [SerializeField]
@@ -21,7 +21,7 @@ public class Database : MonoBehaviour, ISerializationCallbackReceiver
     private List<string> keys = new List<string>(); // list to to "expose" keys for dictionary in editor
 
     [SerializeField]
-    private List<WeaponData> values = new List<WeaponData>(); //list to to "expose" values for dictionary in editor
+    private  List<WeaponData> values = new List<WeaponData>(); //list to to "expose" values for dictionary in editor
 
     //[SerializeReference]
     //private Dictionary<string, IList> weapons = new Dictionary<string, dynamic>();
@@ -29,11 +29,11 @@ public class Database : MonoBehaviour, ISerializationCallbackReceiver
     [SerializeReference]
     private Dictionary<string, WeaponData> weapons = new Dictionary<string, WeaponData>();
 
-
     private void Awake()
     {
         _instance = this;
     }
+
     public void OnBeforeSerialize()
     {
         if (!modifyValues)
@@ -97,3 +97,4 @@ public class UpgradeDataTemplate
     public float AttributeValue;
     public int AttributeLevel;
 }
+

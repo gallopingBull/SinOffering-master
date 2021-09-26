@@ -4,17 +4,33 @@ using UnityEngine;
 using UnityEditor;
 
 
-[CustomEditor(typeof(Database))]
+[CustomEditor(typeof(WeaponDatabase))]
 public class DatabaseEditor : Editor 
 {
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
-        if (((Database)target).modifyValues)
+        if (((WeaponDatabase)target).modifyValues)
         {
             if (GUILayout.Button("Save Changes"))
             {
-                ((Database)target).DeserializeDictionary();
+                ((WeaponDatabase)target).DeserializeDictionary();
+            }
+        }
+    }
+}
+[CustomEditor(typeof(AttributeDatabase))]
+
+public class AttritubteDatabaseEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+        if (((AttributeDatabase)target).modifyValues)
+        {
+            if (GUILayout.Button("Save Changes"))
+            {
+                ((AttributeDatabase)target).DeserializeDictionary();
             }
         }
     }

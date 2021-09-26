@@ -18,7 +18,6 @@ public class WeaponAttributes
     [HideInInspector]
     public string weaponName;
 
-
     public bool WeaponPurchased;
 
     [HideInInspector]
@@ -72,10 +71,10 @@ public class WeaponAttributes
     private void GetWeaponAttributeDataFromDatabase(string _weaponName)
     {
         // using an IDatabase
-        weaponDatabase = Database._instance.GetWeaponDatabase();
+        weaponDatabase = WeaponDatabase._instance.GetWeaponDatabase();
         //weaponDatabase = GameObject.Find("WeaponDatabase").GetComponent<Database>();
         //Debug.Log("setting data for: " + _weaponName);
-        weaponData = weaponDatabase[_weaponName];
+        weaponData = weaponDatabase[_weaponName] as WeaponData;
     }
 
 
@@ -121,7 +120,6 @@ public class WeaponAttributes
         }
     }
 
-
     private void SetWeaponDamageValue(int _damageLevel)
     {
         for (int i = 0; i < weaponData.AttributeDataList.Length; i++)
@@ -133,7 +131,6 @@ public class WeaponAttributes
             }
         }
     }
-
 
     private void SetAmmoCapacityValue(int _ammoCapacityLevel)
     {

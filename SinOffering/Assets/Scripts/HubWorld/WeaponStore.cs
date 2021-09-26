@@ -13,7 +13,7 @@ public class WeaponStore : MonoBehaviour
 
     private void Start()    
     {
-        weaponDatabase = Database._instance.GetWeaponDatabase();
+        weaponDatabase = WeaponDatabase._instance.GetWeaponDatabase();
         silverValueUI = GameObject.Find("Text_SilverValue");
     }
 
@@ -24,7 +24,6 @@ public class WeaponStore : MonoBehaviour
 
         if (menuButtons.Length == 0)
             SetMenuButtons(menu);
-
 
         for (int i = 0; i < menuButtons.Length; i++)
         {
@@ -59,8 +58,10 @@ public class WeaponStore : MonoBehaviour
             _button.gameObject.GetComponent<PurchaseWeaponButtonUI>().Price_Text.text = "purchased";
             return;
         }
-        _button.Price_Text.text = _weaponData.WeaponPrice.ToString();
-        _button.gameObject.GetComponent<Button>().onClick.AddListener(() => PurchaseWeapon(_weaponName, _button.transform.gameObject.GetComponent<Button>()));
+        _button.Price_Text.text = _weaponData.GetPrice().ToString();
+
+        _button.gameObject.GetComponent<Button>().onClick.AddListener(() => 
+        PurchaseWeapon(_weaponName, _button.transform.gameObject.GetComponent<Button>()));
     }
 
     public void PurchaseWeapon(string _weaponName, Button _button)
@@ -81,7 +82,6 @@ public class WeaponStore : MonoBehaviour
     {
         customer = _customer;
     }
-
     private void SelectNextButton(Button _button)
     {
         for (int i = 0; i < menuButtons.Length; i++)

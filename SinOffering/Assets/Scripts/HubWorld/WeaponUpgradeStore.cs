@@ -19,7 +19,7 @@ public class WeaponUpgradeStore : MonoBehaviour
 
     private void Start()
     {
-        weaponDatabase = Database._instance.GetWeaponDatabase();
+        weaponDatabase = WeaponDatabase._instance.GetWeaponDatabase();
         //weaponDatabase = GameObject.Find("WeaponDatabase").GetComponent<Database>();
     }
 

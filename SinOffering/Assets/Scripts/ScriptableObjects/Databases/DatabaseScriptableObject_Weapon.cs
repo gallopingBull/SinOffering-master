@@ -4,9 +4,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Database", menuName = "DataObjects/Database")]
+[CreateAssetMenu(fileName = "Database_Weapon_SO", menuName = "DataObjects/Database/Database_Weapon_SO")]
 
-public class DatabaseScriptableObject: ScriptableObject
+public class DatabaseScriptableObject_Weapon: ScriptableObject
 {
     [SerializeField]
     private List<string> keys = new List<string>();

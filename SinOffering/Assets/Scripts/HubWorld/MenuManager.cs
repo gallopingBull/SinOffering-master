@@ -32,7 +32,7 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
-        weaponDatabase = Database._instance.GetWeaponDatabase();
+        weaponDatabase = WeaponDatabase._instance.GetWeaponDatabase();
     }
     private void Update()
     {

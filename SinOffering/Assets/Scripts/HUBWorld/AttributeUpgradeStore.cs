@@ -15,7 +15,7 @@ public class AttributeUpgradeStore : MonoBehaviour
 
     void Start()
     {
-        attributeDatabase = Database._instance.GetWeaponDatabase();
+        attributeDatabase = WeaponDatabase._instance.GetWeaponDatabase();
         //attributeDatabase = GameObject.Find("AttributeDatabase").GetComponent<Database>();
         silverValueUI = GameObject.Find("Text_SilverValue");
     }
