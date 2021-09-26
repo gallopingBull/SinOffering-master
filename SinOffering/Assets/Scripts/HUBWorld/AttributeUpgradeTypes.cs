@@ -4,6 +4,6 @@ public static class AttributeUpgradeTypes
 {
     public enum UpgradeType
     {
-        health, mana, speed, strength
+        health, mana, speed, strength, dashAttack, evade
     }
 }

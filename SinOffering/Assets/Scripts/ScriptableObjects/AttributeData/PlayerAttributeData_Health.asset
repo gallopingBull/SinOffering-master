@@ -14,9 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpgradeType: 0
   AttributeDataList:
-  - AttributePrice: 0
-    AttributeValue: 0
-    AttributeLevel: 0
-  - AttributePrice: 0
-    AttributeValue: 0
-    AttributeLevel: 0
+  - AttributePrice: 100
+    AttributeValue: 100
+    AttributeLevel: 1
+  - AttributePrice: 175
+    AttributeValue: 125
+    AttributeLevel: 2
+  - AttributePrice: 250
+    AttributeValue: 150
+    AttributeLevel: 3
+  - AttributePrice: 325
+    AttributeValue: 175
+    AttributeLevel: 4
+  - AttributePrice: 400
+    AttributeValue: 200
+    AttributeLevel: 5

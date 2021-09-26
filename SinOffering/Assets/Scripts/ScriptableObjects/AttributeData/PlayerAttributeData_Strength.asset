@@ -13,11 +13,19 @@ MonoBehaviour:
   m_Name: PlayerAttributeData_Strength
   m_EditorClassIdentifier: 
   UpgradeType: 3
-  upgradePrice: 0
   AttributeDataList:
-  - upgradeLevel: 1
-    upgradePrice: 0
-    value: 0
-  - upgradeLevel: 1
-    upgradePrice: 0
-    value: 0
+  - AttributePrice: 100
+    AttributeValue: 290
+    AttributeLevel: 1
+  - AttributePrice: 125
+    AttributeValue: 293
+    AttributeLevel: 2
+  - AttributePrice: 150
+    AttributeValue: 296
+    AttributeLevel: 3
+  - AttributePrice: 175
+    AttributeValue: 298
+    AttributeLevel: 4
+  - AttributePrice: 200
+    AttributeValue: 300
+    AttributeLevel: 5
