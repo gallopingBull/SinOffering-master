@@ -70,7 +70,7 @@ public class AttributeDatabase: MonoBehaviour, ISerializationCallbackReceiver
     }
 
     // this is used to get dictionary at runtime
-    public Dictionary<string, AttributeData> GetWeaponDatabase()
+    public Dictionary<string, AttributeData> GetAttributeDatabase()
     {
         weapons = new Dictionary<string, AttributeData>();
 

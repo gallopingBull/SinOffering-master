@@ -9,14 +9,13 @@ using UnityEngine;
 public class AttributeUpgradeStore : MonoBehaviour
 {
     private IAttributeStoreCustomer customer;
-    private Dictionary<string, WeaponData> attributeDatabase;
+    private Dictionary<string, AttributeData> attributeDatabase;
     public Button[] menuButtons = null;
     private GameObject silverValueUI;
 
     void Start()
     {
-        attributeDatabase = WeaponDatabase._instance.GetWeaponDatabase();
-        //attributeDatabase = GameObject.Find("AttributeDatabase").GetComponent<Database>();
+        attributeDatabase = AttributeDatabase._instance.GetAttributeDatabase();
         silverValueUI = GameObject.Find("Text_SilverValue");
     }
 
@@ -43,7 +42,7 @@ public class AttributeUpgradeStore : MonoBehaviour
                     if (weapons[j].GetComponent<Weapon>().WeaponAttributes.WeaponPurchased)
                         menuButtons[i].interactable = false;
 
-                    //AttributeUpgradeData attributeData = attributeDatabase[weaponName] as AttributeUpgradeButton;
+                    //AttributeUpgradeData attributeData = attributeDatabase[weaponName].AttributeDataList;
                     //InitButton(button, attributeData, weaponName,
                         //weapons[j].GetComponent<Weapon>().WeaponAttributes.WeaponPurchased);
 
@@ -68,7 +67,7 @@ public class AttributeUpgradeStore : MonoBehaviour
 
     public void PurchaseUpgrade(string _weaponName, Button _button)
     {
-        List<KeyValuePair<string, WeaponData>> tmpList = attributeDatabase.ToList();
+        List<KeyValuePair<string, AttributeData>> tmpList = attributeDatabase.ToList();
         int price = 0; // get price
 
         if (customer.CanPurchaseUpgrade(price))

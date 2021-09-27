@@ -21,6 +21,8 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     public InputHandler inputHandler;
     private List<ICommand> commands;
 
+    private PlayerAttributes attributes = new PlayerAttributes();
+
     [HideInInspector]
     public bool AbilitiesEnabled = true; // turn off when player in areas that they can't use special abilities
 
@@ -58,6 +60,8 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     public StateManager StateManager;
     [HideInInspector]
     public InputDelay InputDelay;
+
+    public PlayerAttributes Attributes { get => attributes; set => attributes = value; }
 
 
     #endregion

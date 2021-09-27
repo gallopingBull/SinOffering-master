@@ -59,7 +59,6 @@ public class AttributeDataTemplate : IData<AttributeData>
     }    
 }
 
-
 public interface IData <T>
 {
     int GetPrice();
