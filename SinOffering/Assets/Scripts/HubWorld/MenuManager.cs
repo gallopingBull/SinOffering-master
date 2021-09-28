@@ -191,7 +191,7 @@ public class MenuManager : MonoBehaviour
                 break;
 
             case UpgradeMenu.AbilityUpgradeMenu:
-                //GetComponent<WeaponUpgradeStore>().InitWeaponUpgradeStore(menu);
+                GetComponent<AttributeUpgradeStore>().InitAttributeUpgradeStore(menu);
                 break;
 
             default:

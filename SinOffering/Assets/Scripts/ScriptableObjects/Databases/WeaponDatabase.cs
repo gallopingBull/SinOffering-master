@@ -91,7 +91,7 @@ public class WeaponDatabase: MonoBehaviour, ISerializationCallbackReceiver
 }
 
 [System.Serializable]
-public class UpgradeDataTemplate   
+public class UpgradeDataValues   
 {   
     public int AttributePrice;
     public float AttributeValue;

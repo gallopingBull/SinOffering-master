@@ -45,6 +45,8 @@ public class AttributeDataTemplate : IData<AttributeData>
 
     public int GetLevel()
     {
+        
+
         throw new System.NotImplementedException();
     }
 

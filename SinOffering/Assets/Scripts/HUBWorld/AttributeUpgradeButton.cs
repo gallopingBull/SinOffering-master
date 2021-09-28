@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.EventSystems; 
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
@@ -16,8 +17,6 @@ public class AttributeUpgradeButton : MonoBehaviour
     // UI Elements
     [HideInInspector]
     public TextMeshProUGUI UpgradeName_Text;
-
-
 
     [HideInInspector]
     public TextMeshProUGUI Price_Text;
@@ -50,37 +49,41 @@ public class AttributeUpgradeButton : MonoBehaviour
         Upgrade_Button = GetComponent<Button>();
         UpgradeName = UpgradeType.ToString();
         UpgradeName_Text =
-            transform.Find("Text_UpgradeTitle").GetComponent<TextMeshProUGUI>();
-        UpgradeName_Text.text = UpgradeName;
+            GameObject.Find("Text_AbilityName").GetComponent<TextMeshProUGUI>();
+        UpgradeName_Text.text = UpgradeType.ToString();
 
-        UpgradeLevelImages = new Image[3];
-        UpgradeLevelImages[0] = transform.Find("Panel_Upgrade Levels").transform.Find("Upgrade Level Image 0").GetComponent<Image>();
-        UpgradeLevelImages[1] = transform.Find("Panel_Upgrade Levels").transform.Find("Upgrade Level Image 1").GetComponent<Image>();
-        UpgradeLevelImages[2] = transform.Find("Panel_Upgrade Levels").transform.Find("Upgrade Level Image 2").GetComponent<Image>();
+        UpgradeLevelImages = new Image[5];
+        UpgradeLevelImages[0] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_0").GetComponent<Image>();
+        UpgradeLevelImages[1] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_1").GetComponent<Image>();
+        UpgradeLevelImages[2] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_2").GetComponent<Image>();
+        UpgradeLevelImages[3] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_3").GetComponent<Image>();
+        UpgradeLevelImages[4] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_4").GetComponent<Image>();
+
 
         Price_Text =
-            transform.Find("Panel_Price").transform.Find("Text_UpgradePrice").GetComponent<TextMeshProUGUI>();
+              GameObject.Find("Panel_AbilityPrice").transform.Find("Text_SilverValue").GetComponent<TextMeshProUGUI>();
 
-        CurUpgradeLevel_Text =
-            transform.Find("Current Level UI Objects").transform.Find("Text_currentLevel").GetComponent<TextMeshProUGUI>();
+        //CurUpgradeLevel_Text =
+        //GameObject.Find("Text_AbilityCurLevel").GetComponent<TextMeshProUGUI>();
 
-        CurUpgradeVal_Text =
-         transform.Find("Current Level UI Objects").transform.Find("Text_UpgradeValue").GetComponent<TextMeshProUGUI>();
+        //CurUpgradeVal_Text =
+        //transform.Find("Current Level UI Objects").transform.Find("Text_UpgradeValue").GetComponent<TextMeshProUGUI>();
 
 
         NextUpgradeLevel_Text =
-            transform.Find("Next Level UI Upgrades").transform.Find("Text_currentLevel").GetComponent<TextMeshProUGUI>();
+            GameObject.Find("Panel_Content").transform.Find("Text_AbilityCurLevel").GetComponent<TextMeshProUGUI>();
 
         NextUpgradeVal_Text =
-            transform.Find("Next Level UI Upgrades").transform.Find("Text_UpgradeValue").GetComponent<TextMeshProUGUI>();
+            GameObject.Find("Panel_Content").transform.Find("Text_AbilityCurLevel").GetComponent<TextMeshProUGUI>();
+
     }
 
     public void InitUpgradeButton(AttributeData _data)
     {
         Awake();
         AttributeData tmpData = _data;
-        //get player level;
-        int tmpLevel = PlayerController.instance.Attributes.GetAttributeLevel(UpgradeType);
+        // get player level;
+        int tmpLevel = PlayerController.instance.Attributes.GetCurrentAttributeLevel(UpgradeType);
 
         for (int i = 0; i < tmpData.AttributeDataList.Length; i++)
         {
@@ -108,6 +111,11 @@ public class AttributeUpgradeButton : MonoBehaviour
         buttonInit = true;
     }
 
+    public void OnSelect(BaseEventData eventData)
+    {
+        Debug.Log(GetComponent<Button>().name + " was selected");
+
+    }
     public void SetImageColors(int level)
     {
         for (int i = 0; i < level; i++)

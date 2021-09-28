@@ -1,5 +1,5 @@
 [System.Serializable]
-public class AttributeUpgradeData : UpgradeDataTemplate
+public class AttributeUpgradeData : UpgradeDataValues
 {
 
 }

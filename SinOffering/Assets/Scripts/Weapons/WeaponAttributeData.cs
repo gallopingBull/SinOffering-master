@@ -1,5 +1,5 @@
 [System.Serializable]
-public class WeaponAttributeData : UpgradeDataTemplate
+public class WeaponAttributeData : UpgradeDataValues
 {
     public WeaponUpgradeTypes.UpgradeType UpgradeType;
 }   

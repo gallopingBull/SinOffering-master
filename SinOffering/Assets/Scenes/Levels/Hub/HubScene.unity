@@ -487,6 +487,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &109641648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5465100077611977609, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+  m_PrefabInstance: {fileID: 1161870593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &109641653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109641648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bd4fa0a31d404438e0478b47aaa0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpgradeName: 
+  UpgradeType: 0
+  UpgradeName_Text: {fileID: 0}
+  Price_Text: {fileID: 0}
+  UpgradeLevel_Text: {fileID: 0}
+  CurUpgradeLevel_Text: {fileID: 0}
+  CurUpgradeVal_Text: {fileID: 0}
+  NextUpgradeLevel_Text: {fileID: 0}
+  NextUpgradeVal_Text: {fileID: 0}
+  UpgradeLevelImages: []
+  Upgrade_Button: {fileID: 0}
 --- !u!1001 &109844985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -702,6 +730,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111493272}
+  m_CullTransparentMesh: 1
+--- !u!1 &113407505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 113407506}
+  - component: {fileID: 113407508}
+  - component: {fileID: 113407507}
+  m_Layer: 0
+  m_Name: Image_Unlocked_Lvl_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &113407506
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113407505}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1131115770}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 691.2, y: -50}
+  m_SizeDelta: {x: 150, y: 25}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &113407507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113407505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.50980395}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &113407508
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113407505}
   m_CullTransparentMesh: 1
 --- !u!1001 &113942468
 PrefabInstance:
@@ -1902,6 +2005,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &226317951 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5465100076916520951, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+  m_PrefabInstance: {fileID: 1161870593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &226317956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226317951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bd4fa0a31d404438e0478b47aaa0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpgradeName: 
+  UpgradeType: 0
+  UpgradeName_Text: {fileID: 0}
+  Price_Text: {fileID: 0}
+  UpgradeLevel_Text: {fileID: 0}
+  CurUpgradeLevel_Text: {fileID: 0}
+  CurUpgradeVal_Text: {fileID: 0}
+  NextUpgradeLevel_Text: {fileID: 0}
+  NextUpgradeVal_Text: {fileID: 0}
+  UpgradeLevelImages: []
+  Upgrade_Button: {fileID: 0}
 --- !u!43 &234704122
 Mesh:
   m_ObjectHideFlags: 0
@@ -3089,15 +3220,11 @@ MonoBehaviour:
   - Mana
   - Speed
   - Strength
-  - DashAttack
-  - Evade
   values:
   - {fileID: 11400000, guid: 95dbd310bdca7594faaf8bab411c1dfb, type: 2}
   - {fileID: 11400000, guid: df988ada999b97b46b84d66722e91150, type: 2}
   - {fileID: 11400000, guid: fd5a714124d5c17489bd02e7b4a8523a, type: 2}
   - {fileID: 11400000, guid: 79c1e4248673d4f4baeb88a616f1317f, type: 2}
-  - {fileID: 11400000, guid: 87e73fe3c816cc943ae138f9b0164579, type: 2}
-  - {fileID: 11400000, guid: 2948359d4a1e70b46a37618cdc52560a, type: 2}
 --- !u!4 &338871295 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4006510038024346, guid: a0aa2525ba693f54db86d05aa66bde7d, type: 3}
@@ -5171,11 +5298,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2462355665883507930, guid: 1d9c878a281c1bf4491cf99404263a2d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000021498736
+      value: 0.0000000021498745
       objectReference: {fileID: 0}
     - target: {fileID: 2462355665883507930, guid: 1d9c878a281c1bf4491cf99404263a2d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -6.302002e-11
+      value: 6.302005e-11
       objectReference: {fileID: 0}
     - target: {fileID: 2462355665883507933, guid: 1d9c878a281c1bf4491cf99404263a2d, type: 3}
       propertyPath: m_LookAt
@@ -5608,6 +5735,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4173982503607974, guid: 3e58316648a83424688565adaceb19fe, type: 3}
   m_PrefabInstance: {fileID: 411352430}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &573952762 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2306849703313133290, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+  m_PrefabInstance: {fileID: 1161870593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &573952767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573952762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bd4fa0a31d404438e0478b47aaa0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpgradeName: 
+  UpgradeType: 1
+  UpgradeName_Text: {fileID: 0}
+  Price_Text: {fileID: 0}
+  UpgradeLevel_Text: {fileID: 0}
+  CurUpgradeLevel_Text: {fileID: 0}
+  CurUpgradeVal_Text: {fileID: 0}
+  NextUpgradeLevel_Text: {fileID: 0}
+  NextUpgradeVal_Text: {fileID: 0}
+  UpgradeLevelImages: []
+  Upgrade_Button: {fileID: 0}
 --- !u!1001 &574083593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6491,7 +6646,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771603455}
-  m_LocalRotation: {x: -0.0018813176, y: -0.13775477, z: -0.00026165548, w: 0.99046457}
+  m_LocalRotation: {x: -0.0018813176, y: -0.13775478, z: -0.00026165548, w: 0.99046457}
   m_LocalPosition: {x: -12.5132065, y: -2.1899998, z: -7.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9422,6 +9577,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991414838}
   m_CullTransparentMesh: 1
+--- !u!1 &994214828 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2195209574056511983, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+  m_PrefabInstance: {fileID: 1161870593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &994214833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994214828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bd4fa0a31d404438e0478b47aaa0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpgradeName: 
+  UpgradeType: 1
+  UpgradeName_Text: {fileID: 0}
+  Price_Text: {fileID: 0}
+  UpgradeLevel_Text: {fileID: 0}
+  CurUpgradeLevel_Text: {fileID: 0}
+  CurUpgradeVal_Text: {fileID: 0}
+  NextUpgradeLevel_Text: {fileID: 0}
+  NextUpgradeVal_Text: {fileID: 0}
+  UpgradeLevelImages: []
+  Upgrade_Button: {fileID: 0}
 --- !u!1001 &1009050150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10412,6 +10595,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126967421}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!224 &1131115770 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 284202830643573463, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+  m_PrefabInstance: {fileID: 1161870593}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1142569306 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4682259121930826, guid: f0a2d0555798fcb4e8e37723ae88a02b, type: 3}
@@ -11022,6 +11210,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1173480368212482485, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Name
+      value: Panel_AttributePrice
+      objectReference: {fileID: 0}
     - target: {fileID: 1175524836341588418, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -11556,7 +11748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2109041182151133086, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 76.8
       objectReference: {fileID: 0}
     - target: {fileID: 2109041182151133086, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -11572,7 +11764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2109574620793452430, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 537.60004
       objectReference: {fileID: 0}
     - target: {fileID: 2109574620793452430, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -11762,6 +11954,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1667057734}
+    - target: {fileID: 2861440563842144025, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2900309048521503890, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -11852,11 +12048,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3374529394190186938, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 230.40001
       objectReference: {fileID: 0}
     - target: {fileID: 3374529394190186938, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463684973225407504, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Name
+      value: Image_Unlocked_Lvl_3
       objectReference: {fileID: 0}
     - target: {fileID: 3650689519229017467, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -12164,7 +12364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5194087393632327755, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 384
       objectReference: {fileID: 0}
     - target: {fileID: 5194087393632327755, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -12269,6 +12469,10 @@ PrefabInstance:
     - target: {fileID: 5738878812814374797, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5762807033638753499, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Name
+      value: Image_Unlocked_Lvl_1
       objectReference: {fileID: 0}
     - target: {fileID: 5769250402269947642, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
@@ -12578,6 +12782,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7252566015794385103, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Name
+      value: Image_Unlocked_Lvl_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322982552429340058, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Name
+      value: Image_Unlocked_Lvl_0
+      objectReference: {fileID: 0}
     - target: {fileID: 7403682375116035263, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -12625,6 +12837,10 @@ PrefabInstance:
     - target: {fileID: 7611474104350983976, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7623802897121077511, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+      propertyPath: m_Name
+      value: UnlockedAttributeLevelImages
       objectReference: {fileID: 0}
     - target: {fileID: 7653687248715720688, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
@@ -13057,6 +13273,34 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7684642508995906081, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
   m_PrefabInstance: {fileID: 1161870593}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1176037874 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8679726951824430480, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+  m_PrefabInstance: {fileID: 1161870593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1176037879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176037874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bd4fa0a31d404438e0478b47aaa0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpgradeName: 
+  UpgradeType: 0
+  UpgradeName_Text: {fileID: 0}
+  Price_Text: {fileID: 0}
+  UpgradeLevel_Text: {fileID: 0}
+  CurUpgradeLevel_Text: {fileID: 0}
+  CurUpgradeVal_Text: {fileID: 0}
+  NextUpgradeLevel_Text: {fileID: 0}
+  NextUpgradeVal_Text: {fileID: 0}
+  UpgradeLevelImages: []
+  Upgrade_Button: {fileID: 0}
 --- !u!1001 &1177255182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14833,6 +15077,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1455738516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5993719400940096444, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+  m_PrefabInstance: {fileID: 1161870593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1455738521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455738516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bd4fa0a31d404438e0478b47aaa0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpgradeName: 
+  UpgradeType: 1
+  UpgradeName_Text: {fileID: 0}
+  Price_Text: {fileID: 0}
+  UpgradeLevel_Text: {fileID: 0}
+  CurUpgradeLevel_Text: {fileID: 0}
+  CurUpgradeVal_Text: {fileID: 0}
+  NextUpgradeLevel_Text: {fileID: 0}
+  NextUpgradeVal_Text: {fileID: 0}
+  UpgradeLevelImages: []
+  Upgrade_Button: {fileID: 0}
 --- !u!4 &1472111592 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4173982503607974, guid: 3e58316648a83424688565adaceb19fe, type: 3}
@@ -14891,6 +15163,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15cc36e15e483e44ac684f98555cf40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1485895007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5465100077111547993, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+  m_PrefabInstance: {fileID: 1161870593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1485895012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485895007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bd4fa0a31d404438e0478b47aaa0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpgradeName: 
+  UpgradeType: 0
+  UpgradeName_Text: {fileID: 0}
+  Price_Text: {fileID: 0}
+  UpgradeLevel_Text: {fileID: 0}
+  CurUpgradeLevel_Text: {fileID: 0}
+  CurUpgradeVal_Text: {fileID: 0}
+  NextUpgradeLevel_Text: {fileID: 0}
+  NextUpgradeVal_Text: {fileID: 0}
+  UpgradeLevelImages: []
+  Upgrade_Button: {fileID: 0}
 --- !u!20 &1486739123 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 9219303994259274667, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
@@ -17792,6 +18092,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0aa2525ba693f54db86d05aa66bde7d, type: 3}
+--- !u!1 &1753604133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5449967606411654769, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+  m_PrefabInstance: {fileID: 1161870593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1753604139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753604133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bd4fa0a31d404438e0478b47aaa0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpgradeName: 
+  UpgradeType: 0
+  UpgradeName_Text: {fileID: 0}
+  Price_Text: {fileID: 0}
+  UpgradeLevel_Text: {fileID: 0}
+  CurUpgradeLevel_Text: {fileID: 0}
+  CurUpgradeVal_Text: {fileID: 0}
+  NextUpgradeLevel_Text: {fileID: 0}
+  NextUpgradeVal_Text: {fileID: 0}
+  UpgradeLevelImages: []
+  Upgrade_Button: {fileID: 0}
 --- !u!1 &1754055247
 GameObject:
   m_ObjectHideFlags: 0
@@ -18074,6 +18402,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4260835027525810, guid: 18a69d06b26b20840b41025ac29bd0d5, type: 3}
   m_PrefabInstance: {fileID: 1791503782}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1794641454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4401791475232193611, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+  m_PrefabInstance: {fileID: 1161870593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1794641459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794641454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bd4fa0a31d404438e0478b47aaa0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpgradeName: 
+  UpgradeType: 1
+  UpgradeName_Text: {fileID: 0}
+  Price_Text: {fileID: 0}
+  UpgradeLevel_Text: {fileID: 0}
+  CurUpgradeLevel_Text: {fileID: 0}
+  CurUpgradeVal_Text: {fileID: 0}
+  NextUpgradeLevel_Text: {fileID: 0}
+  NextUpgradeVal_Text: {fileID: 0}
+  UpgradeLevelImages: []
+  Upgrade_Button: {fileID: 0}
 --- !u!1 &1796845162
 GameObject:
   m_ObjectHideFlags: 0
@@ -18973,6 +19329,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0a2d0555798fcb4e8e37723ae88a02b, type: 3}
+--- !u!1 &1901665203 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2885527335626831713, guid: 099d2bd77a65a38479a94e73d509146d, type: 3}
+  m_PrefabInstance: {fileID: 1161870593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1901665208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901665203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bd4fa0a31d404438e0478b47aaa0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpgradeName: 
+  UpgradeType: 1
+  UpgradeName_Text: {fileID: 0}
+  Price_Text: {fileID: 0}
+  UpgradeLevel_Text: {fileID: 0}
+  CurUpgradeLevel_Text: {fileID: 0}
+  CurUpgradeVal_Text: {fileID: 0}
+  NextUpgradeLevel_Text: {fileID: 0}
+  NextUpgradeVal_Text: {fileID: 0}
+  UpgradeLevelImages: []
+  Upgrade_Button: {fileID: 0}
 --- !u!43 &1904557757
 Mesh:
   m_ObjectHideFlags: 0
@@ -21924,6 +22308,10 @@ PrefabInstance:
     - target: {fileID: 7771364815029231911, guid: 5c226932a8f7eb0489373e37c820eb41, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573322797729696462, guid: 5c226932a8f7eb0489373e37c820eb41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8631396901773960567, guid: 5c226932a8f7eb0489373e37c820eb41, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target

@@ -31,18 +31,17 @@ public class AttributeUpgradeStore : MonoBehaviour
 
         for (int i = 0; i < menuButtons.Length; i++)
         {
-            var weapons = PlayerController.instance.weaponManager.Weapons;
-            var button = menuButtons[i].gameObject.GetComponent<PurchaseWeaponButtonUI>();
+            
+            var button = menuButtons[i].gameObject.GetComponent<AttributeUpgradeButton>();
 
-            for (int j = 0; j < weapons.Length; j++)
+            for (int j = 0; j < 5; j++)
             {
-                string weaponName = weapons[j].GetComponent<Weapon>().GetWeaponName();
-                if (button.ItemName == weaponName)
+                if (button.UpgradeType == PlayerController.instance.Attributes._data.UpgradeType)
                 {
-                    if (weapons[j].GetComponent<Weapon>().WeaponAttributes.WeaponPurchased)
+                    if (PlayerController.instance.Attributes._data.AttributeDataList[j].AttributeLevel > 3)
                         menuButtons[i].interactable = false;
 
-                    //AttributeUpgradeData attributeData = attributeDatabase[weaponName].AttributeDataList;
+                    //AttributeUpgradeData attributeData = attributeDatabase[j].AttributeDataList;
                     //InitButton(button, attributeData, weaponName,
                         //weapons[j].GetComponent<Weapon>().WeaponAttributes.WeaponPurchased);
 
@@ -62,23 +61,23 @@ public class AttributeUpgradeStore : MonoBehaviour
             return;
         }
         _button.Price_Text.text = _attributeData.AttributePrice.ToString();
-        _button.gameObject.GetComponent<Button>().onClick.AddListener(() => PurchaseUpgrade(_weaponName, _button.transform.gameObject.GetComponent<Button>()));
+        //_button.gameObject.GetComponent<Button>().onClick.AddListener(() => PurchaseUpgrade(_weaponName, _button.transform.gameObject.GetComponent<Button>()));
     }
 
-    public void PurchaseUpgrade(string _weaponName, Button _button)
+    public void PurchaseUpgrade(string _upgradeType, int _upgradeLevel, Button _button)
     {
-        List<KeyValuePair<string, AttributeData>> tmpList = attributeDatabase.ToList();
-        int price = 0; // get price
+        AttributeData tmpData = attributeDatabase[_upgradeType];
+       int price = tmpData.AttributeDataList[_upgradeLevel].AttributePrice; // get price
 
         if (customer.CanPurchaseUpgrade(price))
         {
-            customer.PurchaseUpgrade(_weaponName);
+            customer.PurchaseUpgrade(_upgradeType);
             _button.interactable = false;
             silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI();
             SelectNextButton(_button);
         }
     }
-
+   
     private void SelectNextButton(Button _button)
     {
         for (int i = 0; i < menuButtons.Length; i++)
@@ -95,6 +94,7 @@ public class AttributeUpgradeStore : MonoBehaviour
     }
     private void SetMenuButtons(GameObject _menu)
     {
+        Debug.Log("SetMenuButtons("+ _menu.name+ ")");
         menuButtons = _menu.GetComponentsInChildren<Button>();
         silverValueUI = GameObject.Find("Text_SilverValue");
     }

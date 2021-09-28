@@ -296,7 +296,14 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         Debug.Log("disabling input");
         InputEnabled = false;
     }
-    
+
+
+
+    public void SetAttributeFields()
+    {
+
+    }
+
 
     // store functions (might want to move this interface in its own class,
     // and ill call a getter on it to get all nesecarry values)

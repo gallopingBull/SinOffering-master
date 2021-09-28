@@ -90,21 +90,7 @@ public abstract class Weapon : MonoBehaviour
                 PPMCaller(); // adjust post process fx
                 EnableMuzzleFX();
                 EnableMuzzleLight();
-                /*
-                if (muzzleFire_Light == null)
-                {
-                    if (pc.dir == 1)
-                        MuzzleFireLightCaller(R_MuzzleFire_Light);
-                    else
-                        MuzzleFireLightCaller(L_MuzzleFire_Light);
-                }
-                else
-                {
-                    if (pc.dir == 1)
-                        MuzzleFireLightCaller(R_MuzzleFire_Light);
-                    else
-                        MuzzleFireLightCaller(L_MuzzleFire_Light);
-                }*/
+             
                 Ammo--; 
                 CameraShake.instance.Shake(DurationCamShake,
                              AmmountCamShake, SmoothTransition);
@@ -120,22 +106,6 @@ public abstract class Weapon : MonoBehaviour
             SpawnProjectile(pc.dir);
             EnableMuzzleFX();
             EnableMuzzleLight();
-
-            /*
-            if (muzzleFire_Light == null)
-            {
-                if (pc.dir == 1)
-                    MuzzleFireLightCaller(R_MuzzleFire_Light);
-                else
-                    MuzzleFireLightCaller(L_MuzzleFire_Light);
-            }
-            else
-            {
-                if (pc.dir == 1)
-                    MuzzleFireLightCaller(R_MuzzleFire_Light);
-                else
-                    MuzzleFireLightCaller(L_MuzzleFire_Light);
-            }*/
 
             CameraShake.instance.Shake(DurationCamShake,
                          AmmountCamShake, SmoothTransition);
