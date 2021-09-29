@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295486079}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.393, y: -0.096, z: 1.225}
+  m_LocalPosition: {x: 0.512, y: 0.064, z: 1.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 736217376043120029}
@@ -43,17 +43,17 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 3.6800945
+  m_Intensity: 2.5
+  m_Range: 2.08
   m_SpotAngle: 72.03062
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
+    m_Strength: 0
+    m_Bias: 0
     m_NormalBias: 0.4
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
@@ -80,12 +80,12 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 512
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -1182,9 +1182,8 @@ MonoBehaviour:
   landClip: {fileID: 8300000, guid: dec7c6c0774056d479a0abb672d2c940, type: 3}
   dashClip: {fileID: 8300000, guid: 000d6de78f954c7469726c3b8d82c3b5, type: 3}
   button: {fileID: 0}
-  sm: {fileID: 0}
+  StateManager: {fileID: 0}
   InputDelay: {fileID: 0}
-  CurEnemyKills: 0
 --- !u!114 &7930721911905566511
 MonoBehaviour:
   m_ObjectHideFlags: 0

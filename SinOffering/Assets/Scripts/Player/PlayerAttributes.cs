@@ -9,7 +9,6 @@ public class PlayerAttributes
     public AttributeData _data;
     private Dictionary<string, AttributeData> attributeDatabase;
 
-
     int healthAttributeLevel = 2;
     float max_health = 0;
     float health = 0;
