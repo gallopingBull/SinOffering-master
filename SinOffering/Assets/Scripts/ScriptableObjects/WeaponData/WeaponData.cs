@@ -9,11 +9,10 @@ public class WeaponData : ScriptableObject//, IData<WeaponData>
     [SerializeField]
     public WeaponAttributeData[] AttributeDataList;
 
-
     #region interface testing
     public int GetPrice()
-    {
-        throw new System.NotImplementedException();
+    {  
+        return WeaponPrice;
     }
 
     public int GetLevel()

@@ -28,14 +28,22 @@ public class AttributeUpgradeStore : MonoBehaviour
         if (menuButtons.Length == 0)
             SetMenuButtons(menu);
 
-
         for (int i = 0; i < menuButtons.Length; i++)
         {
-            
             var button = menuButtons[i].gameObject.GetComponent<AttributeUpgradeButton>();
+            menuButtons[i].interactable = false;
+
+
+            #region testing
+            int loops = i;
+            Debug.Log("loops: " + loops);
+            Debug.Log("length: " + menuButtons.Length);
+            #endregion
+
 
             for (int j = 0; j < 5; j++)
             {
+                /**
                 if (button.UpgradeType == PlayerController.instance.Attributes._data.UpgradeType)
                 {
                     if (PlayerController.instance.Attributes._data.AttributeDataList[j].AttributeLevel > 3)
@@ -46,7 +54,7 @@ public class AttributeUpgradeStore : MonoBehaviour
                         //weapons[j].GetComponent<Weapon>().WeaponAttributes.WeaponPurchased);
 
                     break;
-                }
+                }**/
             }
         }
     }
