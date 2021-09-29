@@ -298,7 +298,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     }
 
 
-
     public void SetAttributeFields()
     {
 
