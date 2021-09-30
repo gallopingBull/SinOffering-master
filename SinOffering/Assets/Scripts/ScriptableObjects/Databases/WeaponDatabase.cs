@@ -21,10 +21,7 @@ public class WeaponDatabase: MonoBehaviour, ISerializationCallbackReceiver
     private List<string> keys = new List<string>(); // list to to "expose" keys for dictionary in editor
 
     [SerializeField]
-    private  List<WeaponData> values = new List<WeaponData>(); //list to to "expose" values for dictionary in editor
-
-    //[SerializeReference]
-    //private Dictionary<string, IList> weapons = new Dictionary<string, dynamic>();
+    private  List<WeaponData> values = new List<WeaponData>(); // list to to "expose" values for dictionary in editor
 
     [SerializeReference]
     private Dictionary<string, WeaponData> weapons = new Dictionary<string, WeaponData>();
@@ -58,8 +55,6 @@ public class WeaponDatabase: MonoBehaviour, ISerializationCallbackReceiver
     public void DeserializeDictionary()
     {
         weapons = new Dictionary<string, WeaponData>();
-        //weapons = new Dictionary<string, dynamic>();
-        //weapons = new Dictionary<string, object>();
         inventoryData.Keys.Clear();
         inventoryData.Values.Clear();
 
@@ -96,5 +91,6 @@ public class UpgradeDataValues
     public int AttributePrice;
     public float AttributeValue;
     public int AttributeLevel;
+    public bool isPurchased;
 }
 

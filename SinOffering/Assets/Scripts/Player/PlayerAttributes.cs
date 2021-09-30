@@ -41,21 +41,16 @@ public class PlayerAttributes
     bool dashSlamUnlocked = false;
     bool dashMeleeEndUnlocked = false; // ability that gives the player an oppurtunity
                                       // to immidetely follow the dash attack with a stronger melee attack
-
-
-  void Awake()
+    
+    void Awake()
     {
         
     }
     public AttributeData GetData(string _type)
     {
-
         _data = attributeDatabase[_type.ToString()];
         return _data;
-
     }
-
-
 
     public int GetCurrentAttributeLevel(AttributeUpgradeTypes.UpgradeType _upgradeType)
     {
@@ -78,7 +73,6 @@ public class PlayerAttributes
             default:
                 break;
         }
-
         return tmpLvl;
     }
 }

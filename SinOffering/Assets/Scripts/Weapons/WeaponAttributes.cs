@@ -107,7 +107,6 @@ public class WeaponAttributes
         SecondaryFire = _weaponData.SecondaryFire;
     }
    
-
     private void SetFireRateValue(int _fireRateLevel)
     {
         for (int i = 0; i < weaponData.AttributeDataList.Length; i++)

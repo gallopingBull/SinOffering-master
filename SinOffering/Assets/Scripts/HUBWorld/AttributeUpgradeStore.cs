@@ -21,69 +21,73 @@ public class AttributeUpgradeStore : MonoBehaviour
 
     public void InitAttributeUpgradeStore(GameObject menu)
     {
-
         // buttons for weapon or upgrades that haven't been purchased yet
         // should be made interactable reading in data from inventory.CS ...
         List<KeyValuePair<string, AttributeData>> tmpList = attributeDatabase.ToList();    
             
-
         if (menuButtons.Length == 0)
             SetMenuButtons(menu);
 
-        for (int i = 0; i < menuButtons.Length; i++)
+        for (int i = 0; i < menuButtons.Length - 1; i++)
         {
-            var button = menuButtons[i].gameObject.GetComponent<AttributeUpgradeButton>();
-            //menuButtons[i].interactable = false;
+            int upgradeTypeIndex = i;
 
+
+            var button = menuButtons[i].gameObject.GetComponent<AttributeUpgradeButton>();
+            //menuButtons[i].interactable = false;s
             #region testing
-            int loops = i;
-            Debug.Log("loops: " + loops);
-            Debug.Log("length: " + menuButtons.Length);
+            //int loops = i;
+            //Debug.Log("loops: " + loops);
+            //Debug.Log("length: " + menuButtons.Length);
             #endregion
-            
-            if (button.UpgradeType == tmpList[i].Value.UpgradeType)
+   
+            if (upgradeTypeIndex == 4)
+                upgradeTypeIndex = 0;
+
+            if (button.UpgradeType == tmpList[upgradeTypeIndex].Value.UpgradeType)
             {
-                
-                Debug.Log("button.UpgradeType: " + button.UpgradeType.ToString());
-                Debug.Log("tmpList[i].Value: " + tmpList[i].Value);
-                for (int j = i; j < tmpList.Count; j++)
+                int tmpLvl = PlayerController.instance.Attributes.GetCurrentAttributeLevel(button.UpgradeType);
+               
+                for (int j = i; j < tmpList[i].Value.AttributeDataList.Length; j++)
                 {
-                    if (tmpList[j + 1].Value.UpgradeType != button.UpgradeType)
+                    if (menuButtons[j+1].GetComponent<AttributeUpgradeButton>().UpgradeType != button.UpgradeType)
                         break;
 
-
-                    if (PlayerController.instance.Attributes._data.AttributeDataList[j].AttributeLevel > 3)
+                    if(tmpLvl > tmpList[i].Value.AttributeDataList[j].AttributeLevel)
+                    {
                         menuButtons[j].interactable = false;
 
+                        Debug.Log("menuButtons[j].name:" + menuButtons[j].interactable);
+                    }
+                        
 
-                    int tmpLvl = PlayerController.instance.Attributes.GetCurrentAttributeLevel(button.UpgradeType);
-                    AttributeUpgradeData attributeData = tmpList[j].Value.AttributeDataList[j+tmpLvl];
-                    InitButton(button, attributeData, button.UpgradeType.ToString() /*,
-                    weapons[j].GetComponent<Weapon>().WeaponAttributes.WeaponPurchased*/);
+                    AttributeUpgradeData attributeData = tmpList[i].Value.AttributeDataList[j];
+                    InitButton(button, attributeData, button.UpgradeType.ToString(), tmpLvl);
 
                     Debug.Log("InitButton():" + button.name);
                 }
             }
+
         }
     }
 
     // initilaize buttons with correct weapon data 
-    public void InitButton(AttributeUpgradeButton _button, AttributeUpgradeData _attributeData, string _weaponName/*, bool purchased*/)
+    public void InitButton(AttributeUpgradeButton _button, AttributeUpgradeData _attributeData, string _weaponName, int curUpgradeLvl)
     {
         //_button.ItemName_Text.text = _weaponName;
-        if (true/*purchased*/)
+        if (_attributeData.isPurchased)
         {
             _button.gameObject.GetComponent<PurchaseWeaponButtonUI>().Price_Text.text = "purchased";
             return;
         }
         _button.Price_Text.text = _attributeData.AttributePrice.ToString();
-        //_button.gameObject.GetComponent<Button>().onClick.AddListener(() => PurchaseUpgrade(_weaponName, _button.transform.gameObject.GetComponent<Button>()));
+        _button.gameObject.GetComponent<Button>().onClick.AddListener(() => PurchaseUpgrade(_weaponName, curUpgradeLvl, _button.transform.gameObject.GetComponent<Button>()));
     }
 
     public void PurchaseUpgrade(string _upgradeType, int _upgradeLevel, Button _button)
     {
         AttributeData tmpData = attributeDatabase[_upgradeType];
-       int price = tmpData.AttributeDataList[_upgradeLevel].AttributePrice; // get price
+        int price = tmpData.AttributeDataList[_upgradeLevel].AttributePrice; // get price
 
         if (customer.CanPurchaseUpgrade(price))
         {
