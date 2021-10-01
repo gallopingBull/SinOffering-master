@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
 {
-
     #region variables
 
     // these should be moved to 

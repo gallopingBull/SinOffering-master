@@ -17,14 +17,61 @@ public class AttributeUpgradeStore : MonoBehaviour
     {
         attributeDatabase = AttributeDatabase._instance.GetAttributeDatabase();
         silverValueUI = GameObject.Find("Text_SilverValue");
-    }
+    }   
 
     public void InitAttributeUpgradeStore(GameObject menu)
     {
         // buttons for weapon or upgrades that haven't been purchased yet
         // should be made interactable reading in data from inventory.CS ...
-        List<KeyValuePair<string, AttributeData>> tmpList = attributeDatabase.ToList();    
+        List<KeyValuePair<string, AttributeData>> tmpUpgradeTypes = attributeDatabase.ToList();    
             
+        if (menuButtons.Length == 0)
+            SetMenuButtons(menu);
+
+        for (int i = 0; i < menuButtons.Length - 1; i++)
+        {
+            // list of all buttons in Attribute Upgrade Menu
+            var button = menuButtons[i].gameObject.GetComponent<AttributeUpgradeButton>();
+            
+            // loop through list of upgradetypes
+            for (int t = 0; t < tmpUpgradeTypes.Count; t++)
+            {
+                // if current button upgrade is upgradeType
+                if (button.UpgradeType == tmpUpgradeTypes[t].Value.UpgradeType)
+                {
+                    int tmpLvl = PlayerController.instance.Attributes.GetCurrentAttributeLevel(button.UpgradeType);
+
+
+
+                    for (int j = 0; j < tmpUpgradeTypes[t].Value.AttributeDataList.Length; j++)
+                    {
+                        if (tmpLvl > tmpUpgradeTypes[t].Value.AttributeDataList[j].AttributeLevel)
+                        {
+                            menuButtons[i].interactable = false; // already purchased
+                        }
+                            
+                        //else
+
+                        // not purchased
+                        AttributeUpgradeData attributeData = tmpUpgradeTypes[t].Value.AttributeDataList[j];
+                        InitButton(button, attributeData, button.UpgradeType.ToString(), tmpLvl);
+
+                        //next button not visible yet
+
+                        if (menuButtons[i + 1].GetComponent<AttributeUpgradeButton>().UpgradeType != button.UpgradeType)
+                            break;
+                    }
+                }
+            }
+        }
+    }
+
+    public void InitAttributeUpgradeStoreOLD(GameObject menu)
+    {
+        // buttons for weapon or upgrades that haven't been purchased yet
+        // should be made interactable reading in data from inventory.CS ...
+        List<KeyValuePair<string, AttributeData>> tmpList = attributeDatabase.ToList();
+
         if (menuButtons.Length == 0)
             SetMenuButtons(menu);
 
@@ -32,42 +79,40 @@ public class AttributeUpgradeStore : MonoBehaviour
         {
             int upgradeTypeIndex = i;
 
-
             var button = menuButtons[i].gameObject.GetComponent<AttributeUpgradeButton>();
+
             //menuButtons[i].interactable = false;s
             #region testing
             //int loops = i;
             //Debug.Log("loops: " + loops);
             //Debug.Log("length: " + menuButtons.Length);
             #endregion
-   
+
             if (upgradeTypeIndex == 4)
                 upgradeTypeIndex = 0;
 
             if (button.UpgradeType == tmpList[upgradeTypeIndex].Value.UpgradeType)
             {
                 int tmpLvl = PlayerController.instance.Attributes.GetCurrentAttributeLevel(button.UpgradeType);
-               
-                for (int j = i; j < tmpList[i].Value.AttributeDataList.Length; j++)
+
+                for (int j = i; j < tmpList[upgradeTypeIndex/*i*/].Value.AttributeDataList.Length; j++)
                 {
-                    if (menuButtons[j+1].GetComponent<AttributeUpgradeButton>().UpgradeType != button.UpgradeType)
+                    if (menuButtons[j + 1].GetComponent<AttributeUpgradeButton>().UpgradeType != button.UpgradeType)
                         break;
 
-                    if(tmpLvl > tmpList[i].Value.AttributeDataList[j].AttributeLevel)
+                    if (tmpLvl > tmpList[upgradeTypeIndex/*i*/].Value.AttributeDataList[j].AttributeLevel)
                     {
                         menuButtons[j].interactable = false;
-
                         Debug.Log("menuButtons[j].name:" + menuButtons[j].interactable);
                     }
-                        
 
-                    AttributeUpgradeData attributeData = tmpList[i].Value.AttributeDataList[j];
+                    AttributeUpgradeData attributeData = tmpList[upgradeTypeIndex/*i*/].Value.AttributeDataList[j];
                     InitButton(button, attributeData, button.UpgradeType.ToString(), tmpLvl);
 
                     Debug.Log("InitButton():" + button.name);
+                    break;
                 }
             }
-
         }
     }
 

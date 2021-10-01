@@ -162,7 +162,7 @@ public class MenuManager : MonoBehaviour
     {
         CameraManager.instance.MainCam.Priority = 12;
         CameraManager.instance.GetCurrentCam().Priority = 10;
-        CameraManager.instance.SetCamera(CameraManager.instance.MainCam);
+         CameraManager.instance.SetCamera(CameraManager.instance.MainCam);
     }
     private void HideMenu(int index)
     {
