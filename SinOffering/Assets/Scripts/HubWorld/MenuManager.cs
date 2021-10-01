@@ -7,6 +7,7 @@ using UnityEngine;
 // weapon/ability menu manager
 public class MenuManager : MonoBehaviour
 {
+    #region variables
     [HideInInspector]
     public bool EnablePrompt = true;
     [HideInInspector]
@@ -30,6 +31,8 @@ public class MenuManager : MonoBehaviour
     private Dictionary<string, WeaponData> weaponDatabase;
     private WeaponData weaponData;
 
+    #endregion
+    #region functions
     private void Start()
     {
         weaponDatabase = WeaponDatabase._instance.GetWeaponDatabase();
@@ -198,4 +201,5 @@ public class MenuManager : MonoBehaviour
                 break;
         }
     }
+    #endregion
 }

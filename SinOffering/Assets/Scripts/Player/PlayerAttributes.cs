@@ -27,7 +27,7 @@ public class PlayerAttributes
 
     //float airControl; // maybe...
     //int equipmentSize; // maybe...
-
+    int evadeAttributeLevel = 0;
     bool doubleJumpedUnlocked = false;
 
     bool double_evade = false; 
@@ -35,6 +35,7 @@ public class PlayerAttributes
     float evade_manaCost;
 
     //dashattack stuff
+    int dashAttributeLevel = 0;
     float dashAttack_manaCost;
     float dashAttack_distance;
     float dashAttack_time; // timer before dash attack ecexutes automatically
@@ -61,19 +62,33 @@ public class PlayerAttributes
                 tmpLvl = healthAttributeLevel;
                 break;
             case AttributeUpgradeTypes.UpgradeType.mana:
+                //tmpLvl = GetRandomValue((int)manaAttributeLevel);
+                tmpLvl = GetRandomValue(1);
                 break;
             case AttributeUpgradeTypes.UpgradeType.speed:
+                //tmpLvl = GetRandomValue((int)speedAttributeLevel);
+                tmpLvl = GetRandomValue(1);
                 break;
             case AttributeUpgradeTypes.UpgradeType.strength:
+                //tmpLvl = GetRandomValue((int)strengthAttributeLevel);
+                tmpLvl = GetRandomValue(1);
                 break;
             case AttributeUpgradeTypes.UpgradeType.dashAttack:
+                tmpLvl = GetRandomValue(1);
                 break;
             case AttributeUpgradeTypes.UpgradeType.evade:
+                tmpLvl = GetRandomValue(1);
                 break;
             default:
                 break;
         }
         return tmpLvl;
+    }
+
+    int GetRandomValue(int _maxValue)
+    {
+        int _num;
+        return _num = (int)UnityEngine.Random.Range(0, _maxValue);
     }
 }
 

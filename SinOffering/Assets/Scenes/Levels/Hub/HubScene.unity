@@ -3317,11 +3317,15 @@ MonoBehaviour:
   - Mana
   - Speed
   - Strength
+  - DashAttack
+  - Evade
   values:
   - {fileID: 11400000, guid: 95dbd310bdca7594faaf8bab411c1dfb, type: 2}
   - {fileID: 11400000, guid: df988ada999b97b46b84d66722e91150, type: 2}
   - {fileID: 11400000, guid: fd5a714124d5c17489bd02e7b4a8523a, type: 2}
   - {fileID: 11400000, guid: 79c1e4248673d4f4baeb88a616f1317f, type: 2}
+  - {fileID: 11400000, guid: 87e73fe3c816cc943ae138f9b0164579, type: 2}
+  - {fileID: 11400000, guid: 2948359d4a1e70b46a37618cdc52560a, type: 2}
 --- !u!4 &338871295 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4006510038024346, guid: a0aa2525ba693f54db86d05aa66bde7d, type: 3}
@@ -18862,31 +18866,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.8994594
+      value: -0.1967926
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.1616216
+      value: 1.6900601
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.810811
+      value: -1.8454876
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.70793086
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.08984238
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.6945331
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.09157554
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -18902,11 +18906,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274667, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: field of view
-      value: 90
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274667, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: far clip plane
-      value: 1038.02
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274671, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_Name
