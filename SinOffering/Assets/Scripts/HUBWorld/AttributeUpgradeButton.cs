@@ -63,7 +63,7 @@ public class AttributeUpgradeButton : MonoBehaviour
         Price_Text =
               GameObject.Find("Panel_AbilityPrice").transform.Find("Text_SilverValue").GetComponent<TextMeshProUGUI>();
 
-        //CurUpgradeLevel_Text =
+        //CurUpgradeLevel_Text =    
         //GameObject.Find("Text_AbilityCurLevel").GetComponent<TextMeshProUGUI>();
 
         //CurUpgradeVal_Text =

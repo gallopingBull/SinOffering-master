@@ -40,27 +40,51 @@ public class AttributeUpgradeStore : MonoBehaviour
                 // if current button upgrade is not datanase upgradeType
                 if (_button.UpgradeType == _upgradeTypes[typeIndex].Value.UpgradeType)
                 {
-                    int tmpLvl = PlayerController.instance.Attributes.GetCurrentAttributeLevel(_button.UpgradeType);
+                    int tmpLvl = PlayerController.instance.Attributes.GetCurrentAttributeLevel(_button.UpgradeType) + 1;
 
                     for (int upgradeDataIndex = 0; upgradeDataIndex < _upgradeTypes[typeIndex].Value.AttributeDataList.Length; upgradeDataIndex++)
                     {
-                        // not purchased
-                        if (tmpLvl >= _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex].AttributeLevel)
+                        if (menuButtons[i].gameObject.name == "Ability_Name_Level_Button")
                         {
-                            //next button not visible yet
-                            menuButtons[i].interactable = false; 
-                        }
+                            if (tmpLvl == 1 && _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex].AttributeLevel == 1)
+                                _button.GetComponent<Button>().interactable = true;
+                            #region testing
+                            /*
+                            else
+                            {
+                                // not purchased
+                                if (tmpLvl >= _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex].AttributeLevel)
+                                {
+                                    //next button not visible yet
+                                    //menuButtons[i].interactable = false;
+                                }
+                                if (tmpLvl < _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex].AttributeLevel)
+                                {
+                                    //menuButtons[i].interactable = false;
+                                }
 
-                        if (tmpLvl < _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex].AttributeLevel)
-                        {
-                            menuButtons[i].interactable = true;
+                                //menuButtons[i].interactable = false;
+                                //else
+                                //{
+                                //menuButtons[i].interactable = true;
+                                // already purchased
+                                //}
+
+                            }
+                            */
+                            #endregion
                         }
                         else
                         {
-                            //menuButtons[i].interactable = true;
-                            // already purchased
+                            if (tmpLvl > _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex].AttributeLevel)
+                            {
+                                //next button not visible yet
+                                menuButtons[i].interactable = true;
+                            }
                         }
-            
+
+
+
                         AttributeUpgradeData attributeData = _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex];
                         InitButton(_button, attributeData, _button.UpgradeType.ToString(), tmpLvl);
 
@@ -79,7 +103,7 @@ public class AttributeUpgradeStore : MonoBehaviour
         //_button.ItemName_Text.text = _weaponName;
         if (_attributeData.isPurchased)
         {
-            _button.gameObject.GetComponent<PurchaseWeaponButtonUI>().Price_Text.text = "purchased";
+            _button.gameObject.GetComponent<PurchaseUpgradeButtonUI>(   ).Price_Text.text = "purchased";
             return;
         }
         _button.Price_Text.text = _attributeData.AttributePrice.ToString();
