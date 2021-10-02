@@ -24,7 +24,6 @@ public class AttributeUpgradeStore : MonoBehaviour
         // buttons for weapon or upgrades that haven't been purchased yet
         // should be made interactable reading in data from inventory.CS ...
         List<KeyValuePair<string, AttributeData>> _upgradeTypes = attributeDatabase.ToList();    
-  
 
         if (menuButtons.Length == 0)
             SetMenuButtons(_menu);
@@ -33,58 +32,46 @@ public class AttributeUpgradeStore : MonoBehaviour
         {
             // list of all buttons in Attribute Upgrade Menu
             var _button = menuButtons[i].gameObject.GetComponent<AttributeUpgradeButton>();
-            
+            int tmpLvl = PlayerController.instance.Attributes.GetCurrentAttributeLevel(_button.UpgradeType) + 1;
+            Debug.Log("UpgradeType: " + _button.UpgradeType.ToString() + " || " + "Upgrade Level: " + tmpLvl);
+
             // loop through list of upgradetypes
             for (int typeIndex = 0; typeIndex < _upgradeTypes.Count; typeIndex++)
             {
+                //Debug.Log("UpgradeType: "+ _button.UpgradeType.ToString());
+              
                 // if current button upgrade is not datanase upgradeType
                 if (_button.UpgradeType == _upgradeTypes[typeIndex].Value.UpgradeType)
                 {
-                    int tmpLvl = PlayerController.instance.Attributes.GetCurrentAttributeLevel(_button.UpgradeType) + 1;
-
                     for (int upgradeDataIndex = 0; upgradeDataIndex < _upgradeTypes[typeIndex].Value.AttributeDataList.Length; upgradeDataIndex++)
                     {
-                        if (menuButtons[i].gameObject.name == "Ability_Name_Level_Button")
+                        // checks for first element on top of every 'upgrade tree' column
+                        if (_button.gameObject.name == "Ability_Name_Level_Button")
                         {
-                            if (tmpLvl == 1 && _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex].AttributeLevel == 1)
+                            if (_upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex].AttributeLevel == 1)
                                 _button.GetComponent<Button>().interactable = true;
-                            #region testing
-                            /*
-                            else
-                            {
-                                // not purchased
-                                if (tmpLvl >= _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex].AttributeLevel)
-                                {
-                                    //next button not visible yet
-                                    //menuButtons[i].interactable = false;
-                                }
-                                if (tmpLvl < _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex].AttributeLevel)
-                                {
-                                    //menuButtons[i].interactable = false;
-                                }
-
-                                //menuButtons[i].interactable = false;
-                                //else
-                                //{
-                                //menuButtons[i].interactable = true;
-                                // already purchased
-                                //}
-
-                            }
-                            */
-                            #endregion
                         }
+                        // checks at every button that isn't on the first/top element in upgrade tree column
                         else
                         {
+                            // button already purchased
                             if (tmpLvl > _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex].AttributeLevel)
+                                _button.GetComponent<Button>().interactable = true; // intibutton so its visible and interactive, but nothing canpurchased
+                            
+                            if (tmpLvl < _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex].AttributeLevel)
                             {
-                                //next button not visible yet
-                                menuButtons[i].interactable = true;
+                                //if (menuButtons[i + 1].GetComponent<AttributeUpgradeButton>().UpgradeType != _button.UpgradeType)
+                                //{
+                                    // show image
+                                    //menuButtons[i +1].interactable = false;
+                                //}
+                                //hide image
+                                _button.GetComponent<Button>().interactable = false;
+                                //menuButtons[i +1].interactable = false;
+                                break;
                             }
                         }
-
-
-
+                        
                         AttributeUpgradeData attributeData = _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex];
                         InitButton(_button, attributeData, _button.UpgradeType.ToString(), tmpLvl);
 
@@ -96,7 +83,6 @@ public class AttributeUpgradeStore : MonoBehaviour
         }
     }
 
-  
     // initilaize buttons with correct weapon data 
     public void InitButton(AttributeUpgradeButton _button, AttributeUpgradeData _attributeData, string _weaponName, int curUpgradeLvl)
     {
@@ -138,9 +124,10 @@ public class AttributeUpgradeStore : MonoBehaviour
             }
         }
     }
+    
     private void SetMenuButtons(GameObject _menu)
     {
-        Debug.Log("SetMenuButtons("+ _menu.name+ ")");
+        //Debug.Log("SetMenuButtons("+ _menu.name+ ")");
         menuButtons = _menu.GetComponentsInChildren<Button>();
         silverValueUI = GameObject.Find("Text_SilverValue");
     }

@@ -15453,6 +15453,10 @@ PrefabInstance:
       propertyPath: button
       value: 
       objectReference: {fileID: 1817422868}
+    - target: {fileID: 7930721911905566485, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
+      propertyPath: EnableDustTrails
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7930721911905566486, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
       propertyPath: m_RootOrder
       value: 0

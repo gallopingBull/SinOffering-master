@@ -50,7 +50,7 @@ public class AttributeUpgradeButton : MonoBehaviour
         UpgradeName = UpgradeType.ToString();
         UpgradeName_Text =
             GameObject.Find("Text_AbilityName").GetComponent<TextMeshProUGUI>();
-        UpgradeName_Text.text = UpgradeType.ToString();
+        UpgradeName_Text.text = UpgradeType.ToString(); 
 
         UpgradeLevelImages = new Image[5];
         UpgradeLevelImages[0] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_0").GetComponent<Image>();
