@@ -17,15 +17,25 @@ MonoBehaviour:
   - AttributePrice: 100
     AttributeValue: 100
     AttributeLevel: 1
+    isPurchased: 0
+    UpgradeDescription: +15% Health
   - AttributePrice: 175
     AttributeValue: 125
     AttributeLevel: 2
+    isPurchased: 0
+    UpgradeDescription: +25% Health
   - AttributePrice: 250
     AttributeValue: 150
     AttributeLevel: 3
+    isPurchased: 0
+    UpgradeDescription: +35% Health
   - AttributePrice: 325
     AttributeValue: 175
     AttributeLevel: 4
+    isPurchased: 0
+    UpgradeDescription: +45% Health
   - AttributePrice: 400
     AttributeValue: 200
     AttributeLevel: 5
+    isPurchased: 0
+    UpgradeDescription: +50% Health

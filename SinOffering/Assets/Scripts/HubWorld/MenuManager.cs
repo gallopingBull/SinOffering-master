@@ -53,7 +53,7 @@ public class MenuManager : MonoBehaviour
     {
         PlayerController.instance.DisableInput();
         currentMenu = (UpgradeMenu)state;
-        Debug.Log("enterstate() || state = " + (UpgradeMenu)state);
+        //Debug.Log("enterstate() || state = " + (UpgradeMenu)state);
         StartCoroutine("Enter_State");
     }
     private IEnumerator Enter_State()

@@ -37,9 +37,7 @@ public class AttributeUpgradeStore : MonoBehaviour
 
             // loop through list of upgradetypes
             for (int typeIndex = 0; typeIndex < _upgradeTypes.Count; typeIndex++)
-            {
-                //Debug.Log("UpgradeType: "+ _button.UpgradeType.ToString());
-              
+            {              
                 // if current button upgrade is not datanase upgradeType
                 if (_button.UpgradeType == _upgradeTypes[typeIndex].Value.UpgradeType)
                 {
@@ -62,7 +60,7 @@ public class AttributeUpgradeStore : MonoBehaviour
                             {
                                 //if (menuButtons[i + 1].GetComponent<AttributeUpgradeButton>().UpgradeType != _button.UpgradeType)
                                 //{
-                                    // show image
+                                    // ssshow image
                                     //menuButtons[i +1].interactable = false;
                                 //}
                                 //hide image
@@ -92,6 +90,8 @@ public class AttributeUpgradeStore : MonoBehaviour
             _button.gameObject.GetComponent<PurchaseUpgradeButtonUI>(   ).Price_Text.text = "purchased";
             return;
         }
+        Debug.Log(_button.UpgradeType.ToString().ToLower());
+        _button.InitUpgradeButton(attributeDatabase[_button.UpgradeType.ToString()]);
         _button.Price_Text.text = _attributeData.AttributePrice.ToString();
         _button.gameObject.GetComponent<Button>().onClick.AddListener(() => PurchaseUpgrade(_weaponName, curUpgradeLvl, _button.transform.gameObject.GetComponent<Button>()));
     }
