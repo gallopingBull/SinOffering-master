@@ -17,15 +17,25 @@ MonoBehaviour:
   - AttributePrice: 100
     AttributeValue: 290
     AttributeLevel: 1
+    isPurchased: 0
+    UpgradeDescription: +15% Evade
   - AttributePrice: 125
     AttributeValue: 293
     AttributeLevel: 2
+    isPurchased: 0
+    UpgradeDescription: +25% Evade
   - AttributePrice: 150
     AttributeValue: 296
     AttributeLevel: 3
+    isPurchased: 0
+    UpgradeDescription: +35% Evade
   - AttributePrice: 175
     AttributeValue: 298
     AttributeLevel: 4
+    isPurchased: 0
+    UpgradeDescription: +45% Evade
   - AttributePrice: 200
     AttributeValue: 300
     AttributeLevel: 5
+    isPurchased: 0
+    UpgradeDescription: +50% Evade
