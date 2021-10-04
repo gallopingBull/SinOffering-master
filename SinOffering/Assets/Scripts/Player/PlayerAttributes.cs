@@ -59,27 +59,26 @@ public class PlayerAttributes
         switch (_upgradeType)
         {
             case AttributeUpgradeTypes.UpgradeType.health:
-
                 //tmpLvl = healthAttributeLevel;
                 tmpLvl = 2;
                 break;
             case AttributeUpgradeTypes.UpgradeType.mana:
                 //tmpLvl = GetRandomValue((int)manaAttributeLevel);
-                tmpLvl = GetRandomValue(2);
+                tmpLvl = 1;//GetRandomValue(2);
                 break;
             case AttributeUpgradeTypes.UpgradeType.speed:
                 //tmpLvl = GetRandomValue((int)speedAttributeLevel);
-                tmpLvl = GetRandomValue(1);
+                tmpLvl = 2;// GetRandomValue(1);
                 break;
             case AttributeUpgradeTypes.UpgradeType.strength:
                 //tmpLvl = GetRandomValue((int)strengthAttributeLevel);
-                tmpLvl = GetRandomValue(2);
+                tmpLvl = 1; //GetRandomValue(2);
                 break;
             case AttributeUpgradeTypes.UpgradeType.dashAttack:
-                tmpLvl = GetRandomValue(3);
+                tmpLvl = 2; //GetRandomValue(3);
                 break;
             case AttributeUpgradeTypes.UpgradeType.evade:
-                tmpLvl = GetRandomValue(1);
+                tmpLvl = 1; //GetRandomValue(1);
                 break;
             default:
                 break;

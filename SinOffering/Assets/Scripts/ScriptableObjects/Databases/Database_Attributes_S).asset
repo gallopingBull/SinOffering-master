@@ -18,6 +18,7 @@ MonoBehaviour:
   - speed
   - strength
   - dashAttack
+  - dashSlam
   - evade
   values:
   - {fileID: 11400000, guid: 95dbd310bdca7594faaf8bab411c1dfb, type: 2}
@@ -25,4 +26,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fd5a714124d5c17489bd02e7b4a8523a, type: 2}
   - {fileID: 11400000, guid: 79c1e4248673d4f4baeb88a616f1317f, type: 2}
   - {fileID: 11400000, guid: 87e73fe3c816cc943ae138f9b0164579, type: 2}
+  - {fileID: 11400000, guid: 6c9c0dc3228f69c4b932efd47a223471, type: 2}
   - {fileID: 11400000, guid: 2948359d4a1e70b46a37618cdc52560a, type: 2}

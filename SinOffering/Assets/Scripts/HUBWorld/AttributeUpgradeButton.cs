@@ -10,6 +10,9 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     #region variables
 
     public AttributeData data;
+    //[HideInInspector]
+    public int UpgradeLevel = 0;
+
 
     [HideInInspector]
     public string UpgradeName;
@@ -40,6 +43,8 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     [HideInInspector]
     public Button Upgrade_Button;
 
+    private Color originalColor;
+
     private bool buttonInit = false;
 
     public bool ButtonInit { get => buttonInit; private set => buttonInit = value; }
@@ -61,16 +66,16 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         UpgradeLevelImages[3] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_3").GetComponent<Image>();
         UpgradeLevelImages[4] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_4").GetComponent<Image>();
 
-
         Price_Text =
               GameObject.Find("Panel_AbilityPrice").transform.Find("Text_SilverValue").GetComponent<TextMeshProUGUI>();
 
+        #region testing/old code
         //CurUpgradeLevel_Text =    
         //GameObject.Find("Text_AbilityCurLevel").GetComponent<TextMeshProUGUI>();
 
         //CurUpgradeVal_Text =
         //transform.Find("Current Level UI Objects").transform.Find("Text_UpgradeValue").GetComponent<TextMeshProUGUI>();
-
+        #endregion
 
         NextUpgradeLevel_Text =
             GameObject.Find("Panel_Content").transform.Find("Panel").transform.Find("Text_AbilityName").transform.Find("Text_AbilityCurLevel").GetComponentInChildren<TextMeshProUGUI>();
@@ -78,32 +83,34 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         NextUpgradeVal_Text =
             GameObject.Find("Panel_Content").transform.Find("Text_AbilityDescription").GetComponent<TextMeshProUGUI>();
 
+        originalColor = UpgradeLevelImages[0].color;
     }
 
-    public void InitUpgradeButton(AttributeData _data)
+    public void SetButtonData(AttributeData _data)
     {
         Awake();
         //AttributeData tmpData = _data;
-        Debug.Log("InitUpgradeButton() - " + _data);
+     
         data = _data;
+        //Debug.Log("InitUpgradeButton() - " + _data);
         
         // get player level;
-        int tmpLevel = PlayerController.instance.Attributes.GetCurrentAttributeLevel(UpgradeType);
+        //int tmpLevel = PlayerController.instance.Attributes.GetCurrentAttributeLevel(UpgradeType);
 
         UpgradeName_Text.text = UpgradeType.ToString();
 
         for (int i = 0; i < data.AttributeDataList.Length; i++)
         {
             if (UpgradeType == data.UpgradeType &&
-                data.AttributeDataList[i].AttributeLevel == tmpLevel)
+                data.AttributeDataList[i].AttributeLevel == UpgradeLevel)
             {
                 //CurUpgradeVal_Text.text = data.AttributeDataList[i].AttributeValue.ToString();
                 //CurUpgradeLevel_Text.text = tmpLevel.ToString();
-                if (tmpLevel < 3)
+                if (UpgradeLevel < 3)
                 {
                     Price_Text.text = data.AttributeDataList[i + 1].AttributePrice.ToString();
 
-                    NextUpgradeLevel_Text.text = (tmpLevel + 1).ToString();
+                    NextUpgradeLevel_Text.text = (UpgradeLevel + 1).ToString();
                     NextUpgradeVal_Text.text = data.AttributeDataList[i + 1].AttributeValue.ToString();
                 }
                 else
@@ -112,7 +119,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                     NextUpgradeVal_Text.text = "--";
                     Price_Text.text = "--";
                 }
-                SetImageColors(tmpLevel);
+                SetImageColors(UpgradeLevel);
             }
         }
         buttonInit = true;
@@ -121,37 +128,13 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     public void OnSelect(BaseEventData eventData)
     {
         Debug.Log(this.gameObject.name + " was selected");
-        //AttributeData data = data;
-        // get player level;
-        int tmpLevel = PlayerController.instance.Attributes.GetCurrentAttributeLevel(UpgradeType);
-
+        
         UpgradeName_Text.text = UpgradeType.ToString();
 
-        for (int i = 0; i < data.AttributeDataList.Length; i++)
-        {
-            if (UpgradeType == data.UpgradeType &&
-                data.AttributeDataList[i].AttributeLevel == tmpLevel)
-            {
-                //CurUpgradeVal_Text.text = data.AttributeDataList[i].AttributeValue.ToString();
-                //CurUpgradeLevel_Text.text = tmpLevel.ToString();
-                if (tmpLevel < 3)
-                {
-                    Price_Text.text = data.AttributeDataList[i + 1].AttributePrice.ToString();
-
-                    NextUpgradeLevel_Text.text = (tmpLevel + 1).ToString();
-                    NextUpgradeVal_Text.text = data.AttributeDataList[i].UpgradeDescription;//data.AttributeDataList[i + 1].AttributeValue.ToString();
-                }
-                else
-                {
-                    NextUpgradeLevel_Text.text = "--";
-                    NextUpgradeVal_Text.text = "--";
-                    Price_Text.text = "--";
-                }
-                SetImageColors(tmpLevel);
-            }
-        }
-        //buttonInit = true;
-
+        Price_Text.text = data.AttributeDataList[UpgradeLevel].AttributePrice.ToString();
+        NextUpgradeLevel_Text.text = data.AttributeDataList[UpgradeLevel].AttributeLevel.ToString();
+        NextUpgradeVal_Text.text = data.AttributeDataList[UpgradeLevel].UpgradeDescription;
+        SetImageColors(UpgradeLevel);
     }
 
     void HideUpgradeButton()
@@ -162,12 +145,15 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     void DisplayUpgradeButton()
     {
 
-    }
+    }   
 
 
     public void SetImageColors(int level)
     {
-        for (int i = 0; i < level; i++)
+       
+        for (int i = 0; i < UpgradeLevelImages.Length; i++)
+            UpgradeLevelImages[i].color = originalColor;
+        for (int i = 0; i < level + 1; i++)
             UpgradeLevelImages[i].color = Color.red;
     }
 

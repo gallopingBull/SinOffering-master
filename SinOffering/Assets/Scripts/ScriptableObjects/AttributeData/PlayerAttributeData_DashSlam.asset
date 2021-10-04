@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ab99b88499e904fbb9f6ae8d5d668b, type: 3}
+  m_Name: PlayerAttributeData_DashSlam
+  m_EditorClassIdentifier: 
+  UpgradeType: 3
+  AttributeDataList:
+  - AttributePrice: 100
+    AttributeValue: 290
+    AttributeLevel: 1
+    isPurchased: 0
+    UpgradeDescription: +15% Dash Slam
+  - AttributePrice: 125
+    AttributeValue: 293
+    AttributeLevel: 2
+    isPurchased: 0
+    UpgradeDescription: +25% Dash Slam
+  - AttributePrice: 150
+    AttributeValue: 296
+    AttributeLevel: 3
+    isPurchased: 0
+    UpgradeDescription: +35% Dash Slam
