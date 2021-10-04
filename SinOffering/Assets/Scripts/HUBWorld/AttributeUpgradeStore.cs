@@ -62,7 +62,11 @@ public class AttributeUpgradeStore : MonoBehaviour
                         {
                             // button already purchased
                             if (tmpLvl > _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex].AttributeLevel)
+                            {
                                 _button.GetComponent<Button>().interactable = true; // intibutton so its visible and interactive, but nothing canpurchased
+                                _button.UpgradePurchased = true;// intibutton so its visible and interactive, but nothing canpurchased
+                            }
+                               
 
                             if (tmpLvl < _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex].AttributeLevel)
                             {

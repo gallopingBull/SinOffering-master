@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.EventSystems; 
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
@@ -38,6 +38,10 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     [HideInInspector]
     public TextMeshProUGUI NextUpgradeVal_Text;
 
+    [HideInInspector]
+    public bool UpgradePurchased = false;
+
+
     //[HideInInspector]
     public Image[] UpgradeLevelImages;
     [HideInInspector]
@@ -49,7 +53,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 
     public bool ButtonInit { get => buttonInit; private set => buttonInit = value; }
     #endregion
-
     #region functions
     private void Awake()
     {
@@ -57,7 +60,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         UpgradeName = UpgradeType.ToString();
         UpgradeName_Text =
             GameObject.Find("Text_AbilityName").GetComponent<TextMeshProUGUI>();
-        UpgradeName_Text.text = UpgradeType.ToString(); 
+        UpgradeName_Text.text = UpgradeType.ToString();
 
         UpgradeLevelImages = new Image[5];
         UpgradeLevelImages[0] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_0").GetComponent<Image>();
@@ -90,10 +93,10 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     {
         Awake();
         //AttributeData tmpData = _data;
-     
+
         data = _data;
         //Debug.Log("InitUpgradeButton() - " + _data);
-        
+
         // get player level;
         //int tmpLevel = PlayerController.instance.Attributes.GetCurrentAttributeLevel(UpgradeType);
 
@@ -122,7 +125,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     public void OnSelect(BaseEventData eventData)
     {
         Debug.Log(this.gameObject.name + " was selected");
-        
+
         UpgradeName_Text.text = UpgradeType.ToString();
 
         Price_Text.text = data.AttributeDataList[UpgradeLevel].AttributePrice.ToString();
@@ -139,8 +142,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     void DisplayUpgradeButton()
     {
 
-    }   
-
+    }
 
     public void SetImageColors(int level)
     {
@@ -155,4 +157,5 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     }
 
     #endregion
+
 }

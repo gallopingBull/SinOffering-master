@@ -60,7 +60,7 @@ public class PlayerAttributes
         {
             case AttributeUpgradeTypes.UpgradeType.health:
                 //tmpLvl = healthAttributeLevel;
-                tmpLvl = 1;
+                tmpLvl = 3;
                 break;
             case AttributeUpgradeTypes.UpgradeType.mana:
                 //tmpLvl = GetRandomValue((int)manaAttributeLevel);
