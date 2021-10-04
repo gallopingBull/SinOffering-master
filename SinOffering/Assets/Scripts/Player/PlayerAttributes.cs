@@ -60,7 +60,7 @@ public class PlayerAttributes
         {
             case AttributeUpgradeTypes.UpgradeType.health:
                 //tmpLvl = healthAttributeLevel;
-                tmpLvl = 2;
+                tmpLvl = 1;
                 break;
             case AttributeUpgradeTypes.UpgradeType.mana:
                 //tmpLvl = GetRandomValue((int)manaAttributeLevel);
@@ -77,8 +77,11 @@ public class PlayerAttributes
             case AttributeUpgradeTypes.UpgradeType.dashAttack:
                 tmpLvl = 2; //GetRandomValue(3);
                 break;
+            case AttributeUpgradeTypes.UpgradeType.dashSlam:
+                tmpLvl = 2; //GetRandomValue(3);
+                break;
             case AttributeUpgradeTypes.UpgradeType.evade:
-                tmpLvl = 1; //GetRandomValue(1);
+                tmpLvl = 3; //GetRandomValue(1);
                 break;
             default:
                 break;

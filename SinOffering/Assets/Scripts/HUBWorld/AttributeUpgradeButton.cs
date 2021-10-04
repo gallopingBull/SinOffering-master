@@ -113,12 +113,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                     NextUpgradeLevel_Text.text = (UpgradeLevel + 1).ToString();
                     NextUpgradeVal_Text.text = data.AttributeDataList[i + 1].AttributeValue.ToString();
                 }
-                else
-                {   
-                    NextUpgradeLevel_Text.text = "--";
-                    NextUpgradeVal_Text.text = "--";
-                    Price_Text.text = "--";
-                }
                 SetImageColors(UpgradeLevel);
             }
         }
@@ -150,11 +144,14 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 
     public void SetImageColors(int level)
     {
-       
-        for (int i = 0; i < UpgradeLevelImages.Length; i++)
-            UpgradeLevelImages[i].color = originalColor;
-        for (int i = 0; i < level + 1; i++)
-            UpgradeLevelImages[i].color = Color.red;
+        if (UpgradeLevelImages.Length > 0 && UpgradeLevelImages != null)
+        {
+            for (int i = 0; i < UpgradeLevelImages.Length; i++)
+                UpgradeLevelImages[i].color = originalColor;
+
+            for (int i = 0; i < level + 1; i++)
+                UpgradeLevelImages[i].color = Color.red;
+        }
     }
 
     #endregion
