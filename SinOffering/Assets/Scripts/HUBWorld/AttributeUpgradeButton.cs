@@ -38,7 +38,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     [HideInInspector]
     public TextMeshProUGUI NextUpgradeVal_Text;
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool UpgradePurchased = false;
 
 
@@ -56,6 +56,9 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     #region functions
     private void Awake()
     {
+        var database = AttributeDatabase._instance.GetAttributeDatabase();
+        data = database[UpgradeType.ToString()];
+
         Upgrade_Button = GetComponent<Button>();
         UpgradeName = UpgradeType.ToString();
         UpgradeName_Text =
@@ -94,8 +97,10 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         Awake();
         //AttributeData tmpData = _data;
 
-        data = _data;
+        //data = _data;
         //Debug.Log("InitUpgradeButton() - " + _data);
+        
+
 
         // get player level;
         //int tmpLevel = PlayerController.instance.Attributes.GetCurrentAttributeLevel(UpgradeType);
@@ -107,14 +112,13 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
             if (UpgradeType == data.UpgradeType &&
                 data.AttributeDataList[i].AttributeLevel == UpgradeLevel)
             {
-                //CurUpgradeVal_Text.text = data.AttributeDataList[i].AttributeValue.ToString();
-                //CurUpgradeLevel_Text.text = tmpLevel.ToString();
-                if (UpgradeLevel < 3)
-                {
-                    Price_Text.text = data.AttributeDataList[i + 1].AttributePrice.ToString();
 
-                    NextUpgradeLevel_Text.text = (UpgradeLevel + 1).ToString();
-                    NextUpgradeVal_Text.text = data.AttributeDataList[i + 1].AttributeValue.ToString();
+                if (UpgradeLevel < data.AttributeDataList.Length)
+                {
+                    Price_Text.text = data.AttributeDataList[i].AttributePrice.ToString();
+
+                    NextUpgradeLevel_Text.text = (UpgradeLevel).ToString();
+                    NextUpgradeVal_Text.text = data.AttributeDataList[i].AttributeValue.ToString();
                 }
                 SetImageColors(UpgradeLevel);
             }
@@ -127,7 +131,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         Debug.Log(this.gameObject.name + " was selected");
 
         UpgradeName_Text.text = UpgradeType.ToString();
-
+       
         Price_Text.text = data.AttributeDataList[UpgradeLevel].AttributePrice.ToString();
         NextUpgradeLevel_Text.text = data.AttributeDataList[UpgradeLevel].AttributeLevel.ToString();
         NextUpgradeVal_Text.text = data.AttributeDataList[UpgradeLevel].UpgradeDescription;

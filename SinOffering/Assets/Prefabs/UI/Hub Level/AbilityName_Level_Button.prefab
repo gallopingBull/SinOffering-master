@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 755951168073015354}
   - component: {fileID: 131796412933706058}
   - component: {fileID: 3904657673441985299}
+  - component: {fileID: 3471772988629544178}
   m_Layer: 0
   m_Name: AbilityName_Level_Button
   m_TagString: Untagged
@@ -122,6 +123,32 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3471772988629544178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465100078516103465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4940d11f17e48248976fadc4ea1bad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 0}
+  UpgradeLevel: 0
+  UpgradeName: 
+  UpgradeType: 0
+  UpgradeName_Text: {fileID: 0}
+  Price_Text: {fileID: 0}
+  UpgradeLevel_Text: {fileID: 0}
+  CurUpgradeLevel_Text: {fileID: 0}
+  CurUpgradeVal_Text: {fileID: 0}
+  NextUpgradeLevel_Text: {fileID: 0}
+  NextUpgradeVal_Text: {fileID: 0}
+  UpgradePurchased: 0
+  UpgradeLevelImages: []
+  Upgrade_Button: {fileID: 0}
 --- !u!1 &6371032896942078341
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,7 +25,7 @@ public class AttributeDatabase: MonoBehaviour, ISerializationCallbackReceiver
 
 
     [SerializeReference]
-    private Dictionary<string, AttributeData> weapons = new Dictionary<string, AttributeData>();
+    private Dictionary<string, AttributeData> _attributes = new Dictionary<string, AttributeData>();
 
     private void Awake()
     {
@@ -55,7 +55,7 @@ public class AttributeDatabase: MonoBehaviour, ISerializationCallbackReceiver
     // this is used to fuck with keys/values in the inspector
     public void DeserializeDictionary()
     {
-        weapons = new Dictionary<string, AttributeData>();
+        _attributes = new Dictionary<string, AttributeData>();
 
         inventoryData.Keys.Clear();
         inventoryData.Values.Clear();
@@ -64,7 +64,7 @@ public class AttributeDatabase: MonoBehaviour, ISerializationCallbackReceiver
         {
             inventoryData.Keys.Add(keys[i]);
             inventoryData.Values.Add(values[i]);
-            weapons.Add(keys[i], values[i]);
+            _attributes.Add(keys[i], values[i]);
         }
         modifyValues = false;
     }
@@ -72,7 +72,7 @@ public class AttributeDatabase: MonoBehaviour, ISerializationCallbackReceiver
     // this is used to get dictionary at runtime
     public Dictionary<string, AttributeData> GetAttributeDatabase()
     {
-        weapons = new Dictionary<string, AttributeData>();
+        _attributes = new Dictionary<string, AttributeData>();
 
         inventoryData.Keys.Clear();
         inventoryData.Values.Clear();
@@ -81,9 +81,9 @@ public class AttributeDatabase: MonoBehaviour, ISerializationCallbackReceiver
         {
             inventoryData.Keys.Add(keys[i]);
             inventoryData.Values.Add(values[i]);
-            weapons.Add(keys[i], values[i]);
+            _attributes.Add(keys[i], values[i]);
         }
-        return weapons;
+        return _attributes;
     }
 }
 
