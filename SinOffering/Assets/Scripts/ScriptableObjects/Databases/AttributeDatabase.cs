@@ -25,7 +25,7 @@ public class AttributeDatabase: MonoBehaviour, ISerializationCallbackReceiver
 
 
     [SerializeReference]
-    private Dictionary<string, AttributeData> _attributes = new Dictionary<string, AttributeData>();
+    private Dictionary<string,  AttributeData> _attributes = new Dictionary<string, AttributeData>();
 
     private void Awake()
     {

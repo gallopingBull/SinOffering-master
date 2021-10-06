@@ -17,6 +17,8 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     [HideInInspector]
     public string UpgradeName;
 
+    public bool ButtonLocked = false;
+
     public AttributeUpgradeTypes.UpgradeType UpgradeType;
 
     // UI Elements that are used for desciptions in content panel
@@ -47,7 +49,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     [HideInInspector]
     public Button Upgrade_Button;
 
-    private Color originalColor;
+    public Color originalColor;
 
     private bool buttonInit = false;
 
@@ -89,7 +91,8 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         NextUpgradeVal_Text =
             GameObject.Find("Panel_Content").transform.Find("Text_AbilityDescription").GetComponent<TextMeshProUGUI>();
 
-        originalColor = UpgradeLevelImages[0].color;
+        //originalColor = new Color(255, 255, 255, 255/2f);
+        originalColor = new Color(0, 0, 0, .5f);
     }
 
     public void SetButtonData(AttributeData _data)
@@ -99,9 +102,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 
         //data = _data;
         //Debug.Log("InitUpgradeButton() - " + _data);
-        
-
-
+       
         // get player level;
         //int tmpLevel = PlayerController.instance.Attributes.GetCurrentAttributeLevel(UpgradeType);
 
@@ -138,6 +139,19 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         SetImageColors(UpgradeLevel);
     }
 
+
+    public void SetUpgradeLevel(int _upgradeLevel)
+    {
+        if (UpgradeType == AttributeUpgradeTypes.UpgradeType.dashAttack ||
+            UpgradeType == AttributeUpgradeTypes.UpgradeType.dashSlam ||
+            UpgradeType == AttributeUpgradeTypes.UpgradeType.postDashAttack ||
+            UpgradeType == AttributeUpgradeTypes.UpgradeType.strength ||
+            UpgradeType == AttributeUpgradeTypes.UpgradeType.evade)
+            return;
+        
+        UpgradeLevel = _upgradeLevel;
+    }
+
     void HideUpgradeButton()
     {
 
@@ -155,8 +169,11 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
             for (int i = 0; i < UpgradeLevelImages.Length; i++)
                 UpgradeLevelImages[i].color = originalColor;
 
-            for (int i = 0; i < level + 1; i++)
-                UpgradeLevelImages[i].color = Color.red;
+            for (int index = 0; index < level +1; index++)
+                UpgradeLevelImages[index].color = Color.red;
+            
+            //for (int i = UpgradeLevelImages.Length - 1; i > level; i--)
+                //UpgradeLevelImages[i].color = Color.black;
         }
     }
 

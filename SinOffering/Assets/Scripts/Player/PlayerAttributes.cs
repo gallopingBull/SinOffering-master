@@ -68,11 +68,11 @@ public class PlayerAttributes
                 break;
             case AttributeUpgradeTypes.UpgradeType.speed:
                 //tmpLvl = GetRandomValue((int)speedAttributeLevel);
-                tmpLvl = 5;// GetRandomValue(1);
+                tmpLvl = 4;// GetRandomValue(1);
                 break;
             case AttributeUpgradeTypes.UpgradeType.strength:
                 //tmpLvl = GetRandomValue((int)strengthAttributeLevel);
-                tmpLvl = 5; //GetRandomValue(2);
+                tmpLvl = 4; //GetRandomValue(2);
                 break;
             case AttributeUpgradeTypes.UpgradeType.dashAttack:
                 tmpLvl = 2; //GetRandomValue(3);
@@ -80,8 +80,11 @@ public class PlayerAttributes
             case AttributeUpgradeTypes.UpgradeType.dashSlam:
                 tmpLvl = 2; //GetRandomValue(3);
                 break;
+            case AttributeUpgradeTypes.UpgradeType.postDashAttack:
+                tmpLvl = 1; //GetRandomValue(3);
+                break;
             case AttributeUpgradeTypes.UpgradeType.evade:
-                tmpLvl = 5; //GetRandomValue(1);
+                tmpLvl = 4; //GetRandomValue(1);
                 break;
             default:
                 break;
