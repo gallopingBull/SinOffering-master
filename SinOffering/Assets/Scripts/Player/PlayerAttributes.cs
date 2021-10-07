@@ -45,46 +45,65 @@ public class PlayerAttributes
     
     void Awake()
     {
-        
+        attributeDatabase = AttributeDatabase._instance.GetAttributeDatabase();
     }
-    public AttributeData GetData(string _type)
+    /*
+    public List<KeyValuePair<string, AttributeData>> GetAttributeLevelData()
     {
-        _data = attributeDatabase[_type.ToString()];
-        return _data;
-    }
+        attributeDatabase = AttributeDatabase._instance.GetAttributeDatabase();
+        var upgradeLevels = attributeDatabase;
+        for (int i = 0; i < attributeDatabase.Count; i++)
+        {
+            upgradeLevels = attributeDatabase;
+        }
+        
+        return upgradeLevels;
+    }*/
 
     public int GetCurrentAttributeLevel(AttributeUpgradeTypes.UpgradeType _upgradeType)
     {
+        attributeDatabase = AttributeDatabase._instance.GetAttributeDatabase();
         int tmpLvl = 0;
+        //AttributeData tmpData;
         switch (_upgradeType)
         {
             case AttributeUpgradeTypes.UpgradeType.health:
                 //tmpLvl = healthAttributeLevel;
-                tmpLvl = 2;
+                //tmpLvl = 4;
+                //tmpData = GetData(_upgradeType.ToString());
+                //tmpLvl = GetRandomValue(attributeDatabase[_upgradeType.ToString()].AttributeDataList.Length);
+                tmpLvl = GetRandomValue(4);
                 break;
             case AttributeUpgradeTypes.UpgradeType.mana:
                 //tmpLvl = GetRandomValue((int)manaAttributeLevel);
-                tmpLvl = 4;//GetRandomValue(2);
+                //tmpLvl = 4;
+                tmpLvl = GetRandomValue(2);
                 break;
             case AttributeUpgradeTypes.UpgradeType.speed:
                 //tmpLvl = GetRandomValue((int)speedAttributeLevel);
-                tmpLvl = 4;// GetRandomValue(1);
+                //tmpLvl = 4;
+                tmpLvl = GetRandomValue(1);
                 break;
             case AttributeUpgradeTypes.UpgradeType.strength:
                 //tmpLvl = GetRandomValue((int)strengthAttributeLevel);
-                tmpLvl = 4; //GetRandomValue(2);
+                //tmpLvl = 4; 
+                tmpLvl = GetRandomValue(3);
                 break;
             case AttributeUpgradeTypes.UpgradeType.dashAttack:
-                tmpLvl = 2; //GetRandomValue(3);
+                //tmpLvl = 4; 
+                tmpLvl = GetRandomValue(2);
                 break;
             case AttributeUpgradeTypes.UpgradeType.dashSlam:
-                tmpLvl = 2; //GetRandomValue(3);
+                //tmpLvl = 4; 
+                tmpLvl = GetRandomValue(0);
                 break;
             case AttributeUpgradeTypes.UpgradeType.postDashAttack:
-                tmpLvl = 1; //GetRandomValue(3);
+                //tmpLvl = 4; 
+                tmpLvl = GetRandomValue(3);
                 break;
             case AttributeUpgradeTypes.UpgradeType.evade:
-                tmpLvl = 4; //GetRandomValue(1);
+                //tmpLvl = 4; 
+                tmpLvl = GetRandomValue(1);
                 break;
             default:
                 break;

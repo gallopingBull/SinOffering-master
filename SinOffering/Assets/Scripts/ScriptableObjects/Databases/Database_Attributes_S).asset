@@ -19,7 +19,7 @@ MonoBehaviour:
   - strength
   - dashAttack
   - dashSlam
-  - postDashAttacl
+  - postDashAttack
   - evade
   values:
   - {fileID: 11400000, guid: 95dbd310bdca7594faaf8bab411c1dfb, type: 2}

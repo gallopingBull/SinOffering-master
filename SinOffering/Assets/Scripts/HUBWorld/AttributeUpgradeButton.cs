@@ -13,6 +13,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     //[HideInInspector]
     public int UpgradeLevel = 0;
 
+    AttributeButtonState state = AttributeButtonState.hidden;
 
     [HideInInspector]
     public string UpgradeName;
@@ -95,25 +96,36 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         originalColor = new Color(0, 0, 0, .5f);
     }
 
-    public void SetButtonData(AttributeData _data)
+    public void SetButtonData(AttributeData _data, int _upgradeLevel)
     {
         Awake();
         //AttributeData tmpData = _data;
 
         //data = _data;
         //Debug.Log("InitUpgradeButton() - " + _data);
-       
+
         // get player level;
-        //int tmpLevel = PlayerController.instance.Attributes.GetCurrentAttributeLevel(UpgradeType);
+        //int tmpLevel = _data.atttributeLevel;
+        int tmpLevel = _upgradeLevel;
+
+        if (tmpLevel >= UpgradeLevel)
+        {
+            EnterState(AttributeButtonState.purchased);
+        }
+        else if (tmpLevel < UpgradeLevel)
+        {
+            EnterState(AttributeButtonState.locked);
+        }
+
+
 
         UpgradeName_Text.text = UpgradeType.ToString();
 
         for (int i = 0; i < data.AttributeDataList.Length; i++)
         {
-            if (UpgradeType == data.UpgradeType &&
+            if (UpgradeType == data.UpgradeType && 
                 data.AttributeDataList[i].AttributeLevel == UpgradeLevel)
             {
-
                 if (UpgradeLevel < data.AttributeDataList.Length)
                 {
                     Price_Text.text = data.AttributeDataList[i].AttributePrice.ToString();
@@ -139,7 +151,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         SetImageColors(UpgradeLevel);
     }
 
-
     public void SetUpgradeLevel(int _upgradeLevel)
     {
         if (UpgradeType == AttributeUpgradeTypes.UpgradeType.dashAttack ||
@@ -162,6 +173,59 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 
     }
 
+
+    private void EnterState(AttributeButtonState _state)
+    {
+        ExitState(state);
+        switch (_state)
+        {
+            case AttributeButtonState.available:
+                state = AttributeButtonState.available;
+                Upgrade_Button.interactable = true; // intibutton so its visible and interactive, but nothing canpurchased 
+                // intibutton so its visible and interactive, but nothing canpurchased
+                break;
+
+            case AttributeButtonState.purchased:
+                state = AttributeButtonState.purchased;
+                Upgrade_Button.interactable = true;
+                UpgradePurchased = true;
+                break;
+
+            case AttributeButtonState.locked:
+                state = AttributeButtonState.locked;
+                Upgrade_Button.interactable = false;
+                UpgradePurchased = false;
+                break;
+
+            case AttributeButtonState.hidden:
+                state = AttributeButtonState.hidden;
+                Upgrade_Button.interactable = false;
+                UpgradePurchased = false;
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    private void ExitState(AttributeButtonState _state)
+    {
+        switch (_state)
+        {
+            case AttributeButtonState.available:
+                break;
+            case AttributeButtonState.purchased:
+                break;
+            case AttributeButtonState.locked:
+                break;
+            case AttributeButtonState.hidden:
+                break;
+
+            default:
+                break;
+        }
+    }
+
     public void SetImageColors(int level)
     {
         if (UpgradeLevelImages.Length > 0 && UpgradeLevelImages != null)
@@ -169,14 +233,23 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
             for (int i = 0; i < UpgradeLevelImages.Length; i++)
                 UpgradeLevelImages[i].color = originalColor;
 
-            for (int index = 0; index < level +1; index++)
+            for (int index = 0; index < level + 1; index++)
                 UpgradeLevelImages[index].color = Color.red;
-            
+
             //for (int i = UpgradeLevelImages.Length - 1; i > level; i--)
-                //UpgradeLevelImages[i].color = Color.black;
+            //UpgradeLevelImages[i].color = Color.black;
         }
     }
 
     #endregion
 
+}
+
+
+public enum AttributeButtonState
+{
+    available,
+    purchased,
+    locked,
+    hidden
 }

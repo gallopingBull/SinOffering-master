@@ -320,15 +320,12 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         // check if already purchased or if
         // player has enough silver for weapon
 
-        if (gameManager.TotalSilver >= _price)
-        {
-            gameManager.TotalSilver -= _price;
-            return true;
-        }
-        else
-        {
+        if (gameManager.TotalSilver < _price)
             return false;
-        }
+
+        gameManager.TotalSilver -= _price;
+        return true;
+
     }
     void IWeaponStoreCustomer.PurchaseWeaponUpgrade(string _weaponName, WeaponUpgradeTypes.UpgradeType upgradeType)
     {
@@ -367,11 +364,15 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     void IAttributeStoreCustomer.PurchaseUpgrade(string _upgradeName)
     {
-        throw new System.NotImplementedException();
+        Debug.Log("should purchase: " + _upgradeName);
     }
     bool IAttributeStoreCustomer.CanPurchaseUpgrade(int _price)
     {
-        throw new System.NotImplementedException();
+        if (gameManager.TotalSilver < _price)
+            return false;
+
+        gameManager.TotalSilver -= _price;
+        return true;
     }
 
     #endregion
