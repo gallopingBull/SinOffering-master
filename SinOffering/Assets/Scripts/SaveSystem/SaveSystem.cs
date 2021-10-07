@@ -32,6 +32,7 @@ public class SaveSystem : MonoBehaviour
     {
       
     }
+
     public void SaveGameData()
     {
         _gameData.WeaponAttributesDatas.Clear();
@@ -44,6 +45,10 @@ public class SaveSystem : MonoBehaviour
 
             _gameData.WeaponAttributesDatas.Add(curWeapon);
         }
+
+        _gameData.PlayerAttributes = new PlayerAttributes();
+        _gameData.PlayerAttributes = player.Attributes;
+       
 
         _gameData.TotalWins = _gameData.TotalWins + gameManager.CurWins;
         _gameData.TotalLosses = _gameData.TotalLosses + gameManager.CurLosses;
@@ -79,6 +84,8 @@ public class SaveSystem : MonoBehaviour
                 player.weaponManager.Weapons[j].GetComponent<Weapon>().SetWeaponAttributeFields();
             }
         }
+
+        player.Attributes = _gameData.PlayerAttributes;
 
         gameManager.CurWins = _gameData.TotalWins;
         gameManager.CurLosses = _gameData.TotalLosses;

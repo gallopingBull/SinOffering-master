@@ -72,9 +72,8 @@ public class WeaponAttributes
     {
         // using an IDatabase
         weaponDatabase = WeaponDatabase._instance.GetWeaponDatabase();
-        //weaponDatabase = GameObject.Find("WeaponDatabase").GetComponent<Database>();
         //Debug.Log("setting data for: " + _weaponName);
-        weaponData = weaponDatabase[_weaponName] as WeaponData;
+        weaponData = weaponDatabase[_weaponName];
     }
 
 
@@ -125,9 +124,7 @@ public class WeaponAttributes
         {
             if (weaponData.AttributeDataList[i].UpgradeType == WeaponUpgradeTypes.UpgradeType.WeaponDamage &&
                 _damageLevel == weaponData.AttributeDataList[i].AttributeLevel)
-            {
                 WeaponDamage = weaponData.AttributeDataList[i].AttributeValue;
-            }
         }
     }
 
@@ -137,9 +134,7 @@ public class WeaponAttributes
         {
             if (weaponData.AttributeDataList[i].UpgradeType == WeaponUpgradeTypes.UpgradeType.AmmoCapacity &&
                 _ammoCapacityLevel == weaponData.AttributeDataList[i].AttributeLevel)
-            {
                 MaxAmmo = (int)weaponData.AttributeDataList[i].AttributeValue;
-            }
         }
     }
 

@@ -6,28 +6,28 @@ using System;
 public class PlayerAttributes 
 {
     [SerializeField]
-    public AttributeData _data;
+    private AttributeData _data;
     private Dictionary<string, AttributeData> attributeDatabase;
 
-    int healthAttributeLevel = 2;
+    int healthAttributeLevel = 1;
     float max_health = 0;
     float health = 0;
     
-    int manaAttributeLevel = 0;
+    int manaAttributeLevel = 2;
     float max_mana = 0;
     float mana = 0;
 
-    int speedAttributeLevel = 0;
+    int speedAttributeLevel = 3;
     float max_speed = 0;
     float speed = 0;
 
-    int strengthAttributeLevel = 0;
+    int strengthAttributeLevel = 2;
     float max_strength = 0;
     float strength = 0;
 
     //float airControl; // maybe...
     //int equipmentSize; // maybe...
-    int evadeAttributeLevel = 0;
+    int evadeAttributeLevel = 1;
     bool doubleJumpedUnlocked = false;
 
     bool double_evade = false; 
@@ -35,7 +35,10 @@ public class PlayerAttributes
     float evade_manaCost;
 
     //dashattack stuff
-    int dashAttributeLevel = 0;
+    int dashAttack_AttributeLevel = 1;
+    int dashSlam_AttributeLevel = 1;
+    int postDashAttack_AttributeLevel = 0;
+    
     float dashAttack_manaCost;
     float dashAttack_distance;
     float dashAttack_time; // timer before dash attack ecexutes automatically
@@ -47,18 +50,33 @@ public class PlayerAttributes
     {
         attributeDatabase = AttributeDatabase._instance.GetAttributeDatabase();
     }
-    /*
-    public List<KeyValuePair<string, AttributeData>> GetAttributeLevelData()
+    
+    public Dictionary<AttributeUpgradeTypes.UpgradeType, int> GetAttributeLevelData()
     {
-        attributeDatabase = AttributeDatabase._instance.GetAttributeDatabase();
-        var upgradeLevels = attributeDatabase;
-        for (int i = 0; i < attributeDatabase.Count; i++)
-        {
-            upgradeLevels = attributeDatabase;
-        }
+        Dictionary<AttributeUpgradeTypes.UpgradeType, int> tmpDic = new Dictionary<AttributeUpgradeTypes.UpgradeType, int>();
         
-        return upgradeLevels;
-    }*/
+        #region testing
+        //tmpDic.Add(AttributeUpgradeTypes.UpgradeType.health,  GetRandomValue(4));
+        //tmpDic.Add(AttributeUpgradeTypes.UpgradeType.mana,  GetRandomValue(4));
+        //tmpDic.Add(AttributeUpgradeTypes.UpgradeType.dashAttack, GetRandomValue(4));
+        //tmpDic.Add(AttributeUpgradeTypes.UpgradeType.dashSlam, dashSlam_AttributeLevel);
+        //tmpDic.Add(AttributeUpgradeTypes.UpgradeType.postDashAttack, postDashAttack_AttributeLevel);
+        //tmpDic.Add(AttributeUpgradeTypes.UpgradeType.strength, strengthAttributeLevel);
+        //tmpDic.Add(AttributeUpgradeTypes.UpgradeType.evade, evadeAttributeLevel);
+        //tmpDic.Add(AttributeUpgradeTypes.UpgradeType.speed, speedAttributeLevel);
+        #endregion
+
+        tmpDic.Add(AttributeUpgradeTypes.UpgradeType.health, healthAttributeLevel);
+        tmpDic.Add(AttributeUpgradeTypes.UpgradeType.mana, manaAttributeLevel);
+        tmpDic.Add(AttributeUpgradeTypes.UpgradeType.dashAttack, dashAttack_AttributeLevel);
+        tmpDic.Add(AttributeUpgradeTypes.UpgradeType.dashSlam, dashSlam_AttributeLevel);
+        tmpDic.Add(AttributeUpgradeTypes.UpgradeType.postDashAttack, postDashAttack_AttributeLevel);
+        tmpDic.Add(AttributeUpgradeTypes.UpgradeType.strength, strengthAttributeLevel);
+        tmpDic.Add(AttributeUpgradeTypes.UpgradeType.evade, evadeAttributeLevel);
+        tmpDic.Add(AttributeUpgradeTypes.UpgradeType.speed, speedAttributeLevel);
+
+        return tmpDic;
+    }
 
     public int GetCurrentAttributeLevel(AttributeUpgradeTypes.UpgradeType _upgradeType)
     {

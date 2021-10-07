@@ -118,7 +118,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         }
 
 
-
         UpgradeName_Text.text = UpgradeType.ToString();
 
         for (int i = 0; i < data.AttributeDataList.Length; i++)

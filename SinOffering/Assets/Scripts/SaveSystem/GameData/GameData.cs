@@ -8,7 +8,7 @@ public class GameData
 {
 
     //Player/Abiliies/Weapon Stats
-    //public List<PlayerAttributes> PlayerAttributes = new List<PlayerAttributes>
+    public PlayerAttributes PlayerAttributes = new PlayerAttributes();  
     //public List<AbilityAttributes> PlayerAttributes = new List<PlayerAttributes>
     //public List<WeaponSavaData> WeaponAttributesDatas = new List<WeaponAttributes>();
     public List<WeaponAttributes> WeaponAttributesDatas = new List<WeaponAttributes>();
