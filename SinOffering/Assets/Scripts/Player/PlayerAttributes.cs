@@ -8,26 +8,36 @@ public class PlayerAttributes
     [SerializeField]
     private AttributeData _data;
     private Dictionary<string, AttributeData> attributeDatabase;
-
-    int healthAttributeLevel = 1;
+    
+    [SerializeField]
+    int healthAttributeLevel = 0;
+    [SerializeField]
     float max_health = 0;
     float health = 0;
-    
-    int manaAttributeLevel = 2;
+
+    [SerializeField]
+    int manaAttributeLevel = 0;
+    [SerializeField]
     float max_mana = 0;
     float mana = 0;
 
-    int speedAttributeLevel = 3;
+    [SerializeField]
+    int speedAttributeLevel = 0;
+    [SerializeField]
     float max_speed = 0;
     float speed = 0;
 
-    int strengthAttributeLevel = 2;
+    [SerializeField]
+    int strengthAttributeLevel = 0;
+    [SerializeField]
     float max_strength = 0;
     float strength = 0;
 
     //float airControl; // maybe...
     //int equipmentSize; // maybe...
-    int evadeAttributeLevel = 1;
+
+    [SerializeField]
+    int evadeAttributeLevel = 0;
     bool doubleJumpedUnlocked = false;
 
     bool double_evade = false; 
@@ -35,8 +45,11 @@ public class PlayerAttributes
     float evade_manaCost;
 
     //dashattack stuff
-    int dashAttack_AttributeLevel = 1;
-    int dashSlam_AttributeLevel = 1;
+    [SerializeField]
+    int dashAttack_AttributeLevel = 0;
+    [SerializeField]
+    int dashSlam_AttributeLevel = 0;
+    [SerializeField]
     int postDashAttack_AttributeLevel = 0;
     
     float dashAttack_manaCost;

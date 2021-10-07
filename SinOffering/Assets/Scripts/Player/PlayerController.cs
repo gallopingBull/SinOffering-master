@@ -20,7 +20,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     [HideInInspector]
     public InputHandler inputHandler;
     private List<ICommand> commands;
-
+    [SerializeField]
     private PlayerAttributes attributes = new PlayerAttributes();
 
     [HideInInspector]
