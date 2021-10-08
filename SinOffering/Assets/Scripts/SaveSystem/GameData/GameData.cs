@@ -9,16 +9,17 @@ public class GameData
 
     //Player/Abiliies/Weapon Stats
     public PlayerAttributes PlayerAttributes = new PlayerAttributes();  
-    //public List<AbilityAttributes> PlayerAttributes = new List<PlayerAttributes>
-    //public List<WeaponSavaData> WeaponAttributesDatas = new List<WeaponAttributes>();
     public List<WeaponAttributes> WeaponAttributesDatas = new List<WeaponAttributes>();
 
-    //Game Progress
-    //list of unlocked levels
-    //list of completed missions
-    //last level loaded before game app was exited
+    //public List<AbilityAttributes> PlayerAttributes = new List<PlayerAttributes>
+    //public List<WeaponSavaData> WeaponAttributesDatas = new List<WeaponAttributes>();
 
-    //General Game Stats
+    // Game Progress
+    // list of unlocked levels
+    // list of completed missions
+    // last level loaded before game app was exited
+
+    // General Game Stats
     public int TotalWins;
     public int TotalLosses;
 

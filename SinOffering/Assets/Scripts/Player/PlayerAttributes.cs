@@ -149,6 +149,7 @@ public class PlayerAttributes
     }
 }
 
+
 [System.Serializable]
 public class PlayerAbilities
 {
