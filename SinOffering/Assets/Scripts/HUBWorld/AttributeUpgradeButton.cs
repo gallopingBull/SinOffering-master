@@ -50,7 +50,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     #region Image Components
     public Image attributeIcon_Image;
     public Image attributeBG_Image;
-    public Image attributeDivider_Image;
+    public Image[] attributeDivider_Images;
     public Image[] UpgradeLevel_Description_Images;
     public Image[] UpgradeLevel_Button_Images;
     #endregion
@@ -117,15 +117,38 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         // get player level;
         int curAttributeLevel = _upgradeLevel;
 
-        // check button status
-        if (UpgradeLevel == curAttributeLevel + 1)
-            EnterState(AttributeButtonState.locked);
-        else if (curAttributeLevel > UpgradeLevel)
-            EnterState(AttributeButtonState.purchased);
-        else if (curAttributeLevel < UpgradeLevel)
-            EnterState(AttributeButtonState.hidden);
+
+        #region this checks branches in dash upgrade tree
+        if ((UpgradeType == AttributeUpgradeTypes.UpgradeType.dashSlam || 
+            UpgradeType == AttributeUpgradeTypes.UpgradeType.postDashAttack) &&
+            UpgradeLevel == 0)
+        {
+
+            if (curAttributeLevel == 0)
+            {
+                Debug.Log(UpgradeType.ToString() + " is hidden");
+                EnterState(AttributeButtonState.hidden);
+            }
+            if (curAttributeLevel > 0)
+            {
+                Debug.Log(UpgradeType.ToString() + " is available");
+                EnterState(AttributeButtonState.available);
+            }
+        }
+        #endregion
         else
-            EnterState(AttributeButtonState.available);
+        {
+            // check button status
+            if (UpgradeLevel == curAttributeLevel + 1)
+                EnterState(AttributeButtonState.locked);
+            else if (curAttributeLevel > UpgradeLevel)
+                EnterState(AttributeButtonState.purchased);
+            else if (curAttributeLevel < UpgradeLevel)
+                EnterState(AttributeButtonState.hidden);
+            else
+                EnterState(AttributeButtonState.available);
+        }
+      
 
 
         UpgradeName_Text.text = UpgradeType.ToString();
@@ -193,8 +216,14 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 attributeBG_Image.color = colorState.AvailiableBGColor;
                 Upgrade_Button.interactable = true; // intibutton so its visible and interactive, but nothing canpurchased 
                 UpgradePurchased = false;
-                if (attributeDivider_Image != null)
-                    attributeDivider_Image.color = new Color(1, 1, 1, 0);
+
+                if (attributeDivider_Images != null)
+                {
+                    foreach (var divider in attributeDivider_Images)
+                        divider.color = new Color(1, 1, 1, 0);
+                }
+            
+             
                 //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state );
                 break;
 
@@ -205,8 +234,15 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 Upgrade_Button.interactable = true;
                 UpgradePurchased = true;
 
-                if (attributeDivider_Image != null)
-                    attributeDivider_Image.color = Color.white;
+
+                if (attributeDivider_Images != null)
+                {
+                    foreach (var divider in attributeDivider_Images)
+                        divider.color = Color.white;
+                }
+
+                //if (attributeDivider_Images != null)
+                    //attributeDivider_Images.color = Color.white;
                 //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state);
                 break;
 
@@ -219,8 +255,14 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 for (int i = 0; i < UpgradeLevel_Button_Images.Length; i++)
                     UpgradeLevel_Button_Images[i].color = colorState.HiddenBGColor;
 
-                if (attributeDivider_Image != null)
-                    attributeDivider_Image.color = new Color(1,1,1, 0);
+                if (attributeDivider_Images != null)
+                {
+                    foreach (var divider in attributeDivider_Images)
+                        divider.color = new Color(1, 1, 1, 0);
+                }
+
+                //if (attributeDivider_Images != null)
+                //  attributeDivider_Images.color = new Color(1,1,1, 0);
                 //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state);
                 break;
 
@@ -234,8 +276,16 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 
                 Upgrade_Button.interactable = false;
                 UpgradePurchased = false;
-                if (attributeDivider_Image != null)
-                    attributeDivider_Image.color = new Color(1, 1, 1, 0);
+                
+                if (attributeDivider_Images != null)
+                {
+                    foreach (var divider in attributeDivider_Images)
+                        divider.color = new Color(1, 1, 1, 0);
+                }
+
+
+                //if (attributeDivider_Images != null)
+                //attributeDivider_Images.color = new Color(1, 1, 1, 0);
                 //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state);
                 break;
 
