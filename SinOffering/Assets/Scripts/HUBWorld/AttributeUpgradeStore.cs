@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine;
 
-
 public class AttributeUpgradeStore : MonoBehaviour
 {
     private IAttributeStoreCustomer customer;
@@ -39,96 +38,16 @@ public class AttributeUpgradeStore : MonoBehaviour
             var _button = menuButtons[i].gameObject.GetComponent<AttributeUpgradeButton>();
             int tmpLevel = attributeUpgradeLevels[_button.UpgradeType];
 
-
             //Debug.Log("UpgradeType: " + _button.UpgradeType.ToString() + " || " + "Upgrade Level: " + tmpLevel);  
             AttributeUpgradeData attributeData = _upgradeTypes[(int)_button.UpgradeType].Value.AttributeDataList[_button.UpgradeLevel];
             InitButton(_button, attributeData, _button.UpgradeType.ToString(), tmpLevel);
             
-            #region old
-            /*
-            //var skippedTypeList = new List<KeyValuePair<string, AttributeData>>();
-
-            // loop through list of upgradetypes
-            for (int typeIndex = 0; typeIndex < _upgradeTypes.Count; typeIndex++)
-            {
-                if (_button.UpgradeType == _upgradeTypes[typeIndex].Value.UpgradeType)
-                {
-                    for (int upgradeDataIndex = 0; upgradeDataIndex < _upgradeTypes[typeIndex].Value.AttributeDataList.Length; upgradeDataIndex++)
-                    {
-                        // checks for first element on top of every 'upgrade tree' column
-                        if (_button.gameObject.name == "Ability_Name_Level_Button")
-                        {
-
-                            if (_upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex].AttributeLevel == 1)
-                            {
-                                _button.GetComponent<Button>().interactable = true;
-                                //_button.UpgradePurchased = true;// intibutton so its visible and interactive, but nothing canpurchased
-                            }
-                        }
-
-                        // checks at every button that isn't on the first/top element in upgrade tree column
-                        else
-                        {
-                            // Get attribute level
-                            if (tmpLvl != PlayerController.instance.Attributes.GetCurrentAttributeLevel(_button.UpgradeType))
-                            {
-                                tmpLvl = PlayerController.instance.Attributes.GetCurrentAttributeLevel(_button.UpgradeType);
-                                Debug.Log("UpgradeType: " + _button.UpgradeType.ToString() + " || " + "Upgrade Level: " + tmpLvl);
-                            }
-
-                            // button already purchased
-                            if (tmpLvl > _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex].AttributeLevel)
-                            {
-                                _button.GetComponent<Button>().interactable = true; // intibutton so its visible and interactive, but nothing canpurchased
-                                                                                    //_button.UpgradePurchased = true;// intibutton so its visible and interactive, but nothing canpurchased
-                            }
-
-                            if (tmpLvl <= _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex].AttributeLevel)
-                            {
-                                //_button.GetComponent<Button>().interactable = false; // intibutton so its visible and interactive, but nothing canpurchased
-                                //_button.UpgradePurchased = false; // intibutton so its visible and interactive, but nothing canpurchased
-
-                                #region testing
-
-                                #endregion
-
-                            }
-                        }
-
-
-                        AttributeUpgradeData attributeData = _upgradeTypes[typeIndex].Value.AttributeDataList[upgradeDataIndex];
-                        InitButton(_button, attributeData, _button.UpgradeType.ToString(), tmpLvl);
-
-                        if (menuButtons[i + 1].GetComponent<AttributeUpgradeButton>().UpgradeType != _button.UpgradeType)
-                        {
-                            //ResetUpgradeLevelCounter(i, _button);
-                            break;
-                        }
-
-                    }
-                }
-                else{
-                    //Debug.Log("Skipped: " + _upgradeTypes[typeIndex]);
-                    //skippedTypeList.Add(_upgradeTypes[typeIndex]);
-                    ResetUpgradeLevelCounter(i, _button);
-                    continue;
-                }
-            }
-        
-            */
-            #endregion
         }
     }
 
     // initilaize buttons with correct weapon data 
     public void InitButton(AttributeUpgradeButton _button, AttributeUpgradeData _attributeData, string _upgradeName, int curUpgradeLvl)
     {
-        if (_attributeData.isPurchased)
-        {
-            //_button.gameObject.GetComponent<PurchaseUpgradeButtonUI>().Price_Text.text = "purchased";
-            return;
-        }
-
         _button.SetButtonData(attributeDatabase[_button.UpgradeType.ToString()], curUpgradeLvl);
         _button.gameObject.GetComponent<Button>().onClick.AddListener(() => 
         PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.transform.gameObject.GetComponent<Button>()));

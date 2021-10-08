@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.59607846, g: 0, b: 0, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.59607846, g: 0, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -135,20 +135,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4940d11f17e48248976fadc4ea1bad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
   UpgradeLevel: 0
   UpgradeName: 
+  UpgradePurchased: 0
+  ButtonLocked: 0
+  data: {fileID: 0}
   UpgradeType: 0
+  colorState:
+    AvailiableIconColor: {r: 1, g: 1, b: 1, a: 1}
+    AvailiableBGColor: {r: 0, g: 0, b: 0, a: 1}
+    PurchasedIconColor: {r: 0.254717, g: 0, b: 0, a: 1}
+    PurchasedBGColor: {r: 0, g: 0, b: 0, a: 1}
+    LockedIconColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 0.5529412}
+    LockedBGColor: {r: 0, g: 0, b: 0, a: 0.53333336}
+    HiddenIconColor: {r: 0, g: 0, b: 0, a: 0}
+    HiddenBGColor: {r: 0, g: 0, b: 0, a: 0}
+  Upgrade_Button: {fileID: 0}
   UpgradeName_Text: {fileID: 0}
   Price_Text: {fileID: 0}
   UpgradeLevel_Text: {fileID: 0}
-  CurUpgradeLevel_Text: {fileID: 0}
-  CurUpgradeVal_Text: {fileID: 0}
   NextUpgradeLevel_Text: {fileID: 0}
   NextUpgradeVal_Text: {fileID: 0}
-  UpgradePurchased: 0
-  UpgradeLevelImages: []
-  Upgrade_Button: {fileID: 0}
+  attributeIcon_Image: {fileID: 0}
+  attributeBG_Image: {fileID: 0}
+  attributeDivider_Image: {fileID: 0}
+  UpgradeLevel_Description_Images: []
+  UpgradeLevel_Button_Images: []
 --- !u!1 &6371032896942078341
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +173,7 @@ GameObject:
   - component: {fileID: 7619909141776226549}
   - component: {fileID: 8798084981039556607}
   m_Layer: 0
-  m_Name: Ability_Image
+  m_Name: Attribute_Icon_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

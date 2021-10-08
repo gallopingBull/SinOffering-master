@@ -177,6 +177,7 @@ public class MenuManager : MonoBehaviour
     {
         // play some enter menu transition animation 
         menus[index].SetActive(true);
+        //change alpha value of canvas group here
     }
     private void InitStore(GameObject menu, UpgradeMenu _menu)
     { 

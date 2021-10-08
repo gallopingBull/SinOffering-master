@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
@@ -5,57 +6,59 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
 
+[Serializable]
 public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 {
     #region variables
-
-    public AttributeData data;
     //[HideInInspector]
     public int UpgradeLevel = 0;
 
-    AttributeButtonState state = AttributeButtonState.hidden;
-
     [HideInInspector]
     public string UpgradeName;
-
+    //[HideInInspector]
+    public bool UpgradePurchased = false;
     public bool ButtonLocked = false;
+    private bool buttonInit = false;
 
+    public AttributeData data;
     public AttributeUpgradeTypes.UpgradeType UpgradeType;
+    private AttributeButtonState state = AttributeButtonState.hidden;
+    [SerializeField]
+    private AttributeButtonColors colorState;
 
+    [HideInInspector]
+    public Button Upgrade_Button;
+
+    #region TextMeshProGUI Components
     // UI Elements that are used for desciptions in content panel
     [HideInInspector]
     public TextMeshProUGUI UpgradeName_Text;
-
     [HideInInspector]
     public TextMeshProUGUI Price_Text;
     [HideInInspector]
     public TextMeshProUGUI UpgradeLevel_Text;
-
-    [HideInInspector]
-    public TextMeshProUGUI CurUpgradeLevel_Text;
-    [HideInInspector]
-    public TextMeshProUGUI CurUpgradeVal_Text;
+    //[HideInInspector]
+    //public TextMeshProUGUI CurUpgradeLevel_Text;
+    //[HideInInspector]
+    //public TextMeshProUGUI CurUpgradeVal_Text;
     [HideInInspector]
     public TextMeshProUGUI NextUpgradeLevel_Text;
-
     [HideInInspector]
     public TextMeshProUGUI NextUpgradeVal_Text;
+    #endregion
 
-    //[HideInInspector]
-    public bool UpgradePurchased = false;
-
-
-    //[HideInInspector]
-    public Image[] UpgradeLevelImages;
-    [HideInInspector]
-    public Button Upgrade_Button;
-
-    public Color originalColor;
-
-    private bool buttonInit = false;
+    #region Image Components
+    public Image attributeIcon_Image;
+    public Image attributeBG_Image;
+    public Image attributeDivider_Image;
+    public Image[] UpgradeLevel_Description_Images;
+    public Image[] UpgradeLevel_Button_Images;
+    #endregion
 
     public bool ButtonInit { get => buttonInit; private set => buttonInit = value; }
+    
     #endregion
+
     #region functions
     private void Awake()
     {
@@ -64,16 +67,24 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 
         Upgrade_Button = GetComponent<Button>();
         UpgradeName = UpgradeType.ToString();
+
         UpgradeName_Text =
             GameObject.Find("Text_AbilityName").GetComponent<TextMeshProUGUI>();
         UpgradeName_Text.text = UpgradeType.ToString();
 
-        UpgradeLevelImages = new Image[5];
-        UpgradeLevelImages[0] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_0").GetComponent<Image>();
-        UpgradeLevelImages[1] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_1").GetComponent<Image>();
-        UpgradeLevelImages[2] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_2").GetComponent<Image>();
-        UpgradeLevelImages[3] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_3").GetComponent<Image>();
-        UpgradeLevelImages[4] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_4").GetComponent<Image>();
+        attributeIcon_Image = transform.Find("Attribute_Icon_Image").GetComponent<Image>();
+        attributeBG_Image = GetComponent<Image>();
+        //attributeDivider_Image = 
+
+        UpgradeLevel_Description_Images = new Image[5];
+        UpgradeLevel_Description_Images[0] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_0").GetComponent<Image>();
+        UpgradeLevel_Description_Images[1] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_1").GetComponent<Image>();
+        UpgradeLevel_Description_Images[2] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_2").GetComponent<Image>();
+        UpgradeLevel_Description_Images[3] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_3").GetComponent<Image>();
+        UpgradeLevel_Description_Images[4] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_4").GetComponent<Image>();
+
+        UpgradeLevel_Button_Images = transform.Find("AbilityUpgradeLevel_Images").GetComponentsInChildren<Image>();
+       
 
         Price_Text =
               GameObject.Find("Panel_AbilityPrice").transform.Find("Text_SilverValue").GetComponent<TextMeshProUGUI>();
@@ -93,29 +104,28 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
             GameObject.Find("Panel_Content").transform.Find("Text_AbilityDescription").GetComponent<TextMeshProUGUI>();
 
         //originalColor = new Color(255, 255, 255, 255/2f);
-        originalColor = new Color(0, 0, 0, .5f);
+        //availiableIconColor = new Color(0, 0, 0, .5f);
     }
 
     public void SetButtonData(AttributeData _data, int _upgradeLevel)
     {
         Awake();
-        //AttributeData tmpData = _data;
 
         //data = _data;
         //Debug.Log("InitUpgradeButton() - " + _data);
 
         // get player level;
-        //int tmpLevel = _data.atttributeLevel;
-        int tmpLevel = _upgradeLevel;
+        int curAttributeLevel = _upgradeLevel;
 
-        if (tmpLevel >= UpgradeLevel)
-        {
-            EnterState(AttributeButtonState.purchased);
-        }
-        else if (tmpLevel < UpgradeLevel)
-        {
+        // check button status
+        if (UpgradeLevel == curAttributeLevel + 1)
             EnterState(AttributeButtonState.locked);
-        }
+        else if (curAttributeLevel > UpgradeLevel)
+            EnterState(AttributeButtonState.purchased);
+        else if (curAttributeLevel < UpgradeLevel)
+            EnterState(AttributeButtonState.hidden);
+        else
+            EnterState(AttributeButtonState.available);
 
 
         UpgradeName_Text.text = UpgradeType.ToString();
@@ -140,10 +150,9 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 
     public void OnSelect(BaseEventData eventData)
     {
-        Debug.Log(this.gameObject.name + " was selected");
-
+        //Debug.Log(this.gameObject.name + " was selected");
+        
         UpgradeName_Text.text = UpgradeType.ToString();
-       
         Price_Text.text = data.AttributeDataList[UpgradeLevel].AttributePrice.ToString();
         NextUpgradeLevel_Text.text = data.AttributeDataList[UpgradeLevel].AttributeLevel.ToString();
         NextUpgradeVal_Text.text = data.AttributeDataList[UpgradeLevel].UpgradeDescription;
@@ -164,14 +173,14 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 
     void HideUpgradeButton()
     {
-
+        //attributeIcon_Image.color
+        //attributeBG_Image.color
     }
 
     void DisplayUpgradeButton()
     {
 
     }
-
 
     private void EnterState(AttributeButtonState _state)
     {
@@ -180,26 +189,54 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         {
             case AttributeButtonState.available:
                 state = AttributeButtonState.available;
+                attributeIcon_Image.color = colorState.AvailiableIconColor;
+                attributeBG_Image.color = colorState.AvailiableBGColor;
                 Upgrade_Button.interactable = true; // intibutton so its visible and interactive, but nothing canpurchased 
-                // intibutton so its visible and interactive, but nothing canpurchased
+                UpgradePurchased = false;
+                if (attributeDivider_Image != null)
+                    attributeDivider_Image.color = new Color(1, 1, 1, 0);
+                //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state );
                 break;
 
             case AttributeButtonState.purchased:
                 state = AttributeButtonState.purchased;
+                attributeIcon_Image.color = colorState.PurchasedIconColor;
+                attributeBG_Image.color = colorState.PurchasedBGColor;
                 Upgrade_Button.interactable = true;
                 UpgradePurchased = true;
+
+                if (attributeDivider_Image != null)
+                    attributeDivider_Image.color = Color.white;
+                //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state);
                 break;
 
             case AttributeButtonState.locked:
                 state = AttributeButtonState.locked;
+                attributeIcon_Image.color = colorState.LockedIconColor;
+                attributeBG_Image.color = colorState.LockedBGColor;
                 Upgrade_Button.interactable = false;
                 UpgradePurchased = false;
+                for (int i = 0; i < UpgradeLevel_Button_Images.Length; i++)
+                    UpgradeLevel_Button_Images[i].color = colorState.HiddenBGColor;
+
+                if (attributeDivider_Image != null)
+                    attributeDivider_Image.color = new Color(1,1,1, 0);
+                //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state);
                 break;
 
             case AttributeButtonState.hidden:
                 state = AttributeButtonState.hidden;
+                attributeIcon_Image.color = colorState.HiddenIconColor;
+                attributeBG_Image.color = colorState.HiddenBGColor;
+                
+                for (int i = 0; i < UpgradeLevel_Button_Images.Length; i++)
+                    UpgradeLevel_Button_Images[i].color = colorState.HiddenBGColor;
+                
                 Upgrade_Button.interactable = false;
                 UpgradePurchased = false;
+                if (attributeDivider_Image != null)
+                    attributeDivider_Image.color = new Color(1, 1, 1, 0);
+                //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state);
                 break;
 
             default:
@@ -219,7 +256,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 break;
             case AttributeButtonState.hidden:
                 break;
-
             default:
                 break;
         }
@@ -227,13 +263,13 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 
     public void SetImageColors(int level)
     {
-        if (UpgradeLevelImages.Length > 0 && UpgradeLevelImages != null)
+        if (UpgradeLevel_Description_Images.Length > 0 && UpgradeLevel_Description_Images != null)
         {
-            for (int i = 0; i < UpgradeLevelImages.Length; i++)
-                UpgradeLevelImages[i].color = originalColor;
+            for (int i = 0; i < UpgradeLevel_Description_Images.Length; i++)
+                UpgradeLevel_Description_Images[i].color = colorState.AvailiableBGColor;
 
             for (int index = 0; index < level + 1; index++)
-                UpgradeLevelImages[index].color = Color.red;
+                UpgradeLevel_Description_Images[index].color = Color.red;
 
             //for (int i = UpgradeLevelImages.Length - 1; i > level; i--)
             //UpgradeLevelImages[i].color = Color.black;
@@ -251,4 +287,21 @@ public enum AttributeButtonState
     purchased,
     locked,
     hidden
+}
+
+[Serializable]
+struct AttributeButtonColors
+{
+    public Color AvailiableIconColor;
+    public Color AvailiableBGColor;
+
+    public Color PurchasedIconColor;
+    public Color PurchasedBGColor;
+
+    public Color LockedIconColor;
+    public Color LockedBGColor;
+
+    public Color HiddenIconColor;
+    public Color HiddenBGColor;
+
 }
