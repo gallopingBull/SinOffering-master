@@ -109,7 +109,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 
     public void SetButtonData(AttributeData _data, int _upgradeLevel)
     {
-        Awake();
 
         //data = _data;
         //Debug.Log("InitUpgradeButton() - " + _data);
@@ -123,7 +122,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
             UpgradeType == AttributeUpgradeTypes.UpgradeType.postDashAttack) &&
             UpgradeLevel == 0)
         {
-
+            //i want to check if dash attack is at least to level 1 or 4 to make either two buttons available or hidden
             if (curAttributeLevel == 0)
             {
                 Debug.Log(UpgradeType.ToString() + " is hidden");
@@ -223,7 +222,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                         divider.color = new Color(1, 1, 1, 0);
                 }
             
-             
                 //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state );
                 break;
 
@@ -241,8 +239,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                         divider.color = Color.white;
                 }
 
-                //if (attributeDivider_Images != null)
-                    //attributeDivider_Images.color = Color.white;
                 //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state);
                 break;
 
@@ -261,8 +257,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                         divider.color = new Color(1, 1, 1, 0);
                 }
 
-                //if (attributeDivider_Images != null)
-                //  attributeDivider_Images.color = new Color(1,1,1, 0);
                 //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state);
                 break;
 
@@ -284,8 +278,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 }
 
 
-                //if (attributeDivider_Images != null)
-                //attributeDivider_Images.color = new Color(1, 1, 1, 0);
                 //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state);
                 break;
 

@@ -94,12 +94,7 @@ public class AttributeUpgradeStore : MonoBehaviour
     private void SetMenuButtons(GameObject _menu)
     {
         //Debug.Log("SetMenuButtons("+ _menu.name+ ")");
-        //menuButtons = _menu.GetComponentsInChildren<VerticalLayoutGroup>();
-        //foreach element in menubuttons
-        //tmpButList = get buttons in element;
-            //for each button in tmpButList
-                //button.UpgradeLevel = currentIndex;
-                //button.SetButtonData()
+
         menuButtons = _menu.GetComponentsInChildren<Button>();
         silverValueUI = GameObject.Find("Text_SilverValue");
     }
