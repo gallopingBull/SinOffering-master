@@ -4429,7 +4429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1291401040457121390, guid: 987a2dc3b1a73d34fa2f5a2db3f68aed, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 578.5
       objectReference: {fileID: 0}
     - target: {fileID: 1291401040457121390, guid: 987a2dc3b1a73d34fa2f5a2db3f68aed, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4669,7 +4669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1822785100994372464, guid: 987a2dc3b1a73d34fa2f5a2db3f68aed, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 949.5
       objectReference: {fileID: 0}
     - target: {fileID: 1822785100994372464, guid: 987a2dc3b1a73d34fa2f5a2db3f68aed, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4694,6 +4694,10 @@ PrefabInstance:
     - target: {fileID: 1873639509699315201, guid: 987a2dc3b1a73d34fa2f5a2db3f68aed, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025544974891007330, guid: 987a2dc3b1a73d34fa2f5a2db3f68aed, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2131573704872168428, guid: 987a2dc3b1a73d34fa2f5a2db3f68aed, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5161,7 +5165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4752883328766740238, guid: 987a2dc3b1a73d34fa2f5a2db3f68aed, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4782290977279868455, guid: 987a2dc3b1a73d34fa2f5a2db3f68aed, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5535,6 +5539,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 0488f3cc058761b4bae63d11e215bdd6, type: 3}
+    - target: {fileID: 6369186086515082497, guid: 987a2dc3b1a73d34fa2f5a2db3f68aed, type: 3}
+      propertyPath: m_Name
+      value: Panel_UnlockPrompt
+      objectReference: {fileID: 0}
     - target: {fileID: 6498593052408484645, guid: 987a2dc3b1a73d34fa2f5a2db3f68aed, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6070,6 +6078,10 @@ PrefabInstance:
     - target: {fileID: 8406788612439443558, guid: 987a2dc3b1a73d34fa2f5a2db3f68aed, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416044621866223838, guid: 987a2dc3b1a73d34fa2f5a2db3f68aed, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8452672695058831262, guid: 987a2dc3b1a73d34fa2f5a2db3f68aed, type: 3}
       propertyPath: m_AnchorMax.y

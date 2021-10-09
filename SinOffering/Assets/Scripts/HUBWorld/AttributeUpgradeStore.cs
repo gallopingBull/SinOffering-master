@@ -65,7 +65,8 @@ public class AttributeUpgradeStore : MonoBehaviour
         {
             customer.PurchaseUpgrade(_upgradeType);
             _button.interactable = false;
-            silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI();
+            _button.GetComponent<AttributeUpgradeButton>().PurchaseUpgrade(); // changes button faith
+            silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI(); // change to faith
             SelectNextButton(_button);
         }
     }

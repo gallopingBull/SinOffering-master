@@ -26,8 +26,8 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     [SerializeField]
     private AttributeButtonColorsTest colorState;
 
-    public GameObject Unlocked;
-    public GameObject priceSection;
+    public GameObject UnlockedPanel;
+    public GameObject[] pricePanels = new GameObject[2] ;
 
 
     [HideInInspector]
@@ -42,10 +42,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     public TextMeshProUGUI Price_Text;
     [HideInInspector]
     public TextMeshProUGUI UpgradeLevel_Text;
-    //[HideInInspector]
-    //public TextMeshProUGUI CurUpgradeLevel_Text;
-    //[HideInInspector]
-    //public TextMeshProUGUI CurUpgradeVal_Text;
     [HideInInspector]
     public TextMeshProUGUI NextUpgradeLevel_Text;
     [HideInInspector]
@@ -93,13 +89,10 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         Price_Text =
               GameObject.Find("Panel_AbilityPrice").transform.Find("Text_FaithValue").GetComponent<TextMeshProUGUI>();
 
-        #region testing/old code
-        //CurUpgradeLevel_Text =    
-        //GameObject.Find("Text_AbilityCurLevel").GetComponent<TextMeshProUGUI>();
+        UnlockedPanel = GameObject.Find("Panel_Unlocked").gameObject;
+        pricePanels[0] = GameObject.Find("Panel_UnlockPrompt").gameObject;
+        pricePanels[1] = GameObject.Find("Panel_AbilityPrice").gameObject;
 
-        //CurUpgradeVal_Text =
-        //transform.Find("Current Level UI Objects").transform.Find("Text_UpgradeValue").GetComponent<TextMeshProUGUI>();
-        #endregion
 
         NextUpgradeLevel_Text =
             GameObject.Find("Panel_Content").transform.Find("Panel").transform.Find("Text_AbilityName").transform.Find("Text_AbilityCurLevel").GetComponentInChildren<TextMeshProUGUI>();
@@ -244,6 +237,9 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         Price_Text.text = data.AttributeDataList[UpgradeLevel].AttributePrice.ToString();
         NextUpgradeLevel_Text.text = data.AttributeDataList[UpgradeLevel].AttributeLevel.ToString();
         NextUpgradeVal_Text.text = data.AttributeDataList[UpgradeLevel].UpgradeDescription;
+
+        EnterState(state);
+
         SetImageColors(UpgradeLevel);
     }
 
@@ -270,6 +266,11 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 
     }
 
+   
+    public void PurchaseUpgrade()
+    {
+        EnterState(AttributeButtonState.purchased);
+    }
     private void EnterState(AttributeButtonState _state)
     {
         ExitState(state);
@@ -281,6 +282,11 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 attributeBG_Image.color = colorState.AvailiableBGColor;
                 Upgrade_Button.interactable = true; // intibutton so its visible and interactive, but nothing canpurchased 
                 UpgradePurchased = false;
+
+                pricePanels[0].SetActive(true);
+                pricePanels[1].SetActive(true);
+                UnlockedPanel.SetActive(false);
+
 
                 for (int i = 0; i < UpgradeLevel_Button_Images.Length; i++)
                     UpgradeLevel_Button_Images[i].color = Color.red;
@@ -301,6 +307,10 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 Upgrade_Button.interactable = true;
                 UpgradePurchased = true;
 
+                pricePanels[0].SetActive(false);
+                pricePanels[1].SetActive(false);
+                UnlockedPanel.SetActive(true);
+
                 for (int i = 0; i < UpgradeLevel_Button_Images.Length; i++)
                     UpgradeLevel_Button_Images[i].color = Color.red;
 
@@ -319,7 +329,11 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 attributeBG_Image.color = colorState.LockedBGColor;
                 Upgrade_Button.interactable = false;
                 UpgradePurchased = false;
-                
+
+                pricePanels[0].SetActive(true);
+                pricePanels[1].SetActive(true);
+                UnlockedPanel.SetActive(false);
+
                 for (int i = 0; i < UpgradeLevel_Button_Images.Length; i++)
                     UpgradeLevel_Button_Images[i].color = colorState.HiddenBGColor;
                 
@@ -338,6 +352,10 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 attributeBG_Image.color = colorState.LockedBGColor;
                 Upgrade_Button.interactable = false;
                 UpgradePurchased = false;
+
+                pricePanels[0].SetActive(true);
+                pricePanels[1].SetActive(true);
+                UnlockedPanel.SetActive(false);
 
                 for (int i = 0; i < UpgradeLevel_Button_Images.Length; i++)
                     UpgradeLevel_Button_Images[i].color = colorState.HiddenBGColor;
