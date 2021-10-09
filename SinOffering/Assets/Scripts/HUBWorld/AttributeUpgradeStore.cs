@@ -33,9 +33,15 @@ public class AttributeUpgradeStore : MonoBehaviour
             SetMenuButtons(_menu);
 
 
-        for (int i = 0; i < menuButtons.Length; i++)
+        var tmpSortedList = menuButtons.OrderBy(o => (int)o.gameObject.GetComponent<AttributeUpgradeButton>().UpgradeType);
+
+        for (int i = 0; i < tmpSortedList.ToList().Count; i++)
         {
-            var _button = menuButtons[i].gameObject.GetComponent<AttributeUpgradeButton>();
+            Debug.Log(tmpSortedList.ToList()[i].gameObject.GetComponent<AttributeUpgradeButton>().UpgradeType.ToString());
+        }
+        for (int i = 0; i < tmpSortedList.ToList().Count; i++)
+        {
+            var _button = tmpSortedList.ToList()[i].gameObject.GetComponent<AttributeUpgradeButton>();
             int tmpLevel = attributeUpgradeLevels[_button.UpgradeType];
 
             //Debug.Log("UpgradeType: " + _button.UpgradeType.ToString() + " || " + "Upgrade Level: " + tmpLevel);  

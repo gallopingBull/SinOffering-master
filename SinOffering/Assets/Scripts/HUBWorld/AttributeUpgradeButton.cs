@@ -28,6 +28,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 
     [HideInInspector]
     public Button Upgrade_Button;
+    public Button Parent_Button;
 
     #region TextMeshProGUI Components
     // UI Elements that are used for desciptions in content panel
@@ -85,7 +86,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 
         UpgradeLevel_Button_Images = transform.Find("AbilityUpgradeLevel_Images").GetComponentsInChildren<Image>();
        
-
         Price_Text =
               GameObject.Find("Panel_AbilityPrice").transform.Find("Text_SilverValue").GetComponent<TextMeshProUGUI>();
 
@@ -103,21 +103,18 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         NextUpgradeVal_Text =
             GameObject.Find("Panel_Content").transform.Find("Text_AbilityDescription").GetComponent<TextMeshProUGUI>();
 
-        //originalColor = new Color(255, 255, 255, 255/2f);
-        //availiableIconColor = new Color(0, 0, 0, .5f);
     }
 
     public void SetButtonData(AttributeData _data, int _upgradeLevel)
     {
-
         //data = _data;
         //Debug.Log("InitUpgradeButton() - " + _data);
 
         // get player level;
         int curAttributeLevel = _upgradeLevel;
 
-
         #region this checks branches in dash upgrade tree
+        /*
         if ((UpgradeType == AttributeUpgradeTypes.UpgradeType.dashSlam || 
             UpgradeType == AttributeUpgradeTypes.UpgradeType.postDashAttack) &&
             UpgradeLevel == 0)
@@ -134,7 +131,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 EnterState(AttributeButtonState.available);
             }
         }
-        #endregion
+
         else
         {
             // check button status
@@ -146,9 +143,101 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 EnterState(AttributeButtonState.hidden);
             else
                 EnterState(AttributeButtonState.available);
-        }
-      
+        }*/
+        #endregion
 
+
+        //i want to check if dash attack is at least to level 1 or 4 to make either two buttons available or hidden
+        // check button status on stems
+
+        if (Parent_Button != null)
+        {
+            //int maxLvl_dashSlam = 1;
+            //int maxLvl_postDashAttack = 3;
+
+            if (UpgradeType == AttributeUpgradeTypes.UpgradeType.dashSlam)
+            {
+                if (Parent_Button.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
+                {
+                    if (UpgradeLevel == 0 && curAttributeLevel == 0)
+                    {
+                        Debug.Log(UpgradeType.ToString() + " is available");
+                        EnterState(AttributeButtonState.available);
+                    }
+                    else if (UpgradeLevel == 0 && curAttributeLevel == 1)
+                    {
+                        Debug.Log(UpgradeType.ToString() + " is locked");
+                        EnterState(AttributeButtonState.purchased);
+                    }
+                    else if (UpgradeLevel == 1 && curAttributeLevel == 0)
+                    {
+                        Debug.Log(UpgradeType.ToString() + " is locked");
+                        EnterState(AttributeButtonState.locked);
+                    }
+                    else
+                    {
+                        EnterState(AttributeButtonState.available);
+                    }
+                }
+                else
+                {
+                    if (UpgradeLevel == 1 && curAttributeLevel == 0)
+                    {
+                        Debug.Log(UpgradeType.ToString() + " is locked");
+                        EnterState(AttributeButtonState.hidden);
+                    }
+                    if (UpgradeLevel == 0 && curAttributeLevel == 0)
+                    {
+
+
+                        Debug.Log(UpgradeType.ToString() + " is hidden");
+                        EnterState(AttributeButtonState.hidden);
+                    }
+                }
+            }
+
+            if (UpgradeType == AttributeUpgradeTypes.UpgradeType.postDashAttack)
+            {
+                if (Parent_Button.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
+                {
+
+                    if (curAttributeLevel == 0)
+                    {
+                        Debug.Log(UpgradeType.ToString() + " is available");
+                        EnterState(AttributeButtonState.available);
+                    }
+                    if (curAttributeLevel == 1)
+                    {
+                        Debug.Log(UpgradeType.ToString() + " is locked");
+                        EnterState(AttributeButtonState.purchased);
+                    }
+                }
+                else
+                {
+
+               
+                    if (UpgradeLevel == 0 && curAttributeLevel == 0)
+                    {
+
+                        Debug.Log(UpgradeType.ToString() + " is hidden");
+                        EnterState(AttributeButtonState.hidden);
+                    }
+
+                }
+
+            }
+        }
+        else
+        {
+            if (UpgradeLevel == curAttributeLevel + 1)
+                EnterState(AttributeButtonState.locked);
+            else if (curAttributeLevel > UpgradeLevel)
+                EnterState(AttributeButtonState.purchased);
+            else if (curAttributeLevel < UpgradeLevel)
+                EnterState(AttributeButtonState.hidden);
+            else
+                EnterState(AttributeButtonState.available);
+        }
 
         UpgradeName_Text.text = UpgradeType.ToString();
 
@@ -216,6 +305,9 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 Upgrade_Button.interactable = true; // intibutton so its visible and interactive, but nothing canpurchased 
                 UpgradePurchased = false;
 
+                for (int i = 0; i < UpgradeLevel_Button_Images.Length; i++)
+                    UpgradeLevel_Button_Images[i].color = Color.red;
+
                 if (attributeDivider_Images != null)
                 {
                     foreach (var divider in attributeDivider_Images)
@@ -232,6 +324,8 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 Upgrade_Button.interactable = true;
                 UpgradePurchased = true;
 
+                for (int i = 0; i < UpgradeLevel_Button_Images.Length; i++)
+                    UpgradeLevel_Button_Images[i].color = Color.red;
 
                 if (attributeDivider_Images != null)
                 {
@@ -248,9 +342,10 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 attributeBG_Image.color = colorState.LockedBGColor;
                 Upgrade_Button.interactable = false;
                 UpgradePurchased = false;
+                
                 for (int i = 0; i < UpgradeLevel_Button_Images.Length; i++)
                     UpgradeLevel_Button_Images[i].color = colorState.HiddenBGColor;
-
+                
                 if (attributeDivider_Images != null)
                 {
                     foreach (var divider in attributeDivider_Images)
@@ -264,19 +359,17 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 state = AttributeButtonState.hidden;
                 attributeIcon_Image.color = colorState.HiddenIconColor;
                 attributeBG_Image.color = colorState.HiddenBGColor;
-                
-                for (int i = 0; i < UpgradeLevel_Button_Images.Length; i++)
-                    UpgradeLevel_Button_Images[i].color = colorState.HiddenBGColor;
-                
                 Upgrade_Button.interactable = false;
                 UpgradePurchased = false;
+
+                for (int i = 0; i < UpgradeLevel_Button_Images.Length; i++)
+                    UpgradeLevel_Button_Images[i].color = colorState.HiddenBGColor;
                 
                 if (attributeDivider_Images != null)
                 {
                     foreach (var divider in attributeDivider_Images)
                         divider.color = new Color(1, 1, 1, 0);
                 }
-
 
                 //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state);
                 break;
@@ -334,6 +427,8 @@ public enum AttributeButtonState
 [Serializable]
 struct AttributeButtonColors
 {
+    //originalColor = new Color(255, 255, 255, 255/2f);
+    //availiableIconColor = new Color(0, 0, 0, .5f);
     public Color AvailiableIconColor;
     public Color AvailiableBGColor;
 
@@ -345,5 +440,4 @@ struct AttributeButtonColors
 
     public Color HiddenIconColor;
     public Color HiddenBGColor;
-
 }
