@@ -24,7 +24,11 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     public AttributeUpgradeTypes.UpgradeType UpgradeType;
     private AttributeButtonState state = AttributeButtonState.hidden;
     [SerializeField]
-    private AttributeButtonColors colorState;
+    private AttributeButtonColorsTest colorState;
+
+    public GameObject Unlocked;
+    public GameObject priceSection;
+
 
     [HideInInspector]
     public Button Upgrade_Button;
@@ -87,7 +91,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         UpgradeLevel_Button_Images = transform.Find("AbilityUpgradeLevel_Images").GetComponentsInChildren<Image>();
        
         Price_Text =
-              GameObject.Find("Panel_AbilityPrice").transform.Find("Text_SilverValue").GetComponent<TextMeshProUGUI>();
+              GameObject.Find("Panel_AbilityPrice").transform.Find("Text_FaithValue").GetComponent<TextMeshProUGUI>();
 
         #region testing/old code
         //CurUpgradeLevel_Text =    
@@ -311,7 +315,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 
             case AttributeButtonState.locked:
                 state = AttributeButtonState.locked;
-                attributeIcon_Image.color = colorState.LockedIconColor;
+                attributeIcon_Image.color = colorState.LockedBGColor;
                 attributeBG_Image.color = colorState.LockedBGColor;
                 Upgrade_Button.interactable = false;
                 UpgradePurchased = false;
@@ -330,8 +334,8 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 
             case AttributeButtonState.hidden:
                 state = AttributeButtonState.hidden;
-                attributeIcon_Image.color = colorState.HiddenIconColor;
-                attributeBG_Image.color = colorState.HiddenBGColor;
+                attributeIcon_Image.color = colorState.LockedBGColor;
+                attributeBG_Image.color = colorState.LockedBGColor;
                 Upgrade_Button.interactable = false;
                 UpgradePurchased = false;
 
@@ -398,7 +402,7 @@ public enum AttributeButtonState
 }
 
 [Serializable]
-struct AttributeButtonColors
+struct AttributeButtonColorsTest
 {
     //originalColor = new Color(255, 255, 255, 255/2f);
     //availiableIconColor = new Color(0, 0, 0, .5f);
