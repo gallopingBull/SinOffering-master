@@ -1167,6 +1167,20 @@ MonoBehaviour:
   AirControl: 0.75
   InputEnabled: 1
   inputHandler: {fileID: 0}
+  attributes:
+    _data: {fileID: 0}
+    healthAttributeLevel: 0
+    max_health: 0
+    manaAttributeLevel: 0
+    max_mana: 0
+    speedAttributeLevel: 0
+    max_speed: 0
+    strengthAttributeLevel: 0
+    max_strength: 0
+    evadeAttributeLevel: 0
+    dashAttack_AttributeLevel: 0
+    dashSlam_AttributeLevel: 0
+    postDashAttack_AttributeLevel: 0
   AbilitiesEnabled: 1
   CanDoubleJump: 0
   JumpButtonHeldDown: 0

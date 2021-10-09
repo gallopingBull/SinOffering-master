@@ -113,11 +113,13 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         // get player level;
         int curAttributeLevel = _upgradeLevel;
 
+
+
         //i want to check if dash attack is at least to level 1 or 4 to make either two buttons available or hidden
         // check button status on stems
 
         // top condition is only for branches (children) in the upgrade tree.
-        // this neeeds to rafactored IMMEdiately. 
+        //***** this neeeds to rafactored and debugged IMMEdiately. ****/
 
         if (Parent_Button != null)
         {
@@ -207,6 +209,8 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
             else
                 EnterState(AttributeButtonState.available);
         }
+
+        //***** this neeeds to rafactored IMMEdiately. ****/
 
         UpgradeName_Text.text = UpgradeType.ToString();
 

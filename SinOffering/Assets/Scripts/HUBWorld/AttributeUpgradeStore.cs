@@ -32,16 +32,12 @@ public class AttributeUpgradeStore : MonoBehaviour
         if (menuButtons.Length == 0)
             SetMenuButtons(_menu);
 
+        var sortedList = menuButtons.OrderBy(o => (int)o.gameObject.GetComponent<AttributeUpgradeButton>().UpgradeType);
 
-        var tmpSortedList = menuButtons.OrderBy(o => (int)o.gameObject.GetComponent<AttributeUpgradeButton>().UpgradeType);
-
-        for (int i = 0; i < tmpSortedList.ToList().Count; i++)
+       
+        for (int i = 0; i < sortedList.ToList().Count; i++)
         {
-            Debug.Log(tmpSortedList.ToList()[i].gameObject.GetComponent<AttributeUpgradeButton>().UpgradeType.ToString());
-        }
-        for (int i = 0; i < tmpSortedList.ToList().Count; i++)
-        {
-            var _button = tmpSortedList.ToList()[i].gameObject.GetComponent<AttributeUpgradeButton>();
+            var _button = sortedList.ToList()[i].gameObject.GetComponent<AttributeUpgradeButton>();
             int tmpLevel = attributeUpgradeLevels[_button.UpgradeType];
 
             //Debug.Log("UpgradeType: " + _button.UpgradeType.ToString() + " || " + "Upgrade Level: " + tmpLevel);  
@@ -59,14 +55,6 @@ public class AttributeUpgradeStore : MonoBehaviour
         PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.transform.gameObject.GetComponent<Button>()));
     }
 
-    // resets counter to 0 after touching last element
-    private void ResetUpgradeLevelCounter(int value, AttributeUpgradeButton _button)
-    {
-        if (value >= attributeDatabase[_button.UpgradeType.ToString()].AttributeDataList.Length)
-            _button.SetUpgradeLevel(value % attributeDatabase[_button.UpgradeType.ToString()].AttributeDataList.Length);
-        else
-            _button.SetUpgradeLevel(value);
-    }
 
     public void PurchaseUpgrade(string _upgradeType, int _upgradeLevel, Button _button)
     {
@@ -100,7 +88,6 @@ public class AttributeUpgradeStore : MonoBehaviour
     private void SetMenuButtons(GameObject _menu)
     {
         //Debug.Log("SetMenuButtons("+ _menu.name+ ")");
-
         menuButtons = _menu.GetComponentsInChildren<Button>();
         silverValueUI = GameObject.Find("Text_SilverValue");
     }
