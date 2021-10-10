@@ -40,7 +40,17 @@ public class AttributeUpgradeStore : MonoBehaviour
             var _button = sortedList.ToList()[i].gameObject.GetComponent<AttributeUpgradeButton>();
             int tmpLevel = attributeUpgradeLevels[_button.UpgradeType];
 
-            //Debug.Log("UpgradeType: " + _button.UpgradeType.ToString() + " || " + "Upgrade Level: " + tmpLevel);  
+            if(i > 0 && i < sortedList.ToList().Count -1 )
+            {
+                if (_button.UpgradeType ==
+                sortedList.ToList()[i + 1].gameObject.GetComponent<AttributeUpgradeButton>().UpgradeType)
+                {
+                    _button.Child_Button = sortedList.ToList()[i + 1];
+                }
+                
+            }
+
+            Debug.Log("UpgradeType: " + _button.UpgradeType.ToString() + " || " + "Upgrade Level: " + tmpLevel);  
             AttributeUpgradeData attributeData = _upgradeTypes[(int)_button.UpgradeType].Value.AttributeDataList[_button.UpgradeLevel];
             InitButton(_button, attributeData, _button.UpgradeType.ToString(), tmpLevel);
             
@@ -51,8 +61,12 @@ public class AttributeUpgradeStore : MonoBehaviour
     public void InitButton(AttributeUpgradeButton _button, AttributeUpgradeData _attributeData, string _upgradeName, int curUpgradeLvl)
     {
         _button.SetButtonData(attributeDatabase[_button.UpgradeType.ToString()], curUpgradeLvl);
-        _button.gameObject.GetComponent<Button>().onClick.AddListener(() => 
+        if (!_button.UpgradePurchased)
+        {
+            _button.gameObject.GetComponent<Button>().onClick.AddListener(() =>
         PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.transform.gameObject.GetComponent<Button>()));
+        }
+        
     }
 
 
@@ -65,6 +79,8 @@ public class AttributeUpgradeStore : MonoBehaviour
         {
             customer.PurchaseUpgrade(_upgradeType);
             _button.interactable = false;
+
+
             _button.GetComponent<AttributeUpgradeButton>().PurchaseUpgrade(); // changes button faith
             silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI(); // change to faith
             SelectNextButton(_button);

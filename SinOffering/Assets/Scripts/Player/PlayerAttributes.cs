@@ -10,55 +10,61 @@ public class PlayerAttributes
     private Dictionary<string, AttributeData> attributeDatabase;
     
     [SerializeField]
-    int healthAttributeLevel = 0;
+    private int healthAttributeLevel = 0;
     [SerializeField]
-    float max_health = 0;
-    float health = 0;
+    private float max_health = 0;
+    private float health = 0;
 
     [SerializeField]
-    int manaAttributeLevel = 0;
+    private int manaAttributeLevel = 0;
     [SerializeField]
-    float max_mana = 0;
-    float mana = 0;
+    private float max_mana = 0;
+    private float mana = 0;
 
     [SerializeField]
-    int speedAttributeLevel = 0;
+    private int speedAttributeLevel = 0;
     [SerializeField]
-    float max_speed = 0;
-    float speed = 0;
+    private float max_speed = 0;
+    private float speed = 0;
 
     [SerializeField]
-    int strengthAttributeLevel = 0;
+    private int strengthAttributeLevel = 0;
     [SerializeField]
-    float max_strength = 0;
-    float strength = 0;
+    private float max_strength = 0;
+    private float strength = 0;
 
     //float airControl; // maybe...
     //int equipmentSize; // maybe...
 
     [SerializeField]
-    int evadeAttributeLevel = 0;
-    bool doubleJumpedUnlocked = false;
-
-    bool double_evade = false; 
-    float evade_delay = 2.5f; 
-    float evade_manaCost;
-
+    private int evadeAttributeLevel = 0;
+    private bool doubleJumpedUnlocked = false;
+    
+    private bool double_evade = false; 
+    private float evade_delay = 2.5f; 
+    private float evade_manaCost;
+    
     //dashattack stuff
     [SerializeField]
-    int dashAttack_AttributeLevel = 0;
+    private int dashAttack_AttributeLevel = 0;
     [SerializeField]
-    int dashSlam_AttributeLevel = 0;
+    private int dashSlam_AttributeLevel = 0;
     [SerializeField]
-    int postDashAttack_AttributeLevel = 0;
+    private int postDashAttack_AttributeLevel = 0;
     
-    float dashAttack_manaCost;
-    float dashAttack_distance;
-    float dashAttack_time; // timer before dash attack ecexutes automatically
-    bool dashSlamUnlocked = false;
-    bool dashMeleeEndUnlocked = false; // ability that gives the player an oppurtunity
-                                      // to immidetely follow the dash attack with a stronger melee attack
-    
+    private float dashAttack_manaCost;
+    private float dashAttack_distance;
+    private float dashAttack_time; // timer before dash attack ecexutes automatically
+    private bool dashSlamUnlocked = false;
+    private bool dashMeleeEndUnlocked = false; // ability that gives the player an oppurtunity
+
+    public int HealthAttributeLevel { get => healthAttributeLevel; set => healthAttributeLevel = value; }
+    public int ManaAttributeLevel { get => manaAttributeLevel; set => manaAttributeLevel = value; }
+
+
+
+    // to immidetely follow the dash attack with a stronger melee attack
+
     void Awake()
     {
         attributeDatabase = AttributeDatabase._instance.GetAttributeDatabase();
@@ -80,7 +86,7 @@ public class PlayerAttributes
         #endregion
 
         tmpDic.Add(AttributeUpgradeTypes.UpgradeType.health, healthAttributeLevel);
-        tmpDic.Add(AttributeUpgradeTypes.UpgradeType.mana, manaAttributeLevel);
+        tmpDic.Add(AttributeUpgradeTypes.UpgradeType.mana, ManaAttributeLevel);
         tmpDic.Add(AttributeUpgradeTypes.UpgradeType.dashAttack, dashAttack_AttributeLevel);
         tmpDic.Add(AttributeUpgradeTypes.UpgradeType.dashSlam, dashSlam_AttributeLevel);
         tmpDic.Add(AttributeUpgradeTypes.UpgradeType.postDashAttack, postDashAttack_AttributeLevel);
@@ -140,6 +146,37 @@ public class PlayerAttributes
                 break;
         }
         return tmpLvl;
+    }
+
+    private void SetPlayerAttributeData(AttributeData data)
+    {
+        //healthAttributeLevel = data.AttributeDataList[].AttributeLevel; 
+
+        //SetHealthValue(data.AttributeDataList[].AttributeValue);
+    }
+
+    private void SetHealthValue(float _value)
+    {
+        max_health = _value;
+        health = max_health;
+    }
+
+
+    private void SetManaValue(float _value)
+    {
+        max_mana = _value;
+        mana = max_mana;
+    }
+
+    private void SetStrengthValue(float _value)
+    {
+        max_strength = _value;
+        strength = max_strength;
+    }
+    private void SetDashAttackValue(float _value)
+    {
+        max_strength = _value;
+        strength = max_strength;
     }
 
     int GetRandomValue(int _maxValue)

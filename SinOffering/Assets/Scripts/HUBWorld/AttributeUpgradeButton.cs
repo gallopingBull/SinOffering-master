@@ -33,6 +33,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     [HideInInspector]
     public Button Upgrade_Button;
     public Button Parent_Button;
+    public Button Child_Button;
 
     #region TextMeshProGUI Components
     // UI Elements that are used for desciptions in content panel
@@ -270,6 +271,12 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     public void PurchaseUpgrade()
     {
         EnterState(AttributeButtonState.purchased);
+        if (Child_Button != null && !Child_Button.gameObject.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
+            Child_Button.GetComponent<AttributeUpgradeButton>().UpgradeUnlocked();
+    }
+    public void UpgradeUnlocked()
+    {
+        EnterState(AttributeButtonState.available);
     }
     private void EnterState(AttributeButtonState _state)
     {
@@ -287,7 +294,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 pricePanels[1].SetActive(true);
                 UnlockedPanel.SetActive(false);
 
-
                 for (int i = 0; i < UpgradeLevel_Button_Images.Length; i++)
                     UpgradeLevel_Button_Images[i].color = Color.red;
 
@@ -296,7 +302,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                     foreach (var divider in attributeDivider_Images)
                         divider.color = new Color(1, 1, 1, 0);
                 }
-            
+
                 //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state );
                 break;
 
@@ -321,6 +327,8 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 }
 
                 //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state);
+
+
                 break;
 
             case AttributeButtonState.locked:

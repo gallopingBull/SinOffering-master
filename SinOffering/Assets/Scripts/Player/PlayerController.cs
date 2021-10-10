@@ -362,10 +362,26 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         return false;
     }
 
-    void IAttributeStoreCustomer.PurchaseUpgrade(string _upgradeName)
-    {
-        Debug.Log("should purchase: " + _upgradeName);
-    }
+    void IAttributeStoreCustomer.PurchaseUpgrade(string _upgradeType)
+    {/*
+        Debug.Log("should purchase: " + _upgradeType.ToString());
+        switch (_upgradeType)
+        {
+            case AttributeUpgradeTypes.UpgradeType.health:
+                attributes.HealthAttributeLevel++;
+                break;
+            case AttributeUpgradeTypes.UpgradeType.mana:
+                attributes.ManaAttributeLevel++;
+                break;
+            case AttributeUpgradeTypes.UpgradeType.strength:
+                attributes.ManaAttributeLevel++;
+                break;
+            default:
+                break;
+        }
+    
+    */}
+
     bool IAttributeStoreCustomer.CanPurchaseUpgrade(int _price)
     {
         if (gameManager.TotalSilver < _price)
