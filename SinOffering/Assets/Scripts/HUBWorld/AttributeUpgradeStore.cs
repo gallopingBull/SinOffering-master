@@ -43,11 +43,8 @@ public class AttributeUpgradeStore : MonoBehaviour
             // assign child button
             if(i >= 0 && i < sortedList.ToList().Count -1 )
             {
-                if (_button.UpgradeType ==
-                sortedList.ToList()[i + 1].gameObject.GetComponent<AttributeUpgradeButton>().UpgradeType)
-                {
+                if (_button.UpgradeType == sortedList.ToList()[i + 1].gameObject.GetComponent<AttributeUpgradeButton>().UpgradeType)
                     _button.Child_Button = sortedList.ToList()[i + 1];
-                }
             }
 
             Debug.Log("UpgradeType: " + _button.UpgradeType.ToString() + " || " + "Upgrade Level: " + tmpLevel);  
@@ -80,12 +77,12 @@ public class AttributeUpgradeStore : MonoBehaviour
             customer.PurchaseUpgrade(tmpData.UpgradeType);
             _button.interactable = false;
 
-
             _button.GetComponent<AttributeUpgradeButton>().PurchaseUpgrade(); // changes button faith
             silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI(); // change to faith
             SelectNextButton(_button);
         }
     }
+
    
     private void SelectNextButton(Button _button)
     {

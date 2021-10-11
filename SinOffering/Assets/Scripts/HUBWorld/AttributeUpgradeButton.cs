@@ -34,6 +34,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     public Button Upgrade_Button;
     public Button Parent_Button;
     public Button Child_Button;
+    public Button[] Child_Buttons;
 
     #region TextMeshProGUI Components
     // UI Elements that are used for desciptions in content panel
@@ -273,6 +274,19 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         EnterState(AttributeButtonState.purchased);
         if (Child_Button != null && !Child_Button.gameObject.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
             Child_Button.GetComponent<AttributeUpgradeButton>().UpgradeUnlocked();
+    
+    /*
+        if(Child_Buttons != null)
+        {
+            foreach (var item in Child_Buttons)
+            {
+                if (item.gameObject.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
+                {
+                    item.gameObject.GetComponent<AttributeUpgradeButton>().UpgradeUnlocked();
+                }
+            }
+        }
+    */
     }
     public void UpgradeUnlocked()
     {

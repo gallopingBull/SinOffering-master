@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ab99b88499e904fbb9f6ae8d5d668b, type: 3}
   m_Name: PlayerAttributeData_Evade
   m_EditorClassIdentifier: 
-  UpgradeType: 5
+  UpgradeType: 7
   AttributeDataList:
   - AttributePrice: 100
     AttributeValue: 290

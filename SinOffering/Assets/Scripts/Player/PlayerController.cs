@@ -303,15 +303,19 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     }
 
 
-    public void SetAttributeFields(PlayerAttributes _attributes)
+    public void SetPersistentPlayerAttributeData(PlayerAttributes _attributes)
     {
         attributes = _attributes;
 
+        SetAttributeValues();
+    }
+
+    private void SetAttributeValues()
+    {
         Health = attributes.HealthAttributeLevel;//attributes.se
         Speed = attributes.SpeedAttributeLevel;
         Mana = attributes.ManaAttributeLevel;//attributes.se
         Strength = attributes.StrengthAttributeLevel;
-
     }
 
 
@@ -407,7 +411,10 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
             default:
                 break;
         }
+
+        SetAttributeValues();
     
+
     }
 
     bool IAttributeStoreCustomer.CanPurchaseUpgrade(int _price)

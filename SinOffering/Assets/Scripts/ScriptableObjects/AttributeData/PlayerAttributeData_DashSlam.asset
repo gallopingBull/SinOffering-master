@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ab99b88499e904fbb9f6ae8d5d668b, type: 3}
   m_Name: PlayerAttributeData_DashSlam
   m_EditorClassIdentifier: 
-  UpgradeType: 3
+  UpgradeType: 5
   AttributeDataList:
   - AttributePrice: 100
     AttributeValue: 290
