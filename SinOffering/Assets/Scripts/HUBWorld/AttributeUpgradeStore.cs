@@ -62,7 +62,7 @@ public class AttributeUpgradeStore : MonoBehaviour
         {
             _button.gameObject.GetComponent<Button>().onClick.RemoveAllListeners();
             _button.gameObject.GetComponent<Button>().onClick.AddListener(() =>
-        PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.transform.gameObject.GetComponent<Button>()));
+        PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.GetComponent<Button>()));
         }
         
     }
