@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IAttributeStoreCustomer
 {
-    void PurchaseUpgrade(string _upgradeType); //change this attributeupgradetype
+    void PurchaseUpgrade(AttributeUpgradeTypes.UpgradeType _upgradeType); //change this attributeupgradetype
 
     bool CanPurchaseUpgrade(int _price);
 

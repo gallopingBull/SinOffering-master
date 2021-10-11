@@ -5,6 +5,11 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 {
     #region variables
 
+    public float Mana = 0;
+    public float Strength = 0;
+
+
+
     [HideInInspector]
     public Animator animator;
     [HideInInspector]
@@ -298,8 +303,14 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     }
 
 
-    public void SetAttributeFields()
+    public void SetAttributeFields(PlayerAttributes _attributes)
     {
+        attributes = _attributes;
+
+        Health = attributes.HealthAttributeLevel;//attributes.se
+        Speed = attributes.SpeedAttributeLevel;
+        Mana = attributes.ManaAttributeLevel;//attributes.se
+        Strength = attributes.StrengthAttributeLevel;
 
     }
 
@@ -362,8 +373,8 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         return false;
     }
 
-    void IAttributeStoreCustomer.PurchaseUpgrade(string _upgradeType)
-    {/*
+    void IAttributeStoreCustomer.PurchaseUpgrade(AttributeUpgradeTypes.UpgradeType _upgradeType)
+    {
         Debug.Log("should purchase: " + _upgradeType.ToString());
         switch (_upgradeType)
         {
@@ -374,13 +385,30 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
                 attributes.ManaAttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.strength:
-                attributes.ManaAttributeLevel++;
+                attributes.StrengthAttributeLevel++;
                 break;
+            case AttributeUpgradeTypes.UpgradeType.speed:
+                attributes.SpeedAttributeLevel++;
+                break;
+            case AttributeUpgradeTypes.UpgradeType.dashAttack:
+                attributes.DashAttack_AttributeLevel++;
+                break;
+            case AttributeUpgradeTypes.UpgradeType.dashSlam:
+                attributes.DashSlam_AttributeLevel++;
+                break;
+            case AttributeUpgradeTypes.UpgradeType.postDashAttack:
+                attributes.PostDashAttack_AttributeLevel++;
+                break;
+
+            case AttributeUpgradeTypes.UpgradeType.evade:
+                attributes.EvadeAttributeLevel++;
+                break;
+
             default:
                 break;
         }
     
-    */}
+    }
 
     bool IAttributeStoreCustomer.CanPurchaseUpgrade(int _price)
     {

@@ -85,7 +85,8 @@ public class SaveSystem : MonoBehaviour
             }
         }
 
-        player.Attributes = _gameData.PlayerAttributes;
+        //player.Attributes = _gameData.PlayerAttributes;
+        player.SetAttributeFields(_gameData.PlayerAttributes);
 
         gameManager.CurWins = _gameData.TotalWins;
         gameManager.CurLosses = _gameData.TotalLosses;

@@ -4,10 +4,12 @@ using UnityEngine;
 
 public abstract class Entity : MonoBehaviour {
     #region variables
-    public float life = 3;
+    public float Health = 3;
 
     //Movement Variables
     public float Speed = 0;
+
+
     public float MaxSpeed = 10;
     public float AccSpeed = .15f;
     public float DeAccSpeed = .15f;
@@ -48,7 +50,6 @@ public abstract class Entity : MonoBehaviour {
 
     [HideInInspector]
     public bool facingLeft = false; 
-
     public int dir = 1; //direction actor sprite is facing (1 = right, -1 = left)
     
     //Linecast variables 
@@ -265,11 +266,11 @@ public abstract class Entity : MonoBehaviour {
         {
             StartCoroutine("DamageIndicator");
 
-            if (life <= 1)
+            if (Health <= 1)
             {
                 Killed();
             }
-            else { life -= _damageValue; }
+            else { Health -= _damageValue; }
         }
     }
 

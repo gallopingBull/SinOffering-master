@@ -84,6 +84,7 @@ public class WeaponAttributes
         GetWeaponAttributeDataFromDatabase(_weaponName);
     }
 
+    // called by SaveSystem.cs 
     public void SetWeaponAttributeData(WeaponAttributes _weaponData)
     {
         SetWeaponName(_weaponData.weaponName);

@@ -98,7 +98,7 @@ public class EnemyController : Entity {
         if (isAggro)
         {
             Speed = Speed * AggroSpeedMultiplier;
-            life = life * AggroLifeMultiplier;
+            Health = Health * AggroLifeMultiplier;
             EnableFire();
         }
     }

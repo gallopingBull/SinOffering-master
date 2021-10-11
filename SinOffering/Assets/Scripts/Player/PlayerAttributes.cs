@@ -50,21 +50,28 @@ public class PlayerAttributes
     [SerializeField]
     private int dashSlam_AttributeLevel = 0;
     [SerializeField]
-    private int postDashAttack_AttributeLevel = 0;
-    
+    private int postDashAttack_AttributeLevel = 0; // to immidetely follow the dash attack with a stronger melee attack
+
     private float dashAttack_manaCost;
     private float dashAttack_distance;
     private float dashAttack_time; // timer before dash attack ecexutes automatically
     private bool dashSlamUnlocked = false;
     private bool dashMeleeEndUnlocked = false; // ability that gives the player an oppurtunity
 
+
+    #region attribute fields
     public int HealthAttributeLevel { get => healthAttributeLevel; set => healthAttributeLevel = value; }
     public int ManaAttributeLevel { get => manaAttributeLevel; set => manaAttributeLevel = value; }
+    public int StrengthAttributeLevel { get => strengthAttributeLevel; set => strengthAttributeLevel = value; }
+    public int SpeedAttributeLevel { get => speedAttributeLevel; set => speedAttributeLevel = value; }
+    public int DashAttack_AttributeLevel { get => dashAttack_AttributeLevel; set => dashAttack_AttributeLevel = value; }
+    public int DashSlam_AttributeLevel { get => dashSlam_AttributeLevel; set => dashSlam_AttributeLevel = value; }
+    public int PostDashAttack_AttributeLevel { get => postDashAttack_AttributeLevel; set => postDashAttack_AttributeLevel = value; }
+    public int EvadeAttributeLevel { get => evadeAttributeLevel; set => evadeAttributeLevel = value; }
 
-
-
-    // to immidetely follow the dash attack with a stronger melee attack
-
+    #endregion
+    
+    
     void Awake()
     {
         attributeDatabase = AttributeDatabase._instance.GetAttributeDatabase();
@@ -74,17 +81,6 @@ public class PlayerAttributes
     {
         Dictionary<AttributeUpgradeTypes.UpgradeType, int> tmpDic = new Dictionary<AttributeUpgradeTypes.UpgradeType, int>();
         
-        #region testing
-        //tmpDic.Add(AttributeUpgradeTypes.UpgradeType.health,  GetRandomValue(4));
-        //tmpDic.Add(AttributeUpgradeTypes.UpgradeType.mana,  GetRandomValue(4));
-        //tmpDic.Add(AttributeUpgradeTypes.UpgradeType.dashAttack, GetRandomValue(4));
-        //tmpDic.Add(AttributeUpgradeTypes.UpgradeType.dashSlam, dashSlam_AttributeLevel);
-        //tmpDic.Add(AttributeUpgradeTypes.UpgradeType.postDashAttack, postDashAttack_AttributeLevel);
-        //tmpDic.Add(AttributeUpgradeTypes.UpgradeType.strength, strengthAttributeLevel);
-        //tmpDic.Add(AttributeUpgradeTypes.UpgradeType.evade, evadeAttributeLevel);
-        //tmpDic.Add(AttributeUpgradeTypes.UpgradeType.speed, speedAttributeLevel);
-        #endregion
-
         tmpDic.Add(AttributeUpgradeTypes.UpgradeType.health, healthAttributeLevel);
         tmpDic.Add(AttributeUpgradeTypes.UpgradeType.mana, ManaAttributeLevel);
         tmpDic.Add(AttributeUpgradeTypes.UpgradeType.dashAttack, dashAttack_AttributeLevel);
@@ -148,7 +144,7 @@ public class PlayerAttributes
         return tmpLvl;
     }
 
-    private void SetPlayerAttributeData(AttributeData data)
+    public void SetPlayerAttributeData(AttributeData data)
     {
         //healthAttributeLevel = data.AttributeDataList[].AttributeLevel; 
 
@@ -160,7 +156,6 @@ public class PlayerAttributes
         max_health = _value;
         health = max_health;
     }
-
 
     private void SetManaValue(float _value)
     {
