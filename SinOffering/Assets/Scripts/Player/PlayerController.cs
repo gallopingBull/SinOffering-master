@@ -164,6 +164,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     private void InputHandler()
     {
         commands = inputHandler.HandleInput();
+        
         if (commands != null)
         {
             for (int i = 0; i < commands.Count; i++)
@@ -311,10 +312,18 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     private void SetAttributeValues()
     {
+<<<<<<< HEAD
         Health = attributes.HealthAttributeLevel;//attributes.se
         Speed = attributes.SpeedAttributeLevel;
         Mana = attributes.ManaAttributeLevel;//attributes.se
         Strength = attributes.StrengthAttributeLevel;
+=======
+        var dataBase = AttributeDatabase._instance.GetAttributeDatabase();
+        Health = dataBase["health"].AttributeDataList[attributes.HealthAttributeLevel - 1].AttributeValue;//attributes.HealthAttributeLevel;//attributes.se
+        Speed = dataBase["speed"].AttributeDataList[attributes.SpeedAttributeLevel].AttributeValue;//attributes.SpeedAttributeLevel;
+        Mana = dataBase["mana"].AttributeDataList[attributes.ManaAttributeLevel - 1].AttributeValue ;//attributes.ManaAttributeLevel;//attributes.se
+        Strength = dataBase["strength"].AttributeDataList[attributes.StrengthAttributeLevel].AttributeValue;//attributes.StrengthAttributeLevel;
+>>>>>>> parent of b2692ff (busted version)
     }
 
 
@@ -378,42 +387,36 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     void IAttributeStoreCustomer.PurchaseUpgrade(AttributeUpgradeTypes.UpgradeType _upgradeType)
     {
+<<<<<<< HEAD
         Debug.Log("should purchase: " + _upgradeType.ToString());
+=======
+>>>>>>> parent of b2692ff (busted version)
         switch (_upgradeType)
         {
-           
             case AttributeUpgradeTypes.UpgradeType.health:
-                if (attributes.HealthAttributeLevel <= maxLevel)
-                    attributes.HealthAttributeLevel++;
+                attributes.HealthAttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.mana:
-                if (attributes.ManaAttributeLevel <= maxLevel)
-                    attributes.ManaAttributeLevel++;
+                attributes.ManaAttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.strength:
-                if (attributes.StrengthAttributeLevel <= maxLevel)
-                    attributes.StrengthAttributeLevel++;
+                attributes.StrengthAttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.speed:
-                if (attributes.SpeedAttributeLevel <= maxLevel)
-                    attributes.SpeedAttributeLevel++;
+                attributes.SpeedAttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.dashAttack:
-                if (attributes.DashAttack_AttributeLevel <= maxLevel)
-                    attributes.DashAttack_AttributeLevel++;
+                attributes.DashAttack_AttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.dashSlam:
-                if (attributes.DashSlam_AttributeLevel <= maxLevel)
-                    attributes.DashSlam_AttributeLevel++;
+                attributes.DashSlam_AttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.postDashAttack:
-                if (attributes.PostDashAttack_AttributeLevel <= maxLevel)
-                    attributes.PostDashAttack_AttributeLevel++;
+                attributes.PostDashAttack_AttributeLevel++;
                 break;
 
             case AttributeUpgradeTypes.UpgradeType.evade:
-                if (attributes.EvadeAttributeLevel <= maxLevel)
-                    attributes.EvadeAttributeLevel++;
+                attributes.EvadeAttributeLevel++;
                 break;
 
             default:
