@@ -314,6 +314,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of f0af195 (more fixes upgrade systsem)
         Health = attributes.HealthAttributeLevel;//attributes.se
@@ -322,14 +323,19 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         Strength = attributes.StrengthAttributeLevel;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of b2692ff (busted version)
         var dataBase = AttributeDatabase._instance.GetAttributeDatabase();
         Health = dataBase["health"].AttributeDataList[attributes.HealthAttributeLevel - 1].AttributeValue;//attributes.HealthAttributeLevel;//attributes.se
         Speed = dataBase["speed"].AttributeDataList[attributes.SpeedAttributeLevel].AttributeValue;//attributes.SpeedAttributeLevel;
         Mana = dataBase["mana"].AttributeDataList[attributes.ManaAttributeLevel - 1].AttributeValue ;//attributes.ManaAttributeLevel;//attributes.se
         Strength = dataBase["strength"].AttributeDataList[attributes.StrengthAttributeLevel].AttributeValue;//attributes.StrengthAttributeLevel;
+<<<<<<< HEAD
 >>>>>>> parent of b2692ff (busted version)
 =======
 >>>>>>> parent of f0af195 (more fixes upgrade systsem)
+=======
+>>>>>>> parent of b2692ff (busted version)
     }
 
 
@@ -395,12 +401,15 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         Debug.Log("should purchase: " + _upgradeType.ToString());
 =======
 >>>>>>> parent of b2692ff (busted version)
 =======
         Debug.Log("should purchase: " + _upgradeType.ToString());
 >>>>>>> parent of f0af195 (more fixes upgrade systsem)
+=======
+>>>>>>> parent of b2692ff (busted version)
         switch (_upgradeType)
         {
             case AttributeUpgradeTypes.UpgradeType.health:
