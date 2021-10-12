@@ -311,11 +311,10 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     private void SetAttributeValues()
     {
-        var dataBase = AttributeDatabase._instance.GetAttributeDatabase();
-        Health = dataBase["health"].AttributeDataList[attributes.HealthAttributeLevel - 1].AttributeValue;//attributes.HealthAttributeLevel;//attributes.se
-        Speed = dataBase["speed"].AttributeDataList[attributes.SpeedAttributeLevel].AttributeValue;//attributes.SpeedAttributeLevel;
-        Mana = dataBase["mana"].AttributeDataList[attributes.ManaAttributeLevel - 1].AttributeValue ;//attributes.ManaAttributeLevel;//attributes.se
-        Strength = dataBase["strength"].AttributeDataList[attributes.StrengthAttributeLevel].AttributeValue;//attributes.StrengthAttributeLevel;
+        Health = attributes.HealthAttributeLevel;//attributes.se
+        Speed = attributes.SpeedAttributeLevel;
+        Mana = attributes.ManaAttributeLevel;//attributes.se
+        Strength = attributes.StrengthAttributeLevel;
     }
 
 
@@ -379,6 +378,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     void IAttributeStoreCustomer.PurchaseUpgrade(AttributeUpgradeTypes.UpgradeType _upgradeType)
     {
+        Debug.Log("should purchase: " + _upgradeType.ToString());
         switch (_upgradeType)
         {
            
