@@ -311,20 +311,11 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     private void SetAttributeValues()
     {
-<<<<<<< HEAD
-        // get static attribute values from attribute database
         var dataBase = AttributeDatabase._instance.GetAttributeDatabase();
-        //Health = dataBase["health"].AttributeDataList[attributes.HealthAttributeLevel - 1].AttributeValue;
-        Health = dataBase["health"].AttributeDataList[attributes.HealthAttributeLevel].AttributeValue;
-        Speed = dataBase["speed"].AttributeDataList[attributes.SpeedAttributeLevel].AttributeValue;
-        Mana = dataBase["mana"].AttributeDataList[attributes.ManaAttributeLevel].AttributeValue;
-        Strength = dataBase["strength"].AttributeDataList[attributes.StrengthAttributeLevel].AttributeValue;
-=======
-        Health = attributes.HealthAttributeLevel;//attributes.se
-        Speed = attributes.SpeedAttributeLevel;
-        Mana = attributes.ManaAttributeLevel;//attributes.se
-        Strength = attributes.StrengthAttributeLevel;
->>>>>>> parent of f0af195 (more fixes upgrade systsem)
+        Health = dataBase["health"].AttributeDataList[attributes.HealthAttributeLevel - 1].AttributeValue;//attributes.HealthAttributeLevel;//attributes.se
+        Speed = dataBase["speed"].AttributeDataList[attributes.SpeedAttributeLevel].AttributeValue;//attributes.SpeedAttributeLevel;
+        Mana = dataBase["mana"].AttributeDataList[attributes.ManaAttributeLevel - 1].AttributeValue ;//attributes.ManaAttributeLevel;//attributes.se
+        Strength = dataBase["strength"].AttributeDataList[attributes.StrengthAttributeLevel].AttributeValue;//attributes.StrengthAttributeLevel;
     }
 
 
@@ -388,15 +379,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     void IAttributeStoreCustomer.PurchaseUpgrade(AttributeUpgradeTypes.UpgradeType _upgradeType)
     {
-<<<<<<< HEAD
-        var dataBase = AttributeDatabase._instance.GetAttributeDatabase();
-
-        int maxLevel = dataBase[_upgradeType.ToString()].AttributeDataList.Length;
-        Debug.Log("maxLevel: " + maxLevel + " || playerAttributeLevels" + dataBase[_upgradeType.ToString()]);
-
-=======
-        Debug.Log("should purchase: " + _upgradeType.ToString());
->>>>>>> parent of f0af195 (more fixes upgrade systsem)
         switch (_upgradeType)
         {
            
