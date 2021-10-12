@@ -81,7 +81,7 @@ public class AttributeUpgradeStore : MonoBehaviour
 >>>>>>> parent of b2692ff (busted version)
 =======
             _button.gameObject.GetComponent<Button>().onClick.AddListener(() =>
-        PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.GetComponent<Button>()));
+        PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.transform.gameObject.GetComponent<Button>()));
         }
         
 >>>>>>> parent of b2692ff (busted version)
