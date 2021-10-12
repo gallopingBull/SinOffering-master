@@ -305,11 +305,13 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     public void SetPersistentPlayerAttributeData(PlayerAttributes _attributes)
     {
         attributes = _attributes;
+
         SetAttributeValues();
     }
 
     private void SetAttributeValues()
     {
+<<<<<<< HEAD
         // get static attribute values from attribute database
         var dataBase = AttributeDatabase._instance.GetAttributeDatabase();
         //Health = dataBase["health"].AttributeDataList[attributes.HealthAttributeLevel - 1].AttributeValue;
@@ -317,6 +319,12 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         Speed = dataBase["speed"].AttributeDataList[attributes.SpeedAttributeLevel].AttributeValue;
         Mana = dataBase["mana"].AttributeDataList[attributes.ManaAttributeLevel].AttributeValue;
         Strength = dataBase["strength"].AttributeDataList[attributes.StrengthAttributeLevel].AttributeValue;
+=======
+        Health = attributes.HealthAttributeLevel;//attributes.se
+        Speed = attributes.SpeedAttributeLevel;
+        Mana = attributes.ManaAttributeLevel;//attributes.se
+        Strength = attributes.StrengthAttributeLevel;
+>>>>>>> parent of f0af195 (more fixes upgrade systsem)
     }
 
 
@@ -380,11 +388,15 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     void IAttributeStoreCustomer.PurchaseUpgrade(AttributeUpgradeTypes.UpgradeType _upgradeType)
     {
+<<<<<<< HEAD
         var dataBase = AttributeDatabase._instance.GetAttributeDatabase();
 
         int maxLevel = dataBase[_upgradeType.ToString()].AttributeDataList.Length;
         Debug.Log("maxLevel: " + maxLevel + " || playerAttributeLevels" + dataBase[_upgradeType.ToString()]);
 
+=======
+        Debug.Log("should purchase: " + _upgradeType.ToString());
+>>>>>>> parent of f0af195 (more fixes upgrade systsem)
         switch (_upgradeType)
         {
            
@@ -427,12 +439,12 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         }
 
         SetAttributeValues();
+    
+
     }
 
     bool IAttributeStoreCustomer.CanPurchaseUpgrade(int _price)
     {
-        // check it if upgrade already purchased
-        // and switch  out silver faith
         if (gameManager.TotalSilver < _price)
             return false;
 
