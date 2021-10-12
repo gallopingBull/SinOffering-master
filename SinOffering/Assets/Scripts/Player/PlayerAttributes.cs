@@ -7,28 +7,29 @@ public class PlayerAttributes
 {
     [SerializeField]
     private AttributeData _data;
-    private Dictionary<string, AttributeData> attributeDatabase;
+    [HideInInspector]
+    public Dictionary<string, AttributeData> attributeDatabase;
     
     [SerializeField]
-    private int healthAttributeLevel = 0;
+    private int healthAttributeLevel = -1;
     [SerializeField]
     private float max_health = 0;
     private float health = 0;
 
     [SerializeField]
-    private int manaAttributeLevel = 0;
+    private int manaAttributeLevel = -1;
     [SerializeField]
     private float max_mana = 0;
     private float mana = 0;
 
     [SerializeField]
-    private int speedAttributeLevel = 0;
+    private int speedAttributeLevel = -1;
     [SerializeField]
     private float max_speed = 0;
     private float speed = 0;
 
     [SerializeField]
-    private int strengthAttributeLevel = 0;
+    private int strengthAttributeLevel = -1;
     [SerializeField]
     private float max_strength = 0;
     private float strength = 0;
@@ -37,7 +38,7 @@ public class PlayerAttributes
     //int equipmentSize; // maybe...
 
     [SerializeField]
-    private int evadeAttributeLevel = 0;
+    private int evadeAttributeLevel = -1;
     private bool doubleJumpedUnlocked = false;
     
     private bool double_evade = false; 
@@ -46,11 +47,11 @@ public class PlayerAttributes
     
     //dashattack stuff
     [SerializeField]
-    private int dashAttack_AttributeLevel = 0;
+    private int dashAttack_AttributeLevel = -1;
     [SerializeField]
-    private int dashSlam_AttributeLevel = 0;
+    private int dashSlam_AttributeLevel = -1;
     [SerializeField]
-    private int postDashAttack_AttributeLevel = 0; // to immidetely follow the dash attack with a stronger melee attack
+    private int postDashAttack_AttributeLevel = -1; // to immidetely follow the dash attack with a stronger melee attack
 
     private float dashAttack_manaCost;
     private float dashAttack_distance;

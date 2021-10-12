@@ -274,19 +274,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         EnterState(AttributeButtonState.purchased);
         if (Child_Button != null && !Child_Button.gameObject.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
             Child_Button.GetComponent<AttributeUpgradeButton>().UpgradeUnlocked();
-    
-    /*
-        if(Child_Buttons != null)
-        {
-            foreach (var item in Child_Buttons)
-            {
-                if (item.gameObject.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
-                {
-                    item.gameObject.GetComponent<AttributeUpgradeButton>().UpgradeUnlocked();
-                }
-            }
-        }
-    */
+  
     }
     public void UpgradeUnlocked()
     {

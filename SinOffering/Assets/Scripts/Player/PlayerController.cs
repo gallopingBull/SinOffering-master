@@ -164,7 +164,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     private void InputHandler()
     {
         commands = inputHandler.HandleInput();
-        
         if (commands != null)
         {
             for (int i = 0; i < commands.Count; i++)
@@ -311,11 +310,13 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     private void SetAttributeValues()
     {
+        // get static attribute values from attribute database
         var dataBase = AttributeDatabase._instance.GetAttributeDatabase();
-        Health = dataBase["health"].AttributeDataList[attributes.HealthAttributeLevel - 1].AttributeValue;//attributes.HealthAttributeLevel;//attributes.se
-        Speed = dataBase["speed"].AttributeDataList[attributes.SpeedAttributeLevel].AttributeValue;//attributes.SpeedAttributeLevel;
-        Mana = dataBase["mana"].AttributeDataList[attributes.ManaAttributeLevel - 1].AttributeValue ;//attributes.ManaAttributeLevel;//attributes.se
-        Strength = dataBase["strength"].AttributeDataList[attributes.StrengthAttributeLevel].AttributeValue;//attributes.StrengthAttributeLevel;
+        //Health = dataBase["health"].AttributeDataList[attributes.HealthAttributeLevel - 1].AttributeValue;
+        Health = dataBase["health"].AttributeDataList[attributes.HealthAttributeLevel].AttributeValue;
+        Speed = dataBase["speed"].AttributeDataList[attributes.SpeedAttributeLevel].AttributeValue;
+        Mana = dataBase["mana"].AttributeDataList[attributes.ManaAttributeLevel].AttributeValue;
+        Strength = dataBase["strength"].AttributeDataList[attributes.StrengthAttributeLevel].AttributeValue;
     }
 
 
@@ -379,32 +380,46 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     void IAttributeStoreCustomer.PurchaseUpgrade(AttributeUpgradeTypes.UpgradeType _upgradeType)
     {
+        var dataBase = AttributeDatabase._instance.GetAttributeDatabase();
+
+        int maxLevel = dataBase[_upgradeType.ToString()].AttributeDataList.Length;
+        Debug.Log("maxLevel: " + maxLevel + " || playerAttributeLevels" + dataBase[_upgradeType.ToString()]);
+
         switch (_upgradeType)
         {
+           
             case AttributeUpgradeTypes.UpgradeType.health:
-                attributes.HealthAttributeLevel++;
+                if (attributes.HealthAttributeLevel <= maxLevel)
+                    attributes.HealthAttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.mana:
-                attributes.ManaAttributeLevel++;
+                if (attributes.ManaAttributeLevel <= maxLevel)
+                    attributes.ManaAttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.strength:
-                attributes.StrengthAttributeLevel++;
+                if (attributes.StrengthAttributeLevel <= maxLevel)
+                    attributes.StrengthAttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.speed:
-                attributes.SpeedAttributeLevel++;
+                if (attributes.SpeedAttributeLevel <= maxLevel)
+                    attributes.SpeedAttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.dashAttack:
-                attributes.DashAttack_AttributeLevel++;
+                if (attributes.DashAttack_AttributeLevel <= maxLevel)
+                    attributes.DashAttack_AttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.dashSlam:
-                attributes.DashSlam_AttributeLevel++;
+                if (attributes.DashSlam_AttributeLevel <= maxLevel)
+                    attributes.DashSlam_AttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.postDashAttack:
-                attributes.PostDashAttack_AttributeLevel++;
+                if (attributes.PostDashAttack_AttributeLevel <= maxLevel)
+                    attributes.PostDashAttack_AttributeLevel++;
                 break;
 
             case AttributeUpgradeTypes.UpgradeType.evade:
-                attributes.EvadeAttributeLevel++;
+                if (attributes.EvadeAttributeLevel <= maxLevel)
+                    attributes.EvadeAttributeLevel++;
                 break;
 
             default:

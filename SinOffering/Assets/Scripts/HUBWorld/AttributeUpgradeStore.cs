@@ -34,23 +34,19 @@ public class AttributeUpgradeStore : MonoBehaviour
 
         var sortedList = menuButtons.OrderBy(o => (int)o.gameObject.GetComponent<AttributeUpgradeButton>().UpgradeType);
 
-       
         for (int i = 0; i < sortedList.ToList().Count; i++)
         {
             var _button = sortedList.ToList()[i].gameObject.GetComponent<AttributeUpgradeButton>();
             int tmpLevel = attributeUpgradeLevels[_button.UpgradeType];
 
             // assign child button
-            if(i >= 0 && i < sortedList.ToList().Count -1 )
-            {
+            if(i >= 0 && i < sortedList.ToList().Count -1)
                 if (_button.UpgradeType == sortedList.ToList()[i + 1].gameObject.GetComponent<AttributeUpgradeButton>().UpgradeType)
                     _button.Child_Button = sortedList.ToList()[i + 1];
-            }
 
             Debug.Log("UpgradeType: " + _button.UpgradeType.ToString() + " || " + "Upgrade Level: " + tmpLevel);  
             AttributeUpgradeData attributeData = _upgradeTypes[(int)_button.UpgradeType].Value.AttributeDataList[_button.UpgradeLevel];
-            InitButton(_button, attributeData, _button.UpgradeType.ToString(), tmpLevel);
-            
+            InitButton(_button, attributeData, _button.UpgradeType.ToString(), tmpLevel);   
         }
     }
 
@@ -61,10 +57,9 @@ public class AttributeUpgradeStore : MonoBehaviour
         if (!_button.UpgradePurchased)
         {
             _button.gameObject.GetComponent<Button>().onClick.RemoveAllListeners();
-            _button.gameObject.GetComponent<Button>().onClick.AddListener(() =>
-        PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.GetComponent<Button>()));
-        }
-        
+            _button.gameObject.GetComponent<Button>().onClick.AddListener(() => 
+            PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.GetComponent<Button>()));
+        }   
     }
 
     public void PurchaseUpgrade(string _upgradeType, int _upgradeLevel, Button _button)
@@ -72,14 +67,21 @@ public class AttributeUpgradeStore : MonoBehaviour
         AttributeData tmpData = attributeDatabase[_upgradeType];
         int price = tmpData.AttributeDataList[_upgradeLevel].AttributePrice; // get price
 
+        var playerAttributeLevels = PlayerController.instance.Attributes.GetAttributeLevelData();
+
+        int maxLevel = tmpData.AttributeDataList.Length ;//tmpData.AttributeDataList[].AttributeLevel;
         if (customer.CanPurchaseUpgrade(price))
         {
-            customer.PurchaseUpgrade(tmpData.UpgradeType);
-            _button.interactable = false;
+            Debug.Log("maxLevel: " + maxLevel + " || playerAttributeLevels" + playerAttributeLevels[tmpData.UpgradeType]);
+            if (playerAttributeLevels[tmpData.UpgradeType]  <= maxLevel)
+            {
+                customer.PurchaseUpgrade(tmpData.UpgradeType);
+                _button.interactable = false;
 
-            _button.GetComponent<AttributeUpgradeButton>().PurchaseUpgrade(); // changes button faith
-            silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI(); // change to faith
-            SelectNextButton(_button);
+                _button.GetComponent<AttributeUpgradeButton>().PurchaseUpgrade(); // changes button faith
+                silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI(); // change to faith
+                SelectNextButton(_button);
+            }
         }
     }
 
