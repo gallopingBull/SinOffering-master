@@ -50,7 +50,6 @@ public class AttributeUpgradeStore : MonoBehaviour
                 } 
             }
 
-            //Debug.Log("UpgradeType: " + _button.UpgradeType.ToString() + " || " + "Upgrade Level: " + tmpLevel);  
             AttributeUpgradeData attributeData = _upgradeTypes[(int)_button .UpgradeType].Value.AttributeDataList[_button.UpgradeLevel];
             InitButton(_button, attributeData, _button.UpgradeType.ToString(), tmpLevel);
         }
@@ -86,6 +85,7 @@ public class AttributeUpgradeStore : MonoBehaviour
 
                 _button.GetComponent<AttributeUpgradeButton>().PurchaseUpgrade(); // changes button faith
                 silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI(); // change to faith
+                InitAttributeUpgradeStore(GetComponent<MenuManager>().menus[0]);
                 SelectNextButton(_button);
             }
         }

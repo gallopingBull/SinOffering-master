@@ -140,11 +140,13 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                             }
                             else
                             {
+                                /*
                                 Debug.Log("*****************************************");
                                 Debug.Log(UpgradeType.ToString() + " is available");
                                 Debug.Log("UpgradeLevel: " + UpgradeLevel);
                                 Debug.Log("curAttributeLevel: " + curAttributeLevel);
-                                Debug.Log("*****************************************");
+                                Debug.Log("*****************************************"); */
+                                
                                 EnterState(AttributeButtonState.purchased);
 
                             }
@@ -163,11 +165,13 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                             }
                             break;
                         case 2:
+                            /*
                             Debug.Log("*****************************************");
                             Debug.Log(UpgradeType.ToString() + " is available");
                             Debug.Log("UpgradeLevel: " + UpgradeLevel);
                             Debug.Log("curAttributeLevel: " + curAttributeLevel);
                             Debug.Log("*****************************************");
+                            */
                             EnterState(AttributeButtonState.available);
                             break;
                         default:
@@ -179,14 +183,12 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 {
                     if (UpgradeLevel == 1 && curAttributeLevel == 0)
                     {
-                        Debug.Log(UpgradeType.ToString() + " is locked");
+                        //Debug.Log(UpgradeType.ToString() + " is hidden");
                         EnterState(AttributeButtonState.hidden);
                     }
                     if (UpgradeLevel == 0 && curAttributeLevel == 0)
                     {
-
-
-                        Debug.Log(UpgradeType.ToString() + " is hidden");
+                        //Debug.Log(UpgradeType.ToString() + " is hidden");
                         EnterState(AttributeButtonState.hidden);
                     }
                 }
@@ -212,8 +214,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 {
                     if (UpgradeLevel == 0 && curAttributeLevel == 0)
                     {
-
-                        Debug.Log(UpgradeType.ToString() + " is hidden");
+                        //Debug.Log(UpgradeType.ToString() + " is hidden");
                         EnterState(AttributeButtonState.hidden);
                     }
 

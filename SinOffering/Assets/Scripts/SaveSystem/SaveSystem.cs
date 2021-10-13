@@ -5,6 +5,10 @@ using UnityEngine;
 public class SaveSystem : MonoBehaviour
 {
     private GameData _gameData = new GameData();
+    [HideInInspector]
+    public static SaveSystem _instance;
+
+
     private PlayerSettings _playerSettings = new PlayerSettings();
 
     private GameManager gameManager;
@@ -12,6 +16,12 @@ public class SaveSystem : MonoBehaviour
 
     public PlayerSettings PlayerSettings { get => _playerSettings; set => _playerSettings = value; }
     public GameData GameData { get => _gameData; set => _gameData = value; }
+
+    private void Awake()
+    {
+        if (_instance == null)
+            _instance = this;
+    }
 
     private void Start()
     {   

@@ -306,7 +306,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     public void SetPersistentPlayerAttributeData(PlayerAttributes _attributes)
     {
         attributes = _attributes;
-
         SetAttributeValues();
     }
 
@@ -394,14 +393,13 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     {
         SetAttributeValues();
 
-        Debug.Log("should purchase: " + _upgradeType.ToString());
+        //Debug.Log("should purchase: " + _upgradeType.ToString());
         var dataBase = AttributeDatabase._instance.GetAttributeDatabase();
 
         // look into this for negative value
-        //int maxLevel = dataBase[_upgradeType.ToString()].AttributeDataList.Length-1;
         int maxLevel = dataBase[_upgradeType.ToString()].AttributeDataList.Length;
 
-        Debug.Log("maxLevel: " + maxLevel + " || playerAttributeLevels" + dataBase[_upgradeType.ToString()]);
+        //Debug.Log("maxLevel: " + maxLevel + " || playerAttributeLevels" + dataBase[_upgradeType.ToString()]);
         switch (_upgradeType)   
         {
             case AttributeUpgradeTypes.UpgradeType.health:
@@ -433,8 +431,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
             default:
                 break;
         }
-
-
+        SaveSystem._instance.SaveGameData();
     }
 
     bool IAttributeStoreCustomer.CanPurchaseUpgrade(int _price)
