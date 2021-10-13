@@ -296,42 +296,19 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     public void PurchaseUpgrade()
     {
         EnterState(AttributeButtonState.purchased);
+        // unlocks next upgrade button/seleciton in upgrade tree.
         if (!HasChildren)
         {
             if (Child_Button != null && !Child_Button.gameObject.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
                 Child_Button.GetComponent<AttributeUpgradeButton>().UpgradeUnlocked();
-
+            return;
         }
-        else
+        for (int i = 0; i < Child_Buttons.Length; i++)
         {
-            if (Child_Buttons.Length != 0)
-            {
-                for (int i = 0; i < Child_Buttons.Length; i++)
-                {
-                    if (!Child_Buttons[i].gameObject.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
-                    {
-                        Debug.Log(Child_Buttons[i].name + ":" + " ||" + "");    
-                        Child_Buttons[i].GetComponent<AttributeUpgradeButton>().UpgradeUnlocked();
-                    }
-                        
-                }
-            }
+            if (!Child_Buttons[i].gameObject.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
+                Child_Buttons[i].GetComponent<AttributeUpgradeButton>().UpgradeUnlocked();
         }
-       
-     
-        #region testing
-        /*if(Child_Buttons != null)
-                {
-                    foreach (var item in Child_Buttons)
-                    {
-                        if (item.gameObject.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
-                        {
-                            item.gameObject.GetComponent<AttributeUpgradeButton>().UpgradeUnlocked();
-                        }
-                    }
-                }
-            */
-        #endregion
+
     }
     public void UpgradeUnlocked()
     {

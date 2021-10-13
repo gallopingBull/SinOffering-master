@@ -50,7 +50,7 @@ public class AttributeUpgradeStore : MonoBehaviour
                 } 
             }
 
-            Debug.Log("UpgradeType: " + _button.UpgradeType.ToString() + " || " + "Upgrade Level: " + tmpLevel);  
+            //Debug.Log("UpgradeType: " + _button.UpgradeType.ToString() + " || " + "Upgrade Level: " + tmpLevel);  
             AttributeUpgradeData attributeData = _upgradeTypes[(int)_button .UpgradeType].Value.AttributeDataList[_button.UpgradeLevel];
             InitButton(_button, attributeData, _button.UpgradeType.ToString(), tmpLevel);
         }
@@ -78,7 +78,7 @@ public class AttributeUpgradeStore : MonoBehaviour
         int maxLevel = tmpData.AttributeDataList.Length;
         if (customer.CanPurchaseUpgrade(price) && !_button.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
         {
-            Debug.Log("maxLevel: " + maxLevel + " || playerAttributeLevels" + playerAttributeLevels[tmpData.UpgradeType]);
+            //Debug.Log("maxLevel: " + maxLevel + " || playerAttributeLevels" + playerAttributeLevels[tmpData.UpgradeType]);
             if (playerAttributeLevels[tmpData.UpgradeType] < maxLevel)
             {
                 customer.PurchaseUpgrade(tmpData.UpgradeType);
