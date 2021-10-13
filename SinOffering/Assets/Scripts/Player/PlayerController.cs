@@ -312,14 +312,23 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     private void SetAttributeValues()
     {
-
         var dataBase = AttributeDatabase._instance.GetAttributeDatabase();
-        Health = dataBase["health"].AttributeDataList[attributes.HealthAttributeLevel - 1].AttributeValue;//attributes.HealthAttributeLevel;//attributes.se
-        Speed = dataBase["speed"].AttributeDataList[attributes.SpeedAttributeLevel].AttributeValue;//attributes.SpeedAttributeLevel;
-        Mana = dataBase["mana"].AttributeDataList[attributes.ManaAttributeLevel - 1].AttributeValue ;//attributes.ManaAttributeLevel;//attributes.se
-        Strength = dataBase["strength"].AttributeDataList[attributes.StrengthAttributeLevel].AttributeValue;//attributes.StrengthAttributeLevel;
 
+        int maxLength = dataBase["health"].AttributeDataList.Length;
+        if (attributes.HealthAttributeLevel < maxLength)
+            Health = dataBase["health"].AttributeDataList[attributes.HealthAttributeLevel].AttributeValue;
+        
+        maxLength = dataBase["speed"].AttributeDataList.Length;
+        if (attributes.SpeedAttributeLevel < maxLength)
+            Speed = dataBase["speed"].AttributeDataList[attributes.SpeedAttributeLevel].AttributeValue;
 
+        maxLength = dataBase["mana"].AttributeDataList.Length;
+        if (attributes.ManaAttributeLevel < maxLength)
+            Mana = dataBase["mana"].AttributeDataList[attributes.ManaAttributeLevel].AttributeValue;
+
+        maxLength = dataBase["strength"].AttributeDataList.Length;
+        if (attributes.StrengthAttributeLevel < maxLength)
+            Strength = dataBase["strength"].AttributeDataList[attributes.StrengthAttributeLevel].AttributeValue;
     }
 
 
@@ -383,10 +392,17 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     void IAttributeStoreCustomer.PurchaseUpgrade(AttributeUpgradeTypes.UpgradeType _upgradeType)
     {
+        SetAttributeValues();
+
         Debug.Log("should purchase: " + _upgradeType.ToString());
+        var dataBase = AttributeDatabase._instance.GetAttributeDatabase();
 
+        // look into this for negative value
+        //int maxLevel = dataBase[_upgradeType.ToString()].AttributeDataList.Length-1;
+        int maxLevel = dataBase[_upgradeType.ToString()].AttributeDataList.Length;
 
-        switch (_upgradeType)
+        Debug.Log("maxLevel: " + maxLevel + " || playerAttributeLevels" + dataBase[_upgradeType.ToString()]);
+        switch (_upgradeType)   
         {
             case AttributeUpgradeTypes.UpgradeType.health:
                 attributes.HealthAttributeLevel++;
@@ -418,8 +434,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
                 break;
         }
 
-        SetAttributeValues();
-    
 
     }
 

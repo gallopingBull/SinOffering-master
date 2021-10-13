@@ -112,8 +112,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         // get player level;
         int curAttributeLevel = _upgradeLevel;
 
-
-
         //i want to check if dash attack is at least to level 1 or 4 to make either two buttons available or hidden
         // check button status on stems
 
@@ -274,19 +272,18 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         EnterState(AttributeButtonState.purchased);
         if (Child_Button != null && !Child_Button.gameObject.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
             Child_Button.GetComponent<AttributeUpgradeButton>().UpgradeUnlocked();
-    
-    /*
-        if(Child_Buttons != null)
-        {
-            foreach (var item in Child_Buttons)
-            {
-                if (item.gameObject.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
+
+        /*if(Child_Buttons != null)
                 {
-                    item.gameObject.GetComponent<AttributeUpgradeButton>().UpgradeUnlocked();
+                    foreach (var item in Child_Buttons)
+                    {
+                        if (item.gameObject.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
+                        {
+                            item.gameObject.GetComponent<AttributeUpgradeButton>().UpgradeUnlocked();
+                        }
+                    }
                 }
-            }
-        }
-    */
+            */
     }
     public void UpgradeUnlocked()
     {
@@ -316,7 +313,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                     foreach (var divider in attributeDivider_Images)
                         divider.color = new Color(1, 1, 1, 0);
                 }
-
                 //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state );
                 break;
 
@@ -339,10 +335,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                     foreach (var divider in attributeDivider_Images)
                         divider.color = Color.white;
                 }
-
                 //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state);
-
-
                 break;
 
             case AttributeButtonState.locked:
@@ -364,7 +357,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                     foreach (var divider in attributeDivider_Images)
                         divider.color = new Color(1, 1, 1, 0);
                 }
-
                 //Debug.Log(gameObject.name + " | " + UpgradeType.ToString() + " | " + state);
                 break;
 

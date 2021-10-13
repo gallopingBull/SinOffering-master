@@ -35,7 +35,7 @@ public class WeaponUpgradeStore : MonoBehaviour
     
         for (int i = 0; i < menuButtons.Length; i++)
         {
-            var weapons = PlayerController.instance.weaponManager.Weapons;
+            var weapons = PlayerController.instance.weaponManager.Weapons;  
             var button = menuButtons[i].gameObject.GetComponent<WeaponNameUpgradeButtonUI>();
 
             navi = menuButtons[i].navigation;
