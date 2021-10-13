@@ -144,8 +144,13 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                     }
                     else
                     {
+                        Debug.Log("*****************************************");
                         Debug.Log(UpgradeType.ToString() + " is available");
+                        Debug.Log("UpgradeLevel: " + UpgradeLevel);
+                        Debug.Log("curAttributeLevel: " + curAttributeLevel);
+                        Debug.Log("*****************************************");
                         EnterState(AttributeButtonState.available);
+
                     }
                 }
                 else
