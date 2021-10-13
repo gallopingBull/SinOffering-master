@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class AttributeUpgradeStore : MonoBehaviour
 {
+    //test
     private IAttributeStoreCustomer customer;
     private Dictionary<string, AttributeData> attributeDatabase;
     public Button[] menuButtons = null;
