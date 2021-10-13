@@ -306,16 +306,26 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     public void SetPersistentPlayerAttributeData(PlayerAttributes _attributes)
     {
         attributes = _attributes;
+
         SetAttributeValues();
     }
 
     private void SetAttributeValues()
     {
+<<<<<<< HEAD
+
         var dataBase = AttributeDatabase._instance.GetAttributeDatabase();
         Health = dataBase["health"].AttributeDataList[attributes.HealthAttributeLevel - 1].AttributeValue;//attributes.HealthAttributeLevel;//attributes.se
         Speed = dataBase["speed"].AttributeDataList[attributes.SpeedAttributeLevel].AttributeValue;//attributes.SpeedAttributeLevel;
         Mana = dataBase["mana"].AttributeDataList[attributes.ManaAttributeLevel - 1].AttributeValue ;//attributes.ManaAttributeLevel;//attributes.se
         Strength = dataBase["strength"].AttributeDataList[attributes.StrengthAttributeLevel].AttributeValue;//attributes.StrengthAttributeLevel;
+
+=======
+        Health = attributes.HealthAttributeLevel;//attributes.se
+        Speed = attributes.SpeedAttributeLevel;
+        Mana = attributes.ManaAttributeLevel;//attributes.se
+        Strength = attributes.StrengthAttributeLevel;
+>>>>>>> parent of f0af195 (more fixes upgrade systsem)
     }
 
 
@@ -379,6 +389,13 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     void IAttributeStoreCustomer.PurchaseUpgrade(AttributeUpgradeTypes.UpgradeType _upgradeType)
     {
+<<<<<<< HEAD
+
+        Debug.Log("should purchase: " + _upgradeType.ToString());
+
+=======
+        Debug.Log("should purchase: " + _upgradeType.ToString());
+>>>>>>> parent of f0af195 (more fixes upgrade systsem)
         switch (_upgradeType)
         {
             case AttributeUpgradeTypes.UpgradeType.health:
@@ -412,12 +429,12 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         }
 
         SetAttributeValues();
+    
+
     }
 
     bool IAttributeStoreCustomer.CanPurchaseUpgrade(int _price)
     {
-        // check it if upgrade already purchased
-        // and switch  out silver faith
         if (gameManager.TotalSilver < _price)
             return false;
 

@@ -61,10 +61,30 @@ public class AttributeUpgradeStore : MonoBehaviour
         if (!_button.UpgradePurchased)
         {
             _button.gameObject.GetComponent<Button>().onClick.RemoveAllListeners();
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            _button.gameObject.GetComponent<Button>().onClick.AddListener(() => 
+            PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.GetComponent<Button>()));
+        }   
+=======
             _button.gameObject.GetComponent<Button>().onClick.AddListener(() =>
-        PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.GetComponent<Button>()));
+        PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.transform.gameObject.GetComponent<Button>()));
         }
         
+>>>>>>> parent of f0af195 (more fixes upgrade systsem)
+=======
+            _button.gameObject.GetComponent<Button>().onClick.AddListener(() =>
+        PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.transform.gameObject.GetComponent<Button>()));
+        }
+        
+>>>>>>> parent of b2692ff (busted version)
+=======
+            _button.gameObject.GetComponent<Button>().onClick.AddListener(() =>
+        PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.transform.gameObject.GetComponent<Button>()));
+        }
+        
+>>>>>>> parent of b2692ff (busted version)
     }
 
     public void PurchaseUpgrade(string _upgradeType, int _upgradeLevel, Button _button)

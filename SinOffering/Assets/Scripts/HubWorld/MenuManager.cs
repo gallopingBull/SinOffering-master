@@ -176,10 +176,6 @@ public class MenuManager : MonoBehaviour
     private void DisplayMenu(int index)
     {
         // play some enter menu transition animation 
-        if (menus[index].GetComponent<CanvasGroup>() != null) {
-
-            //return;
-        }
         menus[index].SetActive(true);
         //change alpha value of canvas group here
     }
