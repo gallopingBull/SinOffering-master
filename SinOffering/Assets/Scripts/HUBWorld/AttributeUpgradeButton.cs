@@ -140,10 +140,11 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                     else if (UpgradeLevel == 1 && curAttributeLevel == 0)
                     {
                         Debug.Log(UpgradeType.ToString() + " is locked");
-                        EnterState(AttributeButtonState.locked);
+                        EnterState(AttributeButtonState.locked);    
                     }
                     else
                     {
+                        Debug.Log(UpgradeType.ToString() + " is available");
                         EnterState(AttributeButtonState.available);
                     }
                 }

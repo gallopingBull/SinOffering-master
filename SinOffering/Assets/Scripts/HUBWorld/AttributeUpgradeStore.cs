@@ -64,22 +64,6 @@ public class AttributeUpgradeStore : MonoBehaviour
             PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.GetComponent<Button>()));
         }   
     }
-    /*
-    public void PurchaseUpgrade(string _upgradeType, int _upgradeLevel, Button _button)
-    {
-        AttributeData tmpData = attributeDatabase[_upgradeType];
-        int price = tmpData.AttributeDataList[_upgradeLevel].AttributePrice; // get price
-
-        if (customer.CanPurchaseUpgrade(price))
-        {
-            customer.PurchaseUpgrade(tmpData.UpgradeType);
-            _button.interactable = false;
-
-            _button.GetComponent<AttributeUpgradeButton>().PurchaseUpgrade(); // changes button faith
-            silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI(); // change to faith
-            SelectNextButton(_button);
-        }
-    }*/
 
     public void PurchaseUpgrade(string _upgradeType, int _upgradeLevel, Button _button)
     {
@@ -89,7 +73,8 @@ public class AttributeUpgradeStore : MonoBehaviour
         var playerAttributeLevels = PlayerController.instance.Attributes.GetAttributeLevelData();
 
         int maxLevel = tmpData.AttributeDataList.Length;
-        if (customer.CanPurchaseUpgrade(price))
+        if (customer.CanPurchaseUpgrade(price) && 
+            !_button.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
         {
             Debug.Log("maxLevel: " + maxLevel + " || playerAttributeLevels" + playerAttributeLevels[tmpData.UpgradeType]);
             if (playerAttributeLevels[tmpData.UpgradeType] < maxLevel)
