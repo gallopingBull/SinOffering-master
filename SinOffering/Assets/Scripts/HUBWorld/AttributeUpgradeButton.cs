@@ -18,6 +18,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     //[HideInInspector]
     public bool UpgradePurchased = false;
     public bool ButtonLocked = false;
+    public bool HasChildren = false;
     private bool buttonInit = false;
 
     public AttributeData data;
@@ -120,9 +121,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 
         if (Parent_Button != null)
         {
-            //int maxLvl_dashSlam = 1;
-            //int maxLvl_postDashAttack = 3;
-
             if (UpgradeType == AttributeUpgradeTypes.UpgradeType.dashSlam)
             {
                 if (Parent_Button.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
@@ -212,8 +210,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                 }
                 else
                 {
-
-               
                     if (UpgradeLevel == 0 && curAttributeLevel == 0)
                     {
 
@@ -300,9 +296,30 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     public void PurchaseUpgrade()
     {
         EnterState(AttributeButtonState.purchased);
-        if (Child_Button != null && !Child_Button.gameObject.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
-            Child_Button.GetComponent<AttributeUpgradeButton>().UpgradeUnlocked();
+        if (!HasChildren)
+        {
+            if (Child_Button != null && !Child_Button.gameObject.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
+                Child_Button.GetComponent<AttributeUpgradeButton>().UpgradeUnlocked();
 
+        }
+        else
+        {
+            if (Child_Buttons.Length != 0)
+            {
+                for (int i = 0; i < Child_Buttons.Length; i++)
+                {
+                    if (!Child_Buttons[i].gameObject.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
+                    {
+                        Debug.Log(Child_Buttons[i].name + ":" + " ||" + "");    
+                        Child_Buttons[i].GetComponent<AttributeUpgradeButton>().UpgradeUnlocked();
+                    }
+                        
+                }
+            }
+        }
+       
+     
+        #region testing
         /*if(Child_Buttons != null)
                 {
                     foreach (var item in Child_Buttons)
@@ -314,6 +331,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                     }
                 }
             */
+        #endregion
     }
     public void UpgradeUnlocked()
     {

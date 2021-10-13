@@ -43,8 +43,11 @@ public class AttributeUpgradeStore : MonoBehaviour
             // assign child button
             if(i >= 0 && i < sortedList.ToList().Count - 1)
             {
-                if (_button.UpgradeType == sortedList.ToList()[i + 1].gameObject.GetComponent<AttributeUpgradeButton>().UpgradeType)
-                    _button.Child_Button = sortedList.ToList()[i + 1];
+                if (!_button.HasChildren)
+                {
+                    if (_button.UpgradeType == sortedList.ToList()[i + 1].gameObject.GetComponent<AttributeUpgradeButton>().UpgradeType)
+                        _button.Child_Button = sortedList.ToList()[i + 1];
+                } 
             }
 
             Debug.Log("UpgradeType: " + _button.UpgradeType.ToString() + " || " + "Upgrade Level: " + tmpLevel);  
@@ -73,8 +76,7 @@ public class AttributeUpgradeStore : MonoBehaviour
         var playerAttributeLevels = PlayerController.instance.Attributes.GetAttributeLevelData();
 
         int maxLevel = tmpData.AttributeDataList.Length;
-        if (customer.CanPurchaseUpgrade(price) && 
-            !_button.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
+        if (customer.CanPurchaseUpgrade(price) && !_button.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
         {
             Debug.Log("maxLevel: " + maxLevel + " || playerAttributeLevels" + playerAttributeLevels[tmpData.UpgradeType]);
             if (playerAttributeLevels[tmpData.UpgradeType] < maxLevel)
