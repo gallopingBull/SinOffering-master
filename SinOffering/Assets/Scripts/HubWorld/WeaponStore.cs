@@ -9,7 +9,7 @@ public class WeaponStore : MonoBehaviour
     private IWeaponStoreCustomer customer;
     private Dictionary<string, WeaponData> weaponDatabase;
     public Button[] menuButtons = null;
-    private GameObject silverValueUI;
+    public GameObject silverValueUI;
 
     private void Start()    
     {

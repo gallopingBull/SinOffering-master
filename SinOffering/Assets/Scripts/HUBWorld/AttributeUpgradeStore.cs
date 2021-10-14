@@ -10,12 +10,12 @@ public class AttributeUpgradeStore : MonoBehaviour
     private IAttributeStoreCustomer customer;
     private Dictionary<string, AttributeData> attributeDatabase;
     public Button[] menuButtons = null;
-    private GameObject silverValueUI;
+    public GameObject faithValueUI;
 
     void Start()
     {
         attributeDatabase = AttributeDatabase._instance.GetAttributeDatabase();
-        silverValueUI = GameObject.Find("Text_SilverValue");
+        faithValueUI = GameObject.Find("Text_FaithValue");
     }   
 
     public void InitAttributeUpgradeStore(GameObject _menu)
@@ -85,7 +85,7 @@ public class AttributeUpgradeStore : MonoBehaviour
                 _button.interactable = false;
 
                 _button.GetComponent<AttributeUpgradeButton>().PurchaseUpgrade(); // changes button faith
-                silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI(); // change to faith
+                faithValueUI.GetComponent<DisplayManaTotal>().SetSilverValueUI(); // change to faith
 
                 InitAttributeUpgradeStore(GetComponent<MenuManager>().menus[0]); // reinitialize store and buttons
                 SelectNextButton(_button);
@@ -112,7 +112,7 @@ public class AttributeUpgradeStore : MonoBehaviour
     {
         //Debug.Log("SetMenuButtons("+ _menu.name+ ")");
         menuButtons = _menu.GetComponentsInChildren<Button>();
-        silverValueUI = GameObject.Find("Text_SilverValue");
+        faithValueUI = GameObject.Find("Text_SilverValue");
     }
 
     // customer/player is assigned at store trigger (DisplayButton.cs)

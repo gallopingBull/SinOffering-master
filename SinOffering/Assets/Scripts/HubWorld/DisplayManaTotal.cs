@@ -14,8 +14,7 @@ public class DisplayManaTotal : MonoBehaviour
 
     public void SetSilverValueUI()
     {
-        manaTotal_Text.text = "10";
-            //GameManager.instance.TotalMana.ToString();
+        manaTotal_Text.text = GameManager.instance.TotalFaith.ToString();
     }
 
     private void OnEnable()
