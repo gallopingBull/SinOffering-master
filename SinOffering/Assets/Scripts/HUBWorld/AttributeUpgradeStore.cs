@@ -7,7 +7,6 @@ using UnityEngine;
 
 public class AttributeUpgradeStore : MonoBehaviour
 {
-    //test
     private IAttributeStoreCustomer customer;
     private Dictionary<string, AttributeData> attributeDatabase;
     public Button[] menuButtons = null;
@@ -58,6 +57,7 @@ public class AttributeUpgradeStore : MonoBehaviour
     // initilaize buttons with correct weapon data 
     public void InitButton(AttributeUpgradeButton _button, AttributeUpgradeData _attributeData, string _upgradeName, int curUpgradeLvl)
     {
+
         _button.SetButtonData(attributeDatabase[_button.UpgradeType.ToString()], curUpgradeLvl);
         if (!_button.UpgradePurchased)
         {
@@ -71,6 +71,7 @@ public class AttributeUpgradeStore : MonoBehaviour
     {
         AttributeData tmpData = attributeDatabase[_upgradeType];
         int price = tmpData.AttributeDataList[_upgradeLevel].AttributePrice; // get price
+        Debug.Log("price: " + price + " || upgrade level: " + _upgradeLevel + " || upgradeType: " + _upgradeType);
 
         var playerAttributeLevels = PlayerController.instance.Attributes.GetAttributeLevelData();
 
@@ -85,6 +86,8 @@ public class AttributeUpgradeStore : MonoBehaviour
 
                 _button.GetComponent<AttributeUpgradeButton>().PurchaseUpgrade(); // changes button faith
                 silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI(); // change to faith
+
+                //InitButton(_button, attributeData, _button.UpgradeType.ToString(), tmpLevel);
                 InitAttributeUpgradeStore(GetComponent<MenuManager>().menus[0]);
                 SelectNextButton(_button);
             }

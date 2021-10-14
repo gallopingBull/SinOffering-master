@@ -431,7 +431,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
             default:
                 break;
         }
-        SaveSystem._instance.SaveGameData();
+        //SaveSystem._instance.SaveGameData();
     }
 
     bool IAttributeStoreCustomer.CanPurchaseUpgrade(int _price)

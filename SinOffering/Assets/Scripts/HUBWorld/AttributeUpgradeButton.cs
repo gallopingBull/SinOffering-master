@@ -151,19 +151,26 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 
                             }
 
-
                             break;
+
                         case 1:
                             if (curAttributeLevel == 0)
                             {
                                 Debug.Log(UpgradeType.ToString() + " is locked");
                                 EnterState(AttributeButtonState.locked);
                             }
-                            else
+                            if (curAttributeLevel == 1)
+                            {
+                                EnterState(AttributeButtonState.available);
+
+                            }
+
+                            if (curAttributeLevel > 1)
                             {
                                 EnterState(AttributeButtonState.purchased);
                             }
                             break;
+
                         case 2:
                             /*
                             Debug.Log("*****************************************");
@@ -174,6 +181,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                             */
                             EnterState(AttributeButtonState.available);
                             break;
+
                         default:
                             break;
                     }
@@ -309,7 +317,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
             if (!Child_Buttons[i].gameObject.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
                 Child_Buttons[i].GetComponent<AttributeUpgradeButton>().UpgradeUnlocked();
         }
-
     }
     public void UpgradeUnlocked()
     {
