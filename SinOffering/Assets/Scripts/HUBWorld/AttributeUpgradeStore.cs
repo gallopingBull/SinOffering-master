@@ -112,7 +112,7 @@ public class AttributeUpgradeStore : MonoBehaviour
     {
         //Debug.Log("SetMenuButtons("+ _menu.name+ ")");
         menuButtons = _menu.GetComponentsInChildren<Button>();
-        faithValueUI = GameObject.Find("Text_SilverValue");
+        faithValueUI = GameObject.Find("Text_FaithValue");
     }
 
     // customer/player is assigned at store trigger (DisplayButton.cs)

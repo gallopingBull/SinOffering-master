@@ -90,7 +90,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         UpgradeLevel_Button_Images = transform.Find("AbilityUpgradeLevel_Images").GetComponentsInChildren<Image>();
        
         Price_Text =
-              GameObject.Find("Panel_AbilityPrice").transform.Find("Text_FaithValue").GetComponent<TextMeshProUGUI>();
+              GameObject.Find("Panel_AbilityPrice").transform.Find("Text_FaithValueDescription").GetComponent<TextMeshProUGUI>();
 
         UnlockedPanel = GameObject.Find("Panel_Unlocked").gameObject;
         pricePanels[0] = GameObject.Find("Panel_UnlockPrompt").gameObject;

@@ -15,7 +15,7 @@ public class WeaponUpgradeStore : MonoBehaviour
     private Button[] menuButtons = null;
     private VerticalLayoutGroup[] upgradePanels;
 
-    private GameObject silverValueUI;
+    public GameObject silverValueUI;
 
     private void Start()
     {

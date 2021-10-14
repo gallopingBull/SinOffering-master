@@ -66,7 +66,7 @@ public class WeaponStore : MonoBehaviour
 
     public void PurchaseWeapon(string _weaponName, Button _button)
     {
-        int price = 0;//weaponDatabase[_weaponName].WeaponPrice;
+        int price = weaponDatabase[_weaponName].WeaponPrice;
 
         if (customer.CanPurchaseWeapon(price))
         {
