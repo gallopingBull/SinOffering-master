@@ -29,6 +29,7 @@ public class GameData
     public int TotalGamesPlayed;
 
     public int TotalSilver;
+    public int TotalFaith;
 
     public float TotalGameTime; 
 }

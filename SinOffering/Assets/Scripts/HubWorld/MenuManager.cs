@@ -84,6 +84,7 @@ public class MenuManager : MonoBehaviour
                 DisplayMenu((int)currentMenu);
                 DisplayMenu(menus.Length - 1); // this displays UI for player's silver
 
+
                 InitStore(menus[(int)currentMenu], currentMenu);
                 break;
 
@@ -93,7 +94,8 @@ public class MenuManager : MonoBehaviour
                 yield return new WaitForSeconds(Delay);
 
                 DisplayMenu(0);
-                
+                DisplayMenu(1);
+
 
                 InitStore(menus[0], currentMenu);
                 break;
@@ -139,6 +141,7 @@ public class MenuManager : MonoBehaviour
 
             case UpgradeMenu.AbilityUpgradeMenu:
                 HideMenu(0);
+                HideMenu(1);
                 yield return new WaitForSeconds(.25f);
                 SwitchToMainCamera();
                 closeMenu = false;
