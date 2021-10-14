@@ -129,56 +129,24 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
                     {
                         case 0:
                             if (curAttributeLevel == 0)
-                            {
-                                Debug.Log(UpgradeType.ToString() + " is available");
                                 EnterState(AttributeButtonState.available);
-                            }
                             else if(curAttributeLevel == 1)
-                            {
-                                Debug.Log(UpgradeType.ToString() + " is locked");
                                 EnterState(AttributeButtonState.purchased);
-                            }
                             else
-                            {
-                                /*
-                                Debug.Log("*****************************************");
-                                Debug.Log(UpgradeType.ToString() + " is available");
-                                Debug.Log("UpgradeLevel: " + UpgradeLevel);
-                                Debug.Log("curAttributeLevel: " + curAttributeLevel);
-                                Debug.Log("*****************************************"); */
-                                
                                 EnterState(AttributeButtonState.purchased);
-
-                            }
-
                             break;
 
                         case 1:
                             if (curAttributeLevel == 0)
-                            {
-                                Debug.Log(UpgradeType.ToString() + " is locked");
                                 EnterState(AttributeButtonState.locked);
-                            }
                             if (curAttributeLevel == 1)
-                            {
                                 EnterState(AttributeButtonState.available);
-
-                            }
-
                             if (curAttributeLevel > 1)
-                            {
                                 EnterState(AttributeButtonState.purchased);
-                            }
                             break;
 
                         case 2:
-                            /*
-                            Debug.Log("*****************************************");
-                            Debug.Log(UpgradeType.ToString() + " is available");
-                            Debug.Log("UpgradeLevel: " + UpgradeLevel);
-                            Debug.Log("curAttributeLevel: " + curAttributeLevel);
-                            Debug.Log("*****************************************");
-                            */
+                  
                             EnterState(AttributeButtonState.available);
                             break;
 

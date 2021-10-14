@@ -71,7 +71,7 @@ public class AttributeUpgradeStore : MonoBehaviour
     {
         AttributeData tmpData = attributeDatabase[_upgradeType];
         int price = tmpData.AttributeDataList[_upgradeLevel].AttributePrice; // get price
-        Debug.Log("price: " + price + " || upgrade level: " + _upgradeLevel + " || upgradeType: " + _upgradeType);
+        //Debug.Log("price: " + price + " || upgrade level: " + _upgradeLevel + " || upgradeType: " + _upgradeType);
 
         var playerAttributeLevels = PlayerController.instance.Attributes.GetAttributeLevelData();
 
@@ -87,8 +87,7 @@ public class AttributeUpgradeStore : MonoBehaviour
                 _button.GetComponent<AttributeUpgradeButton>().PurchaseUpgrade(); // changes button faith
                 silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI(); // change to faith
 
-                //InitButton(_button, attributeData, _button.UpgradeType.ToString(), tmpLevel);
-                InitAttributeUpgradeStore(GetComponent<MenuManager>().menus[0]);
+                InitAttributeUpgradeStore(GetComponent<MenuManager>().menus[0]); // reinitialize store and buttons
                 SelectNextButton(_button);
             }
         }
