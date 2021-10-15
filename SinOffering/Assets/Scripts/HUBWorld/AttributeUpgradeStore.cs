@@ -10,12 +10,14 @@ public class AttributeUpgradeStore : MonoBehaviour
     private IAttributeStoreCustomer customer;
     private Dictionary<string, AttributeData> attributeDatabase;
     public Button[] menuButtons = null;
-    public GameObject faithValueUI;
+    private GameObject faithValueUI;
+    private HUDManager hm;
 
     void Start()
     {
         attributeDatabase = AttributeDatabase._instance.GetAttributeDatabase();
         faithValueUI = GameObject.Find("Text_FaithValue");
+        hm = HUDManager._instance;
     }   
 
     public void InitAttributeUpgradeStore(GameObject _menu)
@@ -86,6 +88,7 @@ public class AttributeUpgradeStore : MonoBehaviour
 
                 _button.GetComponent<AttributeUpgradeButton>().PurchaseUpgrade(); // changes button faith
                 faithValueUI.GetComponent<DisplayManaTotal>().SetSilverValueUI(); // change to faith
+                hm.SetUIObjectValues();
 
                 InitAttributeUpgradeStore(GetComponent<MenuManager>().menus[0]); // reinitialize store and buttons
                 SelectNextButton(_button);

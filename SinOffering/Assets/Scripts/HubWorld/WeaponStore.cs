@@ -9,12 +9,14 @@ public class WeaponStore : MonoBehaviour
     private IWeaponStoreCustomer customer;
     private Dictionary<string, WeaponData> weaponDatabase;
     public Button[] menuButtons = null;
-    public GameObject silverValueUI;
+    private GameObject silverValueUI;
+    private HUDManager hm;
 
     private void Start()    
     {
         weaponDatabase = WeaponDatabase._instance.GetWeaponDatabase();
         silverValueUI = GameObject.Find("Text_SilverValue");
+        hm = HUDManager._instance;
     }
 
     public void InitWeaponStore(GameObject menu)
@@ -73,6 +75,7 @@ public class WeaponStore : MonoBehaviour
             customer.PurchaseWeapon(_weaponName);
             _button.interactable = false;
             silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI();
+            hm.SetUIObjectValues();
             SelectNextButton(_button);
         }
     }

@@ -15,7 +15,8 @@ public class WeaponUpgradeStore : MonoBehaviour
     private Button[] menuButtons = null;
     private VerticalLayoutGroup[] upgradePanels;
 
-    public GameObject silverValueUI;
+    private HUDManager hm;
+    private GameObject silverValueUI;
 
     private void Start()
     {
@@ -163,6 +164,7 @@ public class WeaponUpgradeStore : MonoBehaviour
             _button.InitUpgradeButton(weapon, weaponData);
         }
         silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI();
+        hm.SetUIObjectValues();
     }
 
     // customer/player is assigned at store trigger (DisplayButton.cs)
@@ -177,6 +179,8 @@ public class WeaponUpgradeStore : MonoBehaviour
            _menu.transform.Find("Panel_WeaponSelectionButtons").transform.Find("Weapon Selection Buttons").GetComponentsInChildren<Button>();
         firstSelectedButton = new Navigation[menuButtons.Length];
         silverValueUI = GameObject.Find("Text_SilverValue");
+        hm = HUDManager._instance;
+        
     }
 
 
