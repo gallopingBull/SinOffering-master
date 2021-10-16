@@ -11,7 +11,7 @@ public class HUDManager : MonoBehaviour
 
     public GameObject HUD;
     //reference to canvas group alpha value for HUD gameobject
-    private CanvasGroup hud_CanvasGroup;
+    public CanvasGroup hud_CanvasGroup;
 
     //reference to health bar UI
     public Image healthBar;
@@ -35,19 +35,33 @@ public class HUDManager : MonoBehaviour
     //reference to faith value from game manager
     private int faithValue = 0;
 
-    // Start is called before the first frame update
+
+    private FadeCanvasGroup fadeCanvas;
+
+
+
     private void Awake()
     {
         if (_instance != null)
             return;
-        _instance = this; 
+        _instance = this;
+        fadeCanvas = FadeCanvasGroup._instance;
+
     }
     void Start()
     {
         HUD = transform.Find("HUD").gameObject;
+        hud_CanvasGroup = GetComponent<CanvasGroup>();
         SetUIObjects();
         SetUIObjectValues();
 
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            ToggleHUD();
+        }
     }
 
     private void SetUIObjects()
@@ -72,15 +86,21 @@ public class HUDManager : MonoBehaviour
         faithText.text = faithValue.ToString();
     }
 
-
+    void ToggleHUD()
+    {
+        if (hud_CanvasGroup.alpha == 0)
+            DisplayHUD();
+        else
+            HideHUD();
+    }
     private void DisplayHUD()   
     {
-        
+        fadeCanvas.FadeInCanvasGroup(hud_CanvasGroup);
     }
 
     private void HideHUD()
     {
-
+        fadeCanvas.FadeOutCanvasGroup(hud_CanvasGroup);
     }
 
     void UpdateHealthBar()

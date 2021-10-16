@@ -31,11 +31,14 @@ public class MenuManager : MonoBehaviour
     private Dictionary<string, WeaponData> weaponDatabase;
     private WeaponData weaponData;
 
+    private FadeCanvasGroup fadeCanvas;
+
     #endregion
     #region functions
     private void Start()
     {
         weaponDatabase = WeaponDatabase._instance.GetWeaponDatabase();
+        fadeCanvas = FadeCanvasGroup._instance;
     }
     private void Update()
     {
@@ -174,12 +177,16 @@ public class MenuManager : MonoBehaviour
     {
         // play some buttton animation 
         // play some exit menu transition animation 
+        fadeCanvas.FadeOutCanvasGroup(menus[index].GetComponent<CanvasGroup>());
         menus[index].SetActive(false);
     }
     private void DisplayMenu(int index)
     {
         // play some enter menu transition animation 
         menus[index].SetActive(true);
+        Debug.Log("dispalying: " + menus[index].GetComponent<CanvasGroup>());
+        fadeCanvas.FadeInCanvasGroup(menus[index].GetComponent<CanvasGroup>());
+        
         //change alpha value of canvas group here
     }
     private void InitStore(GameObject menu, UpgradeMenu _menu)

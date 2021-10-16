@@ -59,7 +59,6 @@ public class AttributeUpgradeStore : MonoBehaviour
     // initilaize buttons with correct weapon data 
     public void InitButton(AttributeUpgradeButton _button, AttributeUpgradeData _attributeData, string _upgradeName, int curUpgradeLvl)
     {
-
         _button.SetButtonData(attributeDatabase[_button.UpgradeType.ToString()], curUpgradeLvl);
         if (!_button.UpgradePurchased)
         {

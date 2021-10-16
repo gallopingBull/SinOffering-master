@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3287130404471829013}
   - component: {fileID: 1681878333}
   - component: {fileID: 7670498163338891045}
+  - component: {fileID: 60877989}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -52,7 +53,7 @@ MonoBehaviour:
   GameFailedPanel: {fileID: 0}
   pauseMenu: {fileID: 0}
   paused: 0
-  SpawnCrates: 1
+  SpawnCrates: 0
   spawnLocs:
   - {fileID: 0}
   - {fileID: 0}
@@ -72,6 +73,24 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   camManager: {fileID: 0}
+  TotalSilver: 100000
+  curSilver: 10
+  TotalFaith: 10000
+  currentFaith: 10
+  TotalEnemyKills: 0
+  CurEnemyKills: 0
+  TotalDeaths: 0
+  CurDeaths: 0
+  TotalSuicides: 0
+  CurSuicides: 0
+  CurGamesPlayed: 0
+  TotalGamesPlayed: 0
+  CurWins: 0
+  TotalWins: 0
+  CurLosses: 0
+  TotalLosses: 0
+  CurGameTime: 0
+  TotalGameTime: 0
 --- !u!114 &3287130404471829013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e14c22d6fba95448a8da86105a35f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
 --- !u!114 &1681878333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,3 +128,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7a5bdeae0266414789b2ec2efd6250d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeTotal: 0.25
+--- !u!114 &60877989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3287130404471829014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae0b85bbe4735047a28d6ab8300de48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 2
