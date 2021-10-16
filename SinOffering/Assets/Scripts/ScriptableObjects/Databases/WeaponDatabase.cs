@@ -8,6 +8,14 @@ using UnityEngine;
 // WeaponDatabase
 // work around to expose both keys/values inside a dictionary in the unity inspector
 
+/// </CHANGES NEEDED>
+/// 
+/// make database a generic class that stores data 
+/// that contains a reference to either of these data types: weaponData, 
+/// attributeData, maybe abilityData... 
+/// 
+/// </summary>
+
 public class WeaponDatabase: MonoBehaviour, ISerializationCallbackReceiver
 {
     public bool modifyValues;

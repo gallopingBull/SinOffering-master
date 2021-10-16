@@ -4,9 +4,9 @@ using UnityEngine;
 public class FadeCanvasGroup : MonoBehaviour
 {
     [HideInInspector]
-    public static FadeCanvasGroup _instance;
+    //public static FadeCanvasGroup _instance;
     private CanvasGroup canvasGroup;
-    private List<CanvasGroup> canvasGroups;
+    //private Queue<CanvasGroup> canvasGroups;
 
     private bool fadeEnabled = false;
   
@@ -17,11 +17,14 @@ public class FadeCanvasGroup : MonoBehaviour
 
     private void Awake()
     {
-        if (_instance != null)
+        // if (_instance != null)
+        //   return;
+        //_instance = this;
+        if (canvasGroup != null)
             return;
-        _instance = this;
-        canvasGroup = new CanvasGroup();
-        canvasGroups = new List<CanvasGroup>();
+
+        canvasGroup = GetComponent<CanvasGroup>();
+        //canvasGroups = new Queue<CanvasGroup>();
     }
 
     private void FixedUpdate()
@@ -29,15 +32,26 @@ public class FadeCanvasGroup : MonoBehaviour
         if (fadeEnabled)
         {
             // fade in/out calculation
-            currentAlpha = Mathf.MoveTowards(currentAlpha, targetAlpha, 2.0f * Time.deltaTime);
+            // magic number, test to see if it reeally makes a difference when scaling faderate time
+            currentAlpha = Mathf.MoveTowards(currentAlpha, targetAlpha, fadeDuration * Time.fixedDeltaTime *1.15f); 
             canvasGroup.alpha = currentAlpha;
             if (currentAlpha == targetAlpha)
                 fadeEnabled = false;
         } 
     }
 
-
-
+    public void FadeInCanvasGroup()
+    {
+        currentAlpha = 0;
+        targetAlpha = 1;
+        fadeEnabled = true;
+    }
+    public void FadeOutCanvasGroup()
+    {
+        currentAlpha = 1;
+        targetAlpha = 0;
+        fadeEnabled = true;
+    }
     public void FadeInCanvasGroup(CanvasGroup canvas)
     {
         currentAlpha = 0;
@@ -53,4 +67,17 @@ public class FadeCanvasGroup : MonoBehaviour
         canvasGroup = canvas;
         fadeEnabled = true;
     }
+
+    #region queue testing
+    public void AddCanvasGroupToFadeQueue(CanvasGroup canvas)
+    {
+        //canvasGroups.Enqueue(canvas);
+    }
+
+    public void RemoveCanvasGroupToFadeQueue(CanvasGroup canvas)
+    {
+        //canvasGroups.Enqueue(canvas);
+    }
+    #endregion
+
 }

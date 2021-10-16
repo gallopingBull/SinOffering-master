@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
@@ -38,15 +39,15 @@ public class HUDManager : MonoBehaviour
 
     private FadeCanvasGroup fadeCanvas;
 
-
+    private Scene currentScene;
 
     private void Awake()
     {
         if (_instance != null)
             return;
         _instance = this;
-        fadeCanvas = FadeCanvasGroup._instance;
-
+        //fadeCanvas = FadeCanvasGroup._instance;
+        currentScene = SceneManager.GetActiveScene();
     }
     void Start()
     {
@@ -55,6 +56,8 @@ public class HUDManager : MonoBehaviour
         SetUIObjects();
         SetUIObjectValues();
 
+        if (currentScene.name == "HubScene")
+            HideHUD();
     }
     private void Update()
     {
@@ -95,12 +98,14 @@ public class HUDManager : MonoBehaviour
     }
     private void DisplayHUD()   
     {
-        fadeCanvas.FadeInCanvasGroup(hud_CanvasGroup);
+        //fadeCanvas.FadeInCanvasGroup(hud_CanvasGroup);
+        GetComponent<FadeCanvasGroup>().FadeInCanvasGroup();
     }
 
-    private void HideHUD()
+    public void HideHUD()
     {
-        fadeCanvas.FadeOutCanvasGroup(hud_CanvasGroup);
+        //fadeCanvas.FadeOutCanvasGroup(hud_CanvasGroup);
+        GetComponent<FadeCanvasGroup>().FadeOutCanvasGroup();
     }
 
     void UpdateHealthBar()
