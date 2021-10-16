@@ -68,7 +68,9 @@ public class MenuManager : MonoBehaviour
                 SwitchCamera((int)currentMenu);
                 yield return new WaitForSeconds(Delay/2);
                 DisplayMenu((int)currentMenu);
-                HUDManager._instance.HideHUD();
+                if (HUDManager._instance.hud_CanvasGroup.alpha != 0)
+                    HUDManager._instance.HideHUD();
+
                 break;
 
             case UpgradeMenu.WeaponPurchaseMenu:
@@ -99,7 +101,9 @@ public class MenuManager : MonoBehaviour
 
                 DisplayMenu(0);
                 DisplayMenu(1);
-                HUDManager._instance.HideHUD();
+
+                if(HUDManager._instance.hud_CanvasGroup.alpha != 0)
+                    HUDManager._instance.HideHUD();
 
 
                 InitStore(menus[0], currentMenu);
