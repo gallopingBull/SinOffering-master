@@ -1,17 +1,25 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
 
 [Serializable]
-public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
+public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpHandler, IPointerDownHandler
 {
     #region variables
     //[HideInInspector]
     public int UpgradeLevel = 0;
+
+
+
+    private float chargeTimer = 0;
+    [SerializeField]
+    private float chargeTimeMax = 3;
+
 
     [HideInInspector]
     public string UpgradeName;
@@ -20,6 +28,8 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     public bool ButtonLocked = false;
     public bool HasChildren = false;
     private bool buttonInit = false;
+    private bool buttonHeldDown = false;
+
 
     public AttributeData data;
     public AttributeUpgradeTypes.UpgradeType UpgradeType;
@@ -28,14 +38,16 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
     private AttributeButtonColorsTest colorState;
 
     public GameObject UnlockedPanel;
-    public GameObject[] pricePanels = new GameObject[2] ;
+    public GameObject[] pricePanels = new GameObject[2];
 
-
+    public UnityEvent OnLongClick;
+    public Image buttonFillImage;
     [HideInInspector]
     public Button Upgrade_Button;
     public Button Parent_Button;
     public Button Child_Button;
     public Button[] Child_Buttons;
+
 
     #region TextMeshProGUI Components
     // UI Elements that are used for desciptions in content panel
@@ -88,7 +100,9 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         UpgradeLevel_Description_Images[4] = GameObject.Find("UnlockedAttributeLevelImages").transform.Find("Image_Unlocked_Lvl_4").GetComponent<Image>();
 
         UpgradeLevel_Button_Images = transform.Find("AbilityUpgradeLevel_Images").GetComponentsInChildren<Image>();
-       
+
+        buttonFillImage = GameObject.Find("Image_AttributeButtonFill").GetComponent<Image>();
+
         Price_Text =
               GameObject.Find("Panel_AbilityPrice").transform.Find("Text_FaithValueDescription").GetComponent<TextMeshProUGUI>();
 
@@ -105,6 +119,25 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
 
     }
 
+
+    private void Update()
+    {
+        if (buttonHeldDown)
+        {
+            chargeTimer += Time.deltaTime;
+          
+            Debug.Log("chargeTimer: " + chargeTimer);
+            if (chargeTimer >= chargeTimeMax)
+            {
+                if (OnLongClick != null)
+                    OnLongClick.Invoke();
+              
+                ResetButtonPressedTimer();
+            }
+            buttonFillImage.fillAmount = (chargeTimer / chargeTimeMax) * 1f;
+        }
+
+    }
     public void SetButtonData(AttributeData _data, int _upgradeLevel)
     {
         //data = _data;
@@ -231,6 +264,8 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
         }
         buttonInit = true;
     }
+
+    
 
     public void OnSelect(BaseEventData eventData)
     {
@@ -420,6 +455,23 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler
             //UpgradeLevelImages[i].color = Color.black;
         }
     }
+
+    void IPointerUpHandler.OnPointerUp(PointerEventData eventData)
+    {
+        ResetButtonPressedTimer();
+    }
+
+    void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
+    {
+        buttonHeldDown = true;
+    }
+    private void ResetButtonPressedTimer()
+    {
+        buttonHeldDown = false;
+        buttonFillImage.fillAmount = 0;
+        chargeTimer = 0.0f;
+    }
+
 
     #endregion
 

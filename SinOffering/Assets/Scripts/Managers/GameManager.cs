@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour {
     public int curSilver = 10;
 
     public int TotalFaith = 10000;
+    public int TotalFaithAccrued = 10000;
     [HideInInspector]
     public int currentFaith = 10;
 

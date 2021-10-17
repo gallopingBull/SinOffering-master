@@ -37,7 +37,7 @@ public class HUDManager : MonoBehaviour
     private int faithValue = 0;
 
 
-    private FadeCanvasGroup fadeCanvas;
+    //private FadeCanvasGroup fadeCanvas;
 
     private Scene currentScene;
 
@@ -62,9 +62,7 @@ public class HUDManager : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.H))
-        {
             ToggleHUD();
-        }
     }
 
     private void SetUIObjects()

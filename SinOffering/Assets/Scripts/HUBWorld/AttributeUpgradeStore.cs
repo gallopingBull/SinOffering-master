@@ -10,15 +10,56 @@ public class AttributeUpgradeStore : MonoBehaviour
     private IAttributeStoreCustomer customer;
     private Dictionary<string, AttributeData> attributeDatabase;
     public Button[] menuButtons = null;
+    public GameObject menu = null;
     private GameObject faithValueUI;
     private HUDManager hm;
+
+    [Tooltip("Total Faith needed to Unlock Modfications")]
+    [SerializeField] 
+    private float maxFaith = 25000f;
+
+    private int totalFaithValue = 0;
+    public Image currentFaithProgressBar;
+    public Image unlockedFaithProgressBar;
+
+    //[SerializeField]
+    public Image buttonprogressBar; //referenve to radial image arround buttons to indicate status of hold
+    private float chargeTimer = 0;
+    [SerializeField]
+    private float chargeTimeMax = 3;
+
 
     void Start()
     {
         attributeDatabase = AttributeDatabase._instance.GetAttributeDatabase();
         faithValueUI = GameObject.Find("Text_FaithValue");
         hm = HUDManager._instance;
-    }   
+        //faithProgressBar = GameObject.Find("Panel_ProgressBar_Current").GetComponent<Image>();
+
+    }
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.T))
+        {
+            chargeTimer += Time.deltaTime;
+            buttonprogressBar.fillAmount = (chargeTimer / chargeTimeMax) * 1f;
+            Debug.Log("chargeTimer: " + chargeTimer);
+            if (chargeTimer >= chargeTimeMax)
+            {
+                RespecAttributes();
+                chargeTimer = 0.0f;
+            }
+        }
+        if (Input.GetKeyUp(KeyCode.T))
+        {
+            buttonprogressBar.fillAmount = 0;
+            chargeTimer = 0.0f;
+        }
+
+
+        
+
+    }
 
     public void InitAttributeUpgradeStore(GameObject _menu)
     {
@@ -54,6 +95,9 @@ public class AttributeUpgradeStore : MonoBehaviour
             AttributeUpgradeData attributeData = _upgradeTypes[(int)_button .UpgradeType].Value.AttributeDataList[_button.UpgradeLevel];
             InitButton(_button, attributeData, _button.UpgradeType.ToString(), tmpLevel);
         }
+
+        SetProgressBarFillAmmount();
+
     }
 
     // initilaize buttons with correct weapon data 
@@ -62,12 +106,19 @@ public class AttributeUpgradeStore : MonoBehaviour
         _button.SetButtonData(attributeDatabase[_button.UpgradeType.ToString()], curUpgradeLvl);
         if (!_button.UpgradePurchased)
         {
+            _button.gameObject.GetComponent<AttributeUpgradeButton>().OnLongClick.RemoveAllListeners();
+            _button.gameObject.GetComponent<AttributeUpgradeButton>().OnLongClick.AddListener(() =>
+            PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.GetComponent<Button>()));
+
+            /*
             _button.gameObject.GetComponent<Button>().onClick.RemoveAllListeners();
             _button.gameObject.GetComponent<Button>().onClick.AddListener(() => 
             PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.GetComponent<Button>()));
-        }   
+        */
+        }
     }
 
+   
     public void PurchaseUpgrade(string _upgradeType, int _upgradeLevel, Button _button)
     {
         AttributeData tmpData = attributeDatabase[_upgradeType];
@@ -113,6 +164,7 @@ public class AttributeUpgradeStore : MonoBehaviour
     private void SetMenuButtons(GameObject _menu)
     {
         //Debug.Log("SetMenuButtons("+ _menu.name+ ")");
+        menu = _menu;
         menuButtons = _menu.GetComponentsInChildren<Button>();
         faithValueUI = GameObject.Find("Text_FaithValue");
     }
@@ -122,4 +174,56 @@ public class AttributeUpgradeStore : MonoBehaviour
     {
         customer = _customer;
     }
+
+    private void RespecAttributes()
+    {
+        int tmpFaith = 0;
+
+        AttributeData tmpData;
+        int price = 0;
+
+        for (int i = 0; i < menuButtons.Length; i++)
+        {
+            if (menuButtons[i].GetComponent<AttributeUpgradeButton>().UpgradePurchased)
+            {
+                // store prices for every purchased ugrade
+
+                tmpData = attributeDatabase[menuButtons[i].GetComponent<AttributeUpgradeButton>().UpgradeType.ToString()];
+                price = tmpData.AttributeDataList[menuButtons[i].GetComponent<AttributeUpgradeButton>().UpgradeLevel].AttributePrice; // get price
+
+                tmpFaith += price;
+
+                // reset buttons to default state/values
+                PlayerController.instance.Attributes = new PlayerAttributes();
+
+                // reset player attributes to default/values
+                InitAttributeUpgradeStore(menu);
+            }
+        }
+        // add tmpFaith to totalFaith in game manager
+        GameManager.instance.TotalFaith += tmpFaith;
+        hm.SetUIObjectValues();
+    }
+
+    private void SetProgressBarFillAmmount()
+    {
+        currentFaithProgressBar.fillAmount = ((float)GameManager.instance.TotalFaithAccrued/maxFaith) * 1f;
+        Debug.Log(currentFaithProgressBar.fillAmount);
+        
+        if (currentFaithProgressBar.fillAmount < .33)
+            unlockedFaithProgressBar.fillAmount = 0;
+        else if (currentFaithProgressBar.fillAmount < .67)
+            unlockedFaithProgressBar.fillAmount = .33f;
+        else if (currentFaithProgressBar.fillAmount < 1)
+            unlockedFaithProgressBar.fillAmount = .67f;
+        else
+            unlockedFaithProgressBar.fillAmount = 1;
+
+    }
+    void ButtonHeldTimer() {
+
+       
+
+    }
+
 }

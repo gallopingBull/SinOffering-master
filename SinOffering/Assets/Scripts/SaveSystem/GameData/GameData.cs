@@ -6,7 +6,6 @@ using UnityEngine;
 [Serializable]
 public class GameData
 {
-
     //Player/Abiliies/Weapon Stats
     public PlayerAttributes PlayerAttributes = new PlayerAttributes();  
     public List<WeaponAttributes> WeaponAttributesDatas = new List<WeaponAttributes>();
@@ -29,7 +28,9 @@ public class GameData
     public int TotalGamesPlayed;
 
     public int TotalSilver;
+    //public int TotalAccruedSilver;
     public int TotalFaith;
+    public int TotalAccruedFaith;
 
     public float TotalGameTime; 
 }

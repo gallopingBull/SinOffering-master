@@ -2,7 +2,6 @@
 public class AttributeUpgradeData : UpgradeDataValues
 {
     public string UpgradeDescription;
-    
 }
 
 

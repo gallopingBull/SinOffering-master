@@ -31,9 +31,9 @@ public class MenuManager : MonoBehaviour
     private Dictionary<string, WeaponData> weaponDatabase;
     private WeaponData weaponData;
 
-    private FadeCanvasGroup fadeCanvas;
-
+    //private FadeCanvasGroup fadeCanvas;
     #endregion
+
     #region functions
     private void Start()
     {
@@ -193,11 +193,12 @@ public class MenuManager : MonoBehaviour
         // play some enter menu transition animation 
         menus[index].SetActive(true);
         Debug.Log("dispalying: " + menus[index].GetComponent<CanvasGroup>());
-
+        
+        // change alpha value of canvas group here
         menus[index].GetComponent<FadeCanvasGroup>().FadeInCanvasGroup();
         //fadeCanvas.FadeInCanvasGroup(menus[index].GetComponent<CanvasGroup>());
 
-        //change alpha value of canvas group here
+
     }
     private void InitStore(GameObject menu, UpgradeMenu _menu)
     { 

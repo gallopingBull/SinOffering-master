@@ -69,6 +69,7 @@ public class SaveSystem : MonoBehaviour
         _gameData.TotalSuicides = _gameData.TotalSuicides + gameManager.CurSuicides;
         _gameData.TotalSilver = gameManager.TotalSilver + gameManager.curSilver;
         _gameData.TotalFaith = gameManager.TotalFaith + gameManager.currentFaith;
+        _gameData.TotalAccruedFaith = gameManager.TotalFaithAccrued;
 
         Debug.Log("Saving Game...");
         var json = JsonUtility.ToJson(_gameData);
@@ -108,6 +109,8 @@ public class SaveSystem : MonoBehaviour
         gameManager.CurSuicides = _gameData.TotalSuicides;
         gameManager.TotalSilver = _gameData.TotalSilver;
         gameManager.TotalFaith = _gameData.TotalFaith;
+        gameManager.TotalFaithAccrued = _gameData.TotalAccruedFaith;
+
     }
     private void SavePlayerSettings()
     {
