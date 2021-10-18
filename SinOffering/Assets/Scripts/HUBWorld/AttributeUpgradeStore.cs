@@ -27,8 +27,7 @@ public class AttributeUpgradeStore : MonoBehaviour
     private float chargeTimer = 0;
     [SerializeField]
     private float chargeTimeMax = 3;
-
-
+    
     void Start()
     {
         attributeDatabase = AttributeDatabase._instance.GetAttributeDatabase();
@@ -42,7 +41,7 @@ public class AttributeUpgradeStore : MonoBehaviour
         {
             chargeTimer += Time.deltaTime;
             buttonprogressBar.fillAmount = (chargeTimer / chargeTimeMax) * 1f;
-            Debug.Log("chargeTimer: " + chargeTimer);
+            //Debug.Log("chargeTimer: " + chargeTimer);
             if (chargeTimer >= chargeTimeMax)
             {
                 RespecAttributes();
@@ -90,9 +89,7 @@ public class AttributeUpgradeStore : MonoBehaviour
             AttributeUpgradeData attributeData = _upgradeTypes[(int)_button .UpgradeType].Value.AttributeDataList[_button.UpgradeLevel];
             InitButton(_button, attributeData, _button.UpgradeType.ToString(), tmpLevel);
         }
-
         SetProgressBarFillAmmount();
-
     }
 
     // initilaize buttons with correct weapon data 

@@ -18,7 +18,7 @@ public class PurchaseWeaponButtonUI : MonoBehaviour, ISelectHandler, IDeselectHa
 
 
     private bool isSelected = false;
-    public Image buttonFillImage;
+ //   public Image buttonFillImage;
 
 
     private float chargeTimer = 0;
@@ -31,7 +31,8 @@ public class PurchaseWeaponButtonUI : MonoBehaviour, ISelectHandler, IDeselectHa
         ItemName_Text = transform.Find("Text_WeaponName").GetComponent<TextMeshProUGUI>(); 
         Price_Text = transform.Find("Text_WeaponPrice").GetComponent<TextMeshProUGUI>();
     }
-        /*
+
+    /*
     private void Update()
     {
         if (isSelected)
@@ -61,21 +62,21 @@ public class PurchaseWeaponButtonUI : MonoBehaviour, ISelectHandler, IDeselectHa
 
     void ISelectHandler.OnSelect(BaseEventData eventData)
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 
     void IDeselectHandler.OnDeselect(BaseEventData eventData)
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 
     void IPointerUpHandler.OnPointerUp(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementeadException();
     }
 
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 }

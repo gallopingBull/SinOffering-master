@@ -3,7 +3,23 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
+
+
+
+enum GameMode
+{
+    randomGunBoxes, 
+    randomGunBoxesShield, 
+    survival, 
+    timeAttack,
+    dashAbilityOnly
+    
+}
+
 public class GameManager : MonoBehaviour {
+
+    #region variables
+    
     public int points; // points player currently has
     public int MaxPoints = 10;
 
@@ -79,6 +95,11 @@ public class GameManager : MonoBehaviour {
 
     #endregion
 
+
+    #endregion
+
+
+    #region functions
     private void Awake()
     {
         pointsText = GameObject.Find("Text_PointsHUD").GetComponent<Text>();
@@ -171,4 +192,7 @@ public class GameManager : MonoBehaviour {
         Instantiate(Crate, spawnLocs[locIndex].position, spawnLocs[locIndex].rotation);
         lastSpawnLoc = locIndex;
     }
+
+
+    #endregion
 }

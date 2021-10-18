@@ -75,6 +75,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IDeselectHa
     #endregion
 
     #region functions
+
     private void Awake()
     {
         var database = AttributeDatabase._instance.GetAttributeDatabase();
@@ -144,6 +145,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IDeselectHa
             }
         }
     }
+    
     public void SetButtonData(AttributeData _data, int _upgradeLevel)
     {
         //data = _data;
@@ -270,26 +272,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IDeselectHa
         buttonInit = true;
     }
 
-
-
-    public void OnSelect(BaseEventData eventData)
-    {
-        //Debug.Log(this.gameObject.name + " was selected");
-        isSelected = true;
-        UpgradeName_Text.text = UpgradeType.ToString();
-        
-        Debug.Log("price: " + data.AttributeDataList[UpgradeLevel].AttributePrice);
-        Debug.Log("upgradeLevel: " + UpgradeLevel);
-        Price_Text.text = data.AttributeDataList[UpgradeLevel].AttributePrice.ToString();
-        NextUpgradeLevel_Text.text = data.AttributeDataList[UpgradeLevel].AttributeLevel.ToString();
-        NextUpgradeVal_Text.text = data.AttributeDataList[UpgradeLevel].UpgradeDescription;
-
-        EnterState(state);
-
-        SetImageColors(UpgradeLevel);
-    }
-
-
     public void SetUpgradeLevel(int _upgradeLevel)
     {
         if (UpgradeType == AttributeUpgradeTypes.UpgradeType.dashAttack ||
@@ -313,7 +295,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IDeselectHa
 
     }
 
-
     public void PurchaseUpgrade()
     {
         EnterState(AttributeButtonState.purchased);
@@ -331,10 +312,12 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IDeselectHa
         }
 
     }
+    
     public void UpgradeUnlocked()
     {
         EnterState(AttributeButtonState.available);
     }
+    
     private void EnterState(AttributeButtonState _state)
     {
         ExitState(state);
@@ -436,7 +419,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IDeselectHa
                 break;
         }
     }
-
+    
     private void ExitState(AttributeButtonState _state)
     {
         switch (_state)
@@ -471,6 +454,37 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IDeselectHa
         }
     }
 
+    private void ResetButtonPressedTimer()
+    {
+        buttonHeldDown = false;
+        buttonFillImage.fillAmount = 0;
+        chargeTimer = 0.0f;
+    }
+  
+    /** Button Interfaces**/
+    void ISelectHandler.OnSelect(BaseEventData eventData)
+    {
+        //Debug.Log(this.gameObject.name + " was selected");
+        isSelected = true;
+        UpgradeName_Text.text = UpgradeType.ToString();
+
+        Debug.Log("price: " + data.AttributeDataList[UpgradeLevel].AttributePrice);
+        Debug.Log("upgradeLevel: " + UpgradeLevel);
+        Price_Text.text = data.AttributeDataList[UpgradeLevel].AttributePrice.ToString();
+        NextUpgradeLevel_Text.text = data.AttributeDataList[UpgradeLevel].AttributeLevel.ToString();
+        NextUpgradeVal_Text.text = data.AttributeDataList[UpgradeLevel].UpgradeDescription;
+
+        EnterState(state);
+
+        SetImageColors(UpgradeLevel);
+    }
+    
+    void IDeselectHandler.OnDeselect(BaseEventData eventData)
+    {
+        //Debug.Log("OnDeSelect()");
+        isSelected = false;
+    }
+
     void IPointerUpHandler.OnPointerUp(PointerEventData eventData)
     {
         //Debug.Log("OnPointerUp()");
@@ -482,18 +496,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IDeselectHa
         //Debug.Log("OnPointerDown()");
         buttonHeldDown = true;
     }
-    private void ResetButtonPressedTimer()
-    {
-        buttonHeldDown = false;
-        buttonFillImage.fillAmount = 0;
-        chargeTimer = 0.0f;
-    }
 
-    void IDeselectHandler.OnDeselect(BaseEventData eventData)
-    {
-        //Debug.Log("OnDeSelect()");
-        isSelected = false;
-    }
     #endregion
 }
 
