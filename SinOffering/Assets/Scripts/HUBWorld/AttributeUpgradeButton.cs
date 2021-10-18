@@ -8,18 +8,18 @@ using TMPro;
 using UnityEngine;
 
 [Serializable]
-public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpHandler, IPointerDownHandler
+public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IDeselectHandler, IPointerUpHandler, IPointerDownHandler
 {
     #region variables
+
+    private bool isSelected = false;
+
     //[HideInInspector]
     public int UpgradeLevel = 0;
-
-
 
     private float chargeTimer = 0;
     [SerializeField]
     private float chargeTimeMax = 3;
-
 
     [HideInInspector]
     public string UpgradeName;
@@ -29,7 +29,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
     public bool HasChildren = false;
     private bool buttonInit = false;
     private bool buttonHeldDown = false;
-
 
     public AttributeData data;
     public AttributeUpgradeTypes.UpgradeType UpgradeType;
@@ -72,7 +71,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
     #endregion
 
     public bool ButtonInit { get => buttonInit; private set => buttonInit = value; }
-    
+
     #endregion
 
     #region functions
@@ -119,34 +118,40 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
 
     }
 
-
     private void Update()
     {
-        if (buttonHeldDown)
+        if (isSelected)
         {
-            chargeTimer += Time.deltaTime;
-          
-            Debug.Log("chargeTimer: " + chargeTimer);
-            if (chargeTimer >= chargeTimeMax)
+            if (Input.GetKey(KeyCode.Space) || Input.GetButton("Jump"))
             {
-                if (OnLongClick != null)
-                    OnLongClick.Invoke();
-              
-                ResetButtonPressedTimer();
-            }
-            buttonFillImage.fillAmount = (chargeTimer / chargeTimeMax) * 1f;
-        }
+                chargeTimer += Time.deltaTime;
 
+                //Debug.Log("chargeTimer: " + chargeTimer);
+                if (chargeTimer >= chargeTimeMax)
+                {
+                    if (OnLongClick != null)
+                        OnLongClick.Invoke();
+
+                    ResetButtonPressedTimer();
+                }
+                buttonFillImage.fillAmount = (chargeTimer / chargeTimeMax) * 1f;
+            }
+
+            if (Input.GetKeyUp(KeyCode.Space) || Input.GetButtonUp("Jump"))
+            {
+                buttonFillImage.fillAmount = 0;
+                chargeTimer = 0;
+            }
+        }
     }
     public void SetButtonData(AttributeData _data, int _upgradeLevel)
     {
         //data = _data;
         //Debug.Log("InitUpgradeButton() - " + _data);
-
         // get player level;
         int curAttributeLevel = _upgradeLevel;
 
-        //i want to check if dash attack is at least to level 1 or 4 to make either two buttons available or hidden
+        // i want to check if dash attack is at least to level 1 or 4 to make either two buttons available or hidden
         // check button status on stems
 
         // top condition is only for branches (children) in the upgrade tree.
@@ -163,7 +168,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
                         case 0:
                             if (curAttributeLevel == 0)
                                 EnterState(AttributeButtonState.available);
-                            else if(curAttributeLevel == 1)
+                            else if (curAttributeLevel == 1)
                                 EnterState(AttributeButtonState.purchased);
                             else
                                 EnterState(AttributeButtonState.purchased);
@@ -179,14 +184,14 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
                             break;
 
                         case 2:
-                  
+
                             EnterState(AttributeButtonState.available);
                             break;
 
                         default:
                             break;
                     }
-             
+
                 }
                 else
                 {
@@ -242,14 +247,14 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
             else
                 EnterState(AttributeButtonState.available);
         }
-
         //***** this neeeds to rafactored IMMEdiately. ****/
+
 
         UpgradeName_Text.text = UpgradeType.ToString();
 
         for (int i = 0; i < data.AttributeDataList.Length; i++)
         {
-            if (UpgradeType == data.UpgradeType && 
+            if (UpgradeType == data.UpgradeType &&
                 data.AttributeDataList[i].AttributeLevel == UpgradeLevel)
             {
                 if (UpgradeLevel < data.AttributeDataList.Length)
@@ -265,12 +270,12 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
         buttonInit = true;
     }
 
-    
+
 
     public void OnSelect(BaseEventData eventData)
     {
-        //Debug.Log(this.gameObject.name + " was selected");
-        
+        Debug.Log(this.gameObject.name + " was selected");
+        isSelected = true;
         UpgradeName_Text.text = UpgradeType.ToString();
         Price_Text.text = data.AttributeDataList[UpgradeLevel].AttributePrice.ToString();
         NextUpgradeLevel_Text.text = data.AttributeDataList[UpgradeLevel].AttributeLevel.ToString();
@@ -281,6 +286,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
         SetImageColors(UpgradeLevel);
     }
 
+
     public void SetUpgradeLevel(int _upgradeLevel)
     {
         if (UpgradeType == AttributeUpgradeTypes.UpgradeType.dashAttack ||
@@ -289,7 +295,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
             UpgradeType == AttributeUpgradeTypes.UpgradeType.strength ||
             UpgradeType == AttributeUpgradeTypes.UpgradeType.evade)
             return;
-        
+
         UpgradeLevel = _upgradeLevel;
     }
 
@@ -304,7 +310,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
 
     }
 
-   
+
     public void PurchaseUpgrade()
     {
         EnterState(AttributeButtonState.purchased);
@@ -320,6 +326,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
             if (!Child_Buttons[i].gameObject.GetComponent<AttributeUpgradeButton>().UpgradePurchased)
                 Child_Buttons[i].GetComponent<AttributeUpgradeButton>().UpgradeUnlocked();
         }
+
     }
     public void UpgradeUnlocked()
     {
@@ -354,6 +361,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
 
             case AttributeButtonState.purchased:
                 state = AttributeButtonState.purchased;
+                isSelected = false;
                 attributeIcon_Image.color = colorState.PurchasedIconColor;
                 attributeBG_Image.color = colorState.PurchasedBGColor;
                 Upgrade_Button.interactable = true;
@@ -375,6 +383,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
                 break;
 
             case AttributeButtonState.locked:
+                isSelected = false;
                 state = AttributeButtonState.locked;
                 attributeIcon_Image.color = colorState.LockedBGColor;
                 attributeBG_Image.color = colorState.LockedBGColor;
@@ -387,7 +396,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
 
                 for (int i = 0; i < UpgradeLevel_Button_Images.Length; i++)
                     UpgradeLevel_Button_Images[i].color = colorState.HiddenBGColor;
-                
+
                 if (attributeDivider_Images != null)
                 {
                     foreach (var divider in attributeDivider_Images)
@@ -398,6 +407,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
 
             case AttributeButtonState.hidden:
                 state = AttributeButtonState.hidden;
+                isSelected = false;
                 attributeIcon_Image.color = colorState.LockedBGColor;
                 attributeBG_Image.color = colorState.LockedBGColor;
                 Upgrade_Button.interactable = false;
@@ -409,7 +419,7 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
 
                 for (int i = 0; i < UpgradeLevel_Button_Images.Length; i++)
                     UpgradeLevel_Button_Images[i].color = colorState.HiddenBGColor;
-                
+
                 if (attributeDivider_Images != null)
                 {
                     foreach (var divider in attributeDivider_Images)
@@ -429,8 +439,10 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
         switch (_state)
         {
             case AttributeButtonState.available:
+                //isSelected = false;
                 break;
             case AttributeButtonState.purchased:
+                //isSelected = false;
                 break;
             case AttributeButtonState.locked:
                 break;
@@ -458,11 +470,13 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
 
     void IPointerUpHandler.OnPointerUp(PointerEventData eventData)
     {
+        //Debug.Log("OnPointerUp()");
         ResetButtonPressedTimer();
     }
 
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
     {
+        //Debug.Log("OnPointerDown()");
         buttonHeldDown = true;
     }
     private void ResetButtonPressedTimer()
@@ -472,11 +486,13 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IPointerUpH
         chargeTimer = 0.0f;
     }
 
-
+    void IDeselectHandler.OnDeselect(BaseEventData eventData)
+    {
+        //Debug.Log("OnDeSelect()");
+        isSelected = false;
+    }
     #endregion
-
 }
-
 
 public enum AttributeButtonState
 {
@@ -503,3 +519,4 @@ struct AttributeButtonColorsTest
     public Color HiddenIconColor;
     public Color HiddenBGColor;
 }
+

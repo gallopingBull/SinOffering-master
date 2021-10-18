@@ -35,7 +35,6 @@ public class AttributeUpgradeStore : MonoBehaviour
         faithValueUI = GameObject.Find("Text_FaithValue");
         hm = HUDManager._instance;
         //faithProgressBar = GameObject.Find("Panel_ProgressBar_Current").GetComponent<Image>();
-
     }
     private void Update()
     {
@@ -55,10 +54,6 @@ public class AttributeUpgradeStore : MonoBehaviour
             buttonprogressBar.fillAmount = 0;
             chargeTimer = 0.0f;
         }
-
-
-        
-
     }
 
     public void InitAttributeUpgradeStore(GameObject _menu)
@@ -114,7 +109,7 @@ public class AttributeUpgradeStore : MonoBehaviour
             _button.gameObject.GetComponent<Button>().onClick.RemoveAllListeners();
             _button.gameObject.GetComponent<Button>().onClick.AddListener(() => 
             PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.GetComponent<Button>()));
-        */
+            */
         }
     }
 
