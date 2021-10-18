@@ -274,9 +274,12 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IDeselectHa
 
     public void OnSelect(BaseEventData eventData)
     {
-        Debug.Log(this.gameObject.name + " was selected");
+        //Debug.Log(this.gameObject.name + " was selected");
         isSelected = true;
         UpgradeName_Text.text = UpgradeType.ToString();
+        
+        Debug.Log("price: " + data.AttributeDataList[UpgradeLevel].AttributePrice);
+        Debug.Log("upgradeLevel: " + UpgradeLevel);
         Price_Text.text = data.AttributeDataList[UpgradeLevel].AttributePrice.ToString();
         NextUpgradeLevel_Text.text = data.AttributeDataList[UpgradeLevel].AttributeLevel.ToString();
         NextUpgradeVal_Text.text = data.AttributeDataList[UpgradeLevel].UpgradeDescription;

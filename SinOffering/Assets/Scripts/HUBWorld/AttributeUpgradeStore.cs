@@ -104,12 +104,6 @@ public class AttributeUpgradeStore : MonoBehaviour
             _button.gameObject.GetComponent<AttributeUpgradeButton>().OnLongClick.RemoveAllListeners();
             _button.gameObject.GetComponent<AttributeUpgradeButton>().OnLongClick.AddListener(() =>
             PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.GetComponent<Button>()));
-
-            /*
-            _button.gameObject.GetComponent<Button>().onClick.RemoveAllListeners();
-            _button.gameObject.GetComponent<Button>().onClick.AddListener(() => 
-            PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.GetComponent<Button>()));
-            */
         }
     }
 
@@ -213,11 +207,6 @@ public class AttributeUpgradeStore : MonoBehaviour
             unlockedFaithProgressBar.fillAmount = .67f;
         else
             unlockedFaithProgressBar.fillAmount = 1;
-
-    }
-    void ButtonHeldTimer() {
-
-       
 
     }
 
