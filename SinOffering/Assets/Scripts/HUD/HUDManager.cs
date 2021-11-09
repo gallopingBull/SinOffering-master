@@ -19,7 +19,6 @@ public class HUDManager : MonoBehaviour
     //reference to health value from playercontroller
     private float healthValue;
 
-
     //reference to mana bar UI
     public Image manaBar;
     //reference to mana value from playercontroller
@@ -96,13 +95,11 @@ public class HUDManager : MonoBehaviour
     }
     private void DisplayHUD()   
     {
-        //fadeCanvas.FadeInCanvasGroup(hud_CanvasGroup);
         GetComponent<FadeCanvasGroup>().FadeInCanvasGroup();
     }
 
     public void HideHUD()
     {
-        //fadeCanvas.FadeOutCanvasGroup(hud_CanvasGroup);
         GetComponent<FadeCanvasGroup>().FadeOutCanvasGroup();
     }
 

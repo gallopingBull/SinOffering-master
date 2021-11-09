@@ -10009,7 +10009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1014884487}
   m_Layer: 0
-  m_Name: ------------------------------------
+  m_Name: <-------------Camera------------------->
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15753,9 +15753,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7930721911905566480, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
+      propertyPath: CooldownDelay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930721911905566480, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
+      propertyPath: CooldownScale
+      value: 0.001
+      objectReference: {fileID: 0}
     - target: {fileID: 7930721911905566485, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
       propertyPath: Mana
-      value: 50
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7930721911905566485, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
       propertyPath: Health

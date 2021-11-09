@@ -21,13 +21,15 @@ public class DashCommand : ICommand
     public GameObject dashLoc;
     public int MaxDashCount = 3;
 
+
+    public float DashManaCost = 25f;
     public float dashButtonHeldTime;
     [SerializeField]
     private float DashButtonHeldTimeMAX = .033f; //.02
 
     //[HideInInspector]
     public int dashCount;
-    public Image[] dashImages;
+    public Image ManaUI;
 
     [HideInInspector]
     public bool EnableDashCommand;
@@ -40,7 +42,8 @@ public class DashCommand : ICommand
     public bool isValid;
     public bool dashObstructed = false;
 
-    public float CooldownTime;
+    public float CooldownDelay = 5; // short delay before cooldown begins
+    public float CooldownScale = .001f; // time scale/rate that mana charges at
 
     //private PlayerController pc; //reference to main Player Controller
     private Transform tmpPos; //store last position before initializing dash
@@ -85,12 +88,13 @@ public class DashCommand : ICommand
     public LayerMask layerMask;
     private PostProcessManager ppm;
 
+    private bool cr_active = false; 
     #endregion
 
     #region functions
     public override void Execute() {
-
-        if (dashCount < MaxDashCount)
+        
+        if (pc.Mana >= DashManaCost)
             EnableDashCommand = true;
         else
             EnableDashCommand = false;
@@ -108,9 +112,7 @@ public class DashCommand : ICommand
         RadialCounterBar = GameObject.Find("Radialbar").GetComponent<Image>();
         //******\\
         dashDestinationImage.SetActive(false);
-        dashImages[0] = GameObject.Find("Image0").GetComponent<Image>();
-        dashImages[1] = GameObject.Find("Image1").GetComponent<Image>();
-        dashImages[2] = GameObject.Find("Image2").GetComponent<Image>();
+        ManaUI = GameObject.Find("ManaBar_Fill").GetComponent<Image>();
     }
 
     private void Start()
@@ -122,15 +124,30 @@ public class DashCommand : ICommand
 
     private void Update()
     {
+        Debug.Log("InCooldown: " + InCooldown);
+        if (InCooldown)
+        {
+            if (ManaUI.fillAmount >= 0)
+            {
+                ManaUI.fillAmount = Mathf.Lerp(ManaUI.fillAmount, 200, Time.deltaTime * CooldownScale);
+                Debug.Log(ManaUI.fillAmount * 200);
+                if (pc.Mana < 200)
+                    pc.Mana = ManaUI.fillAmount * 200;
+            }
+            if (ManaUI.fillAmount == 1 && pc.Mana == 200)
+            {
+                InCooldown = false;
+                cr_active = false; 
+                StopAllCoroutines();
+            }      
+        }
+
         if (Input.GetAxis("LeftTrigger") == 0 &&
               !GameManager.instance.gameCompleted)
         {
-            if (dashState == DashState.completed && 
-                ppm.ppEnabled == true)
-            {
+            //print("dash completed and left trigger released");
+            if (dashState == DashState.completed && ppm.ppEnabled == true)
                 ppm.ExitInitDash(.75f, true);
-                //print("dash completed and left trigger released");
-            }
 
             if (dashState != DashState.completed &&
                 dashButtonHeldTime > DashButtonHeldTimeMAX)
@@ -138,7 +155,7 @@ public class DashCommand : ICommand
                 //cheeck if this condition is needed
                 if (dashButtonHeldTime < DashButtonHeldTimeMAX)
                 {
-                    print("calling exitInitDash");
+                    print("calling exit InitDash");
                     ppm.ExitInitDash(.75f, true);
                     DisableDashAttack();
                     return;
@@ -146,15 +163,14 @@ public class DashCommand : ICommand
 
                 if (Time.timeScale != 1)
                 {
-                    Time.timeScale = 1;
+                    Time.timeScale = 1; 
                     TimeScale.DisableSlomo();
                 }
 
                 dashButtonHeldTime = 0;
 
-                //reset radialCounterValue after releasing dash button
-                if (radialCounterValue != 0 &&
-                RadialMenu.activeSelf)
+                // reset radialCounterValue after releasing dash button
+                if (radialCounterValue != 0 && RadialMenu.activeSelf)
                 {
                     radialCounterValue = 0;
                     RadialCounterBar.fillAmount = radialCounterValue;
@@ -163,8 +179,7 @@ public class DashCommand : ICommand
                 pc.StateManager.ExitState(Entity.State.dashing);
                 dashState = DashState.completed;
 
-                if (dashState != DashState.inDashAttack &&
-                    !EnableDashCommand)
+                if (dashState != DashState.inDashAttack && !EnableDashCommand)
                 {
                     ppm.ExitInitDash(.75f, true);
                     DisableDashAttack();
@@ -180,26 +195,21 @@ public class DashCommand : ICommand
             {
                 //print("holding left trigger");
                 if (dashState == DashState.inDashAttack)
-                {
                     return;
-                }
-                if (dashCount == MaxDashCount)
+                if (pc.Mana < DashManaCost)
                 {
                     print("max cound reached - LEftTrigger being held");
                     DisableDashAttack();
                     return;
                 }
 
-                if (dashState != DashState.inDashAttack
-                && pc.state != Entity.State.dashing)
+                if (dashState != DashState.inDashAttack && pc.state != Entity.State.dashing)
                 {
                     dashButtonHeldTime += .01f;
                     if (dashButtonHeldTime > DashButtonHeldTimeMAX)
                     {
-                        if (dashCount <= MaxDashCount)
-                        {
+                        if (pc.Mana >= DashManaCost)
                             InitDash();
-                        }
 
                         if (radialCounterValue < 1 && RadialMenu.activeSelf)
                         {
@@ -208,8 +218,8 @@ public class DashCommand : ICommand
                             RadialCounterBar.fillAmount = radialCounterValue;
                         }
 
-                        //if dash attack button is held too long
-                        //activate dash attack
+                        // if dash attack button is held too long
+                        // activate dash attack
                         if (radialCounterValue >= 1)
                         {
                             if (dashState != DashState.inDashAttack)
@@ -217,8 +227,7 @@ public class DashCommand : ICommand
                                 radialCounterValue = 0f;
                                 RadialCounterBar.fillAmount = radialCounterValue;
 
-                                if (dashCount <= MaxDashCount &&
-                                    RadialMenu.activeInHierarchy)
+                                if (pc.Mana > DashManaCost && RadialMenu.activeInHierarchy)
                                 {
                                     if (Time.timeScale != 1)
                                     {
@@ -226,15 +235,11 @@ public class DashCommand : ICommand
                                         TimeScale.DisableSlomo();
                                     }
 
-
                                     dashDestinationImage.SetActive(false);
 
                                     pc.rb.velocity = Vector3.zero;
-                                    //print("call dash fronm Update()");
                                     if (targets != null)
-                                    {
                                         dashAttack = true;
-                                    }
 
                                     Dash();
                                     RadialMenu.SetActive(false);
@@ -271,9 +276,8 @@ public class DashCommand : ICommand
                     Dash();
                     dashButtonHeldTime = 0;
 
-                    //reset radialCounterValue after releasing dash button
-                    if (radialCounterValue != 0 &&
-                    RadialMenu.activeSelf)
+                    // reset radialCounterValue after releasing dash button
+                    if (radialCounterValue != 0 && RadialMenu.activeSelf)
                     {
                         radialCounterValue = 0;
                         RadialCounterBar.fillAmount = radialCounterValue;
@@ -283,34 +287,27 @@ public class DashCommand : ICommand
         }
         else
         {
-            //ppm.ExitInitDash(.75f, true);
-            if (dashCount == MaxDashCount &&
-                Time.timeScale != 1)
+            if (pc.Mana < DashManaCost && Time.timeScale != 1)
             {
                 DisableDashAttack();
                 ppm.ExitInitDash(.75f, true);
-                print("max cound reached");
+                print("max count reached");
             }
-            /*
-            if (dashState != DashState.disabled)
-            {
-                dashState = DashState.disabled;
-            }*/
         }
     }
 
-    //called when dash trigger is held down
+    // called when dash trigger is held down
     public void InitDash()
     {
         if (!pc.dying && dashState != DashState.init)
         {
-            //slow down time
+            // slow down time
             if (Time.timeScale != .1)
             {
                 Time.timeScale = .1f;
                 TimeScale.EnableSlomo();
             }
-            ppm.InitDash(); //darken screen or some other sfx to emphasize player
+            ppm.InitDash(); // darken screen or some other sfx to emphasize player
             dashState = DashState.init;
 
             GetComponent<Entity>().rb.useGravity = false;
@@ -321,7 +318,7 @@ public class DashCommand : ICommand
             else
                 pc.transform.position = tmpPos.position;
 
-            //bring up dash wheel / line trajectory
+            // bring up dash wheel and line trajectory
             if (RadialMenu != null)
                 RadialMenu.SetActive(true);
             lr_DashTrajectory.gameObject.SetActive(true);
@@ -333,6 +330,9 @@ public class DashCommand : ICommand
     {
         RadialMenu.SetActive(false);
 
+        if (InCooldown == true)
+            InCooldown = false;
+
         if (lr_DashTrajectory.gameObject.activeSelf)
         {
             lr_DashTrajectory.gameObject.SetActive(false);
@@ -341,13 +341,12 @@ public class DashCommand : ICommand
 
         pc.inputHandler.dashDelay = pc.inputHandler.MAXDashDelay;
 
-
-        if (dashState != DashState.inDashAttack
-            && dashCount <= MaxDashCount)
+        if (dashState != DashState.inDashAttack && pc.Mana >= DashManaCost)
         {
             dashCount++;
             DashUI(false);
-            StartCoroutine(AutoCoolDown());
+            if(!cr_active)
+                StartCoroutine(AutoCoolDown());
             StartCoroutine(Dashing());
         }
     }
@@ -381,7 +380,6 @@ public class DashCommand : ICommand
         if (targets.Count > 0)
         {
             FreezeEnemies(targets); //freeze enemies that will be dash killed
-
             yield return new WaitForSeconds(.5f);
         }
         ppm.OnDash(.75f, 5f, true);
@@ -397,7 +395,7 @@ public class DashCommand : ICommand
             TimeScale.EnableSlomo();
         }
 
-        if (targets.Count > 0 && dashAttack)
+        if (targets.Count > 0 && dashAttack)    
         {
             var enemyTotal = targets.Count;
     
@@ -406,16 +404,20 @@ public class DashCommand : ICommand
 
             GetComponent<ISlice>().Slice(origin, tmpEnd, layerMask, targets, tmpDir);
             
-            //yield return new WaitForSeconds(.01f);
             DestroyEnemies();
             yield return new WaitForSeconds(enemyTotal * .025f); // adds a small delay before ending slomo cinematic dash attack
                                                                     // delay is scaled by how many enemies are dash killed (.015-.0025 )
         }
 
-        if (!InCooldown && dashCount == MaxDashCount)
+        if (!InCooldown && pc.Mana < DashManaCost)
         {
-            InCooldown = true;
-            StartCoroutine(CoolDown());
+
+            if (!cr_active)
+            {
+                InCooldown = true;
+                StartCoroutine(CoolDown());
+            }
+                
         }
 
         yield return new WaitForSeconds(.01f); //delay before dash attack finishes
@@ -429,42 +431,33 @@ public class DashCommand : ICommand
     public void DisableCollisions()
     {
         foreach (Collider collider in m_Colliders)
-        {
             collider.enabled = false;
-        }
-
         foreach (Collider2D collider in m_Colliders2D)
-        {
             collider.enabled = false;
-        }
     }
+
     public void EnableCollisions()
     {
         foreach (Collider collider in m_Colliders)
-        {
             collider.enabled = true;
-        }
         foreach (Collider2D collider in m_Colliders2D)
-        {
             collider.enabled = true;
-        }
     }
+    
     private Vector3 GetDashDirection()
     {
         float xRaw = pc.xRaw;
         float yRaw = pc.yRaw;
         return new Vector3(xRaw, yRaw, 0);
     }
-    
+
     public void CalculateDashAttackTargets(Vector2 _origin, Vector2 _dir, float _hitDistance)
     {
         List<GameObject> gameObjectsToCut = new List<GameObject>();
-        //Remove any 'X' on enemies that have been destroyed
+        // Remove any 'X' on enemies that have been destroyed
         if (targets != null)
-        {
             RemoveDashTags();
-        }
-        
+
         //RaycastHit2D[] hits = Physics2D.CircleCastAll(_origin, circleCastRadius, _dir,_hitDistance, layerMask);
         RaycastHit2D[] hits = Physics2D.RaycastAll(_origin,  _dir,_hitDistance, layerMask);
         foreach (RaycastHit2D hit in hits)
@@ -472,17 +465,16 @@ public class DashCommand : ICommand
             GameObject tmp = hit.transform.gameObject;
             if (tmp.tag == "Enemy")
             {
-                if (targets == null &&
-                    !tmp.GetComponent<EnemyController>().dying)
+                if (targets == null && !tmp.GetComponent<EnemyController>().dying)
                 {
                     targets.Add(tmp);
                     break;
                 }
-                if (tmp != null &&
-                    !tmp.transform.parent.GetComponent<EnemyController>().dying)
+                if (tmp != null && !tmp.transform.parent.GetComponent<EnemyController>().dying)
                 {
                     if (targets.Contains(tmp))
                         continue;
+
                     else
                     {
                         Instantiate(enemyTargetMarkers,
@@ -492,14 +484,13 @@ public class DashCommand : ICommand
                         targets.Add(tmp.transform.parent.gameObject);
                     }
                 }
-                //maybe delete this
+                // maybe delete this
                 if (hit.distance > MaxDashDistanceDiff)
-                {
                     dashObstructed = false;
-                }
             }    
         }
     }
+
     public void CalculateDashTrajectory()
     {
         isValid = false;
@@ -509,10 +500,8 @@ public class DashCommand : ICommand
         direction = GetDashDirection();
         curHitDistance = MaxHitDistance;
 
-
         m_Hits = Physics2D.BoxCastAll(origin, BoxCastSize, 0,direction, MaxHitDistance, layerMask);
         
-
         //print(m_Hits.Length);
         foreach (RaycastHit2D hit in m_Hits)
         {
@@ -525,26 +514,17 @@ public class DashCommand : ICommand
             hit.transform.gameObject.tag == "Wall"))
             {
                 if (hit.distance ==0)
-                {
                     dashObstructed = false;
-
-                }
-                //print("TOO CLOSE TO WALL - DASH FAILED");
                 if (hit.distance < MaxDashDistanceDiff)
-                    dashObstructed = true;
-
-                //print("far enough from  wall/ground to dash");
+                    dashObstructed = true; //print("TOO CLOSE TO WALL - DASH FAILED");
                 else
-                    dashObstructed = false;
+                    dashObstructed = false; //print("far enough from  wall/ground to dash");
 
                 curHitDistance = hit.distance;
                 if (curHitDistance == 0)
-                    print("sjit");
-
+                    print("shit");
                 else
-                {
                     break;
-                }                   
             }
         }
    
@@ -567,7 +547,6 @@ public class DashCommand : ICommand
         lr_DashTrajectory.SetPosition(1, origin + ((direction.normalized * curHitDistance)*.95f)); //.9-.95 tp scale the size of the "outer rim" of the dash trajectory 
                                                                                                   //so its slightly shorter than the lr_dashAttack
 
-        
         lr_DashAttack.SetPosition(1, origin + (direction.normalized * curHitDistance)*1.11f);
         DashTrajectoryMarker(origin + (direction.normalized * curHitDistance) * 1.11f);
 
@@ -577,8 +556,9 @@ public class DashCommand : ICommand
     {
         dashDestinationImage.transform.position = hitLoc;
 
-        if (!dashDestinationImage.activeSelf && 
-            dashCount <= MaxDashCount && dashState == DashState.init)
+        if (!dashDestinationImage.activeSelf &&
+            pc.Mana >= DashManaCost && 
+            dashState == DashState.init)
             dashDestinationImage.SetActive(true);
 
         if (direction.x < -0.01f)
@@ -586,10 +566,9 @@ public class DashCommand : ICommand
         else
             dashDestinationImage.GetComponent<SpriteRenderer>().flipX = false;
     }
-
     private void OnDrawGizmos()
     {
-        //for dash trajectory
+        // for dash trajectory
         if (dashObstructed)
         {
             Gizmos.color = Color.red;
@@ -600,7 +579,6 @@ public class DashCommand : ICommand
         }
         else
         {
-
             Gizmos.color = Color.green;
 
             Debug.DrawRay(origin, direction.normalized * curHitDistance, Color.green);
@@ -618,8 +596,7 @@ public class DashCommand : ICommand
     {
         if (pc.yRaw < 0)
         {
-            if (pc.state == Entity.State.falling ||
-                pc.state == Entity.State.Jumping)
+            if (pc.state == Entity.State.falling || pc.state == Entity.State.Jumping)
             {
                 //print("dashing down while falling");
                 //print("1st cond. || player drag: 1000 || player state: " + GetComponent<PlayerController>().state);
@@ -640,62 +617,55 @@ public class DashCommand : ICommand
         }
     }
 
-    //displays and changes dash counter in UI
+    // displays and changes dash counter in UI
     private void DashUI(bool coolingDown)
     {
         if (!coolingDown)
         {
-            for (int i = 2; i >= 0; i--)
+            if (ManaUI.fillAmount > 0)
             {
-                if (dashImages[i].fillAmount == 1)
-                {
-                    dashImages[i].fillAmount = 0;
-                    break;
-                }
-            }
-        }
-        else
-        {
-            for (int i = 0; i < dashImages.Length; i++)
-            {
-                if (dashImages[i].fillAmount == 0)
-                {
-                    dashImages[i].fillAmount = 200;
-                }
+                pc.Mana -= 25f;
+                ManaUI.fillAmount -= DashManaCost/200;
             }
         }
     }
 
     private IEnumerator AutoCoolDown()
-    {   
-        yield return new WaitForSeconds(CooldownTime * 2f);
-        if (!InCooldown && dashCount > MaxDashCount &&
+    {
+        print("auto cooldown Called");
+        cr_active = true;
+        yield return new WaitForSeconds(CooldownDelay * 2f);
+        if (!InCooldown && pc.Mana < 200 &&
             pc.state != Entity.State.dashing)
         {
-            //print("auto cooldown finished");
+            print("auto cooldown - InCoolDown = true");
             InCooldown = true;
             StartCoroutine(CoolDown());
         }
 
-        //print("auto cooldown finished");
+        print("StopCoroutine(AutoCoolDown())");
+        cr_active = false;
         StopCoroutine(AutoCoolDown());
     }
 
     private IEnumerator CoolDown()
     {
+        print("cooldown Called");
+        cr_active = true; 
         StopCoroutine(AutoCoolDown());
-        yield return new WaitForSeconds(CooldownTime);
+        yield return new WaitForSeconds(CooldownDelay * 2);
 
         dashCount = 0;
         DashUI(true);
         InCooldown = false;
+        cr_active = false;
 
         StopCoroutine(CoolDown());
     }
 
     private void FreezeEnemies(List<GameObject> dashTargets)
     {
-        //stop movement for all dash attack targets
+        // stop movement for all dash attack targets
         foreach (GameObject target in dashTargets)
         {
             if (target != null)
@@ -711,15 +681,13 @@ public class DashCommand : ICommand
         }
     }
     
-    //remove tags on enemies that were marked for a dash attack
+    // remove tags on enemies that were marked for a dash attack
     private void RemoveDashTags()
     {
         foreach (GameObject target in targets)
         {
             if (target != null)
-            {
                 Destroy(target.transform.Find("X(Clone)").gameObject);
-            }
         }
         targets.Clear();
     }
@@ -732,6 +700,7 @@ public class DashCommand : ICommand
             #region testing / want slice here
             // adds a small delay before ending slomo cinematic dash attack
             // delay is scaled by how many enemies are dash killed (.015-.0025 )
+
             //GetComponent<ISlice>().Slice(origin,
             //origin + (direction.normalized * curHitDistance), layerMask);
             //yield return new WaitForSeconds(tmpTargetList.Count * .025f);
@@ -745,9 +714,7 @@ public class DashCommand : ICommand
                     //LoopUpdate(tmpTargetList, i, false); //prints elements in list for debuggin purposes
                     //print("i: " + i);
                     if (tmpTargetList.Count == 0)
-                    {
                         break;
-                    }
                     else
                     {
                         //print("Calling DashKilled() on this enemy target: " + targets[i].name);
@@ -775,7 +742,6 @@ public class DashCommand : ICommand
             lr_DashAttack.gameObject.SetActive(false);
 
             RemoveDashTags();
-            //print("let go of trigger");
 
             isValid = false;
 
