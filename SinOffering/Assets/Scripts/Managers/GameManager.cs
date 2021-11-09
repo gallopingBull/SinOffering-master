@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour {
     public int TotalFaith = 10000;
     public int TotalFaithAccrued = 10000;
     [HideInInspector]
-    public int currentFaith = 10;
+    public int currentFaith = 10; // maybe redundant variable
 
     [HideInInspector]
     public int TotalEnemyKills;

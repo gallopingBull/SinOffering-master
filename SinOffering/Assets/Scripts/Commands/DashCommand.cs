@@ -107,7 +107,7 @@ public class DashCommand : ICommand
         targets = new List<GameObject>();
         pc = GetComponent<PlayerController>();
         //******\\
-        //this is for dash. move back dashcomman afterwards
+        // this is for dash. move back dashcomman afterwards
         RadialMenu = GameObject.Find("Radial Dash");
         RadialCounterBar = GameObject.Find("Radialbar").GetComponent<Image>();
         //******\\
@@ -124,13 +124,12 @@ public class DashCommand : ICommand
 
     private void Update()
     {
-        Debug.Log("InCooldown: " + InCooldown);
+        // move this to HUDManager
         if (InCooldown)
         {
             if (ManaUI.fillAmount >= 0)
             {
                 ManaUI.fillAmount = Mathf.Lerp(ManaUI.fillAmount, 200, Time.deltaTime * CooldownScale);
-                Debug.Log(ManaUI.fillAmount * 200);
                 if (pc.Mana < 200)
                     pc.Mana = ManaUI.fillAmount * 200;
             }
@@ -142,6 +141,7 @@ public class DashCommand : ICommand
             }      
         }
 
+        
         if (Input.GetAxis("LeftTrigger") == 0 &&
               !GameManager.instance.gameCompleted)
         {

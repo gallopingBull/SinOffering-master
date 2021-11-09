@@ -10,29 +10,32 @@ public class HUDManager : MonoBehaviour
     [HideInInspector]
     public static HUDManager _instance;
 
-    public GameObject HUD;
-    //reference to canvas group alpha value for HUD gameobject
+    private PlayerController pc; 
+    
+
+    public GameObject HUD; // reference to GO that UI Canvas is nested in
+    // reference to canvas group alpha value for HUD gameobject
     public CanvasGroup hud_CanvasGroup;
 
-    //reference to health bar UI
+    // reference to health bar UI
     public Image healthBar;
-    //reference to health value from playercontroller
+    // reference to health value from playercontroller
     private float healthValue;
 
-    //reference to mana bar UI
+    // reference to mana bar UI
     public Image manaBar;
-    //reference to mana value from playercontroller
+    // reference to mana value from playercontroller
     private float manaValue;
 
-    //reference to silver text UI
+    // reference to silver text UI
     public TextMeshProUGUI silverText;
-    //reference to silver value from game manager
+    // reference to silver value from game manager
     private int silverValue = 0;
 
 
-    //reference to faith text UI
+    // reference to faith text UI
     public TextMeshProUGUI faithText;
-    //reference to faith value from game manager
+    // reference to faith value from game manager
     private int faithValue = 0;
 
 
@@ -46,6 +49,8 @@ public class HUDManager : MonoBehaviour
             return;
         _instance = this;
         //fadeCanvas = FadeCanvasGroup._instance;
+        
+        pc = PlayerController.instance;
         currentScene = SceneManager.GetActiveScene();
     }
     void Start()
@@ -54,7 +59,9 @@ public class HUDManager : MonoBehaviour
         hud_CanvasGroup = GetComponent<CanvasGroup>();
         SetUIObjects();
         SetUIObjectValues();
-
+        healthBar = GameObject.Find("HealthBar_Fill").GetComponent<Image>();
+        manaBar = GameObject.Find("ManaBar_Fill").GetComponent<Image>();
+        
         if (currentScene.name == "HubScene")
             HideHUD();
     }
@@ -73,11 +80,11 @@ public class HUDManager : MonoBehaviour
     }
     public void SetUIObjectValues()
     {
-        healthValue = PlayerController.instance.Health / 100; // change 100 to maxHealth
+        healthValue = pc.Health / 100; // change 100 to maxHealth
         healthBar.fillAmount = healthValue;
 
-        manaValue = PlayerController.instance.Mana;
-        manaBar.fillAmount = manaValue / 100; //change 100 to maxMana
+        manaValue = pc.Mana;
+        manaBar.fillAmount = manaValue / 100; // change 100 to maxMana
 
         silverValue = GameManager.instance.TotalSilver;
         silverText.text = silverValue.ToString();
@@ -103,13 +110,16 @@ public class HUDManager : MonoBehaviour
         GetComponent<FadeCanvasGroup>().FadeOutCanvasGroup();
     }
 
-    void UpdateHealthBar()
+    public void UpdateHealthBar(float value)
     {
-
+        healthValue = pc.Health / 100;// change 100 to maxHealth
+        healthBar.fillAmount = healthValue;
     }
 
     void UpdateManaBar()
     {
+        //manaValue = pc.Mana;
+        //manaBar.fillAmount = manaValue / 200; // change 100 to maxMana
 
     }
     void UpdateSilverValue()

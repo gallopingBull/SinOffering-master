@@ -18,14 +18,15 @@ public class AttributeUpgradeStore : MonoBehaviour
     [SerializeField] 
     private float maxFaith = 25000f;
 
-    private int totalFaithValue = 0;
-    public Image currentFaithProgressBar;
-    public Image unlockedFaithProgressBar;
+    //private int totalFaithValue = 0;
+    public Image currentFaithProgressBar; // white fill bar displaying TotalFaithAccrued
+    public Image unlockedFaithProgressBar; // red fill bar displaying last unlocked special
+
 
     //[SerializeField]
     public Image buttonprogressBar; //referenve to radial image arround buttons to indicate status of hold
     private float chargeTimer = 0;
-    [SerializeField]
+    [SerializeField]    
     private float chargeTimeMax = 3;
     
     void Start()
@@ -33,7 +34,8 @@ public class AttributeUpgradeStore : MonoBehaviour
         attributeDatabase = AttributeDatabase._instance.GetAttributeDatabase();
         faithValueUI = GameObject.Find("Text_FaithValue");
         hm = HUDManager._instance;
-        //faithProgressBar = GameObject.Find("Panel_ProgressBar_Current").GetComponent<Image>();
+        currentFaithProgressBar = GameObject.Find("Panel_ProgressBar_Current").GetComponent<Image>();
+        unlockedFaithProgressBar = GameObject.Find("Panel_ProgressBar_Unlocked").GetComponent<Image>();
     }
     private void Update()
     {
@@ -89,6 +91,8 @@ public class AttributeUpgradeStore : MonoBehaviour
             AttributeUpgradeData attributeData = _upgradeTypes[(int)_button .UpgradeType].Value.AttributeDataList[_button.UpgradeLevel];
             InitButton(_button, attributeData, _button.UpgradeType.ToString(), tmpLevel);
         }
+
+
         SetProgressBarFillAmmount();
     }
 
@@ -204,7 +208,5 @@ public class AttributeUpgradeStore : MonoBehaviour
             unlockedFaithProgressBar.fillAmount = .67f;
         else
             unlockedFaithProgressBar.fillAmount = 1;
-
     }
-
 }

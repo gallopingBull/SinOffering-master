@@ -9,7 +9,6 @@ public abstract class Entity : MonoBehaviour {
     //Movement Variables
     public float Speed = 0;
 
-
     public float MaxSpeed = 10;
     public float AccSpeed = .15f;
     public float DeAccSpeed = .15f;
@@ -113,7 +112,7 @@ public abstract class Entity : MonoBehaviour {
     {
         if (rb.velocity.y > 0)
         {
-            //maybe have this be set in the statemanager
+            // maybe have this be set in the statemanager
             if (state != Entity.State.Jumping)
                 state = State.Jumping;
         }
@@ -132,25 +131,25 @@ public abstract class Entity : MonoBehaviour {
 
     protected void GravityModifier()
     {
-        //check if player is jumping, and then set to jumping state, 
+        // check if player is jumping, and then set to jumping state, 
         if (state == Entity.State.Jumping)
         {
-            //if jump button is released before reaching max jump height, apply more 
-            //gravity so player falls faster.
-            //NOTE**maybe move this condition into input handler**\\
+            // if jump button is released before reaching max jump height, apply more 
+            // gravity so player falls faster.
+            // NOTE**maybe move this condition into input handler**\\
             if (Input.GetButtonUp("Jump"))
             {
-                //LowJumpMultipllier value should remain higer than FallMulitplier 
-                //so player falls faster for shorter 
+                // LowJumpMultipllier value should remain higer than FallMulitplier 
+                // so player falls faster for shorter 
                 rb.velocity += Vector3.up * Physics.gravity.y * (LowJumpMultiplier - 1) * Time.fixedDeltaTime * TimeScale.player;
             }
         }
 
-        //if actor has reached max velocity/y position
-        //the player will start falling as way to clamp the player's jump height
+        // if actor has reached max velocity/y position
+        // the player will start falling as way to clamp the player's jump height
         if (state == Entity.State.Jumping && rb.velocity.y > MAX_Y_Vel)
         {
-            //this basically checks if there in dash mode(about to dash)
+            // this basically checks if there in dash mode(about to dash)
             if (state != State.dashing && rb.useGravity)
                 rb.velocity += Vector3.up * Physics.gravity.y * (10 - 1) * Time.fixedDeltaTime * TimeScale.player;
         }
@@ -159,11 +158,11 @@ public abstract class Entity : MonoBehaviour {
         {
             if (name == "Player")
             {
-                //this basically checks if there in dash mode(about to dash)
+                // this basically checks if there in dash mode(about to dash)
                 if (state != State.dashing && rb.useGravity)
                     rb.velocity += Vector3.up * Physics.gravity.y * (FallMultiplier - 1) * Time.fixedDeltaTime * TimeScale.player;
             }
-            //this else statement is redundant, check why it's here
+            // this else statement is redundant, check why it's here
             else
             {
                 //print("adjusting velocity and state == falling for enemy");
@@ -174,7 +173,7 @@ public abstract class Entity : MonoBehaviour {
         }
     }
 
-    //redundant if conditions, consolidate this into a for loop
+    // redundant if-conditions, consolidate this into a for loop
     protected void CheckFloor()
     {
         if (Physics.Linecast(transform.position, GroundCheckR.position, 1 << LayerMask.NameToLayer("Ground")))
@@ -259,18 +258,18 @@ public abstract class Entity : MonoBehaviour {
         }
     }
 
-    //Called when actor has taken damaged.
+    // Called when actor has taken damaged.
     public void Damage(float _damageValue)
     {
         if (!isInvincible)
         {
             StartCoroutine("DamageIndicator");
+            Health -= _damageValue;
+            if (gameObject.name == "Player")
+                HUDManager._instance.UpdateHealthBar(_damageValue);
 
             if (Health <= 1)
-            {
                 Killed();
-            }
-            else { Health -= _damageValue; }
         }
     }
 
@@ -284,8 +283,8 @@ public abstract class Entity : MonoBehaviour {
         }
     }
 
-    //This is called to remove all blood masks attached
-    //to this entity when entitiy is destoryed.
+    // This is called to remove all blood masks attached
+    // to this entity when entitiy is destoryed.
     protected void DeParentCaller()
     {
         Transform[] transforms;
@@ -300,14 +299,14 @@ public abstract class Entity : MonoBehaviour {
             }
                 
         }
-        print("finshed removing masks from: " + gameObject.name);
+        print("finshed removing mask(s) from: " + gameObject.name);
     }
 
-    //flip enity's sprite
-    //make this so it flips any sprite put into it
+    // flip enity's sprite
+    // make this so it flips any sprite put into it
     public void FlipSprite()
     {
-        //assign direction player is facing
+        // assign direction player is facing
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
             if (dir != 1)
@@ -318,7 +317,7 @@ public abstract class Entity : MonoBehaviour {
                 ActorSprite.GetComponent<SpriteRenderer>().flipX = GetComponent<Entity>().facingLeft;
                 BloodActorSprite.GetComponent<SpriteRenderer>().flipX = GetComponent<Entity>().facingLeft;
 
-                //flip weapon sprite
+                // flip weapon sprite
                 if (GetComponent<PlayerController>().EquippedWeapon != null)
                 {
                     GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(GetComponent<PlayerController>().dir);
@@ -334,7 +333,7 @@ public abstract class Entity : MonoBehaviour {
                 ActorSprite.GetComponent<SpriteRenderer>().flipX = GetComponent<Entity>().facingLeft;
                 BloodActorSprite.GetComponent<SpriteRenderer>().flipX = GetComponent<Entity>().facingLeft;
 
-                //flip weapon sprite
+                // flip weapon sprite
                 if (GetComponent<PlayerController>().EquippedWeapon != null)
                 {
                     GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(GetComponent<PlayerController>().dir);
@@ -347,7 +346,7 @@ public abstract class Entity : MonoBehaviour {
         }
     }
 
-    //Set default values for player parameters
+    // Set default values for player parameters
     protected void SetDefaultSpeed()
     {
         defaultRunSpeed = Speed;
@@ -370,7 +369,7 @@ public abstract class Entity : MonoBehaviour {
             tmp.GetComponent<DustTrail>().actor = gameObject;
             tmp.GetComponent<DustTrail>().EnableTrail();
 
-            //basically a delay before the next dust can spawn
+            // basically a delay before the next dust can spawn
             EnableDustTrail();
             if (dustTrailIndex == 2)
             {

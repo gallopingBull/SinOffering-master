@@ -21710,31 +21710,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.806
+      value: -0.1967926
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.97306037
+      value: 1.6900601
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.0254874
+      value: -1.8454876
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99046457
+      value: 0.70793086
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0018813144
+      value: -0.08984238
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.13775475
+      value: 0.6945331
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00026165502
+      value: 0.09157554
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -21750,11 +21750,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274667, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: field of view
-      value: 80
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274667, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: far clip plane
-      value: 1300
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274671, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_Name
@@ -22049,7 +22049,7 @@ PrefabInstance:
       objectReference: {fileID: 6212929827577808275}
     - target: {fileID: 3287130404471829012, guid: 33415adbcc7e9304eb0571a6a75c776e, type: 3}
       propertyPath: TotalFaith
-      value: 17000
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 3287130404471829012, guid: 33415adbcc7e9304eb0571a6a75c776e, type: 3}
       propertyPath: GameWonPanel
@@ -22059,6 +22059,10 @@ PrefabInstance:
       propertyPath: GameFailedPanel
       value: 
       objectReference: {fileID: 1729731245}
+    - target: {fileID: 3287130404471829012, guid: 33415adbcc7e9304eb0571a6a75c776e, type: 3}
+      propertyPath: TotalFaithAccrued
+      value: 2200
+      objectReference: {fileID: 0}
     - target: {fileID: 3287130404471829014, guid: 33415adbcc7e9304eb0571a6a75c776e, type: 3}
       propertyPath: m_Name
       value: GameManager

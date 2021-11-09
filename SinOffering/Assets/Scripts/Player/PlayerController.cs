@@ -66,6 +66,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     [HideInInspector]
     public InputDelay InputDelay;
 
+
     public PlayerAttributes Attributes { get => attributes; set => attributes = value; }
 
 
@@ -79,8 +80,12 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     protected override void FixedUpdate()
     {
         inputHandler.InputDelay();
+        
+        #region testing
         //InputDelay2();
         //InputDelay.InputDelayHandler(state); // manages delay timers for several different input/actions
+        #endregion
+
         CheckIfFalling();
         GravityModifier();
         CheckFloor();
