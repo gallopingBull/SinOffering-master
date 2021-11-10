@@ -87,7 +87,7 @@ public class AttributeUpgradeStore : MonoBehaviour
             SetMenuButtons(_menu);
 
         var sortedList = menuButtons.OrderBy(o => (int)o.gameObject.GetComponent<AttributeUpgradeButton>().UpgradeType);
-
+        
         for (int i = 0; i < sortedList.ToList().Count; i++)
         {
             var _button = sortedList.ToList()[i].gameObject.GetComponent<AttributeUpgradeButton>();
@@ -187,7 +187,13 @@ public class AttributeUpgradeStore : MonoBehaviour
 
     private int GetRespecCost()
     {
-        return menuButtons.Length * BaseRespecCost;
+        int purchasedCount = 0;
+        for (int i = 0; i < menuButtons.Length; i++)
+        {
+            if (menuButtons[i].GetComponent<AttributeUpgradeButton>().UpgradePurchased)
+                purchasedCount++;
+        }
+        return purchasedCount * BaseRespecCost;
     }
 
     private void RespecAttributes()
@@ -232,7 +238,7 @@ public class AttributeUpgradeStore : MonoBehaviour
         else
             currentFaithProgressBar.fillAmount = ((float)GameManager.instance.TotalCurrentFaith / maxFaith) * 1f;
         
-        Debug.Log(currentFaithProgressBar.fillAmount);
+        //Debug.Log(currentFaithProgressBar.fillAmount);
         
         if (currentFaithProgressBar.fillAmount < .33)
             unlockedFaithProgressBar.fillAmount = 0;
