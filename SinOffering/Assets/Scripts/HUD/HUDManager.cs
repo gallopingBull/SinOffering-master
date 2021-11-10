@@ -49,13 +49,12 @@ public class HUDManager : MonoBehaviour
             return;
         _instance = this;
         //fadeCanvas = FadeCanvasGroup._instance;
-        
-        pc = PlayerController.instance;
         currentScene = SceneManager.GetActiveScene();
     }
     void Start()
     {
         HUD = transform.Find("HUD").gameObject;
+        pc = PlayerController.instance;
         hud_CanvasGroup = GetComponent<CanvasGroup>();
         SetUIObjects();
         SetUIObjectValues();
@@ -89,7 +88,7 @@ public class HUDManager : MonoBehaviour
         silverValue = GameManager.instance.TotalSilver;
         silverText.text = silverValue.ToString();
 
-        faithValue = GameManager.instance.TotalFaith;
+        faithValue = GameManager.instance.TotalCurrentFaith;
         faithText.text = faithValue.ToString();
     }
 
@@ -102,6 +101,7 @@ public class HUDManager : MonoBehaviour
     }
     private void DisplayHUD()   
     {
+        SetUIObjectValues();
         GetComponent<FadeCanvasGroup>().FadeInCanvasGroup();
     }
 

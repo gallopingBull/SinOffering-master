@@ -441,10 +441,10 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     bool IAttributeStoreCustomer.CanPurchaseUpgrade(int _price)
     {
-        if (gameManager.TotalFaith < _price)
+        if (gameManager.TotalCurrentFaith < _price)
             return false;
 
-        gameManager.TotalFaith -= _price;
+        gameManager.TotalCurrentFaith -= _price;
         return true;
     }
 

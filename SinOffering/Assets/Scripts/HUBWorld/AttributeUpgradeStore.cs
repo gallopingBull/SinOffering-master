@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine;
 
@@ -12,37 +13,51 @@ public class AttributeUpgradeStore : MonoBehaviour
     public Button[] menuButtons = null;
     public GameObject menu = null;
     private GameObject faithValueUI;
+    private GameObject silverValueUI;
     private HUDManager hm;
 
     [Tooltip("Total Faith needed to Unlock Modfications")]
     [SerializeField] 
     private float maxFaith = 25000f;
 
+    public int BaseRespecCost = 250;
+    public int AdjustRespecCost = 0;
     //private int totalFaithValue = 0;
+    public TextMeshProUGUI respecCost_Text; // displays respec cost
     public Image currentFaithProgressBar; // white fill bar displaying TotalFaithAccrued
-    public Image unlockedFaithProgressBar; // red fill bar displaying last unlocked special
-
+    public Image unlockedFaithProgressBar; // red fill bar displaying last unlocked 
 
     //[SerializeField]
     public Image buttonprogressBar; //referenve to radial image arround buttons to indicate status of hold
     private float chargeTimer = 0;
     [SerializeField]    
     private float chargeTimeMax = 3;
+
+    private bool _respecPurchased = false;
     
     void Start()
     {
         attributeDatabase = AttributeDatabase._instance.GetAttributeDatabase();
         faithValueUI = GameObject.Find("Text_FaithValue");
+        silverValueUI = GameObject.Find("Text_SilverValue");
         hm = HUDManager._instance;
-        currentFaithProgressBar = GameObject.Find("Panel_ProgressBar_Current").GetComponent<Image>();
-        unlockedFaithProgressBar = GameObject.Find("Panel_ProgressBar_Unlocked").GetComponent<Image>();
-    }
+        
+        #region testing
+        //respecCost_Text = GameObject.Find("Text_RespecPrice").GetComponent<TextMeshProUGUI>();
+        //currentFaithProgressBar = GameObject.Find("Panel_ProgressBar_Current").GetComponent<Image>();
+        //unlockedFaithProgressBar = GameObject.Find("Panel_ProgressBar_Unlocked").GetComponent<Image>();
+        #endregion
+    }   
     private void Update()
     {
         if (Input.GetKey(KeyCode.T))
         {
+            if (AdjustRespecCost > GameManager.instance.TotalSilver)
+                return;
+
             chargeTimer += Time.deltaTime;
             buttonprogressBar.fillAmount = (chargeTimer / chargeTimeMax) * 1f;
+
             //Debug.Log("chargeTimer: " + chargeTimer);
             if (chargeTimer >= chargeTimeMax)
             {
@@ -92,8 +107,12 @@ public class AttributeUpgradeStore : MonoBehaviour
             InitButton(_button, attributeData, _button.UpgradeType.ToString(), tmpLevel);
         }
 
-
-        SetProgressBarFillAmmount();
+        AdjustRespecCost = GetRespecCost();
+        respecCost_Text.text = AdjustRespecCost.ToString();
+    
+        if (!_respecPurchased)
+            SetProgressBarFillAmmount();
+        
     }
 
     // initilaize buttons with correct weapon data 
@@ -127,7 +146,7 @@ public class AttributeUpgradeStore : MonoBehaviour
                 _button.interactable = false;
 
                 _button.GetComponent<AttributeUpgradeButton>().PurchaseUpgrade(); // changes button faith
-                faithValueUI.GetComponent<DisplayManaTotal>().SetSilverValueUI(); // change to faith
+                faithValueUI.GetComponent<DisplayFaithTotal>().SetFaithValueUI(); // change to faith
                 hm.SetUIObjectValues();
 
                 InitAttributeUpgradeStore(GetComponent<MenuManager>().menus[0]); // reinitialize store and buttons
@@ -157,6 +176,7 @@ public class AttributeUpgradeStore : MonoBehaviour
         menu = _menu;
         menuButtons = _menu.GetComponentsInChildren<Button>();
         faithValueUI = GameObject.Find("Text_FaithValue");
+        silverValueUI = GameObject.Find("Text_SilverValue");
     }
 
     // customer/player is assigned at store trigger (DisplayButton.cs)
@@ -165,8 +185,14 @@ public class AttributeUpgradeStore : MonoBehaviour
         customer = _customer;
     }
 
+    private int GetRespecCost()
+    {
+        return menuButtons.Length * BaseRespecCost;
+    }
+
     private void RespecAttributes()
     {
+        _respecPurchased = true;
         int tmpFaith = 0;
 
         AttributeData tmpData;
@@ -177,27 +203,35 @@ public class AttributeUpgradeStore : MonoBehaviour
             if (menuButtons[i].GetComponent<AttributeUpgradeButton>().UpgradePurchased)
             {
                 // store prices for every purchased ugrade
-
                 tmpData = attributeDatabase[menuButtons[i].GetComponent<AttributeUpgradeButton>().UpgradeType.ToString()];
-                price = tmpData.AttributeDataList[menuButtons[i].GetComponent<AttributeUpgradeButton>().UpgradeLevel].AttributePrice; // get price
+                // get price
+                price = tmpData.AttributeDataList[menuButtons[i].GetComponent<AttributeUpgradeButton>().UpgradeLevel].AttributePrice;
 
                 tmpFaith += price;
 
                 // reset buttons to default state/values
                 PlayerController.instance.Attributes = new PlayerAttributes();
-
-                // reset player attributes to default/values
-                InitAttributeUpgradeStore(menu);
             }
         }
+
+        InitAttributeUpgradeStore(menu);
         // add tmpFaith to totalFaith in game manager
-        GameManager.instance.TotalFaith += tmpFaith;
+        GameManager.instance.TotalCurrentFaith += tmpFaith;
+        GameManager.instance.TotalSilver -= AdjustRespecCost;
+
         hm.SetUIObjectValues();
+        faithValueUI.GetComponent<DisplayFaithTotal>().SetFaithValueUI();
+        silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI();
+        _respecPurchased = false; 
     }
 
     private void SetProgressBarFillAmmount()
     {
-        currentFaithProgressBar.fillAmount = ((float)GameManager.instance.TotalFaithAccrued/maxFaith) * 1f;
+        if (GameManager.instance.TotalAccruedFaith > GameManager.instance.TotalCurrentFaith)
+            currentFaithProgressBar.fillAmount = ((float)GameManager.instance.TotalAccruedFaith / maxFaith) * 1f;
+        else
+            currentFaithProgressBar.fillAmount = ((float)GameManager.instance.TotalCurrentFaith / maxFaith) * 1f;
+        
         Debug.Log(currentFaithProgressBar.fillAmount);
         
         if (currentFaithProgressBar.fillAmount < .33)
