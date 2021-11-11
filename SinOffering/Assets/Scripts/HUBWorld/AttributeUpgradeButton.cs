@@ -13,6 +13,8 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IDeselectHa
     #region variables
 
     private bool isSelected = false;
+    [HideInInspector]
+    public bool isDirty = false;
 
     //[HideInInspector]
     public int UpgradeLevel = 0;

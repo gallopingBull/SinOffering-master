@@ -16,19 +16,19 @@ public class AttributeUpgradeStore : MonoBehaviour
     private GameObject silverValueUI;
     private HUDManager hm;
 
-    [Tooltip("Total Faith needed to Unlock Modfications")]
+    [Tooltip("Max Faith ammount required to unlock last modfications.")]
     [SerializeField] 
-    private float maxFaith = 25000f;
+    private float maxFaithReq = 25000f;
 
     public int BaseRespecCost = 250;
     public int AdjustRespecCost = 0;
     //private int totalFaithValue = 0;
     public TextMeshProUGUI respecCost_Text; // displays respec cost
-    public Image currentFaithProgressBar; // white fill bar displaying TotalFaithAccrued
+    public Image totalFaithSpentProgressBar; // white fill bar displaying TotalFaithAccrued
     public Image unlockedFaithProgressBar; // red fill bar displaying last unlocked 
 
     //[SerializeField]
-    public Image buttonprogressBar; //referenve to radial image arround buttons to indicate status of hold
+    public Image buttonprogressBar; // reference to radial image arround buttons to indicate status of hold
     private float chargeTimer = 0;
     [SerializeField]    
     private float chargeTimeMax = 3;
@@ -125,9 +125,12 @@ public class AttributeUpgradeStore : MonoBehaviour
             _button.gameObject.GetComponent<AttributeUpgradeButton>().OnLongClick.AddListener(() =>
             PurchaseUpgrade(_upgradeName, curUpgradeLvl, _button.GetComponent<Button>()));
         }
+        else
+        {
+            _button.isDirty = true;
+        }
     }
 
-   
     public void PurchaseUpgrade(string _upgradeType, int _upgradeLevel, Button _button)
     {
         AttributeData tmpData = attributeDatabase[_upgradeType];
@@ -142,6 +145,9 @@ public class AttributeUpgradeStore : MonoBehaviour
             //Debug.Log("maxLevel: " + maxLevel + " || playerAttributeLevels" + playerAttributeLevels[tmpData.UpgradeType]);
             if (playerAttributeLevels[tmpData.UpgradeType] < maxLevel)
             {
+                if (!_button.GetComponent<AttributeUpgradeButton>().isDirty)
+                    GameManager.instance.IncrementFaithSpent(price); // check if level/button is dirty (previously purchased)
+
                 customer.PurchaseUpgrade(tmpData.UpgradeType);
                 _button.interactable = false;
 
@@ -232,19 +238,21 @@ public class AttributeUpgradeStore : MonoBehaviour
     }
 
     private void SetProgressBarFillAmmount()
-    {
-        if (GameManager.instance.TotalAccruedFaith > GameManager.instance.TotalCurrentFaith)
-            currentFaithProgressBar.fillAmount = ((float)GameManager.instance.TotalAccruedFaith / maxFaith) * 1f;
+    {/*
+        if (GameManager.instance.TotalFaithSpent > GameManager.instance.TotalCurrentFaith)
+            currentFaithProgressBar.fillAmount = ((float)GameManager.instance.TotalFaithSpent / maxFaithReq) * 1f;
         else
-            currentFaithProgressBar.fillAmount = ((float)GameManager.instance.TotalCurrentFaith / maxFaith) * 1f;
-        
+            currentFaithProgressBar.fillAmount = ((float)GameManager.instance.TotalCurrentFaith / maxFaithReq) * 1f;
+       */
         //Debug.Log(currentFaithProgressBar.fillAmount);
-        
-        if (currentFaithProgressBar.fillAmount < .33)
+
+
+        totalFaithSpentProgressBar.fillAmount = ((float)GameManager.instance.TotalFaithSpent / maxFaithReq) * 1f;
+        if (totalFaithSpentProgressBar.fillAmount < .33)
             unlockedFaithProgressBar.fillAmount = 0;
-        else if (currentFaithProgressBar.fillAmount < .67)
+        else if (totalFaithSpentProgressBar.fillAmount < .67)
             unlockedFaithProgressBar.fillAmount = .33f;
-        else if (currentFaithProgressBar.fillAmount < 1)
+        else if (totalFaithSpentProgressBar.fillAmount < 1)
             unlockedFaithProgressBar.fillAmount = .67f;
         else
             unlockedFaithProgressBar.fillAmount = 1;

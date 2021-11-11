@@ -3,17 +3,13 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-
-
-
 enum GameMode
 {
     randomGunBoxes, 
     randomGunBoxesShield, 
     survival, 
     timeAttack,
-    dashAbilityOnly
-    
+    dashAbilityOnly 
 }
 
 public class GameManager : MonoBehaviour {
@@ -54,7 +50,7 @@ public class GameManager : MonoBehaviour {
     public int curSilver = 10;
 
     public int TotalCurrentFaith = 10000;
-    public int TotalAccruedFaith = 10000;
+    public int TotalFaithSpent = 10000;
     //[HideInInspector]
     //public int currentFaith = 10; // maybe redundant variable
 
@@ -97,7 +93,6 @@ public class GameManager : MonoBehaviour {
 
 
     #endregion
-
 
     #region functions
     private void Awake()
@@ -193,6 +188,11 @@ public class GameManager : MonoBehaviour {
         lastSpawnLoc = locIndex;
     }
 
+    public void IncrementFaithSpent(int value)
+    {
+        TotalFaithSpent += value;
+    }
 
     #endregion
+
 }

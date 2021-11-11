@@ -30,7 +30,7 @@ public class GameData
     public int TotalSilver;
     //public int TotalAccruedSilver;
     public int TotalFaith;
-    public int TotalAccruedFaith;
+    public int TotalFaithSpent;
 
     public float TotalGameTime; 
 }

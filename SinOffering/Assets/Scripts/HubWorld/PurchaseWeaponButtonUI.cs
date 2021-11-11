@@ -16,10 +16,8 @@ public class PurchaseWeaponButtonUI : MonoBehaviour, ISelectHandler, IDeselectHa
     [HideInInspector]
     public Button item_Button;
 
-
     private bool isSelected = false;
- //   public Image buttonFillImage;
-
+    //public Image buttonFillImage;
 
     private float chargeTimer = 0;
     [SerializeField]
