@@ -470,8 +470,8 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IDeselectHa
         isSelected = true;
         UpgradeName_Text.text = UpgradeType.ToString();
 
-        Debug.Log("price: " + data.AttributeDataList[UpgradeLevel].AttributePrice);
-        Debug.Log("upgradeLevel: " + UpgradeLevel);
+        //Debug.Log("price: " + data.AttributeDataList[UpgradeLevel].AttributePrice);
+        //Debug.Log("upgradeLevel: " + UpgradeLevel);
         Price_Text.text = data.AttributeDataList[UpgradeLevel].AttributePrice.ToString();
         NextUpgradeLevel_Text.text = data.AttributeDataList[UpgradeLevel].AttributeLevel.ToString();
         NextUpgradeVal_Text.text = data.AttributeDataList[UpgradeLevel].UpgradeDescription;

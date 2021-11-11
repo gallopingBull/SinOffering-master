@@ -199,6 +199,7 @@ public class AttributeUpgradeStore : MonoBehaviour
             if (menuButtons[i].GetComponent<AttributeUpgradeButton>().UpgradePurchased)
                 purchasedCount++;
         }
+        Debug.Log("purchasedCount: " + purchasedCount);
         return purchasedCount * BaseRespecCost;
     }
 
@@ -206,9 +207,12 @@ public class AttributeUpgradeStore : MonoBehaviour
     {
         _respecPurchased = true;
         int tmpFaith = 0;
-
-        AttributeData tmpData;
         int price = 0;
+
+
+        AdjustRespecCost = GetRespecCost();
+        GameManager.instance.TotalSilver -= AdjustRespecCost;
+        AttributeData tmpData;
 
         for (int i = 0; i < menuButtons.Length; i++)
         {
@@ -218,18 +222,17 @@ public class AttributeUpgradeStore : MonoBehaviour
                 tmpData = attributeDatabase[menuButtons[i].GetComponent<AttributeUpgradeButton>().UpgradeType.ToString()];
                 // get price
                 price = tmpData.AttributeDataList[menuButtons[i].GetComponent<AttributeUpgradeButton>().UpgradeLevel].AttributePrice;
-
                 tmpFaith += price;
 
                 // reset buttons to default state/values
                 PlayerController.instance.Attributes = new PlayerAttributes();
             }
         }
-
+     
         InitAttributeUpgradeStore(menu);
         // add tmpFaith to totalFaith in game manager
         GameManager.instance.TotalCurrentFaith += tmpFaith;
-        GameManager.instance.TotalSilver -= AdjustRespecCost;
+
 
         hm.SetUIObjectValues();
         faithValueUI.GetComponent<DisplayFaithTotal>().SetFaithValueUI();
@@ -238,15 +241,7 @@ public class AttributeUpgradeStore : MonoBehaviour
     }
 
     private void SetProgressBarFillAmmount()
-    {/*
-        if (GameManager.instance.TotalFaithSpent > GameManager.instance.TotalCurrentFaith)
-            currentFaithProgressBar.fillAmount = ((float)GameManager.instance.TotalFaithSpent / maxFaithReq) * 1f;
-        else
-            currentFaithProgressBar.fillAmount = ((float)GameManager.instance.TotalCurrentFaith / maxFaithReq) * 1f;
-       */
-        //Debug.Log(currentFaithProgressBar.fillAmount);
-
-
+    {
         totalFaithSpentProgressBar.fillAmount = ((float)GameManager.instance.TotalFaithSpent / maxFaithReq) * 1f;
         if (totalFaithSpentProgressBar.fillAmount < .33)
             unlockedFaithProgressBar.fillAmount = 0;
