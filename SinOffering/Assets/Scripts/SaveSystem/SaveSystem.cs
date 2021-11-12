@@ -68,7 +68,6 @@ public class SaveSystem : MonoBehaviour
         _gameData.TotalDeaths = _gameData.TotalDeaths + gameManager.CurDeaths;
         _gameData.TotalSuicides = _gameData.TotalSuicides + gameManager.CurSuicides;
         _gameData.TotalSilver = gameManager.TotalSilver + gameManager.curSilver;
-        //_gameData.TotalFaith = gameManager.TotalFaith + gameManager.currentFaith;
         _gameData.TotalFaith = gameManager.TotalCurrentFaith;
         _gameData.TotalFaithSpent = gameManager.TotalFaithSpent;
 

@@ -112,7 +112,6 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IDeselectHa
         pricePanels[0] = GameObject.Find("Panel_UnlockPrompt").gameObject;
         pricePanels[1] = GameObject.Find("Panel_AbilityPrice").gameObject;
 
-
         NextUpgradeLevel_Text =
             GameObject.Find("Panel_Content").transform.Find("Panel").transform.Find("Text_AbilityName").transform.Find("Text_AbilityCurLevel").GetComponentInChildren<TextMeshProUGUI>();
 
@@ -466,18 +465,13 @@ public class AttributeUpgradeButton : MonoBehaviour, ISelectHandler, IDeselectHa
     /** Button Interfaces**/
     void ISelectHandler.OnSelect(BaseEventData eventData)
     {
-        //Debug.Log(this.gameObject.name + " was selected");
         isSelected = true;
         UpgradeName_Text.text = UpgradeType.ToString();
-
-        //Debug.Log("price: " + data.AttributeDataList[UpgradeLevel].AttributePrice);
-        //Debug.Log("upgradeLevel: " + UpgradeLevel);
         Price_Text.text = data.AttributeDataList[UpgradeLevel].AttributePrice.ToString();
         NextUpgradeLevel_Text.text = data.AttributeDataList[UpgradeLevel].AttributeLevel.ToString();
         NextUpgradeVal_Text.text = data.AttributeDataList[UpgradeLevel].UpgradeDescription;
-
+        
         EnterState(state);
-
         SetImageColors(UpgradeLevel);
     }
     

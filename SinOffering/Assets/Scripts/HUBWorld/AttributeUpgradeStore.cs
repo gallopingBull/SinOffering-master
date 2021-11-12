@@ -233,7 +233,6 @@ public class AttributeUpgradeStore : MonoBehaviour
         // add tmpFaith to totalFaith in game manager
         GameManager.instance.TotalCurrentFaith += tmpFaith;
 
-
         hm.SetUIObjectValues();
         faithValueUI.GetComponent<DisplayFaithTotal>().SetFaithValueUI();
         silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI();
