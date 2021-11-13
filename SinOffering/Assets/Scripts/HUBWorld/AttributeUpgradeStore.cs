@@ -195,11 +195,10 @@ public class AttributeUpgradeStore : MonoBehaviour
     {
         int purchasedCount = 0;
         for (int i = 0; i < menuButtons.Length; i++)
-        {
             if (menuButtons[i].GetComponent<AttributeUpgradeButton>().UpgradePurchased)
                 purchasedCount++;
-        }
-        Debug.Log("purchasedCount: " + purchasedCount);
+        
+        //Debug.Log("purchasedCount: " + purchasedCount);
         return purchasedCount * BaseRespecCost;
     }
 

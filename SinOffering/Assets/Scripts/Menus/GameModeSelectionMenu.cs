@@ -3,6 +3,11 @@ using UnityEngine;
 public class GameModeSelectionMenu : MonoBehaviour
 {
     private IGameModeSelectionMenu _client = null;
+    //private Dictionary<string, GameModeData> offeringDatabase;
+    //public Button[] menuButtons = null;
+    //public GameObject menu = null;
+    //private HUDManager hm;
+    
     [SerializeField]
     private GameMode _gameMode;
 
@@ -10,6 +15,7 @@ public class GameModeSelectionMenu : MonoBehaviour
     {
         _client = client;
     }
+
     public void SendGameMode()
     {
         _client.SetGameMode(_gameMode);
@@ -19,6 +25,12 @@ public class GameModeSelectionMenu : MonoBehaviour
     {
 
     }
+
+    public void InitButton(/*OfferingSelectionButton _button, OfferingSelectionData _offeringData, string _upgradeName, int curUpgradeLvl*/)
+    {
+
+    }
+
 }
 
 public interface IGameModeSelectionMenu

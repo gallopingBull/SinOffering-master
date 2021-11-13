@@ -12,7 +12,7 @@ public enum GameMode
     dashAbilityOnly,
     meleeOnly
 }
-struct MatchResultData
+public struct MatchResultData
 {
     string favoriteWeapon;
     float totalMatchTime;
