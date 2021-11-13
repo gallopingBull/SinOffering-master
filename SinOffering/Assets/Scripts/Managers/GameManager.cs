@@ -29,7 +29,7 @@ public struct MatchResultData
     int totalItemsUsed;
 }
 
-public class GameManager : MonoBehaviour, IGameModeSelectionMenu {
+public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
 
     #region variables
     
@@ -40,8 +40,9 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu {
 
     private MatchResultData _offeringResults;
     private GameMode _gameMode;
-   
-    
+
+    private IMatchCompletedMenu _client = null;
+
     public bool paused; 
     public bool SpawnCrates = false; 
     // crate spawn  locations
@@ -173,6 +174,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu {
         }
       
         gameCompleted = true;
+        //_client.SetMatchData(_offeringResults);
         
         GameWonPanel.SetActive(true);
         Invoke("ResetGame", 3);
@@ -181,6 +183,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu {
     public void FailedGame()
     {
         gameCompleted = true;
+        //_client.SetMatchData(_offeringResults);
         GameFailedPanel.SetActive(true);
         Invoke("ResetGame", 3);
     }
@@ -244,8 +247,15 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu {
     {
         _gameMode = gameMode;
     }
+    public void SetClient ()
+    {
+        _client = GetComponent<IMatchCompletedMenu>();
+    }
 
-   
+
+
+
+
 
     #endregion
 

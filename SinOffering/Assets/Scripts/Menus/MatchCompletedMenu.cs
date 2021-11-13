@@ -2,23 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MatchCompletedMenu : MonoBehaviour
+public class MatchCompletedMenu : MonoBehaviour, IMatchCompletedMenu
 {
-    private IMatchCompletedMenu _client = null;
+    
     //public GameObject menu = null;
     //private HUDManager hm;
 
     [SerializeField]
     private MatchResultData _matchData;
 
-    public void SetClient(IMatchCompletedMenu client)
-    {
-        _client = client;
-    }
 
     public void SetMatchData()
     {
-        _client.SetMatchData(_matchData);
+        //_client.SetMatchData(_matchData);
     }
 
     public void InitMenu()
@@ -30,13 +26,14 @@ public class MatchCompletedMenu : MonoBehaviour
     {
     }
 
+    void IMatchCompletedMenu.SetMatchData(MatchResultData resultData)
+    {
+        _matchData = resultData;
+    }
 }
 
 public interface IMatchCompletedMenu
 {
-    //void AssignUIData(MatchResultData resultData);
-    //void AssignUIData(MatchResultData resultData);
-    //void AssignUIData(MatchResultData resultData);
     public void SetMatchData(MatchResultData resultData);
 
 }
