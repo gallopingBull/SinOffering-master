@@ -3,16 +3,33 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-enum GameMode
+public enum GameMode
 {
     randomGunBoxes, 
     randomGunBoxesShield, 
     survival, 
     timeAttack,
-    dashAbilityOnly 
+    dashAbilityOnly,
+    meleeOnly
+}
+struct MatchResultData
+{
+    string favoriteWeapon;
+    float totalMatchTime;
+
+    int totalKills;
+    int totalDeaths;
+    int totalDamageRecieved;
+    int totalBiggestKillStreak;
+    int totalGunKills;
+    int totalMeleeKills;
+    int totalEnemiesSliced;
+    int totalEnemiesExploded;
+    int totalSilverAccrued;
+    int totalItemsUsed;
 }
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour, IGameModeSelectionMenu {
 
     #region variables
     
@@ -21,6 +38,10 @@ public class GameManager : MonoBehaviour {
 
     public GameObject GameWonPanel, GameFailedPanel, pauseMenu;
 
+    private MatchResultData _offeringResults;
+    private GameMode _gameMode;
+   
+    
     public bool paused; 
     public bool SpawnCrates = false; 
     // crate spawn  locations
@@ -107,14 +128,40 @@ public class GameManager : MonoBehaviour {
         //if (!SoundManager.MusicSource.isPlaying)
             //SoundManager.PlayMusicTrack();
 
-        if (SpawnCrates)
-            Invoke("SpawnCrate", 1f);
+        //if (SpawnCrates)
+            //Invoke("SpawnCrate", 1f);
     }
 	
 	void FixedUpdate () {
         if (points == MaxPoints)
             WonGame();
     }
+
+    private void InitGameRound()
+    {
+        switch (_gameMode)
+        {
+            case GameMode.randomGunBoxes:
+                SpawnCrates = true;
+                Invoke("SpawnCrate", 1f);
+                break;
+            case GameMode.randomGunBoxesShield:
+                SpawnCrates = true;
+                Invoke("SpawnCrate", 1f);
+                break;
+            case GameMode.survival:
+                break;
+            case GameMode.timeAttack:
+                break;
+            case GameMode.dashAbilityOnly:
+                break;
+            case GameMode.meleeOnly:
+                break;
+            default:
+                break;
+        }
+    }
+   
 
     private void WonGame()
     {
@@ -193,6 +240,16 @@ public class GameManager : MonoBehaviour {
         TotalFaithSpent += value;
     }
 
+    void IGameModeSelectionMenu.SetGameMode(GameMode gameMode)
+    {
+        _gameMode = gameMode;
+    }
+
+   
+
     #endregion
 
 }
+
+
+
