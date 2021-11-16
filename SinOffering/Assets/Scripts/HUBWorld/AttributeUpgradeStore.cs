@@ -228,7 +228,7 @@ public class AttributeUpgradeStore : MonoBehaviour
             }
         }
      
-        InitAttributeUpgradeStore(menu);
+        InitAttributeUpgradeStore(menu); //re-initialize store after respec-ing
         // add tmpFaith to totalFaith in game manager
         GameManager.instance.TotalCurrentFaith += tmpFaith;
 

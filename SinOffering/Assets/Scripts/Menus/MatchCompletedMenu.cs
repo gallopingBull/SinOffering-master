@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class MatchCompletedMenu : MonoBehaviour, IMatchCompletedMenu
 {
-    
     //public GameObject menu = null;
     //private HUDManager hm;
 
     [SerializeField]
     private MatchResultData _matchData;
-
 
     public void SetMatchData()
     {

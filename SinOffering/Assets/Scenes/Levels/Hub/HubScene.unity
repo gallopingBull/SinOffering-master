@@ -5242,7 +5242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &411901847
 Transform:
   m_ObjectHideFlags: 0
@@ -5266,23 +5266,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 411901846}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa90138c1b6b99428b722ecfffc0c6b, type: 3}
+  m_Script: {fileID: 11500000, guid: f302f140c532a9a4384b9cc3ee5a14b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   modifyValues: 0
-  inventoryData: {fileID: 11400000, guid: be17febf6e6790b419c115cffde03825, type: 2}
-  keys:
-  - Shotgun
-  - Gattling Gun
-  - RPG
-  - Dual Pistols
-  - Disc Launcher
+  offeringData: {fileID: 11400000, guid: 3a15196de63e99d469d47eaef5007c24, type: 2}
+  keys: 00000000
   values:
-  - {fileID: 11400000, guid: 1ee21732bb2cc75408bd747ca93bda1f, type: 2}
-  - {fileID: 11400000, guid: 5a24c1dd837ac3b4d8cca89c10493e57, type: 2}
-  - {fileID: 11400000, guid: 1945e095c0a5fcf42be1cc6521fe89fe, type: 2}
-  - {fileID: 11400000, guid: ebf10699134603940802e11393ac62e6, type: 2}
-  - {fileID: 11400000, guid: a923bf9a6828e17408d4195e2d5ae331, type: 2}
+  - {fileID: 11400000, guid: 15b092077cc0cc848a5980a0166364fa, type: 2}
 --- !u!4 &412590702 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4173982503607974, guid: 3e58316648a83424688565adaceb19fe, type: 3}
@@ -23256,31 +23247,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -34.966793
+      value: -2.806
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.91006017
+      value: 0.97306037
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.0364876
+      value: -5.0254874
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.82607
+      value: 0.99046457
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5633414
+      value: -0.0018813144
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.008833088
+      value: -0.13775475
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.013301514
+      value: -0.00026165502
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274666, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -23296,11 +23287,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274667, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: field of view
-      value: 70
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274667, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: far clip plane
-      value: 1000
+      value: 1300
       objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274671, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: m_Name

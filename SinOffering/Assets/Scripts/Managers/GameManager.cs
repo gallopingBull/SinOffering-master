@@ -163,7 +163,6 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
         }
     }
    
-
     private void WonGame()
     {
         if (Time.timeScale != 1f)

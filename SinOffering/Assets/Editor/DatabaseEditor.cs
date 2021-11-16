@@ -19,18 +19,18 @@ public class DatabaseEditor : Editor
         }
     }
 }
-[CustomEditor(typeof(AttributeDatabase))]
+[CustomEditor(typeof(OfferingDatabase))]
 
 public class AttritubteDatabaseEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
-        if (((AttributeDatabase)target).modifyValues)
+        if (((OfferingDatabase)target).modifyValues)
         {
             if (GUILayout.Button("Save Changes"))
             {
-                ((AttributeDatabase)target).DeserializeDictionary();
+                ((OfferingDatabase)target).DeserializeDictionary();
             }
         }
     }
