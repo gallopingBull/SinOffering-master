@@ -10,11 +10,10 @@ public class OfferingData : ScriptableObject//, IData<WeaponData>
     [Tooltip("Keep value at '0' if no time limit is required (infinite)")]
     public float timeLimit = 0;
     
-    public Image characterPortrait;
+    public Sprite characterPortrait;
     public GameMode gameMode;
     public Reward[] rewards;
 }
-
 
 // end match reward
 [System.Serializable]

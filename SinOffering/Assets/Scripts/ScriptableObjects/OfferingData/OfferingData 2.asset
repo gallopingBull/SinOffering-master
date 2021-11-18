@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13412828046962b41a5dd90985774534, type: 3}
+  m_Name: OfferingData 2
+  m_EditorClassIdentifier: 
+  offeringTitle: offering title 2
+  offeringSummary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+    aliquet euismod justo, nec feugiat magna lacinia tincid
+  timeLimit: 0
+  characterPortrait: {fileID: 1620280204057141540, guid: 6783eb16514528043ab96557ced8bc7f, type: 3}
+  gameMode: 5
+  rewards:
+  - rewardType: 0
+    baseRewardValue: 25
+  - rewardType: 1
+    baseRewardValue: 300

@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1565556539523071224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1565556539523071227}
+  - component: {fileID: 1565556539523071226}
+  m_Layer: 0
+  m_Name: PlayerAttributesDatabase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1565556539523071227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565556539523071224}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1565556539523071226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565556539523071224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733a166dc7daf7547bb26e8e80f5ba57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modifyValues: 0
+  inventoryData: {fileID: 11400000, guid: 9e1ba4a9db1dfcd4da36c514b6f83509, type: 2}
+  keys:
+  - health
+  - mana
+  - speed
+  - strength
+  - dashAttack
+  - dashSlam
+  - postDashAttack
+  - evade
+  values:
+  - {fileID: 11400000, guid: 95dbd310bdca7594faaf8bab411c1dfb, type: 2}
+  - {fileID: 11400000, guid: df988ada999b97b46b84d66722e91150, type: 2}
+  - {fileID: 11400000, guid: fd5a714124d5c17489bd02e7b4a8523a, type: 2}
+  - {fileID: 11400000, guid: 79c1e4248673d4f4baeb88a616f1317f, type: 2}
+  - {fileID: 11400000, guid: 87e73fe3c816cc943ae138f9b0164579, type: 2}
+  - {fileID: 11400000, guid: 6c9c0dc3228f69c4b932efd47a223471, type: 2}
+  - {fileID: 11400000, guid: ec5fd39e328a1144eae1d901f653b7f6, type: 2}
+  - {fileID: 11400000, guid: 2948359d4a1e70b46a37618cdc52560a, type: 2}

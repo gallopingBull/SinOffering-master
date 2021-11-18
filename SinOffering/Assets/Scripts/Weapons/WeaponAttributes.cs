@@ -76,7 +76,6 @@ public class WeaponAttributes
         weaponData = weaponDatabase[_weaponName];
     }
 
-
     public void SetUPWeaponAttribute(string _weaponName)
     {
         //Debug.Log("SetUpWeaponAttribute() - Weapon Name: " + _weaponName);

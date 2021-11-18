@@ -12,8 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13412828046962b41a5dd90985774534, type: 3}
   m_Name: OfferingData
   m_EditorClassIdentifier: 
+  offeringTitle: offering title 0
+  offeringSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+    aliquet euismod justo, nec feugiat magna lacinia tincidunt. Nullam id rhoncus
+    magna. Nulla aliquam condimentum neque, ut venenatis tellus tincidunt id. Nulla
+    luctus venenatis dolor ut mattis. Suspendisse potenti. '
+  timeLimit: 0
+  characterPortrait: {fileID: -2278439639723055928, guid: 6783eb16514528043ab96557ced8bc7f, type: 3}
   gameMode: 0
-  offeringSummary: default info
   rewards:
   - rewardType: 0
     baseRewardValue: 100

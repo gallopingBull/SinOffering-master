@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd93a4f2d5874634bbc8eea39c5ae0ee, type: 3}
   m_Name: Database_Offerings_SO
   m_EditorClassIdentifier: 
-  keys: 00000000
+  keys: 0000000001000000020000000300000004000000
   values:
   - {fileID: 11400000, guid: 15b092077cc0cc848a5980a0166364fa, type: 2}
+  - {fileID: 11400000, guid: ef06c55c638557d4a847c99ee1559060, type: 2}
+  - {fileID: 11400000, guid: 79d1d3d6e2061744aa63bf42d2cbcdb8, type: 2}
+  - {fileID: 11400000, guid: 908dd692eaa49674fae46218d6bf563e, type: 2}
+  - {fileID: 11400000, guid: b7a7dc2858a41034496df70a0f3ede7f, type: 2}

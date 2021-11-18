@@ -138,6 +138,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
             WonGame();
     }
 
+    // set game rules
     private void InitGameRound()
     {
         switch (_gameMode)
@@ -242,20 +243,15 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
         TotalFaithSpent += value;
     }
 
-    void IGameModeSelectionMenu.SetGameMode(GameMode gameMode)
+    void IGameModeSelectionMenu.GetGameMode(GameMode gameMode)
     {
         _gameMode = gameMode;
     }
+    // need this???
     public void SetClient ()
     {
         _client = GetComponent<IMatchCompletedMenu>();
     }
-
-
-
-
-
-
     #endregion
 
 }
