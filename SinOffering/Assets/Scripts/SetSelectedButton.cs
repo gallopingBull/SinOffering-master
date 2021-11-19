@@ -12,8 +12,7 @@ using UnityEngine;
 
 public class SetSelectedButton : MonoBehaviour
 {
-    [Tooltip("Small delay before assigning button " +
-        "gameobject to SetSelectedGameObject().")]
+    [Tooltip("Small delay before assigning button " + "gameobject to SetSelectedGameObject()")]
     public float Delay = .25f;
     private void OnEnable()
     {
@@ -21,8 +20,9 @@ public class SetSelectedButton : MonoBehaviour
         Invoke("Set_Selected_Button", Delay);
     }
 
-    private void Set_Selected_Button()
+    public void Set_Selected_Button()
     {
+        //EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(gameObject);
     }
 }

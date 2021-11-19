@@ -65,6 +65,13 @@ public class GameModeSelectionMenu : MonoBehaviour
         {
             // make new button
             tmpBut = Instantiate(offeringButton_Prefab, spawnParent.transform);
+
+            if (i == 0)
+            {
+                tmpBut.transform.Find("Button").gameObject.AddComponent<SetSelectedButton>();//AddComponent<SetSelectedButton>();
+                //tmpBut.transform.Find("Button").gameObject.GetComponent<SetSelectedButton>().Set_Selected_Button();
+            }  
+
             tmpData = offeringDatabase[i];
             InitButton(tmpBut.GetComponentInChildren<OfferingSelectionButton>(), tmpData);
         }

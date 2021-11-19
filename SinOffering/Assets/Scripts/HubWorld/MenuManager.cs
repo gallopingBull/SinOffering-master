@@ -17,6 +17,7 @@ public class MenuManager : MonoBehaviour
         WeaponPurchaseMenu,
         WeaponUpgradeMenu,
         AbilityUpgradeMenu,
+        OfferingSelectionMenu,
     }
 
     [HideInInspector]
@@ -108,7 +109,24 @@ public class MenuManager : MonoBehaviour
 
                 InitStore(menus[0], currentMenu);
                 break;
-            
+
+
+
+            case UpgradeMenu.OfferingSelectionMenu:
+                EnablePrompt = false;
+                //SwitchCamera(0);
+                yield return new WaitForSeconds(Delay);
+
+                DisplayMenu(0);
+                DisplayMenu(1);
+
+                if (HUDManager._instance.hud_CanvasGroup.alpha != 0)
+                    HUDManager._instance.HideHUD();
+
+
+                InitStore(menus[0], currentMenu);
+                break;
+
             default:
                 break;
         }
@@ -161,6 +179,19 @@ public class MenuManager : MonoBehaviour
 
             default:
                 break;
+
+
+            case UpgradeMenu.OfferingSelectionMenu:
+                HideMenu(0);
+                HideMenu(1);
+                yield return new WaitForSeconds(.25f);
+                SwitchToMainCamera();
+                closeMenu = false;
+                yield return new WaitForSeconds(.5f);
+                EnablePrompt = true;
+                PlayerController.instance.EnableInput();
+                break;
+
         }
         StopCoroutine("EXit_State");
     }   

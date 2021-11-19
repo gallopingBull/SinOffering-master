@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class OfferingSelectionButton : MonoBehaviour,   ISelectHandler, IDeselectHandler, IPointerUpHandler, IPointerDownHandler
+public class OfferingSelectionButton : MonoBehaviour, ISelectHandler, IDeselectHandler, IPointerUpHandler, IPointerDownHandler
 {
     #region variables
     private bool isSelected = false;
@@ -40,8 +40,10 @@ public class OfferingSelectionButton : MonoBehaviour,   ISelectHandler, IDeselec
 
     public UnityEvent OnLongClick;
     public Image buttonFillImage;
-    
+
     #endregion
+
+    #region functions
     private void Awake()
     {
         gameModeSelectionMenu = GameObject.Find("OfferingSelectionTemplate").GetComponent<GameModeSelectionMenu>();
@@ -71,4 +73,6 @@ public class OfferingSelectionButton : MonoBehaviour,   ISelectHandler, IDeselec
     {
         gameModeSelectionMenu.DisplayOfferingDesciption(_data);
     }
+
+    #endregion
 }
