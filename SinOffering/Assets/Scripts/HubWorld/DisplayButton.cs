@@ -59,7 +59,7 @@ public class DisplayButton : MonoBehaviour
                 {
                     // stop player
                     PlayerController.instance.rb.velocity = Vector3.zero;
-                    GetComponent<LoadScene>().LoadSceneByIndex(1);
+                    //GetComponent<LoadScene>().LoadAssignedLevel();
                 }
             }
 

@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
 
     private MatchResultData _offeringResults;
     private GameMode _gameMode;
+    //[HideInInspector]
+    public bool gameModeSelected = false; 
 
     private IMatchCompletedMenu _client = null;
 
@@ -166,6 +168,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
    
     private void WonGame()
     {
+        gameModeSelected = false;
         if (Time.timeScale != 1f)
         {
             Time.timeScale = 1f;
@@ -245,6 +248,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
 
     void IGameModeSelectionMenu.GetGameMode(GameMode gameMode)
     {
+        gameModeSelected = true; // this is only used for offering gate object
         _gameMode = gameMode;
     }
     // need this???

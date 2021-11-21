@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class LoadScene : MonoBehaviour {
 
-    [HideInInspector]
+    
     public int level;
 
     public void LoadSceneByIndex(int index)

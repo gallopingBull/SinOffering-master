@@ -12,7 +12,7 @@ public class OfferingDatabase: MonoBehaviour, ISerializationCallbackReceiver
 {
     public bool modifyValues;
     public static OfferingDatabase _instance;
-
+    
     // Database SO
     [SerializeField]
     private DatabaseScriptableObject_Offerings offeringData;

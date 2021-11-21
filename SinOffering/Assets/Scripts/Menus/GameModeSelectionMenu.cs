@@ -67,10 +67,7 @@ public class GameModeSelectionMenu : MonoBehaviour
             tmpBut = Instantiate(offeringButton_Prefab, spawnParent.transform);
 
             if (i == 0)
-            {
-                tmpBut.transform.Find("Button").gameObject.AddComponent<SetSelectedButton>();//AddComponent<SetSelectedButton>();
-                //tmpBut.transform.Find("Button").gameObject.GetComponent<SetSelectedButton>().Set_Selected_Button();
-            }  
+                tmpBut.transform.Find("Button").gameObject.AddComponent<SetSelectedButton>();
 
             tmpData = offeringDatabase[i];
             InitButton(tmpBut.GetComponentInChildren<OfferingSelectionButton>(), tmpData);
@@ -99,6 +96,11 @@ public class GameModeSelectionMenu : MonoBehaviour
 
         button.gameObject.GetComponent<Button>().onClick.AddListener(() =>
         SendGameMode(_offeringData.gameMode));
+
+    }
+    private void GameModeSelected()
+    {
+        GameManager.instance.gameModeSelected = true;
     }
 
 
