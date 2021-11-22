@@ -412,7 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8355bdae7ddd14f4a99b8cab31f9279b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 3
+  Health: 3
   Speed: 4
   MaxSpeed: 10
   AccSpeed: 0.15
@@ -448,6 +448,8 @@ MonoBehaviour:
   AmmountToGround: 0.75
   stepRate: 0.08
   MaxStepRate: 0.08
+  MaxBloodMasks: 12
+  BloodCount: 0
   isAggro: 0
   isGhost: 0
   dying: 0
@@ -455,6 +457,7 @@ MonoBehaviour:
   CanMove: 1
   SpawnAmmoCrates: 1
   FireDamageRate: 0.5
+  FireDamageAmmount: 1
   MaxFireTime: 5
   AggroSpeedMultiplier: 1.15
   AggroLifeMultiplier: 2
@@ -462,6 +465,7 @@ MonoBehaviour:
   PS_Fire: {fileID: 2456952696886574899}
   PS_Smoke: {fileID: 3911399052340600612}
   AmmoDrop: {fileID: 453258471666294640, guid: a343613237dfcd946a14ffcf15c3b114, type: 3}
+  SilverDropPrefab: {fileID: 2723100474615283923, guid: 6a40be8526032724b8ce466d899cd3c2, type: 3}
   PS_BloodExplosion: {fileID: 166404, guid: 4089d35ddc73b6b4f900c6e27e6fc955, type: 3}
   GibsPrefab: {fileID: 1733302488496627439, guid: a7d10a1808a67f84dae8557e9b107ff7, type: 3}
   _light: {fileID: 8539428624095099596}

@@ -33,6 +33,7 @@ public class EnemyController : Entity {
     public ParticleSystem PS_Fire;
     public ParticleSystem PS_Smoke;
     public GameObject AmmoDrop;
+    public GameObject SilverDropPrefab;
     public GameObject PS_BloodExplosion;
     public GameObject GibsPrefab;
     public Light _light;
@@ -63,7 +64,7 @@ public class EnemyController : Entity {
             else { Movement(); }
         }
 
-        //spawn dust trails
+        // spawn dust trails
         if (IsGrounded && !isGhost)
         {
             if (EnableDustTrails)
@@ -132,6 +133,7 @@ public class EnemyController : Entity {
                 BloodActorSprite.gameObject.SetActive(false);
                 DeParentCaller();
                 gameManager.CurEnemyKills++;
+                SpawnSilver();
                 camManager.RemoveCameraTargets(gameObject.transform);
 
                 print("entity (" + gameObject.name + ") getting destoryed- Explode()");
@@ -150,15 +152,20 @@ public class EnemyController : Entity {
                 Instantiate(PS_BloodExplosion, transform.position, transform.rotation);
 
                 gameManager.CurEnemyKills++;
-
                 BloodActorSprite.gameObject.SetActive(false);
                 DeParentCaller();
+                SpawnSilver();
                 camManager.RemoveCameraTargets(gameObject.transform);
 
                 print("entity ("+gameObject.name+ ") getting destoryed- Killed()");
                 Destroy(gameObject);
             }
         }
+    }
+
+    private void SpawnSilver() 
+    {
+        Instantiate(SilverDropPrefab, transform.position, transform.rotation);
     }
 
     public void DashKilled()
@@ -236,7 +243,6 @@ public class EnemyController : Entity {
         {
             ActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
             BloodActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
-
         }
     }
 

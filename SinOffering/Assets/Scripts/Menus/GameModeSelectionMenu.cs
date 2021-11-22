@@ -98,6 +98,8 @@ public class GameModeSelectionMenu : MonoBehaviour
         SendGameMode(_offeringData.gameMode));
 
     }
+
+
     private void GameModeSelected()
     {
         GameManager.instance.gameModeSelected = true;

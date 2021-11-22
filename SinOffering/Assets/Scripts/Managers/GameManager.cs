@@ -230,6 +230,17 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
         SpawnCrate();
     }
 
+    public void IncrementSilver(int value)
+    {
+        TotalSilver += value;
+        HUDManager._instance.SetUIObjectValues();
+    }
+
+    public void DecrementSilver(int value)
+    {
+        TotalSilver -= value;
+        HUDManager._instance.SetUIObjectValues();
+    }
     private void SpawnCrate()
     {
         int locIndex = Random.Range(0, spawnLocs.Length);
