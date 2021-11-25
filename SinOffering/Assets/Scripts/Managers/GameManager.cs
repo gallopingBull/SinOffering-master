@@ -14,19 +14,19 @@ public enum GameMode
 }
 public struct MatchResultData
 {
-    string favoriteWeapon;
-    float totalMatchTime;
-
-    int totalKills;
-    int totalDeaths;
-    int totalDamageRecieved;
-    int totalBiggestKillStreak;
-    int totalGunKills;
-    int totalMeleeKills;
-    int totalEnemiesSliced;
-    int totalEnemiesExploded;
-    int totalSilverAccrued;
-    int totalItemsUsed;
+    public string favoriteWeapon;
+    public float totalMatchTime;
+    
+    public int totalKills;
+    public int totalDeaths;
+    public int totalDamageRecieved;
+    public int totalBiggestKillStreak;
+    public int totalGunKills;
+    public int totalMeleeKills;
+    public int totalEnemiesSliced;
+    public int totalEnemiesExploded;
+    public int totalSilverAccrued;
+    public int totalItemsUsed;
 }
 
 public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
@@ -177,7 +177,9 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
         }
       
         gameCompleted = true;
-        //_client.SetMatchData(_offeringResults);
+        _client = GameWonPanel.GetComponentInParent<IMatchCompletedMenu>();
+        _client.SetMatchData(_offeringResults);
+        //_client.InitMenu();
         
         GameWonPanel.SetActive(true);
         Invoke("ResetGame", 3);
@@ -186,8 +188,11 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
     public void FailedGame()
     {
         gameCompleted = true;
-        //_client.SetMatchData(_offeringResults);
         GameFailedPanel.SetActive(true);
+
+        _client = GameFailedPanel.GetComponent<IMatchCompletedMenu>();
+        _client.SetMatchData(_offeringResults);
+
         Invoke("ResetGame", 3);
     }
 
@@ -232,12 +237,26 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
 
     public void IncrementSilver(int value)
     {
+        _offeringResults.totalSilverAccrued += value; 
         TotalSilver += value;
         HUDManager._instance.SetUIObjectValues();
     }
 
+    public void IncrementKillCount(int value)
+    {
+        _offeringResults.totalKills += value;
+        TotalEnemyKills += value;
+    }
+
+    public void IncrementDeathCount(int value)
+    {
+        _offeringResults.totalDeaths += value;
+        TotalDeaths += value;
+    }
+
     public void DecrementSilver(int value)
     {
+        //_offeringResults.totalSilverAccrued -= value; // maybe an enemy that steals some silver during combat
         TotalSilver -= value;
         HUDManager._instance.SetUIObjectValues();
     }
@@ -265,7 +284,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
     // need this???
     public void SetClient ()
     {
-        _client = GetComponent<IMatchCompletedMenu>();
+        //_client = GetComponent<IMatchCompletedMenu>();
     }
     #endregion
 

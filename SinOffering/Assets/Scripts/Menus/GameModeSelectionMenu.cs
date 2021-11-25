@@ -21,12 +21,14 @@ public class GameModeSelectionMenu : MonoBehaviour
     [SerializeField]
     private GameMode _gameMode;
 
+    #region textmeshpro objects
     public TextMeshProUGUI offeringTitle_Text,
         offeringSummary_Text,
         offeringType_Text,
         offeringReward_Faith_Text,
         offeringReward_Silver_Text;
-
+    #endregion
+    
     public Image[] offeringGradeImages;
 
     private void Start()

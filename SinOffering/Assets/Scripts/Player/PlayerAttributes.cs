@@ -5,6 +5,7 @@ using System;
 [System.Serializable]
 public class PlayerAttributes 
 {
+    #region variables
     [SerializeField]
     private AttributeData _data;
     private Dictionary<string, AttributeData> attributeDatabase;
@@ -70,8 +71,10 @@ public class PlayerAttributes
     public int EvadeAttributeLevel { get => evadeAttributeLevel; set => evadeAttributeLevel = value; }
 
     #endregion
-    
-    
+
+    #endregion
+
+    #region functions
     void Awake()
     {
         attributeDatabase = AttributeDatabase._instance.GetAttributeDatabase();
@@ -93,6 +96,7 @@ public class PlayerAttributes
         return tmpDic;
     }
 
+    // used for testing random attribute levels
     public int GetCurrentAttributeLevel(AttributeUpgradeTypes.UpgradeType _upgradeType)
     {
         attributeDatabase = AttributeDatabase._instance.GetAttributeDatabase();
@@ -179,6 +183,7 @@ public class PlayerAttributes
         int _num;
         return _num = (int)UnityEngine.Random.Range(0, _maxValue);
     }
+    #endregion
 }
 
 

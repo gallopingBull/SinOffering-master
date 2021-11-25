@@ -91,7 +91,6 @@ public class MenuManager : MonoBehaviour
                 DisplayMenu((int)currentMenu);
                 DisplayMenu(menus.Length - 1); // this displays UI for player's silver
 
-
                 InitStore(menus[(int)currentMenu], currentMenu);
                 break;
 

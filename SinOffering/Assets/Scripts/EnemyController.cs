@@ -155,6 +155,7 @@ public class EnemyController : Entity {
                 BloodActorSprite.gameObject.SetActive(false);
                 DeParentCaller();
                 SpawnSilver();
+                gameManager.IncrementKillCount(1);
                 camManager.RemoveCameraTargets(gameObject.transform);
 
                 print("entity ("+gameObject.name+ ") getting destoryed- Killed()");
