@@ -7,6 +7,7 @@ public class MatchCompletedMenu : MonoBehaviour, IMatchCompletedMenu
 {
     [SerializeField]
     private MatchResultData _matchData;
+    private OfferingData _offeringData;
 
     #region textmeshpro objects
     public TextMeshProUGUI 
@@ -16,6 +17,7 @@ public class MatchCompletedMenu : MonoBehaviour, IMatchCompletedMenu
         offeringReward_Faith_Text,
         offeringReward_Silver_Text,
         
+        matchResults_totalTime_Text,
         matchResults_totalKills_Text,
         matchResults_totalDeaths_Text,
         matchResults_totalDamageRecieved_Text,
@@ -32,12 +34,13 @@ public class MatchCompletedMenu : MonoBehaviour, IMatchCompletedMenu
     {
         // assign text values to UI elements
 
-        //offeringTitle_Text =
+        offeringTitle_Text.text = _offeringData.offeringTitle;
         //offeringSummary_Text,
-        //offeringType_Text,
-        //offeringReward_Faith_Text,
-        //offeringReward_Silver_Text,
+        offeringType_Text.text = _offeringData.gameMode.ToString();
+        //offeringReward_Faith_Text.text = _offeringData.rewards[0].baseRewardValue.ToString();
+        //offeringReward_Silver_Text.text = _offeringData.rewards[1].baseRewardValue.ToString();
 
+        matchResults_totalTime_Text.text = _matchData.totalMatchTime.ToString();
         matchResults_totalKills_Text.text = _matchData.totalKills.ToString();
         matchResults_totalDeaths_Text.text = _matchData.totalDeaths.ToString();
         //matchResults_totalDamageRecieved_Text.text = _matchData.totalDamageRecieved.ToString();
@@ -54,16 +57,17 @@ public class MatchCompletedMenu : MonoBehaviour, IMatchCompletedMenu
     {
     }
 
-    void IMatchCompletedMenu.SetMatchData(MatchResultData resultData)
+    void IMatchCompletedMenu.SetMatchData(MatchResultData resultData, OfferingData offeringData)
     {
         _matchData = resultData;
+        _offeringData = offeringData;
         InitMenu();
     }
 }
 
 public interface IMatchCompletedMenu
 {
-    public void SetMatchData(MatchResultData resultData);
+    public void SetMatchData(MatchResultData resultData, OfferingData offeringData);
 
 }
 

@@ -160,6 +160,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
             gameManager.FailedGame();
         }
 
+        gameManager.IncrementDeathCount();
         BloodActorSprite.gameObject.SetActive(false);
         DeParentCaller();
         Destroy(gameObject, .1f);

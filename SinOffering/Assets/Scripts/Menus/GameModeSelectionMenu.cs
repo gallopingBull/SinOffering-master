@@ -45,14 +45,14 @@ public class GameModeSelectionMenu : MonoBehaviour
     }
 
     // called when button is played
-    public void SendGameMode(GameMode gameMode)
+    public void SendOfferingData(OfferingData offeringData)
     {
         Debug.Log("setting data in GameManager()");
         if (_client == null)
             return;
 
-        Debug.Log("gameMode: " + gameMode.ToString());
-        _client.GetGameMode(gameMode);
+        Debug.Log("gameMode: " + offeringData.ToString());
+        _client.SetOfferingData(offeringData);
     }
 
     public void InitMenu()
@@ -97,7 +97,7 @@ public class GameModeSelectionMenu : MonoBehaviour
         button.gameObject.GetComponent<Button>().onClick.RemoveAllListeners();
 
         button.gameObject.GetComponent<Button>().onClick.AddListener(() =>
-        SendGameMode(_offeringData.gameMode));
+        SendOfferingData(_offeringData));
 
     }
 
@@ -108,18 +108,12 @@ public class GameModeSelectionMenu : MonoBehaviour
     }
 
 
-    private int GetFirstDigit(int n)
-    {
-        while (n >= 10)
-            n /= 10;
-        return n;
-    }
 }
 
 
 public interface IGameModeSelectionMenu
 {
-    void GetGameMode(GameMode gameMode);
-    
+
+    void SetOfferingData(OfferingData offeringData);
 }
 

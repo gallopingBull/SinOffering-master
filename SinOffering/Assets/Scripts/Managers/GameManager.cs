@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
+using System;
+
 public enum GameMode
 {
     randomGunBoxes, 
@@ -15,7 +17,7 @@ public enum GameMode
 public struct MatchResultData
 {
     public string favoriteWeapon;
-    public float totalMatchTime;
+    public string totalMatchTime;
     
     public int totalKills;
     public int totalDeaths;
@@ -39,6 +41,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
     public GameObject GameWonPanel, GameFailedPanel, pauseMenu;
 
     private MatchResultData _offeringResults;
+    private OfferingData _offeringData;
     private GameMode _gameMode;
     //[HideInInspector]
     public bool gameModeSelected = false; 
@@ -111,6 +114,9 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
     [HideInInspector]
     public float CurGameTime;
     [HideInInspector]
+
+    public string s_CurGameTime;
+    [HideInInspector]
     public float TotalGameTime;
 
     #endregion
@@ -136,6 +142,12 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
     }
 	
 	void FixedUpdate () {
+
+        if (!paused && !gameCompleted)
+        {
+            CurGameTime += Time.deltaTime;
+            Debug.Log("curGameTime: " + CurGameTime);
+        }
         if (points == MaxPoints)
             WonGame();
     }
@@ -177,8 +189,12 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
         }
       
         gameCompleted = true;
-        _client = GameWonPanel.GetComponentInParent<IMatchCompletedMenu>();
-        _client.SetMatchData(_offeringResults);
+
+        s_CurGameTime = FormatTime(CurGameTime);
+        _offeringResults.totalMatchTime = s_CurGameTime;
+
+        _client = GameWonPanel.GetComponent<IMatchCompletedMenu>();
+        _client.SetMatchData(_offeringResults, _offeringData);
         //_client.InitMenu();
         
         GameWonPanel.SetActive(true);
@@ -190,8 +206,11 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
         gameCompleted = true;
         GameFailedPanel.SetActive(true);
 
+        s_CurGameTime = FormatTime(CurGameTime);
+        _offeringResults.totalMatchTime = s_CurGameTime;
+
         _client = GameFailedPanel.GetComponent<IMatchCompletedMenu>();
-        _client.SetMatchData(_offeringResults);
+        _client.SetMatchData(_offeringResults, _offeringData);
 
         Invoke("ResetGame", 3);
     }
@@ -248,10 +267,11 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
         TotalEnemyKills += value;
     }
 
-    public void IncrementDeathCount(int value)
+
+    public void IncrementDeathCount()
     {
-        _offeringResults.totalDeaths += value;
-        TotalDeaths += value;
+        _offeringResults.totalDeaths++;
+        TotalDeaths++;
     }
 
     public void DecrementSilver(int value)
@@ -262,10 +282,10 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
     }
     private void SpawnCrate()
     {
-        int locIndex = Random.Range(0, spawnLocs.Length);
+        int locIndex = UnityEngine.Random.Range(0, spawnLocs.Length);
 
         while (locIndex == lastSpawnLoc)
-            locIndex = Random.Range(0, spawnLocs.Length);
+            locIndex = UnityEngine.Random.Range(0, spawnLocs.Length);
 
         Instantiate(Crate, spawnLocs[locIndex].position, spawnLocs[locIndex].rotation);
         lastSpawnLoc = locIndex;
@@ -276,15 +296,21 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
         TotalFaithSpent += value;
     }
 
-    void IGameModeSelectionMenu.GetGameMode(GameMode gameMode)
+    void IGameModeSelectionMenu.SetOfferingData(OfferingData offeringData)
     {
         gameModeSelected = true; // this is only used for offering gate object
-        _gameMode = gameMode;
+        _offeringData = offeringData;
+        _gameMode = _offeringData.gameMode;
     }
-    // need this???
-    public void SetClient ()
+    string FormatTime(float time)
     {
-        //_client = GetComponent<IMatchCompletedMenu>();
+        int intTime = (int)time;
+        int minutes = intTime / 60;
+        int seconds = intTime % 60;
+        float fraction = time * 1000;
+        fraction = (fraction % 1000);
+        string timeText = String.Format("{0:00}:{1:00}:{2:000}", minutes, seconds, fraction);
+        return timeText;
     }
     #endregion
 
