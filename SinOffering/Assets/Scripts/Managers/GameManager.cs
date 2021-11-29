@@ -5,39 +5,21 @@ using UnityEngine;
 
 using System;
 
-public enum GameMode
-{
-    randomGunBoxes, 
-    randomGunBoxesShield, 
-    survival, 
-    timeAttack,
-    dashAbilityOnly,
-    meleeOnly
-}
-public struct MatchResultData
-{
-    public string favoriteWeapon;
-    public string totalMatchTime;
-    
-    public int totalKills;
-    public int totalDeaths;
-    public int totalDamageRecieved;
-    public int totalBiggestKillStreak;
-    public int totalGunKills;
-    public int totalMeleeKills;
-    public int totalEnemiesSliced;
-    public int totalEnemiesExploded;
-    public int totalSilverAccrued;
-    public int totalItemsUsed;
-}
 
 public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
 
     #region variables
-    
-    public int points; // points player currently has
-    public int MaxPoints = 10;
 
+    public int points; // points player currently has
+    #region delete these after moving them into gameModeAttribuites
+    public int MaxPoints = 10; // this should be referemce to MaxPoint value in _offeringData
+    public bool SpawnCrates = false;
+    // crate spawn  locations
+    public Transform[] spawnLocs;
+    private int lastSpawnLoc;
+    public GameObject Crate;
+    #endregion
+    
     public GameObject GameWonPanel, GameFailedPanel, pauseMenu;
 
     private MatchResultData _offeringResults;
@@ -45,15 +27,11 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
     private GameMode _gameMode;
     //[HideInInspector]
     public bool gameModeSelected = false; 
+    public bool inLobbby = false; 
 
     private IMatchCompletedMenu _client = null;
 
     public bool paused; 
-    public bool SpawnCrates = false; 
-    // crate spawn  locations
-    public Transform[] spawnLocs;
-    private int lastSpawnLoc;
-    public GameObject Crate;
 
     public bool gameCompleted;
 
@@ -142,12 +120,13 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
     }
 	
 	void FixedUpdate () {
-
         if (!paused && !gameCompleted)
-        {
-            CurGameTime += Time.deltaTime;
-            Debug.Log("curGameTime: " + CurGameTime);
-        }
+            CurGameTime += Time.deltaTime; //Debug.Log("curGameTime: " + CurGameTime);
+
+        //if (_offeringData != null)
+           //if (_offeringData.GameCompleted())
+                //WonGame();
+
         if (points == MaxPoints)
             WonGame();
     }
@@ -195,7 +174,6 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
 
         _client = GameWonPanel.GetComponent<IMatchCompletedMenu>();
         _client.SetMatchData(_offeringResults, _offeringData);
-        //_client.InitMenu();
         
         GameWonPanel.SetActive(true);
         Invoke("ResetGame", 3);
@@ -314,6 +292,63 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
     }
     #endregion
 
+}
+[System.Serializable]
+[CreateAssetMenu(fileName = "GameMode", menuName = "DataObjects/GameMode")]
+public class GameModeAttributesSSS: ScriptableObject
+{
+    // game mode
+    // rules 
+    // objective
+    // match time
+
+    public int MaxPoints = 10;
+    public bool SpawnCrates = false;
+    // crate spawn  locations
+    public Transform[] spawnLocs;
+    private int lastSpawnLoc;
+    public GameObject Crate;
+    //abstract public void CheckGameStatus();
+
+}
+
+//class RandomWeapons : GameModeAttributes
+//{
+    // game mode
+    // rules 
+    // objective
+    // match time
+
+    //override public void CheckGameStatus() { 
+
+    //}
+
+//}
+
+public enum GameMode
+{
+    randomGunBoxes,
+    randomGunBoxesShield,
+    survival,
+    timeAttack,
+    dashAbilityOnly,
+    meleeOnly
+}
+public struct MatchResultData
+{
+    public string favoriteWeapon;
+    public string totalMatchTime;
+
+    public int totalKills;
+    public int totalDeaths;
+    public int totalDamageRecieved;
+    public int totalBiggestKillStreak;
+    public int totalGunKills;
+    public int totalMeleeKills;
+    public int totalEnemiesSliced;
+    public int totalEnemiesExploded;
+    public int totalSilverAccrued;
+    public int totalItemsUsed;
 }
 
 

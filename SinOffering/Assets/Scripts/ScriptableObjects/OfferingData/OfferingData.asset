@@ -17,9 +17,9 @@ MonoBehaviour:
     aliquet euismod justo, nec feugiat magna lacinia tincidunt. Nullam id rhoncus
     magna. Nulla aliquam condimentum neque, ut venenatis tellus tincidunt id. Nulla
     luctus venenatis dolor ut mattis. Suspendisse potenti. '
-  timeLimit: 0
   characterPortrait: {fileID: -2278439639723055928, guid: 6783eb16514528043ab96557ced8bc7f, type: 3}
   gameMode: 0
+  matchSetting: {fileID: 11400000, guid: fb647eca5294f234da199f88ba7fc784, type: 2}
   rewards:
   - rewardType: 0
     baseRewardValue: 100

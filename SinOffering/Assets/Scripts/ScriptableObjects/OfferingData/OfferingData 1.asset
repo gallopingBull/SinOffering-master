@@ -15,9 +15,9 @@ MonoBehaviour:
   offeringTitle: offering title 1
   offeringSummary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
     aliquet euismod justo, nec feugiat magna lacinia tincid
-  timeLimit: 0
   characterPortrait: {fileID: -31702766495177762, guid: 6783eb16514528043ab96557ced8bc7f, type: 3}
-  gameMode: 4
+  gameMode: 1
+  matchSetting: {fileID: 11400000, guid: fb647eca5294f234da199f88ba7fc784, type: 2}
   rewards:
   - rewardType: 0
     baseRewardValue: 100

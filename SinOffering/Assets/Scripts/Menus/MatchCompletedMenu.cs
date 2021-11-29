@@ -12,7 +12,7 @@ public class MatchCompletedMenu : MonoBehaviour, IMatchCompletedMenu
     #region textmeshpro objects
     public TextMeshProUGUI 
         offeringTitle_Text,
-        offeringSummary_Text,
+        ////offeringFailedMessage_Text,
         offeringType_Text,
         offeringReward_Faith_Text,
         offeringReward_Silver_Text,
@@ -29,13 +29,12 @@ public class MatchCompletedMenu : MonoBehaviour, IMatchCompletedMenu
         matchResults_totalSilverAccrued_Text,
         matchResults_totalItemsUsed_Text;
     #endregion
-
+    
+    // assign text values to UI elements
     public void InitMenu()
     {
-        // assign text values to UI elements
-
         offeringTitle_Text.text = _offeringData.offeringTitle;
-        //offeringSummary_Text,
+        //offeringFailedMessage_Text,
         offeringType_Text.text = _offeringData.gameMode.ToString();
         //offeringReward_Faith_Text.text = _offeringData.rewards[0].baseRewardValue.ToString();
         //offeringReward_Silver_Text.text = _offeringData.rewards[1].baseRewardValue.ToString();

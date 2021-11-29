@@ -8,7 +8,6 @@ public class SaveSystem : MonoBehaviour
     [HideInInspector]
     public static SaveSystem _instance;
 
-
     private PlayerSettings _playerSettings = new PlayerSettings();
 
     private GameManager gameManager;
