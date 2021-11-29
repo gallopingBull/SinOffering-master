@@ -6,7 +6,8 @@ using UnityEngine;
 using System;
 
 
-public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
+public class GameManager : MonoBehaviour, IGameModeSelectionMenu
+{
 
     #region variables
 
@@ -37,13 +38,12 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
 
     private Text pointsText; 
 
+   
+    //[HideInInspector]
+    public GameObject RadialMenu;
     [HideInInspector]
     public static GameManager instance;
 
-    //[HideInInspector]
-    public GameObject RadialMenu;
-
-    public List<GameObject> lights;
     [HideInInspector]
     public CameraManager camManager;
 
@@ -201,33 +201,6 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
     public void AddPoint()
     {
         points++;
-
-        /*
-         * i think these lights should be an observer for the points
-         * lights turn on based on that
-         * */
-
-        switch (points)
-        {
-            case 6:
-                lights[0].SetActive(true);
-                break;
-            case 7:
-                lights[1].SetActive(true);
-                break;
-            case 8:
-                lights[2].SetActive(true);
-                break;
-            case 9:
-                lights[3].SetActive(true);
-                break;
-            case 10:
-                lights[4].SetActive(true);
-                break;
-            default:
-                break;
-        }
-
         pointsText.text = points.ToString(); 
         SpawnCrate();
     }
@@ -293,37 +266,6 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu{
     #endregion
 
 }
-[System.Serializable]
-[CreateAssetMenu(fileName = "GameMode", menuName = "DataObjects/GameMode")]
-public class GameModeAttributesSSS: ScriptableObject
-{
-    // game mode
-    // rules 
-    // objective
-    // match time
-
-    public int MaxPoints = 10;
-    public bool SpawnCrates = false;
-    // crate spawn  locations
-    public Transform[] spawnLocs;
-    private int lastSpawnLoc;
-    public GameObject Crate;
-    //abstract public void CheckGameStatus();
-
-}
-
-//class RandomWeapons : GameModeAttributes
-//{
-    // game mode
-    // rules 
-    // objective
-    // match time
-
-    //override public void CheckGameStatus() { 
-
-    //}
-
-//}
 
 public enum GameMode
 {
