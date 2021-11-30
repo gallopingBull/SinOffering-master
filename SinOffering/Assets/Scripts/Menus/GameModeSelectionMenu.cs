@@ -98,22 +98,17 @@ public class GameModeSelectionMenu : MonoBehaviour
 
         button.gameObject.GetComponent<Button>().onClick.AddListener(() =>
         SendOfferingData(_offeringData));
-
     }
-
 
     private void GameModeSelected()
     {
         GameManager.instance.gameModeSelected = true;
     }
-
-
 }
 
 
 public interface IGameModeSelectionMenu
 {
-
     void SetOfferingData(OfferingData offeringData);
 }
 

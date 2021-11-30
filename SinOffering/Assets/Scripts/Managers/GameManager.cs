@@ -1,30 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
-
 using System;
-
 
 public class GameManager : MonoBehaviour, IGameModeSelectionMenu
 {
-
     #region variables
 
     public int points; // points player currently has
+    
     #region delete these after moving them into gameModeAttribuites
-    public int MaxPoints = 10; // this should be referemce to MaxPoint value in _offeringData
-    public bool SpawnCrates = false;
+    private int _maxPoints = 0; // this should be referemce to MaxPoint value in _offeringData
+    private bool _spawnCrates = false;
     // crate spawn  locations
-    public Transform[] spawnLocs;
-    private int lastSpawnLoc;
-    public GameObject Crate;
+    public Transform[] _spawnLocs;
+    private int _lastSpawnLoc;
+    private GameObject _crate;
     #endregion
     
     public GameObject GameWonPanel, GameFailedPanel, pauseMenu;
 
     private MatchResultData _offeringResults;
-    private OfferingData _offeringData;
+    public OfferingData _offeringData;
     private GameMode _gameMode;
     //[HideInInspector]
     public bool gameModeSelected = false; 
@@ -38,10 +37,9 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
 
     private Text pointsText; 
 
-   
     //[HideInInspector]
     public GameObject RadialMenu;
-    [HideInInspector]
+    //[HideInInspector]
     public static GameManager instance;
 
     [HideInInspector]
@@ -99,64 +97,96 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
 
     #endregion
 
-
     #endregion
 
     #region functions
     private void Awake()
     {
         pointsText = GameObject.Find("Text_PointsHUD").GetComponent<Text>();
-        instance = this;
-    }
 
+        Debug.Log("instance: "+ instance);
+        if (instance == null)
+        {
+            instance = this;
+            Debug.Log(gameObject);
+            DontDestroyOnLoad(this.gameObject.transform.parent.gameObject);
+            SetMenus();
+        }
+        else
+        {
+            Debug.Log("instance.SetMenus()");
+            GameManager.instance.SetMenus();
+            Destroy(this.gameObject.transform.parent.gameObject);
+        }
+            
+        //SetMenus();
+        Debug.Log("Awake()");
+    }
+    
     void Start () {
         camManager = CameraManager.instance;
+      
         
-        //if (!SoundManager.MusicSource.isPlaying)
-            //SoundManager.PlayMusicTrack();
 
-        //if (SpawnCrates)
-            //Invoke("SpawnCrate", 1f);
+        //if (!SoundManager.MusicSource.isPlaying)
+        //SoundManager.PlayMusicTrack();
+    
     }
 	
 	void FixedUpdate () {
         if (!paused && !gameCompleted)
             CurGameTime += Time.deltaTime; //Debug.Log("curGameTime: " + CurGameTime);
 
-        //if (_offeringData != null)
-           //if (_offeringData.GameCompleted())
-                //WonGame();
-
-        if (points == MaxPoints)
-            WonGame();
+        // only have this here to check if time attack mode is completed
+        // since I cant have an update loop in a scriptable oject
+        if (_offeringData != null)
+            if (_offeringData.gameMode == GameMode.timeAttack && _offeringData.GameCompleted())
+                WonGame();
     }
 
     // set game rules
     private void InitGameRound()
     {
+        Debug.Log("initGameRound()");
+        Debug.Log("_gameMode: " + _gameMode);
         switch (_gameMode)
         {
             case GameMode.randomGunBoxes:
-                SpawnCrates = true;
+                Debug.Log("init - RandomGunMode");
+                RandomGunMode tmpRand = (RandomGunMode)_offeringData.matchSetting;
+                _spawnCrates = tmpRand.SpawnCrates;
+                _spawnLocs = tmpRand.spawnLocs;
+                _maxPoints = tmpRand.MaxPoints;
+                _crate = tmpRand.Crates;
                 Invoke("SpawnCrate", 1f);
                 break;
+
             case GameMode.randomGunBoxesShield:
-                SpawnCrates = true;
+                Debug.Log("init - RandomGunModeEx");
+                RandomGunModeExtreme tmpRandEx = (RandomGunModeExtreme)_offeringData.matchSetting;
+                _spawnCrates = tmpRandEx.SpawnCrates;
+                _spawnLocs = tmpRandEx.spawnLocs;
+                _maxPoints = tmpRandEx.MaxPoints;
+                _crate = tmpRandEx.Crates;
                 Invoke("SpawnCrate", 1f);
                 break;
             case GameMode.survival:
+                //SurvivalMode tmpSurvival = (SurvivalMode)_offeringData.matchSetting;
                 break;
             case GameMode.timeAttack:
+                //TimeAttackMode tmpTime = (TimeAttackMode)_offeringData.matchSetting;
                 break;
             case GameMode.dashAbilityOnly:
+                //DashAbilityMode tmpDash = (DashAbilityMode)_offeringData.matchSetting;
                 break;
             case GameMode.meleeOnly:
+                //MeleeMode tmpMelee = (MeleeMode)_offeringData.matchSetting;
                 break;
             default:
                 break;
         }
     }
-   
+  
     private void WonGame()
     {
         gameModeSelected = false;
@@ -198,12 +228,43 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
         GetComponent<LoadScene>().ReloadCurrentScene();
     }
 
+    // called first
+    void OnEnable()
+    {
+        Debug.Log("OnEnable called");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    // called second
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        //SetMenus();
+
+        Debug.Log("Start() || currentScene: " + currentScene.name);
+        if (sceneName == "Limbo")
+        {
+            Debug.Log("in limbo scene");
+            if (_offeringData != null)
+                InitGameRound();
+
+            // Do something...
+        }
+        Debug.Log("OnSceneLoaded: " + scene.name);
+        SetMenus();
+    }
+
     public void AddPoint()
     {
         points++;
-        pointsText.text = points.ToString(); 
-        SpawnCrate();
+        pointsText.text = points.ToString();
+        if (points >= _maxPoints)
+            WonGame();
+        else
+            SpawnCrate();
     }
+
 
     public void IncrementSilver(int value)
     {
@@ -218,7 +279,6 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
         TotalEnemyKills += value;
     }
 
-
     public void IncrementDeathCount()
     {
         _offeringResults.totalDeaths++;
@@ -231,21 +291,46 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
         TotalSilver -= value;
         HUDManager._instance.SetUIObjectValues();
     }
+
     private void SpawnCrate()
     {
-        int locIndex = UnityEngine.Random.Range(0, spawnLocs.Length);
+        int locIndex = UnityEngine.Random.Range(0, _spawnLocs[0].childCount);
 
-        while (locIndex == lastSpawnLoc)
-            locIndex = UnityEngine.Random.Range(0, spawnLocs.Length);
+        while (locIndex == _lastSpawnLoc)
+            locIndex = UnityEngine.Random.Range(0, _spawnLocs[0].childCount);
 
-        Instantiate(Crate, spawnLocs[locIndex].position, spawnLocs[locIndex].rotation);
-        lastSpawnLoc = locIndex;
+        Instantiate(_crate, _spawnLocs[0].GetChild(locIndex).position, _spawnLocs[0].GetChild(locIndex).rotation);
+        
+        _lastSpawnLoc = locIndex;
     }
 
     public void IncrementFaithSpent(int value)
     {
         TotalFaithSpent += value;
     }
+
+
+
+    private void SetMenus() 
+    {
+        Debug.Log("--- SetMenus() ---");
+        //StartCoroutine("SetMenusDelay");
+        if (GameWonPanel == null)
+        {
+            Debug.Log("setting UI panels");
+            GameWonPanel = GameObject.Find("GameWonPanel");
+            GameWonPanel.SetActive(false);
+
+            GameFailedPanel = GameObject.Find("GameFailedPanel");
+            GameFailedPanel.SetActive(false);
+
+            pauseMenu = GameObject.Find("PauseMenuUI");
+            pauseMenu.SetActive(false);
+
+        }
+    }
+
+  
 
     void IGameModeSelectionMenu.SetOfferingData(OfferingData offeringData)
     {

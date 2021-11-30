@@ -31,8 +31,10 @@ public class SoundManager : MonoBehaviour
 
     void Awake()
     {
-        if (instance == null) 
+        if (instance == null)
             instance = this;
+        else
+            Destroy(this);
 
         //DontDestroyOnLoad(instance.gameObject); //might keep this, but need to figure out how to extend this into
         //other scenes correctly 
@@ -49,7 +51,8 @@ public class SoundManager : MonoBehaviour
 
     public static void PlaySound(AudioClip sound)
     {
-        SFXSource.PlayOneShot(sound);
+        if (SFXSource != null)
+            SFXSource.PlayOneShot(sound);
     }
 
     public static void PlayMusicTrack()
@@ -90,6 +93,7 @@ public class SoundManager : MonoBehaviour
 
     private void InitSoundTexts()
     {
+        Debug.Log("--- InitSoundTexts()---");
         instance.volumeSlider = GameObject.Find("Slider_MusicVolume").GetComponent<Slider>();
         instance.sfxSlider = GameObject.Find("Slider_SFXVolume").GetComponent<Slider>();
 
@@ -99,6 +103,7 @@ public class SoundManager : MonoBehaviour
         instance.audioPanel.SetActive(false);
         if (sceneName != "MainMenu")    
         {
+            Debug.Log("--- InitSoundTexts() || assigning pausemenu ---");
             GameObject.Find("Panel_PauseMainMenu").SetActive(true);
             GameManager.instance.pauseMenu.SetActive(false);
         }

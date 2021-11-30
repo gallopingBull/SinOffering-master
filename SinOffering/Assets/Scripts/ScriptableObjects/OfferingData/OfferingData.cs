@@ -12,7 +12,6 @@ public class OfferingData : ScriptableObject//, IData<WeaponData>
     
     public Sprite characterPortrait;
     public GameMode gameMode;
-    [SerializeField]
     public GameModeAttributes matchSetting;
     public Reward[] rewards;
     
@@ -20,11 +19,11 @@ public class OfferingData : ScriptableObject//, IData<WeaponData>
     {
         matchSetting.CheckGameStatus();
     }
+
     public bool GameCompleted()
     {
        return matchSetting.CheckGameStatus();
     }
-
 }
 
 // end match reward

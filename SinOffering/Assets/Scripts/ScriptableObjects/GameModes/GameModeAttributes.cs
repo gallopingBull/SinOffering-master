@@ -8,5 +8,7 @@ public class GameModeAttributes : ScriptableObject
     // objective
     // match time
     virtual public bool CheckGameStatus() { return false;}
+
+
 }
 

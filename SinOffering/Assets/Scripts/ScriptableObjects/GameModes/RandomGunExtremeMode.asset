@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: RandomGunExtremeMode
   m_EditorClassIdentifier: Assembly-CSharp::RandomGunExtremeMode
   MaxPoints: 10
-  SpawnCrates: 0
-  spawnLocs: []
-  Crates: {fileID: 0}
+  SpawnCrates: 1
+  spawnLocs:
+  - {fileID: 3919680654564342015, guid: ba24c3384365db94b9c9ccccd117ff28, type: 3}
+  Crates: {fileID: 1059059042186422, guid: e45f2889b87d90a46826687bb7287fe2, type: 3}

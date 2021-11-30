@@ -7,10 +7,9 @@ using UnityEngine;
 public class RandomGunModeExtreme: GameModeAttributes
 {
     public int MaxPoints = 10;
-    public bool SpawnCrates = false;
+    public bool SpawnCrates = true;
     // crate spawn  locations
     public Transform[] spawnLocs;
-    private int lastSpawnLoc;
     public GameObject Crates;
 
     public override bool CheckGameStatus()  
