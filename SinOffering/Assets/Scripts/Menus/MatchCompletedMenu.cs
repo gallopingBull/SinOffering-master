@@ -13,7 +13,7 @@ public class MatchCompletedMenu : MonoBehaviour, IMatchCompletedMenu
     public TextMeshProUGUI 
         offeringTitle_Text,
         ////offeringFailedMessage_Text,
-        offeringType_Text,
+        //offeringType_Text,
         offeringReward_Faith_Text,
         offeringReward_Silver_Text,
         
@@ -35,7 +35,7 @@ public class MatchCompletedMenu : MonoBehaviour, IMatchCompletedMenu
     {
         offeringTitle_Text.text = _offeringData.offeringTitle;
         //offeringFailedMessage_Text,
-        offeringType_Text.text = _offeringData.gameMode.ToString();
+        //offeringType_Text.text = _offeringData.gameMode.ToString();
         //offeringReward_Faith_Text.text = _offeringData.rewards[0].baseRewardValue.ToString();
         //offeringReward_Silver_Text.text = _offeringData.rewards[1].baseRewardValue.ToString();
 

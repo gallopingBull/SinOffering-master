@@ -62,10 +62,11 @@ public class SoundManager : MonoBehaviour
 
     public void SetMusicVolumeSlider()
     {
-        musicVolume = volumeSlider.value;
-        sfxVolume = sfxSlider.value;
-        volumeText.text = (Mathf.Round(musicVolume * 100)).ToString();
-        sfxText.text = (Mathf.Round(sfxVolume * 100)).ToString();
+        musicVolume = instance.volumeSlider.value;
+
+        sfxVolume = instance.sfxSlider.value;
+        instance.volumeText.text = (Mathf.Round(musicVolume * 100)).ToString();
+        instance.sfxText.text = (Mathf.Round(sfxVolume * 100)).ToString();
 
         PlayerPrefs.SetFloat("MusicVolume", musicVolume);
         PlayerPrefs.SetFloat("SFXVolume", sfxVolume);
@@ -93,7 +94,6 @@ public class SoundManager : MonoBehaviour
 
     private void InitSoundTexts()
     {
-        Debug.Log("--- InitSoundTexts()---");
         instance.volumeSlider = GameObject.Find("Slider_MusicVolume").GetComponent<Slider>();
         instance.sfxSlider = GameObject.Find("Slider_SFXVolume").GetComponent<Slider>();
 

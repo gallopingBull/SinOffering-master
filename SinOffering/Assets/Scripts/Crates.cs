@@ -75,6 +75,11 @@ public class Crates : MonoBehaviour {
 
     private void AddCrateToCamTargets()
     {
+        if (gameManager.camManager == null)
+        {
+            Debug.Log("gameManager == null");
+            return;
+        }
         gameManager.camManager.AddCameraTargets(gameObject.transform, 30f);
     }
 }

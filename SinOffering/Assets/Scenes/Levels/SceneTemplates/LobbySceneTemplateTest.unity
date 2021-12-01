@@ -3730,7 +3730,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offeringTitle_Text: {fileID: 0}
-  offeringType_Text: {fileID: 0}
   offeringReward_Faith_Text: {fileID: 0}
   offeringReward_Silver_Text: {fileID: 0}
   matchResults_totalTime_Text: {fileID: 0}
@@ -12052,7 +12051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1975377619
 Transform:
   m_ObjectHideFlags: 0

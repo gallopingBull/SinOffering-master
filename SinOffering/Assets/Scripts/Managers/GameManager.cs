@@ -10,7 +10,11 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     #region variables
 
     public int points; // points player currently has
-    
+    public bool paused;
+
+    public bool gameCompleted;
+
+
     #region delete these after moving them into gameModeAttribuites
     private int _maxPoints = 0; // this should be referemce to MaxPoint value in _offeringData
     private bool _spawnCrates = false;
@@ -22,18 +26,16 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     
     public GameObject GameWonPanel, GameFailedPanel, pauseMenu;
 
-    private MatchResultData _offeringResults;
-    public OfferingData _offeringData;
-    private GameMode _gameMode;
+
     //[HideInInspector]
     public bool gameModeSelected = false; 
     public bool inLobbby = false; 
 
     private IMatchCompletedMenu _client = null;
 
-    public bool paused; 
-
-    public bool gameCompleted;
+    private MatchResultData _offeringResults;
+    public OfferingData _offeringData;
+    private GameMode _gameMode;
 
     private Text pointsText; 
 
@@ -41,9 +43,13 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     public GameObject RadialMenu;
     //[HideInInspector]
     public static GameManager instance;
+    private GameObject enemyManager;
 
     [HideInInspector]
     public CameraManager camManager;
+    private Scene currentScene;
+    private Scene lobbyScene;
+
 
     #region Peristent GameStats
 
@@ -102,7 +108,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     #region functions
     private void Awake()
     {
-        pointsText = GameObject.Find("Text_PointsHUD").GetComponent<Text>();
+        //pointsText = GameObject.Find("Text_PointsHUD").GetComponent<Text>();
 
         Debug.Log("instance: "+ instance);
         if (instance == null)
@@ -110,23 +116,18 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
             instance = this;
             Debug.Log(gameObject);
             DontDestroyOnLoad(this.gameObject.transform.parent.gameObject);
-            SetMenus();
         }
         else
         {
             Debug.Log("instance.SetMenus()");
-            GameManager.instance.SetMenus();
+            //GameManager.instance.SetMenus();
             Destroy(this.gameObject.transform.parent.gameObject);
         }
             
-        //SetMenus();
-        Debug.Log("Awake()");
     }
     
     void Start () {
         camManager = CameraManager.instance;
-      
-        
 
         //if (!SoundManager.MusicSource.isPlaying)
         //SoundManager.PlayMusicTrack();
@@ -147,12 +148,11 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     // set game rules
     private void InitGameRound()
     {
-        Debug.Log("initGameRound()");
-        Debug.Log("_gameMode: " + _gameMode);
         switch (_gameMode)
         {
             case GameMode.randomGunBoxes:
                 Debug.Log("init - RandomGunMode");
+                points = 0;
                 RandomGunMode tmpRand = (RandomGunMode)_offeringData.matchSetting;
                 _spawnCrates = tmpRand.SpawnCrates;
                 _spawnLocs = tmpRand.spawnLocs;
@@ -163,6 +163,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
 
             case GameMode.randomGunBoxesShield:
                 Debug.Log("init - RandomGunModeEx");
+                points = 0;
                 RandomGunModeExtreme tmpRandEx = (RandomGunModeExtreme)_offeringData.matchSetting;
                 _spawnCrates = tmpRandEx.SpawnCrates;
                 _spawnLocs = tmpRandEx.spawnLocs;
@@ -206,7 +207,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
         _client.SetMatchData(_offeringResults, _offeringData);
         
         GameWonPanel.SetActive(true);
-        Invoke("ResetGame", 3);
+        Invoke("ReturnToLobby", 3);
     }
 
     public void FailedGame()
@@ -227,6 +228,11 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     {
         GetComponent<LoadScene>().ReloadCurrentScene();
     }
+    private void ReturnToLobby()
+    {
+        // add lobby scene in parameter
+        GetComponent<LoadScene>().LoadSceneByIndex(5);
+    }
 
     // called first
     void OnEnable()
@@ -238,27 +244,29 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     // called second
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Scene currentScene = SceneManager.GetActiveScene();
+        currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-        //SetMenus();
 
-        Debug.Log("Start() || currentScene: " + currentScene.name);
+        // check and assign lobby sceneID
+        if(currentScene.name == "LobbySceneTemplateTest")
+            lobbyScene = currentScene;
+
         if (sceneName == "Limbo")
         {
-            Debug.Log("in limbo scene");
+            enemyManager = GameObject.Find("EnemyManager");
             if (_offeringData != null)
                 InitGameRound();
-
-            // Do something...
         }
-        Debug.Log("OnSceneLoaded: " + scene.name);
-        SetMenus();
+        Debug.Log("OnSceneLoaded: " + scene.name); 
+
+        if(currentScene.name != "MainMenu")
+            SetMenus();
     }
 
     public void AddPoint()
     {
         points++;
-        pointsText.text = points.ToString();
+        //pointsText.text = points.ToString();
         if (points >= _maxPoints)
             WonGame();
         else
@@ -293,12 +301,13 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     }
 
     private void SpawnCrate()
-    {
+    {       
+        // change _spawnLoc to a single gameobject refrence - not arrat/list!!!
         int locIndex = UnityEngine.Random.Range(0, _spawnLocs[0].childCount);
 
         while (locIndex == _lastSpawnLoc)
             locIndex = UnityEngine.Random.Range(0, _spawnLocs[0].childCount);
-
+ 
         Instantiate(_crate, _spawnLocs[0].GetChild(locIndex).position, _spawnLocs[0].GetChild(locIndex).rotation);
         
         _lastSpawnLoc = locIndex;
@@ -315,18 +324,24 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     {
         Debug.Log("--- SetMenus() ---");
         //StartCoroutine("SetMenusDelay");
-        if (GameWonPanel == null)
+        if (GameWonPanel == null )
         {
-            Debug.Log("setting UI panels");
-            GameWonPanel = GameObject.Find("GameWonPanel");
-            GameWonPanel.SetActive(false);
+            if (currentScene.name != "HubScene" && 
+                currentScene.name != "LobbySceneTemplateTest")
+            {
+                Debug.Log("setting UI panels");
+                GameWonPanel = GameObject.Find("GameWonPanel");
+                GameWonPanel.SetActive(false);
 
-            GameFailedPanel = GameObject.Find("GameFailedPanel");
-            GameFailedPanel.SetActive(false);
-
+                GameFailedPanel = GameObject.Find("GameFailedPanel");
+                GameFailedPanel.SetActive(false);
+                enemyManager.SetActive(true);
+            }
+        }
+        if (pauseMenu == null)
+        {
             pauseMenu = GameObject.Find("PauseMenuUI");
             pauseMenu.SetActive(false);
-
         }
     }
 

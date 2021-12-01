@@ -21,9 +21,7 @@ public class AlterShield : MonoBehaviour
     {
         curkill = (gameManager.CurEnemyKills - difference);
         if (curkill >= killRequired)
-        {
             Destroy(gameObject);
-        }
     }
     private void OnTriggerEnter(Collider col)
     {
@@ -33,7 +31,7 @@ public class AlterShield : MonoBehaviour
             if (curkill < killRequired)
             {
                 //print("kill player");
-                Debug.LogError("killing player from altershiekd.cs");
+                Debug.Log("killing player from altershiekd.cs");
                 col.gameObject.GetComponent<PlayerController>().Killed();
             }
         }
