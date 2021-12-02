@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94f1059e2af05548a7ac68e93383299, type: 3}
   m_Name: RandomGunExtremeMode
   m_EditorClassIdentifier: Assembly-CSharp::RandomGunExtremeMode
+  GameModeModifier:
+    WeaponsEnabled: 1
+    DashAbilityEnabled: 1
+    MeleeEnabled: 1
   MaxPoints: 10
   SpawnCrates: 1
   spawnLocs:

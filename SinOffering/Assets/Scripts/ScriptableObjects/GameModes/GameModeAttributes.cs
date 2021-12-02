@@ -7,8 +7,8 @@ public class GameModeAttributes : ScriptableObject
     // rules 
     // objective
     // match time
-    virtual public bool CheckGameStatus() { return false;}
+ 
+    public GameModeModifier GameModeModifier;
 
-
+    virtual public bool CheckGameStatus() { return false; }
 }
-

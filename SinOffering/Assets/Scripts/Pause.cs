@@ -18,7 +18,7 @@ public class Pause : MonoBehaviour
     public void PauseGame()
     {
         // add some bool in base class for menus when theyre genericed so they can get checked of theyrective all at once.
-        if ((gm.GameWonPanel != null))
+        if (gm.GameWonPanel != null)
         {
             if (!gm.GameWonPanel.activeInHierarchy && !gm.paused)
             {

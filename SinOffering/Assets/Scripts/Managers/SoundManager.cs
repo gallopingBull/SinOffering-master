@@ -38,15 +38,19 @@ public class SoundManager : MonoBehaviour
 
         //DontDestroyOnLoad(instance.gameObject); //might keep this, but need to figure out how to extend this into
         //other scenes correctly 
-        MusicSource = GameObject.Find("MusicSource").GetComponent<AudioSource>();
+        /*        MusicSource = GameObject.Find("MusicSource").GetComponent<AudioSource>();
         SFXSource = GetComponent<AudioSource>();
         instance.audioPanel = GameObject.Find("Panel_AudioSettings");
         sceneName = SceneManager.GetActiveScene().name;
+         * 
+         * 
+         */
+       //// InitSoundManager();
     }
 
     private void Start()
     { 
-        InitSoundTexts();
+
     }
 
     public static void PlaySound(AudioClip sound)
@@ -92,8 +96,14 @@ public class SoundManager : MonoBehaviour
         SFXSource.volume = sfxVol;
     }
 
-    private void InitSoundTexts()
+    public void InitSoundManager()
     {
+        Debug.Log("InitSoundManager");
+        MusicSource = GameObject.Find("MusicSource").GetComponent<AudioSource>();
+        SFXSource = GetComponent<AudioSource>();
+        instance.audioPanel = GameObject.Find("Panel_AudioSettings");
+        sceneName = SceneManager.GetActiveScene().name;
+        ////////////////////////////////////////////////////
         instance.volumeSlider = GameObject.Find("Slider_MusicVolume").GetComponent<Slider>();
         instance.sfxSlider = GameObject.Find("Slider_SFXVolume").GetComponent<Slider>();
 
@@ -104,11 +114,11 @@ public class SoundManager : MonoBehaviour
         if (sceneName != "MainMenu")    
         {
             Debug.Log("--- InitSoundTexts() || assigning pausemenu ---");
-            GameObject.Find("Panel_PauseMainMenu").SetActive(true);
-            GameManager.instance.pauseMenu.SetActive(false);
+            //GameObject.Find("Panel_PauseMainMenu").SetActive(true);
+            //GameManager.instance.pauseMenu.SetActive(false);
         }
     
-        //after assignincall playersettings.cs to update slider/text values with saved 
+        // after assignincall playersettings.cs to update slider/text values with saved 
         GameObject.Find("Main Camera").GetComponent<PlayerSettings>().InitSound();
             
     }

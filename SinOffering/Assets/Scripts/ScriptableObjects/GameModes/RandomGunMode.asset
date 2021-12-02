@@ -12,6 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14632aee0a128fd49867288873f7549e, type: 3}
   m_Name: RandomGunMode
   m_EditorClassIdentifier: 
+  GameModeModifier:
+    WeaponsEnabled: 1
+    DashAbilityEnabled: 1
+    MeleeEnabled: 1
+    OneHitKO: 0
+    LowGravity: 0
+    NoEnemies: 0
+    SloMo: 0
   MaxPoints: 10
   SpawnCrates: 0
   spawnLocs: []

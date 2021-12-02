@@ -133,11 +133,14 @@ public class MaskDecalPool : MonoBehaviour
 
     public void SplatSound()
     {
+        // limit number of splat sounds played
         if (soundsPlayed < MaxSounds)
         {
-            soundsPlayed++;
+            soundsPlayed++; 
+            
+            //if (source != null) { }
             source.pitch = Random.Range(0.9f, 1.1f);
-            source.PlayOneShot(sounds[Random.Range(0, sounds.Length)], Random.Range(.1f,.35f));
+            source.PlayOneShot(sounds[Random.Range(0, sounds.Length)], Random.Range(.1f, .35f));
         }
     }
 

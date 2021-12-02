@@ -80,6 +80,6 @@ public class Crates : MonoBehaviour {
             Debug.Log("gameManager == null");
             return;
         }
-        gameManager.camManager.AddCameraTargets(gameObject.transform, 30f);
+        gameManager.camManager.AddCameraTargets(gameObject.transform, 40f);
     }
 }

@@ -15,9 +15,7 @@ public class RandomGunModeExtreme: GameModeAttributes
     public override bool CheckGameStatus()  
     {
         bool completed = false;
-
         Debug.Log("gameMode: ");
         return completed;
-        //base.CheckGameStatus();
     }
 }

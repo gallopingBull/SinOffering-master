@@ -51,6 +51,10 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     private Scene lobbyScene;
 
 
+    //private bool _weaponsEnabled = true;
+    //private bool _dashAbilityEnabled = true;
+    //private bool _meleeEnabled = true;
+
     #region Peristent GameStats
 
     //[HideInInspector]
@@ -109,32 +113,26 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     private void Awake()
     {
         //pointsText = GameObject.Find("Text_PointsHUD").GetComponent<Text>();
-
-        Debug.Log("instance: "+ instance);
-        if (instance == null)
+        if (instance != null)
         {
-            instance = this;
-            Debug.Log(gameObject);
-            DontDestroyOnLoad(this.gameObject.transform.parent.gameObject);
-        }
-        else
-        {
-            Debug.Log("instance.SetMenus()");
-            //GameManager.instance.SetMenus();
             Destroy(this.gameObject.transform.parent.gameObject);
+            return;
         }
-            
+        instance = this;
+        DontDestroyOnLoad(this.gameObject.transform.parent.gameObject);
     }
     
-    void Start () {
-        camManager = CameraManager.instance;
-
+    void Start () 
+    {
+        if (SoundManager.instance.volumeSlider == null)
+            SoundManager.instance.InitSoundManager();
         //if (!SoundManager.MusicSource.isPlaying)
         //SoundManager.PlayMusicTrack();
-    
+
     }
 	
-	void FixedUpdate () {
+	void FixedUpdate () 
+    {
         if (!paused && !gameCompleted)
             CurGameTime += Time.deltaTime; //Debug.Log("curGameTime: " + CurGameTime);
 
@@ -173,14 +171,23 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
                 break;
             case GameMode.survival:
                 //SurvivalMode tmpSurvival = (SurvivalMode)_offeringData.matchSetting;
+                // check if all waves are cleared
                 break;
             case GameMode.timeAttack:
                 //TimeAttackMode tmpTime = (TimeAttackMode)_offeringData.matchSetting;
+                // try to last the longest. earn more times with kills
+                break;
+            case GameMode.highScore:
+                //TimeAttackMode tmpTime = (TimeAttackMode)_offeringData.matchSetting;
+                // try to reach a certain score by a specific time
                 break;
             case GameMode.dashAbilityOnly:
                 //DashAbilityMode tmpDash = (DashAbilityMode)_offeringData.matchSetting;
                 break;
             case GameMode.meleeOnly:
+                //MeleeMode tmpMelee = (MeleeMode)_offeringData.matchSetting;
+                break;
+            case GameMode.weaponsOnly:
                 //MeleeMode tmpMelee = (MeleeMode)_offeringData.matchSetting;
                 break;
             default:
@@ -199,6 +206,8 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
         }
       
         gameCompleted = true;
+        enemyManager.GetComponentInChildren<EnemySpawner>().enableSpawn = false;
+        enemyManager.GetComponentInChildren<EnemySpawner>().DisableSpawner();
 
         s_CurGameTime = FormatTime(CurGameTime);
         _offeringResults.totalMatchTime = s_CurGameTime;
@@ -213,6 +222,8 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     public void FailedGame()
     {
         gameCompleted = true;
+        enemyManager.GetComponentInChildren<EnemySpawner>().enableSpawn = false;
+        enemyManager.GetComponentInChildren<EnemySpawner>().DisableSpawner();
         GameFailedPanel.SetActive(true);
 
         s_CurGameTime = FormatTime(CurGameTime);
@@ -247,8 +258,10 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
         currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
+        camManager = CameraManager.instance;
+     
         // check and assign lobby sceneID
-        if(currentScene.name == "LobbySceneTemplateTest")
+        if (currentScene.name == "LobbySceneTemplateTest")
             lobbyScene = currentScene;
 
         if (sceneName == "Limbo")
@@ -257,10 +270,13 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
             if (_offeringData != null)
                 InitGameRound();
         }
-        Debug.Log("OnSceneLoaded: " + scene.name); 
-
-        if(currentScene.name != "MainMenu")
+        //Debug.Log("OnSceneLoaded: " + scene.name);
+        if (SoundManager.instance.volumeSlider == null)
+            SoundManager.instance.InitSoundManager();
+        if (currentScene.name != "MainMenu")
             SetMenus();
+    
+
     }
 
     public void AddPoint()
@@ -323,7 +339,6 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     private void SetMenus() 
     {
         Debug.Log("--- SetMenus() ---");
-        //StartCoroutine("SetMenusDelay");
         if (GameWonPanel == null )
         {
             if (currentScene.name != "HubScene" && 
@@ -336,6 +351,8 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
                 GameFailedPanel = GameObject.Find("GameFailedPanel");
                 GameFailedPanel.SetActive(false);
                 enemyManager.SetActive(true);
+                enemyManager.GetComponentInChildren<EnemySpawner>().enableSpawn = true;
+                enemyManager.GetComponentInChildren<EnemySpawner>().EnableEnemySpawner();
             }
         }
         if (pauseMenu == null)
@@ -373,8 +390,10 @@ public enum GameMode
     randomGunBoxesShield,
     survival,
     timeAttack,
+    highScore,
     dashAbilityOnly,
-    meleeOnly
+    meleeOnly,
+    weaponsOnly
 }
 public struct MatchResultData
 {
@@ -393,5 +412,14 @@ public struct MatchResultData
     public int totalItemsUsed;
 }
 
-
-
+[System.Serializable]
+public struct GameModeModifier
+{
+    public bool WeaponsEnabled;
+    public bool DashAbilityEnabled;
+    public bool MeleeEnabled;
+    public bool OneHitKO;
+    public bool LowGravity;
+    public bool NoEnemies;
+    public bool SloMo;
+}

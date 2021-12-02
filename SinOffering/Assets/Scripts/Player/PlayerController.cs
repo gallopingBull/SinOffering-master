@@ -9,6 +9,9 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     public float Strength = 0;
 
 
+    //private bool _weaponsEnabled = true;
+    //private bool _dashAbilityEnabled = true;
+    //private bool _meleeEnabled = true;
 
     [HideInInspector]
     public Animator animator;
