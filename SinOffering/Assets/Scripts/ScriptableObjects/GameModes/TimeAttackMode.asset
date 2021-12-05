@@ -16,4 +16,8 @@ MonoBehaviour:
     WeaponsEnabled: 1
     DashAbilityEnabled: 1
     MeleeEnabled: 1
-  MatchTime: 10
+    OneHitKO: 0
+    LowGravity: 0
+    NoEnemies: 0
+    SloMo: 0
+  MatchTime: 60

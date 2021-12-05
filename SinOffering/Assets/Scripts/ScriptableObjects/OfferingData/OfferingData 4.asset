@@ -16,8 +16,8 @@ MonoBehaviour:
   offeringSummary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
     aliquet euismod justo, nec feugiat magna lacinia tincid
   characterPortrait: {fileID: -3706348233473899563, guid: 6783eb16514528043ab96557ced8bc7f, type: 3}
-  gameMode: 1
-  matchSetting: {fileID: 11400000, guid: 9da5a9bc66875674084d8a0ae2efbe1a, type: 2}
+  gameMode: 3
+  matchSetting: {fileID: 11400000, guid: 30c13951540502b49b55b45e64f09076, type: 2}
   rewards:
   - rewardType: 0
     baseRewardValue: 100

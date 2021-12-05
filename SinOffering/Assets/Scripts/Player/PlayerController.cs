@@ -101,7 +101,29 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         yRaw = Input.GetAxisRaw("Vertical");
         //InputDelay2();
         //InputDelay.InputDelayHandler(state); // manages delay timers for several different input/actions
-        
+
+        // if weapon is equipped
+        if (weaponManager.WeaponEquipped)
+        {
+            if (yRaw > 0)
+            {
+                // set weapon angle up
+                weaponManager.ModifyWeaponRotation(dir, 45f);
+            }
+            else if (yRaw < 0)
+            {
+                // set weapon angle down
+                weaponManager.ModifyWeaponRotation(dir, -45f);
+            }
+            else
+            {
+                // set weapon angle forwad
+                weaponManager.ModifyWeaponRotation(dir, 0f);
+            }
+        }
+      
+
+
         if (inputHandler)
             InputHandler();
 

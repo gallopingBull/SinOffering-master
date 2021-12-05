@@ -14,9 +14,13 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
 
     public bool gameCompleted;
 
-
     #region delete these after moving them into gameModeAttribuites
     private int _maxPoints = 0; // this should be referemce to MaxPoint value in _offeringData
+    
+    private float _gameTime = 60f;
+    private float _startTime;
+    
+
     private bool _spawnCrates = false;
     // crate spawn  locations
     public Transform[] _spawnLocs;
@@ -26,9 +30,10 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     
     public GameObject GameWonPanel, GameFailedPanel, pauseMenu;
 
-
     //[HideInInspector]
+    // create game states
     public bool gameModeSelected = false; 
+    public bool inGame = false; 
     public bool inLobbby = false; 
 
     private IMatchCompletedMenu _client = null;
@@ -37,7 +42,8 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     public OfferingData _offeringData;
     private GameMode _gameMode;
 
-    private Text pointsText; 
+    private Text _pointsText; 
+    private Text _timeText; 
 
     //[HideInInspector]
     public GameObject RadialMenu;
@@ -110,6 +116,40 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     #endregion
 
     #region functions
+
+    // called first
+    void OnEnable()
+    {
+        //Debug.Log("OnEnable called");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    // called second
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
+        camManager = CameraManager.instance;
+
+        // check and assign lobby sceneID
+        if (currentScene.name == "LobbySceneTemplateTest")
+            lobbyScene = currentScene;
+
+        if (sceneName == "Limbo")
+        {
+            var tmpButton = GameObject.Find("ReturnToLobbyButton").GetComponent<Button>();
+            tmpButton.onClick.AddListener(QuitGame);
+            enemyManager = GameObject.Find("EnemyManager");
+            if (_offeringData != null)
+                InitGameRound();
+        }
+        //Debug.Log("OnSceneLoaded: " + scene.name);
+        if (SoundManager.instance.volumeSlider == null)
+            SoundManager.instance.InitSoundManager();
+        if (currentScene.name != "MainMenu")
+            SetMenus();
+    }
     private void Awake()
     {
         //pointsText = GameObject.Find("Text_PointsHUD").GetComponent<Text>();
@@ -134,13 +174,26 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
 	void FixedUpdate () 
     {
         if (!paused && !gameCompleted)
-            CurGameTime += Time.deltaTime; //Debug.Log("curGameTime: " + CurGameTime);
+        {
+            CurGameTime += Time.deltaTime; 
+            //Debug.Log("curGameTime: " + CurGameTime);
 
-        // only have this here to check if time attack mode is completed
-        // since I cant have an update loop in a scriptable oject
-        if (_offeringData != null)
-            if (_offeringData.gameMode == GameMode.timeAttack && _offeringData.GameCompleted())
-                WonGame();
+            // only have this here to check if time attack mode is completed
+            // since I cant have an update loop in a scriptable oject
+            
+            if (_offeringData != null && inGame)
+            {
+                if (_offeringData.gameMode == GameMode.timeAttack)
+                    _timeText.text = ElapsedTime(Time.time);
+                #region testing
+                //if (_offeringData.gameMode == GameMode.timeAttack && _offeringData.GameCompleted())
+                //{
+                //    WonGame();
+                //}
+                #endregion
+            }
+
+        }
     }
 
     // set game rules
@@ -150,6 +203,10 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
         {
             case GameMode.randomGunBoxes:
                 Debug.Log("init - RandomGunMode");
+                if (_timeText != null)
+                    _timeText.gameObject.SetActive(false);
+                _pointsText = GameObject.Find("Text_PointsHUD").GetComponent<Text>();   
+                _pointsText.GetComponentInParent<CanvasGroup>().alpha = 1;
                 points = 0;
                 RandomGunMode tmpRand = (RandomGunMode)_offeringData.matchSetting;
                 _spawnCrates = tmpRand.SpawnCrates;
@@ -161,6 +218,10 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
 
             case GameMode.randomGunBoxesShield:
                 Debug.Log("init - RandomGunModeEx");
+                if (_timeText != null)
+                    _timeText.gameObject.SetActive(false);
+                _pointsText = GameObject.Find("Text_PointsHUD").GetComponent<Text>();
+                _pointsText.GetComponentInParent<CanvasGroup>().alpha = 1;
                 points = 0;
                 RandomGunModeExtreme tmpRandEx = (RandomGunModeExtreme)_offeringData.matchSetting;
                 _spawnCrates = tmpRandEx.SpawnCrates;
@@ -169,30 +230,50 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
                 _crate = tmpRandEx.Crates;
                 Invoke("SpawnCrate", 1f);
                 break;
+
             case GameMode.survival:
                 //SurvivalMode tmpSurvival = (SurvivalMode)_offeringData.matchSetting;
                 // check if all waves are cleared
                 break;
             case GameMode.timeAttack:
-                //TimeAttackMode tmpTime = (TimeAttackMode)_offeringData.matchSetting;
+                Debug.Log("init - TimeAttacl");
+                if (_pointsText != null)
+                    _pointsText.gameObject.SetActive(false);
+
+                _timeText = GameObject.Find("Text_TimeHUD").GetComponent<Text>();
+                _timeText.GetComponentInParent<CanvasGroup>().alpha = 1;
+                TimeAttackMode tmpTime = (TimeAttackMode)_offeringData.matchSetting;
+                _startTime = 0;
+                _startTime = Time.time;
+                _gameTime = 0;
+                _gameTime = tmpTime.MatchTime;
                 // try to last the longest. earn more times with kills
+                
                 break;
+
             case GameMode.highScore:
                 //TimeAttackMode tmpTime = (TimeAttackMode)_offeringData.matchSetting;
                 // try to reach a certain score by a specific time
                 break;
+
             case GameMode.dashAbilityOnly:
                 //DashAbilityMode tmpDash = (DashAbilityMode)_offeringData.matchSetting;
                 break;
+
             case GameMode.meleeOnly:
                 //MeleeMode tmpMelee = (MeleeMode)_offeringData.matchSetting;
                 break;
+
             case GameMode.weaponsOnly:
                 //MeleeMode tmpMelee = (MeleeMode)_offeringData.matchSetting;
                 break;
+
             default:
                 break;
         }
+        gameCompleted = false; 
+
+        inGame = true;
     }
   
     private void WonGame()
@@ -204,10 +285,20 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
             if (RadialMenu.activeInHierarchy)
                 RadialMenu.SetActive(false);
         }
-      
+
+        inGame = false;
         gameCompleted = true;
         enemyManager.GetComponentInChildren<EnemySpawner>().enableSpawn = false;
         enemyManager.GetComponentInChildren<EnemySpawner>().DisableSpawner();
+
+        if (_offeringData.gameMode == GameMode.randomGunBoxes)
+            _pointsText.GetComponentInParent<CanvasGroup>().alpha = 0;
+        
+
+
+        if (_offeringData.gameMode == GameMode.timeAttack)
+            _timeText.GetComponentInParent<CanvasGroup>().alpha = 0;
+        
 
         s_CurGameTime = FormatTime(CurGameTime);
         _offeringResults.totalMatchTime = s_CurGameTime;
@@ -221,10 +312,18 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
 
     public void FailedGame()
     {
+        inGame = false;
         gameCompleted = true;
         enemyManager.GetComponentInChildren<EnemySpawner>().enableSpawn = false;
         enemyManager.GetComponentInChildren<EnemySpawner>().DisableSpawner();
         GameFailedPanel.SetActive(true);
+
+
+        if (_offeringData.gameMode == GameMode.randomGunBoxes)
+            _pointsText.GetComponentInParent<CanvasGroup>().alpha = 0;
+
+        if (_offeringData.gameMode == GameMode.timeAttack)
+            _timeText.GetComponentInParent<CanvasGroup>().alpha = 0;
 
         s_CurGameTime = FormatTime(CurGameTime);
         _offeringResults.totalMatchTime = s_CurGameTime;
@@ -233,6 +332,30 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
         _client.SetMatchData(_offeringResults, _offeringData);
 
         Invoke("ResetGame", 3);
+    }
+
+    public void QuitGame()
+    {
+        inGame = false;
+        gameCompleted = true;
+        enemyManager.GetComponentInChildren<EnemySpawner>().enableSpawn = false;
+        enemyManager.GetComponentInChildren<EnemySpawner>().DisableSpawner();
+        GameFailedPanel.SetActive(true);
+
+
+        if (_offeringData.gameMode == GameMode.randomGunBoxes)
+            _pointsText.GetComponentInParent<CanvasGroup>().alpha = 0;
+
+        if (_offeringData.gameMode == GameMode.timeAttack)
+            _timeText.GetComponentInParent<CanvasGroup>().alpha = 0;
+
+        s_CurGameTime = FormatTime(CurGameTime);
+        _offeringResults.totalMatchTime = s_CurGameTime;
+
+        _client = GameFailedPanel.GetComponent<IMatchCompletedMenu>();
+        _client.SetMatchData(_offeringResults, _offeringData);
+
+        Invoke("ReturnToLobby", 3);
     }
 
     private void ResetGame()
@@ -245,44 +368,10 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
         GetComponent<LoadScene>().LoadSceneByIndex(5);
     }
 
-    // called first
-    void OnEnable()
-    {
-        Debug.Log("OnEnable called");
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    // called second
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
-
-        camManager = CameraManager.instance;
-     
-        // check and assign lobby sceneID
-        if (currentScene.name == "LobbySceneTemplateTest")
-            lobbyScene = currentScene;
-
-        if (sceneName == "Limbo")
-        {
-            enemyManager = GameObject.Find("EnemyManager");
-            if (_offeringData != null)
-                InitGameRound();
-        }
-        //Debug.Log("OnSceneLoaded: " + scene.name);
-        if (SoundManager.instance.volumeSlider == null)
-            SoundManager.instance.InitSoundManager();
-        if (currentScene.name != "MainMenu")
-            SetMenus();
-    
-
-    }
-
     public void AddPoint()
     {
         points++;
-        //pointsText.text = points.ToString();
+        _pointsText.text = points.ToString();
         if (points >= _maxPoints)
             WonGame();
         else
@@ -334,8 +423,6 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
         TotalFaithSpent += value;
     }
 
-
-
     private void SetMenus() 
     {
         Debug.Log("--- SetMenus() ---");
@@ -356,19 +443,27 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
             }
         }
         if (pauseMenu == null)
-        {
-            pauseMenu = GameObject.Find("PauseMenuUI");
-            pauseMenu.SetActive(false);
-        }
+             pauseMenu = GameObject.Find("PauseMenuUI");
+        pauseMenu.SetActive(false);
     }
 
-  
-
-    void IGameModeSelectionMenu.SetOfferingData(OfferingData offeringData)
+    string ElapsedTime(float time)
     {
-        gameModeSelected = true; // this is only used for offering gate object
-        _offeringData = offeringData;
-        _gameMode = _offeringData.gameMode;
+        float elapsedTime = time - _startTime;
+        int minutes = (int)((_gameTime - elapsedTime) / 60) % 60;
+        int seconds = (int)((_gameTime - elapsedTime) % 60);
+        float fraction = time * 1000;
+        fraction = (fraction % 1000);
+        string timeText = String.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, fraction);
+
+
+        if (elapsedTime >= _gameTime)
+        {
+            //check time to last hihest time???
+            WonGame();
+        }
+        //Debug.Log("elapsedTime: "+ elapsedTime);
+        return timeText;
     }
     string FormatTime(float time)
     {
@@ -380,6 +475,14 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
         string timeText = String.Format("{0:00}:{1:00}:{2:000}", minutes, seconds, fraction);
         return timeText;
     }
+
+    void IGameModeSelectionMenu.SetOfferingData(OfferingData offeringData)
+    {
+        gameModeSelected = true; // this is only used for offering gate object
+        _offeringData = offeringData;
+        _gameMode = _offeringData.gameMode;
+    }
+
     #endregion
 
 }

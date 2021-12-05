@@ -867,6 +867,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.AudioClip, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2483930327983532642, guid: 082e1dd43ae33cd41ab8d656657bb579, type: 3}
+      propertyPath: m_text
+      value: Return to Lobby
+      objectReference: {fileID: 0}
     - target: {fileID: 2906867487689697262, guid: 082e1dd43ae33cd41ab8d656657bb579, type: 3}
       propertyPath: m_Name
       value: Pause_ReturnButton

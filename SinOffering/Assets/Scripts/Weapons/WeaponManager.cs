@@ -5,10 +5,12 @@ using UnityEngine;
 
 //Maybe change the name of this class to WeaponInventory.cs
 public class WeaponManager : MonoBehaviour {
+    public int CurWeapon;
+    public bool WeaponEquipped = false;
 
     public GameObject[] Weapons;
-    public int CurWeapon;
     public Transform LHandSocket, RHandSocket; 
+
 
     private PlayerController parent; 
 
@@ -43,9 +45,16 @@ public class WeaponManager : MonoBehaviour {
         parent.EquippedWeapon = Weapons[CurWeapon];
         parent.EquippedWeapon.SetActive(true);
 
-        parent.EquippedWeapon.GetComponent<Weapon>().InitWeapon(); 
+        parent.EquippedWeapon.GetComponent<Weapon>().InitWeapon();
+        WeaponEquipped = true;
         //have the weapon call InitWeapon()
         //wihtin itself instead
+    }
+
+    public void ModifyWeaponRotation(int dir, float angle)
+    {
+        //transform.rotation = Quaternion.Euler(0,0,angle*dir);
+        //Weapons[CurWeapon].transform.rotation = Quaternion.Euler(0,0,angle*dir);
     }
 
     public void ChangeWeapon()
