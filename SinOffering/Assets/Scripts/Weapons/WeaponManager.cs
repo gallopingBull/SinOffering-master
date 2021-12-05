@@ -50,11 +50,22 @@ public class WeaponManager : MonoBehaviour {
         //have the weapon call InitWeapon()
         //wihtin itself instead
     }
-
-    public void ModifyWeaponRotation(int dir, float angle)
+    //https://github.com/mucahits/rotateintervally/blob/master/RotateIntervally.cs
+    // rotate intervally 
+    public float GetTargetEuler(Vector3 touchPosition, float interval)
     {
-        //transform.rotation = Quaternion.Euler(0,0,angle*dir);
-        //Weapons[CurWeapon].transform.rotation = Quaternion.Euler(0,0,angle*dir);
+        float currentAngle = Mathf.Atan2(touchPosition.y, touchPosition.x) * Mathf.Rad2Deg;
+        currentAngle = (currentAngle > 0) ? currentAngle : currentAngle + 360f;
+
+        var region = (int)Mathf.Floor(currentAngle / interval);
+
+        return region * interval;
+
+    }
+
+    public void ModifyWeaponRotation(int dir, Vector3 angle)
+    {
+        Weapons[CurWeapon].transform.rotation = Quaternion.Euler(0,0, GetTargetEuler(angle * dir, 45f) );
     }
 
     public void ChangeWeapon()
