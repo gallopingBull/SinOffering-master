@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon_GattlingGun : Weapon {
+public class Weapon_GattlingGun : Weapon 
+{
 
     public float JumpSpeedModifier;
     public float RunSpeedModifier;
@@ -39,39 +40,23 @@ public class Weapon_GattlingGun : Weapon {
         ModifyEntitySpeed(JumpSpeedModifier, RunSpeedModifier);
     }
 
-
-
-
-
     protected override void MoveWeaponToSocket(int dir)
     {
-        /*if (muzzleFire_Light != null)
-        {
-            muzzleFire_Light.transform.position = GetMuzzleDirection().transform.position;
-            Vector3 tmpPos = new Vector3(muzzleFire_Light.transform.position.x, MuzzleFire_Light.transform.position.y, MuzzleFire_Light.transform.position.z - 1);
-            muzzleFire_Light.transform.position = tmpPos;
-        }*/
-
         //MuzzleFire_Particle.transform.position = GetMuzzleDirection().transform.position;
         if (dir == 1)
         {
             WeaponSprite.transform.position =
                 pc.weaponManager.GetComponent<WeaponManager>().LHandSocket.position;
-
-            //print(MuzzleFire_Particle.transform.localRotation);
         }
         else
         {
             WeaponSprite.transform.position =
                 pc.weaponManager.GetComponent<WeaponManager>().RHandSocket.position;
 
-            //MuzzleFire_Particle.transform.rotation = new Quaternion(MuzzleFire_Particle.transform.rotation.x,
-              //      -.5f, MuzzleFire_Particle.transform.rotation.z,
-                //MuzzleFire_Particle.transform.rotation.w);
         }
 
 
-        ps.transform.position = GetMuzzleDirection().transform.position;
+        //ps.transform.position = GetMuzzleDirection().transform.position;
 
 
         /*

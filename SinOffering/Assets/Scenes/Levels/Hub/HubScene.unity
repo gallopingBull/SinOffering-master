@@ -13140,6 +13140,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3141151859142999909, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.328
+      objectReference: {fileID: 0}
+    - target: {fileID: 3141151859236867302, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3141151860329586951, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.32800007
+      objectReference: {fileID: 0}
     - target: {fileID: 6143931913506289975, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
       value: 0
@@ -13160,6 +13172,18 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.48
       objectReference: {fileID: 0}
+    - target: {fileID: 7930721910517791215, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930721910836750248, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930721911900843773, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 7930721911905566480, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
       propertyPath: CooldownDelay
       value: 5

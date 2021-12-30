@@ -74,41 +74,26 @@ public abstract class Weapon : MonoBehaviour
     #region functions
     public virtual void FireWeapon()
     {
-        if (!UnlimitedAmmo)
+        if (!UnlimitedAmmo && Ammo > 0)
+            Ammo--;
+
+        if (Input.GetButton("RightBumper"))
         {
-            if (Ammo > 0)
-            {
-                //print("FireWeapon() called in Weapons.cs");
-                spawnLoc = GetMuzzleDirection();
-
-                canFire = false;
-                nextFire = fireRate;
-
-                SoundManager.PlaySound(fireClip); // move this into weapon subclasses for more specific behavior
-                SpawnProjectile(pc.dir);
-                PPMCaller(); // adjust post process fx
-                EnableMuzzleFX();
-                EnableMuzzleLight();
-             
-                Ammo--; 
-                CameraShake.instance.Shake(DurationCamShake,
-                             AmmountCamShake, SmoothTransition);
-            }
+            SetMuzzleDirection();
         }
         else
         {
             spawnLoc = GetMuzzleDirection();
-            canFire = false;
-            nextFire = fireRate;
-
-            SoundManager.PlaySound(fireClip); // move this into weapon subclasses for more specific behavior
-            SpawnProjectile(pc.dir);
-            EnableMuzzleFX();
-            EnableMuzzleLight();
-
-            CameraShake.instance.Shake(DurationCamShake,
-                         AmmountCamShake, SmoothTransition);
         }
+     
+        canFire = false;
+        nextFire = fireRate;
+
+        SoundManager.PlaySound(fireClip); // move this into weapon subclasses for more specific behavior
+        SpawnProjectile(pc.dir);
+        EnableMuzzleFX();
+        EnableMuzzleLight();
+        CameraShake.instance.Shake(DurationCamShake, AmmountCamShake, SmoothTransition);
     }
 
     public virtual void ReleaseTrigger()
@@ -202,6 +187,28 @@ public abstract class Weapon : MonoBehaviour
             WeaponSprite.transform.position = weaponManager.RHandSocket.position;
         else
             WeaponSprite.transform.position = weaponManager.LHandSocket.position;
+    }
+
+    
+    protected void SetMuzzleDirection()
+    {
+        if (pc.xRaw == 0 || pc.yRaw == 0 )
+        {
+
+        }
+
+        var tmpScale = pc.dir * Vector3.right;
+        tmpScale.y = gameObject.transform.localScale.y;
+        tmpScale.z = gameObject.transform.localScale.z;
+
+        gameObject.transform.localScale = tmpScale;
+
+        float xVal = pc.dir * gameObject.transform.localPosition.x;
+        var tmpPos = gameObject.transform.localPosition;
+        tmpPos.x = xVal;
+
+        gameObject.transform.localPosition = tmpPos;
+
     }
 
     protected GameObject GetMuzzleDirection()

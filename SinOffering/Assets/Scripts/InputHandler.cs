@@ -71,8 +71,6 @@ public class InputHandler : MonoBehaviour
 
         if (pc.InputEnabled)
         {
-
-
             //Handles player's horizontal movement
             if (pc.xRaw > x_DeadZone ||
                 pc.xRaw < -(x_DeadZone))
@@ -214,13 +212,12 @@ public class InputHandler : MonoBehaviour
                         print("pressing trigger");
                         if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
                             Commands.Add(fireCommand);
-                    }
+                    }   
                 }
+
                 /**********
                 ***--*END*--Fire--*END*--***
                 **********/
-
-
             }
 
 
