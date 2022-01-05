@@ -294,12 +294,11 @@ public abstract class Entity : MonoBehaviour {
         {
             if (mask.name == "Blood Sprite Mask(Clone)")
             {
-                print("removing mask from" + gameObject.name);
+                //print("removing mask from" + gameObject.name);
                 MaskDecalPool.instance.DeParentMasks(mask.gameObject);
             }
-                
         }
-        print("finshed removing mask(s) from: " + gameObject.name);
+        //print("finshed removing mask(s) from: " + gameObject.name);
     }
 
     // flip enity's sprite
@@ -311,16 +310,28 @@ public abstract class Entity : MonoBehaviour {
         {
             if (dir != 1)
             {
-                //GetComponent<PlayerController>().dir = GetComponent<Entity>().xPos > 0 ? 1 : -1;
                 dir = 1;
-                facingLeft = false;
-                ActorSprite.GetComponent<SpriteRenderer>().flipX = GetComponent<Entity>().facingLeft;
-                BloodActorSprite.GetComponent<SpriteRenderer>().flipX = GetComponent<Entity>().facingLeft;
+                if (GetComponent<PlayerController>().inputHandler.aiming)
+                {
+                    facingLeft = GetComponent<PlayerController>().x_R_Raw > 0 ? false : true;
+                    
+                    ActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
+                    BloodActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
+                }
+                else
+                {
+               
+                    facingLeft = false;
+                    ActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
+                    BloodActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
+                }
+
 
                 // flip weapon sprite
                 if (GetComponent<PlayerController>().EquippedWeapon != null)
                 {
-                    GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(GetComponent<PlayerController>().dir);
+                    //GetComponent<PlayerController>().dir = GetComponent<Entity>().xPos > 0 ? 1 : -1;
+                    GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(dir);
                 }
             }
         }
@@ -329,18 +340,26 @@ public abstract class Entity : MonoBehaviour {
             if (dir != -1)
             {
                 dir = -1;
-                facingLeft = true;
-                ActorSprite.GetComponent<SpriteRenderer>().flipX = GetComponent<Entity>().facingLeft;
-                BloodActorSprite.GetComponent<SpriteRenderer>().flipX = GetComponent<Entity>().facingLeft;
+                if (GetComponent<PlayerController>().inputHandler.aiming)
+                {
+                    facingLeft = GetComponent<PlayerController>().x_R_Raw > 0 ? false : true;
+
+                    ActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
+                    BloodActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
+                }
+                else
+                {
+
+                    facingLeft = true;
+                    ActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
+                    BloodActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
+                }
+                //
 
                 // flip weapon sprite
                 if (GetComponent<PlayerController>().EquippedWeapon != null)
                 {
-                    if (GetComponent<PlayerController>().inputHandler.aiming)
-                        GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(GetComponent<PlayerController>().dir);
-                    else
-                        GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(GetComponent<PlayerController>().dir);
-
+                    GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(dir);
                 }
             }
         }

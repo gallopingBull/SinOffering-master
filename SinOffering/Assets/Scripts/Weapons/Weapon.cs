@@ -192,11 +192,6 @@ public abstract class Weapon : MonoBehaviour
     
     protected void SetMuzzleDirection()
     {
-        if (pc.xRaw == 0 || pc.yRaw == 0 )
-        {
-
-        }
-
         var tmpScale = pc.dir * Vector3.right;
         tmpScale.y = gameObject.transform.localScale.y;
         tmpScale.z = gameObject.transform.localScale.z;
@@ -208,7 +203,6 @@ public abstract class Weapon : MonoBehaviour
         tmpPos.x = xVal;
 
         gameObject.transform.localPosition = tmpPos;
-
     }
 
     protected GameObject GetMuzzleDirection()

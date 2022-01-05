@@ -98,8 +98,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         CheckFloor();
     }
 
-
-
     // ***USE ONLY FOR INPUT*** \\\
     private void Update()
     {
@@ -109,8 +107,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         x_R_Raw = Input.GetAxisRaw("RightStick_Horizontal");
         y_R_Raw = Input.GetAxisRaw("RightStick_Vertical");
 
-        
-
         //InputDelay2();
         //InputDelay.InputDelayHandler(state); // manages delay timers for several different input/actions
 
@@ -119,6 +115,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         {
             //var tmp = new Vector3(xRaw,yRaw,0);
             var tmp = new Vector3(x_R_Raw,y_R_Raw,0);
+            FlipSprite();
             weaponManager.ModifyWeaponRotation(dir, tmp);
             //weaponManager.ModifyWeaponRotation(dir, tmp);
         }
@@ -147,10 +144,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
                 }
             }
         }
-    }
-    public void Test()
-    {
-        //print("Shit myself at Test() || PlayerController.cs || gameObject.name: " + transform.name);
     }
 
     protected override void InitActor()
@@ -332,7 +325,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         InputEnabled = false;
     }
 
-
     public void SetPersistentPlayerAttributeData(PlayerAttributes _attributes)
     {
         attributes = _attributes;
@@ -360,9 +352,10 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
             Strength = dataBase["strength"].AttributeDataList[attributes.StrengthAttributeLevel].AttributeValue;
     }
 
-
     // store functions (might want to move this interface in its own class,
     // and ill call a getter on it to get all nesecarry values)
+    #region IWeaponStoreCustomer, IAttributeStoreCustomer
+
     void IWeaponStoreCustomer.PurchaseWeapon(string _weaponName)
     {
         foreach (GameObject weapon in weaponManager.Weapons)
@@ -390,8 +383,8 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         {
             if (weapon.GetComponent<Weapon>().GetWeaponName() == _weaponName)
             {
-                switch (upgradeType)    
-                {           
+                switch (upgradeType)
+                {
                     case WeaponUpgradeTypes.UpgradeType.FireRate:
                         weapon.GetComponent<Weapon>().WeaponAttributes.fireRateLevel++;
                         break;
@@ -430,7 +423,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         int maxLevel = dataBase[_upgradeType.ToString()].AttributeDataList.Length;
 
         //Debug.Log("maxLevel: " + maxLevel + " || playerAttributeLevels" + dataBase[_upgradeType.ToString()]);
-        switch (_upgradeType)   
+        switch (_upgradeType)
         {
             case AttributeUpgradeTypes.UpgradeType.health:
                 attributes.HealthAttributeLevel++;
@@ -472,6 +465,8 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         gameManager.TotalCurrentFaith -= _price;
         return true;
     }
+
+    #endregion
 
     #endregion
 }

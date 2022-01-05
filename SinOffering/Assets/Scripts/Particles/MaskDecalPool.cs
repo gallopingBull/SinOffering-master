@@ -17,7 +17,7 @@ public class MaskDecalPool : MonoBehaviour
     private GameObject[] masks;
 
 
-    //splat sound variables
+    // splat sound variables
     private AudioSource source;
     public AudioClip[] sounds;
 
@@ -28,8 +28,6 @@ public class MaskDecalPool : MonoBehaviour
     private float timePassed;
     private int soundsPlayed;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;
@@ -49,7 +47,7 @@ public class MaskDecalPool : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         timePassed += Time.deltaTime;
@@ -82,9 +80,8 @@ public class MaskDecalPool : MonoBehaviour
         if (maskDataIndex >= maxMasks)
             maskDataIndex = 0;
 
-
         //("maskDataIndex: "+ maskDataIndex);
-        //record collision position, rotation, size, and color
+        // record collision position, rotation, size, and color
         masksData[maskDataIndex].position = particleCollisionEvent.intersection;
 
         Vector3 particleRotationEuler = particleCollisionEvent.colliderComponent.transform.rotation.eulerAngles;
@@ -104,11 +101,8 @@ public class MaskDecalPool : MonoBehaviour
             if (_parent == null)
                 return;
 
-            if (masks[i] != null && 
-                masks[i].activeSelf)
-            {
+            if (masks[i] != null && masks[i].activeSelf)
                 continue;
-            }
 
             if (_parent.GetComponent<Entity>().BloodCount < _parent.GetComponent<Entity>().MaxBloodMasks)
             {
@@ -124,10 +118,6 @@ public class MaskDecalPool : MonoBehaviour
                 masks[i].SetActive(true);
                 break;
             }
-            else
-            {
-
-            }
         }
     }
 
@@ -137,7 +127,6 @@ public class MaskDecalPool : MonoBehaviour
         if (soundsPlayed < MaxSounds)
         {
             soundsPlayed++; 
-            
             source.pitch = Random.Range(0.9f, 1.1f);
             source.PlayOneShot(sounds[Random.Range(0, sounds.Length)], Random.Range(.1f, .35f));
         }
@@ -146,12 +135,8 @@ public class MaskDecalPool : MonoBehaviour
     public void DeParentMasks(GameObject mask)
     {
         mask.transform.parent.GetComponent<Entity>().BloodCount--;
-
         mask.transform.parent = null;
-
         StartCoroutine(LerpFunction(mask));
-      
-        
     }
 
     IEnumerator LerpFunction(GameObject mask)
@@ -162,15 +147,13 @@ public class MaskDecalPool : MonoBehaviour
         float time = 0;
         float startValue = mask.GetComponent<SpriteMask>().alphaCutoff;
 
-
-
-
         while (time < 3)
         {
             mask.GetComponent<SpriteMask>().alphaCutoff = Mathf.Lerp(startValue, 1, time / 3);
             time += Time.deltaTime;
             yield return null;
         }
+
         mask.GetComponent<SpriteMask>().alphaCutoff = 1;
 
         while (mask.transform.localScale.x > 0)
@@ -181,7 +164,6 @@ public class MaskDecalPool : MonoBehaviour
 
         mask.transform.localScale = Vector3.zero;
         mask.SetActive(false);
-     
         StopCoroutine(LerpFunction(mask));
     }
 }

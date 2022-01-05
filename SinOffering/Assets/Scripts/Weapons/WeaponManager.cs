@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-//Maybe change the name of this class to WeaponInventory.cs
+// Maybe change the name of this class to WeaponInventory.cs
 public class WeaponManager : MonoBehaviour {
     public int CurWeapon;
     public bool WeaponEquipped = false;
@@ -21,8 +21,8 @@ public class WeaponManager : MonoBehaviour {
         Invoke("InitWeapons", .2f);    
     }
 
-    //give every weapon a default "temp" weaponattribute 
-    //if one isn't read in during the load process
+    // give every weapon a default "temp" weaponattribute 
+    // if one isn't read in during the load process
     private void InitWeapons()
     {
         for (int i = 0; i < Weapons.Length; i++)
@@ -46,8 +46,8 @@ public class WeaponManager : MonoBehaviour {
 
         parent.EquippedWeapon.GetComponent<Weapon>().InitWeapon();
         WeaponEquipped = true;
-        //have the weapon call InitWeapon()
-        //wihtin itself instead
+        // have the weapon call InitWeapon()
+        // wihtin itself instead
     }
     //https://github.com/mucahits/rotateintervally/blob/master/RotateIntervally.cs
     // rotate intervally 

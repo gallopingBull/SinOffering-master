@@ -73,11 +73,11 @@ public class InputHandler : MonoBehaviour
 
         if (pc.InputEnabled)
         {
-            //Handles player's horizontal movement
+            // Handles player's horizontal movement
             if (pc.xRaw > x_DeadZone ||
                 pc.xRaw < -(x_DeadZone))
             {
-                //assign direction player is facing (maybe move this)
+                // assign direction player is facing (maybe move this)
                 if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
                 {
                     pc.FlipSprite();
@@ -87,7 +87,7 @@ public class InputHandler : MonoBehaviour
 
             if (pc.AbilitiesEnabled)
             {
-                //Handles Jumping
+                // Handles Jumping
                 if (Input.GetButtonDown("Jump") && pc.jumpEnabled && jumpDelayComplete)
                 {
                     //*** check if this is necessarry **\\
@@ -160,7 +160,7 @@ public class InputHandler : MonoBehaviour
                 if (Input.GetButtonDown("SwapWeapon"))
                     pc.weaponManager.GetComponent<WeaponManager>().ChangeWeapon();
 
-                //change weapons -- delete later
+                // change weapons -- delete later
                 if (Input.GetKey(KeyCode.Alpha1))
                 {
                     GetComponent<PlayerController>().weaponManager.GetComponent<WeaponManager>().EquipWeapon(0);
@@ -221,7 +221,7 @@ public class InputHandler : MonoBehaviour
 
 
             //if no input, stop moving player (maybe make an idle command and it's added to the command list instead)
-            if (pc.xRaw == 0)
+            if (pc.xRaw == 0 )
             {
                 if (!GetComponent<PlayerController>().animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Idle") &&
                     !GetComponent<PlayerController>().animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot"))

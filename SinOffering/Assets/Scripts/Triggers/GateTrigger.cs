@@ -18,7 +18,6 @@ public class GateTrigger : MonoBehaviour
     {
         if (other.name == "Player")
         {
-
             if (isOfferingGate)
                 enableGate = GameManager.instance.gameModeSelected;
             if (enableGate)
@@ -30,14 +29,8 @@ public class GateTrigger : MonoBehaviour
                     _gate.Toggle();
                 }
             }
-            else
-            {
-
-
-            }
         }
     }
-
 
 
     private void OnTriggerExit(Collider other)

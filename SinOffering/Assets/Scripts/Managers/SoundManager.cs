@@ -35,22 +35,6 @@ public class SoundManager : MonoBehaviour
             instance = this;
         else
             Destroy(this);
-
-        //DontDestroyOnLoad(instance.gameObject); //might keep this, but need to figure out how to extend this into
-        //other scenes correctly 
-        /*        MusicSource = GameObject.Find("MusicSource").GetComponent<AudioSource>();
-        SFXSource = GetComponent<AudioSource>();
-        instance.audioPanel = GameObject.Find("Panel_AudioSettings");
-        sceneName = SceneManager.GetActiveScene().name;
-         * 
-         * 
-         */
-       //// InitSoundManager();
-    }
-
-    private void Start()
-    { 
-
     }
 
     public static void PlaySound(AudioClip sound)
@@ -79,8 +63,8 @@ public class SoundManager : MonoBehaviour
         MusicSource.volume = musicVolume;
     }
 
-    //this is called from PlayerSettings() when game is loading 
-    //player settings
+    // this is called from PlayerSettings() when game is loading 
+    // player settings
     public void SetVolume(float musicVol, float sfxVol) 
     {
         musicVolume = musicVol;
@@ -120,6 +104,5 @@ public class SoundManager : MonoBehaviour
     
         // after assignincall playersettings.cs to update slider/text values with saved 
         GameObject.Find("Main Camera").GetComponent<PlayerSettings>().InitSound();
-            
     }
 }

@@ -29,12 +29,15 @@ public class AmmoDrop : MonoBehaviour
     private void AddToCamTargets()
     {
         gm.camManager.AddCameraTargets(transform, .5f);
+        #region testing
         /*
         if (MultiTargetCam.instance.enabled &&
             MultiTargetCam.instance.AddCrates)
         {
             MultiTargetCam.instance.targets.Add(gameObject.transform);
         }*/
+        #endregion
+
     }
 }
 
