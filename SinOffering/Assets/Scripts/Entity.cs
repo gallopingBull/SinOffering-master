@@ -336,13 +336,13 @@ public abstract class Entity : MonoBehaviour {
                 // flip weapon sprite
                 if (GetComponent<PlayerController>().EquippedWeapon != null)
                 {
-                    GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(GetComponent<PlayerController>().dir);
+                    if (GetComponent<PlayerController>().inputHandler.aiming)
+                        GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(GetComponent<PlayerController>().dir);
+                    else
+                        GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(GetComponent<PlayerController>().dir);
+
                 }
             }
-        }
-        else
-        {
-            
         }
     }
 

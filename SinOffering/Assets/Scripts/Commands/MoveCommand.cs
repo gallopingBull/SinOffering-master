@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
 public class MoveCommand : ICommand {
-    //private float xPos_before, yPos_before;
-    private Vector3 prevPos;
+    private Vector3 _prevPos;
 
     public override void Execute() {
-        //xPos_before = GetComponent<GameObject>().transform.position.x;
         //prevPos = GetComponent<Transform>().position;
         MoveActor();
     }
@@ -16,77 +14,77 @@ public class MoveCommand : ICommand {
 
     public void MoveActor()
     {
-     
-
-        //basically check if dash isn't active
+        // basically check if dash isn't active
         if (Time.timeScale == 1)
         {
-
-            //basic movement
-            if (GetComponent<Entity>().IsGrounded &&
-                GetComponent<PlayerController>().state != Entity.State.dashing)
+            // basic ground movement
+            if (pc.IsGrounded && pc.state != Entity.State.dashing)
             {
+                #region check if i need this
                 /*
-                if (GetComponent<PlayerController>().xRaw < -.01f &&
-                    GetComponent<Entity>().Speed < GetComponent<Entity>().MaxSpeed)
-                {
-                    GetComponent<Entity>().Speed = GetComponent<Entity>().Speed + GetComponent<Entity>().AccSpeed;
+               if (GetComponent<PlayerController>().xRaw < -.01f &&
+                   GetComponent<Entity>().Speed < GetComponent<Entity>().MaxSpeed)
+               {
+                   GetComponent<Entity>().Speed = GetComponent<Entity>().Speed + GetComponent<Entity>().AccSpeed;
 
-                }
-                else if (GetComponent<PlayerController>().xRaw > .01 && 
-                    GetComponent<Entity>().Speed > -(GetComponent<Entity>().MaxSpeed))
-                {
-                    GetComponent<Entity>().Speed = GetComponent<Entity>().Speed + GetComponent<Entity>().AccSpeed;
-                }
-                else
-                {
-                    if (GetComponent<Entity>().Speed > (GetComponent<Entity>().DeAccSpeed * Time.fixedDeltaTime))
-                    {
-                         GetComponent<Entity>().Speed = GetComponent<Entity>().Speed - GetComponent<Entity>().DeAccSpeed;
-                    }
-                    else if (GetComponent<Entity>().Speed < (-GetComponent<Entity>().DeAccSpeed * Time.fixedDeltaTime))
-                    {
-                        GetComponent<Entity>().Speed = GetComponent<Entity>().Speed + GetComponent<Entity>().DeAccSpeed;
-                    }
-                    else
-                    {
-                        GetComponent<Entity>().Speed = 0;
-                    }
-                }
-                */
-                GetComponent<Entity>().rb.velocity = new Vector3(GetComponent<Entity>().dir * GetComponent<Entity>().Speed * (Time.fixedDeltaTime*TimeScale.player), GetComponent<Entity>().rb.velocity.y);
-
-                GetComponent<PlayerController>().StateManager.EnterState(Entity.State.running);
+               }
+               else if (GetComponent<PlayerController>().xRaw > .01 && 
+                   GetComponent<Entity>().Speed > -(GetComponent<Entity>().MaxSpeed))
+               {
+                   GetComponent<Entity>().Speed = GetComponent<Entity>().Speed + GetComponent<Entity>().AccSpeed;
+               }
+               else
+               {
+                   if (GetComponent<Entity>().Speed > (GetComponent<Entity>().DeAccSpeed * Time.fixedDeltaTime))
+                   {
+                        GetComponent<Entity>().Speed = GetComponent<Entity>().Speed - GetComponent<Entity>().DeAccSpeed;
+                   }
+                   else if (GetComponent<Entity>().Speed < (-GetComponent<Entity>().DeAccSpeed * Time.fixedDeltaTime))
+                   {
+                       GetComponent<Entity>().Speed = GetComponent<Entity>().Speed + GetComponent<Entity>().DeAccSpeed;
+                   }
+                   else
+                   {
+                       GetComponent<Entity>().Speed = 0;
+                   }
+               }
+               */
+                #endregion
+                float aimingSpeedScale = 1;
+                if (pc.inputHandler.aiming)
+                    aimingSpeedScale = .35f;
+                pc.rb.velocity = 
+                    new Vector3(pc.dir * (pc.Speed*aimingSpeedScale) * (Time.fixedDeltaTime*TimeScale.player), pc.rb.velocity.y);
+                pc.StateManager.EnterState(Entity.State.running);
             }
 
-            //deacelerate horizontal movement while player is in air falling allows for some Air Control
-
-            if (GetComponent<Entity>().state == Entity.State.falling ||
-            GetComponent<Entity>().state == Entity.State.Jumping)
+            // deacelerate horizontal movement while player is in air falling allows for some Air Control
+            if (pc.state == Entity.State.falling || pc.state == Entity.State.Jumping)
             {
-                GetComponent<Entity>().rb.velocity = new Vector3(GetComponent<Entity>().dir * (GetComponent<Entity>().Speed * GetComponent<PlayerController>().AirControl) * Time.fixedDeltaTime,
-                    GetComponent<Entity>().rb.velocity.y, 0);
+                pc.rb.velocity = new Vector3(pc.dir * (pc.Speed * pc.AirControl) * Time.fixedDeltaTime, pc.rb.velocity.y, 0);
 
-                //change sprite/animation if player is holding weapon
-                if (!GetComponent<PlayerController>().EquippedWeapon)
+                // change sprite/animation if player is holding weapon
+                if (!pc.EquippedWeapon)
                 {
-                    if (!GetComponent<PlayerController>().animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Jump"))
-                    {
-                        GetComponent<PlayerController>().animator.Play("Player_Jump");
-                    }
+                    if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Jump"))
+                        pc.animator.Play("Player_Jump");
                 }
                 else
                 {
                     //print("should be in player_jump_shoot");
-                    GetComponent<PlayerController>().animator.Play("Player_Jump_Shoot");
+                    pc.animator.Play("Player_Jump_Shoot");
                 }
             }
         }
     }
+
+    #region Redo() Testing
     /**
     public void MoveActorPrevPos()
     {
-        GetComponent<Entity>().rb.velocity = new Vector3(prevPos.x * GetComponent<Entity>().Speed, prevPos.y * GetComponent<Entity>().Speed, 0);
+        pc.rb.velocity = new Vector3(prevPos.x * pc.Speed, prevPos.y * pc.Speed, 0);
     }
     **/
+    #endregion
+
 }

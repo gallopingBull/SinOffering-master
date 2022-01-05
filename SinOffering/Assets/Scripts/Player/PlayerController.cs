@@ -60,6 +60,11 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     [HideInInspector]
     public float yRaw;
 
+    [HideInInspector]
+    public float x_R_Raw;
+    [HideInInspector]
+    public float y_R_Raw;
+
     public AudioClip jumpClip, landClip, dashClip;
     //[HideInInspector]
     public GameObject button;
@@ -68,7 +73,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     public StateManager StateManager;
     [HideInInspector]
     public InputDelay InputDelay;
-
 
     public PlayerAttributes Attributes { get => attributes; set => attributes = value; }
 
@@ -102,14 +106,21 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         xRaw = Input.GetAxisRaw("Horizontal");
         yRaw = Input.GetAxisRaw("Vertical");
 
+        x_R_Raw = Input.GetAxisRaw("RightStick_Horizontal");
+        y_R_Raw = Input.GetAxisRaw("RightStick_Vertical");
+
+        
+
         //InputDelay2();
         //InputDelay.InputDelayHandler(state); // manages delay timers for several different input/actions
 
         // if weapon is equipped
-        if (weaponManager.WeaponEquipped)
+        if (weaponManager.WeaponEquipped && inputHandler.aiming)
         {
-            var tmp = new Vector3(xRaw,yRaw,0);
+            //var tmp = new Vector3(xRaw,yRaw,0);
+            var tmp = new Vector3(x_R_Raw,y_R_Raw,0);
             weaponManager.ModifyWeaponRotation(dir, tmp);
+            //weaponManager.ModifyWeaponRotation(dir, tmp);
         }
 
         if (inputHandler)

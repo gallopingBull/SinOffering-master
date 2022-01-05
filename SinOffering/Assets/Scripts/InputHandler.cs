@@ -19,6 +19,8 @@ public class InputHandler : MonoBehaviour
 
     public float x_DeadZone = .5f; //anything less than this value (.5f), joysticks become very "sensitive" along x axis
 
+    [HideInInspector]
+    public bool aiming = false; 
 
     [Header("Input Delay Variables")]
     
@@ -86,9 +88,7 @@ public class InputHandler : MonoBehaviour
             if (pc.AbilitiesEnabled)
             {
                 //Handles Jumping
-                if (Input.GetButtonDown("Jump") &&
-                    pc.jumpEnabled &&
-                    jumpDelayComplete)
+                if (Input.GetButtonDown("Jump") && pc.jumpEnabled && jumpDelayComplete)
                 {
                     //*** check if this is necessarry **\\
                     //jumpDelay = MAXjumpDelay; 
@@ -102,34 +102,25 @@ public class InputHandler : MonoBehaviour
                     }
                     #endregion
 
-                    if (GetComponent<DashCommand>().dashState ==
-                        DashCommand.DashState.completed)
-                    {
+                    if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
                         Commands.Add(jumpCommand);
-                    }
                 }
 
                 if (Input.GetButtonUp("Jump"))
                 {
                     pc.JumpButtonHeldDown = false;
-                    if (pc.button != null &&
-                        pc.button.activeSelf)
-                    {
+                    if (pc.button != null && pc.button.activeSelf)
                         pc.button.SetActive(false);
-                    }
                 }
 
-
-                //print("Lefytrigger"+Input.GetAxis("LeftTrigger"));
-                //Dash Attack
-                if (Input.GetAxis("LeftTrigger") == 1 &&
-                    !GameManager.instance.gameCompleted)
+                // Dash Attack
+                if (Input.GetAxis("LeftTrigger") == 1 && !GameManager.instance.gameCompleted)
                 {
                     Commands.Add(dashCommand);
                     //print("InputHandler.css -> HandleInput() at: " + Time.realtimeSinceStartup);
                 }
 
-                //Evade/Dodge
+                // Evade/Dodge
                 if ((Input.GetButtonDown("Fire2") ||
                     Input.GetKeyDown(KeyCode.LeftShift) ||
                     Input.GetKeyDown(KeyCode.RightShift)) && evadeDelayComplete)
@@ -165,11 +156,9 @@ public class InputHandler : MonoBehaviour
                     Commands.Add(evadeCommand);
                 }
 
-                //change weapons
-                if (Input.GetButtonDown("ChangeWeapon"))
-                {
+                // change weapons
+                if (Input.GetButtonDown("SwapWeapon"))
                     pc.weaponManager.GetComponent<WeaponManager>().ChangeWeapon();
-                }
 
                 //change weapons -- delete later
                 if (Input.GetKey(KeyCode.Alpha1))
@@ -200,11 +189,21 @@ public class InputHandler : MonoBehaviour
                  **********/
                 if (pc.EquippedWeapon != null)
                 {
+
+                    if (Input.GetButton("AimWeapon") && !aiming)
+                    {
+                        aiming = true;
+                    }
+                    if (Input.GetButtonUp("AimWeapon") && aiming)
+                    {
+                        aiming = false;
+                    }
+
                     if (Input.GetButtonUp("Fire1") ||
                         Input.GetAxis("RightTrigger") == 0)
                         pc.EquippedWeapon.GetComponent<Weapon>().ReleaseTrigger();
 
-                    //fire weapon
+                    // fire weapon
                     if ((Input.GetButton("Fire1") ||
                         Input.GetAxis("RightTrigger") == 1) &&
                         pc.EquippedWeapon != null)
@@ -219,10 +218,6 @@ public class InputHandler : MonoBehaviour
                 ***--*END*--Fire--*END*--***
                 **********/
             }
-
-
-
-
 
 
             //if no input, stop moving player (maybe make an idle command and it's added to the command list instead)
@@ -248,7 +243,6 @@ public class InputHandler : MonoBehaviour
                 GetComponent<PlayerController>().rb.velocity = new Vector3(0, GetComponent<PlayerController>().rb.velocity.y, 0);
             }
 
-         
             return Commands;
         }
         return null;

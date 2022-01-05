@@ -11,7 +11,6 @@ public class WeaponManager : MonoBehaviour {
     public GameObject[] Weapons;
     public Transform LHandSocket, RHandSocket; 
 
-
     private PlayerController parent; 
 
     // Use this for initialization
@@ -60,7 +59,6 @@ public class WeaponManager : MonoBehaviour {
         var region = (int)Mathf.Floor(currentAngle / interval);
 
         return region * interval;
-
     }
 
     public void ModifyWeaponRotation(int dir, Vector3 angle)
@@ -70,20 +68,22 @@ public class WeaponManager : MonoBehaviour {
 
     public void ChangeWeapon()
     {
-        if (Input.GetAxis("ChangeWeapon") > 0)
+        if (Input.GetButtonDown("SwapWeapon"))
         {
-            if (CurWeapon != Weapons.Length-1)
-            {
+            if (CurWeapon != Weapons.Length - 1)
                 CurWeapon++;
-            }
+            else
+                CurWeapon = 0;
         }
-        if (Input.GetAxis("ChangeWeapon") < 0)
+
+        #region old - might delte later
+        /*if (Input.GetAxis("ChangeWeapon") < 0)
         {
             if (CurWeapon != 0)
-            {
                 CurWeapon--;
-            }
-        }
+        }*/
+        #endregion
+
         EquipWeapon(CurWeapon);
     }
 }
