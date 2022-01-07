@@ -73,7 +73,7 @@ public class StateManager : MonoBehaviour
                 if (pc.state != Entity.State.running)
                     pc.state = Entity.State.running;
 
-                //change sprite/animation if player is holding weapon
+                // change sprite/animation if player is holding weapon
                 if (pc.EquippedWeapon == null)
                     pc.animator.Play("Player_Run");
                 else
@@ -107,6 +107,7 @@ public class StateManager : MonoBehaviour
                 SoundManager.PlaySound(pc.dashClip);
                 break;
         }
+        Debug.Log("new state: " + pc.state);
     }
 
     public void ExitState(Entity.State _state)
@@ -155,7 +156,7 @@ public class StateManager : MonoBehaviour
                 //print("Player state is exiting 'falling' state");
                 break;
             case Entity.State.evading:
-                print("Player is exitinf evading");
+                //print("Player is exitinf evading");
                 pc.rb.velocity = Vector3.zero;
                 pc.rb.useGravity = true;
 

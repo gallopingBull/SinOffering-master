@@ -186,7 +186,6 @@ public class PlayerAttributes
     #endregion
 }
 
-
 [System.Serializable]
 public class PlayerAbilities
 {

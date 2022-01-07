@@ -78,14 +78,10 @@ public abstract class Weapon : MonoBehaviour
             Ammo--;
 
         if (Input.GetButton("RightBumper"))
-        {
             SetMuzzleDirection();
-        }
         else
-        {
             spawnLoc = GetMuzzleDirection();
-        }
-     
+
         canFire = false;
         nextFire = fireRate;
 
@@ -110,15 +106,6 @@ public abstract class Weapon : MonoBehaviour
     public string GetWeaponName()
     {
         return weaponName;
-    }
-
-    public virtual void FlipWeaponSprite(int dir)
-    {
-        if (dir == 1)
-            WeaponSprite.flipX = false;
-        else
-            WeaponSprite.flipX = true;
-        MoveWeaponToSocket(pc.dir);
     }
 
     protected virtual void Awake()
@@ -159,10 +146,8 @@ public abstract class Weapon : MonoBehaviour
         FireRateCheck();
     }
 
-
     //turn this into a protected abstract function so eacg
     protected abstract void SpawnProjectile(int dir);
-
 
     public virtual void InitWeapon()
     {
@@ -180,6 +165,15 @@ public abstract class Weapon : MonoBehaviour
         fireRate = weaponAttributes.fireRate;
         ProjectilePrefab.GetComponent<Projectile>().DamageAmmount = weaponAttributes.WeaponDamage;
     }
+
+    public virtual void FlipWeaponSprite(int dir)
+    {
+        if (dir == 1)
+            WeaponSprite.flipX = false;
+        else
+            WeaponSprite.flipX = true;
+        MoveWeaponToSocket(dir);
+    }
     protected virtual void MoveWeaponToSocket(int dir)
     {   
         // player facing right
@@ -188,8 +182,6 @@ public abstract class Weapon : MonoBehaviour
         else
             WeaponSprite.transform.position = weaponManager.LHandSocket.position;
     }
-
-    
     protected void SetMuzzleDirection()
     {
         var tmpScale = pc.dir * Vector3.right;
@@ -204,7 +196,6 @@ public abstract class Weapon : MonoBehaviour
 
         gameObject.transform.localPosition = tmpPos;
     }
-
     protected GameObject GetMuzzleDirection()
     {
         if (pc.dir == 1)

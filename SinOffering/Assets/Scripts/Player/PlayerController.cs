@@ -55,6 +55,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     [HideInInspector]
     public ParticleSystem ps;
 
+    #region maybe delete after refactor input code
     [HideInInspector]
     public float xRaw;
     [HideInInspector]
@@ -64,7 +65,8 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     public float x_R_Raw;
     [HideInInspector]
     public float y_R_Raw;
-
+    #endregion
+    
     public AudioClip jumpClip, landClip, dashClip;
     //[HideInInspector]
     public GameObject button;
@@ -101,25 +103,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     // ***USE ONLY FOR INPUT*** \\\
     private void Update()
     {
-        xRaw = Input.GetAxisRaw("Horizontal");
-        yRaw = Input.GetAxisRaw("Vertical");
-
-        x_R_Raw = Input.GetAxisRaw("RightStick_Horizontal");
-        y_R_Raw = Input.GetAxisRaw("RightStick_Vertical");
-
-        //InputDelay2();
-        //InputDelay.InputDelayHandler(state); // manages delay timers for several different input/actions
-
-        // if weapon is equipped
-        if (weaponManager.WeaponEquipped && inputHandler.aiming)
-        {
-            //var tmp = new Vector3(xRaw,yRaw,0);
-            var tmp = new Vector3(x_R_Raw,y_R_Raw,0);
-            FlipSprite();
-            weaponManager.ModifyWeaponRotation(dir, tmp);
-            //weaponManager.ModifyWeaponRotation(dir, tmp);
-        }
-
         if (inputHandler)
             InputHandler();
 
@@ -187,7 +170,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     private void InputHandler()
     {
         commands = inputHandler.HandleInput();
-        
         if (commands != null)
         {
             for (int i = 0; i < commands.Count; i++)
@@ -316,7 +298,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     public void EnableInput()
     {
-        Debug.Log("enabling input");
         InputEnabled = true;
     }
     public void DisableInput()
@@ -352,8 +333,8 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
             Strength = dataBase["strength"].AttributeDataList[attributes.StrengthAttributeLevel].AttributeValue;
     }
 
-    // store functions (might want to move this interface in its own class,
-    // and ill call a getter on it to get all nesecarry values)
+    // store functions (might want to move these interfaces in to their own class,
+    // and give playercontroller.cs its own instance of that class)
     #region IWeaponStoreCustomer, IAttributeStoreCustomer
 
     void IWeaponStoreCustomer.PurchaseWeapon(string _weaponName)

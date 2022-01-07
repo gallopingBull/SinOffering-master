@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 public class MoveCommand : ICommand {
     private Vector3 _prevPos;
-
     public override void Execute() {
         //prevPos = GetComponent<Transform>().position;
         MoveActor();
@@ -21,7 +20,7 @@ public class MoveCommand : ICommand {
             if (pc.IsGrounded && pc.state != Entity.State.dashing)
             {
                 #region check if i need this
-                /*
+               /*
                if (GetComponent<PlayerController>().xRaw < -.01f &&
                    GetComponent<Entity>().Speed < GetComponent<Entity>().MaxSpeed)
                {
@@ -70,10 +69,7 @@ public class MoveCommand : ICommand {
                         pc.animator.Play("Player_Jump");
                 }
                 else
-                {
-                    //print("should be in player_jump_shoot");
                     pc.animator.Play("Player_Jump_Shoot");
-                }
             }
         }
     }

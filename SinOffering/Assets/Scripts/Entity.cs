@@ -96,7 +96,6 @@ public abstract class Entity : MonoBehaviour {
     //Called when actor has been killed.
     public abstract void Killed();
 
-
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -303,7 +302,21 @@ public abstract class Entity : MonoBehaviour {
 
     // flip enity's sprite
     // make this so it flips any sprite put into it
-    public void FlipSprite()
+    public void FlipEntitySprite(int direction)
+    {
+        facingLeft = direction > 0 ? false : true;
+        ActorSprite.flipX = facingLeft;
+        BloodActorSprite.flipX = facingLeft;
+        
+        // flip weapon sprite
+        if (GetComponent<PlayerController>().EquippedWeapon != null)
+            GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(direction);
+    }
+
+    #region oldFlipSprite
+
+    /*
+    public void FlipEntitySprite()
     {
         // assign direction player is facing
         if (Input.GetAxisRaw("Horizontal") > 0)
@@ -314,25 +327,19 @@ public abstract class Entity : MonoBehaviour {
                 if (GetComponent<PlayerController>().inputHandler.aiming)
                 {
                     facingLeft = GetComponent<PlayerController>().x_R_Raw > 0 ? false : true;
-                    
                     ActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
                     BloodActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
                 }
                 else
                 {
-               
                     facingLeft = false;
                     ActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
                     BloodActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
                 }
 
-
                 // flip weapon sprite
                 if (GetComponent<PlayerController>().EquippedWeapon != null)
-                {
-                    //GetComponent<PlayerController>().dir = GetComponent<Entity>().xPos > 0 ? 1 : -1;
                     GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(dir);
-                }
             }
         }
         if (Input.GetAxisRaw("Horizontal") < 0)
@@ -343,27 +350,25 @@ public abstract class Entity : MonoBehaviour {
                 if (GetComponent<PlayerController>().inputHandler.aiming)
                 {
                     facingLeft = GetComponent<PlayerController>().x_R_Raw > 0 ? false : true;
-
                     ActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
                     BloodActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
                 }
                 else
                 {
-
                     facingLeft = true;
                     ActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
                     BloodActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
                 }
-                //
-
+             
                 // flip weapon sprite
                 if (GetComponent<PlayerController>().EquippedWeapon != null)
-                {
                     GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(dir);
-                }
             }
         }
     }
+    */
+    #endregion
+
 
     // Set default values for player parameters
     protected void SetDefaultSpeed()
@@ -378,6 +383,7 @@ public abstract class Entity : MonoBehaviour {
         Speed = defaultRunSpeed;
     }
 
+    
     protected void SpawnDustTrail()
     {
         //print(gameObject.name + " spawming dust trail");

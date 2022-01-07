@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
 // Maybe change the name of this class to WeaponInventory.cs
 public class WeaponManager : MonoBehaviour {
     public int CurWeapon;
@@ -32,7 +30,7 @@ public class WeaponManager : MonoBehaviour {
         }
     }
     public void EquipWeapon(int newWeapon)
-    {
+    {   
         if (parent.EquippedWeapon != null)
         {
             parent.ResetSpeed(); //reset player to default speed
@@ -42,6 +40,8 @@ public class WeaponManager : MonoBehaviour {
         CurWeapon = newWeapon;
 
         parent.EquippedWeapon = Weapons[CurWeapon];
+
+        // set weapon position/rotation
         parent.EquippedWeapon.SetActive(true);
 
         parent.EquippedWeapon.GetComponent<Weapon>().InitWeapon();
@@ -49,6 +49,7 @@ public class WeaponManager : MonoBehaviour {
         // have the weapon call InitWeapon()
         // wihtin itself instead
     }
+    
     //https://github.com/mucahits/rotateintervally/blob/master/RotateIntervally.cs
     // rotate intervally 
     public float GetTargetEuler(Vector3 touchPosition, float interval)
@@ -63,7 +64,8 @@ public class WeaponManager : MonoBehaviour {
 
     public void ModifyWeaponRotation(int dir, Vector3 angle)
     {
-        Weapons[CurWeapon].transform.rotation = Quaternion.Euler(0,0, GetTargetEuler(angle * dir, 45f) );
+        Weapons[CurWeapon].transform.rotation = 
+            Quaternion.Euler(0,0, GetTargetEuler(angle * dir, 45f) );
     }
 
     public void ChangeWeapon()
@@ -75,7 +77,6 @@ public class WeaponManager : MonoBehaviour {
             else
                 CurWeapon = 0;
         }
-
         #region old - might delte later
         /*if (Input.GetAxis("ChangeWeapon") < 0)
         {

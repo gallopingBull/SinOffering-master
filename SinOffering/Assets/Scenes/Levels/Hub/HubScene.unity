@@ -19595,6 +19595,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1766773264, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766773265, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9219303994259274664, guid: 5a597022f60fe154fbc62b10e8ba90f6, type: 3}
       propertyPath: DashCam
       value: 
