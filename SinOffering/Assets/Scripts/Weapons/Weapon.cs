@@ -167,7 +167,6 @@ public abstract class Weapon : MonoBehaviour
 
     public void ResetPosition()
     {
-
         int tmpDir = pc.dir;
         //FlipWeaponSprite(tmpDir);
         //MoveWeaponToSocket(tmpDir);

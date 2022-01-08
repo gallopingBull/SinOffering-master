@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class InputHandler : MonoBehaviour
@@ -16,15 +15,16 @@ public class InputHandler : MonoBehaviour
     
     private PlayerController pc; //reference to main Player Controller
 
+    // left stick values
     [HideInInspector]
-    public float xRaw;
+    public float L_xRaw;
     [HideInInspector]
-    public float yRaw;
-
+    public float L_yRaw;
+    // right stick values
     [HideInInspector]
-    public float x_R_Raw;
+    public float R_xRaw;
     [HideInInspector]
-    public float y_R_Raw;
+    public float R_yRaw;
 
     public float x_DeadZone = .5f; //anything less than this value (.5f), joysticks become very "sensitive" along x axis
 
@@ -32,7 +32,6 @@ public class InputHandler : MonoBehaviour
     public bool aiming = false; 
 
     [Header("Input Delay Variables")]
-    
     //[HideInInspector]
     public float evadeDelay = 0f;
     [HideInInspector]
@@ -72,35 +71,32 @@ public class InputHandler : MonoBehaviour
 
     public List<ICommand> HandleInput()
     {
-      
         if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick button 7")))
             GetComponent<Pause>().PauseGame();
 
-     
         if (pc.InputEnabled)
         {
-            #region testing - getting stick input from here (originally in PlayerController.cs)
-            xRaw = Input.GetAxisRaw("Horizontal");
-            yRaw = Input.GetAxisRaw("Vertical");
+            #region testing - getting stick input from here
+            L_xRaw = Input.GetAxisRaw("Horizontal");
+            L_yRaw = Input.GetAxisRaw("Vertical");
 
-            x_R_Raw = Input.GetAxisRaw("RightStick_Horizontal");
-            y_R_Raw = Input.GetAxisRaw("RightStick_Vertical");
+            R_xRaw = Input.GetAxisRaw("RightStick_Horizontal");
+            R_yRaw = Input.GetAxisRaw("RightStick_Vertical");
 
             #region testing
             //InputDelay2();
             //InputDelay.InputDelayHandler(state); // manages delay timers for several different input/actions
             #endregion 
 
-            if (xRaw > 0 && pc.dir != 1)
+            if (L_xRaw > 0 && pc.dir != 1)
                 pc.dir = 1;
-
-            if (xRaw < 0 && pc.dir != -1)
+            if (L_xRaw < 0 && pc.dir != -1)
                 pc.dir = -1;
 
             // if weapon is equipped
             if (pc.weaponManager.WeaponEquipped && aiming)
             {
-                var tmp = new Vector3(x_R_Raw, y_R_Raw, 0);
+                var tmp = new Vector3(R_xRaw, R_yRaw, 0);
                 pc.FlipEntitySprite(pc.dir);
                 // flip weapon sprite
                 if (pc.weaponManager.WeaponEquipped)
@@ -110,7 +106,7 @@ public class InputHandler : MonoBehaviour
             #endregion
 
             // Handles player's horizontal movement
-            if (xRaw > x_DeadZone || xRaw < -(x_DeadZone))
+            if (L_xRaw > x_DeadZone || L_xRaw < -(x_DeadZone))
             {
                 // assign direction player is facing (maybe move this)
                 if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
@@ -153,11 +149,7 @@ public class InputHandler : MonoBehaviour
 
                 // Dash Attack
                 if (Input.GetAxis("LeftTrigger") == 1 && !GameManager.instance.gameCompleted)
-                {
                     Commands.Add(dashCommand);
-                    //print("InputHandler.css -> HandleInput() at: " + Time.realtimeSinceStartup);
-                }
-
                 // Evade/Dodge
                 if ((Input.GetButtonDown("Fire2") ||
                     Input.GetKeyDown(KeyCode.LeftShift) ||
@@ -237,7 +229,6 @@ public class InputHandler : MonoBehaviour
                         aiming = false;
                         // reset weapon position/rotation to default with correct direction
                         pc.EquippedWeapon.GetComponent<Weapon>().ResetPosition();
-                  
                     }
 
                     if (Input.GetButtonUp("Fire1") || Input.GetAxis("RightTrigger") == 0)
@@ -259,15 +250,12 @@ public class InputHandler : MonoBehaviour
 
             // if no x-axis input registed, stop moving player
             // *** maybe make an idle command and it's added to the command list instead ***
-            if (xRaw == 0 )
+            if (L_xRaw == 0 )
             {
                 // maybe create a "IdleCommand" and move this there... idk yet
                 if (pc.IsGrounded)
                     pc.StateManager.EnterState(Entity.State.Idle);
-                if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Idle") &&
-                    !pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot"))
-                { 
-                }
+
                 pc.rb.velocity = new Vector3(0, pc.rb.velocity.y, 0);
             }
             return Commands;

@@ -37,12 +37,9 @@ public class WeaponManager : MonoBehaviour {
         }
         
         CurWeapon = newWeapon;
-
         parent.EquippedWeapon = Weapons[CurWeapon];
-
         // set weapon position/rotation
         parent.EquippedWeapon.SetActive(true);
-
         parent.EquippedWeapon.GetComponent<Weapon>().InitWeapon();
         WeaponEquipped = true;
         // have the weapon call InitWeapon()

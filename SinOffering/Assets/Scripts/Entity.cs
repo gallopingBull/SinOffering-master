@@ -12,7 +12,6 @@ public abstract class Entity : MonoBehaviour {
     public float MaxSpeed = 10;
     public float AccSpeed = .15f;
     public float DeAccSpeed = .15f;
-
     
     public float JumpSpeed = 10;
     [HideInInspector]
@@ -92,7 +91,6 @@ public abstract class Entity : MonoBehaviour {
     #region functions
     protected abstract void FixedUpdate();
     protected abstract void InitActor();
-
     public abstract void Killed();
 
     private void Start()
@@ -100,10 +98,7 @@ public abstract class Entity : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         gameManager = GameManager.instance;
         camManager = CameraManager.instance; 
-
         InitActor();
-
-        //Invoke("DeParentCaller", 4f);
     }
 
     protected void CheckIfFalling()

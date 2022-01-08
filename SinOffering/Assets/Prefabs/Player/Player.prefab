@@ -510,20 +510,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 0
-  MaxPoints: 10
+  paused: 0
+  gameCompleted: 0
+  _spawnLocs: []
   GameWonPanel: {fileID: 0}
   GameFailedPanel: {fileID: 0}
   pauseMenu: {fileID: 0}
-  paused: 0
-  SpawnCrates: 0
-  spawnLocs: []
-  Crate: {fileID: 0}
-  gameCompleted: 0
+  gameModeSelected: 0
+  inGame: 0
+  inLobbby: 0
+  _offeringData: {fileID: 0}
   RadialMenu: {fileID: 0}
-  lights: []
   camManager: {fileID: 0}
   TotalSilver: 10000
   curSilver: 10
+  TotalCurrentFaith: 10000
+  TotalFaithSpent: 10000
   TotalEnemyKills: 0
   CurEnemyKills: 0
   TotalDeaths: 0
@@ -537,6 +539,7 @@ MonoBehaviour:
   CurLosses: 0
   TotalLosses: 0
   CurGameTime: 0
+  s_CurGameTime: 
   TotalGameTime: 0
 --- !u!114 &7930721910652797584
 MonoBehaviour:
@@ -956,7 +959,7 @@ GameObject:
   m_Layer: 9
   m_Name: LeftHandSocket
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1026,7 +1029,7 @@ GameObject:
   m_Layer: 9
   m_Name: Hand Sockets
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1122,7 +1125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d05b4a873021a2842832ce92d9a32209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 10000
+  Health: 3
   Speed: 300
   MaxSpeed: 10
   AccSpeed: 0.15
@@ -1162,6 +1165,8 @@ MonoBehaviour:
   MaxStepRate: 0.08
   MaxBloodMasks: 12
   BloodCount: 0
+  Mana: 200
+  Strength: 0
   animator: {fileID: 0}
   dying: 0
   AirControl: 0.75
@@ -1192,6 +1197,8 @@ MonoBehaviour:
   ps: {fileID: 0}
   xRaw: 0
   yRaw: 0
+  x_R_Raw: 0
+  y_R_Raw: 0
   jumpClip: {fileID: 8300000, guid: de4c73058937774409273d9733b5e493, type: 3}
   landClip: {fileID: 8300000, guid: dec7c6c0774056d479a0abb672d2c940, type: 3}
   dashClip: {fileID: 8300000, guid: 000d6de78f954c7469726c3b8d82c3b5, type: 3}
@@ -1210,13 +1217,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccbcba45ec52c3843b825ec8eb2e23bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurWeapon: 0
+  WeaponEquipped: 0
   Weapons:
   - {fileID: 8697511167290282869}
   - {fileID: 4244841998149482820}
   - {fileID: 7930721911553112601}
   - {fileID: 3141151859236867302}
   - {fileID: 7930721910731512545}
-  CurWeapon: 0
   LHandSocket: {fileID: 7930721911565912309}
   RHandSocket: {fileID: 7930721911102940779}
 --- !u!114 &7930721911905566482
@@ -1232,7 +1240,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Commands: []
+  xRaw: 0
+  yRaw: 0
+  x_R_Raw: 0
+  y_R_Raw: 0
   x_DeadZone: 0.5
+  aiming: 0
   evadeDelay: 0
   dashDelay: 0
   jumpDelay: 0
@@ -1303,19 +1316,18 @@ MonoBehaviour:
   ShakeAmmount: 0.07
   dashLoc: {fileID: 0}
   MaxDashCount: 3
+  DashManaCost: 25
   dashButtonHeldTime: 0
   DashButtonHeldTimeMAX: 0.05
   dashCount: 0
-  dashImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  ManaUI: {fileID: 0}
   EnableDashCommand: 0
   isDashing: 0
   dashAttack: 0
   isValid: 0
   dashObstructed: 0
-  CooldownTime: 5
+  CooldownDelay: 5
+  CooldownScale: 0.001
   RadialMenu: {fileID: 0}
   RadialCounterBar: {fileID: 0}
   lr_DashTrajectory: {fileID: 6376135885597525665}
@@ -2554,6 +2566,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 2293494301967783221, guid: 14c83c25b5ca4674e8125b07281c96e1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.328
+      objectReference: {fileID: 0}
     - target: {fileID: 2293494302144571062, guid: 14c83c25b5ca4674e8125b07281c96e1, type: 3}
       propertyPath: m_Name
       value: Weapon_DiscLauncher
@@ -2617,6 +2633,10 @@ PrefabInstance:
     - target: {fileID: 2293494303163026262, guid: 14c83c25b5ca4674e8125b07281c96e1, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2293494303163026263, guid: 14c83c25b5ca4674e8125b07281c96e1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.32800007
       objectReference: {fileID: 0}
     - target: {fileID: 2293494303525104451, guid: 14c83c25b5ca4674e8125b07281c96e1, type: 3}
       propertyPath: m_Layer

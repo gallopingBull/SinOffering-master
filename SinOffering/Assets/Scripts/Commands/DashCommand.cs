@@ -446,8 +446,8 @@ public class DashCommand : ICommand
     
     private Vector3 GetDashDirection()
     {
-        float xRaw = pc.inputHandler.xRaw;
-        float yRaw = pc.inputHandler.yRaw;
+        float xRaw = pc.inputHandler.L_xRaw;
+        float yRaw = pc.inputHandler.L_yRaw;
         return new Vector3(xRaw, yRaw, 0);
     }
 
