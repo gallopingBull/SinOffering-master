@@ -82,7 +82,7 @@ public class SoundManager : MonoBehaviour
 
     public void InitSoundManager()
     {
-        Debug.Log("InitSoundManager");
+        //Debug.Log("InitSoundManager");
         MusicSource = GameObject.Find("MusicSource").GetComponent<AudioSource>();
         SFXSource = GetComponent<AudioSource>();
         instance.audioPanel = GameObject.Find("Panel_AudioSettings");
@@ -95,13 +95,7 @@ public class SoundManager : MonoBehaviour
         instance.sfxText = GameObject.Find("Text_SFXVal").GetComponent<TextMeshProUGUI>();
 
         instance.audioPanel.SetActive(false);
-        if (sceneName != "MainMenu")    
-        {
-            Debug.Log("--- InitSoundTexts() || assigning pausemenu ---");
-            //GameObject.Find("Panel_PauseMainMenu").SetActive(true);
-            //GameManager.instance.pauseMenu.SetActive(false);
-        }
-    
+
         // after assignincall playersettings.cs to update slider/text values with saved 
         GameObject.Find("Main Camera").GetComponent<PlayerSettings>().InitSound();
     }

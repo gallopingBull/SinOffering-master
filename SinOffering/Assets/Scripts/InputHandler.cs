@@ -72,37 +72,43 @@ public class InputHandler : MonoBehaviour
 
     public List<ICommand> HandleInput()
     {
-        #region testing - getting stick input from here (originally in PlayerController.cs)
+      
         if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick button 7")))
             GetComponent<Pause>().PauseGame();
 
-        xRaw = Input.GetAxisRaw("Horizontal");
-        yRaw = Input.GetAxisRaw("Vertical");
-
-        x_R_Raw = Input.GetAxisRaw("RightStick_Horizontal");
-        y_R_Raw = Input.GetAxisRaw("RightStick_Vertical");
-
-        //InputDelay2();
-        //InputDelay.InputDelayHandler(state); // manages delay timers for several different input/actions
-
-        if (xRaw > 0 && pc.dir != 1)
-            pc.dir = 1;
-
-        if (xRaw < 0 && pc.dir != -1)
-            pc.dir = -1;
-
-        // if weapon is equipped
-        if (pc.weaponManager.WeaponEquipped && aiming)
-        {
-            var tmp = new Vector3(x_R_Raw, y_R_Raw, 0);
-            pc.FlipEntitySprite(pc.dir);
-            pc.weaponManager.ModifyWeaponRotation(pc.dir, tmp);
-        }
-        #endregion
-
+     
         if (pc.InputEnabled)
         {
-            //Debug.Log("inputEnabled");
+            #region testing - getting stick input from here (originally in PlayerController.cs)
+            xRaw = Input.GetAxisRaw("Horizontal");
+            yRaw = Input.GetAxisRaw("Vertical");
+
+            x_R_Raw = Input.GetAxisRaw("RightStick_Horizontal");
+            y_R_Raw = Input.GetAxisRaw("RightStick_Vertical");
+
+            #region testing
+            //InputDelay2();
+            //InputDelay.InputDelayHandler(state); // manages delay timers for several different input/actions
+            #endregion 
+
+            if (xRaw > 0 && pc.dir != 1)
+                pc.dir = 1;
+
+            if (xRaw < 0 && pc.dir != -1)
+                pc.dir = -1;
+
+            // if weapon is equipped
+            if (pc.weaponManager.WeaponEquipped && aiming)
+            {
+                var tmp = new Vector3(x_R_Raw, y_R_Raw, 0);
+                pc.FlipEntitySprite(pc.dir);
+                // flip weapon sprite
+                if (pc.weaponManager.WeaponEquipped)
+                    pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
+                pc.weaponManager.ModifyWeaponRotation(pc.dir, tmp);
+            }
+            #endregion
+
             // Handles player's horizontal movement
             if (xRaw > x_DeadZone || xRaw < -(x_DeadZone))
             {
@@ -110,10 +116,13 @@ public class InputHandler : MonoBehaviour
                 if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
                 {
                     pc.FlipEntitySprite(pc.dir);
+                    // flip weapon sprite
+                    if (pc.weaponManager.WeaponEquipped)
+                        pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
                     Commands.Add(moveCommand);
                 }
             }
-
+                
             if (pc.AbilitiesEnabled)
             {
                 // Handles Jumping
@@ -189,7 +198,7 @@ public class InputHandler : MonoBehaviour
                 if (Input.GetButtonDown("SwapWeapon"))
                     pc.weaponManager.GetComponent<WeaponManager>().ChangeWeapon();
 
-                // change weapons -- delete later
+                #region select weapons with numeric keys -- delete later
                 if (Input.GetKey(KeyCode.Alpha1))
                 {
                     GetComponent<PlayerController>().weaponManager.GetComponent<WeaponManager>().EquipWeapon(0);
@@ -212,8 +221,10 @@ public class InputHandler : MonoBehaviour
                     moveCommand.Redo();
                 }
 
+                #endregion
+
                 /**********
-                 ***Fire***
+                 ***Aim & Fire***
                  **********/
                 if (pc.EquippedWeapon != null)
                 {
@@ -221,9 +232,12 @@ public class InputHandler : MonoBehaviour
                     {
                         aiming = true;
                     }
-                    if (Input.GetButtonUp("AimWeapon") && aiming)
+                    if (Input.GetButtonUp("AimWeapon"))
                     {
                         aiming = false;
+                        // reset weapon position/rotation to default with correct direction
+                        pc.EquippedWeapon.GetComponent<Weapon>().ResetPosition();
+                  
                     }
 
                     if (Input.GetButtonUp("Fire1") || Input.GetAxis("RightTrigger") == 0)
@@ -240,32 +254,22 @@ public class InputHandler : MonoBehaviour
                 }
                 /**********
                 ***--*END*--Fire--*END*--***
-                **********/
+                **********/ 
             }
 
-            //if no input, stop moving player (maybe make an idle command and it's added to the command list instead)
+            // if no x-axis input registed, stop moving player
+            // *** maybe make an idle command and it's added to the command list instead ***
             if (xRaw == 0 )
             {
-                if (!GetComponent<PlayerController>().animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Idle") &&
-                    !GetComponent<PlayerController>().animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot"))
-                {
-                    if (GetComponent<PlayerController>().IsGrounded)
-                    {
-                        // change to state to Player_Idle
-                        if (!GetComponent<PlayerController>().EquippedWeapon)
-                        {
-                            GetComponent<PlayerController>().animator.Play("Player_Idle");
-                        }
-                        else
-                        {
-                            GetComponent<PlayerController>().animator.Play("Player_Shoot");
-                        }
-                        GetComponent<PlayerController>().state = Entity.State.Idle;
-                    }
+                // maybe create a "IdleCommand" and move this there... idk yet
+                if (pc.IsGrounded)
+                    pc.StateManager.EnterState(Entity.State.Idle);
+                if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Idle") &&
+                    !pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot"))
+                { 
                 }
-                GetComponent<PlayerController>().rb.velocity = new Vector3(0, GetComponent<PlayerController>().rb.velocity.y, 0);
+                pc.rb.velocity = new Vector3(0, pc.rb.velocity.y, 0);
             }
-
             return Commands;
         }
         return null;

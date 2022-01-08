@@ -425,7 +425,6 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
 
     private void SetMenus() 
     {
-        Debug.Log("--- SetMenus() ---");
         if (GameWonPanel == null )
         {
             if (currentScene.name != "HubScene" && 

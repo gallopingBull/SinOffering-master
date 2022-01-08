@@ -72,6 +72,23 @@ public abstract class Weapon : MonoBehaviour
     #endregion
 
     #region functions
+
+    protected virtual void Awake()
+    {
+        pc = PlayerController.instance;
+        weaponManager = pc.weaponManager;
+        postProcessManager = PostProcessManager.intance;
+        Recoil = GetComponent<Recoil>();
+    }
+    // might switch out fixedupdates for update
+    protected virtual void Update()
+    {
+    }
+    protected virtual void FixedUpdate()
+    {
+        FireRateCheck();
+    }
+
     public virtual void FireWeapon()
     {
         if (!UnlimitedAmmo && Ammo > 0)
@@ -108,14 +125,6 @@ public abstract class Weapon : MonoBehaviour
         return weaponName;
     }
 
-    protected virtual void Awake()
-    {   
-        pc = PlayerController.instance;
-        weaponManager = pc.weaponManager;
-        postProcessManager = PostProcessManager.intance;
-        Recoil = GetComponent<Recoil>(); 
-    }
-
     // only use when game hasnt loaded any data
     // weird work around will find a better way to check this conditon
     public void SetTempAttributeData()
@@ -136,16 +145,6 @@ public abstract class Weapon : MonoBehaviour
             MuzzleFireLightCaller(L_MuzzleFire_Light);
     }
 
-    // might switch out fixedupdates for update
-    protected virtual void Update()
-    {
-    }
-
-    protected virtual void FixedUpdate()
-    {
-        FireRateCheck();
-    }
-
     //turn this into a protected abstract function so eacg
     protected abstract void SpawnProjectile(int dir);
 
@@ -164,6 +163,23 @@ public abstract class Weapon : MonoBehaviour
         Ammo = MaxAmmo;
         fireRate = weaponAttributes.fireRate;
         ProjectilePrefab.GetComponent<Projectile>().DamageAmmount = weaponAttributes.WeaponDamage;
+    }
+
+    public void ResetPosition()
+    {
+
+        int tmpDir = pc.dir;
+        //FlipWeaponSprite(tmpDir);
+        //MoveWeaponToSocket(tmpDir);
+        
+        transform.rotation = 
+            Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
+
+        //SetMuzzleDirection();
+        //if (transform.rotation.y != 0)
+        //{
+            //Vector3 tmpRot = new Vector3(transform.rotation.x, transform.rotation.y, 0);
+        //}
     }
 
     public virtual void FlipWeaponSprite(int dir)

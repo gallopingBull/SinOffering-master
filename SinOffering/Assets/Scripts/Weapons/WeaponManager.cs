@@ -5,7 +5,6 @@ using UnityEngine;
 public class WeaponManager : MonoBehaviour {
     public int CurWeapon;
     public bool WeaponEquipped = false;
-
     public GameObject[] Weapons;
     public Transform LHandSocket, RHandSocket; 
 

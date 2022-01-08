@@ -302,7 +302,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     }
     public void DisableInput()
     {
-        Debug.Log("disabling input");
         InputEnabled = false;
     }
 

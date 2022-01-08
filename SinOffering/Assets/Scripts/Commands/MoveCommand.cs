@@ -13,10 +13,9 @@ public class MoveCommand : ICommand {
 
     public void MoveActor()
     {
-        // basically check if dash isn't active
         if (Time.timeScale == 1)
         {
-            // basic ground movement
+            // basic horizontal ground movement
             if (pc.IsGrounded && pc.state != Entity.State.dashing)
             {
                 #region check if i need this

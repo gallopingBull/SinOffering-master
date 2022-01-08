@@ -93,7 +93,6 @@ public abstract class Entity : MonoBehaviour {
     protected abstract void FixedUpdate();
     protected abstract void InitActor();
 
-    //Called when actor has been killed.
     public abstract void Killed();
 
     private void Start()
@@ -304,13 +303,11 @@ public abstract class Entity : MonoBehaviour {
     // make this so it flips any sprite put into it
     public void FlipEntitySprite(int direction)
     {
+        if (GetComponent<PlayerController>().inputHandler.aiming)
+            return;
         facingLeft = direction > 0 ? false : true;
         ActorSprite.flipX = facingLeft;
         BloodActorSprite.flipX = facingLeft;
-        
-        // flip weapon sprite
-        if (GetComponent<PlayerController>().EquippedWeapon != null)
-            GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(direction);
     }
 
     #region oldFlipSprite
@@ -383,7 +380,6 @@ public abstract class Entity : MonoBehaviour {
         Speed = defaultRunSpeed;
     }
 
-    
     protected void SpawnDustTrail()
     {
         //print(gameObject.name + " spawming dust trail");

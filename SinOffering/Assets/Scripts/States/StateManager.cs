@@ -16,6 +16,10 @@ public class StateManager : MonoBehaviour
         {
             case Entity.State.Idle:
                 //animator.Play("Player_Idle");
+                if (!pc.EquippedWeapon)
+                    pc.animator.Play("Player_Idle");
+                else
+                    pc.animator.Play("Player_Shoot");
                 pc.state = Entity.State.Idle; // set state to idle 
                 break;
 
@@ -55,12 +59,11 @@ public class StateManager : MonoBehaviour
                 //GetComponent<PlayerController>().ps.Play();
                 GetComponent<Entity>().rb.useGravity = false;
 
-
-                GetComponent<DashCommand>().EnableDashCommand = false; //i feel like keeping this in dashcommand
+                GetComponent<DashCommand>().EnableDashCommand = false; // i feel like keeping this in dashcommand
                 GetComponent<DashCommand>().DisableCollisions();
-                GetComponent<DashCommand>().ChangeRigidbodyValues(); //adjust entity's rigigidbody values in order to dash correctly
+                GetComponent<DashCommand>().ChangeRigidbodyValues(); // adjust entity's rigigidbody values in order to dash correctly
 
-                SoundManager.PlaySound(GetComponent<PlayerController>().dashClip);
+                SoundManager.PlaySound(pc.dashClip);
 
                 break;
 
@@ -81,7 +84,7 @@ public class StateManager : MonoBehaviour
                 break;
 
             case Entity.State.falling:
-                print("Player is falling");
+                //print("Player is falling");
                 break;
             case Entity.State.evading:
                 print("Player is evading");
@@ -92,10 +95,7 @@ public class StateManager : MonoBehaviour
                 //pc.InputDelay.evadeDelay =
                 //pc.InputDelay.MAXEvadeDelay;
                 pc.state = Entity.State.evading;
-              
-
                 pc.isInvincible = true;
-
                 pc.jumpEnabled = false;
                 pc.CanDoubleJump = false;
                 //GetComponent<PlayerController>().ps.Play();
@@ -107,9 +107,8 @@ public class StateManager : MonoBehaviour
                 SoundManager.PlaySound(pc.dashClip);
                 break;
         }
-        Debug.Log("new state: " + pc.state);
+        //Debug.Log("new state: " + pc.state);
     }
-
     public void ExitState(Entity.State _state)
     {
         switch (_state)
@@ -170,18 +169,14 @@ public class StateManager : MonoBehaviour
                 if (GetComponent<EvadeCommand>().EvadeCount == 2)
                 {
                     GetComponent<EvadeCommand>().EvadeCount = 0;
-                    GetComponent<EvadeCommand>().AirEvadeCount = 0;
-                    
+                    GetComponent<EvadeCommand>().AirEvadeCount = 0; 
                 }
                 
                 break;
         }
     }
-    
-    //Updates state every frame - place in PlayerController's FixedUpdate();
+    // Updates state every frame - place in PlayerController's FixedUpdate();
     private void UpdateState()
     {
-
     }
-   
 }
