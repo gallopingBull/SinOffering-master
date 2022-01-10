@@ -165,20 +165,18 @@ public abstract class Weapon : MonoBehaviour
         ProjectilePrefab.GetComponent<Projectile>().DamageAmmount = weaponAttributes.WeaponDamage;
     }
 
-    public void ResetPosition()
+    public void ResetPosition(int aimDirection)
     {
         int tmpDir = pc.dir;
-        //FlipWeaponSprite(tmpDir);
-        //MoveWeaponToSocket(tmpDir);
+
+        // if weapon not facing correcg direction
+        if (tmpDir != aimDirection)
+            FlipWeaponSprite(tmpDir);
+        MoveWeaponToSocket(tmpDir);
         
         transform.rotation = 
-            Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
+            Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0);
 
-        //SetMuzzleDirection();
-        //if (transform.rotation.y != 0)
-        //{
-            //Vector3 tmpRot = new Vector3(transform.rotation.x, transform.rotation.y, 0);
-        //}
     }
 
     public virtual void FlipWeaponSprite(int dir)

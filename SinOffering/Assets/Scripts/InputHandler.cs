@@ -26,10 +26,14 @@ public class InputHandler : MonoBehaviour
     [HideInInspector]
     public float R_yRaw;
 
-    public float x_DeadZone = .5f; //anything less than this value (.5f), joysticks become very "sensitive" along x axis
+    //anything less than this value (.5f), joysticks become very "sensitive" along x axis
+    public const float x_DeadZone = .5f; 
 
     [HideInInspector]
-    public bool aiming = false; 
+    public bool aiming = false;
+    private Vector3 _aimDirection;
+    private int movementDir = 0;
+    private int _aimDir = 0;
 
     [Header("Input Delay Variables")]
     //[HideInInspector]
@@ -76,13 +80,10 @@ public class InputHandler : MonoBehaviour
 
         if (pc.InputEnabled)
         {
-            #region testing - getting stick input from here
+            #region get move direction
             L_xRaw = Input.GetAxisRaw("Horizontal");
             L_yRaw = Input.GetAxisRaw("Vertical");
-
-            R_xRaw = Input.GetAxisRaw("RightStick_Horizontal");
-            R_yRaw = Input.GetAxisRaw("RightStick_Vertical");
-
+           
             #region testing
             //InputDelay2();
             //InputDelay.InputDelayHandler(state); // manages delay timers for several different input/actions
@@ -93,28 +94,56 @@ public class InputHandler : MonoBehaviour
             if (L_xRaw < 0 && pc.dir != -1)
                 pc.dir = -1;
 
+            #endregion
+
+            if (Input.GetButton("AimWeapon") && !aiming)
+                aiming = true;
+            if (Input.GetButtonUp("AimWeapon"))
+            {
+                aiming = false;
+                // reset weapon position/rotation to default with correct direction
+                pc.EquippedWeapon.GetComponent<Weapon>().ResetPosition(_aimDir);
+            }
+           
             // if weapon is equipped
             if (pc.weaponManager.WeaponEquipped && aiming)
             {
-                var tmp = new Vector3(R_xRaw, R_yRaw, 0);
-                pc.FlipEntitySprite(pc.dir);
+                R_xRaw = Input.GetAxisRaw("RightStick_Horizontal");
+                R_yRaw = Input.GetAxisRaw("RightStick_Vertical");
+                _aimDirection = new Vector3(R_xRaw, R_yRaw, 0);
+
+                _aimDir = 0;
+
+                if (R_xRaw > x_DeadZone)
+                    _aimDir = 1;
+                if (R_xRaw < x_DeadZone)
+                    _aimDir = -1;
+
+                pc.FlipEntitySprite(_aimDir);
                 // flip weapon sprite
                 if (pc.weaponManager.WeaponEquipped)
-                    pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
-                pc.weaponManager.ModifyWeaponRotation(pc.dir, tmp);
-            }
-            #endregion
+                    pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
 
+                if (_aimDir != 0)
+                    pc.weaponManager.ModifyWeaponRotation(_aimDir, _aimDirection);
+            }
+            
+            //Debug.Log("_aimDir" + _aimDir);
+            //Debug.Log("pc.Dir" + pc.dir);
+            
             // Handles player's horizontal movement
             if (L_xRaw > x_DeadZone || L_xRaw < -(x_DeadZone))
             {
                 // assign direction player is facing (maybe move this)
                 if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
                 {
+                    Debug.Log("FlipEntitySprite(pc.Dir: " + pc.dir +")");
                     pc.FlipEntitySprite(pc.dir);
                     // flip weapon sprite
                     if (pc.weaponManager.WeaponEquipped)
-                        pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
+                        // before it was i(nt)_aimdirection.x == 0
+                        if (!aiming /*|| (R_xRaw < x_DeadZone || R_xRaw > -(x_DeadZone))*/)
+                            pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
                     Commands.Add(moveCommand);
                 }
             }
@@ -129,8 +158,7 @@ public class InputHandler : MonoBehaviour
 
                     pc.JumpButtonHeldDown = true;
                     #region TEST UI
-                    if (pc.button != null &&
-                        !pc.button.activeSelf)
+                    if (pc.button != null && !pc.button.activeSelf)
                     {
                         pc.button.SetActive(true);
                     }
@@ -214,27 +242,13 @@ public class InputHandler : MonoBehaviour
                 }
 
                 #endregion
-
-                /**********
-                 ***Aim & Fire***
-                 **********/
+                
+                // Fire Weapon
                 if (pc.EquippedWeapon != null)
                 {
-                    if (Input.GetButton("AimWeapon") && !aiming)
-                    {
-                        aiming = true;
-                    }
-                    if (Input.GetButtonUp("AimWeapon"))
-                    {
-                        aiming = false;
-                        // reset weapon position/rotation to default with correct direction
-                        pc.EquippedWeapon.GetComponent<Weapon>().ResetPosition();
-                    }
-
                     if (Input.GetButtonUp("Fire1") || Input.GetAxis("RightTrigger") == 0)
                         pc.EquippedWeapon.GetComponent<Weapon>().ReleaseTrigger();
 
-                    // fire weapon
                     if ((Input.GetButton("Fire1") || Input.GetAxis("RightTrigger") == 1) &&
                         pc.EquippedWeapon != null)
                     {
@@ -243,9 +257,6 @@ public class InputHandler : MonoBehaviour
                             Commands.Add(fireCommand);
                     }   
                 }
-                /**********
-                ***--*END*--Fire--*END*--***
-                **********/ 
             }
 
             // if no x-axis input registed, stop moving player

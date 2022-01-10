@@ -57,7 +57,8 @@ public class MoveCommand : ICommand {
             }
 
             // deacelerate horizontal movement while player is in air falling allows for some Air Control
-            if (pc.state == Entity.State.falling || pc.state == Entity.State.Jumping)
+            if (pc.state == Entity.State.falling || 
+                pc.state == Entity.State.Jumping)
             {
                 pc.rb.velocity = new Vector3(pc.dir * (pc.Speed * pc.AirControl) * Time.fixedDeltaTime, pc.rb.velocity.y, 0);
 

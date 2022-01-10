@@ -298,8 +298,19 @@ public abstract class Entity : MonoBehaviour {
     // make this so it flips any sprite put into it
     public void FlipEntitySprite(int direction)
     {
+        Debug.Log("1st. facingLeft: "+ facingLeft);
         if (GetComponent<PlayerController>().inputHandler.aiming)
-            return;
+        {
+            if (dir == direction)
+                return;
+
+            // is facing left, but aiming right || is facing right, but aiming 
+            if (facingLeft && direction > 0 || !facingLeft && direction < 0)
+            {
+
+            }
+        }
+        Debug.Log("2nd. facingLeft: " + facingLeft);
         facingLeft = direction > 0 ? false : true;
         ActorSprite.flipX = facingLeft;
         BloodActorSprite.flipX = facingLeft;
