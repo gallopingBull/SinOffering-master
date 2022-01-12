@@ -303,12 +303,6 @@ public abstract class Entity : MonoBehaviour {
         {
             if (dir == direction)
                 return;
-
-            // is facing left, but aiming right || is facing right, but aiming 
-            if (facingLeft && direction > 0 || !facingLeft && direction < 0)
-            {
-
-            }
         }
         Debug.Log("2nd. facingLeft: " + facingLeft);
         facingLeft = direction > 0 ? false : true;

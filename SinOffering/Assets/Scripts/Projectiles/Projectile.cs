@@ -11,18 +11,13 @@ public  class Projectile : MonoBehaviour
     [HideInInspector]
     public float DamageAmmount = 1; 
 
-
     public bool IsPistol, IsShotGun, IsMachineGun, isLaser;
     public float LifeTime = 3f; //.1 - .5f for shotgun
     public GameObject impactParticle;
     public GameObject enemyimpactParticle;
 
-
-    // Start is called before the first frame update
-
     //public SpriteRenderer ProjectileSprite; 
     
-
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -60,7 +55,6 @@ public  class Projectile : MonoBehaviour
             }
             if (other.gameObject.tag == "Wall")
             {
-
                 EnableImpactParticle(GetComponent<Transform>(), other.gameObject.tag);
                 DestroyProjectile();
                 return;
@@ -73,8 +67,6 @@ public  class Projectile : MonoBehaviour
             }
         }
     }
-
-
 
     protected void EnableImpactParticle(Transform hitLoc, string tag)
     {
@@ -118,7 +110,6 @@ public  class Projectile : MonoBehaviour
                 break;
         }
     }
-
 
     public virtual void DestroyProjectile()
     {

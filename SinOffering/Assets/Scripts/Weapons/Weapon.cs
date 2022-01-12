@@ -176,7 +176,6 @@ public abstract class Weapon : MonoBehaviour
         
         transform.rotation = 
             Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0);
-
     }
 
     public virtual void FlipWeaponSprite(int dir)

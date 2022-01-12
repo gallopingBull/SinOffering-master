@@ -116,7 +116,7 @@ public class InputHandler : MonoBehaviour
 
                 if (R_xRaw > x_DeadZone)
                     _aimDir = 1;
-                if (R_xRaw < x_DeadZone)
+                if (R_xRaw < -(x_DeadZone))
                     _aimDir = -1;
 
                 pc.FlipEntitySprite(_aimDir);
@@ -141,8 +141,7 @@ public class InputHandler : MonoBehaviour
                     pc.FlipEntitySprite(pc.dir);
                     // flip weapon sprite
                     if (pc.weaponManager.WeaponEquipped)
-                        // before it was i(nt)_aimdirection.x == 0
-                        if (!aiming /*|| (R_xRaw < x_DeadZone || R_xRaw > -(x_DeadZone))*/)
+                        if (!aiming)
                             pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
                     Commands.Add(moveCommand);
                 }
