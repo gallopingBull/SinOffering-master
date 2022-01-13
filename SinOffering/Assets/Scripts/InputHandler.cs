@@ -33,7 +33,8 @@ public class InputHandler : MonoBehaviour
     public bool aiming = false;
     private Vector3 _aimDirection;
     private int movementDir = 0;
-    private int _aimDir = 0;
+    [HideInInspector]
+    public int _aimDir = 0;
 
     [Header("Input Delay Variables")]
     //[HideInInspector]
@@ -58,19 +59,28 @@ public class InputHandler : MonoBehaviour
     [HideInInspector]
     public bool jumpDelayComplete = true;
 
+
+
+    // On draw gizmo properties
+    private float _curHitDistance = 10f;
+    private float _circleCastRadius = 1f;
+    private Vector3 _origin;
+    private Vector3 _boxCastSize;
+
     #endregion
+
 
     #region functions
     // Use this for initialization
     void Awake()
     {
         pc = GetComponent<PlayerController>();
-
         jumpCommand = GetComponent<JumpCommand>();
         moveCommand = GetComponent<MoveCommand>();
         fireCommand = GetComponent<FireCommand>();
         dashCommand = GetComponent<DashCommand>();
         evadeCommand = GetComponent<EvadeCommand>();
+        _boxCastSize = new Vector3(1, 1, 1);
     }
 
     public List<ICommand> HandleInput()
@@ -120,12 +130,15 @@ public class InputHandler : MonoBehaviour
                     _aimDir = -1;
 
                 pc.FlipEntitySprite(_aimDir);
+                pc.EquippedWeapon.GetComponent<Weapon>().SetSpawnLoc();
                 // flip weapon sprite
                 if (pc.weaponManager.WeaponEquipped)
                     pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
 
                 if (_aimDir != 0)
+                {
                     pc.weaponManager.ModifyWeaponRotation(_aimDir, _aimDirection);
+                }  
             }
             
             //Debug.Log("_aimDir" + _aimDir);
@@ -399,4 +412,47 @@ public class InputHandler : MonoBehaviour
 
     }
     #endregion
+
+    private void OnDrawGizmos()
+    {
+        if (pc.EquippedWeapon != null)
+        {
+            _origin = pc.EquippedWeapon.GetComponent<Weapon>().spawnLoc.transform.position;
+
+            // aim direction
+            if (aiming && _origin != null)
+            {
+                Quaternion currentRotation = pc.EquippedWeapon.GetComponent<Weapon>().spawnLoc.transform.localRotation;//Quaternion.Euler(GetTargetEuler(_aimDir * _aimDirection, 45f),0, 0);
+                Vector3 currentEulerAngles = currentRotation * Vector3.right;
+
+                Gizmos.color = Color.red;
+                Debug.DrawRay(_origin, currentEulerAngles, Color.red);
+                Gizmos.DrawWireCube(_origin + (currentEulerAngles * _curHitDistance), _boxCastSize);
+                //Gizmos.DrawWireSphere(origin + (direction.normalized * curHitDistance), circleCastDashRadius);
+            }
+        }
+        /*
+        // move direction
+        Gizmos.color = Color.blue;
+
+        Debug.DrawRay(_origin, _aimDirection.normalized * _curHitDistance, Color.green);
+        Gizmos.DrawWireCube(_origin + (_aimDirection.normalized * _curHitDistance), _boxCastSize);
+         */
+    }
+
+    public float GetTargetEuler(Vector3 touchPosition, float interval)
+    {
+        float currentAngle = Mathf.Atan2(touchPosition.y, touchPosition.x) * Mathf.Rad2Deg;
+        currentAngle = (currentAngle > 0) ? currentAngle : currentAngle + 360f;
+
+        var region = (int)Mathf.Floor(currentAngle / interval);
+
+        return region * interval;
+    }
+    
+    public void ModifyWeaponRotation(int dir, Vector3 angle)
+    {
+        pc.EquippedWeapon.transform.rotation =
+            Quaternion.Euler(0, 0, GetTargetEuler(angle * dir, 45f));
+    }
 }

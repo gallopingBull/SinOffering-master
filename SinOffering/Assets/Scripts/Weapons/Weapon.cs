@@ -94,19 +94,28 @@ public abstract class Weapon : MonoBehaviour
         if (!UnlimitedAmmo && Ammo > 0)
             Ammo--;
 
-        if (Input.GetButton("RightBumper"))
-            SetMuzzleDirection();
-        else
-            spawnLoc = GetMuzzleDirection();
+        if (!pc.inputHandler.aiming)
+            SetSpawnLoc();
 
         canFire = false;
         nextFire = fireRate;
 
         SoundManager.PlaySound(fireClip); // move this into weapon subclasses for more specific behavior
-        SpawnProjectile(pc.dir);
+
+
+        int tmp = pc.dir;
+
+        if (pc.inputHandler.aiming)
+            tmp = pc.inputHandler._aimDir;
+        SpawnProjectile(tmp);
         EnableMuzzleFX();
         EnableMuzzleLight();
         CameraShake.instance.Shake(DurationCamShake, AmmountCamShake, SmoothTransition);
+    }
+
+    public void SetSpawnLoc()
+    {
+        spawnLoc = GetMuzzleDirection();
     }
 
     public virtual void ReleaseTrigger()
@@ -177,7 +186,7 @@ public abstract class Weapon : MonoBehaviour
         transform.rotation = 
             Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0);
     }
-
+        
     public virtual void FlipWeaponSprite(int dir)
     {
         if (dir == 1)
@@ -194,7 +203,9 @@ public abstract class Weapon : MonoBehaviour
         else
             WeaponSprite.transform.position = weaponManager.LHandSocket.position;
     }
-    protected void SetMuzzleDirection()
+    
+    // rescales weapoon on x-axis
+    protected void CalculateMuzzleDirection()
     {
         var tmpScale = pc.dir * Vector3.right;
         tmpScale.y = gameObject.transform.localScale.y;
@@ -210,7 +221,11 @@ public abstract class Weapon : MonoBehaviour
     }
     protected GameObject GetMuzzleDirection()
     {
-        if (pc.dir == 1)
+        int tmp = pc.dir;
+
+        if (pc.inputHandler.aiming)
+            tmp = pc.inputHandler._aimDir;
+        if (tmp == 1)
             return SpawnLocR;
         else
             return SpawnLocL;
@@ -218,7 +233,11 @@ public abstract class Weapon : MonoBehaviour
 
     private void EnableMuzzleFX()
     {
-        if (pc.dir == 1)
+        int tmp = pc.dir;
+
+        if (pc.inputHandler.aiming)
+            tmp = pc.inputHandler._aimDir;
+        if (tmp == 1)
             MuzzleFire_R_Particle.Play();
         else
             MuzzleFire_L_Particle.Play();
@@ -260,9 +279,7 @@ public abstract class Weapon : MonoBehaviour
             return;
         }
         else
-        {
             canFire = true;
-        }
     }
     protected virtual void PPMCaller()
     {

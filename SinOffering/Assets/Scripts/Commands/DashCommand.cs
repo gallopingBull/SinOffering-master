@@ -354,20 +354,14 @@ public class DashCommand : ICommand
     private void DashToLocation()
     {
         if (GetDashDirection().x != 0 || GetDashDirection().y != 0)
-        {
             pc.transform.position = origin + (direction.normalized * curHitDistance);
-        }
         else
         {
             Vector3 tmpVel;
             if (pc.facingLeft)
-            {
                 tmpVel = new Vector3(-1 * DashSpeed, transform.position.y, transform.position.z);
-            }
             else
-            {
                 tmpVel = new Vector3(1, transform.position.y, transform.position.z);
-            }
 
             transform.position = origin + (direction.normalized * curHitDistance);
         }
@@ -411,13 +405,11 @@ public class DashCommand : ICommand
 
         if (!InCooldown && pc.Mana < DashManaCost)
         {
-
             if (!cr_active)
             {
                 InCooldown = true;
                 StartCoroutine(CoolDown());
             }
-                
         }
 
         yield return new WaitForSeconds(.01f); //delay before dash attack finishes
