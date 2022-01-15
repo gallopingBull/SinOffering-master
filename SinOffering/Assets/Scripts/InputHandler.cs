@@ -67,6 +67,8 @@ public class InputHandler : MonoBehaviour
     private Vector3 _origin;
     private Vector3 _boxCastSize;
 
+    public float deadZone = 0.05f;
+   
     #endregion
 
 
@@ -111,8 +113,8 @@ public class InputHandler : MonoBehaviour
             if (Input.GetButtonUp("AimWeapon"))
             {
                 aiming = false;
-                // reset weapon position/rotation to default with correct direction
-                pc.EquippedWeapon.GetComponent<Weapon>().ResetPosition(_aimDir);
+                // reset weapon position/rotation to default with movement direction
+                pc.EquippedWeapon.GetComponent<Weapon>().ResetPosition(pc.dir);
             }
            
             // if weapon is equipped
@@ -120,30 +122,37 @@ public class InputHandler : MonoBehaviour
             {
                 R_xRaw = Input.GetAxisRaw("RightStick_Horizontal");
                 R_yRaw = Input.GetAxisRaw("RightStick_Vertical");
-                _aimDirection = new Vector3(R_xRaw, R_yRaw, 0);
+                _aimDirection = new Vector2(R_xRaw, R_yRaw);
 
-                _aimDir = 0;
+                #region testing
+                //Debug.Log("_aimDirection.magnitude" + _aimDirection.magnitude);
+                if (_aimDirection.magnitude < deadZone)
+                {
+                    //_aimDirection = Vector2.zero;
+                }
+                #endregion
 
                 if (R_xRaw > x_DeadZone)
                     _aimDir = 1;
                 if (R_xRaw < -(x_DeadZone))
                     _aimDir = -1;
 
-                pc.FlipEntitySprite(_aimDir);
+                if (R_xRaw == 0)
+                    pc.FlipEntitySprite(pc.dir);
+                else
+                    pc.FlipEntitySprite(_aimDir);
+
                 pc.EquippedWeapon.GetComponent<Weapon>().SetSpawnLoc();
                 // flip weapon sprite
                 if (pc.weaponManager.WeaponEquipped)
                     pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
-
                 if (_aimDir != 0)
-                {
                     pc.weaponManager.ModifyWeaponRotation(_aimDir, _aimDirection);
-                }  
             }
-            
-            //Debug.Log("_aimDir" + _aimDir);
+
+            //Debug.Log("_aimDir" + _aimDir);   
             //Debug.Log("pc.Dir" + pc.dir);
-            
+
             // Handles player's horizontal movement
             if (L_xRaw > x_DeadZone || L_xRaw < -(x_DeadZone))
             {
@@ -415,6 +424,10 @@ public class InputHandler : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        // crappy condition to ignore null error from pc while in editor
+        if (pc == null)
+            return;
+
         if (pc.EquippedWeapon != null)
         {
             _origin = pc.EquippedWeapon.GetComponent<Weapon>().spawnLoc.transform.position;
@@ -422,7 +435,7 @@ public class InputHandler : MonoBehaviour
             // aim direction
             if (aiming && _origin != null)
             {
-                Quaternion currentRotation = pc.EquippedWeapon.GetComponent<Weapon>().spawnLoc.transform.localRotation;//Quaternion.Euler(GetTargetEuler(_aimDir * _aimDirection, 45f),0, 0);
+                Quaternion currentRotation = pc.EquippedWeapon.GetComponent<Weapon>().spawnLoc.transform.localRotation;
                 Vector3 currentEulerAngles = currentRotation * Vector3.right;
 
                 Gizmos.color = Color.red;
@@ -431,6 +444,8 @@ public class InputHandler : MonoBehaviour
                 //Gizmos.DrawWireSphere(origin + (direction.normalized * curHitDistance), circleCastDashRadius);
             }
         }
+
+
         /*
         // move direction
         Gizmos.color = Color.blue;

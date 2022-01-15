@@ -55,8 +55,13 @@ public class ExplosionDamage : MonoBehaviour {
         foreach (GameObject target in targets.ToList())
         {
             //shoot raycast line between impact point and target positions
+            if (target == null)
+                continue;
+
             targetPos = target.transform.position;
             RaycastHit2D[] hits = Physics2D.RaycastAll(impactPoint, targetPos - impactPoint, 10f, layerMask);
+
+
 
             foreach(RaycastHit2D hit in hits)
             {

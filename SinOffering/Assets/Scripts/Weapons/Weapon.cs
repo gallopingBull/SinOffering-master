@@ -270,7 +270,7 @@ public abstract class Weapon : MonoBehaviour
 
     // should this be put in Playercontroller.cs instead? 
     // avoid having to have multiple update() in weapon.cs
-    // sinve th eplayer can be checked if they can shoot
+    // since the player can be checked if they can shoot
     protected void FireRateCheck()
     {
         if (nextFire > 0)
@@ -290,7 +290,7 @@ public abstract class Weapon : MonoBehaviour
         Vector3 randDir = (Vector3.right).normalized;
         float angle = Mathf.Atan2(randDir.y, randDir.x) * Mathf.Rad2Deg;
         float spread = Random.Range(MinSpread, MaxSpread);
-        return Quaternion.Euler(new Vector3(0, 0, angle + spread));
+        return Quaternion.Euler(new Vector3(0, 0, transform.rotation.eulerAngles.z + angle + spread));
     }
 
     #endregion
