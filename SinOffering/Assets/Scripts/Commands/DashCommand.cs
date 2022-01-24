@@ -444,7 +444,7 @@ public class DashCommand : ICommand
     }
 
     public void CalculateDashAttackTargets(Vector2 _origin, Vector2 _dir, float _hitDistance)
-    {
+    {   
         List<GameObject> gameObjectsToCut = new List<GameObject>();
         // Remove any 'X' on enemies that have been destroyed
         if (targets != null)

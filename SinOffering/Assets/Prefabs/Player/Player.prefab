@@ -690,7 +690,7 @@ Transform:
   m_GameObject: {fileID: 7930721911066637034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.743, z: 0}
-  m_LocalScale: {x: 3.15, y: 3.15, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children:
   - {fileID: 1137876167}
   m_Father: {fileID: 7930721911905566486}
@@ -736,7 +736,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -1966381394238714707, guid: 8c9f2de6f1b012a498b6f6ad6de83bc9, type: 3}
+  m_Sprite: {fileID: -467307283419413426, guid: 2ded1af560e095c4ab63b8af5bf79fe6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -757,7 +757,7 @@ Animator:
   m_GameObject: {fileID: 7930721911066637034}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5f512215070cabd4f94de37eb1ea9ec2, type: 2}
+  m_Controller: {fileID: 9100000, guid: 76efd85e1cbcf0f4bacd4153735cb433, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -779,18 +779,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.23914914}
+  m_Offset: {x: 0, y: 0.24001147}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.42, y: 0.48}
+    oldSize: {x: 0.19, y: 0.44}
     newSize: {x: 0.42, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.42, y: 0.4817017}
+  m_Size: {x: 0.42, y: 0.48004952}
   m_EdgeRadius: 0
 --- !u!50 &2791437912799178983
 Rigidbody2D:
@@ -1256,6 +1256,7 @@ MonoBehaviour:
   evadeDelayComplete: 1
   dashDelayComplete: 1
   jumpDelayComplete: 1
+  deadZone: 0
 --- !u!65 &7930721911905566487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1267,8 +1268,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.32, y: 1.5105706, z: 1}
-  m_Center: {x: 0, y: 0.013260305, z: 0}
+  m_Size: {x: 1.32, y: 1.5058553, z: 1}
+  m_Center: {x: 0, y: 0.009844661, z: 0}
 --- !u!54 &7930721911905566484
 Rigidbody:
   m_ObjectHideFlags: 0

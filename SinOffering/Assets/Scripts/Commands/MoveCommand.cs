@@ -15,6 +15,13 @@ public class MoveCommand : ICommand {
     {
         if (Time.timeScale == 1)
         {
+            // deacelerate horizontal movement while player is in air falling allows for some Air Control
+            if (pc.state == Entity.State.falling || pc.state == Entity.State.Jumping)
+            {
+                pc.rb.velocity = new Vector3(pc.dir * (pc.Speed * pc.AirControl) * Time.fixedDeltaTime, pc.rb.velocity.y, 0);
+            
+            }
+
             // basic horizontal ground movement
             if (pc.IsGrounded && pc.state != Entity.State.dashing)
             {
@@ -54,22 +61,6 @@ public class MoveCommand : ICommand {
                 pc.rb.velocity = 
                     new Vector3(pc.dir * (pc.Speed*aimingSpeedScale) * (Time.fixedDeltaTime*TimeScale.player), pc.rb.velocity.y);
                 pc.StateManager.EnterState(Entity.State.running);
-            }
-
-            // deacelerate horizontal movement while player is in air falling allows for some Air Control
-            if (pc.state == Entity.State.falling || 
-                pc.state == Entity.State.Jumping)
-            {
-                pc.rb.velocity = new Vector3(pc.dir * (pc.Speed * pc.AirControl) * Time.fixedDeltaTime, pc.rb.velocity.y, 0);
-
-                // change sprite/animation if player is holding weapon
-                if (!pc.EquippedWeapon)
-                {
-                    if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Jump"))
-                        pc.animator.Play("Player_Jump");
-                }
-                else
-                    pc.animator.Play("Player_Jump_Shoot");
             }
         }
     }

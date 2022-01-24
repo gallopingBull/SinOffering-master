@@ -12,10 +12,11 @@ public class StateManager : MonoBehaviour
     public void EnterState(Entity.State _state)
     {
         ExitState(pc.state);
+        Debug.Log("exiting state: " + pc.state);
+        Debug.Log("entering state: " + _state);
         switch (_state)
         {
             case Entity.State.Idle:
-                //animator.Play("Player_Idle");
                 if (!pc.EquippedWeapon)
                     pc.animator.Play("Player_Idle");
                 else
@@ -24,6 +25,7 @@ public class StateManager : MonoBehaviour
                 break;
 
             case Entity.State.Jumping:
+                pc.state = Entity.State.Jumping; // set state to jump 
                 //change sprite/ animation if weapon equipped
                 if (!pc.EquippedWeapon)
                 {
@@ -38,14 +40,18 @@ public class StateManager : MonoBehaviour
                 GetComponent<InputHandler>().jumpDelay =
                     GetComponent<InputHandler>().MAXjumpDelay;
 
-                pc.state = Entity.State.Jumping; // set state to jump 
                 
+                #region testing
                 //pc.InputDelay.jumpDelay = 
-                  //  pc.InputDelay.MAXjumpDelay; 
-                
+                //  pc.InputDelay.MAXjumpDelay;
+                #endregion
+
                 SoundManager.PlaySound(pc.jumpClip);
-                pc.CanDoubleJump = true;
+                if (pc.jumpCount == 0)
+                    pc.CanDoubleJump = true;
+                
                 pc.jumpCount++;
+                Debug.Log("pc.jumpCount: " + pc.jumpCount);
                 break;
 
             case Entity.State.dashing:
@@ -84,7 +90,11 @@ public class StateManager : MonoBehaviour
                 break;
 
             case Entity.State.falling:
-                //print("Player is falling");
+                if (pc.EquippedWeapon == null)
+                    pc.animator.Play("Player_Falling");
+                else
+                    pc.animator.Play("Player_Jump_Shoot");
+                pc.state = Entity.State.falling;
                 break;
             case Entity.State.evading:
                 print("Player is evading");

@@ -1,0 +1,7524 @@
+fileFormatVersion: 2
+guid: 156b2396cfd6cfe40b8f8a8b7ff77ff0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6710895477284620865
+    second: Player_Idle_0
+  - first:
+      213: 7248711403429362033
+    second: Player_Idle_1
+  - first:
+      213: -2968991648162780483
+    second: Player_Idle_2
+  - first:
+      213: -7893148930119595109
+    second: Player_Idle_3
+  - first:
+      213: 3413254422896966217
+    second: playerSoma_4
+  - first:
+      213: -5597756442620575394
+    second: playerSoma_5
+  - first:
+      213: 2468149901388256086
+    second: sfda
+  - first:
+      213: 3471702939423413534
+    second: playerSoma_7
+  - first:
+      213: 3679743806262238466
+    second: playerSoma_8
+  - first:
+      213: 6846207597221511539
+    second: playerSoma_9
+  - first:
+      213: 5945055601358495262
+    second: playerSoma_10
+  - first:
+      213: -4257111507161253847
+    second: playerSoma_11
+  - first:
+      213: -5835136477164610228
+    second: playerSoma_12
+  - first:
+      213: -1813313474847894670
+    second: playerSoma_13
+  - first:
+      213: 5944900625634633980
+    second: playerSoma_14
+  - first:
+      213: -1521298438045685502
+    second: playerSoma_15
+  - first:
+      213: 29425129308456515
+    second: playerSoma_16
+  - first:
+      213: 947141106914848761
+    second: playerSoma_17
+  - first:
+      213: 2425862868900344056
+    second: playerSoma_18
+  - first:
+      213: 6867254875333738327
+    second: playerSoma_19
+  - first:
+      213: -7568624787784910105
+    second: playerSoma_20
+  - first:
+      213: -8001391719253472700
+    second: playerSoma_21
+  - first:
+      213: -4316727993813695582
+    second: playerSoma_22
+  - first:
+      213: 6006153127057859
+    second: playerSoma_23
+  - first:
+      213: 5403207240298166348
+    second: playerSoma_24
+  - first:
+      213: 1547797887433200346
+    second: playerSoma_25
+  - first:
+      213: 2440242095047247986
+    second: playerSoma_26
+  - first:
+      213: -5112639785971591660
+    second: playerSoma_27
+  - first:
+      213: 4145008745882830854
+    second: playerSoma_28
+  - first:
+      213: 597678736838557724
+    second: Player_Run_0
+  - first:
+      213: 8580463243981761100
+    second: Player_Run_1
+  - first:
+      213: 4548270848703538020
+    second: Player_Run_2
+  - first:
+      213: -7965205386462789310
+    second: Player_Run_3
+  - first:
+      213: -2684524481202220353
+    second: Player_Run_4
+  - first:
+      213: 6813229780450250234
+    second: Player_Run_5
+  - first:
+      213: -43742099960792835
+    second: Player_Run_6
+  - first:
+      213: -6978840919808954610
+    second: Player_Run_7
+  - first:
+      213: -4973458611142014689
+    second: Player_Run_8
+  - first:
+      213: 8416648395153284311
+    second: Player_Run_9
+  - first:
+      213: 6659925117104649769
+    second: Player_Run_10
+  - first:
+      213: 2899198467515787497
+    second: Player_Run_11
+  - first:
+      213: 3351868510942512035
+    second: Player_Run_12
+  - first:
+      213: -3983703199358517986
+    second: Player_Run_13
+  - first:
+      213: 189390423341164986
+    second: Player_Run_14
+  - first:
+      213: -4361632349793720453
+    second: Player_Run_15
+  - first:
+      213: -8190909491352513534
+    second: playerSoma_45
+  - first:
+      213: -5341629518797377615
+    second: playerSoma_46
+  - first:
+      213: 2339236522559748160
+    second: playerSoma_47
+  - first:
+      213: -4249438752057603615
+    second: playerSoma_48
+  - first:
+      213: 4147500944487763058
+    second: playerSoma_49
+  - first:
+      213: -77478084249912214
+    second: playerSoma_50
+  - first:
+      213: -4076644568609286169
+    second: playerSoma_51
+  - first:
+      213: 7128719658278772425
+    second: playerSoma_52
+  - first:
+      213: 2813379061278228454
+    second: playerSoma_53
+  - first:
+      213: -4000304555806883459
+    second: playerSoma_54
+  - first:
+      213: -7518518083163083964
+    second: playerSoma_55
+  - first:
+      213: -2097302598265621507
+    second: playerSoma_56
+  - first:
+      213: -1484723240373927160
+    second: playerSoma_57
+  - first:
+      213: -5344618766400917508
+    second: playerSoma_58
+  - first:
+      213: -2468722952652686563
+    second: playerSoma_59
+  - first:
+      213: -1955119038588244229
+    second: playerSoma_60
+  - first:
+      213: 3887295588791178151
+    second: playerSoma_61
+  - first:
+      213: -1872018720249278392
+    second: playerSoma_62
+  - first:
+      213: 3744937093294417583
+    second: playerSoma_63
+  - first:
+      213: 5181656351828663426
+    second: playerSoma_64
+  - first:
+      213: -3809819348278085448
+    second: playerSoma_65
+  - first:
+      213: -5994163235859053524
+    second: playerSoma_66
+  - first:
+      213: 3130773016731094421
+    second: playerSoma_67
+  - first:
+      213: 794359633203962531
+    second: playerSoma_68
+  - first:
+      213: 3347139641255653191
+    second: Player_Jump_0
+  - first:
+      213: 1991419168540062420
+    second: Player_Jump_1
+  - first:
+      213: 5238352494272793231
+    second: Player_Jump_2
+  - first:
+      213: 2344524396011246227
+    second: Player_Falling
+  - first:
+      213: -6392469064400824560
+    second: playerSoma_73
+  - first:
+      213: -5676804538207793938
+    second: playerSoma_74
+  - first:
+      213: 5904266948177815005
+    second: playerSoma_75
+  - first:
+      213: -8814196946616859674
+    second: playerSoma_76
+  - first:
+      213: -5559461864855439971
+    second: playerSoma_77
+  - first:
+      213: -2624926660795407497
+    second: playerSoma_78
+  - first:
+      213: 9002622465478410480
+    second: playerSoma_79
+  - first:
+      213: -9104766737124261610
+    second: playerSoma_80
+  - first:
+      213: 4307642180695808138
+    second: playerSoma_81
+  - first:
+      213: -1717023070779722013
+    second: playerSoma_82
+  - first:
+      213: 5498829589121052250
+    second: playerSoma_83
+  - first:
+      213: 8234196637846383588
+    second: playerSoma_84
+  - first:
+      213: 2052566087228416179
+    second: playerSoma_85
+  - first:
+      213: 1922558290065859730
+    second: playerSoma_86
+  - first:
+      213: 2965517640748519124
+    second: playerSoma_87
+  - first:
+      213: 7411793351361570312
+    second: playerSoma_88
+  - first:
+      213: -8473360364123898419
+    second: playerSoma_89
+  - first:
+      213: -5897305817199413605
+    second: playerSoma_90
+  - first:
+      213: -7195012602460048005
+    second: playerSoma_91
+  - first:
+      213: 1111480595878626746
+    second: playerSoma_92
+  - first:
+      213: -7153116745442019269
+    second: playerSoma_93
+  - first:
+      213: 3074467884137162511
+    second: playerSoma_94
+  - first:
+      213: -6752677623848422192
+    second: playerSoma_95
+  - first:
+      213: 565250604317345016
+    second: playerSoma_96
+  - first:
+      213: -6941334208771855964
+    second: playerSoma_97
+  - first:
+      213: 1276447076913693401
+    second: playerSoma_98
+  - first:
+      213: -3526391965340555243
+    second: playerSoma_99
+  - first:
+      213: 5152381851363597111
+    second: playerSoma_100
+  - first:
+      213: -2295968392991823895
+    second: playerSoma_101
+  - first:
+      213: -3944263910398534124
+    second: playerSoma_102
+  - first:
+      213: 1535005979056927316
+    second: playerSoma_103
+  - first:
+      213: -6100701775857367054
+    second: playerSoma_104
+  - first:
+      213: -6647978127180640835
+    second: playerSoma_105
+  - first:
+      213: 4309410162899794003
+    second: playerSoma_106
+  - first:
+      213: 2017291222642072162
+    second: playerSoma_107
+  - first:
+      213: 8942778960376037846
+    second: playerSoma_108
+  - first:
+      213: -3045300413382347008
+    second: playerSoma_109
+  - first:
+      213: 6814084313758595581
+    second: playerSoma_110
+  - first:
+      213: -2229682531849082106
+    second: playerSoma_111
+  - first:
+      213: 505470654809502464
+    second: playerSoma_112
+  - first:
+      213: -6750504252319979052
+    second: playerSoma_113
+  - first:
+      213: -8920639401638574249
+    second: playerSoma_114
+  - first:
+      213: -4076173991698458846
+    second: playerSoma_115
+  - first:
+      213: -4265242501011135973
+    second: playerSoma_116
+  - first:
+      213: 5976227472911655200
+    second: playerSoma_117
+  - first:
+      213: -4187581150174991039
+    second: playerSoma_118
+  - first:
+      213: -8260709010948506652
+    second: playerSoma_119
+  - first:
+      213: -6252038213967676489
+    second: playerSoma_120
+  - first:
+      213: -5757119005244983566
+    second: playerSoma_121
+  - first:
+      213: -9145302740006683864
+    second: playerSoma_122
+  - first:
+      213: -3505980387265311046
+    second: playerSoma_123
+  - first:
+      213: 7568018702756188786
+    second: playerSoma_124
+  - first:
+      213: 3356681598572542673
+    second: playerSoma_125
+  - first:
+      213: 6964936614713605040
+    second: playerSoma_126
+  - first:
+      213: -6296858894015639354
+    second: playerSoma_127
+  - first:
+      213: 8316110637697841377
+    second: playerSoma_128
+  - first:
+      213: 1177560453476194885
+    second: playerSoma_129
+  - first:
+      213: 592292639597876929
+    second: playerSoma_130
+  - first:
+      213: -2420562654282423293
+    second: playerSoma_131
+  - first:
+      213: 9197743091242865246
+    second: playerSoma_132
+  - first:
+      213: 7878930361165304153
+    second: playerSoma_133
+  - first:
+      213: -5497746627972143804
+    second: playerSoma_134
+  - first:
+      213: 351580354720500728
+    second: playerSoma_135
+  - first:
+      213: -7739736717691249126
+    second: playerSoma_136
+  - first:
+      213: -3473015784535327377
+    second: playerSoma_137
+  - first:
+      213: 3706524510710017281
+    second: playerSoma_138
+  - first:
+      213: -1783920523583474558
+    second: playerSoma_139
+  - first:
+      213: 3291123182626971898
+    second: playerSoma_140
+  - first:
+      213: -1352797829593488214
+    second: playerSoma_141
+  - first:
+      213: -1448924937829631536
+    second: playerSoma_142
+  - first:
+      213: 8641041018779521508
+    second: playerSoma_143
+  - first:
+      213: 1877144353239260827
+    second: playerSoma_144
+  - first:
+      213: 5312609576743109946
+    second: playerSoma_145
+  - first:
+      213: -8777285582912403505
+    second: playerSoma_146
+  - first:
+      213: 1296104688700473959
+    second: playerSoma_147
+  - first:
+      213: -7391994405415334772
+    second: playerSoma_148
+  - first:
+      213: 893252770649380860
+    second: playerSoma_149
+  - first:
+      213: 1150327144020893516
+    second: playerSoma_150
+  - first:
+      213: 3100024058726390267
+    second: playerSoma_151
+  - first:
+      213: -801658755130042422
+    second: playerSoma_152
+  - first:
+      213: 4336069090490687776
+    second: playerSoma_153
+  - first:
+      213: 2137241056121322613
+    second: playerSoma_154
+  - first:
+      213: -7885221467130286964
+    second: playerSoma_155
+  - first:
+      213: 2906504239095540186
+    second: playerSoma_156
+  - first:
+      213: 5526140241482113931
+    second: playerSoma_157
+  - first:
+      213: 4637687958080548126
+    second: playerSoma_158
+  - first:
+      213: -7587928488790242311
+    second: playerSoma_159
+  - first:
+      213: -2666038843562206255
+    second: playerSoma_160
+  - first:
+      213: 2650436790923149424
+    second: playerSoma_161
+  - first:
+      213: -271878165596262993
+    second: playerSoma_162
+  - first:
+      213: 7645266255417259047
+    second: playerSoma_163
+  - first:
+      213: 750395882487282135
+    second: playerSoma_164
+  - first:
+      213: 4767745371868843288
+    second: playerSoma_165
+  - first:
+      213: -1962499965079221731
+    second: playerSoma_166
+  - first:
+      213: -389760709641988947
+    second: playerSoma_167
+  - first:
+      213: 6343123095792753536
+    second: playerSoma_168
+  - first:
+      213: 901810375319368510
+    second: playerSoma_169
+  - first:
+      213: -2361334408326964325
+    second: playerSoma_170
+  - first:
+      213: -6488287788445452118
+    second: playerSoma_171
+  - first:
+      213: -6909704150007486237
+    second: playerSoma_172
+  - first:
+      213: 6238409882765462224
+    second: playerSoma_173
+  - first:
+      213: 6885053330813255019
+    second: playerSoma_174
+  - first:
+      213: -1101934754377127243
+    second: playerSoma_175
+  - first:
+      213: 7724494212649011486
+    second: playerSoma_176
+  - first:
+      213: 1302160320699086669
+    second: playerSoma_177
+  - first:
+      213: -6986643911869036166
+    second: playerSoma_178
+  - first:
+      213: -7726458300792036775
+    second: playerSoma_179
+  - first:
+      213: 3414087503247441007
+    second: playerSoma_180
+  - first:
+      213: 1667258805851701558
+    second: playerSoma_181
+  - first:
+      213: 5570475155203375066
+    second: playerSoma_182
+  - first:
+      213: 1317999682910774755
+    second: playerSoma_183
+  - first:
+      213: 1765944337793619108
+    second: playerSoma_184
+  - first:
+      213: -1253907957181519897
+    second: playerSoma_185
+  - first:
+      213: 8934492432682939877
+    second: playerSoma_186
+  - first:
+      213: -7018844071987005028
+    second: playerSoma_187
+  - first:
+      213: 952693203069599870
+    second: playerSoma_188
+  - first:
+      213: -6900998467706456900
+    second: playerSoma_189
+  - first:
+      213: 5496223981725084211
+    second: playerSoma_190
+  - first:
+      213: 7907465025075927110
+    second: playerSoma_191
+  - first:
+      213: 3468024461985190642
+    second: playerSoma_192
+  - first:
+      213: 1644175385065873106
+    second: playerSoma_193
+  - first:
+      213: -8365206817235767835
+    second: playerSoma_194
+  - first:
+      213: -4886674059451710674
+    second: playerSoma_195
+  - first:
+      213: -3441736533547031463
+    second: playerSoma_196
+  - first:
+      213: -8601967820368890562
+    second: playerSoma_197
+  - first:
+      213: -8697758632821250400
+    second: playerSoma_198
+  - first:
+      213: 1701424627989273254
+    second: playerSoma_199
+  - first:
+      213: -2844370849008317657
+    second: playerSoma_200
+  - first:
+      213: 6724054272277827626
+    second: playerSoma_201
+  - first:
+      213: -8067695132188792000
+    second: playerSoma_202
+  - first:
+      213: 3624957467917829527
+    second: playerSoma_203
+  - first:
+      213: 8521622227255897040
+    second: playerSoma_204
+  - first:
+      213: -8983253067560729968
+    second: playerSoma_205
+  - first:
+      213: -5772368797237375442
+    second: playerSoma_206
+  - first:
+      213: 1033570589729345020
+    second: playerSoma_207
+  - first:
+      213: -4974864044365049735
+    second: playerSoma_208
+  - first:
+      213: 2617212476299765539
+    second: playerSoma_209
+  - first:
+      213: -4864077973378267886
+    second: playerSoma_210
+  - first:
+      213: -8226181681020429531
+    second: playerSoma_211
+  - first:
+      213: -7025240716869096034
+    second: playerSoma_212
+  - first:
+      213: -5654206002207485825
+    second: playerSoma_213
+  - first:
+      213: 3484318714366636954
+    second: Player_Jump_Shoot
+  - first:
+      213: -2530465179603198730
+    second: playerSoma_215
+  - first:
+      213: -2589404876396715220
+    second: playerSoma_216
+  - first:
+      213: -7060591204529120458
+    second: playerSoma_217
+  - first:
+      213: 1299064021477204687
+    second: playerSoma_218
+  - first:
+      213: -6260124634928079360
+    second: playerSoma_219
+  - first:
+      213: -2192568484260309903
+    second: playerSoma_220
+  - first:
+      213: 7505289161283502216
+    second: playerSoma_221
+  - first:
+      213: 6254494344602515348
+    second: playerSoma_222
+  - first:
+      213: -4691315683448750325
+    second: playerSoma_223
+  - first:
+      213: 1311906975894685927
+    second: playerSoma_224
+  - first:
+      213: 5119873952411258100
+    second: playerSoma_225
+  - first:
+      213: 5069079606570243047
+    second: playerSoma_226
+  - first:
+      213: -7866610057216158255
+    second: playerSoma_227
+  - first:
+      213: -1740623135611944750
+    second: playerSoma_228
+  - first:
+      213: 3081451767367266951
+    second: playerSoma_229
+  - first:
+      213: 4737650310789262909
+    second: playerSoma_230
+  - first:
+      213: 5426274458377423178
+    second: playerSoma_231
+  - first:
+      213: 5160578609801240896
+    second: playerSoma_232
+  - first:
+      213: -6530569784959357924
+    second: playerSoma_233
+  - first:
+      213: 6476151770736579452
+    second: playerSoma_234
+  - first:
+      213: 5608272946191248736
+    second: playerSoma_235
+  - first:
+      213: 2201858355337218629
+    second: playerSoma_236
+  - first:
+      213: -5613731467233201386
+    second: playerSoma_237
+  - first:
+      213: 4961808959681665715
+    second: playerSoma_238
+  - first:
+      213: 4517607690669215239
+    second: playerSoma_239
+  - first:
+      213: -5381879940974567827
+    second: playerSoma_240
+  - first:
+      213: -348596835750946003
+    second: playerSoma_241
+  - first:
+      213: -4184065490477949743
+    second: playerSoma_242
+  - first:
+      213: -8112825975458281223
+    second: playerSoma_243
+  - first:
+      213: -2489070866448749651
+    second: playerSoma_244
+  - first:
+      213: -3896150476850657700
+    second: playerSoma_245
+  - first:
+      213: -4331524057534623128
+    second: playerSoma_246
+  - first:
+      213: 7117991532985351300
+    second: playerSoma_247
+  - first:
+      213: -6170897918825416386
+    second: playerSoma_248
+  - first:
+      213: 1344558739168743588
+    second: playerSoma_249
+  - first:
+      213: -8428191112658943899
+    second: playerSoma_250
+  - first:
+      213: -3212171580558981475
+    second: playerSoma_251
+  - first:
+      213: -4660793097911274110
+    second: playerSoma_252
+  - first:
+      213: -2027304301812174266
+    second: playerSoma_253
+  - first:
+      213: 2162268405061739906
+    second: playerSoma_254
+  - first:
+      213: -8078577047770146060
+    second: playerSoma_255
+  - first:
+      213: -8982789883328079434
+    second: playerSoma_256
+  - first:
+      213: 9122754396611550922
+    second: playerSoma_257
+  - first:
+      213: 9153508560296115801
+    second: playerSoma_258
+  - first:
+      213: -3869712333183934100
+    second: playerSoma_259
+  - first:
+      213: 2324103136594972382
+    second: playerSoma_260
+  - first:
+      213: 626824755577001564
+    second: playerSoma_261
+  - first:
+      213: 321232426653078923
+    second: playerSoma_262
+  - first:
+      213: 2688910016097009438
+    second: playerSoma_263
+  - first:
+      213: 8620556374620583317
+    second: playerSoma_264
+  - first:
+      213: 4005393544931863759
+    second: playerSoma_265
+  - first:
+      213: -8326672917540065168
+    second: playerSoma_266
+  - first:
+      213: 4057074919135075876
+    second: playerSoma_267
+  - first:
+      213: 7265213733252431174
+    second: playerSoma_268
+  - first:
+      213: -1365272157432776655
+    second: playerSoma_269
+  - first:
+      213: -2232344902720257390
+    second: playerSoma_270
+  - first:
+      213: -5647322586166861372
+    second: playerSoma_271
+  - first:
+      213: -8442234601858458030
+    second: playerSoma_272
+  - first:
+      213: -7509669155443612826
+    second: playerSoma_273
+  - first:
+      213: -8167387056452396375
+    second: playerSoma_274
+  - first:
+      213: -983084668806092060
+    second: playerSoma_275
+  - first:
+      213: -3047893614600521057
+    second: playerSoma_276
+  - first:
+      213: 4375144724199692821
+    second: playerSoma_277
+  - first:
+      213: 4138266501044950207
+    second: playerSoma_278
+  - first:
+      213: -8699586080117475835
+    second: playerSoma_279
+  - first:
+      213: -5236074783665504465
+    second: playerSoma_280
+  - first:
+      213: 3180688463707231387
+    second: playerSoma_281
+  - first:
+      213: -8839022471152725568
+    second: playerSoma_282
+  - first:
+      213: -2782087422640581934
+    second: playerSoma_283
+  - first:
+      213: -4798839021704597189
+    second: playerSoma_284
+  - first:
+      213: -264577749492600925
+    second: playerSoma_285
+  - first:
+      213: 4791866169138554797
+    second: playerSoma_286
+  - first:
+      213: 5251735508470511362
+    second: playerSoma_287
+  - first:
+      213: 1025119558815641997
+    second: playerSoma_288
+  - first:
+      213: 8965893504403435908
+    second: playerSoma_289
+  - first:
+      213: 1938992496620026750
+    second: playerSoma_290
+  - first:
+      213: -6929265832255384336
+    second: playerSoma_291
+  - first:
+      213: 4044799696107004413
+    second: Player_Run_Shoot_0
+  - first:
+      213: 2712724391677028256
+    second: Player_Run_Shoot_1
+  - first:
+      213: 2891752206435374888
+    second: Player_Run_Shoot_2
+  - first:
+      213: -1288162867515861916
+    second: Player_Run_Shoot_3
+  - first:
+      213: 8262028817051292251
+    second: Player_Run_Shoot_4
+  - first:
+      213: 2649840382453823072
+    second: Player_Run_Shoot_5
+  - first:
+      213: 3156109485445188156
+    second: Player_Run_Shoot_6
+  - first:
+      213: -7082418348231604143
+    second: Player_Run_Shoot_7
+  - first:
+      213: 8991118541209703976
+    second: Player_Run_Shoot_8
+  - first:
+      213: 85643426676741759
+    second: Player_Run_Shoot_9
+  - first:
+      213: -423704968984446490
+    second: Player_Run_Shoot_10
+  - first:
+      213: 3042931102039219926
+    second: Player_Run_Shoot_11
+  - first:
+      213: 452284975549396137
+    second: Player_Run_Shoot_12
+  - first:
+      213: 6217894802122389154
+    second: Player_Run_Shoot_13
+  - first:
+      213: 412572892717485067
+    second: Player_Run_Shoot_14
+  - first:
+      213: 964190643905233800
+    second: Player_Run_Shoot_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1997
+        width: 20
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5bca78e1c1ed2a0800000000000000
+      internalID: -6710895477284620865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1997
+        width: 20
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179fab8bd98989460800000000000000
+      internalID: 7248711403429362033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1997
+        width: 20
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbae72e83d50cc6d0800000000000000
+      internalID: -2968991648162780483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1997
+        width: 20
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b87f42ed6e57290800000000000000
+      internalID: -7893148930119595109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1997
+        width: 19
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94afdcc30d05e5f20800000000000000
+      internalID: 3413254422896966217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_5
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1997
+        width: 19
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5142727c26c052b0800000000000000
+      internalID: -5597756442620575394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sfda
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1948
+        width: 19
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65399ac2241a04220800000000000000
+      internalID: 2468149901388256086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_7
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1948
+        width: 19
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e151306fd67fd2030800000000000000
+      internalID: 3471702939423413534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_8
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1948
+        width: 19
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d54b4ee73111330800000000000000
+      internalID: 3679743806262238466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1948
+        width: 19
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37108f2798d920f50800000000000000
+      internalID: 6846207597221511539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_10
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1948
+        width: 19
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e5be83294118250800000000000000
+      internalID: 5945055601358495262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_11
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1948
+        width: 19
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928fc6ea3a3bbe4c0800000000000000
+      internalID: -4257111507161253847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_12
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 1948
+        width: 19
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ddda63a4e650fa0800000000000000
+      internalID: -5835136477164610228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_13
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1948
+        width: 19
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27313418001d5d6e0800000000000000
+      internalID: -1813313474847894670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_14
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1948
+        width: 18
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf823ff1f97808250800000000000000
+      internalID: 5944900625634633980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_15
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1948
+        width: 21
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2092eea712343eae0800000000000000
+      internalID: -1521298438045685502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_16
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1948
+        width: 27
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34686ebcff9886000800000000000000
+      internalID: 29425129308456515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_17
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1948
+        width: 27
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff64dd81dbe42d00800000000000000
+      internalID: 947141106914848761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_18
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1897
+        width: 21
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f07d9e2d656aa120800000000000000
+      internalID: 2425862868900344056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_19
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1897
+        width: 25
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f3652cce36d4f50800000000000000
+      internalID: 6867254875333738327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_20
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1897
+        width: 26
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea3dd51bd7d6f690800000000000000
+      internalID: -7568624787784910105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_21
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1897
+        width: 29
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a0521ef9855f090800000000000000
+      internalID: -8001391719253472700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_22
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1897
+        width: 26
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a300c8b2c6e714c0800000000000000
+      internalID: -4316727993813695582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_23
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1897
+        width: 22
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c9da9f7096551000800000000000000
+      internalID: 6006153127057859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_24
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1897
+        width: 26
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c487acd8b5c0cfa40800000000000000
+      internalID: 5403207240298166348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_25
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1897
+        width: 27
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad25e806af1ea7510800000000000000
+      internalID: 1547797887433200346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_26
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1895
+        width: 29
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2780f39a14b7dd120800000000000000
+      internalID: 2440242095047247986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_27
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 1895
+        width: 31
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41652acd3314c09b0800000000000000
+      internalID: -5112639785971591660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_28
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1895
+        width: 30
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608cb314e77068930800000000000000
+      internalID: 4145008745882830854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1846
+        width: 23
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10011ff4a16b4800800000000000000
+      internalID: 597678736838557724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1846
+        width: 25
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a24d1fbdde31770800000000000000
+      internalID: 8580463243981761100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_2
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 1846
+        width: 28
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4632d373d34be1f30800000000000000
+      internalID: 4548270848703538020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_3
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1846
+        width: 29
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2418bd807e7e57190800000000000000
+      internalID: -7965205386462789310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_4
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1846
+        width: 29
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb21a132537aebad0800000000000000
+      internalID: -2684524481202220353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_5
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1847
+        width: 28
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd89d423647d8e50800000000000000
+      internalID: 6813229780450250234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_6
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1846
+        width: 26
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df87b16bac8946ff0800000000000000
+      internalID: -43742099960792835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_7
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1846
+        width: 25
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0fa3dea82d262f90800000000000000
+      internalID: -6978840919808954610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_8
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1846
+        width: 25
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19c5c16eb9bafab0800000000000000
+      internalID: -4973458611142014689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_9
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1846
+        width: 24
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc19704f11fdc470800000000000000
+      internalID: 8416648395153284311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_10
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1846
+        width: 22
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92679b3bb9ecc6c50800000000000000
+      internalID: 6659925117104649769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_11
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1846
+        width: 22
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8a2a545a50c3820800000000000000
+      internalID: 2899198467515787497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_12
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1846
+        width: 24
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3cb88d6aa348e20800000000000000
+      internalID: 3351868510942512035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_13
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 1847
+        width: 25
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1df5a7fb0b07b8c0800000000000000
+      internalID: -3983703199358517986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_14
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1846
+        width: 24
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab96c1b2699d0a200800000000000000
+      internalID: 189390423341164986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_15
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 1846
+        width: 24
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7761bd9c7e5873c0800000000000000
+      internalID: -4361632349793720453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_45
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1846
+        width: 36
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204de84073b045e80800000000000000
+      internalID: -8190909491352513534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_46
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 1846
+        width: 36
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf675af048bed5b0800000000000000
+      internalID: -5341629518797377615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_47
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 1846
+        width: 36
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0483bc43933a67020800000000000000
+      internalID: 2339236522559748160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_48
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 1846
+        width: 36
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9c3d038f5f605c0800000000000000
+      internalID: -4249438752057603615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_49
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1801
+        width: 32
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c4ac57222ee8930800000000000000
+      internalID: 4147500944487763058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_50
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1800
+        width: 30
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6cf766c71ebceef0800000000000000
+      internalID: -77478084249912214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_51
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1792
+        width: 35
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e794842d59dc67c0800000000000000
+      internalID: -4076644568609286169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_52
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 1792
+        width: 35
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cedc0772cc4ee260800000000000000
+      internalID: 7128719658278772425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_53
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1794
+        width: 36
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efb20ea9512b0720800000000000000
+      internalID: 2813379061278228454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_54
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1734
+        width: 17
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7101c573301c78c0800000000000000
+      internalID: -4000304555806883459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_55
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1734
+        width: 26
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ba6bf53abd8a790800000000000000
+      internalID: -7518518083163083964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_56
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1734
+        width: 27
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df3bfdb1662e4e2e0800000000000000
+      internalID: -2097302598265621507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_57
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1734
+        width: 24
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803cebb4414356be0800000000000000
+      internalID: -1484723240373927160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_58
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1734
+        width: 35
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff69c88c8914d5b0800000000000000
+      internalID: -5344618766400917508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_59
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1733
+        width: 36
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b784eed855dbdd0800000000000000
+      internalID: -2468722952652686563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_60
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1733
+        width: 36
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe2853d7950ed4e0800000000000000
+      internalID: -1955119038588244229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_61
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1733
+        width: 35
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a357d20eb272f530800000000000000
+      internalID: 3887295588791178151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_62
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1732
+        width: 35
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84019ae64e04506e0800000000000000
+      internalID: -1872018720249278392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_63
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1732
+        width: 35
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa66fffd170b8f330800000000000000
+      internalID: 3744937093294417583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_64
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1732
+        width: 32
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28cd4e69ff0f8e740800000000000000
+      internalID: 5181656351828663426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_65
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1732
+        width: 29
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8797fec7dc02bc0800000000000000
+      internalID: -3809819348278085448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_66
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 1732
+        width: 30
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c244ae0ab4470dca0800000000000000
+      internalID: -5994163235859053524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_67
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1732
+        width: 30
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d82ae987db27b20800000000000000
+      internalID: 3130773016731094421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_68
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1732
+        width: 31
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a22801b0e1260b00800000000000000
+      internalID: 794359633203962531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 1730
+        width: 18
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74feba215cd637e20800000000000000
+      internalID: 3347139641255653191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 1730
+        width: 19
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2fbbbce21f2ab10800000000000000
+      internalID: 1991419168540062420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 1731
+        width: 19
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a496de6dd52b840800000000000000
+      internalID: 5238352494272793231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Falling
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 1731
+        width: 31
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 392dc7f248c698020800000000000000
+      internalID: 2344524396011246227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_73
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1684
+        width: 31
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01717b231436947a0800000000000000
+      internalID: -6392469064400824560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_74
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1684
+        width: 27
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec8cc87950f731b0800000000000000
+      internalID: -5676804538207793938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_75
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1684
+        width: 20
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5e739d18b20f150800000000000000
+      internalID: 5904266948177815005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_76
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1684
+        width: 20
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3c190a39eada580800000000000000
+      internalID: -8814196946616859674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_77
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1684
+        width: 26
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95f5f2a3e2d8d2b0800000000000000
+      internalID: -5559461864855439971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_78
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 1684
+        width: 25
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77366d50c13629bd0800000000000000
+      internalID: -2624926660795407497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_79
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 1684
+        width: 23
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0cac53f6dbfec70800000000000000
+      internalID: 9002622465478410480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_80
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1684
+        width: 20
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6118ae644ee55a180800000000000000
+      internalID: -9104766737124261610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_81
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1642
+        width: 32
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88dcdf8db1d7cb30800000000000000
+      internalID: 4307642180695808138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_82
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1641
+        width: 30
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e636034d98eb28e0800000000000000
+      internalID: -1717023070779722013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_83
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1642
+        width: 33
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ea7f39064cf4c40800000000000000
+      internalID: 5498829589121052250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_84
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1640
+        width: 35
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ebac89273eb54270800000000000000
+      internalID: 8234196637846383588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_85
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1640
+        width: 32
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0634b3bfd2c7c10800000000000000
+      internalID: 2052566087228416179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_86
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1639
+        width: 28
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294ab53249c4eaa10800000000000000
+      internalID: 1922558290065859730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_87
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1639
+        width: 22
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de48ff0592a72920800000000000000
+      internalID: 2965517640748519124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_88
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 1637
+        width: 20
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8062280a8cafbd660800000000000000
+      internalID: 7411793351361570312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_89
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 1639
+        width: 22
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd358284a3986a80800000000000000
+      internalID: -8473360364123898419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_90
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1594
+        width: 34
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96fbf1ca9f882ea0800000000000000
+      internalID: -5897305817199413605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_91
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1594
+        width: 30
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75f8eba82e262c90800000000000000
+      internalID: -7195012602460048005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_92
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1592
+        width: 30
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5c51c86b5cc6f00800000000000000
+      internalID: 1111480595878626746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_93
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1593
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38b70708360bbc90800000000000000
+      internalID: -7153116745442019269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_94
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1598
+        width: 22
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07a75b5044baaa20800000000000000
+      internalID: 3074467884137162511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_95
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1599
+        width: 29
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d439c37a7ba942a0800000000000000
+      internalID: -6752677623848422192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_96
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 1601
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f409670e6c28d700800000000000000
+      internalID: 565250604317345016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_97
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1592
+        width: 25
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a9e2ea505d6baf90800000000000000
+      internalID: -6941334208771855964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_98
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 1592
+        width: 25
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2c6028ad9d6b110800000000000000
+      internalID: 1276447076913693401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_99
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1591
+        width: 25
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518a51fe03dbf0fc0800000000000000
+      internalID: -3526391965340555243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_100
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 1599
+        width: 29
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b52bdceffe08740800000000000000
+      internalID: 5152381851363597111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_101
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1591
+        width: 26
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e7a23049e41320e0800000000000000
+      internalID: -2295968392991823895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_102
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 1590
+        width: 21
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e5d400fd82349c0800000000000000
+      internalID: -3944263910398534124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_103
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 1591
+        width: 21
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452f9cd1ecf6d4510800000000000000
+      internalID: 1535005979056927316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_104
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 1596
+        width: 25
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f74d69ce04f55ba0800000000000000
+      internalID: -6100701775857367054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_105
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1591
+        width: 24
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbdc4d6ad13adb3a0800000000000000
+      internalID: -6647978127180640835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_106
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1532
+        width: 14
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358b91ff5b91ecb30800000000000000
+      internalID: 4309410162899794003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_107
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1532
+        width: 14
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a181ecdabdefb10800000000000000
+      internalID: 2017291222642072162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_108
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1528
+        width: 24
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d10d0665122b1c70800000000000000
+      internalID: 8942778960376037846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_109
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 1528
+        width: 22
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007bef1a86becb5d0800000000000000
+      internalID: -3045300413382347008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_110
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1529
+        width: 35
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9742fa49d709e50800000000000000
+      internalID: 6814084313758595581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_111
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1481
+        width: 27
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60bed37fc839e01e0800000000000000
+      internalID: -2229682531849082106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_112
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1481
+        width: 28
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003fd48e1eac30700800000000000000
+      internalID: 505470654809502464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_113
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1481
+        width: 43
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d924b1f5246152a0800000000000000
+      internalID: -6750504252319979052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_114
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1480
+        width: 34
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757caff4ab5833480800000000000000
+      internalID: -8920639401638574249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_115
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1480
+        width: 43
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227902ed9558e67c0800000000000000
+      internalID: -4076173991698458846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_116
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 1480
+        width: 33
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1225562b80dec4c0800000000000000
+      internalID: -4265242501011135973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_117
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1480
+        width: 29
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02164d32933dfe250800000000000000
+      internalID: 5976227472911655200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_118
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1480
+        width: 25
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14da2b37129b2e5c0800000000000000
+      internalID: -4187581150174991039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_119
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1480
+        width: 23
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ebbb81fbe01c5d80800000000000000
+      internalID: -8260709010948506652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_120
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1480
+        width: 20
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bbf94e7e5c4c39a0800000000000000
+      internalID: -6252038213967676489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_121
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1431
+        width: 44
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6f8ba64ca9a10b0800000000000000
+      internalID: -5757119005244983566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_122
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1431
+        width: 44
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82bbe72ac9b551180800000000000000
+      internalID: -9145302740006683864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_123
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1431
+        width: 27
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe809bc961485fc0800000000000000
+      internalID: -3505980387265311046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_124
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1428
+        width: 27
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2729b4fb9e0070960800000000000000
+      internalID: 7568018702756188786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_125
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1428
+        width: 28
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dab1032124559e20800000000000000
+      internalID: 3356681598572542673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_126
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1430
+        width: 29
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbbd1303fc68a060800000000000000
+      internalID: 6964936614713605040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_127
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1428
+        width: 29
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c05075b2301d98a0800000000000000
+      internalID: -6296858894015639354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_128
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1428
+        width: 28
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8b3d87092c86370800000000000000
+      internalID: 8316110637697841377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_129
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1380
+        width: 26
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a1ff25ef8875010800000000000000
+      internalID: 1177560453476194885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_130
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1380
+        width: 43
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c65f42840f383800800000000000000
+      internalID: 592292639597876929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_131
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1380
+        width: 44
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3046be2371f686ed0800000000000000
+      internalID: -2420562654282423293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_132
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1380
+        width: 26
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5295d81c92f4af70800000000000000
+      internalID: 9197743091242865246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_133
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1380
+        width: 37
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9515c4b4b65975d60800000000000000
+      internalID: 7878930361165304153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_134
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1380
+        width: 42
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4456e96f19414b3b0800000000000000
+      internalID: -5497746627972143804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_135
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1327
+        width: 23
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb0f19487011e400800000000000000
+      internalID: 351580354720500728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_136
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1327
+        width: 23
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e17fe467ee69490800000000000000
+      internalID: -7739736717691249126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_137
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1327
+        width: 22
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d72777b8e5dcfc0800000000000000
+      internalID: -3473015784535327377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_138
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 1327
+        width: 22
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d262c8768307330800000000000000
+      internalID: 3706524510710017281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_139
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1327
+        width: 34
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28437444cbd3e37e0800000000000000
+      internalID: -1783920523583474558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_140
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1327
+        width: 35
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0a884f81b6cad20800000000000000
+      internalID: 3291123182626971898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_141
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1327
+        width: 35
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4292a9a85e93de0800000000000000
+      internalID: -1352797829593488214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_142
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1328
+        width: 41
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9b57e127264ebe0800000000000000
+      internalID: -1448924937829631536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_143
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1328
+        width: 43
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e1deed36052be770800000000000000
+      internalID: 8641041018779521508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_144
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1327
+        width: 39
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ed4fef7d4fc0a10800000000000000
+      internalID: 1877144353239260827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_145
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 1326
+        width: 35
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a358c1c334e2ab940800000000000000
+      internalID: 5312609576743109946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_146
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1326
+        width: 39
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc749523441d03680800000000000000
+      internalID: -8777285582912403505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_147
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1326
+        width: 39
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762c5b9e850bcf110800000000000000
+      internalID: 1296104688700473959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_148
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1274
+        width: 27
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c4b83b04c5a6990800000000000000
+      internalID: -7391994405415334772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_149
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 1274
+        width: 43
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7903989a8756c00800000000000000
+      internalID: 893252770649380860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_150
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 1274
+        width: 44
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4fdada5178c6ff00800000000000000
+      internalID: 1150327144020893516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_151
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 1274
+        width: 23
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf91d8fe47f750b20800000000000000
+      internalID: 3100024058726390267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_152
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1274
+        width: 37
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac7546d0c9fefd4f0800000000000000
+      internalID: -801658755130042422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_153
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1274
+        width: 42
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021af344ddfcc2c30800000000000000
+      internalID: 4336069090490687776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_154
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1223
+        width: 27
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57cfd7dba6109ad10800000000000000
+      internalID: 2137241056121322613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_155
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1223
+        width: 43
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c2a647ad0129290800000000000000
+      internalID: -7885221467130286964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_156
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1223
+        width: 44
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9e475c43af55820800000000000000
+      internalID: 2906504239095540186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_157
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1176
+        width: 31
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b836888554bc0bc40800000000000000
+      internalID: 5526140241482113931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_158
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1175
+        width: 30
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1d6f7850a06c5040800000000000000
+      internalID: 4637687958080548126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_159
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1175
+        width: 26
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb4794fd3342b690800000000000000
+      internalID: -7587928488790242311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_160
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1175
+        width: 43
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dbd41c0cc3500bd0800000000000000
+      internalID: -2666038843562206255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_161
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1175
+        width: 43
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070c99ef73e38c420800000000000000
+      internalID: 2650436790923149424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_162
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1174
+        width: 28
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad2375bf381a3cf0800000000000000
+      internalID: -271878165596262993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_163
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1118
+        width: 24
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7243d672721791a60800000000000000
+      internalID: 7645266255417259047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_164
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1119
+        width: 28
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9f1905411f96a00800000000000000
+      internalID: 750395882487282135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_165
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1119
+        width: 29
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d41c5b72f6a2240800000000000000
+      internalID: 4767745371868843288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_166
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 1119
+        width: 32
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a8cb5fdacc3c4e0800000000000000
+      internalID: -1962499965079221731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_167
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1119
+        width: 32
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4926a13ba479af0800000000000000
+      internalID: -389760709641988947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_168
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 1119
+        width: 40
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b9d4b29dc470850800000000000000
+      internalID: 6343123095792753536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_169
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1119
+        width: 40
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e333ca322cfd38c00800000000000000
+      internalID: 901810375319368510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_170
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 1119
+        width: 40
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b93c3dddada3fd0800000000000000
+      internalID: -2361334408326964325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_171
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 1119
+        width: 38
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8343102a8f4f5a0800000000000000
+      internalID: -6488287788445452118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_172
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1118
+        width: 38
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8e2cb4faccb10a0800000000000000
+      internalID: -6909704150007486237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_173
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1118
+        width: 38
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da85816cb8439650800000000000000
+      internalID: 6238409882765462224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_174
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 1118
+        width: 38
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d7eba968f9c8f50800000000000000
+      internalID: 6885053330813255019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_175
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 1118
+        width: 34
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5baa1bfdd2425b0f0800000000000000
+      internalID: -1101934754377127243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_176
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1062
+        width: 24
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e19418e6f8ae23b60800000000000000
+      internalID: 7724494212649011486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_177
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1063
+        width: 26
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47b0eb99e3321210800000000000000
+      internalID: 1302160320699086669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_178
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1063
+        width: 29
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7986e401647a0f90800000000000000
+      internalID: -6986643911869036166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_179
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 1063
+        width: 32
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9522c69ac1b16c490800000000000000
+      internalID: -7726458300792036775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_180
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1063
+        width: 32
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6cf92fde76416f20800000000000000
+      internalID: 3414087503247441007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_181
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1064
+        width: 37
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631ce67ec0b432710800000000000000
+      internalID: 1667258805851701558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_182
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1064
+        width: 37
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf3908d3ad4e4d40800000000000000
+      internalID: 5570475155203375066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_183
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1064
+        width: 37
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e569f18ab97a4210800000000000000
+      internalID: 1317999682910774755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_184
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1064
+        width: 39
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a41d43d405e18810800000000000000
+      internalID: 1765944337793619108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_185
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1063
+        width: 41
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7e82f3b59399ee0800000000000000
+      internalID: -1253907957181519897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_186
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1063
+        width: 38
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e57b72d781bdfb70800000000000000
+      internalID: 8934492432682939877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_187
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1004
+        width: 32
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99bb53018e089e90800000000000000
+      internalID: -7018844071987005028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_188
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1004
+        width: 34
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7084ecab65a83d00800000000000000
+      internalID: 952693203069599870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_189
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1004
+        width: 33
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb477d8e47aba30a0800000000000000
+      internalID: -6900998467706456900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_190
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1039
+        width: 11
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ae4b45792864c40800000000000000
+      internalID: 5496223981725084211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_191
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1004
+        width: 31
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648d9757b85fcbd60800000000000000
+      internalID: 7907465025075927110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_192
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1004
+        width: 34
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f21ef0bfd5e02030800000000000000
+      internalID: 3468024461985190642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_193
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1004
+        width: 21
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2deda4f2dc841d610800000000000000
+      internalID: 1644175385065873106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_194
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1004
+        width: 21
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed6cf178b0d8eb80800000000000000
+      internalID: -8365206817235767835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_195
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1004
+        width: 21
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23c34965db0f2cb0800000000000000
+      internalID: -4886674059451710674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_196
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1004
+        width: 21
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954e17b9bde7c30d0800000000000000
+      internalID: -3441736533547031463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_197
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1004
+        width: 21
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e353291b7dbaf9880800000000000000
+      internalID: -8601967820368890562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_198
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1004
+        width: 19
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a62a9c2b9a5b4780800000000000000
+      internalID: -8697758632821250400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_199
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 923
+        width: 26
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aad6634facac9710800000000000000
+      internalID: 1701424627989273254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_200
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 923
+        width: 27
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b026f68c3c688d0800000000000000
+      internalID: -2844370849008317657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_201
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 923
+        width: 34
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20519d2cb3a05d50800000000000000
+      internalID: 6724054272277827626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_202
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 923
+        width: 23
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b2db1950ac90090800000000000000
+      internalID: -8067695132188792000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_203
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 923
+        width: 27
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79544297c9f6e4230800000000000000
+      internalID: 3624957467917829527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_204
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 862
+        width: 31
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db29a52442e24670800000000000000
+      internalID: 8521622227255897040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_205
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 862
+        width: 30
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092ca9c2ee2155380800000000000000
+      internalID: -8983253067560729968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_206
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 862
+        width: 38
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e0e18892d64efa0800000000000000
+      internalID: -5772368797237375442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_207
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 862
+        width: 31
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfdcb1ba9faf75e00800000000000000
+      internalID: 1033570589729345020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_208
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 862
+        width: 31
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97012c5728bb5fab0800000000000000
+      internalID: -4974864044365049735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_209
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 783
+        width: 22
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327619f61e4325420800000000000000
+      internalID: 2617212476299765539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_210
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 783
+        width: 22
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2158cfcaad25f7cb0800000000000000
+      internalID: -4864077973378267886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_211
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 783
+        width: 22
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b93f4685bb6dd80800000000000000
+      internalID: -8226181681020429531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_212
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 783
+        width: 23
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d28611ac4518e90800000000000000
+      internalID: -7025240716869096034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_213
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 783
+        width: 22
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f709a8729993881b0800000000000000
+      internalID: -5654206002207485825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Jump_Shoot
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 707
+        width: 48
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93b116f869ca5030800000000000000
+      internalID: 3484318714366636954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_215
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 707
+        width: 48
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc914d735bf1ecd0800000000000000
+      internalID: -2530465179603198730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_216
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 740
+        width: 11
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23a5b2fbf5901cd0800000000000000
+      internalID: -2589404876396715220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_217
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 705
+        width: 47
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b5bc545bdb30e90800000000000000
+      internalID: -7060591204529120458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_218
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 705
+        width: 47
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2a3a448d3370210800000000000000
+      internalID: 1299064021477204687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_219
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 649
+        width: 24
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e9075efc19f19a0800000000000000
+      internalID: -6260124634928079360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_220
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 649
+        width: 23
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17492fd849e6291e0800000000000000
+      internalID: -2192568484260309903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_221
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 649
+        width: 21
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88084ea3ab4282860800000000000000
+      internalID: 7505289161283502216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_222
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 649
+        width: 23
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497f8bbf77d6cc650800000000000000
+      internalID: 6254494344602515348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_223
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 649
+        width: 25
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f71d6dd3915eeb0800000000000000
+      internalID: -4691315683448750325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_224
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 649
+        width: 26
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e84f8c9174d43210800000000000000
+      internalID: 1311906975894685927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_225
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 648
+        width: 27
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc8f34cb327d0740800000000000000
+      internalID: 5119873952411258100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_226
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 648
+        width: 27
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3dbc78b0df85640800000000000000
+      internalID: 5069079606570243047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_227
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 648
+        width: 24
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d59d1105df24d290800000000000000
+      internalID: -7866610057216158255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_228
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 648
+        width: 24
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0060afa7018d7e0800000000000000
+      internalID: -1740623135611944750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_229
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 648
+        width: 24
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782fc626e0483ca20800000000000000
+      internalID: 3081451767367266951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_230
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 597
+        width: 45
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3eec944bd38fb140800000000000000
+      internalID: 4737650310789262909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_231
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 597
+        width: 45
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a498c59cedffd4b40800000000000000
+      internalID: 5426274458377423178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_232
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 597
+        width: 44
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041aea857ee0e9740800000000000000
+      internalID: 5160578609801240896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_233
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 597
+        width: 38
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c299a8161ce55a0800000000000000
+      internalID: -6530569784959357924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_234
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 597
+        width: 36
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73554e29b9efd950800000000000000
+      internalID: 6476151770736579452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_235
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 597
+        width: 44
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06da929d78694dd40800000000000000
+      internalID: 5608272946191248736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_236
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 550
+        width: 40
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ac99b12829e8e10800000000000000
+      internalID: 2201858355337218629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_237
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 550
+        width: 39
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613f12f29f40812b0800000000000000
+      internalID: -5613731467233201386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_238
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 550
+        width: 38
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba1d25c5f2ebd440800000000000000
+      internalID: 4961808959681665715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_239
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 548
+        width: 23
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e49e46244c1be30800000000000000
+      internalID: 4517607690669215239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_240
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 548
+        width: 33
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e196645b8bf45b0800000000000000
+      internalID: -5381879940974567827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_241
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 499
+        width: 22
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b5d3b5609892bf0800000000000000
+      internalID: -348596835750946003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_242
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 499
+        width: 22
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc5713ca963fe5c0800000000000000
+      internalID: -4184065490477949743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_243
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 462
+        width: 24
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f84f3842c3796f80800000000000000
+      internalID: -8112825975458281223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_244
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 463
+        width: 25
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab6c801c3b057dd0800000000000000
+      internalID: -2489070866448749651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_245
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 462
+        width: 25
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5609d3b8c71ee9c0800000000000000
+      internalID: -3896150476850657700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_246
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 462
+        width: 25
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862179ea1d553e3c0800000000000000
+      internalID: -4331524057534623128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_247
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 461
+        width: 26
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c74d5269f28c260800000000000000
+      internalID: 7117991532985351300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_248
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 461
+        width: 26
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e39b633a9019c5aa0800000000000000
+      internalID: -6170897918825416386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_249
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 462
+        width: 25
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0dccbac05d8a210800000000000000
+      internalID: 1344558739168743588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_250
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 461
+        width: 26
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5600cd666dc090b80800000000000000
+      internalID: -8428191112658943899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_251
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 414
+        width: 35
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d964d2f57f21c63d0800000000000000
+      internalID: -3212171580558981475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_252
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 414
+        width: 34
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285f7631f59815fb0800000000000000
+      internalID: -4660793097911274110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_253
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 414
+        width: 25
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6423dd68a719dd3e0800000000000000
+      internalID: -2027304301812174266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_254
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 413
+        width: 25
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28561c088abe10e10800000000000000
+      internalID: 2162268405061739906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_255
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 413
+        width: 25
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa59092af023ef80800000000000000
+      internalID: -8078577047770146060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_256
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 413
+        width: 25
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b9d148a138b65380800000000000000
+      internalID: -8982789883328079434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_257
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 413
+        width: 25
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace1a2f0ac88a9e70800000000000000
+      internalID: 9122754396611550922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_258
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 411
+        width: 25
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95e72f8c98bc70f70800000000000000
+      internalID: 9153508560296115801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_259
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 358
+        width: 26
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61af95b2250c4ac0800000000000000
+      internalID: -3869712333183934100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_260
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 358
+        width: 30
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede4d163d7fd04020800000000000000
+      internalID: 2324103136594972382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_261
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 358
+        width: 30
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56969c4bcde2b800800000000000000
+      internalID: 626824755577001564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_262
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 358
+        width: 30
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b855ef8a03f357400800000000000000
+      internalID: 321232426653078923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_263
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 398
+        width: 7
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1fb376c96de05520800000000000000
+      internalID: 2688910016097009438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_264
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 359
+        width: 19
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5953d7b595e52a770800000000000000
+      internalID: 8620556374620583317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_265
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 359
+        width: 19
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcc6e472534069730800000000000000
+      internalID: 4005393544931863759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_266
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 358
+        width: 19
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070b82d1917b17c80800000000000000
+      internalID: -8326672917540065168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_267
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 358
+        width: 20
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e5136c420ad4830800000000000000
+      internalID: 4057074919135075876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_268
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 306
+        width: 29
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64dfccbc56933d460800000000000000
+      internalID: 7265213733252431174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_269
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 306
+        width: 29
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138fc72d4349d0de0800000000000000
+      internalID: -1365272157432776655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_270
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 305
+        width: 31
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2928431732e1501e0800000000000000
+      internalID: -2232344902720257390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_271
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 305
+        width: 31
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1eb77570ea0a1b0800000000000000
+      internalID: -5647322586166861372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_272
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 305
+        width: 24
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e17b5cb5827da80800000000000000
+      internalID: -8442234601858458030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_273
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 305
+        width: 25
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6636319e0bb48c790800000000000000
+      internalID: -7509669155443612826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_274
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 305
+        width: 27
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa180daebc97ae80800000000000000
+      internalID: -8167387056452396375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_275
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 305
+        width: 27
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea2eabc3b16b52f0800000000000000
+      internalID: -983084668806092060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_276
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 305
+        width: 32
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9afd8ce7e4b3b5d0800000000000000
+      internalID: -3047893614600521057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_277
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 305
+        width: 32
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ad8d632f2a7bc30800000000000000
+      internalID: 4375144724199692821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_278
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 306
+        width: 30
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4deac05731e6930800000000000000
+      internalID: 4138266501044950207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_279
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 304
+        width: 31
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5063aa17d8cd44780800000000000000
+      internalID: -8699586080117475835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_280
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 305
+        width: 31
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2fbc36e9b9b557b0800000000000000
+      internalID: -5236074783665504465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_281
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 253
+        width: 26
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94d3744e43142c20800000000000000
+      internalID: 3180688463707231387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_282
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 253
+        width: 26
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c11f35c4eb755580800000000000000
+      internalID: -8839022471152725568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_283
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 253
+        width: 31
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d21d6faa3a0469d0800000000000000
+      internalID: -2782087422640581934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_284
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 255
+        width: 41
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31b309c559176db0800000000000000
+      internalID: -4798839021704597189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_285
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 256
+        width: 42
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af650a40f7045cf0800000000000000
+      internalID: -264577749492600925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_286
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 257
+        width: 43
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da727b674e0208240800000000000000
+      internalID: 4791866169138554797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_287
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 257
+        width: 43
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 207b0bcbe99e1e840800000000000000
+      internalID: 5251735508470511362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_288
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 190
+        width: 41
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81f283bec4f93e00800000000000000
+      internalID: 1025119558815641997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_289
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 190
+        width: 46
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 481f2ff83a04d6c70800000000000000
+      internalID: 8965893504403435908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_290
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 192
+        width: 32
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b3f27076fa8ea10800000000000000
+      internalID: 1938992496620026750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSoma_291
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 192
+        width: 36
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f49a2a307d46df90800000000000000
+      internalID: -6929265832255384336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 138
+        width: 42
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1e012b4e3022830800000000000000
+      internalID: 4044799696107004413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 138
+        width: 44
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7627b267885a520800000000000000
+      internalID: 2712724391677028256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 138
+        width: 47
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82758038f41912820800000000000000
+      internalID: 2891752206435374888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_3
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 138
+        width: 48
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4645edc62b68f1ee0800000000000000
+      internalID: -1288162867515861916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_4
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 138
+        width: 47
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52126c5f6f98a270800000000000000
+      internalID: 8262028817051292251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_5
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 139
+        width: 46
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06635a3d9cf16c420800000000000000
+      internalID: 2649840382453823072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_6
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 139
+        width: 45
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a8330fad0cccb20800000000000000
+      internalID: 3156109485445188156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_7
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 139
+        width: 44
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15842fa590236bd90800000000000000
+      internalID: -7082418348231604143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_8
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 139
+        width: 43
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8269b3e1daed6cc70800000000000000
+      internalID: 8991118541209703976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_9
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 86
+        width: 42
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f761a682e34403100800000000000000
+      internalID: 85643426676741759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 86
+        width: 39
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e93d1a5392be1af0800000000000000
+      internalID: -423704968984446490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_11
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 86
+        width: 41
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de190517b9aa3a20800000000000000
+      internalID: 3042931102039219926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_12
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 86
+        width: 41
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a43ed8f9c6d64600800000000000000
+      internalID: 452284975549396137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_13
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 87
+        width: 41
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a6b043f0666a4650800000000000000
+      internalID: 6217894802122389154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_14
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 86
+        width: 43
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c816a2cd0c9b500800000000000000
+      internalID: 412572892717485067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_15
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 86
+        width: 41
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8830ab9384e716d00800000000000000
+      internalID: 964190643905233800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

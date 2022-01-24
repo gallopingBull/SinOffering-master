@@ -35,7 +35,6 @@ public abstract class Entity : MonoBehaviour {
 
     //[HideInInspector]
     public State state; // Actor's current state
-
     public bool isInvincible;
 
     public SpriteRenderer ActorSprite;
@@ -101,7 +100,7 @@ public abstract class Entity : MonoBehaviour {
         InitActor();
     }
 
-    protected void CheckIfFalling()
+    protected virtual void CheckIfFalling()
     {
         if (rb.velocity.y > 0)
         {
@@ -173,24 +172,11 @@ public abstract class Entity : MonoBehaviour {
         {
             if (!IsGrounded)
             {
-                if (name == "Player")
-                {
-                    //GetComponent<PlayerController>().animator.Play("Player_Idle");
-                    if (!Input.GetButton("Jump") && GetComponent<PlayerController>().jumpEnabled)
-                    {
-                        if (state != State.dashing)
-                        {
-                            IsGrounded = true;
-                        }
-                    }
-
-                    SoundManager.PlaySound(GetComponent<PlayerController>().landClip);
-                    jumpCount = 0;
-                }
-                else
-                {
+                if (!IsGrounded)
                     IsGrounded = true;
-                }
+                SoundManager.PlaySound(GetComponent<PlayerController>().landClip);
+                if (name == "Player")
+                    jumpCount = 0;
                 jumpEnabled = true;
             }
         }
@@ -198,25 +184,11 @@ public abstract class Entity : MonoBehaviour {
         {
             if (!IsGrounded)
             {
-                if (name == "Player")
-                {
-                    //GetComponent<PlayerController>().animator.Play("Player_Idle");
-                    if (!Input.GetButton("Jump") && GetComponent<PlayerController>().jumpEnabled)
-                    {
-                        if (state != State.dashing)
-                        {
-                            IsGrounded = true;
-                        }
-                    }
-
-                    SoundManager.PlaySound(GetComponent<PlayerController>().landClip);
-                    jumpCount = 0;
-                }
-                else
-                {
+                if (!IsGrounded)
                     IsGrounded = true;
-                }
-
+                SoundManager.PlaySound(GetComponent<PlayerController>().landClip);
+                if (name == "Player")
+                    jumpCount = 0;
                 jumpEnabled = true;
             }
         }
@@ -224,24 +196,11 @@ public abstract class Entity : MonoBehaviour {
         {
             if (!IsGrounded)
             {
-                if (name == "Player")
-                {
-                    //GetComponent<PlayerController>().animator.Play("Player_Idle");
-                    if (!Input.GetButton("Jump") && GetComponent<PlayerController>().jumpEnabled)
-                    {
-                        if (state != State.dashing)
-                        {
-                            IsGrounded = true;
-                        }
-                    }
-
-                    SoundManager.PlaySound(GetComponent<PlayerController>().landClip);
-                    jumpCount = 0;
-                }
-                else
-                {
+                if (!IsGrounded)
                     IsGrounded = true;
-                }
+                SoundManager.PlaySound(GetComponent<PlayerController>().landClip);
+                if (name == "Player")
+                    jumpCount = 0;
                 jumpEnabled = true;
             }
         }
@@ -298,13 +257,13 @@ public abstract class Entity : MonoBehaviour {
     // make this so it flips any sprite put into it
     public void FlipEntitySprite(int direction)
     {
-        Debug.Log("1st. facingLeft: "+ facingLeft);
+        //Debug.Log("1st. facingLeft: "+ facingLeft);
         if (GetComponent<PlayerController>().inputHandler.aiming)
         {
             if (dir == direction)
                 return;
         }
-        Debug.Log("2nd. facingLeft: " + facingLeft);
+        //Debug.Log("2nd. facingLeft: " + facingLeft);
         facingLeft = direction > 0 ? false : true;
         ActorSprite.flipX = facingLeft;
         BloodActorSprite.flipX = facingLeft;

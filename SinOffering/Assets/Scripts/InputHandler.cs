@@ -71,7 +71,6 @@ public class InputHandler : MonoBehaviour
    
     #endregion
 
-
     #region functions
     // Use this for initialization
     void Awake()
@@ -92,15 +91,17 @@ public class InputHandler : MonoBehaviour
 
         if (pc.InputEnabled)
         {
+
             #region get move direction
             L_xRaw = Input.GetAxisRaw("Horizontal");
             L_yRaw = Input.GetAxisRaw("Vertical");
-           
+
             #region testing
             //InputDelay2();
             //InputDelay.InputDelayHandler(state); // manages delay timers for several different input/actions
-            #endregion 
+            #endregion
 
+            int lastDirection = pc.dir;
             if (L_xRaw > 0 && pc.dir != 1)
                 pc.dir = 1;
             if (L_xRaw < 0 && pc.dir != -1)
@@ -137,64 +138,109 @@ public class InputHandler : MonoBehaviour
                 if (R_xRaw < -(x_DeadZone))
                     _aimDir = -1;
 
-                if (R_xRaw == 0)
-                    pc.FlipEntitySprite(pc.dir);
-                else
+                if (R_xRaw == 0) 
+                {
+                    if (lastDirection != pc.dir)
+                    {
+                        pc.FlipEntitySprite(pc.dir);
+                        pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
+                    }
+                }
+
+                else 
+                {
                     pc.FlipEntitySprite(_aimDir);
+                    if (_aimDir != 0)
+                        pc.weaponManager.ModifyWeaponRotation(_aimDir, _aimDirection);
+                    pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
+                }
+                    
 
                 pc.EquippedWeapon.GetComponent<Weapon>().SetSpawnLoc();
                 // flip weapon sprite
-                if (pc.weaponManager.WeaponEquipped)
-                    pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
-                if (_aimDir != 0)
-                    pc.weaponManager.ModifyWeaponRotation(_aimDir, _aimDirection);
+                //if (pc.weaponManager.WeaponEquipped)
+                    //pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
             }
 
             //Debug.Log("_aimDir" + _aimDir);   
             //Debug.Log("pc.Dir" + pc.dir);
 
-            // Handles player's horizontal movement
-            if (L_xRaw > x_DeadZone || L_xRaw < -(x_DeadZone))
+
+            // if no x-axis input registed, stop moving player
+            // *** maybe make an idle command and it's added to the command list instead ***
+            if (L_xRaw == 0 )
             {
-                // assign direction player is facing (maybe move this)
-                if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
+                // maybe create a "IdleCommand" and move this there... idk yet
+                if (pc.IsGrounded)
                 {
-                    Debug.Log("FlipEntitySprite(pc.Dir: " + pc.dir +")");
-                    pc.FlipEntitySprite(pc.dir);
-                    // flip weapon sprite
-                    if (pc.weaponManager.WeaponEquipped)
-                        if (!aiming)
-                            pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
-                    Commands.Add(moveCommand);
+                    if (pc.state != Entity.State.Idle && pc.rb.velocity.y == 0)
+                        pc.StateManager.EnterState(Entity.State.Idle);
+                }
+                   
+                pc.rb.velocity = new Vector3(0, pc.rb.velocity.y, 0);
+            }
+            else
+            {
+
+                // Handles player's horizontal movement
+                if (L_xRaw > x_DeadZone || L_xRaw < -(x_DeadZone))
+                {
+                    // assign direction player is facing (maybe move this)
+                    if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
+                    {
+                        //Debug.Log("FlipEntitySprite(pc.Dir: " + pc.dir +")");
+                        pc.FlipEntitySprite(pc.dir);
+                        // flip weapon sprite
+                        if (pc.weaponManager.WeaponEquipped)
+                            if (!aiming)
+                                pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
+                        Commands.Add(moveCommand);
+                    }
                 }
             }
-                
+
+
+
             if (pc.AbilitiesEnabled)
             {
-                // Handles Jumping
-                if (Input.GetButtonDown("Jump") && pc.jumpEnabled && jumpDelayComplete)
-                {
-                    //*** check if this is necessarry **\\
-                    //jumpDelay = MAXjumpDelay; 
-
-                    pc.JumpButtonHeldDown = true;
-                    #region TEST UI
-                    if (pc.button != null && !pc.button.activeSelf)
-                    {
-                        pc.button.SetActive(true);
-                    }
-                    #endregion
-
-                    if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
-                        Commands.Add(jumpCommand);
-                }
-
                 if (Input.GetButtonUp("Jump"))
-                {
-                    pc.JumpButtonHeldDown = false;
+                {/*
+                    Debug.Log("------- GetButtonUp ||pc.jumpcount = " + pc.jumpCount + " -------");
+                    if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed && pc.jumpEnabled && jumpDelayComplete)
+                        Commands.Add(jumpCommand);
+                    */
+
                     if (pc.button != null && pc.button.activeSelf)
                         pc.button.SetActive(false);
                 }
+                // Handles Jumping
+                if (Input.GetButtonDown("Jump"))
+                {
+                    Debug.Log("GetButtonDown ||pc.jumpcount = " + pc.jumpCount + " -------");
+
+                    #region testing input delay
+                    //*** check if this is necessarry **\\
+                    //jumpDelay = MAXjumpDelay; 
+                    #endregion
+
+                    #region TEST UI
+                    if (pc.button != null && !pc.button.activeSelf)
+                        pc.button.SetActive(true);
+                    #endregion
+                    /*
+                    if (pc.jumpCount == 1)
+                    {
+                        if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
+                            Commands.Add(jumpCommand);
+                    }*/
+                    if  (pc.jumpEnabled && jumpDelayComplete)
+                    {
+                        if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
+                            Commands.Add(jumpCommand);
+                    }
+                }
+
+              
 
                 // Dash Attack
                 if (Input.GetAxis("LeftTrigger") == 1 && !GameManager.instance.gameCompleted)
@@ -211,7 +257,7 @@ public class InputHandler : MonoBehaviour
                             evadeButtonPressedTime = Time.time;
                             //Debug.Log("evadeButtonPressedTime: " + evadeButtonPressedTime);
                             //Debug.Log("deactivate time: " + (evadeButtonPressedTime + MAXEvadeDelay));
-                            evadeDelay = .3f; //find approaiate value to scale this down for when the player upgrades it
+                            evadeDelay = .3f; //find  approaiate value to scale this down for when the player upgrades it
                                               // the delay is suppose ot be shorter
                                               //Debug.Log("evadeDelay: "+ evadeDelay);
                         }
@@ -280,16 +326,6 @@ public class InputHandler : MonoBehaviour
                 }
             }
 
-            // if no x-axis input registed, stop moving player
-            // *** maybe make an idle command and it's added to the command list instead ***
-            if (L_xRaw == 0 )
-            {
-                // maybe create a "IdleCommand" and move this there... idk yet
-                if (pc.IsGrounded)
-                    pc.StateManager.EnterState(Entity.State.Idle);
-
-                pc.rb.velocity = new Vector3(0, pc.rb.velocity.y, 0);
-            }
             return Commands;
         }
         return null;

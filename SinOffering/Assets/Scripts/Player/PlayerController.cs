@@ -8,7 +8,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     public float Mana = 0;
     public float Strength = 0;
 
-
     //private bool _weaponsEnabled = true;
     //private bool _dashAbilityEnabled = true;
     //private bool _meleeEnabled = true;
@@ -294,6 +293,29 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
            delayComplete = true;
            delay = 0;
        }*/
+    }
+
+
+    protected override void CheckIfFalling()
+    {
+        //Debug.Log("rb.velocity.y: " + rb.velocity.y);
+        if (GetComponent<DashCommand>().dashState != DashCommand.DashState.completed || state == State.evading)
+            return;
+
+        if (!IsGrounded)
+        {
+            if (rb.velocity.y > 0)
+            {
+                // maybe have this be set in the statemanager
+                if (state != Entity.State.Jumping)
+                    StateManager.EnterState(State.Jumping);
+            }
+            else
+            {
+                if (state != State.falling)
+                    StateManager.EnterState(State.falling);
+            }
+        }
     }
 
     public void EnableInput()
