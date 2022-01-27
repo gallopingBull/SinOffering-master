@@ -303,7 +303,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         {
             if (rb.velocity.y > 0)
             {
-                // maybe have this be set in the statemanager
+                // maybe have this should be set in the statemanager
                 if (state != Entity.State.Jumping)
                     StateManager.EnterState(State.Jumping);
             }

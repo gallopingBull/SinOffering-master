@@ -613,7 +613,7 @@ TextureImporter:
     second: playerSoma_202
   - first:
       213: 3624957467917829527
-    second: playerSoma_203
+    second: Player_Shoot_Angled_Up
   - first:
       213: 8521622227255897040
     second: playerSoma_204
@@ -628,7 +628,7 @@ TextureImporter:
     second: playerSoma_207
   - first:
       213: -4974864044365049735
-    second: playerSoma_208
+    second: Player_Shoot_Angled_Down
   - first:
       213: 2617212476299765539
     second: playerSoma_209
@@ -643,7 +643,7 @@ TextureImporter:
     second: playerSoma_212
   - first:
       213: -5654206002207485825
-    second: playerSoma_213
+    second: Player_Shoot_Down
   - first:
       213: 3484318714366636954
     second: Player_Jump_Shoot
@@ -868,16 +868,16 @@ TextureImporter:
     second: playerSoma_287
   - first:
       213: 1025119558815641997
-    second: playerSoma_288
+    second: Player_Jump_Shoot_Angled_Up
   - first:
       213: 8965893504403435908
-    second: playerSoma_289
+    second: Player_Jump_Shoot_Angled_Down
   - first:
       213: 1938992496620026750
-    second: playerSoma_290
+    second: Player_Jump_Shoot_Up
   - first:
       213: -6929265832255384336
-    second: playerSoma_291
+    second: Player_Jump_Shoot_Down
   - first:
       213: 4044799696107004413
     second: Player_Run_Shoot_0
@@ -5302,7 +5302,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_203
+      name: Player_Shoot_Angled_Up
       rect:
         serializedVersion: 2
         x: 183
@@ -5407,7 +5407,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_208
+      name: Player_Shoot_Angled_Down
       rect:
         serializedVersion: 2
         x: 178
@@ -5512,7 +5512,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_213
+      name: Player_Shoot_Down
       rect:
         serializedVersion: 2
         x: 178
@@ -7087,7 +7087,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_288
+      name: Player_Jump_Shoot_Angled_Up
       rect:
         serializedVersion: 2
         x: 2
@@ -7108,7 +7108,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_289
+      name: Player_Jump_Shoot_Angled_Down
       rect:
         serializedVersion: 2
         x: 67
@@ -7129,7 +7129,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_290
+      name: Player_Jump_Shoot_Up
       rect:
         serializedVersion: 2
         x: 131
@@ -7150,11 +7150,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_291
+      name: Player_Jump_Shoot_Down
       rect:
         serializedVersion: 2
         x: 188
-        y: 192
+        y: 193
         width: 36
         height: 41
       alignment: 7

@@ -4567,7 +4567,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dawnOfSorrowbw(1)_212
+      name: Player_Shoot_Angled_Up
       rect:
         serializedVersion: 2
         x: 183
@@ -4672,7 +4672,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dawnOfSorrowbw(1)_217
+      name: Player_Shoot_Angled_Down
       rect:
         serializedVersion: 2
         x: 178
@@ -4777,7 +4777,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dawnOfSorrowbw(1)_222
+      name: Player_Shoot_Down
       rect:
         serializedVersion: 2
         x: 178

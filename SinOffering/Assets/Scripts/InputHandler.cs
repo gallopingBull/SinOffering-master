@@ -146,7 +146,7 @@ public class InputHandler : MonoBehaviour
                         {
                             pc.FlipEntitySprite(pc.dir);
                             pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
-                        }
+                        }   
                     }
 
                     else
@@ -225,12 +225,7 @@ public class InputHandler : MonoBehaviour
                     if (pc.button != null && !pc.button.activeSelf)
                         pc.button.SetActive(true);
                     #endregion
-                    /*
-                    if (pc.jumpCount == 1)
-                    {       
-                        if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
-                            Commands.Add(jumpCommand);
-                    }*/
+                    
                     if  (pc.jumpEnabled && jumpDelayComplete)
                     {
                         if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
