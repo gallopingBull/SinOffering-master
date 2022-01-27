@@ -93,7 +93,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         //InputDelay2();
         //InputDelay.InputDelayHandler(state); // manages delay timers for several different input/actions
         #endregion
-
         CheckIfFalling();
         GravityModifier();
         CheckFloor();
@@ -295,13 +294,11 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
        }*/
     }
 
-
     protected override void CheckIfFalling()
     {
         //Debug.Log("rb.velocity.y: " + rb.velocity.y);
         if (GetComponent<DashCommand>().dashState != DashCommand.DashState.completed || state == State.evading)
             return;
-
         if (!IsGrounded)
         {
             if (rb.velocity.y > 0)
@@ -310,13 +307,13 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
                 if (state != Entity.State.Jumping)
                     StateManager.EnterState(State.Jumping);
             }
-            else
+            if (rb.velocity.y < 0)
             {
                 if (state != State.falling)
                     StateManager.EnterState(State.falling);
             }
         }
-    }
+    }   
 
     public void EnableInput()
     {

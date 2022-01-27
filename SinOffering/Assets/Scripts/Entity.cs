@@ -166,17 +166,19 @@ public abstract class Entity : MonoBehaviour {
     }
 
     // redundant if-conditions, consolidate this into a for loop
+    // make it so its possible for enemies to also play audio clip when they land on floor
     protected void CheckFloor()
     {
         if (Physics.Linecast(transform.position, GroundCheckR.position, 1 << LayerMask.NameToLayer("Ground")))
         {
             if (!IsGrounded)
             {
-                if (!IsGrounded)
-                    IsGrounded = true;
-                SoundManager.PlaySound(GetComponent<PlayerController>().landClip);
-                if (name == "Player")
+                IsGrounded = true;
+                if (name == "Player") 
+                { 
                     jumpCount = 0;
+                    SoundManager.PlaySound(GetComponent<PlayerController>().landClip);
+                }
                 jumpEnabled = true;
             }
         }
@@ -184,11 +186,12 @@ public abstract class Entity : MonoBehaviour {
         {
             if (!IsGrounded)
             {
-                if (!IsGrounded)
-                    IsGrounded = true;
-                SoundManager.PlaySound(GetComponent<PlayerController>().landClip);
+                IsGrounded = true;
                 if (name == "Player")
+                {
                     jumpCount = 0;
+                    SoundManager.PlaySound(GetComponent<PlayerController>().landClip);
+                }
                 jumpEnabled = true;
             }
         }
@@ -196,11 +199,13 @@ public abstract class Entity : MonoBehaviour {
         {
             if (!IsGrounded)
             {
-                if (!IsGrounded)
-                    IsGrounded = true;
-                SoundManager.PlaySound(GetComponent<PlayerController>().landClip);
+                IsGrounded = true;
+
                 if (name == "Player")
+                {
                     jumpCount = 0;
+                    SoundManager.PlaySound(GetComponent<PlayerController>().landClip);
+                }
                 jumpEnabled = true;
             }
         }

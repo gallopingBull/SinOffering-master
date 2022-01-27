@@ -48,21 +48,6 @@ public class EvadeCommand : ICommand {
         evadeCollider = GameObject.Find("TmpCollider");
     }
 
-    private void Update()
-    {
-        /*
-        origin = pc.transform.position;
-        direction = Vector3.right * -pc.dir;
-        curHitDistance = MaxHitDistance;
-
-  
-        hits = Physics2D.RaycastAll(origin,
-            direction,
-            MaxHitDistance,
-            layerMask);
-              
-        */
-    }
     public void Evade()
     {
         if (EvadeCount == EvadeCountMAX)
@@ -138,15 +123,16 @@ public class EvadeCommand : ICommand {
 
     private IEnumerator EvadeComplete()
     {
-        /*while (pc.rb.velocity.x != 0)
-        {
-            
-        }*/
         yield return new WaitForSeconds(.3f);
        
         pc.StateManager.ExitState(Entity.State.evading);
+
         evadeCollider.transform.parent = null;
-        evadeCollider.transform.position = new Vector3(100, 100, 100);
+        evadeCollider.transform.position = new Vector3(100, 100, 100); // moving collider away to distant location when not in use
+
+        if (!pc.IsGrounded)
+            pc.StateManager.EnterState(Entity.State.falling);
+
         StopCoroutine("EvadeComplete");
     }
 

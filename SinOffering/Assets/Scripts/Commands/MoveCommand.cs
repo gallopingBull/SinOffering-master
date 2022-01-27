@@ -19,7 +19,6 @@ public class MoveCommand : ICommand {
             if (pc.state == Entity.State.falling || pc.state == Entity.State.Jumping)
             {
                 pc.rb.velocity = new Vector3(pc.dir * (pc.Speed * pc.AirControl) * Time.fixedDeltaTime, pc.rb.velocity.y, 0);
-            
             }
 
             // basic horizontal ground movement

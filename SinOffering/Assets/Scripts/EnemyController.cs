@@ -28,7 +28,6 @@ public class EnemyController : Entity {
     private bool onFire = false;
 
 
-
     public AudioClip EnemyKilledClip;
     public ParticleSystem PS_Fire;
     public ParticleSystem PS_Smoke;

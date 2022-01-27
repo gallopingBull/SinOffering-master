@@ -26,7 +26,10 @@ public class StateManager : MonoBehaviour
 
             case Entity.State.Jumping:
                 pc.state = Entity.State.Jumping; // set state to jump 
-                //change sprite/ animation if weapon equipped
+                if (pc.IsGrounded)
+                    pc.IsGrounded = false;
+
+                // change sprite/ animation if weapon equipped
                 if (!pc.EquippedWeapon)
                 {
                     if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Jump"))
@@ -37,15 +40,13 @@ public class StateManager : MonoBehaviour
                     if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Jump_Shoot"))
                         pc.animator.Play("Player_Jump_Shoot");
                 }
-                GetComponent<InputHandler>().jumpDelay =
-                    GetComponent<InputHandler>().MAXjumpDelay;
-
-                
+                GetComponent<InputHandler>().jumpDelay = GetComponent<InputHandler>().MAXjumpDelay;
+ 
                 #region testing
                 //pc.InputDelay.jumpDelay = 
                 //  pc.InputDelay.MAXjumpDelay;
                 #endregion
-
+                    
                 SoundManager.PlaySound(pc.jumpClip);
                 if (pc.jumpCount == 0)
                     pc.CanDoubleJump = true;
@@ -96,6 +97,7 @@ public class StateManager : MonoBehaviour
                     pc.animator.Play("Player_Jump_Shoot");
                 pc.state = Entity.State.falling;
                 break;
+
             case Entity.State.evading:
                 print("Player is evading");
                 //animator.Play("Player_Evade");
@@ -181,7 +183,7 @@ public class StateManager : MonoBehaviour
                     GetComponent<EvadeCommand>().EvadeCount = 0;
                     GetComponent<EvadeCommand>().AirEvadeCount = 0; 
                 }
-                
+
                 break;
         }
     }

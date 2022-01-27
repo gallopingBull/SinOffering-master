@@ -91,7 +91,6 @@ public class InputHandler : MonoBehaviour
 
         if (pc.InputEnabled)
         {
-
             #region get move direction
             L_xRaw = Input.GetAxisRaw("Horizontal");
             L_yRaw = Input.GetAxisRaw("Vertical");
@@ -109,102 +108,101 @@ public class InputHandler : MonoBehaviour
 
             #endregion
 
-            if (Input.GetButton("AimWeapon") && !aiming)
-                aiming = true;
-            if (Input.GetButtonUp("AimWeapon"))
-            {
-                aiming = false;
-                // reset weapon position/rotation to default with movement direction
-                pc.EquippedWeapon.GetComponent<Weapon>().ResetPosition(pc.dir);
-            }
-           
             // if weapon is equipped
-            if (pc.weaponManager.WeaponEquipped && aiming)
+            if (pc.weaponManager.WeaponEquipped)
             {
-                R_xRaw = Input.GetAxisRaw("RightStick_Horizontal");
-                R_yRaw = Input.GetAxisRaw("RightStick_Vertical");
-                _aimDirection = new Vector2(R_xRaw, R_yRaw);
 
-                #region testing
-                //Debug.Log("_aimDirection.magnitude" + _aimDirection.magnitude);
-                if (_aimDirection.magnitude < deadZone)
+                if (Input.GetButton("AimWeapon") && !aiming)
+                    aiming = true;
+                if (Input.GetButtonUp("AimWeapon"))
                 {
-                    //_aimDirection = Vector2.zero;
+                    aiming = false;
+                    // reset weapon position/rotation to default with movement direction
+                    pc.EquippedWeapon.GetComponent<Weapon>().ResetPosition(pc.dir);
                 }
-                #endregion
 
-                if (R_xRaw > x_DeadZone)
-                    _aimDir = 1;
-                if (R_xRaw < -(x_DeadZone))
-                    _aimDir = -1;
-
-                if (R_xRaw == 0) 
+                if (aiming)
                 {
-                    if (lastDirection != pc.dir)
+                    R_xRaw = Input.GetAxisRaw("RightStick_Horizontal");
+                    R_yRaw = Input.GetAxisRaw("RightStick_Vertical");
+                    _aimDirection = new Vector2(R_xRaw, R_yRaw);
+
+                    #region testing
+                    //Debug.Log("_aimDirection.magnitude" + _aimDirection.magnitude);
+                    if (_aimDirection.magnitude < deadZone)
                     {
-                        pc.FlipEntitySprite(pc.dir);
-                        pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
+                        //_aimDirection = Vector2.zero;
                     }
-                }
+                    #endregion
 
-                else 
-                {
-                    pc.FlipEntitySprite(_aimDir);
-                    if (_aimDir != 0)
-                        pc.weaponManager.ModifyWeaponRotation(_aimDir, _aimDirection);
-                    pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
-                }
-                    
+                    if (R_xRaw > x_DeadZone)
+                        _aimDir = 1;
+                    if (R_xRaw < -(x_DeadZone))
+                        _aimDir = -1;
 
-                pc.EquippedWeapon.GetComponent<Weapon>().SetSpawnLoc();
-                // flip weapon sprite
-                //if (pc.weaponManager.WeaponEquipped)
+                    if (R_xRaw == 0)
+                    {
+                        if (lastDirection != pc.dir)
+                        {
+                            pc.FlipEntitySprite(pc.dir);
+                            pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
+                        }
+                    }
+
+                    else
+                    {
+                        pc.FlipEntitySprite(_aimDir);
+                        if (_aimDir != 0)
+                            pc.weaponManager.ModifyWeaponRotation(_aimDir, _aimDirection);
+                        pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
+                    }
+
+
+                    pc.EquippedWeapon.GetComponent<Weapon>().SetSpawnLoc();
+                    // flip weapon sprite
+                    //if (pc.weaponManager.WeaponEquipped)
                     //pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
+                }
+
             }
 
             //Debug.Log("_aimDir" + _aimDir);   
             //Debug.Log("pc.Dir" + pc.dir);
 
-
             // if no x-axis input registed, stop moving player
             // *** maybe make an idle command and it's added to the command list instead ***
-            if (L_xRaw == 0 )
+            if (L_xRaw == 0)
             {
                 // maybe create a "IdleCommand" and move this there... idk yet
                 if (pc.IsGrounded)
                 {
-                    if (pc.state != Entity.State.Idle && pc.rb.velocity.y == 0)
+                    if (pc.state != Entity.State.Idle && !Input.GetButtonDown("Jump"))
                         pc.StateManager.EnterState(Entity.State.Idle);
                 }
-                   
                 pc.rb.velocity = new Vector3(0, pc.rb.velocity.y, 0);
             }
-            else
+    
+            // Handles player's horizontal movement
+            if (L_xRaw > x_DeadZone || L_xRaw < -(x_DeadZone))
             {
-
-                // Handles player's horizontal movement
-                if (L_xRaw > x_DeadZone || L_xRaw < -(x_DeadZone))
+                // assign direction player is facing (maybe move this)
+                if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
                 {
-                    // assign direction player is facing (maybe move this)
-                    if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
-                    {
-                        //Debug.Log("FlipEntitySprite(pc.Dir: " + pc.dir +")");
-                        pc.FlipEntitySprite(pc.dir);
-                        // flip weapon sprite
-                        if (pc.weaponManager.WeaponEquipped)
-                            if (!aiming)
-                                pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
-                        Commands.Add(moveCommand);
-                    }
-                }
+                    //Debug.Log("FlipEntitySprite(pc.Dir: " + pc.dir +")");
+                    pc.FlipEntitySprite(pc.dir);
+                    // flip weapon sprite
+                    if (pc.weaponManager.WeaponEquipped)
+                        if (!aiming)
+                            pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
+                    Commands.Add(moveCommand);
+                }   
             }
-
-
 
             if (pc.AbilitiesEnabled)
             {
                 if (Input.GetButtonUp("Jump"))
-                {/*
+                {
+                    /*
                     Debug.Log("------- GetButtonUp ||pc.jumpcount = " + pc.jumpCount + " -------");
                     if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed && pc.jumpEnabled && jumpDelayComplete)
                         Commands.Add(jumpCommand);
@@ -229,7 +227,7 @@ public class InputHandler : MonoBehaviour
                     #endregion
                     /*
                     if (pc.jumpCount == 1)
-                    {
+                    {       
                         if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
                             Commands.Add(jumpCommand);
                     }*/
@@ -239,8 +237,6 @@ public class InputHandler : MonoBehaviour
                             Commands.Add(jumpCommand);
                     }
                 }
-
-              
 
                 // Dash Attack
                 if (Input.GetAxis("LeftTrigger") == 1 && !GameManager.instance.gameCompleted)

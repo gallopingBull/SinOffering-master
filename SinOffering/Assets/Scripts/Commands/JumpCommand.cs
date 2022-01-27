@@ -19,9 +19,9 @@ public class JumpCommand : ICommand {
         if (pc.state == Entity.State.Jumping)
         {   
             // double jump
-            //if (pc.jumpCount == 1)
-                //DoubleJump();
-            //return;
+            if (pc.jumpCount == 1)
+                DoubleJump();
+            return;
         }
 
         // jump from ground 
@@ -40,18 +40,18 @@ public class JumpCommand : ICommand {
         if (pc.state == Entity.State.falling)
         {
             //used to double jump after dash (needs fixin')  
-            //if (Input.GetButtonDown("Jump") && pc.jumpCount == 1)
-            //{
-                //DoubleJump();
-                //return;  
-            //}
+            if (Input.GetButtonDown("Jump") && pc.jumpCount == 1)
+            {
+                DoubleJump();
+                return;  
+            }
             //print("calling jump from fallling state");
             if (pc.jumpCount == 0)
             {
-
                 //print("jumping from falling state");
                 // zero out y velocity
-                pc.rb.velocity = new Vector3(pc.rb.velocity.x, 0, pc.rb.velocity.z);
+                pc.rb.velocity = new Vector3(pc.rb.velocity.x, 0,
+                    pc.rb.velocity.z);
 
                 pc.rb.AddForce(Vector3.up * pc.JumpSpeed);
                 // change state
@@ -64,7 +64,6 @@ public class JumpCommand : ICommand {
     {
         if (pc.CanDoubleJump)
         {
-            //print("in double jump");
             SoundManager.PlaySound(pc.jumpClip);
             pc.jumpEnabled = false;
             pc.CanDoubleJump = false;
@@ -73,7 +72,6 @@ public class JumpCommand : ICommand {
             pc.rb.velocity = new Vector3(pc.rb.velocity.x, 0, pc.rb.velocity.z);
 
             pc.rb.AddForce(Vector3.up * pc.JumpSpeed);
-            //pc.jumpCount++;
             pc.StateManager.EnterState(Entity.State.Jumping);
         }
     }
