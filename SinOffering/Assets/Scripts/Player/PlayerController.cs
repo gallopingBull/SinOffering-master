@@ -54,18 +54,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     [HideInInspector]
     public ParticleSystem ps;
 
-    #region maybe delete after refactor input code
-    [HideInInspector]
-    public float xRaw;
-    [HideInInspector]
-    public float yRaw;
 
-    [HideInInspector]
-    public float x_R_Raw;
-    [HideInInspector]
-    public float y_R_Raw;
-    #endregion
-    
     public AudioClip jumpClip, landClip, dashClip;
     //[HideInInspector]
     public GameObject button;
@@ -319,6 +308,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     {
         InputEnabled = true;
     }
+
     public void DisableInput()
     {
         InputEnabled = false;

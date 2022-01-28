@@ -12,8 +12,8 @@ public class StateManager : MonoBehaviour
     public void EnterState(Entity.State _state)
     {
         ExitState(pc.state);
-        Debug.Log("exiting state: " + pc.state);
-        Debug.Log("entering state: " + _state);
+        //Debug.Log("exiting state: " + pc.state);
+        //Debug.Log("entering state: " + _state);
         switch (_state)
         {
             case Entity.State.Idle:
@@ -74,7 +74,7 @@ public class StateManager : MonoBehaviour
 
                 break;
 
-            case Entity.State.firing:
+            case Entity.State.aiming:
                 //animator.Play("Player_Shoot");
                 //print("Player     is shooting");
                 break;
@@ -91,7 +91,7 @@ public class StateManager : MonoBehaviour
                 break;
 
             case Entity.State.falling:
-                if (pc.EquippedWeapon == null)
+                if (pc.EquippedWeapon == null)  
                     pc.animator.Play("Player_Falling");
                 else
                     pc.animator.Play("Player_Jump_Shoot");
@@ -153,7 +153,7 @@ public class StateManager : MonoBehaviour
 
                 break;
 
-            case Entity.State.firing:
+            case Entity.State.aiming:
                 //animator.Play("Player_Shoot");
                 //print("Player state is exiting 'fire' state");
                 break;

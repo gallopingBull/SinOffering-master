@@ -152,20 +152,21 @@ public class InputHandler : MonoBehaviour
                     else
                     {
                         pc.FlipEntitySprite(_aimDir);
-                        if (_aimDir != 0)
-                            pc.weaponManager.ModifyWeaponRotation(_aimDir, _aimDirection);
+                        if (_aimDir != 0) 
+                        { 
+                            pc.weaponManager.ModifyWeaponRotation(_aimDir, _aimDirection); 
+
+                        }
+                            
                         pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
                     }
-
 
                     pc.EquippedWeapon.GetComponent<Weapon>().SetSpawnLoc();
                     // flip weapon sprite
                     //if (pc.weaponManager.WeaponEquipped)
                     //pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
                 }
-
             }
-
             //Debug.Log("_aimDir" + _aimDir);   
             //Debug.Log("pc.Dir" + pc.dir);
 
