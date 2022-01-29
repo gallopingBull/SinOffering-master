@@ -155,9 +155,8 @@ public class InputHandler : MonoBehaviour
                         if (_aimDir != 0) 
                         { 
                             pc.weaponManager.ModifyWeaponRotation(_aimDir, _aimDirection); 
-
-                        }
-                            
+                            SwapAimingSprite(_aimDir, _aimDirection); 
+                        }   
                         pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
                     }
 
@@ -483,6 +482,86 @@ public class InputHandler : MonoBehaviour
          */
     }
 
+    private void SwapAimingSprite(int dir, Vector3 angle)
+    {
+        var tmp = Quaternion.Euler(0, 0, GetTargetEuler(angle * dir, 45f));
+        Debug.Log("angle: " + tmp.eulerAngles.z);
+        switch (tmp.eulerAngles.z)
+        {
+
+            case 0:
+                // center/facing-left: 0
+                // center/facing-right: 0
+                pc.animator.Play("Player_Shoot");
+                break;
+
+            case 270:
+                if (pc.dir == 1)
+                {
+                    // down/facing-right: 270
+                    if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Down"))
+                        pc.animator.Play("Player_Shoot_Down");
+                }
+                else
+                {   
+                    // up/facing-left: 270  
+                    if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Up"))
+                        pc.animator.Play("Player_Shoot_Up");
+                }
+                break;
+
+            case 315:
+                if (pc.dir == 1)
+                {
+                    // down-angle/facing-right: 315
+                    if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Down"))
+                        pc.animator.Play("Player_Shoot_Angled_Down");
+                }
+                else
+                {
+                    // up-angle/facing-left: 315
+                    if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Up"))
+                        pc.animator.Play("Player_Shoot_Angled_Up");
+                }
+                break;
+
+
+            case 90:
+                if (pc.dir == 1)
+                {
+                    // up/facing-right: 90
+                    if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Down"))
+                        pc.animator.Play("Player_Shoot_Down");
+                }
+                else
+                {
+                    // down/facing-left: 90
+                    if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Up"))
+                        pc.animator.Play("Player_Shoot_Up");
+                }
+
+                break;
+
+            case 45:
+                if (pc.dir == 1)
+                {
+                    // up-angle/facing-right: 45
+                    if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Up"))
+                        pc.animator.Play("Player_Shoot_Angled_Up");
+                }
+                else
+                {
+                    // down-angle/facing-left: 45
+                    if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Down"))
+                        pc.animator.Play("Player_Shoot_Angled_Down");
+                }
+
+                break;
+            default:
+                break;
+        }
+    }
+        
     public float GetTargetEuler(Vector3 touchPosition, float interval)
     {
         float currentAngle = Mathf.Atan2(touchPosition.y, touchPosition.x) * Mathf.Rad2Deg;

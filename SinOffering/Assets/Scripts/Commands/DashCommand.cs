@@ -584,6 +584,8 @@ public class DashCommand : ICommand
         Gizmos.DrawWireSphere(origin + (direction.normalized * curHitDistance), circleCastRadius);
     }
 
+
+    //** look into why this is using PC.yRaw and not yraw value from inputhandler **\\
     public void ChangeRigidbodyValues()
     {
         if (pc.yRaw < 0)

@@ -87,7 +87,12 @@ public class StateManager : MonoBehaviour
                 if (pc.EquippedWeapon == null)
                     pc.animator.Play("Player_Run");
                 else
+                {
+                    if (pc.inputHandler.aiming)
+                        break;
                     pc.animator.Play("Player_Run_Shoot");
+                }
+                    
                 break;
 
             case Entity.State.falling:
