@@ -76,19 +76,19 @@ TextureImporter:
     second: playerSoma_23
   - first:
       213: 5403207240298166348
-    second: playerSoma_24
+    second: Player_Evade_Back_0
   - first:
       213: 1547797887433200346
-    second: playerSoma_25
+    second: Player_Evade_Back_1
   - first:
       213: 2440242095047247986
-    second: playerSoma_26
+    second: Player_Evade_Back_2
   - first:
       213: -5112639785971591660
-    second: playerSoma_27
+    second: Player_Evade_Back_3
   - first:
       213: 4145008745882830854
-    second: playerSoma_28
+    second: Player_Evade_Back_4
   - first:
       213: 597678736838557724
     second: Player_Run_0
@@ -139,16 +139,16 @@ TextureImporter:
     second: Player_Run_15
   - first:
       213: -8190909491352513534
-    second: playerSoma_45
+    second: Player_Evade_Forward_0
   - first:
       213: -5341629518797377615
-    second: playerSoma_46
+    second: Player_Evade_Forward_1
   - first:
       213: 2339236522559748160
-    second: playerSoma_47
+    second: Player_Evade_Forward_2
   - first:
       213: -4249438752057603615
-    second: playerSoma_48
+    second: Player_Evade_Forward_3
   - first:
       213: 4147500944487763058
     second: playerSoma_49
@@ -1543,7 +1543,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_24
+      name: Player_Evade_Back_0
       rect:
         serializedVersion: 2
         x: 202
@@ -1564,7 +1564,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_25
+      name: Player_Evade_Back_1
       rect:
         serializedVersion: 2
         x: 234
@@ -1585,7 +1585,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_26
+      name: Player_Evade_Back_2
       rect:
         serializedVersion: 2
         x: 272
@@ -1606,7 +1606,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_27
+      name: Player_Evade_Back_3
       rect:
         serializedVersion: 2
         x: 313
@@ -1627,7 +1627,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_28
+      name: Player_Evade_Back_4
       rect:
         serializedVersion: 2
         x: 352
@@ -1984,7 +1984,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_45
+      name: Player_Evade_Forward_0
       rect:
         serializedVersion: 2
         x: 561
@@ -2005,7 +2005,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_46
+      name: Player_Evade_Forward_1
       rect:
         serializedVersion: 2
         x: 603
@@ -2026,7 +2026,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_47
+      name: Player_Evade_Forward_2
       rect:
         serializedVersion: 2
         x: 645
@@ -2047,7 +2047,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_48
+      name: Player_Evade_Forward_3
       rect:
         serializedVersion: 2
         x: 688

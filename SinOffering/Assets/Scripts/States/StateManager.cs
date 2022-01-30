@@ -91,6 +91,7 @@ public class StateManager : MonoBehaviour
                     if (pc.inputHandler.aiming)
                         break;
                     pc.animator.Play("Player_Run_Shoot");
+
                 }
                     
                 break;
@@ -105,7 +106,7 @@ public class StateManager : MonoBehaviour
 
             case Entity.State.evading:
                 print("Player is evading");
-                //animator.Play("Player_Evade");
+                pc.animator.Play("Player_Evade_Back");
                 pc.DisableInput();
                 pc.rb.velocity = Vector3.zero;
 

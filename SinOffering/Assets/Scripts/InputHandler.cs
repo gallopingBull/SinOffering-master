@@ -485,8 +485,8 @@ public class InputHandler : MonoBehaviour
     private void SwapAimingSprite(int dir, Vector3 angle)
     {
         var tmp = Quaternion.Euler(0, 0, GetTargetEuler(angle * dir, 45f));
-        Debug.Log("tmp.z: " + angle.x);
-        Debug.Log("tmp.eulerAngles.z: " + tmp.eulerAngles.z);
+        //Debug.Log("tmp.z: " + angle.x);
+        //Debug.Log("tmp.eulerAngles.z: " + tmp.eulerAngles.z);
 
         float roundedFloat = Mathf.Round(tmp.eulerAngles.z);
 
@@ -509,7 +509,6 @@ public class InputHandler : MonoBehaviour
                     //.9238796
                     pc.animator.Play("Player_Shoot_Angled_Down");
                     //if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Down"))
-                        
                 }
                 break;
            
