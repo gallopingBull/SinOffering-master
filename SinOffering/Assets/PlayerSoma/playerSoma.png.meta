@@ -580,7 +580,7 @@ TextureImporter:
     second: playerSoma_191
   - first:
       213: 3468024461985190642
-    second: playerSoma_192
+    second: Player_Shoot
   - first:
       213: 1644175385065873106
     second: playerSoma_193
@@ -5071,13 +5071,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_192
+      name: Player_Shoot
       rect:
         serializedVersion: 2
         x: 178
         y: 1004
         width: 34
-        height: 43
+        height: 44
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5307,8 +5307,8 @@ TextureImporter:
         serializedVersion: 2
         x: 183
         y: 923
-        width: 29
-        height: 51
+        width: 34
+        height: 44
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5411,9 +5411,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 178
-        y: 863
-        width: 31
-        height: 43
+        y: 862
+        width: 34
+        height: 44
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5517,8 +5517,8 @@ TextureImporter:
         serializedVersion: 2
         x: 178
         y: 783
-        width: 22
-        height: 43
+        width: 34
+        height: 44
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
