@@ -1,0 +1,4722 @@
+fileFormatVersion: 2
+guid: e42ef32dd9e91ae4e897aff024c0fe5c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3289485041531423529
+    second: TownFolkNPC_0
+  - first:
+      213: -5767795253497941245
+    second: TownFolkNPC_1
+  - first:
+      213: 6847762323263538679
+    second: TownFolkNPC_2
+  - first:
+      213: -5521590487850869283
+    second: TownFolkNPC_3
+  - first:
+      213: 7831284069103045404
+    second: TownFolkNPC_4
+  - first:
+      213: -1538408832841000059
+    second: TownFolkNPC_5
+  - first:
+      213: -6476387886984210091
+    second: TownFolkNPC_6
+  - first:
+      213: 4015955330692698719
+    second: TownFolkNPC_7
+  - first:
+      213: 5646429237438832668
+    second: TownFolkNPC_8
+  - first:
+      213: 1238255344663738532
+    second: TownFolkNPC_9
+  - first:
+      213: 3951210796148295406
+    second: TownFolkNPC_10
+  - first:
+      213: -1867188013531934915
+    second: TownFolkNPC_11
+  - first:
+      213: -2694055203485161638
+    second: TownFolkNPC_12
+  - first:
+      213: 2006226006400961994
+    second: TownFolkNPC_13
+  - first:
+      213: -6522988409542965666
+    second: TownFolkNPC_14
+  - first:
+      213: -3703925877515476765
+    second: TownFolkNPC_15
+  - first:
+      213: 1815837455508331939
+    second: TownFolkNPC_16
+  - first:
+      213: 2741684425277553923
+    second: TownFolkNPC_17
+  - first:
+      213: 4093753134791315279
+    second: TownFolkNPC_18
+  - first:
+      213: 1021868576809781618
+    second: TownFolkNPC_19
+  - first:
+      213: 3712960629389605887
+    second: TownFolkNPC_20
+  - first:
+      213: 839004206643516343
+    second: TownFolkNPC_21
+  - first:
+      213: 4069381986935638095
+    second: TownFolkNPC_22
+  - first:
+      213: 3095297886176704204
+    second: TownFolkNPC_23
+  - first:
+      213: -6960688487314586836
+    second: TownFolkNPC_24
+  - first:
+      213: -8791062231026767411
+    second: TownFolkNPC_25
+  - first:
+      213: -5327344136195377123
+    second: TownFolkNPC_26
+  - first:
+      213: 5989700214339713108
+    second: TownFolkNPC_27
+  - first:
+      213: -1194717376200596640
+    second: TownFolkNPC_28
+  - first:
+      213: -3131444983616908200
+    second: TownFolkNPC_29
+  - first:
+      213: 6153048555085631534
+    second: TownFolkNPC_30
+  - first:
+      213: 7265399351138601371
+    second: TownFolkNPC_31
+  - first:
+      213: 3056772757231369528
+    second: TownFolkNPC_32
+  - first:
+      213: -1647288674172411217
+    second: TownFolkNPC_33
+  - first:
+      213: 7083018160091391521
+    second: TownFolkNPC_34
+  - first:
+      213: -2687360017853871449
+    second: TownFolkNPC_35
+  - first:
+      213: -165520092095947444
+    second: TownFolkNPC_36
+  - first:
+      213: -8224223697614507179
+    second: TownFolkNPC_37
+  - first:
+      213: -6729917613281117584
+    second: TownFolkNPC_38
+  - first:
+      213: -5425430691317836319
+    second: TownFolkNPC_39
+  - first:
+      213: 4054081107568212112
+    second: TownFolkNPC_40
+  - first:
+      213: 1000295035048110998
+    second: TownFolkNPC_41
+  - first:
+      213: -1460443175815620283
+    second: TownFolkNPC_42
+  - first:
+      213: -5093277074284904037
+    second: TownFolkNPC_43
+  - first:
+      213: -2169877979629005028
+    second: TownFolkNPC_44
+  - first:
+      213: -1286155648301161954
+    second: TownFolkNPC_45
+  - first:
+      213: 2833794830500509699
+    second: TownFolkNPC_46
+  - first:
+      213: 5884273330229902494
+    second: TownFolkNPC_47
+  - first:
+      213: 930992919282408006
+    second: TownFolkNPC_48
+  - first:
+      213: -4071025072670530202
+    second: TownFolkNPC_49
+  - first:
+      213: 5956685920367324618
+    second: TownFolkNPC_50
+  - first:
+      213: -724954834988716609
+    second: TownFolkNPC_51
+  - first:
+      213: 8921102404494634064
+    second: TownFolkNPC_52
+  - first:
+      213: -2515110585094145381
+    second: TownFolkNPC_53
+  - first:
+      213: 5819701814623748823
+    second: TownFolkNPC_54
+  - first:
+      213: 4347182681625158633
+    second: TownFolkNPC_55
+  - first:
+      213: -8425185183567901760
+    second: TownFolkNPC_56
+  - first:
+      213: 6222725519983533063
+    second: TownFolkNPC_57
+  - first:
+      213: -3866360004265947448
+    second: TownFolkNPC_58
+  - first:
+      213: -4694243052803413763
+    second: TownFolkNPC_59
+  - first:
+      213: -753202534479939432
+    second: TownFolkNPC_60
+  - first:
+      213: -8414875934257656380
+    second: TownFolkNPC_61
+  - first:
+      213: -4521905029467263221
+    second: TownFolkNPC_62
+  - first:
+      213: 1936884192624182356
+    second: TownFolkNPC_63
+  - first:
+      213: -4238760794913088012
+    second: TownFolkNPC_64
+  - first:
+      213: -6939130581885917000
+    second: TownFolkNPC_65
+  - first:
+      213: 8270730910062437462
+    second: TownFolkNPC_66
+  - first:
+      213: -1297673994870444629
+    second: TownFolkNPC_67
+  - first:
+      213: 7216869177325991762
+    second: TownFolkNPC_68
+  - first:
+      213: 9218285141493452334
+    second: TownFolkNPC_69
+  - first:
+      213: 7342565476656204300
+    second: TownFolkNPC_70
+  - first:
+      213: 1617736920065038035
+    second: TownFolkNPC_71
+  - first:
+      213: -8056545045757562514
+    second: TownFolkNPC_72
+  - first:
+      213: 5271291131576220513
+    second: TownFolkNPC_73
+  - first:
+      213: 8241089593801293309
+    second: TownFolkNPC_74
+  - first:
+      213: -2259903406212487604
+    second: TownFolkNPC_75
+  - first:
+      213: -6837609854318369397
+    second: TownFolkNPC_76
+  - first:
+      213: 4910879207991979118
+    second: TownFolkNPC_77
+  - first:
+      213: -4855564520163130618
+    second: TownFolkNPC_78
+  - first:
+      213: 6414806576431323530
+    second: TownFolkNPC_79
+  - first:
+      213: 3360133104512360209
+    second: TownFolkNPC_80
+  - first:
+      213: -5675004363690664639
+    second: TownFolkNPC_81
+  - first:
+      213: 6206233744713875364
+    second: TownFolkNPC_82
+  - first:
+      213: -6571847036159490299
+    second: TownFolkNPC_83
+  - first:
+      213: 7479309447111467463
+    second: TownFolkNPC_84
+  - first:
+      213: 4544946647671808438
+    second: TownFolkNPC_85
+  - first:
+      213: -672019396459434084
+    second: TownFolkNPC_86
+  - first:
+      213: -8451680391275619468
+    second: TownFolkNPC_87
+  - first:
+      213: 3218839742696949999
+    second: TownFolkNPC_88
+  - first:
+      213: -2638741766563878382
+    second: TownFolkNPC_89
+  - first:
+      213: -334488444281624194
+    second: TownFolkNPC_90
+  - first:
+      213: -4584088433993458160
+    second: TownFolkNPC_91
+  - first:
+      213: -3131643591874422479
+    second: TownFolkNPC_92
+  - first:
+      213: -3717625952362940271
+    second: TownFolkNPC_93
+  - first:
+      213: -4723595150741640025
+    second: TownFolkNPC_94
+  - first:
+      213: 2019614903992717545
+    second: TownFolkNPC_95
+  - first:
+      213: -6609565147608247347
+    second: TownFolkNPC_96
+  - first:
+      213: 8031056226849784520
+    second: TownFolkNPC_97
+  - first:
+      213: 5359049655809782436
+    second: TownFolkNPC_98
+  - first:
+      213: -7751011559465468951
+    second: TownFolkNPC_99
+  - first:
+      213: 3080417940189637654
+    second: TownFolkNPC_100
+  - first:
+      213: 8188935870095633867
+    second: TownFolkNPC_101
+  - first:
+      213: -8128809444473575093
+    second: TownFolkNPC_102
+  - first:
+      213: 8311612138948098848
+    second: TownFolkNPC_103
+  - first:
+      213: 3567735426376887872
+    second: TownFolkNPC_104
+  - first:
+      213: 4527707580304661639
+    second: TownFolkNPC_105
+  - first:
+      213: -5660013954293307949
+    second: TownFolkNPC_106
+  - first:
+      213: -5758886404161782963
+    second: TownFolkNPC_107
+  - first:
+      213: 8812947818930272858
+    second: TownFolkNPC_108
+  - first:
+      213: 6531180929214883170
+    second: TownFolkNPC_109
+  - first:
+      213: 1846191845950796079
+    second: TownFolkNPC_110
+  - first:
+      213: -1868129795090266623
+    second: TownFolkNPC_111
+  - first:
+      213: -3367276049881839587
+    second: TownFolkNPC_112
+  - first:
+      213: 2787138128059769351
+    second: TownFolkNPC_113
+  - first:
+      213: -23027147401587729
+    second: TownFolkNPC_114
+  - first:
+      213: -1897256460610597221
+    second: TownFolkNPC_115
+  - first:
+      213: 5474199885001990196
+    second: TownFolkNPC_116
+  - first:
+      213: -8110712755591306802
+    second: TownFolkNPC_117
+  - first:
+      213: 2477917088107201332
+    second: TownFolkNPC_118
+  - first:
+      213: 7413243990528048859
+    second: TownFolkNPC_119
+  - first:
+      213: 2809631932664877843
+    second: TownFolkNPC_120
+  - first:
+      213: -4760479876291178669
+    second: TownFolkNPC_121
+  - first:
+      213: 3860556158975555177
+    second: TownFolkNPC_122
+  - first:
+      213: 6402504033267891557
+    second: TownFolkNPC_123
+  - first:
+      213: 4653729512661161518
+    second: TownFolkNPC_124
+  - first:
+      213: -1715492767193908215
+    second: TownFolkNPC_125
+  - first:
+      213: -113442994057710095
+    second: TownFolkNPC_126
+  - first:
+      213: 1019816957829905601
+    second: TownFolkNPC_127
+  - first:
+      213: 5296319222471704179
+    second: TownFolkNPC_128
+  - first:
+      213: 5114427386213807463
+    second: TownFolkNPC_129
+  - first:
+      213: 6257076175906424155
+    second: TownFolkNPC_130
+  - first:
+      213: -3157323379477975275
+    second: TownFolkNPC_132
+  - first:
+      213: -7552460005219163272
+    second: TownFolkNPC_133
+  - first:
+      213: 2084833358259720343
+    second: NPC_Blacksmith_Hammering_0
+  - first:
+      213: -1968320303733424085
+    second: TownFolkNPC_135
+  - first:
+      213: -6071693722298183431
+    second: NPC_Blacksmith_Hammering_1
+  - first:
+      213: 1562124842259733419
+    second: TownFolkNPC_137
+  - first:
+      213: -4172989583841164772
+    second: NPC_Blacksmith_Hammering_2
+  - first:
+      213: 508337363461534838
+    second: NPC_Blacksmith_Hammering_3
+  - first:
+      213: -7427052089296620005
+    second: NPC_Blacksmith_Standing_0
+  - first:
+      213: 2259179377903106606
+    second: NPC_Blacksmith_Standing_1
+  - first:
+      213: 6330613936696714676
+    second: NPC_Blacksmith_Standing_2
+  - first:
+      213: 6908318733957309402
+    second: NPC_Blacksmith_Standing_3
+  - first:
+      213: 1388014874778102823
+    second: TownFolkNPC_144
+  - first:
+      213: -8683696694772663588
+    second: TownFolkNPC_145
+  - first:
+      213: -4791261180715584796
+    second: TownFolkNPC_146
+  - first:
+      213: 705505153549297107
+    second: TownFolkNPC_147
+  - first:
+      213: 7666131801819956377
+    second: TownFolkNPC_148
+  - first:
+      213: -729689283561050604
+    second: TownFolkNPC_149
+  - first:
+      213: -5077979231811358977
+    second: TownFolkNPC_150
+  - first:
+      213: -1752290695510731185
+    second: TownFolkNPC_151
+  - first:
+      213: 3394540038898264893
+    second: TownFolkNPC_152
+  - first:
+      213: 4903635975816821498
+    second: TownFolkNPC_153
+  - first:
+      213: 6692425589684980625
+    second: TownFolkNPC_154
+  - first:
+      213: -259364878882355933
+    second: TownFolkNPC_155
+  - first:
+      213: 4737139993855591724
+    second: TownFolkNPC_156
+  - first:
+      213: 3275804864145498430
+    second: TownFolkNPC_157
+  - first:
+      213: 8284550458949278548
+    second: TownFolkNPC_158
+  - first:
+      213: 1173519479715901069
+    second: TownFolkNPC_159
+  - first:
+      213: 2223193709657306087
+    second: TownFolkNPC_160
+  - first:
+      213: 1414743003301246964
+    second: TownFolkNPC_161
+  - first:
+      213: 4585570172428385988
+    second: TownFolkNPC_162
+  - first:
+      213: -6484863748714001789
+    second: TownFolkNPC_163
+  - first:
+      213: -5761049433153017078
+    second: TownFolkNPC_164
+  - first:
+      213: -3793274850141121099
+    second: TownFolkNPC_165
+  - first:
+      213: 8028855343428544936
+    second: TownFolkNPC_166
+  - first:
+      213: 4933891174332974611
+    second: TownFolkNPC_167
+  - first:
+      213: -389034383811890336
+    second: TownFolkNPC_168
+  - first:
+      213: 6649797446823005447
+    second: TownFolkNPC_169
+  - first:
+      213: 999295619303804836
+    second: TownFolkNPC_170
+  - first:
+      213: 3622624107730113731
+    second: TownFolkNPC_171
+  - first:
+      213: -1315978332695278268
+    second: TownFolkNPC_172
+  - first:
+      213: -1826771721536788224
+    second: TownFolkNPC_173
+  - first:
+      213: -7844911035961415582
+    second: TownFolkNPC_174
+  - first:
+      213: 3835648642272476290
+    second: TownFolkNPC_175
+  - first:
+      213: -1104459881748209194
+    second: TownFolkNPC_176
+  - first:
+      213: -767989149440214511
+    second: TownFolkNPC_177
+  - first:
+      213: 4433649227925582944
+    second: TownFolkNPC_178
+  - first:
+      213: -7834752503452683676
+    second: TownFolkNPC_179
+  - first:
+      213: -6700038489214484829
+    second: TownFolkNPC_180
+  - first:
+      213: -5943187841899049511
+    second: TownFolkNPC_181
+  - first:
+      213: 2308804012128164042
+    second: TownFolkNPC_182
+  - first:
+      213: 5255212865103150321
+    second: TownFolkNPC_183
+  - first:
+      213: 7802064105400792464
+    second: TownFolkNPC_184
+  - first:
+      213: -6022506213508781849
+    second: TownFolkNPC_185
+  - first:
+      213: -353066717736808910
+    second: TownFolkNPC_186
+  - first:
+      213: -2523886044895025427
+    second: TownFolkNPC_187
+  - first:
+      213: -7956364032311611899
+    second: TownFolkNPC_188
+  - first:
+      213: 3194054097807023585
+    second: TownFolkNPC_189
+  - first:
+      213: -4347056139033138211
+    second: TownFolkNPC_190
+  - first:
+      213: -8116211535972563808
+    second: TownFolkNPC_191
+  - first:
+      213: -4806701643692312141
+    second: TownFolkNPC_192
+  - first:
+      213: -3660448398626257083
+    second: TownFolkNPC_193
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TownFolkNPC_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1869
+        width: 20
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b0172873996ad20800000000000000
+      internalID: 3289485041531423529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1909
+        width: 7
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303321aa6cca4ffa0800000000000000
+      internalID: -5767795253497941245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_2
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1909
+        width: 6
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f54d605d83280f50800000000000000
+      internalID: 6847762323263538679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_3
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1909
+        width: 8
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd1978b4be5f53b0800000000000000
+      internalID: -5521590487850869283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_4
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1909
+        width: 7
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b00127e5f4eac60800000000000000
+      internalID: 7831284069103045404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_5
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1876
+        width: 20
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b503f315976aae0800000000000000
+      internalID: -1538408832841000059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_6
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1876
+        width: 21
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559d9a8b78f3f16a0800000000000000
+      internalID: -6476387886984210091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_7
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 1876
+        width: 19
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5256c7881a8bb730800000000000000
+      internalID: 4015955330692698719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_8
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1895
+        width: 9
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10ebe2b9752c5e40800000000000000
+      internalID: 5646429237438832668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_9
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1895
+        width: 11
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a839e7ecaa2f2110800000000000000
+      internalID: 1238255344663738532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_10
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1880
+        width: 15
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee68b11e84585d630800000000000000
+      internalID: 3951210796148295406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_11
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1880
+        width: 13
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3fcf8cf46a6616e0800000000000000
+      internalID: -1867188013531934915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_12
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1867
+        width: 13
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5769fee01bcc9ad0800000000000000
+      internalID: -2694055203485161638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1867
+        width: 8
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd0ea26ceb87db10800000000000000
+      internalID: 2006226006400961994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_14
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1867
+        width: 7
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56833f0a90b975a0800000000000000
+      internalID: -6522988409542965666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_15
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1823
+        width: 21
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e02054e903099cc0800000000000000
+      internalID: -3703925877515476765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_16
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1828
+        width: 22
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad5c698b86233910800000000000000
+      internalID: 1815837455508331939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_17
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1828
+        width: 24
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30db3ee657b6c0620800000000000000
+      internalID: 2741684425277553923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_18
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1828
+        width: 24
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4fc06559ceefc830800000000000000
+      internalID: 4093753134791315279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_19
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1851
+        width: 15
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27981e77e086e2e00800000000000000
+      internalID: 1021868576809781618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_20
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 1851
+        width: 8
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb37c33506178330800000000000000
+      internalID: 3712960629389605887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_21
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1851
+        width: 7
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b39b0671edb4ab00800000000000000
+      internalID: 839004206643516343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_22
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1835
+        width: 8
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f480caa4b59597830800000000000000
+      internalID: 4069381986935638095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_23
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 1835
+        width: 7
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc674932705b4fa20800000000000000
+      internalID: 3095297886176704204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_24
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1835
+        width: 15
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23867933baa66f90800000000000000
+      internalID: -6960688487314586836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_25
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1776
+        width: 21
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9eb495a7fdff580800000000000000
+      internalID: -8791062231026767411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_26
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1778
+        width: 19
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1870ddcbb87116b0800000000000000
+      internalID: -5327344136195377123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_27
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1778
+        width: 19
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458bcc23c90bf1350800000000000000
+      internalID: 5989700214339713108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_28
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1778
+        width: 23
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063a39050e28b6fe0800000000000000
+      internalID: -1194717376200596640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_29
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1776
+        width: 21
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854d5d5e06fda84d0800000000000000
+      internalID: -3131444983616908200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_30
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1808
+        width: 5
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e201c938f05046550800000000000000
+      internalID: 6153048555085631534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_31
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1791
+        width: 7
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9948f35732e3d460800000000000000
+      internalID: 7265399351138601371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_32
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1756
+        width: 7
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83dfdd190a6db6a20800000000000000
+      internalID: 3056772757231369528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_33
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1756
+        width: 5
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2ed65bda7a329e0800000000000000
+      internalID: -1647288674172411217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_34
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1756
+        width: 7
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12663e93d7feb4260800000000000000
+      internalID: 7083018160091391521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_35
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1756
+        width: 7
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa8b305d4494bad0800000000000000
+      internalID: -2687360017853871449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_36
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1756
+        width: 5
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d5e6b6a54f3bdf0800000000000000
+      internalID: -165520092095947444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_37
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1756
+        width: 7
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553765eee10bddd80800000000000000
+      internalID: -8224223697614507179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_38
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1709
+        width: 22
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07afbbc56978a92a0800000000000000
+      internalID: -6729917613281117584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_39
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1738
+        width: 7
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e59f7a088ff4b4b0800000000000000
+      internalID: -5425430691317836319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_40
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1738
+        width: 6
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098b933b94df24830800000000000000
+      internalID: 4054081107568212112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_41
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1738
+        width: 8
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b21aad803c1ed00800000000000000
+      internalID: 1000295035048110998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_42
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1738
+        width: 7
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549ddda5ba67bbbe0800000000000000
+      internalID: -1460443175815620283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_43
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1689
+        width: 22
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b918b9c7c7b0159b0800000000000000
+      internalID: -5093277074284904037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_44
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1689
+        width: 21
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17554a597b03e1e0800000000000000
+      internalID: -2169877979629005028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_45
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1710
+        width: 25
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12a5219048a62ee0800000000000000
+      internalID: -1286155648301161954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_46
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1701
+        width: 21
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308325e5269a35720800000000000000
+      internalID: 2833794830500509699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_47
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 1681
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c78a9ea6329a150800000000000000
+      internalID: 5884273330229902494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_48
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1677
+        width: 20
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a5b32a02d8bec00800000000000000
+      internalID: 930992919282408006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_49
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1662
+        width: 19
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 665a3cff340d087c0800000000000000
+      internalID: -4071025072670530202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_50
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1684
+        width: 26
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acda012e8466aa250800000000000000
+      internalID: 5956685920367324618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_51
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1645
+        width: 19
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbdab462b6170f5f0800000000000000
+      internalID: -724954834988716609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_52
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1657
+        width: 20
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c29c0fe5f1ecb70800000000000000
+      internalID: 8921102404494634064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_53
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1658
+        width: 26
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a73ac9f38881dd0800000000000000
+      internalID: -2515110585094145381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_54
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 1631
+        width: 20
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2485f57fbb3c050800000000000000
+      internalID: 5819701814623748823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_55
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1614
+        width: 20
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e36ff7dd9b445c30800000000000000
+      internalID: 4347182681625158633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_56
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1622
+        width: 21
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb0d8ec6bab31b80800000000000000
+      internalID: -8425185183567901760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_57
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1632
+        width: 26
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70c506914ef8b5650800000000000000
+      internalID: 6222725519983533063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_58
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1611
+        width: 20
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce43fb9f0ee75ac0800000000000000
+      internalID: -3866360004265947448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_59
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1559
+        width: 19
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8ae4c80d2badeb0800000000000000
+      internalID: -4694243052803413763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_60
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1559
+        width: 19
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898366819461c85f0800000000000000
+      internalID: -753202534479939432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_61
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1559
+        width: 18
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cdc695fbea583b80800000000000000
+      internalID: -8414875934257656380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_62
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 1559
+        width: 20
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f2d827557fe31c0800000000000000
+      internalID: -4521905029467263221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_63
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 1591
+        width: 7
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4540f6049e131ea10800000000000000
+      internalID: 1936884192624182356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_64
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1567
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd5a53d385ec25c0800000000000000
+      internalID: -4238760794913088012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_65
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 1580
+        width: 7
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8e3a8308143bf90800000000000000
+      internalID: -6939130581885917000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_66
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1569
+        width: 7
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6546d1741f987c270800000000000000
+      internalID: 8270730910062437462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_67
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1535
+        width: 19
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad2c75806cbdfde0800000000000000
+      internalID: -1297673994870444629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_68
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1558
+        width: 7
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2573bf8b748772460800000000000000
+      internalID: 7216869177325991762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_69
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1511
+        width: 17
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e8af0ee7dedef70800000000000000
+      internalID: 9218285141493452334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_70
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1511
+        width: 17
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ac320066806e560800000000000000
+      internalID: 7342565476656204300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_71
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1511
+        width: 17
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d6d28c582b537610800000000000000
+      internalID: 1617736920065038035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_72
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1511
+        width: 18
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61ffae57f6613090800000000000000
+      internalID: -8056545045757562514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_73
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1547
+        width: 7
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b744d0b53672940800000000000000
+      internalID: 5271291131576220513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_74
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1536
+        width: 7
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfdb1b8825b3e5270800000000000000
+      internalID: 8241089593801293309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_75
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1525
+        width: 7
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46620653d533a0e0800000000000000
+      internalID: -2259903406212487604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_76
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1492
+        width: 19
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85a4a0901eeb11a0800000000000000
+      internalID: -6837609854318369397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_77
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1514
+        width: 7
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6ca637ee92f62440800000000000000
+      internalID: 4910879207991979118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_78
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1503
+        width: 7
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603cfa77bc19d9cb0800000000000000
+      internalID: -4855564520163130618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_79
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1484
+        width: 28
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a89570b1898f50950800000000000000
+      internalID: 6414806576431323530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_80
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1484
+        width: 30
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f5d7c714791ae20800000000000000
+      internalID: 3360133104512360209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_81
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1484
+        width: 34
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d1d6349955e31b0800000000000000
+      internalID: -5675004363690664639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_82
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1492
+        width: 7
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af76b275b8f02650800000000000000
+      internalID: 6206233744713875364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_83
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1413
+        width: 20
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507828390fb1cc4a0800000000000000
+      internalID: -6571847036159490299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_84
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1413
+        width: 20
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c16d48a058dbc760800000000000000
+      internalID: 7479309447111467463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_85
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1413
+        width: 24
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1a49955e4e21f30800000000000000
+      internalID: 4544946647671808438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_86
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1413
+        width: 26
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fecdf5be18ca6f0800000000000000
+      internalID: -672019396459434084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_87
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1413
+        width: 26
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47bd1ea867995ba80800000000000000
+      internalID: -8451680391275619468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_88
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1413
+        width: 27
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe88c5c11bd9bac20800000000000000
+      internalID: 3218839742696949999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_89
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1354
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a29fd085e416bd0800000000000000
+      internalID: -2638741766563878382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_90
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1355
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79ee193888ab5bf0800000000000000
+      internalID: -334488444281624194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_91
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1294
+        width: 22
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ed7d85bdb0260c0800000000000000
+      internalID: -4584088433993458160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_92
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1294
+        width: 22
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139523fceba2a84d0800000000000000
+      internalID: -3131643591874422479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_93
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1294
+        width: 22
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19832a5a4e6586cc0800000000000000
+      internalID: -3717625952362940271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_94
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1294
+        width: 31
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac6941bc3b627eb0800000000000000
+      internalID: -4723595150741640025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_95
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 1294
+        width: 31
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e012970e0d170c10800000000000000
+      internalID: 2019614903992717545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_96
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1231
+        width: 19
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc31209648b1644a0800000000000000
+      internalID: -6609565147608247347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_97
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1231
+        width: 20
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c20294861b047f60800000000000000
+      internalID: 8031056226849784520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_98
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1231
+        width: 18
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a2b83cb44b2f5a40800000000000000
+      internalID: 5359049655809782436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_99
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 1231
+        width: 18
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb3d14ad00ee6490800000000000000
+      internalID: -7751011559465468951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_100
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1231
+        width: 20
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c6ebcbbc7dfba20800000000000000
+      internalID: 3080417940189637654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_101
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 1183
+        width: 15
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd218979c1f4a170800000000000000
+      internalID: 8188935870095633867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_102
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1208
+        width: 13
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b49ef47e0eaa03f80800000000000000
+      internalID: -8128809444473575093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_103
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1183
+        width: 18
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b73dc1437c85370800000000000000
+      internalID: 8311612138948098848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_104
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 1183
+        width: 19
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e65c5b774238130800000000000000
+      internalID: 3567735426376887872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_105
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1183
+        width: 26
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c17e23e06a5de30800000000000000
+      internalID: 4527707580304661639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_106
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1183
+        width: 19
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5e79eeb479371b0800000000000000
+      internalID: -5660013954293307949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_107
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1128
+        width: 15
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b3c1ac3535410b0800000000000000
+      internalID: -5758886404161782963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_108
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1128
+        width: 20
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a746b2951ed4a70800000000000000
+      internalID: 8812947818930272858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_109
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1128
+        width: 18
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265a8a1937a63aa50800000000000000
+      internalID: 6531180929214883170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_110
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 1128
+        width: 18
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f21be1dc3bdfe9910800000000000000
+      internalID: 1846191845950796079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_111
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1128
+        width: 18
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106425169d11316e0800000000000000
+      internalID: -1868129795090266623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_112
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1057
+        width: 17
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18cc12f5480541d0800000000000000
+      internalID: -3367276049881839587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_113
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 1073
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70223fe4c57eda620800000000000000
+      internalID: 2787138128059769351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_114
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1073
+        width: 18
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe310f27ee03eaff0800000000000000
+      internalID: -23027147401587729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_115
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 1073
+        width: 18
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e8d791d479ba5e0800000000000000
+      internalID: -1897256460610597221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_116
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1073
+        width: 18
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4302707bac348fb40800000000000000
+      internalID: 5474199885001990196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_117
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1042
+        width: 12
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec120cf98b5f07f80800000000000000
+      internalID: -8110712755591306802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_118
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 1036
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433008b8674536220800000000000000
+      internalID: 2477917088107201332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_119
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1028
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde39b0e12221e660800000000000000
+      internalID: 7413243990528048859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_120
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1028
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31395105b51ddf620800000000000000
+      internalID: 2809631932664877843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_121
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1028
+        width: 17
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35fc44d46c06fedb0800000000000000
+      internalID: -4760479876291178669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_122
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 981
+        width: 17
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9663f2b5f53739530800000000000000
+      internalID: 3860556158975555177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_123
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 981
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d30ff0f734ad850800000000000000
+      internalID: 6402504033267891557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_124
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 991
+        width: 13
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e269be2d55e559040800000000000000
+      internalID: 4653729512661161518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_125
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 991
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90cb7a4da685138e0800000000000000
+      internalID: -1715492767193908215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_126
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 991
+        width: 16
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5feeca238fc6ef0800000000000000
+      internalID: -113442994057710095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_127
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 939
+        width: 16
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ccfe53be1e172e00800000000000000
+      internalID: 1019816957829905601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_128
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 939
+        width: 16
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ebf70954e408940800000000000000
+      internalID: 5296319222471704179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_129
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 939
+        width: 16
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765bdc04c981af640800000000000000
+      internalID: 5114427386213807463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_130
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 939
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55467d61a995d650800000000000000
+      internalID: 6257076175906424155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_132
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 865
+        width: 13
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51fed255d1fee24d0800000000000000
+      internalID: -3157323379477975275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_133
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 865
+        width: 7
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8732190d3a5403790800000000000000
+      internalID: -7552460005219163272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_Blacksmith_Hammering_0
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 867
+        width: 40
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79094f6b4e0deec10800000000000000
+      internalID: 2084833358259720343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_Blacksmith_Hammering_1
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 802
+        width: 40
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f092719ab20dbba0800000000000000
+      internalID: -6071693722298183431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_Blacksmith_Hammering_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 802
+        width: 40
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c120ebb35109616c0800000000000000
+      internalID: -4172989583841164772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_Blacksmith_Hammering_3
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 802
+        width: 40
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674fe27832afd0700800000000000000
+      internalID: 508337363461534838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_Blacksmith_Standing_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 736
+        width: 25
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16f629997fcde890800000000000000
+      internalID: -7427052089296620005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_Blacksmith_Standing_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 736
+        width: 25
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a7dcfaca73a5f10800000000000000
+      internalID: 2259179377903106606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_Blacksmith_Standing_2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 736
+        width: 25
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5e1fa95dbdad750800000000000000
+      internalID: 6330613936696714676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_Blacksmith_Standing_3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 736
+        width: 22
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3a3b469474fdf50800000000000000
+      internalID: 6908318733957309402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_144
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 659
+        width: 20
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c6b12bc28334310800000000000000
+      internalID: 1388014874778102823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_145
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 659
+        width: 20
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda77d24ddf4d7780800000000000000
+      internalID: -8683696694772663588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_146
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 659
+        width: 20
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e234516755028db0800000000000000
+      internalID: -4791261180715584796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_147
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 659
+        width: 19
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5638003357ac900800000000000000
+      internalID: 705505153549297107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_148
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 639
+        width: 20
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 994cdc0c142936a60800000000000000
+      internalID: 7666131801819956377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_149
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 639
+        width: 20
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e2fe0767f9fd5f0800000000000000
+      internalID: -729689283561050604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_150
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 639
+        width: 20
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffea21ffac46789b0800000000000000
+      internalID: -5077979231811358977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_151
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 582
+        width: 20
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f465cde75ec9ea7e0800000000000000
+      internalID: -1752290695510731185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_152
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 569
+        width: 6
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b2f5a2e24db1f20800000000000000
+      internalID: 3394540038898264893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_153
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 513
+        width: 20
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa336e70f63d0440800000000000000
+      internalID: 4903635975816821498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_154
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 513
+        width: 20
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b48e6ad9540ec50800000000000000
+      internalID: 6692425589684980625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_155
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 513
+        width: 20
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325410f440d866cf0800000000000000
+      internalID: -259364878882355933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_156
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 503
+        width: 8
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c250f09d9b3bdb140800000000000000
+      internalID: 4737139993855591724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_157
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 449
+        width: 20
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31a3e00b2ff57d20800000000000000
+      internalID: 3275804864145498430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_158
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 449
+        width: 20
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b987dbfb2a8f270800000000000000
+      internalID: 8284550458949278548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_159
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 449
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ea77dcfbd294010800000000000000
+      internalID: 1173519479715901069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_160
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 449
+        width: 20
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3b10366ee5ade10800000000000000
+      internalID: 2223193709657306087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_161
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 449
+        width: 20
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f77d30144d22a310800000000000000
+      internalID: 1414743003301246964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_162
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 373
+        width: 22
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce7834c6c733af30800000000000000
+      internalID: 4585570172428385988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_163
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 373
+        width: 26
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a081167c22106a0800000000000000
+      internalID: -6484863748714001789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_164
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 373
+        width: 26
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0be27b5014ac00b0800000000000000
+      internalID: -5761049433153017078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_165
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 373
+        width: 26
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b55ae51f949b5bc0800000000000000
+      internalID: -3793274850141121099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_166
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 372
+        width: 26
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a92e0a65693c6f60800000000000000
+      internalID: 8028855343428544936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_167
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 327
+        width: 16
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3164d86d1e3b87440800000000000000
+      internalID: 4933891174332974611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_168
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 327
+        width: 17
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063ba730a4fd99af0800000000000000
+      internalID: -389034383811890336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_169
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 327
+        width: 19
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d4f26bb83d84c50800000000000000
+      internalID: 6649797446823005447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_170
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 327
+        width: 19
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af053e32163edd00800000000000000
+      internalID: 999295619303804836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_171
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 327
+        width: 17
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c41508be65264230800000000000000
+      internalID: 3622624107730113731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_172
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 267
+        width: 25
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d4693cda4bcbde0800000000000000
+      internalID: -1315978332695278268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_173
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 267
+        width: 25
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00922144cc006a6e0800000000000000
+      internalID: -1826771721536788224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_174
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 267
+        width: 25
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2686af61af6412390800000000000000
+      internalID: -7844911035961415582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_175
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 267
+        width: 24
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28c3cd53e16fa3530800000000000000
+      internalID: 3835648642272476290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_176
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 211
+        width: 25
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d16ab7d69b2ca0f0800000000000000
+      internalID: -1104459881748209194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_177
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 211
+        width: 29
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11af24400fd8755f0800000000000000
+      internalID: -767989149440214511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_178
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 211
+        width: 27
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06470397b7c778d30800000000000000
+      internalID: 4433649227925582944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_179
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 211
+        width: 27
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462b990cb1e554390800000000000000
+      internalID: -7834752503452683676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_180
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 165
+        width: 27
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aefcec0e7ea403a0800000000000000
+      internalID: -6700038489214484829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_181
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 165
+        width: 27
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddcf2a652e858da0800000000000000
+      internalID: -5943187841899049511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_182
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 181
+        width: 23
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac855e634058a0020800000000000000
+      internalID: 2308804012128164042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_183
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 153
+        width: 24
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc398be1444ee840800000000000000
+      internalID: 5255212865103150321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_184
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 87
+        width: 16
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0957d3d77ff764c60800000000000000
+      internalID: 7802064105400792464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_185
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 87
+        width: 16
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8e936e182cb6ca0800000000000000
+      internalID: -6022506213508781849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_186
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 87
+        width: 16
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ec84bd0b7a91bf0800000000000000
+      internalID: -353066717736808910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_187
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 87
+        width: 16
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de66778a30b59fcd0800000000000000
+      internalID: -2523886044895025427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_188
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 87
+        width: 16
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e2f563111559190800000000000000
+      internalID: -7956364032311611899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_189
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 30
+        width: 16
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed1b25774f835c20800000000000000
+      internalID: 3194054097807023585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_190
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 30
+        width: 16
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddbaf3629772ca3c0800000000000000
+      internalID: -4347056139033138211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_191
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 30
+        width: 17
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a48d6c0c9c6d5f80800000000000000
+      internalID: -8116211535972563808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_192
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 30
+        width: 16
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b9fe62725a2b4db0800000000000000
+      internalID: -4806701643692312141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownFolkNPC_193
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 30
+        width: 16
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5470c394399733dc0800000000000000
+      internalID: -3660448398626257083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 86665b8590177d045a05a6ec40d29843
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

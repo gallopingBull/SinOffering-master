@@ -52,7 +52,7 @@ public class StateManager : MonoBehaviour
                     pc.CanDoubleJump = true;
                 
                 pc.jumpCount++;
-                Debug.Log("pc.jumpCount: " + pc.jumpCount);
+                Debug.Log("pc.jumpCount: " + pc.jumpCount);     
                 break;
 
             case Entity.State.dashing:
@@ -106,7 +106,7 @@ public class StateManager : MonoBehaviour
 
             case Entity.State.evading:
                 print("Player is evading");
-                pc.animator.Play("Player_Evade_Back");
+                pc.animator.Play("Player_Evade_Back ");
                 pc.DisableInput();
                 pc.rb.velocity = Vector3.zero;
 

@@ -322,7 +322,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         attributes = _attributes;
         SetAttributeValues();
     }
-
+     
     private void SetAttributeValues()
     {
         var dataBase = AttributeDatabase._instance.GetAttributeDatabase();
@@ -345,7 +345,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     }
 
     // store functions (might want to move these interfaces in to their own class,
-    // and give playercontroller.cs its own instance of that class)
+    // and give playercontroller.cs its own instance of that cla ss)
     #region IWeaponStoreCustomer, IAttributeStoreCustomer
 
     void IWeaponStoreCustomer.PurchaseWeapon(string _weaponName)
@@ -463,3 +463,4 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     #endregion
 }
    
+ 

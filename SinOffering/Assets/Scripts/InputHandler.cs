@@ -576,7 +576,7 @@ public class InputHandler : MonoBehaviour
                         pc.animator.Play("Player_Shoot_Up");
                 }
 
-                break;
+                break; 
 
             default:
                 break;
