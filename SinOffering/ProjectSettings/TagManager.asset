@@ -12,6 +12,7 @@ TagManager:
   - EnemyMarker
   - Bullet
   - Crates
+  - NPCS
   layers:
   - Default
   - TransparentFX

@@ -4,7 +4,7 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 3289485041531423529
-    second: TownFolkNPC_0
+    second: NPC_Priest_0
   - first:
       213: -5767795253497941245
     second: TownFolkNPC_1
@@ -139,7 +139,7 @@ TextureImporter:
     second: TownFolkNPC_44
   - first:
       213: -1286155648301161954
-    second: TownFolkNPC_45
+    second: NPC_Priest_Torso_OpenArms_0
   - first:
       213: 2833794830500509699
     second: TownFolkNPC_46
@@ -154,7 +154,7 @@ TextureImporter:
     second: TownFolkNPC_49
   - first:
       213: 5956685920367324618
-    second: TownFolkNPC_50
+    second: NPC_Priest_Torso_OpenArms_1
   - first:
       213: -724954834988716609
     second: TownFolkNPC_51
@@ -163,7 +163,7 @@ TextureImporter:
     second: TownFolkNPC_52
   - first:
       213: -2515110585094145381
-    second: TownFolkNPC_53
+    second: NPC_Priest_Torso_OpenArms_2
   - first:
       213: 5819701814623748823
     second: TownFolkNPC_54
@@ -175,7 +175,7 @@ TextureImporter:
     second: TownFolkNPC_56
   - first:
       213: 6222725519983533063
-    second: TownFolkNPC_57
+    second: NPC_Priest_Torso_OpenArms_3
   - first:
       213: -3866360004265947448
     second: TownFolkNPC_58
@@ -253,28 +253,28 @@ TextureImporter:
     second: TownFolkNPC_82
   - first:
       213: -6571847036159490299
-    second: TownFolkNPC_83
+    second: NPC_Man_Talking_0
   - first:
       213: 7479309447111467463
-    second: TownFolkNPC_84
+    second: NPC_Man_Talking_1
   - first:
       213: 4544946647671808438
-    second: TownFolkNPC_85
+    second: NPC_Man_Talking_2
   - first:
       213: -672019396459434084
-    second: TownFolkNPC_86
+    second: NPC_Man_Talking_3
   - first:
       213: -8451680391275619468
-    second: TownFolkNPC_87
+    second: NPC_Man_Talking_4
   - first:
       213: 3218839742696949999
-    second: TownFolkNPC_88
+    second: NPC_Man_Talking_5
   - first:
       213: -2638741766563878382
-    second: TownFolkNPC_89
+    second: NPC_ShortMan_Idle_0
   - first:
       213: -334488444281624194
-    second: TownFolkNPC_90
+    second: NPC_ShortMan_Idle_1
   - first:
       213: -4584088433993458160
     second: TownFolkNPC_91
@@ -433,13 +433,13 @@ TextureImporter:
     second: NPC_Blacksmith_Standing_3
   - first:
       213: 1388014874778102823
-    second: TownFolkNPC_144
+    second: NPC_Butcher_Idle_0
   - first:
       213: -8683696694772663588
-    second: TownFolkNPC_145
+    second: NPC_Butcher_Idle_1
   - first:
       213: -4791261180715584796
-    second: TownFolkNPC_146
+    second: NPC_Butcher_Idle_2
   - first:
       213: 705505153549297107
     second: TownFolkNPC_147
@@ -487,19 +487,19 @@ TextureImporter:
     second: TownFolkNPC_161
   - first:
       213: 4585570172428385988
-    second: TownFolkNPC_162
+    second: NPC_Scholar_0
   - first:
       213: -6484863748714001789
-    second: TownFolkNPC_163
+    second: NPC_Scholar_1
   - first:
       213: -5761049433153017078
-    second: TownFolkNPC_164
+    second: NPC_Scholar_2
   - first:
       213: -3793274850141121099
-    second: TownFolkNPC_165
+    second: NPC_Scholar_3
   - first:
       213: 8028855343428544936
-    second: TownFolkNPC_166
+    second: NPC_Scholar_4
   - first:
       213: 4933891174332974611
     second: TownFolkNPC_167
@@ -553,34 +553,34 @@ TextureImporter:
     second: TownFolkNPC_183
   - first:
       213: 7802064105400792464
-    second: TownFolkNPC_184
+    second: NPC_OldWoman_Idle_A_0
   - first:
       213: -6022506213508781849
-    second: TownFolkNPC_185
+    second: NPC_OldWoman_Idle_A_1
   - first:
       213: -353066717736808910
-    second: TownFolkNPC_186
+    second: NPC_OldWoman_Idle_A_2
   - first:
       213: -2523886044895025427
-    second: TownFolkNPC_187
+    second: NPC_OldWoman_Idle_A_3
   - first:
       213: -7956364032311611899
-    second: TownFolkNPC_188
+    second: NPC_OldWoman_Idle_A_4
   - first:
       213: 3194054097807023585
-    second: TownFolkNPC_189
+    second: NPC_OldWoman_Idle_B_0
   - first:
       213: -4347056139033138211
-    second: TownFolkNPC_190
+    second: NPC_OldWoman_Idle_B_1
   - first:
       213: -8116211535972563808
-    second: TownFolkNPC_191
+    second: NPC_OldWoman_Idle_B_2
   - first:
       213: -4806701643692312141
-    second: TownFolkNPC_192
+    second: NPC_OldWoman_Idle_B_3
   - first:
       213: -3660448398626257083
-    second: TownFolkNPC_193
+    second: NPC_OldWoman_Idle_B_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -694,7 +694,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TownFolkNPC_0
+      name: NPC_Priest_0
       rect:
         serializedVersion: 2
         x: 13
@@ -1639,7 +1639,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_45
+      name: NPC_Priest_Torso_OpenArms_0
       rect:
         serializedVersion: 2
         x: 106
@@ -1744,7 +1744,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_50
+      name: NPC_Priest_Torso_OpenArms_1
       rect:
         serializedVersion: 2
         x: 106
@@ -1807,7 +1807,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_53
+      name: NPC_Priest_Torso_OpenArms_2
       rect:
         serializedVersion: 2
         x: 106
@@ -1891,7 +1891,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_57
+      name: NPC_Priest_Torso_OpenArms_3
       rect:
         serializedVersion: 2
         x: 106
@@ -2437,7 +2437,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_83
+      name: NPC_Man_Talking_0
       rect:
         serializedVersion: 2
         x: 12
@@ -2458,7 +2458,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_84
+      name: NPC_Man_Talking_1
       rect:
         serializedVersion: 2
         x: 44
@@ -2479,7 +2479,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_85
+      name: NPC_Man_Talking_2
       rect:
         serializedVersion: 2
         x: 75
@@ -2500,7 +2500,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_86
+      name: NPC_Man_Talking_3
       rect:
         serializedVersion: 2
         x: 107
@@ -2521,7 +2521,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_87
+      name: NPC_Man_Talking_4
       rect:
         serializedVersion: 2
         x: 142
@@ -2542,7 +2542,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_88
+      name: NPC_Man_Talking_5
       rect:
         serializedVersion: 2
         x: 178
@@ -2563,7 +2563,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_89
+      name: NPC_ShortMan_Idle_0
       rect:
         serializedVersion: 2
         x: 21
@@ -2584,7 +2584,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_90
+      name: NPC_ShortMan_Idle_1
       rect:
         serializedVersion: 2
         x: 61
@@ -2904,7 +2904,7 @@ TextureImporter:
         serializedVersion: 2
         x: 163
         y: 1183
-        width: 26
+        width: 20
         height: 37
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -3655,7 +3655,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_144
+      name: NPC_Butcher_Idle_0
       rect:
         serializedVersion: 2
         x: 29
@@ -3676,7 +3676,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_145
+      name: NPC_Butcher_Idle_1
       rect:
         serializedVersion: 2
         x: 69
@@ -3697,7 +3697,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_146
+      name: NPC_Butcher_Idle_2
       rect:
         serializedVersion: 2
         x: 109
@@ -4033,7 +4033,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_162
+      name: NPC_Scholar_0
       rect:
         serializedVersion: 2
         x: 11
@@ -4054,7 +4054,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_163
+      name: NPC_Scholar_1
       rect:
         serializedVersion: 2
         x: 49
@@ -4075,7 +4075,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_164
+      name: NPC_Scholar_2
       rect:
         serializedVersion: 2
         x: 93
@@ -4096,7 +4096,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_165
+      name: NPC_Scholar_3
       rect:
         serializedVersion: 2
         x: 132
@@ -4117,7 +4117,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_166
+      name: NPC_Scholar_4
       rect:
         serializedVersion: 2
         x: 173
@@ -4495,7 +4495,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_184
+      name: NPC_OldWoman_Idle_A_0
       rect:
         serializedVersion: 2
         x: 15
@@ -4516,7 +4516,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_185
+      name: NPC_OldWoman_Idle_A_1
       rect:
         serializedVersion: 2
         x: 55
@@ -4537,7 +4537,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_186
+      name: NPC_OldWoman_Idle_A_2
       rect:
         serializedVersion: 2
         x: 98
@@ -4558,7 +4558,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_187
+      name: NPC_OldWoman_Idle_A_3
       rect:
         serializedVersion: 2
         x: 138
@@ -4579,7 +4579,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_188
+      name: NPC_OldWoman_Idle_A_4
       rect:
         serializedVersion: 2
         x: 177
@@ -4600,7 +4600,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_189
+      name: NPC_OldWoman_Idle_B_0
       rect:
         serializedVersion: 2
         x: 15
@@ -4621,7 +4621,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_190
+      name: NPC_OldWoman_Idle_B_1
       rect:
         serializedVersion: 2
         x: 55
@@ -4642,7 +4642,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_191
+      name: NPC_OldWoman_Idle_B_2
       rect:
         serializedVersion: 2
         x: 98
@@ -4663,7 +4663,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_192
+      name: NPC_OldWoman_Idle_B_3
       rect:
         serializedVersion: 2
         x: 139
@@ -4684,7 +4684,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TownFolkNPC_193
+      name: NPC_OldWoman_Idle_B_4
       rect:
         serializedVersion: 2
         x: 177
