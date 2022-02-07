@@ -1457,31 +1457,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4582232142074820, guid: 0cfaddce0da54274ab179194b863a7e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.916
+      value: 5.915999
       objectReference: {fileID: 0}
     - target: {fileID: 4582232142074820, guid: 0cfaddce0da54274ab179194b863a7e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.37
+      value: -3.0026584
       objectReference: {fileID: 0}
     - target: {fileID: 4582232142074820, guid: 0cfaddce0da54274ab179194b863a7e6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.98
+      value: -0.63445055
       objectReference: {fileID: 0}
     - target: {fileID: 4582232142074820, guid: 0cfaddce0da54274ab179194b863a7e6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.00000013240823
+      value: 0.70710677
       objectReference: {fileID: 0}
     - target: {fileID: 4582232142074820, guid: 0cfaddce0da54274ab179194b863a7e6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: 0.00000008195638
       objectReference: {fileID: 0}
     - target: {fileID: 4582232142074820, guid: 0cfaddce0da54274ab179194b863a7e6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000013240823
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4582232142074820, guid: 0cfaddce0da54274ab179194b863a7e6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7071068
+      value: -0.000000052154057
       objectReference: {fileID: 0}
     - target: {fileID: 4582232142074820, guid: 0cfaddce0da54274ab179194b863a7e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1493,7 +1493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4582232142074820, guid: 0cfaddce0da54274ab179194b863a7e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -180.00002
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cfaddce0da54274ab179194b863a7e6, type: 3}
@@ -4520,6 +4520,10 @@ PrefabInstance:
       propertyPath: scalingMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 199462573787893400, guid: f010edb98185581468023b9e14618699, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f010edb98185581468023b9e14618699, type: 3}
 --- !u!1001 &1512861757
@@ -5859,7 +5863,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.586016, b: 0, a: 1}
   m_Intensity: 2
-  m_Range: 14
+  m_Range: 18
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
