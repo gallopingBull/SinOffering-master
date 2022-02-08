@@ -26,6 +26,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     public bool InputEnabled = true;
     [HideInInspector]
     public InputHandler inputHandler;
+    [SerializeField]
     private List<ICommand> commands;
 
     public float yRaw;

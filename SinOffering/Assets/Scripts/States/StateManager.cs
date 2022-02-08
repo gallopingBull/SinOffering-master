@@ -106,7 +106,7 @@ public class StateManager : MonoBehaviour
 
             case Entity.State.evading:
                 print("Player is evading");
-                pc.animator.Play("Player_Evade_Back ");
+                pc.animator.Play("Player_Evade_Back");
                 pc.DisableInput();
                 pc.rb.velocity = Vector3.zero;
 
@@ -123,6 +123,31 @@ public class StateManager : MonoBehaviour
                 GetComponent<DashCommand>().ChangeRigidbodyValues(); //adjust entity's rigigidbody values in order to dash correctly
 
                 SoundManager.PlaySound(pc.dashClip);
+                break;
+
+            case Entity.State.meleeing:
+                print("Player is meleeing");
+                pc.animator.Play("Player_Melee_Heavy_Grounded");
+                pc.animator.SetTrigger("");
+                
+                pc.DisableInput();
+                pc.rb.velocity = Vector3.zero;
+
+                //pc.InputDelay.evadeDelay =
+                //pc.InputDelay.MAXEvadeDelay;
+                pc.state = Entity.State.meleeing;
+                //pc.isInvincible = true;
+                pc.jumpEnabled = false;
+                pc.CanDoubleJump = false;
+                //GetComponent<PlayerController>().ps.Play();
+                //pc.rb.useGravity = false;
+
+                //EnterState(Entity.State.Idle);
+
+                //GetComponent<DashCommand>().DisableCollisions();
+                //GetComponent<DashCommand>().ChangeRigidbodyValues(); //adjust entity's rigigidbody values in order to dash correctly
+
+                //SoundManager.PlaySound(pc.dashClip);
                 break;
         }
         //Debug.Log("new state: " + pc.state);
@@ -190,6 +215,18 @@ public class StateManager : MonoBehaviour
                     GetComponent<EvadeCommand>().AirEvadeCount = 0; 
                 }
 
+                break;
+            case Entity.State.meleeing:
+                //GetComponent<PlayerController>().ps.Stop();
+                pc.rb.useGravity = true;
+                pc.rb.mass = 1f;
+                pc.rb.drag = 0;
+                pc.rb.angularDrag = 0f;
+                pc.jumpEnabled = true;
+                pc.EnableInput();
+                break;
+
+            default:
                 break;
         }
     }

@@ -29,7 +29,7 @@ public abstract class Entity : MonoBehaviour {
     public Rigidbody rb;
 
     [HideInInspector]
-    public enum State { Idle, Jumping, falling, aiming, running, dashing, evading };
+    public enum State { Idle, Jumping, falling, aiming, running, dashing, evading, meleeing};
     //[HideInInspector]
     public bool IsGrounded = false;
 

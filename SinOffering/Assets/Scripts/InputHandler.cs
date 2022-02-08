@@ -10,7 +10,9 @@ public class InputHandler : MonoBehaviour
     private ICommand moveCommand;
     private ICommand dashCommand;
     private ICommand evadeCommand;
+    private ICommand meleeCommand;
 
+    [SerializeField]
     public List<ICommand> Commands;
     
     private PlayerController pc; //reference to main Player Controller
@@ -81,6 +83,7 @@ public class InputHandler : MonoBehaviour
         fireCommand = GetComponent<FireCommand>();
         dashCommand = GetComponent<DashCommand>();
         evadeCommand = GetComponent<EvadeCommand>();
+        meleeCommand = GetComponent<MeleeCommand>();
         _boxCastSize = new Vector3(1, 1, 1);
     }
 
@@ -236,6 +239,12 @@ public class InputHandler : MonoBehaviour
                 // Dash Attack
                 if (Input.GetAxis("LeftTrigger") == 1 && !GameManager.instance.gameCompleted)
                     Commands.Add(dashCommand);
+
+                // Melee Attack
+                if (Input.GetButtonDown("Melee") && !GameManager.instance.gameCompleted)
+                    Commands.Add(meleeCommand);
+
+
                 // Evade/Dodge
                 if ((Input.GetButtonDown("Fire2") ||
                     Input.GetKeyDown(KeyCode.LeftShift) ||
