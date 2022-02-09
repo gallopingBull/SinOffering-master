@@ -47,9 +47,10 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     //[HideInInspector]
     public float MAX_delay = .3f; // delay between jump input
     //[HideInInspector]
-    public bool delayComplete = true; 
+    public bool delayComplete = true;
 
-    //weapons variable
+    //weapons variables
+    public SpriteRenderer WeaponSprite;
     [HideInInspector]
     public GameObject EquippedWeapon;
     [HideInInspector]
@@ -67,6 +68,8 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     public StateManager StateManager;
     [HideInInspector]
     public InputDelay InputDelay;
+
+
 
     public PlayerAttributes Attributes { get => attributes; set => attributes = value; }
 

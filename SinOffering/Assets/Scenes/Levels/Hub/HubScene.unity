@@ -14440,13 +14440,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2908109079678200872, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
-      propertyPath: enemyLayer.m_Bits
-      value: 128
-      objectReference: {fileID: 0}
-    - target: {fileID: 7034389890886972809, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.401
+    - target: {fileID: 1061129095, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7930721911905566485, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
       propertyPath: button

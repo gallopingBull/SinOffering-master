@@ -127,8 +127,19 @@ public class StateManager : MonoBehaviour
 
             case Entity.State.meleeing:
                 print("Player is meleeing");
-                pc.animator.Play("Player_Melee_Heavy_Grounded");
-                pc.animator.SetTrigger("");
+                //pc.animator.Play("Player_Melee_Heavy_Grounded");
+                if (pc.dir == 1)
+                {
+                    if (pc.WeaponSprite.flipX)
+                        pc.WeaponSprite.flipX = false;
+                }
+                else
+                {
+                    if (!pc.WeaponSprite.flipX)
+                        pc.WeaponSprite.flipX = true;
+                }
+
+                pc.animator.SetTrigger("TriggerMelee");
                 
                 pc.DisableInput();
                 pc.rb.velocity = Vector3.zero;

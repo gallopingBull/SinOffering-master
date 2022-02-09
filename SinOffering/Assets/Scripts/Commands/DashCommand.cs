@@ -250,7 +250,7 @@ public class DashCommand : ICommand
                 }
             }
 
-            if (Input.GetAxis("RightTrigger") == 1 && isValid
+            if (Input.GetButtonDown("Melee") && isValid
                 && !GameManager.instance.gameCompleted && 
                 (direction.x != 0 || direction.y != 0) && 
                 pc.inputHandler.dashDelayComplete)
