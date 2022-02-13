@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/SceneTemplates/LobbySceneTemplateTest.unity
     guid: 43a07be26d6d0784e8c2ffe717df426c
+  - enabled: 1
+    path: Assets/Scenes/Levels/SceneTemplates/ArenaSceneTemplateTest.unity
+    guid: fef3dcb9af99cbd4794a985b33492a45
   m_configObjects: {}

@@ -43,7 +43,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     public bool JumpButtonHeldDown = false;
 
     //[HideInInspector]
-    public float delay = 0f; // delay between jump input
+    public float delay = 0f; // delay between jump input    
     //[HideInInspector]
     public float MAX_delay = .3f; // delay between jump input
     //[HideInInspector]

@@ -5,6 +5,7 @@ using UnityEngine;
 public class StateManager : MonoBehaviour
 {
     private PlayerController pc;
+    private int hitCount = 0;
     private void Awake()
     {
         pc = GetComponent<PlayerController>();
@@ -140,7 +141,30 @@ public class StateManager : MonoBehaviour
                 }
 
                 pc.animator.SetTrigger("TriggerMelee");
-                
+                #region testing hits
+
+                /*
+                if (hitCount < 3)
+                {
+
+                    if (hitCount == 0)
+                    {
+                        pc.animator.SetTrigger("TriggerMelee");
+                    }
+                    if (hitCount == 1)
+                    {
+                        pc.animator.SetTrigger("TriggerMeleeTwo");
+                    }
+                    if (hitCount == 2)
+                    {
+                        //pc.animator.SetTrigger("TriggerMeleeTwo");
+                    }
+
+                    hitCount++;
+                }
+                    */
+                    #endregion
+
                 pc.DisableInput();
                 pc.rb.velocity = Vector3.zero;
 
@@ -159,9 +183,10 @@ public class StateManager : MonoBehaviour
                 //GetComponent<DashCommand>().ChangeRigidbodyValues(); //adjust entity's rigigidbody values in order to dash correctly
 
                 //SoundManager.PlaySound(pc.dashClip);
+
+
                 break;
         }
-        //Debug.Log("new state: " + pc.state);
     }
     public void ExitState(Entity.State _state)
     {

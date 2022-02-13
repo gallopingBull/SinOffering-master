@@ -13,7 +13,7 @@ public class EnemyController : Entity {
     public bool dying;
     public bool InArena = false;
     //[HideInInspector]
-    public bool CanMove = true;
+
     public bool SpawnAmmoCrates = true;
 
     public float FireDamageRate = .75f;
@@ -147,8 +147,13 @@ public class EnemyController : Entity {
             dying = true;
             SoundManager.PlaySound(EnemyKilledClip);
             if (Target != null)
-            { 
-                Instantiate(PS_BloodExplosion, transform.position, transform.rotation);
+            {
+                Vector3 tmpBloodLoc = transform.position;
+                tmpBloodLoc.x = tmpBloodLoc.x - 1f;
+                tmpBloodLoc.y = tmpBloodLoc.y - .75f;
+                Instantiate(PS_BloodExplosion, tmpBloodLoc, transform.rotation);
+                
+                Instantiate(GibsPrefab, transform.position, transform.rotation);
 
                 gameManager.CurEnemyKills++;
                 BloodActorSprite.gameObject.SetActive(false);

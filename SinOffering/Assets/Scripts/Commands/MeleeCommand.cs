@@ -1,4 +1,8 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
+using System.Linq;
+
+
 public class MeleeCommand : ICommand {
 
     public Transform[] AttackPoints;
@@ -6,7 +10,7 @@ public class MeleeCommand : ICommand {
     private float attackRange = 1;
     public LayerMask enemyLayer;
 
-    Collider[] hitEnemies = new Collider[2];
+    public List<Collider> hitEnemies = new List<Collider>();
     private void Awake()
     {
         pc = GetComponent<PlayerController>();
@@ -45,14 +49,22 @@ public class MeleeCommand : ICommand {
             pc.StateManager.EnterState(Entity.State.meleeing);
     
             for (int i = 0; i < AttackPoints.Length; i++)
-                hitEnemies = Physics.OverlapSphere(AttackPoints[i].position, attackRange, enemyLayer);
+                hitEnemies = Physics.OverlapSphere(AttackPoints[i].position, attackRange, enemyLayer).ToList<Collider>();
 
             if (hitEnemies != null)
             {
-                for (int i = 0; i < hitEnemies.Length; i++)
+                for (int i = 0; i < hitEnemies.Count; i++)
+                {
+                    Debug.Log("hitemeies["+i+"] - " + "enemy name: " + hitEnemies[i].gameObject.name);
                     if (!hitEnemies[i].gameObject.GetComponent<EnemyController>().dying)
-                        hitEnemies[i].gameObject.GetComponent<EnemyController>().Damage(10);
+                    {
+                        //hitEnemies[i].gameObject.GetComponent<EnemyController>().Damage(.5f);
+                        hitEnemies[i].gameObject.GetComponent<EnemyController>().Damage(10f);
+                    }       
+                }
             }
+
+            hitEnemies.Clear();
             return;
         }
 

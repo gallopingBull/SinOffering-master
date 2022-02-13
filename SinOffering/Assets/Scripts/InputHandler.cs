@@ -423,10 +423,9 @@ public class InputHandler : MonoBehaviour
                   
                 }
 
-                //reset evade counter if evade button
-                //not pressed again immediately for a double evade.
-                //-- Condition should only be checked if player has fully upgraded
-                //evade ability...
+                // reset evade counter if evade button
+                // not pressed again immediately for a double evade. -- Condition should only be checked if player has fully upgraded
+                // evade ability...
                 if (Time.time > evadeButtonPressedTime + MAXEvadeDelay &&
                       GetComponent<EvadeCommand>().EvadeCount == 1 && evadeDelayComplete)
                 {

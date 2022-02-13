@@ -36,6 +36,8 @@ public abstract class Entity : MonoBehaviour {
     //[HideInInspector]
     public State state; // Actor's current state
     public bool isInvincible;
+    public bool CanMove = true;
+
 
     public SpriteRenderer ActorSprite;
     public SpriteRenderer BloodActorSprite;
@@ -222,9 +224,19 @@ public abstract class Entity : MonoBehaviour {
         {
             StartCoroutine("DamageIndicator");
             Health -= _damageValue;
-            if (gameObject.name == "Player")
-                HUDManager._instance.UpdateHealthBar(_damageValue);
 
+
+            if (gameObject.name != "Player")
+            {
+                Vector3 tmpVel = new Vector3(.5f, -.25f, 0);
+                rb.AddForce(tmpVel * -1000);
+                CanMove = false;
+            }
+            else
+            {
+                HUDManager._instance.UpdateHealthBar(_damageValue);
+            }
+ 
             if (Health <= 1)
                 Killed();
         }
@@ -236,6 +248,8 @@ public abstract class Entity : MonoBehaviour {
             ActorSprite.color = Color.red;
             yield return new WaitForSeconds(.05f);
             ActorSprite.color = Color.white;
+            yield return new WaitForSeconds(1f);
+            //CanMove = true;
             StopCoroutine("DamageIndicator");
         }
     }

@@ -532,37 +532,37 @@ TextureImporter:
     second: Player_Melee_Heavy_Grounded_12
   - first:
       213: 7724494212649011486
-    second: playerSoma_176
+    second: Player_Melee_Heavy_Grounded_B_0
   - first:
       213: 1302160320699086669
-    second: playerSoma_177
+    second: Player_Melee_Heavy_Grounded_B_1
   - first:
       213: -6986643911869036166
-    second: playerSoma_178
+    second: Player_Melee_Heavy_Grounded_B_2
   - first:
       213: -7726458300792036775
-    second: playerSoma_179
+    second: Player_Melee_Heavy_Grounded_B_3
   - first:
       213: 3414087503247441007
-    second: playerSoma_180
+    second: Player_Melee_Heavy_Grounded_B_4
   - first:
       213: 1667258805851701558
-    second: playerSoma_181
+    second: Player_Melee_Heavy_Grounded_B_5
   - first:
       213: 5570475155203375066
-    second: playerSoma_182
+    second: Player_Melee_Heavy_Grounded_B_6
   - first:
       213: 1317999682910774755
-    second: playerSoma_183
+    second: Player_Melee_Heavy_Grounded_B_7
   - first:
       213: 1765944337793619108
-    second: playerSoma_184
+    second: Player_Melee_Heavy_Grounded_B_8
   - first:
       213: -1253907957181519897
-    second: playerSoma_185
+    second: Player_Melee_Heavy_Grounded_B_9
   - first:
       213: 8934492432682939877
-    second: playerSoma_186
+    second: Player_Melee_Heavy_Grounded_B_10
   - first:
       213: -7018844071987005028
     second: playerSoma_187
@@ -4735,7 +4735,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_176
+      name: Player_Melee_Heavy_Grounded_B_0
       rect:
         serializedVersion: 2
         x: 4
@@ -4756,7 +4756,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_177
+      name: Player_Melee_Heavy_Grounded_B_1
       rect:
         serializedVersion: 2
         x: 34
@@ -4777,7 +4777,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_178
+      name: Player_Melee_Heavy_Grounded_B_2
       rect:
         serializedVersion: 2
         x: 79
@@ -4798,7 +4798,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_179
+      name: Player_Melee_Heavy_Grounded_B_3
       rect:
         serializedVersion: 2
         x: 118
@@ -4819,7 +4819,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_180
+      name: Player_Melee_Heavy_Grounded_B_4
       rect:
         serializedVersion: 2
         x: 160
@@ -4840,7 +4840,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_181
+      name: Player_Melee_Heavy_Grounded_B_5
       rect:
         serializedVersion: 2
         x: 202
@@ -4861,7 +4861,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_182
+      name: Player_Melee_Heavy_Grounded_B_6
       rect:
         serializedVersion: 2
         x: 242
@@ -4882,7 +4882,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_183
+      name: Player_Melee_Heavy_Grounded_B_7
       rect:
         serializedVersion: 2
         x: 284
@@ -4903,7 +4903,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_184
+      name: Player_Melee_Heavy_Grounded_B_8
       rect:
         serializedVersion: 2
         x: 326
@@ -4924,7 +4924,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_185
+      name: Player_Melee_Heavy_Grounded_B_9
       rect:
         serializedVersion: 2
         x: 375
@@ -4945,7 +4945,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSoma_186
+      name: Player_Melee_Heavy_Grounded_B_10
       rect:
         serializedVersion: 2
         x: 423
