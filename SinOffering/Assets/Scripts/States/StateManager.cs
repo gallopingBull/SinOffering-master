@@ -139,7 +139,7 @@ public class StateManager : MonoBehaviour
                     if (!pc.WeaponSprite.flipX)
                         pc.WeaponSprite.flipX = true;
                 }
-
+                pc.EquippedWeapon.SetActive(false);
                 pc.animator.SetTrigger("TriggerMelee");
                 #region testing hits
 
@@ -254,6 +254,7 @@ public class StateManager : MonoBehaviour
                 break;
             case Entity.State.meleeing:
                 //GetComponent<PlayerController>().ps.Stop();
+                pc.EquippedWeapon.SetActive(true);
                 pc.rb.useGravity = true;
                 pc.rb.mass = 1f;
                 pc.rb.drag = 0;

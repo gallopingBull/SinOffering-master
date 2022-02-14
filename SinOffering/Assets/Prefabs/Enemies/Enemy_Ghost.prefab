@@ -328,6 +328,7 @@ MonoBehaviour:
   IsGrounded: 0
   state: 0
   isInvincible: 0
+  CanMove: 1
   ActorSprite: {fileID: 2248577551039833424}
   BloodActorSprite: {fileID: 5526886843639936856}
   jumpEnabled: 1
@@ -354,7 +355,6 @@ MonoBehaviour:
   isGhost: 1
   dying: 0
   InArena: 0
-  CanMove: 1
   SpawnAmmoCrates: 1
   FireDamageRate: 0.5
   FireDamageAmmount: 1
@@ -365,7 +365,7 @@ MonoBehaviour:
   PS_Fire: {fileID: 4600448530766714011}
   PS_Smoke: {fileID: 3137001591303992460}
   AmmoDrop: {fileID: 453258471666294640, guid: a343613237dfcd946a14ffcf15c3b114, type: 3}
-  SilverDropPrefab: {fileID: 2723100474615283923, guid: 6a40be8526032724b8ce466d899cd3c2, type: 3}
+  SilverDropPrefab: {fileID: 2723100474615283923, guid: 4bfba96f18c54f44ebb0a3ba7fa6be12, type: 3}
   PS_BloodExplosion: {fileID: 166404, guid: 4089d35ddc73b6b4f900c6e27e6fc955, type: 3}
   GibsPrefab: {fileID: 4824433638267080835, guid: 9f16e06e991f1444ba3f8bd85503d20c, type: 3}
   _light: {fileID: 7729003740429046116}

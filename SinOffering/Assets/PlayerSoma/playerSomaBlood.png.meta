@@ -1,7 +1,931 @@
 fileFormatVersion: 2
 guid: 06f61889fb093794ea18312830dfc031
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6051265914123139876
+    second: Player_Idle_Blood_0
+  - first:
+      213: 3301172304143446887
+    second: Player_Idle_Blood_1
+  - first:
+      213: 1549653142179377692
+    second: Player_Idle_Blood_2
+  - first:
+      213: -496190427154192433
+    second: Player_Idle_Blood_3
+  - first:
+      213: 3397494653939902294
+    second: playerSomaBlood_4
+  - first:
+      213: -9207212947470998194
+    second: playerSomaBlood_5
+  - first:
+      213: 5807077040216252420
+    second: playerSomaBlood_6
+  - first:
+      213: -6542661794906711397
+    second: playerSomaBlood_7
+  - first:
+      213: -4764156560580644969
+    second: playerSomaBlood_8
+  - first:
+      213: -701164247558387943
+    second: playerSomaBlood_9
+  - first:
+      213: -1120601225423214678
+    second: playerSomaBlood_10
+  - first:
+      213: -6297506061192579910
+    second: playerSomaBlood_11
+  - first:
+      213: -1266067474754029877
+    second: playerSomaBlood_12
+  - first:
+      213: -2329822125012025329
+    second: playerSomaBlood_13
+  - first:
+      213: -3512879091111953567
+    second: playerSomaBlood_14
+  - first:
+      213: -467321131581618032
+    second: playerSomaBlood_15
+  - first:
+      213: 5001154038539858859
+    second: playerSomaBlood_16
+  - first:
+      213: -1804795879208877021
+    second: playerSomaBlood_17
+  - first:
+      213: 4447386803587147601
+    second: playerSomaBlood_18
+  - first:
+      213: -6026965536023220900
+    second: playerSomaBlood_19
+  - first:
+      213: -5227813280422766528
+    second: playerSomaBlood_20
+  - first:
+      213: 1763480542717242703
+    second: playerSomaBlood_21
+  - first:
+      213: -1666761148196482803
+    second: playerSomaBlood_22
+  - first:
+      213: -6072644606451161400
+    second: playerSomaBlood_23
+  - first:
+      213: 2184611959672798331
+    second: Player_Evade_Back_Blood_0
+  - first:
+      213: 7820671531006906400
+    second: Player_Evade_Back_Blood_1
+  - first:
+      213: 544386080443965034
+    second: Player_Evade_Back_Blood_2
+  - first:
+      213: -5531147818473448843
+    second: Player_Evade_Back_Blood_3
+  - first:
+      213: -4595309938339817525
+    second: Player_Evade_Back_Blood_4
+  - first:
+      213: -5370959854938743363
+    second: Player_Run_Blood_0
+  - first:
+      213: -7613444432747743640
+    second: Player_Run_Blood_1
+  - first:
+      213: 8703839925585278579
+    second: Player_Run_Blood_2
+  - first:
+      213: -6176514063847482827
+    second: Player_Run_Blood_3
+  - first:
+      213: -755845695030188787
+    second: Player_Run_Blood_4
+  - first:
+      213: 5081662771504427965
+    second: Player_Run_Blood_5
+  - first:
+      213: -5720455949341600527
+    second: Player_Run_Blood_6
+  - first:
+      213: 6683643799483618965
+    second: Player_Run_Blood_7
+  - first:
+      213: -8429657936965521742
+    second: Player_Run_Blood_8
+  - first:
+      213: 5989977954646239141
+    second: Player_Run_Blood_9
+  - first:
+      213: -4328303822048233328
+    second: Player_Run_Blood_10
+  - first:
+      213: -42178564814264954
+    second: Player_Run_Blood_11
+  - first:
+      213: 7927917515806683082
+    second: Player_Run_Blood_12
+  - first:
+      213: 2682763371908909204
+    second: Player_Run_Blood_13
+  - first:
+      213: 973704842810795571
+    second: Player_Run_Blood_14
+  - first:
+      213: -173832124118010554
+    second: Player_Run_Blood_15
+  - first:
+      213: -2733810493465091993
+    second: Player_Evade_Forward_Blood_0
+  - first:
+      213: -8822047548102979115
+    second: Player_Evade_Forward_Blood_1
+  - first:
+      213: 3144787533962834641
+    second: Player_Evade_Forward_Blood_2
+  - first:
+      213: -790781795389742105
+    second: Player_Evade_Forward_Blood_4
+  - first:
+      213: 6418114013017202999
+    second: playerSomaBlood_49
+  - first:
+      213: -3913053997557073669
+    second: playerSomaBlood_50
+  - first:
+      213: -1859517487423501688
+    second: playerSomaBlood_51
+  - first:
+      213: 8709719292203316793
+    second: playerSomaBlood_52
+  - first:
+      213: -980274248821640717
+    second: playerSomaBlood_53
+  - first:
+      213: -4680963799119403208
+    second: playerSomaBlood_54
+  - first:
+      213: -839904402199478885
+    second: playerSomaBlood_55
+  - first:
+      213: 968264311185572294
+    second: playerSomaBlood_56
+  - first:
+      213: 7205500607055964897
+    second: playerSomaBlood_57
+  - first:
+      213: -6595737199297498637
+    second: playerSomaBlood_58
+  - first:
+      213: -1964478698029202197
+    second: playerSomaBlood_59
+  - first:
+      213: -1364931751823233015
+    second: playerSomaBlood_60
+  - first:
+      213: 9218857715026040538
+    second: playerSomaBlood_61
+  - first:
+      213: 264403839521040977
+    second: playerSomaBlood_62
+  - first:
+      213: -7140427794177169376
+    second: playerSomaBlood_63
+  - first:
+      213: 6309290319087649583
+    second: playerSomaBlood_64
+  - first:
+      213: 4612611100955602809
+    second: playerSomaBlood_65
+  - first:
+      213: 7664001686092050351
+    second: playerSomaBlood_66
+  - first:
+      213: 8816320726189194832
+    second: playerSomaBlood_67
+  - first:
+      213: -2386921037725085324
+    second: playerSomaBlood_68
+  - first:
+      213: -607140348512143387
+    second: Player_Jump_Blood_0
+  - first:
+      213: 5936998076149212148
+    second: Player_Jump_Blood_1
+  - first:
+      213: 4093757067534637739
+    second: Player_Jump_Blood_2
+  - first:
+      213: -954273309192609670
+    second: Player_Falling_Blood
+  - first:
+      213: -8401271513102279343
+    second: playerSomaBlood_73
+  - first:
+      213: -8262710798184925163
+    second: playerSomaBlood_74
+  - first:
+      213: -3537422164772711291
+    second: playerSomaBlood_75
+  - first:
+      213: -8274807593995049705
+    second: playerSomaBlood_76
+  - first:
+      213: 4834545213030708885
+    second: playerSomaBlood_77
+  - first:
+      213: -1623331184607573115
+    second: playerSomaBlood_78
+  - first:
+      213: -1061228728168582057
+    second: playerSomaBlood_79
+  - first:
+      213: 1416515140463765435
+    second: playerSomaBlood_80
+  - first:
+      213: -2088386410013208323
+    second: playerSomaBlood_81
+  - first:
+      213: -7701577794375550610
+    second: playerSomaBlood_82
+  - first:
+      213: 8666402809001167346
+    second: playerSomaBlood_83
+  - first:
+      213: 8870407531459681976
+    second: playerSomaBlood_84
+  - first:
+      213: -3515318788879803185
+    second: playerSomaBlood_85
+  - first:
+      213: -7657547052146912443
+    second: playerSomaBlood_86
+  - first:
+      213: -7932218518613701905
+    second: playerSomaBlood_87
+  - first:
+      213: 8352492080080774111
+    second: playerSomaBlood_88
+  - first:
+      213: 8992184703897386022
+    second: playerSomaBlood_89
+  - first:
+      213: 934841241148975956
+    second: playerSomaBlood_90
+  - first:
+      213: -2488235919038704668
+    second: playerSomaBlood_91
+  - first:
+      213: 2674591016575043877
+    second: playerSomaBlood_92
+  - first:
+      213: 927391092290224857
+    second: playerSomaBlood_93
+  - first:
+      213: -3947626227817745245
+    second: playerSomaBlood_94
+  - first:
+      213: 2726344575910440586
+    second: playerSomaBlood_95
+  - first:
+      213: 1418074142057525764
+    second: playerSomaBlood_96
+  - first:
+      213: 5400136252778831440
+    second: playerSomaBlood_97
+  - first:
+      213: 2836314336444196466
+    second: playerSomaBlood_98
+  - first:
+      213: -816710172802597233
+    second: playerSomaBlood_99
+  - first:
+      213: -2650486205394189370
+    second: playerSomaBlood_100
+  - first:
+      213: -6424808973428888165
+    second: playerSomaBlood_101
+  - first:
+      213: 8187801186558545257
+    second: playerSomaBlood_102
+  - first:
+      213: 8725225516822033623
+    second: playerSomaBlood_103
+  - first:
+      213: -33048698246940184
+    second: playerSomaBlood_104
+  - first:
+      213: -6038782237195835513
+    second: playerSomaBlood_105
+  - first:
+      213: 6796183706805931826
+    second: playerSomaBlood_106
+  - first:
+      213: 2584978007056636498
+    second: playerSomaBlood_107
+  - first:
+      213: -766193244479034418
+    second: playerSomaBlood_108
+  - first:
+      213: 9095335479907293052
+    second: playerSomaBlood_109
+  - first:
+      213: -5769544067479675008
+    second: playerSomaBlood_110
+  - first:
+      213: -3718562352876768342
+    second: playerSomaBlood_111
+  - first:
+      213: -5914864804342271394
+    second: playerSomaBlood_112
+  - first:
+      213: 1846430255454994904
+    second: playerSomaBlood_113
+  - first:
+      213: -8651751294456607005
+    second: playerSomaBlood_114
+  - first:
+      213: 7972438501911848948
+    second: playerSomaBlood_115
+  - first:
+      213: 3122889408618065279
+    second: playerSomaBlood_116
+  - first:
+      213: 7856152935959177337
+    second: playerSomaBlood_117
+  - first:
+      213: 6106860968474067889
+    second: playerSomaBlood_118
+  - first:
+      213: -6669036601787553952
+    second: playerSomaBlood_119
+  - first:
+      213: -6142931489549625242
+    second: playerSomaBlood_120
+  - first:
+      213: -7997452729767331388
+    second: playerSomaBlood_121
+  - first:
+      213: -8924172581947172086
+    second: playerSomaBlood_122
+  - first:
+      213: 7786234984224728725
+    second: playerSomaBlood_123
+  - first:
+      213: 1702120372305111310
+    second: playerSomaBlood_124
+  - first:
+      213: -7418089867176888805
+    second: playerSomaBlood_125
+  - first:
+      213: -2953763921430919521
+    second: playerSomaBlood_126
+  - first:
+      213: -8541570790406079324
+    second: playerSomaBlood_127
+  - first:
+      213: -807980496015953607
+    second: playerSomaBlood_128
+  - first:
+      213: 1374229634882375707
+    second: playerSomaBlood_129
+  - first:
+      213: -2938698186608301008
+    second: playerSomaBlood_130
+  - first:
+      213: -5691920238181729137
+    second: playerSomaBlood_131
+  - first:
+      213: -2453727073554525472
+    second: playerSomaBlood_132
+  - first:
+      213: 3682038672454704383
+    second: playerSomaBlood_133
+  - first:
+      213: 4781079331783822438
+    second: playerSomaBlood_134
+  - first:
+      213: -2337852909853890928
+    second: playerSomaBlood_135
+  - first:
+      213: 8791948558841194971
+    second: playerSomaBlood_136
+  - first:
+      213: -7424650834020276179
+    second: playerSomaBlood_137
+  - first:
+      213: -6798098265971192537
+    second: playerSomaBlood_138
+  - first:
+      213: -7361646596162720376
+    second: playerSomaBlood_139
+  - first:
+      213: -104788694049328333
+    second: playerSomaBlood_140
+  - first:
+      213: 5767364111964907147
+    second: playerSomaBlood_141
+  - first:
+      213: 7213724508902436503
+    second: playerSomaBlood_142
+  - first:
+      213: -415968841833741848
+    second: playerSomaBlood_143
+  - first:
+      213: 5010468977613028189
+    second: playerSomaBlood_144
+  - first:
+      213: 2676752427239245857
+    second: playerSomaBlood_145
+  - first:
+      213: 2870007240737994752
+    second: playerSomaBlood_146
+  - first:
+      213: 8965668265673582294
+    second: playerSomaBlood_147
+  - first:
+      213: -2592567989645132522
+    second: playerSomaBlood_148
+  - first:
+      213: -1023379510387921344
+    second: playerSomaBlood_149
+  - first:
+      213: 8768214903175788414
+    second: playerSomaBlood_150
+  - first:
+      213: -6293178174148269875
+    second: playerSomaBlood_151
+  - first:
+      213: -337024586639531532
+    second: playerSomaBlood_152
+  - first:
+      213: 8399313230448674464
+    second: playerSomaBlood_153
+  - first:
+      213: 1553593018485291209
+    second: playerSomaBlood_154
+  - first:
+      213: 9126650720029161990
+    second: playerSomaBlood_155
+  - first:
+      213: 6045903366835740986
+    second: playerSomaBlood_156
+  - first:
+      213: -6036534076329388598
+    second: playerSomaBlood_157
+  - first:
+      213: -8715990196984679330
+    second: playerSomaBlood_158
+  - first:
+      213: 8294173165719981022
+    second: playerSomaBlood_159
+  - first:
+      213: 577876994929992357
+    second: playerSomaBlood_160
+  - first:
+      213: -6460514256768246168
+    second: playerSomaBlood_161
+  - first:
+      213: 1281241530312754731
+    second: playerSomaBlood_162
+  - first:
+      213: 536979965190047249
+    second: Player_Melee_Heavy_Grounded_Blood_0
+  - first:
+      213: 5178529411636727730
+    second: Player_Melee_Heavy_Grounded_Blood_1
+  - first:
+      213: 2142095178772348484
+    second: Player_Melee_Heavy_Grounded_Blood_2
+  - first:
+      213: 907326019949506601
+    second: Player_Melee_Heavy_Grounded_Blood_3
+  - first:
+      213: -451419857877604637
+    second: Player_Melee_Heavy_Grounded_Blood_4
+  - first:
+      213: 291183265966134829
+    second: Player_Melee_Heavy_Grounded_Blood_5
+  - first:
+      213: -1161867642093542247
+    second: Player_Melee_Heavy_Grounded_Blood_6
+  - first:
+      213: -3032013811198703711
+    second: Player_Melee_Heavy_Grounded_Blood_7
+  - first:
+      213: 4576200215405791394
+    second: Player_Melee_Heavy_Grounded_Blood_8
+  - first:
+      213: -1289878933512395982
+    second: Player_Melee_Heavy_Grounded_Blood_9
+  - first:
+      213: 442100595973073138
+    second: Player_Melee_Heavy_Grounded_Blood_10
+  - first:
+      213: -371765870802934021
+    second: Player_Melee_Heavy_Grounded_Blood_11
+  - first:
+      213: 8676039732919349338
+    second: Player_Melee_Heavy_Grounded_Blood_12
+  - first:
+      213: -4323786496153382922
+    second: Player_Melee_Heavy_Grounded_B_Blood_0
+  - first:
+      213: -2568739212039464849
+    second: Player_Melee_Heavy_Grounded_B_Blood_1
+  - first:
+      213: 3549147498852656436
+    second: Player_Melee_Heavy_Grounded_B_Blood_2
+  - first:
+      213: 8703645999866464027
+    second: Player_Melee_Heavy_Grounded_B_Blood_3
+  - first:
+      213: -7627652452520040397
+    second: Player_Melee_Heavy_Grounded_B_Blood_4
+  - first:
+      213: -36788052407610347
+    second: Player_Melee_Heavy_Grounded_B_Blood_5
+  - first:
+      213: 4097662422007940610
+    second: Player_Melee_Heavy_Grounded_B_Blood_6
+  - first:
+      213: 5140221672808208170
+    second: Player_Melee_Heavy_Grounded_B_Blood_7
+  - first:
+      213: -5670461101652732352
+    second: Player_Melee_Heavy_Grounded_B_Blood_8
+  - first:
+      213: 486264319231595803
+    second: Player_Melee_Heavy_Grounded_B_Blood_9
+  - first:
+      213: 100830922954196670
+    second: Player_Melee_Heavy_Grounded_B_Blood_10
+  - first:
+      213: -202889020766397855
+    second: playerSomaBlood_187
+  - first:
+      213: 1186916694138319740
+    second: playerSomaBlood_188
+  - first:
+      213: -8075447265779293942
+    second: playerSomaBlood_189
+  - first:
+      213: -7013435828443562603
+    second: playerSomaBlood_190
+  - first:
+      213: -1268903943428965846
+    second: playerSomaBlood_191
+  - first:
+      213: 7722539655155304873
+    second: Player_Shoot_Blood
+  - first:
+      213: -4162631961974422488
+    second: playerSomaBlood_193
+  - first:
+      213: 5265511386227914404
+    second: playerSomaBlood_194
+  - first:
+      213: -1193257320237643191
+    second: playerSomaBlood_195
+  - first:
+      213: -6518009781397748250
+    second: playerSomaBlood_196
+  - first:
+      213: 6226981902104221008
+    second: playerSomaBlood_197
+  - first:
+      213: -643132549328603102
+    second: playerSomaBlood_198
+  - first:
+      213: -8492125765328319010
+    second: playerSomaBlood_199
+  - first:
+      213: -5641758519352145563
+    second: playerSomaBlood_200
+  - first:
+      213: -6306997479879447587
+    second: playerSomaBlood_201
+  - first:
+      213: -8577692259242860589
+    second: playerSomaBlood_202
+  - first:
+      213: -4779924660079860896
+    second: Player_Shoot_Angled_Up_Blood
+  - first:
+      213: 794874532235529075
+    second: playerSomaBlood_204
+  - first:
+      213: -5677498577854977155
+    second: playerSomaBlood_205
+  - first:
+      213: -6200988086971456239
+    second: playerSomaBlood_206
+  - first:
+      213: 2736273086520368378
+    second: playerSomaBlood_207
+  - first:
+      213: 4959999757760725840
+    second: Player_Shoot_Angled_Down_Blood
+  - first:
+      213: 8741517175907956623
+    second: playerSomaBlood_209
+  - first:
+      213: -8623391319640767043
+    second: playerSomaBlood_210
+  - first:
+      213: -4026808833439468704
+    second: playerSomaBlood_211
+  - first:
+      213: -8748188420807456320
+    second: playerSomaBlood_212
+  - first:
+      213: 7876272439079307909
+    second: Player_Shoot_Down_Blood
+  - first:
+      213: 6543793189894408578
+    second: Player_Jump_Shoot_Blood
+  - first:
+      213: -114087660432757296
+    second: playerSomaBlood_215
+  - first:
+      213: 8211989335293413205
+    second: playerSomaBlood_216
+  - first:
+      213: -1275843917504848846
+    second: playerSomaBlood_217
+  - first:
+      213: 9111540071460753693
+    second: playerSomaBlood_218
+  - first:
+      213: 6116283209929130111
+    second: playerSomaBlood_219
+  - first:
+      213: -3322644495011102223
+    second: playerSomaBlood_220
+  - first:
+      213: -1454760663552999866
+    second: playerSomaBlood_221
+  - first:
+      213: -4106710727091079386
+    second: playerSomaBlood_222
+  - first:
+      213: -7456879525992876885
+    second: playerSomaBlood_223
+  - first:
+      213: 2517280090195494986
+    second: playerSomaBlood_224
+  - first:
+      213: 3484318951600831648
+    second: playerSomaBlood_225
+  - first:
+      213: 2151002956225966066
+    second: playerSomaBlood_226
+  - first:
+      213: 1623346300736608246
+    second: playerSomaBlood_227
+  - first:
+      213: -8487689433997186168
+    second: playerSomaBlood_228
+  - first:
+      213: -5126872112850613821
+    second: playerSomaBlood_229
+  - first:
+      213: -4319830544429077040
+    second: playerSomaBlood_230
+  - first:
+      213: 379852775063225593
+    second: playerSomaBlood_231
+  - first:
+      213: -4187720189842547518
+    second: playerSomaBlood_232
+  - first:
+      213: -5253834314712548809
+    second: playerSomaBlood_233
+  - first:
+      213: 647125857360983375
+    second: playerSomaBlood_234
+  - first:
+      213: -5250149422317687889
+    second: playerSomaBlood_235
+  - first:
+      213: 2951242266042295580
+    second: playerSomaBlood_236
+  - first:
+      213: 3878032587102477380
+    second: playerSomaBlood_237
+  - first:
+      213: -7037398581808571399
+    second: playerSomaBlood_238
+  - first:
+      213: 8621125115035310549
+    second: playerSomaBlood_239
+  - first:
+      213: 5634288144361295225
+    second: playerSomaBlood_240
+  - first:
+      213: 5513886309443102041
+    second: playerSomaBlood_241
+  - first:
+      213: 3730398955125741246
+    second: playerSomaBlood_242
+  - first:
+      213: -7721937408176174138
+    second: playerSomaBlood_243
+  - first:
+      213: -4409609047384561504
+    second: playerSomaBlood_244
+  - first:
+      213: 1580139162769825212
+    second: playerSomaBlood_245
+  - first:
+      213: -5626542659266359591
+    second: playerSomaBlood_246
+  - first:
+      213: 3788027832251600079
+    second: playerSomaBlood_247
+  - first:
+      213: -6970328833378615344
+    second: playerSomaBlood_248
+  - first:
+      213: 6100153110527284486
+    second: playerSomaBlood_249
+  - first:
+      213: -2653871056666065695
+    second: playerSomaBlood_250
+  - first:
+      213: -3437910414286002606
+    second: playerSomaBlood_251
+  - first:
+      213: 3591329016195921335
+    second: playerSomaBlood_252
+  - first:
+      213: -876442274692383011
+    second: playerSomaBlood_253
+  - first:
+      213: 6249345335936517878
+    second: playerSomaBlood_254
+  - first:
+      213: -2702954277703646557
+    second: playerSomaBlood_255
+  - first:
+      213: 7541971915306719609
+    second: playerSomaBlood_256
+  - first:
+      213: 3951209577335685408
+    second: playerSomaBlood_257
+  - first:
+      213: -7347579203069823805
+    second: playerSomaBlood_258
+  - first:
+      213: -1787501902550233068
+    second: playerSomaBlood_259
+  - first:
+      213: -4223162682156623663
+    second: playerSomaBlood_260
+  - first:
+      213: -7271206119985468202
+    second: playerSomaBlood_261
+  - first:
+      213: 7247510188850473740
+    second: playerSomaBlood_262
+  - first:
+      213: -5091301132606628341
+    second: playerSomaBlood_263
+  - first:
+      213: 3129523774081830134
+    second: playerSomaBlood_264
+  - first:
+      213: 593815133563132542
+    second: playerSomaBlood_265
+  - first:
+      213: 52905159345665239
+    second: playerSomaBlood_266
+  - first:
+      213: -4255744611241667310
+    second: playerSomaBlood_267
+  - first:
+      213: 6455504835731401240
+    second: playerSomaBlood_268
+  - first:
+      213: 2347276142050282088
+    second: playerSomaBlood_269
+  - first:
+      213: 5437518131266064330
+    second: playerSomaBlood_270
+  - first:
+      213: 7356077044627687448
+    second: playerSomaBlood_271
+  - first:
+      213: -8445386653684902612
+    second: playerSomaBlood_272
+  - first:
+      213: -6753233894586776531
+    second: playerSomaBlood_273
+  - first:
+      213: -7167544145418292000
+    second: playerSomaBlood_274
+  - first:
+      213: 5608676638856817285
+    second: playerSomaBlood_275
+  - first:
+      213: -6219929156904590540
+    second: playerSomaBlood_276
+  - first:
+      213: -7794746063714812788
+    second: playerSomaBlood_277
+  - first:
+      213: -402290409400481557
+    second: playerSomaBlood_278
+  - first:
+      213: -4625714014095337120
+    second: playerSomaBlood_279
+  - first:
+      213: -6479195598265118968
+    second: playerSomaBlood_280
+  - first:
+      213: -2311098755453888090
+    second: playerSomaBlood_281
+  - first:
+      213: 169356377470113863
+    second: playerSomaBlood_282
+  - first:
+      213: -1485213524889955813
+    second: playerSomaBlood_283
+  - first:
+      213: -1025568834367562672
+    second: playerSomaBlood_284
+  - first:
+      213: -6247730003427581752
+    second: playerSomaBlood_285
+  - first:
+      213: 1298321004129763614
+    second: playerSomaBlood_286
+  - first:
+      213: 7563196273948388444
+    second: playerSomaBlood_287
+  - first:
+      213: -7360359972629178278
+    second: Player_Jump_Shoot_Angled_Up_Blood
+  - first:
+      213: -1128802741917414277
+    second: Player_Jump_Shoot_Angled_Down_Blood
+  - first:
+      213: 7761268145115949000
+    second: Player_Jump_Shoot_Up_Blood
+  - first:
+      213: -620097637891978833
+    second: Player_Jump_Shoot_Down_Blood
+  - first:
+      213: -743262943568748760
+    second: Player_Run_Shoot_Blood_0
+  - first:
+      213: 6313148930870909685
+    second: Player_Run_Shoot_Blood_1
+  - first:
+      213: 3980471117307825892
+    second: Player_Run_Shoot_Blood_2
+  - first:
+      213: -8487568241638888410
+    second: Player_Run_Shoot_Blood_3
+  - first:
+      213: 7121213766593543429
+    second: Player_Run_Shoot_Blood_4
+  - first:
+      213: 7601331840219363270
+    second: Player_Run_Shoot_Blood_5
+  - first:
+      213: 3946689151529157149
+    second: Player_Run_Shoot_Blood_6
+  - first:
+      213: -7261329313473893876
+    second: Player_Run_Shoot_Blood_7
+  - first:
+      213: -5847497700913531413
+    second: Player_Run_Shoot_Blood_8
+  - first:
+      213: -3632749787806095188
+    second: Player_Run_Shoot_Blood_9
+  - first:
+      213: 2834596501881299519
+    second: Player_Run_Shoot_Blood_10
+  - first:
+      213: 7874830320160579405
+    second: Player_Run_Shoot_Blood_11
+  - first:
+      213: -7519916294967597756
+    second: Player_Run_Shoot_Blood_12
+  - first:
+      213: 5423251959510426505
+    second: Player_Run_Shoot_Blood_13
+  - first:
+      213: 5601373925593589837
+    second: Player_Run_Shoot_Blood_14
+  - first:
+      213: 2083293508704830593
+    second: Player_Run_Shoot_Blood_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,11 +1037,6479 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Player_Idle_Blood_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1997
+        width: 20
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b3db4b94a6af350800000000000000
+      internalID: 6051265914123139876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Idle_Blood_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1997
+        width: 20
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763f3d268be10dd20800000000000000
+      internalID: 3301172304143446887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Idle_Blood_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1997
+        width: 20
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c127ba88259718510800000000000000
+      internalID: 1549653142179377692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Idle_Blood_3
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1997
+        width: 20
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc766887f6d2d19f0800000000000000
+      internalID: -496190427154192433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1997
+        width: 19
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65760661363562f20800000000000000
+      internalID: 3397494653939902294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_5
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1997
+        width: 19
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e452d9e2b98693080800000000000000
+      internalID: -9207212947470998194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_6
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1948
+        width: 19
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400aa650dc1e69050800000000000000
+      internalID: 5807077040216252420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_7
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1948
+        width: 19
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ad01513cbc335a0800000000000000
+      internalID: -6542661794906711397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_8
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1948
+        width: 19
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f6e3889d052edb0800000000000000
+      internalID: -4764156560580644969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1948
+        width: 19
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917041fe4d6f446f0800000000000000
+      internalID: -701164247558387943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_10
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1948
+        width: 19
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa728c76f13d270f0800000000000000
+      internalID: -1120601225423214678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_11
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1948
+        width: 19
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab43fbb5a93ca98a0800000000000000
+      internalID: -6297506061192579910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_12
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 1948
+        width: 19
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc63c91f6560e6ee0800000000000000
+      internalID: -1266067474754029877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_13
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1948
+        width: 19
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0000d80f1fcaafd0800000000000000
+      internalID: -2329822125012025329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_14
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1948
+        width: 18
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16bff53241fbf3fc0800000000000000
+      internalID: -3512879091111953567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_15
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1948
+        width: 21
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0984b0428edb389f0800000000000000
+      internalID: -467321131581618032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_16
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1948
+        width: 27
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3bd2ec91ba76540800000000000000
+      internalID: 5001154038539858859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_17
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1948
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3248aa7c5b314f6e0800000000000000
+      internalID: -1804795879208877021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_18
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1897
+        width: 21
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157629e0cba48bd30800000000000000
+      internalID: 4447386803587147601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_19
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1897
+        width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d60d7f6caeb5ca0800000000000000
+      internalID: -6026965536023220900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_20
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1897
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048d45405831377b0800000000000000
+      internalID: -5227813280422766528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_21
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1897
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d69f4d534297810800000000000000
+      internalID: 1763480542717242703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_22
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1897
+        width: 26
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01935c01997ed8e0800000000000000
+      internalID: -1666761148196482803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_23
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1897
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6694997e1a9bba0800000000000000
+      internalID: -6072644606451161400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Evade_Back_Blood_0
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1897
+        width: 26
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7cfd54b00d415e10800000000000000
+      internalID: 2184611959672798331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Evade_Back_Blood_1
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1897
+        width: 27
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0205dae525b988c60800000000000000
+      internalID: 7820671531006906400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Evade_Back_Blood_2
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1895
+        width: 29
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6e9781814c0e8700800000000000000
+      internalID: 544386080443965034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Evade_Back_Blood_3
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 1895
+        width: 31
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a96b74d5a6d33b0800000000000000
+      internalID: -5531147818473448843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Evade_Back_Blood_4
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1895
+        width: 30
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc7de6445fd2a30c0800000000000000
+      internalID: -4595309938339817525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Blood_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1846
+        width: 23
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd1e7fe7748675b0800000000000000
+      internalID: -5370959854938743363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Blood_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1846
+        width: 25
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86635ec40ac975690800000000000000
+      internalID: -7613444432747743640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Blood_2
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 1846
+        width: 28
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3767f522c404ac870800000000000000
+      internalID: 8703839925585278579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Blood_3
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1846
+        width: 29
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a9a2afe2d984aa0800000000000000
+      internalID: -6176514063847482827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Blood_4
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1846
+        width: 29
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05a7b25852b285f0800000000000000
+      internalID: -755845695030188787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Blood_5
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1847
+        width: 28
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db339dbed51b58640800000000000000
+      internalID: 5081662771504427965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Blood_6
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1846
+        width: 26
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f459325f9bdc90b0800000000000000
+      internalID: -5720455949341600527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Blood_7
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1846
+        width: 25
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5969679cf9211cc50800000000000000
+      internalID: 6683643799483618965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Blood_8
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1846
+        width: 25
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2be2e11c4c6d30b80800000000000000
+      internalID: -8429657936965521742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Blood_9
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1846
+        width: 24
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a72c17a63da02350800000000000000
+      internalID: 5989977954646239141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Blood_10
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1846
+        width: 22
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09879de2b96cee3c0800000000000000
+      internalID: -4328303822048233328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Blood_11
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1846
+        width: 22
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6852c1b91d62a6ff0800000000000000
+      internalID: -42178564814264954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Blood_12
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1846
+        width: 24
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf214a0afe950e60800000000000000
+      internalID: 7927917515806683082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Blood_13
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 1847
+        width: 25
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4984f07a2171b3520800000000000000
+      internalID: 2682763371908909204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Blood_14
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1846
+        width: 24
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336a0d7456b438d00800000000000000
+      internalID: 973704842810795571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Blood_15
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 1846
+        width: 24
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 645f467aa9c669df0800000000000000
+      internalID: -173832124118010554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Evade_Forward_Blood_0
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1846
+        width: 36
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76027cd27dd8f0ad0800000000000000
+      internalID: -2733810493465091993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Evade_Forward_Blood_1
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 1846
+        width: 36
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d157b70f7ac19580800000000000000
+      internalID: -8822047548102979115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Evade_Forward_Blood_2
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 1846
+        width: 36
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d27eefa99784ab20800000000000000
+      internalID: 3144787533962834641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Evade_Forward_Blood_4
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 1846
+        width: 36
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3e2f695249605f0800000000000000
+      internalID: -790781795389742105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_49
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1801
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 731e8d1b0b8b11950800000000000000
+      internalID: 6418114013017202999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_50
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1800
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf830b81f1a02b9c0800000000000000
+      internalID: -3913053997557073669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_51
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1792
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ace7482baa136e0800000000000000
+      internalID: -1859517487423501688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_52
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 1792
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9363529dc832fd870800000000000000
+      internalID: 8709719292203316793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_53
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1794
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1f580b3cd5562f0800000000000000
+      internalID: -980274248821640717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_54
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1734
+        width: 17
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837660bb930e90fb0800000000000000
+      internalID: -4680963799119403208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_55
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1734
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9dfc9d656f0854f0800000000000000
+      internalID: -839904402199478885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_56
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1734
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c187ecc247ff6d00800000000000000
+      internalID: 968264311185572294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_57
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1734
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eaae6030a41ff360800000000000000
+      internalID: 7205500607055964897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_58
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1734
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1fa0486fb3774a0800000000000000
+      internalID: -6595737199297498637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_59
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1733
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4c52b4805ccb4e0800000000000000
+      internalID: -1964478698029202197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_60
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1733
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900bcedadc9ce0de0800000000000000
+      internalID: -1364931751823233015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_61
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1733
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad61ffa8f36ffef70800000000000000
+      internalID: 9218857715026040538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_62
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1732
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15aa6e324e95ba300800000000000000
+      internalID: 264403839521040977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_63
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1732
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0286eb7b0ca18ec90800000000000000
+      internalID: -7140427794177169376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_64
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1732
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23c70efd1a1f8750800000000000000
+      internalID: 6309290319087649583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_65
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1732
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f6b7f8b59430040800000000000000
+      internalID: 4612611100955602809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_66
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 1732
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafe2898de00c5a60800000000000000
+      internalID: 7664001686092050351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_67
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1732
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ebb665dfcd95a70800000000000000
+      internalID: 8816320726189194832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_68
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1732
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4715d7f66f3ffded0800000000000000
+      internalID: -2386921037725085324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Jump_Blood_0
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 1730
+        width: 18
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7702ed1110397f0800000000000000
+      internalID: -607140348512143387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Jump_Blood_1
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 1730
+        width: 19
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f32d017b44746250800000000000000
+      internalID: 5936998076149212148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Jump_Blood_2
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 1731
+        width: 19
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa952ffc52ffc830800000000000000
+      internalID: 4093757067534637739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Falling_Blood
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 1731
+        width: 31
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7020f23b7db1c2f0800000000000000
+      internalID: -954273309192609670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_73
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1684
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15d1ee71210b86b80800000000000000
+      internalID: -8401271513102279343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_74
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1684
+        width: 27
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51837688e44f45d80800000000000000
+      internalID: -8262710798184925163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_75
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1684
+        width: 20
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5841120884d88eec0800000000000000
+      internalID: -3537422164772711291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_76
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1684
+        width: 20
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7156837c55af92d80800000000000000
+      internalID: -8274807593995049705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_77
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1684
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 596b249b141c71340800000000000000
+      internalID: 4834545213030708885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_78
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 1684
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58bc6ac63e4c879e0800000000000000
+      internalID: -1623331184607573115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_79
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 1684
+        width: 23
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75472182812c541f0800000000000000
+      internalID: -1061228728168582057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_80
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1684
+        width: 20
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb72e46e30978a310800000000000000
+      internalID: 1416515140463765435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_81
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1642
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0d865ff9f8403e0800000000000000
+      internalID: -2088386410013208323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_82
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1641
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69753cfccf7e1590800000000000000
+      internalID: -7701577794375550610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_83
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1642
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f946fe207f354870800000000000000
+      internalID: 8666402809001167346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_84
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1640
+        width: 35
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be9a9507a40a1b70800000000000000
+      internalID: 8870407531459681976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_85
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1640
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcc109cbf24173fc0800000000000000
+      internalID: -3515318788879803185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_86
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1639
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54391f9078deab590800000000000000
+      internalID: -7657547052146912443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_87
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1639
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea4145b8491be190800000000000000
+      internalID: -7932218518613701905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_88
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 1637
+        width: 20
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd36a7e1b430ae370800000000000000
+      internalID: 8352492080080774111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_89
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 1639
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c31867858aacc70800000000000000
+      internalID: 8992184703897386022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_90
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1594
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45be114e72939fc00800000000000000
+      internalID: 934841241148975956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_91
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1594
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e394586d92087dd0800000000000000
+      internalID: -2488235919038704668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_92
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1592
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5290866eb5e0e1520800000000000000
+      internalID: 2674591016575043877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_93
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1593
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d202dfe841cedc00800000000000000
+      internalID: 927391092290224857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_94
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1598
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a478e87cd63739c0800000000000000
+      internalID: -3947626227817745245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_95
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1599
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8e647e62fbe5d520800000000000000
+      internalID: 2726344575910440586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_96
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 1601
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402718e3be20ea310800000000000000
+      internalID: 1418074142057525764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_97
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1592
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e579d8f4321fa40800000000000000
+      internalID: 5400136252778831440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_98
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 1592
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276aa1f8cdc9c5720800000000000000
+      internalID: 2836314336444196466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_99
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1591
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e37a9cc667aa4f0800000000000000
+      internalID: -816710172802597233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_100
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 1599
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3086dc6d4973bd0800000000000000
+      internalID: -2650486205394189370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_101
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1591
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d670d574e76d6a0800000000000000
+      internalID: -6424808973428888165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_102
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 1590
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96d08506cc9e0a170800000000000000
+      internalID: 8187801186558545257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_103
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 1591
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4f95b116a361970800000000000000
+      internalID: 8725225516822033623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_104
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 1596
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9b3b052669a8ff0800000000000000
+      internalID: -33048698246940184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_105
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1591
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787e004dc8fe13ca0800000000000000
+      internalID: -6038782237195835513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_106
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1532
+        width: 14
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f0778d215e05e50800000000000000
+      internalID: 6796183706805931826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_107
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1532
+        width: 14
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25adec63dcfafd320800000000000000
+      internalID: 2584978007056636498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_108
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1528
+        width: 24
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecbe589bd4fed55f0800000000000000
+      internalID: -766193244479034418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_109
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 1528
+        width: 22
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7791e80e6f193e70800000000000000
+      internalID: 9095335479907293052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_110
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1529
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f59ed2d367eefa0800000000000000
+      internalID: -5769544067479675008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_111
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1481
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3b3a9ed33056cc0800000000000000
+      internalID: -3718562352876768342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_112
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1481
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e52f7ba7ccd2aeda0800000000000000
+      internalID: -5914864804342271394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_113
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1481
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1cde6d886df9910800000000000000
+      internalID: 1846430255454994904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_114
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1480
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee43e0690ecee780800000000000000
+      internalID: -8651751294456607005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_115
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1480
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f76a14e39ac3ae60800000000000000
+      internalID: 7972438501911848948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_116
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 1480
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d62811f5bb65b20800000000000000
+      internalID: 3122889408618065279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_117
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1480
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9782df8b879a60d60800000000000000
+      internalID: 7856152935959177337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_118
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1480
+        width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3489ef1bdefb450800000000000000
+      internalID: 6106860968474067889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_119
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1480
+        width: 23
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067ef547b82d273a0800000000000000
+      internalID: -6669036601787553952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_120
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1480
+        width: 20
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66855dd5b5cefbaa0800000000000000
+      internalID: -6142931489549625242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_121
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1431
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c97d365d17530190800000000000000
+      internalID: -7997452729767331388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_122
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1431
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b12caa158f62480800000000000000
+      internalID: -8924172581947172086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_123
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1431
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5962f6407734e0c60800000000000000
+      internalID: 7786234984224728725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_124
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1428
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09a33cd5752f9710800000000000000
+      internalID: 1702120372305111310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_125
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1428
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b163ffa8196ad0990800000000000000
+      internalID: -7418089867176888805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_126
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1430
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f96ceb8fc5f1207d0800000000000000
+      internalID: -2953763921430919521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_127
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1428
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac3efd0f9e367980800000000000000
+      internalID: -8541570790406079324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_128
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1428
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931768d050a79c4f0800000000000000
+      internalID: -807980496015953607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_129
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1380
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b109afa629e321310800000000000000
+      internalID: 1374229634882375707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_130
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1380
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ca025b195a737d0800000000000000
+      internalID: -2938698186608301008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_131
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1380
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c325153bc3201b0800000000000000
+      internalID: -5691920238181729137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_132
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1380
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2160d1a3c92fdd0800000000000000
+      internalID: -2453727073554525472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_133
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1380
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffcd9e01aaa391330800000000000000
+      internalID: 3682038672454704383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_134
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1380
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ccfed225ec95240800000000000000
+      internalID: 4781079331783822438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_135
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1327
+        width: 23
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096ab0b3a274e8fd0800000000000000
+      internalID: -2337852909853890928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_136
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1327
+        width: 23
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9ac3de1a6430a70800000000000000
+      internalID: 8791948558841194971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_137
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1327
+        width: 22
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d28e9e8676756f890800000000000000
+      internalID: -7424650834020276179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_138
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 1327
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d869c15ad48a1a0800000000000000
+      internalID: -6798098265971192537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_139
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1327
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88de1c9ac6d26d990800000000000000
+      internalID: -7361646596162720376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_140
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1327
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33376baec37bb8ef0800000000000000
+      internalID: -104788694049328333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_141
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1327
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8621006a1bc90050800000000000000
+      internalID: 5767364111964907147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_142
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1328
+        width: 41
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ea8ac883c4c1460800000000000000
+      internalID: 7213724508902436503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_143
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1328
+        width: 43
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e18ed0da8e2a3af0800000000000000
+      internalID: -415968841833741848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_144
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1327
+        width: 39
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b3db01df2c88540800000000000000
+      internalID: 5010468977613028189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_145
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 1326
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1288249862cb52520800000000000000
+      internalID: 2676752427239245857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_146
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1326
+        width: 39
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 008bcf6216054d720800000000000000
+      internalID: 2870007240737994752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_147
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1326
+        width: 39
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d6677519c37c6c70800000000000000
+      internalID: 8965668265673582294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_148
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1274
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d37214629550cd0800000000000000
+      internalID: -2592567989645132522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_149
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 1274
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e2ae4e1c93cc1f0800000000000000
+      internalID: -1023379510387921344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_150
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 1274
+        width: 44
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e77341a9ff4fea970800000000000000
+      internalID: 8768214903175788414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_151
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 1274
+        width: 23
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8a6a51bc32aa8a0800000000000000
+      internalID: -6293178174148269875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_152
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1274
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f127c09ce5a25bf0800000000000000
+      internalID: -337024586639531532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_153
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1274
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a6c122b1ea509470800000000000000
+      internalID: 8399313230448674464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_154
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1223
+        width: 27
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8b7587e987f8510800000000000000
+      internalID: 1553593018485291209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_155
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1223
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ab66c897068ae70800000000000000
+      internalID: 9126650720029161990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_156
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1223
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a31259e541d57e350800000000000000
+      internalID: 6045903366835740986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_157
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1176
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac598d19d3ce93ca0800000000000000
+      internalID: -6036534076329388598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_158
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1175
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54f0fa58159a0780800000000000000
+      internalID: -8715990196984679330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_159
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1175
+        width: 26
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb0150cc82da1370800000000000000
+      internalID: 8294173165719981022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_160
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1175
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a22caea018050800800000000000000
+      internalID: 577876994929992357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_161
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1175
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e5bf24384a756a0800000000000000
+      internalID: -6460514256768246168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_162
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1174
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2605cd2262e7c110800000000000000
+      internalID: 1281241530312754731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_Blood_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1118
+        width: 24
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11687acee6cb37700800000000000000
+      internalID: 536979965190047249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_Blood_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1119
+        width: 28
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf05871015ddd740800000000000000
+      internalID: 5178529411636727730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_Blood_2
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1119
+        width: 29
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e7dcd37304abd10800000000000000
+      internalID: 2142095178772348484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_Blood_3
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 1119
+        width: 32
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9203f8a3538779c00800000000000000
+      internalID: 907326019949506601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_Blood_4
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1119
+        width: 32
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6e5aee70c3cb9f0800000000000000
+      internalID: -451419857877604637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_Blood_5
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 1119
+        width: 40
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d26137c33ad7a0400800000000000000
+      internalID: 291183265966134829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_Blood_6
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1119
+        width: 40
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9946efc098730efe0800000000000000
+      internalID: -1161867642093542247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_Blood_7
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 1119
+        width: 40
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a74c65c08f1ce5d0800000000000000
+      internalID: -3032013811198703711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_Blood_8
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 1119
+        width: 38
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a80454a9dde18f30800000000000000
+      internalID: 4576200215405791394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_Blood_9
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1118
+        width: 38
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 233ebbca1fd691ee0800000000000000
+      internalID: -1289878933512395982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_Blood_10
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1118
+        width: 38
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8a6f15628a22600800000000000000
+      internalID: 442100595973073138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_Blood_11
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 1118
+        width: 38
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf66d2309e837daf0800000000000000
+      internalID: -371765870802934021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_Blood_12
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 1118
+        width: 34
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5035d16b2c776870800000000000000
+      internalID: 8676039732919349338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_B_Blood_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1062
+        width: 24
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff85241713def3c0800000000000000
+      internalID: -4323786496153382922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_B_Blood_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1063
+        width: 26
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6855c1eb410a5cd0800000000000000
+      internalID: -2568739212039464849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_B_Blood_2
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1063
+        width: 29
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435249498da114130800000000000000
+      internalID: 3549147498852656436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_B_Blood_3
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 1063
+        width: 32
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b174ac84cef89c870800000000000000
+      internalID: 8703645999866464027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_B_Blood_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1063
+        width: 32
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338e769e182252690800000000000000
+      internalID: -7627652452520040397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_B_Blood_5
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1064
+        width: 37
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5141444167d4d7ff0800000000000000
+      internalID: -36788052407610347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_B_Blood_6
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1064
+        width: 37
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20600413342ddd830800000000000000
+      internalID: 4097662422007940610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_B_Blood_7
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1064
+        width: 37
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a275f7a906cb55740800000000000000
+      internalID: 5140221672808208170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_B_Blood_8
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1064
+        width: 39
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0469153eba97e41b0800000000000000
+      internalID: -5670461101652732352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_B_Blood_9
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1063
+        width: 41
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b151fbe62de8fb600800000000000000
+      internalID: 486264319231595803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Melee_Heavy_Grounded_B_Blood_10
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1063
+        width: 38
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb64f01b039366100800000000000000
+      internalID: 100830922954196670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_187
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1004
+        width: 32
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a5464b2813f2df0800000000000000
+      internalID: -202889020766397855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_188
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1004
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73781cd176c87010800000000000000
+      internalID: 1186916694138319740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_189
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1004
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0163d05f7f3eef80800000000000000
+      internalID: -8075447265779293942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_190
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1039
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59dbf96d5454bae90800000000000000
+      internalID: -7013435828443562603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_191
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1004
+        width: 31
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2af2dd1692f36ee0800000000000000
+      internalID: -1268903943428965846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Shoot_Blood
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1004
+        width: 34
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9466d86e8fb2b60800000000000000
+      internalID: 7722539655155304873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_193
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1004
+        width: 21
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824c3dff84c5b36c0800000000000000
+      internalID: -4162631961974422488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_194
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1004
+        width: 21
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6b3e835bad21940800000000000000
+      internalID: 5265511386227914404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_195
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1004
+        width: 21
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ac9951ac2b07fe0800000000000000
+      internalID: -1193257320237643191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_196
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1004
+        width: 21
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5044143a06b85a0800000000000000
+      internalID: -6518009781397748250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_197
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1004
+        width: 21
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05555b94c0faa6650800000000000000
+      internalID: 6226981902104221008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_198
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1004
+        width: 19
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228f6c59a522317f0800000000000000
+      internalID: -643132549328603102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_199
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 923
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eddc9a11c98e52a80800000000000000
+      internalID: -8492125765328319010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_200
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 923
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5694b79948274b1b0800000000000000
+      internalID: -5641758519352145563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_201
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 923
+        width: 34
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb608c353b0978a0800000000000000
+      internalID: -6306997479879447587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_202
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 923
+        width: 23
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df1637365ae5f880800000000000000
+      internalID: -8577692259242860589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Shoot_Angled_Up_Blood
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 923
+        width: 27
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0636fc6c8db4aadb0800000000000000
+      internalID: -4779924660079860896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_204
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 862
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b47e6fc26f70b00800000000000000
+      internalID: 794874532235529075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_205
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 862
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b2b26cf197531b0800000000000000
+      internalID: -5677498577854977155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_206
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 862
+        width: 38
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11523ab603aa1f9a0800000000000000
+      internalID: -6200988086971456239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_207
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 862
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc1282ffd139f520800000000000000
+      internalID: 2736273086520368378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Shoot_Angled_Down_Blood
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 862
+        width: 31
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0530a5f108575d440800000000000000
+      internalID: 4959999757760725840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_209
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 783
+        width: 22
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8738f39e8b105970800000000000000
+      internalID: 8741517175907956623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_210
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 783
+        width: 22
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db500a1984f835880800000000000000
+      internalID: -8623391319640767043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_211
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 783
+        width: 22
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0637f6073b6ed18c0800000000000000
+      internalID: -4026808833439468704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_212
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 783
+        width: 23
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9069d2bf0389680800000000000000
+      internalID: -8748188420807456320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Shoot_Down_Blood
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 783
+        width: 22
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a85859d042e4d60800000000000000
+      internalID: 7876272439079307909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Jump_Shoot_Blood
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 707
+        width: 48
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289c6475c3930da50800000000000000
+      internalID: 6543793189894408578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_215
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 707
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd66a690edaa6ef0800000000000000
+      internalID: -114087660432757296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_216
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 740
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557c57d9ac8d6f170800000000000000
+      internalID: 8211989335293413205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_217
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 705
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23cd74c77ba4b4ee0800000000000000
+      internalID: -1275843917504848846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_218
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 705
+        width: 47
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11d7248b61b27e70800000000000000
+      internalID: 9111540071460753693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_219
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 649
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7003898c2761e450800000000000000
+      internalID: 6116283209929130111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_220
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 649
+        width: 23
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1c4f79f6893e1d0800000000000000
+      internalID: -3322644495011102223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_221
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 649
+        width: 21
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e36b752e6afcbe0800000000000000
+      internalID: -1454760663552999866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_222
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 649
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 627337c1a580207c0800000000000000
+      internalID: -4106710727091079386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_223
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 649
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4bf405497d38890800000000000000
+      internalID: -7456879525992876885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_224
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 649
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a480448a7ec2fe220800000000000000
+      internalID: 2517280090195494986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_225
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 648
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac345230a9ca5030800000000000000
+      internalID: 3484318951600831648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_226
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 648
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ffe9accac5e9dd10800000000000000
+      internalID: 2151002956225966066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_227
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 648
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f799d21cd8478610800000000000000
+      internalID: 1623346300736608246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_228
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 648
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88be2c2fd6ba53a80800000000000000
+      internalID: -8487689433997186168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_229
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 648
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c9cea80af0b9d8b0800000000000000
+      internalID: -5126872112850613821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_230
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 597
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd2c6dd101ec04c0800000000000000
+      internalID: -4319830544429077040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_231
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 597
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4079c1612854500800000000000000
+      internalID: 379852775063225593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_232
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 597
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc14b1ccaa32e5c0800000000000000
+      internalID: -4187720189842547518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_233
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 597
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73afccad681a617b0800000000000000
+      internalID: -5253834314712548809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_234
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 597
+        width: 36
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45b8f4e98d0bf800800000000000000
+      internalID: 647125857360983375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_235
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 597
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab2809bae8b327b0800000000000000
+      internalID: -5250149422317687889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_236
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 550
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15e191643be4f820800000000000000
+      internalID: 2951242266042295580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_237
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 550
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44cd1ad571a81d530800000000000000
+      internalID: 3878032587102477380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_238
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 550
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb567c8643265e90800000000000000
+      internalID: -7037398581808571399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_239
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 548
+        width: 23
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d9d0ed8d9364a770800000000000000
+      internalID: 8621125115035310549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_240
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 548
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d89de2733013e40800000000000000
+      internalID: 5634288144361295225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_241
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 499
+        width: 22
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955ee367262458c40800000000000000
+      internalID: 5513886309443102041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_242
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 499
+        width: 22
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb612cec51a05c330800000000000000
+      internalID: 3730398955125741246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_243
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 462
+        width: 24
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cbcbdff6da26d490800000000000000
+      internalID: -7721937408176174138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_244
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 463
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a86b4c3febedc2c0800000000000000
+      internalID: -4409609047384561504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_245
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 462
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd14945238cde510800000000000000
+      internalID: 1580139162769825212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_246
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 462
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dec8d813418ae1b0800000000000000
+      internalID: -5626542659266359591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_247
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 461
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcc46ac5e37c19430800000000000000
+      internalID: 3788027832251600079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_248
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 461
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dffdce3bda644f90800000000000000
+      internalID: -6970328833378615344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_249
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 462
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605197c1fe818a450800000000000000
+      internalID: 6100153110527284486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_250
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 461
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e48ab3b55e8b2bd0800000000000000
+      internalID: -2653871056666065695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_251
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 414
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 256edda61b61a40d0800000000000000
+      internalID: -3437910414286002606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_252
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 414
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b539e966b6f6d130800000000000000
+      internalID: 3591329016195921335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_253
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 414
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde33de056046d3f0800000000000000
+      internalID: -876442274692383011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_254
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 413
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f68d3bf8722ab650800000000000000
+      internalID: 6249345335936517878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_255
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 413
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a20a51c76d2d7ad0800000000000000
+      internalID: -2702954277703646557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_256
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 413
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97954d57f777aa860800000000000000
+      internalID: 7541971915306719609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_257
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 413
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021073a1d2485d630800000000000000
+      internalID: 3951209577335685408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_258
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 411
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4b9f9d4a7280a90800000000000000
+      internalID: -7347579203069823805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_259
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 358
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410982f7d748137e0800000000000000
+      internalID: -1787501902550233068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_260
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 358
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d85e557aef4465c0800000000000000
+      internalID: -4223162682156623663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_261
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 358
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dcae91fe8c771b90800000000000000
+      internalID: -7271206119985468202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_262
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 358
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0be4782e14549460800000000000000
+      internalID: 7247510188850473740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_263
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 398
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e107248901859b0800000000000000
+      internalID: -5091301132606628341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_264
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 359
+        width: 19
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc8946aa4d4e6b20800000000000000
+      internalID: 3129523774081830134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_265
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 359
+        width: 19
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a1842c7b7ad3800800000000000000
+      internalID: 593815133563132542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_266
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 358
+        width: 19
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4759d46f4fbb000800000000000000
+      internalID: 52905159345665239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_267
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 358
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2155820f2de80f4c0800000000000000
+      internalID: -4255744611241667310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_268
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 306
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a2693027f869950800000000000000
+      internalID: 6455504835731401240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_269
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 306
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a08acf633339020800000000000000
+      internalID: 2347276142050282088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_270
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 305
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf0cd16ee1f57b40800000000000000
+      internalID: 5437518131266064330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_271
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 305
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81840711919061660800000000000000
+      internalID: 7356077044627687448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_272
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 305
+        width: 24
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2559448595fbca80800000000000000
+      internalID: -8445386653684902612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_273
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 305
+        width: 25
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2407049d81b742a0800000000000000
+      internalID: -6753233894586776531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_274
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 305
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e479643394c78c90800000000000000
+      internalID: -7167544145418292000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_275
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 305
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58aa71fdfa506dd40800000000000000
+      internalID: 5608676638856817285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_276
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 305
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4336b9ae26f5ea9a0800000000000000
+      internalID: -6219929156904590540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_277
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 305
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c77edd0cf73d390800000000000000
+      internalID: -7794746063714812788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_278
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 306
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be8432b0107ca6af0800000000000000
+      internalID: -402290409400481557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_279
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 304
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0691d4dbc992ecfb0800000000000000
+      internalID: -4625714014095337120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_280
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 305
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f022f7ee54516a0800000000000000
+      internalID: -6479195598265118968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_281
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 253
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9d2583de35defd0800000000000000
+      internalID: -2311098755453888090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_282
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 253
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7489d8f5abca95200800000000000000
+      internalID: 169356377470113863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_283
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 253
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1214590b26736be0800000000000000
+      internalID: -1485213524889955813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_284
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 255
+        width: 41
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c5fce249274c1f0800000000000000
+      internalID: -1025568834367562672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_285
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 256
+        width: 42
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0262de9aa9b49a0800000000000000
+      internalID: -6247730003427581752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_286
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 257
+        width: 43
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11459f0310940210800000000000000
+      internalID: 1298321004129763614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSomaBlood_287
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 257
+        width: 43
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c604b80fed5f860800000000000000
+      internalID: 7563196273948388444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Jump_Shoot_Angled_Up_Blood
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 190
+        width: 41
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a581f6c0a9fbad990800000000000000
+      internalID: -7360359972629178278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Jump_Shoot_Angled_Down_Blood
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 190
+        width: 46
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c868a03efa550f0800000000000000
+      internalID: -1128802741917414277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Jump_Shoot_Up_Blood
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 192
+        width: 32
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c7e03cc14095bb60800000000000000
+      internalID: 7761268145115949000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Jump_Shoot_Down_Blood
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 192
+        width: 36
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9c367db78f467f0800000000000000
+      internalID: -620097637891978833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_Blood_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 138
+        width: 42
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f9fd17a466fa5f0800000000000000
+      internalID: -743262943568748760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_Blood_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 138
+        width: 44
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa92be018fcc9750800000000000000
+      internalID: 6313148930870909685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_Blood_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 138
+        width: 47
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eec5d944697d3730800000000000000
+      internalID: 3980471117307825892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_Blood_3
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 138
+        width: 48
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c2a3e37a9163a80800000000000000
+      internalID: -8487568241638888410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_Blood_4
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 138
+        width: 47
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50dfd6fd032a3d260800000000000000
+      internalID: 7121213766593543429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_Blood_5
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 139
+        width: 46
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7342cf80b5d7960800000000000000
+      internalID: 7601331840219363270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_Blood_6
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 139
+        width: 45
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1288c37fd475c630800000000000000
+      internalID: 3946689151529157149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_Blood_7
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 139
+        width: 44
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ae14926739a3b90800000000000000
+      internalID: -7261329313473893876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_Blood_8
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 139
+        width: 43
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5b22882d389dea0800000000000000
+      internalID: -5847497700913531413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_Blood_9
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 86
+        width: 42
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca821fba051e59dc0800000000000000
+      internalID: -3632749787806095188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_Blood_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 86
+        width: 39
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3223380082865720800000000000000
+      internalID: 2834596501881299519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_Blood_11
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 86
+        width: 41
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f95ab1474094d60800000000000000
+      internalID: 7874830320160579405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_Blood_12
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 86
+        width: 41
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445e8c1d8f3e3a790800000000000000
+      internalID: -7519916294967597756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_Blood_13
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 87
+        width: 41
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9836f0e6ce2434b40800000000000000
+      internalID: 5423251959510426505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_Blood_14
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 86
+        width: 43
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48242178e31cbd40800000000000000
+      internalID: 5601373925593589837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run_Shoot_Blood_15
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 86
+        width: 41
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1848a3d886859ec10800000000000000
+      internalID: 2083293508704830593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 32a962c82b9d88d4087061cf63d5e0c8
     internalID: 0
     vertices: []
     indices: 

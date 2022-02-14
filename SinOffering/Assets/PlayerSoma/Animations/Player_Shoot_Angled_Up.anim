@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_Jump_Shoot
+  m_Name: Player_Shoot_Angled_Up
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,16 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 3484318714366636954, guid: 156b2396cfd6cfe40b8f8a8b7ff77ff0, type: 3}
+      value: {fileID: 3624957467917829527, guid: 156b2396cfd6cfe40b8f8a8b7ff77ff0, type: 3}
     attribute: m_Sprite
     path: 
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: -4779924660079860896, guid: 06f61889fb093794ea18312830dfc031, type: 3}
+    attribute: m_Sprite
+    path: Sprite_Bloody_MegaMan
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 60
@@ -39,8 +46,16 @@ AnimationClip:
       typeID: 212
       customType: 23
       isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 157803108
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 3484318714366636954, guid: 156b2396cfd6cfe40b8f8a8b7ff77ff0, type: 3}
+    - {fileID: 3624957467917829527, guid: 156b2396cfd6cfe40b8f8a8b7ff77ff0, type: 3}
+    - {fileID: -4779924660079860896, guid: 06f61889fb093794ea18312830dfc031, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
