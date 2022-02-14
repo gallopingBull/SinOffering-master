@@ -230,6 +230,7 @@ public abstract class Entity : MonoBehaviour {
             {
                 Vector3 tmpVel = new Vector3(.5f, -.25f, 0);
                 rb.AddForce(tmpVel * -1000);
+                Instantiate(GetComponent<EnemyController>().PS_BloodExplosion, transform.position, transform.rotation);
                 CanMove = false;
             }
             else
