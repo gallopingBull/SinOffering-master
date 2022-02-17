@@ -28,7 +28,7 @@ public class MeleeCommand : ICommand {
         {
             if (pc.dir != 1)
             {
-                //Debug.Log("in update");
+                //Debug.Log("in update");   
                 Vector3 tmpPos = pc.WeaponSprite.gameObject.transform.localPosition;
                 Vector3 tmpRot = pc.WeaponSprite.gameObject.transform.eulerAngles;
                 tmpPos.x *= -1;
