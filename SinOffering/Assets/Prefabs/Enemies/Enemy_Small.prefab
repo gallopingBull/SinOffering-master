@@ -191,7 +191,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -6819958956588831526, guid: 5158e1ae5e5911b4d9bc59d3b6954693, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -413,8 +413,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 3
-  Speed: 4
-  MaxSpeed: 10
+  Speed: 1
+  MaxSpeed: 1
   AccSpeed: 0.15
   DeAccSpeed: 0.15
   JumpSpeed: 10
@@ -428,7 +428,7 @@ MonoBehaviour:
   IsGrounded: 0
   state: 0
   isInvincible: 0
-  CanMove: 1
+  CanMove: 0
   ActorSprite: {fileID: 212873954495844088}
   BloodActorSprite: {fileID: 5292978004774744051}
   jumpEnabled: 1
@@ -455,7 +455,7 @@ MonoBehaviour:
   isGhost: 0
   dying: 0
   InArena: 0
-  SpawnAmmoCrates: 1
+  SpawnAmmoCrates: 0
   FireDamageRate: 0.5
   FireDamageAmmount: 1
   MaxFireTime: 5
@@ -586,7 +586,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 6840233384267994497, guid: 43bf4b845ef945043b8a89173deb47da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

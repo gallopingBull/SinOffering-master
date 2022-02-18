@@ -25,6 +25,7 @@ public abstract class Weapon : MonoBehaviour
     protected WeaponTypes weaponType;
     
     public SpriteRenderer WeaponSprite;
+    public SpriteRenderer BloodSprite;
 
     public ParticleSystem MuzzleFire_L_Particle;
     public ParticleSystem MuzzleFire_R_Particle;
@@ -190,9 +191,18 @@ public abstract class Weapon : MonoBehaviour
     public virtual void FlipWeaponSprite(int dir)
     {
         if (dir == 1)
+        {
             WeaponSprite.flipX = false;
+            if (BloodSprite != null)
+                BloodSprite.flipX = false;
+        }
         else
+        {
             WeaponSprite.flipX = true;
+            if (BloodSprite != null)
+                BloodSprite.flipX = true;
+        }
+            
         MoveWeaponToSocket(dir);
     }
     protected virtual void MoveWeaponToSocket(int dir)

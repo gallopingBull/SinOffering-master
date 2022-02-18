@@ -132,12 +132,19 @@ public class StateManager : MonoBehaviour
                 if (pc.dir == 1)
                 {
                     if (pc.WeaponSprite.flipX)
+                    {
                         pc.WeaponSprite.flipX = false;
+                        pc.WeaponSprite.GetComponentInChildren<SpriteRenderer>().flipX = false;
+                    }
                 }
                 else
                 {
                     if (!pc.WeaponSprite.flipX)
+                    {
                         pc.WeaponSprite.flipX = true;
+                        pc.WeaponSprite.GetComponentInChildren<SpriteRenderer>().flipX = true;
+                    }
+                        
                 }
                 if (pc.EquippedWeapon != null)
                     pc.EquippedWeapon.SetActive(false);
