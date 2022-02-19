@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -1217494785941030305}
   - component: {fileID: -8052594283747923165}
   - component: {fileID: 7406882936242053768}
-  - component: {fileID: 5773247380445334414}
   m_Layer: 0
   m_Name: enemyLargeAggroSingleSprite_gib3
   m_TagString: Untagged
@@ -51,10 +50,11 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3c12e1d80d15f1c4f90a63a92673b64c, type: 2}
+  - {fileID: 2100000, guid: 3cc973342908704459456bd09578ca89, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a73c27da0f809f440a181a8d5bbb7aac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -146,18 +146,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelfDestructTime: 10
---- !u!114 &5773247380445334414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2295465392997977733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee158225ee1e59f4791627785501d950, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1053033525317536607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -168,6 +156,10 @@ PrefabInstance:
     - target: {fileID: 166404, guid: 52a15a989551b774cad29cb7a7cb3f5d, type: 3}
       propertyPath: m_Name
       value: BloodTrail_FX
+      objectReference: {fileID: 0}
+    - target: {fileID: 499110, guid: 52a15a989551b774cad29cb7a7cb3f5d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 499110, guid: 52a15a989551b774cad29cb7a7cb3f5d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -182,6 +174,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 499110, guid: 52a15a989551b774cad29cb7a7cb3f5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6830127
+      objectReference: {fileID: 0}
+    - target: {fileID: 499110, guid: 52a15a989551b774cad29cb7a7cb3f5d, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.6830127
       objectReference: {fileID: 0}
@@ -192,14 +188,6 @@ PrefabInstance:
     - target: {fileID: 499110, guid: 52a15a989551b774cad29cb7a7cb3f5d, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.18301275
-      objectReference: {fileID: 0}
-    - target: {fileID: 499110, guid: 52a15a989551b774cad29cb7a7cb3f5d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6830127
-      objectReference: {fileID: 0}
-    - target: {fileID: 499110, guid: 52a15a989551b774cad29cb7a7cb3f5d, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 499110, guid: 52a15a989551b774cad29cb7a7cb3f5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -217,7 +205,6 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 52a15a989551b774cad29cb7a7cb3f5d, type: 3}
 --- !u!4 &1053033525317900025 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 499110, guid: 52a15a989551b774cad29cb7a7cb3f5d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 499110, guid: 52a15a989551b774cad29cb7a7cb3f5d, type: 3}
   m_PrefabInstance: {fileID: 1053033525317536607}
   m_PrefabAsset: {fileID: 0}

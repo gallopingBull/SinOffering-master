@@ -131,20 +131,21 @@ public class StateManager : MonoBehaviour
                 //pc.animator.Play("Player_Melee_Heavy_Grounded");
                 if (pc.dir == 1)
                 {
-                    if (pc.WeaponSprite.flipX)
+                    if (pc.MeleeSprite.flipX)
                     {
-                        pc.WeaponSprite.flipX = false;
-                        pc.WeaponSprite.GetComponentInChildren<SpriteRenderer>().flipX = false;
+                        pc.MeleeSprite.flipX = false;
+                        if (pc.BloodMeleeSprite != null)
+                            pc.BloodMeleeSprite.flipX = false;
                     }
                 }
                 else
                 {
-                    if (!pc.WeaponSprite.flipX)
+                    if (!pc.MeleeSprite.flipX)
                     {
-                        pc.WeaponSprite.flipX = true;
-                        pc.WeaponSprite.GetComponentInChildren<SpriteRenderer>().flipX = true;
+                        pc.MeleeSprite.flipX = true;
+                        if (pc.BloodMeleeSprite != null)
+                            pc.BloodMeleeSprite.flipX = true;
                     }
-                        
                 }
                 if (pc.EquippedWeapon != null)
                     pc.EquippedWeapon.SetActive(false);

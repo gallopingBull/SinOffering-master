@@ -1421,7 +1421,8 @@ MonoBehaviour:
   delay: 0.3
   MAX_delay: 0.3
   delayComplete: 1
-  WeaponSprite: {fileID: 1061129097}
+  MeleeSprite: {fileID: 1061129097}
+  BloodMeleeSprite: {fileID: 1783944310}
   EquippedWeapon: {fileID: 0}
   weaponManager: {fileID: 0}
   ps: {fileID: 0}
@@ -2316,7 +2317,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3773331770086411466, guid: d42b2e302ff21a745ba6d4830c107ed9, type: 3}
       propertyPath: m_SortingOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3773331770086411466, guid: d42b2e302ff21a745ba6d4830c107ed9, type: 3}
       propertyPath: m_MaskInteraction
@@ -2344,7 +2345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5552588418458151815, guid: d42b2e302ff21a745ba6d4830c107ed9, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5552588418745187992, guid: d42b2e302ff21a745ba6d4830c107ed9, type: 3}
       propertyPath: BloodSprite
@@ -2594,6 +2595,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2293494302720279902, guid: 14c83c25b5ca4674e8125b07281c96e1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a98244083be585441870a0982e67ae1f, type: 3}
+    - target: {fileID: 2293494302720279902, guid: 14c83c25b5ca4674e8125b07281c96e1, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6265146890760269838, guid: 14c83c25b5ca4674e8125b07281c96e1, type: 3}
       propertyPath: BloodSprite
       value: 
@@ -2622,6 +2631,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7930721911895726389}
     m_Modifications:
+    - target: {fileID: 4537362972050102029, guid: 17aa98c3a613a1843a0282ee75664983, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 900604ee2413af74a9fe20f18bbccc09, type: 3}
+    - target: {fileID: 4537362972050102029, guid: 17aa98c3a613a1843a0282ee75664983, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4537362972459007437, guid: 17aa98c3a613a1843a0282ee75664983, type: 3}
       propertyPath: BloodSprite
       value: 

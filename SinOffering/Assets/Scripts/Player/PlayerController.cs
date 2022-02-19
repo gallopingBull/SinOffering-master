@@ -50,7 +50,8 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     public bool delayComplete = true;
 
     //weapons variables
-    public SpriteRenderer WeaponSprite;
+    public SpriteRenderer MeleeSprite;
+    public SpriteRenderer BloodMeleeSprite;
     [HideInInspector]
     public GameObject EquippedWeapon;
     [HideInInspector]

@@ -29,13 +29,13 @@ public class MeleeCommand : ICommand {
             if (pc.dir != 1)
             {
                 //Debug.Log("in update");   
-                Vector3 tmpPos = pc.WeaponSprite.gameObject.transform.localPosition;
-                Vector3 tmpRot = pc.WeaponSprite.gameObject.transform.eulerAngles;
+                Vector3 tmpPos = pc.MeleeSprite.gameObject.transform.localPosition;
+                Vector3 tmpRot = pc.MeleeSprite.gameObject.transform.eulerAngles;
                 tmpPos.x *= -1;
                 tmpRot.z *= -1;
                 //Debug.Log("tmp.x: " + tmpPos.x);
-                pc.WeaponSprite.gameObject.transform.localPosition = tmpPos;
-                pc.WeaponSprite.gameObject.transform.eulerAngles = tmpRot;
+                pc.MeleeSprite.gameObject.transform.localPosition = tmpPos;
+                pc.MeleeSprite.gameObject.transform.eulerAngles = tmpRot;
             }
         }
     }
