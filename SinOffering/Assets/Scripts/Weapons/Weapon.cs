@@ -103,7 +103,6 @@ public abstract class Weapon : MonoBehaviour
 
         SoundManager.PlaySound(fireClip); // move this into weapon subclasses for more specific behavior
 
-
         int tmp = pc.dir;
 
         if (pc.inputHandler.aiming)
@@ -206,12 +205,14 @@ public abstract class Weapon : MonoBehaviour
         MoveWeaponToSocket(dir);
     }
     protected virtual void MoveWeaponToSocket(int dir)
-    {   
+    { 
         // player facing right
+
         if (dir == 1)
             WeaponSprite.transform.position = weaponManager.RHandSocket.position;
         else
             WeaponSprite.transform.position = weaponManager.LHandSocket.position;
+
     }
     
     // rescales weapoon on x-axis

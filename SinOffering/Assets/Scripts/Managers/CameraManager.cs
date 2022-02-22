@@ -26,7 +26,6 @@ public class CameraManager : MonoBehaviour
     private CinemachineTargetGroup targetGroup;
     #endregion
 
-
     #region functions
     private void Awake()
     {
@@ -42,7 +41,6 @@ public class CameraManager : MonoBehaviour
         cinematicBars = GameObject.Find("CinematicBars").GetComponent<CinematicBars>();
         targetGroup = GameObject.Find("CM TargetGroup_Arena").GetComponent<CinemachineTargetGroup>();
         cmBasicMultiChannelPerlin = currentCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        
     }
 
     // Update is called once per frame
@@ -64,10 +62,8 @@ public class CameraManager : MonoBehaviour
                     cinemachineBrain.m_DefaultBlend.m_Time = .5f;
 
                     if (cinematicBars.isActive)
-                    {
                         cinematicBars.Hide(.1f);
-                    }
-                    
+
                     MainCam.Priority = 11;
                     currentCam = MainCam;
                     cmBasicMultiChannelPerlin = 
@@ -100,10 +96,7 @@ public class CameraManager : MonoBehaviour
                 }
 
                 if (DashCam.Priority == 10)
-                {
                     cinematicBars.Show(.1f);
-
-                }
                 break;
 
             default:
@@ -124,9 +117,7 @@ public class CameraManager : MonoBehaviour
     public CinemachineVirtualCamera GetCurrentCam()
     {
         if (currentCam == null)
-        {
             return null;
-        }
         return currentCam;
     }
 

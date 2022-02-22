@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class LoadScene : MonoBehaviour {
-    public int level;
+    public int LevelIndex;
 
     public void LoadSceneByIndex(int index)
     {
@@ -14,17 +14,16 @@ public class LoadScene : MonoBehaviour {
 
     public void LoadAssignedLevel()
     {
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene(LevelIndex);
     }
 
     public void AssignLevel(int index)
     {
-        level = index;
+        LevelIndex = index;
     }
 
     public void ReloadCurrentScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
 }

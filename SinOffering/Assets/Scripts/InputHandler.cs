@@ -138,9 +138,9 @@ public class InputHandler : MonoBehaviour
                     }
                     #endregion
 
-                    if (R_xRaw > x_DeadZone)
+                    if (R_xRaw > .9f)
                         _aimDir = 1;
-                    if (R_xRaw < -(x_DeadZone))
+                    if (R_xRaw < -(.9f))
                         _aimDir = -1;
 
                     if (R_xRaw == 0)
@@ -162,11 +162,7 @@ public class InputHandler : MonoBehaviour
                         }   
                         pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
                     }
-
                     pc.EquippedWeapon.GetComponent<Weapon>().SetSpawnLoc();
-                    // flip weapon sprite
-                    //if (pc.weaponManager.WeaponEquipped)
-                    //pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
                 }
             }
             //Debug.Log("_aimDir" + _aimDir);   
@@ -177,7 +173,7 @@ public class InputHandler : MonoBehaviour
             if (L_xRaw == 0)
             {
                 // maybe create a "IdleCommand" and move this there... idk yet
-                if (pc.IsGrounded)
+                if (pc.IsGrounded && !aiming)
                 {
                     if (pc.state != Entity.State.Idle && !Input.GetButtonDown("Jump"))
                         pc.StateManager.EnterState(Entity.State.Idle);
@@ -255,11 +251,15 @@ public class InputHandler : MonoBehaviour
                         if (GetComponent<EvadeCommand>().EvadeCount == 0)
                         {
                             evadeButtonPressedTime = Time.time;
+                            #region test logs
                             //Debug.Log("evadeButtonPressedTime: " + evadeButtonPressedTime);
                             //Debug.Log("deactivate time: " + (evadeButtonPressedTime + MAXEvadeDelay));
-                            evadeDelay = .3f; //find  approaiate value to scale this down for when the player upgrades it
-                                              // the delay is suppose ot be shorter
-                                              //Debug.Log("evadeDelay: "+ evadeDelay);
+                            #endregion
+
+                            //find  approaiate value to scale this down for when the player upgrades it
+                            // the delay is suppose ot be shorter
+                            evadeDelay = .3f;           
+                            //Debug.Log("evadeDelay: "+ evadeDelay);
                         }
                         else
                         {

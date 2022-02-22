@@ -225,7 +225,6 @@ public abstract class Entity : MonoBehaviour {
             StartCoroutine("DamageIndicator");
             Health -= _damageValue;
 
-
             if (gameObject.name != "Player")
             {
                 Vector3 tmpVel = new Vector3(.5f, -.25f, 0);

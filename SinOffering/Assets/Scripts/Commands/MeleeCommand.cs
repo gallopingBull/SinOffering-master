@@ -21,7 +21,6 @@ public class MeleeCommand : ICommand {
 
     }
 
-
     private void LateUpdate()
     {
         if (pc.state == Entity.State.meleeing)
