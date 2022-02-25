@@ -267,6 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Shotgun
   WeaponSprite: {fileID: 2442183000674735057}
+  BloodSprite: {fileID: 0}
   MuzzleFire_L_Particle: {fileID: 199596700944018584}
   MuzzleFire_R_Particle: {fileID: 5742621591162677947}
   L_MuzzleFire_Light: {fileID: 2131479948617750464}
@@ -492,7 +493,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 1.92, y: 1.92}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -577,7 +578,7 @@ SpriteRenderer:
   m_Size: {x: 10.24, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!1 &8294134282413946031

@@ -17,8 +17,8 @@ public class Weapon_Laser : Weapon {
     }
     public override void FireWeapon()
     {
-        if (spawnLoc != GetMuzzleDirection())
-            spawnLoc = GetMuzzleDirection();
+        //if (spawnLoc != GetMuzzleDirection())
+            //spawnLoc = GetMuzzleDirection();
 
         canFire = true;
         if (!LaserEnabled)
@@ -47,7 +47,7 @@ public class Weapon_Laser : Weapon {
         if (!lr.enabled)
             lr.enabled = true;
 
-        lr.transform.position = GetMuzzleDirection().transform.position;
+        //lr.transform.position = GetMuzzleDirection().transform.position;
     }
 
     protected override void FixedUpdate()

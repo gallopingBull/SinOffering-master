@@ -142,29 +142,43 @@ public class InputHandler : MonoBehaviour
                         _aimDir = 1;
                     if (R_xRaw < -(.9f))
                         _aimDir = -1;
-
+                  
                     if (R_xRaw == 0)
                     {
-                        if (lastDirection != pc.dir)
+                        if (_aimDir == 0)
                         {
-                            pc.FlipEntitySprite(pc.dir);
-                            pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
-                        }   
+                            //pc.FlipEntitySprite(pc.dir);
+                            //pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
+                        }
+                        else
+                        {
+                            if (lastDirection != _aimDir)
+                            {
+                                pc.FlipEntitySprite(_aimDir);
+                                pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
+                            }
+                        }
                     }
-
                     else
                     {
                         pc.FlipEntitySprite(_aimDir);
                         if (_aimDir != 0) 
                         { 
                             pc.weaponManager.ModifyWeaponRotation(_aimDir, _aimDirection); 
-                            SwapAimingSprite(_aimDir, _aimDirection); 
-                        }   
+                            SwapAimingSprite(_aimDir, _aimDirection);
+                        }
+                       
                         pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
                     }
                     pc.EquippedWeapon.GetComponent<Weapon>().SetSpawnLoc();
+                    lastDirection = _aimDir;
+                }
+                else
+                {
+                    _aimDir = lastDirection = 0;
                 }
             }
+
             //Debug.Log("_aimDir" + _aimDir);   
             //Debug.Log("pc.Dir" + pc.dir);
 

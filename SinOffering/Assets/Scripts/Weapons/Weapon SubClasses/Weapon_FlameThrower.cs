@@ -19,7 +19,7 @@ public class Weapon_FlameThrower : Weapon {
 
     public override void FireWeapon()
     {
-        spawnLoc = GetMuzzleDirection();
+        //spawnLoc = GetMuzzleDirection();
 
         canFire = false;
         nextFire = fireRate;
@@ -47,7 +47,7 @@ public class Weapon_FlameThrower : Weapon {
         }
         //i don't like hard coding this negative value here... change it in some time
         //print(ProjectilePrefab.transform.rotation.y);
-        ProjectilePrefab.transform.position = GetMuzzleDirection().transform.position;
+        //ProjectilePrefab.transform.position = GetMuzzleDirection().transform.position;
     }
 
     protected override void SpawnProjectile(int dir)

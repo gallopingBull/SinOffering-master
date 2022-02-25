@@ -278,7 +278,7 @@ public abstract class Entity : MonoBehaviour {
     {
         //Debug.Log("1st. facingLeft: "+ facingLeft);
         if (GetComponent<PlayerController>().inputHandler.aiming)
-        {
+        { 
             if (dir == direction)
                 return;
         }

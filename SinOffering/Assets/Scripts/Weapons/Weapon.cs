@@ -106,7 +106,9 @@ public abstract class Weapon : MonoBehaviour
         int tmp = pc.dir;
 
         if (pc.inputHandler.aiming)
-            tmp = pc.inputHandler._aimDir;
+            if (pc.inputHandler._aimDir != 0)
+                tmp = pc.inputHandler._aimDir;
+        
         SpawnProjectile(tmp);
         EnableMuzzleFX();
         EnableMuzzleLight();
@@ -173,7 +175,7 @@ public abstract class Weapon : MonoBehaviour
         fireRate = weaponAttributes.fireRate;
         ProjectilePrefab.GetComponent<Projectile>().DamageAmmount = weaponAttributes.WeaponDamage;
     }
-
+        
     public void ResetPosition(int aimDirection)
     {
         int tmpDir = pc.dir;
@@ -235,7 +237,9 @@ public abstract class Weapon : MonoBehaviour
         int tmp = pc.dir;
 
         if (pc.inputHandler.aiming)
-            tmp = pc.inputHandler._aimDir;
+            if (pc.inputHandler._aimDir != 0)
+                tmp = pc.inputHandler._aimDir;
+          
         if (tmp == 1)
             return SpawnLocR;
         else
