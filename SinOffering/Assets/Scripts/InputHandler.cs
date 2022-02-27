@@ -74,7 +74,6 @@ public class InputHandler : MonoBehaviour
     #endregion
 
     #region functions
-    // Use this for initialization
     void Awake()
     {
         pc = GetComponent<PlayerController>();
@@ -114,7 +113,6 @@ public class InputHandler : MonoBehaviour
             // if weapon is equipped
             if (pc.weaponManager.WeaponEquipped)
             {
-
                 if (Input.GetButton("AimWeapon") && !aiming)
                     aiming = true;
                 if (Input.GetButtonUp("AimWeapon"))
@@ -139,11 +137,9 @@ public class InputHandler : MonoBehaviour
                     }
                     #endregion
 
-                    if (R_xRaw > .9f)
-                        _aimDir = 1;
-                    if (R_xRaw < -(.9f))
-                        _aimDir = -1;
-                  
+                    if (R_xRaw != 0)
+                        _aimDir = R_xRaw > 0 ? 1 : -1;
+                   
                     if (R_xRaw == 0)
                     {
                         if (_aimDir == 0)
@@ -173,22 +169,17 @@ public class InputHandler : MonoBehaviour
                 else
                     _aimDir = lastDirection = 0;
             }
- 
-            //Debug.Log("_aimDir" + _aimDir);   
-            //Debug.Log("pc.Dir" + pc.dir);
 
             // if no x-axis input registed, stop moving player
             // *** maybe make an idle command and it's added to the command list instead ***
             if (L_xRaw == 0)
             {
-
                 // maybe create a "IdleCommand" and move this there... idk yet
                 if (pc.IsGrounded && !aiming)
                 {
                     if (pc.state != Entity.State.Idle && !Input.GetButtonDown("Jump"))
                         pc.StateManager.EnterState(Entity.State.Idle);
                 }
-
                 pc.rb.velocity = new Vector3(0, pc.rb.velocity.y, 0);
             }
     
@@ -198,7 +189,6 @@ public class InputHandler : MonoBehaviour
                 // assign direction player is facing (maybe move this)
                 if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
                 {
-                    //Debug.Log("FlipEntitySprite(pc.Dir: " + pc.dir +")");
                     pc.FlipEntitySprite(pc.dir);
                     // flip weapon sprite
                     if (pc.weaponManager.WeaponEquipped)
@@ -212,19 +202,13 @@ public class InputHandler : MonoBehaviour
             {
                 if (Input.GetButtonUp("Jump"))
                 {
-                    /*
-                    Debug.Log("------- GetButtonUp ||pc.jumpcount = " + pc.jumpCount + " -------");
-                    if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed && pc.jumpEnabled && jumpDelayComplete)
-                        Commands.Add(jumpCommand);
-                    */
-
                     if (pc.button != null && pc.button.activeSelf)
                         pc.button.SetActive(false);
                 }
                 // Handles Jumping
                 if (Input.GetButtonDown("Jump"))
                 {
-                    Debug.Log("GetButtonDown ||pc.jumpcount = " + pc.jumpCount + " -------");
+                    //Debug.Log("GetButtonDown ||pc.jumpcount = " + pc.jumpCount + " -------");
 
                     #region testing input delay
                     //*** check if this is necessarry **\\
@@ -236,7 +220,7 @@ public class InputHandler : MonoBehaviour
                         pc.button.SetActive(true);
                     #endregion
                     
-                    if  (pc.jumpEnabled && jumpDelayComplete)
+                    if (pc.jumpEnabled && jumpDelayComplete)
                     {
                         if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
                             Commands.Add(jumpCommand);
@@ -336,7 +320,6 @@ public class InputHandler : MonoBehaviour
                     }   
                 }
             }
-
             return Commands;
         }
         return null;
