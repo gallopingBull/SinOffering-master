@@ -4061,36 +4061,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4534105344732034, guid: 020d737b447654e49b975cea805aab0c, type: 3}
   m_PrefabInstance: {fileID: 1977731974}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &484881914
+--- !u!1 &484881914 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 484881914, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
+  m_PrefabInstance: {fileID: 1505971323}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 484881915}
-  m_Layer: 9
-  m_Name: HandSocket
-  m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &484881915
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484881914}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2325, y: 0.33075, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1432646121}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &502272877
 GameObject:
   m_ObjectHideFlags: 0
@@ -13879,11 +13854,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 020d737b447654e49b975cea805aab0c, type: 3}
---- !u!4 &1432646121 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7930721911066637039, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
-  m_PrefabInstance: {fileID: 1505971323}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1446943854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14581,14 +14551,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7930721911102940776, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
-      propertyPath: m_Icon
+    - target: {fileID: 7930721911905566485, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
+      propertyPath: button
       value: 
-      objectReference: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
-    - target: {fileID: 7930721911565912306, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+      objectReference: {fileID: 484881914}
     - target: {fileID: 7930721911905566486, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
       propertyPath: m_RootOrder
       value: 0

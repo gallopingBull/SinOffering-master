@@ -7,15 +7,21 @@ public class WeaponManager : MonoBehaviour {
     public bool WeaponEquipped = false;
     public GameObject[] Weapons;
     public Transform LHandSocket, RHandSocket; 
+    public Transform mainHandSocket; 
 
-    private PlayerController parent; 
+    private PlayerController pc; 
 
     // Use this for initialization
-    void Awake () { parent = GetComponent<PlayerController>(); }
+    void Awake () { pc = GetComponent<PlayerController>(); }
 
     private void Start()
     {
         Invoke("InitWeapons", .2f);    
+    }
+
+    private void LateUpdate()
+    {
+        //UpdateWeaponSocket();
     }
 
     // give every weapon a default "temp" weaponattribute 
@@ -30,22 +36,51 @@ public class WeaponManager : MonoBehaviour {
     }
     public void EquipWeapon(int newWeapon)
     {   
-        if (parent.EquippedWeapon != null)
+        if (pc.EquippedWeapon != null)
         {
-            parent.ResetSpeed(); //reset player to default speed
-            parent.EquippedWeapon.SetActive(false);
+            pc.ResetSpeed(); //reset player to default speed
+            pc.EquippedWeapon.SetActive(false);
         }
         
         CurWeapon = newWeapon;
-        parent.EquippedWeapon = Weapons[CurWeapon];
+        pc.EquippedWeapon = Weapons[CurWeapon];
         // set weapon position/rotation
-        parent.EquippedWeapon.SetActive(true);
-        parent.EquippedWeapon.GetComponent<Weapon>().InitWeapon();
+        pc.EquippedWeapon.SetActive(true);
+        pc.EquippedWeapon.GetComponent<Weapon>().InitWeapon();
         WeaponEquipped = true;
         // have the weapon call InitWeapon()
         // wihtin itself instead
     }
     
+
+    private void UpdateWeaponSocket()
+    {
+        if (pc.inputHandler.aiming)
+        {
+            if (pc.inputHandler._aimDir != 1)
+            {
+                Vector3 tmpPos = pc.EquippedWeapon.transform.localPosition;
+                //Vector3 tmpRot = pc.EquippedWeapon.transform.eulerAngles;
+                tmpPos.x *= -100;
+                //tmpRot.z *= -1;
+                //Debug.Log("tmp.x: " + tmpPos.x);
+                pc.EquippedWeapon.transform.localPosition = tmpPos;
+            }
+            return;
+        }
+        if (pc.dir != 1)
+        {
+            //Debug.Log("in update");   
+            Vector3 tmpPos = pc.EquippedWeapon.transform.localPosition;
+            //Vector3 tmpRot = pc.EquippedWeapon.transform.eulerAngles;
+            tmpPos.x *= -100;
+            //tmpRot.z *= -1;
+            //Debug.Log("tmp.x: " + tmpPos.x);
+            pc.EquippedWeapon.transform.localPosition = tmpPos;
+            //pc.EquippedWeapon.transform.eulerAngles = tmpRot;
+        }
+    }
+
     //https://github.com/mucahits/rotateintervally/blob/master/RotateIntervally.cs
     // rotate intervally 
     public float GetTargetEuler(Vector3 touchPosition, float interval)
