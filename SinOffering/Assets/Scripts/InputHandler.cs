@@ -120,6 +120,7 @@ public class InputHandler : MonoBehaviour
                 if (Input.GetButtonUp("AimWeapon"))
                 {
                     aiming = false;
+                    pc.StateManager.EnterState(Entity.State.Idle);
                     // reset weapon position/rotation to default with movement direction
                     pc.EquippedWeapon.GetComponent<Weapon>().ResetPosition(pc.dir);
                 }

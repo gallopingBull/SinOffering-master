@@ -181,10 +181,9 @@ public abstract class Weapon : MonoBehaviour
         // if weapon not facing correct direction
         if (tmpDir != aimDirection)
             FlipWeaponSprite(tmpDir);
-        MoveWeaponToSocket(tmpDir);
         
-        transform.rotation = 
-            Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0);
+        MoveWeaponToSocket(tmpDir);
+        transform.rotation = Quaternion.Euler(0, 0, 0);
     }
         
     public virtual void FlipWeaponSprite(int dir)
@@ -208,9 +207,9 @@ public abstract class Weapon : MonoBehaviour
     { 
         // player facing right
         if (dir == 1)
-            WeaponSprite.transform.position = weaponManager.RHandSocket.position;
+            transform.position = weaponManager.RHandSocket.position;
         else
-            WeaponSprite.transform.position = weaponManager.LHandSocket.position;
+            transform.position = weaponManager.LHandSocket.position;
     }
     
     // rescales weapoon on x-axis

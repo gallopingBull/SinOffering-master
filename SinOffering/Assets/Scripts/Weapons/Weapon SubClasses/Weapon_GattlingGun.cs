@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Weapon_GattlingGun : Weapon 
 {
-
+    #region variables
     public float JumpSpeedModifier;
     public float RunSpeedModifier;
 
@@ -26,8 +26,9 @@ public class Weapon_GattlingGun : Weapon
     public AudioClip WeaponReadySound;
     public AudioClip WeaponAlarmSound;
 
-    public ParticleSystem ps; 
-
+    public ParticleSystem ps;
+    #endregion
+    #region functions
     public override void InitWeapon()
     {
         MaxAmmo = Ammo;
@@ -42,27 +43,10 @@ public class Weapon_GattlingGun : Weapon
 
     protected override void MoveWeaponToSocket(int dir)
     {
-        //MuzzleFire_Particle.transform.position = GetMuzzleDirection().transform.position;
         if (dir == 1)
-        {
-            WeaponSprite.transform.position =
-                pc.weaponManager.GetComponent<WeaponManager>().LHandSocket.position;
-        }
+            transform.position = pc.weaponManager.LHandSocket.position;
         else
-        {
-            WeaponSprite.transform.position =
-                pc.weaponManager.GetComponent<WeaponManager>().RHandSocket.position;
-
-        }
-
-
-        //ps.transform.position = GetMuzzleDirection().transform.position;
-
-
-        /*
-        MuzzleFire_Particle.transform.localScale = new Vector3(-MuzzleFire_Particle.transform.localScale.x,
-        MuzzleFire_Particle.transform.localScale.y,MuzzleFire_Particle.transform.localScale.z);
-        */
+            transform.position = pc.weaponManager.RHandSocket.position;
     }
 
     private void Update()
@@ -117,19 +101,15 @@ public class Weapon_GattlingGun : Weapon
             }
         }
     }
-
-    protected override void FixedUpdate() { }
-    
+  
     public override void ReleaseTrigger()
     {
-        print("trigger released");
         if (weaponReady)
         {
             curFireTime = 0;
             IsFiring = false;
         }
-        if (MuzzleFire_L_Particle.isPlaying ||
-            MuzzleFire_R_Particle.isPlaying)
+        if (MuzzleFire_L_Particle.isPlaying || MuzzleFire_R_Particle.isPlaying)
         {
             MuzzleFire_L_Particle.Stop();
             MuzzleFire_R_Particle.Stop();
@@ -144,8 +124,7 @@ public class Weapon_GattlingGun : Weapon
         {
             IsLocked = true;
             IsFiring = false;
-            if (MuzzleFire_L_Particle.isPlaying ||
-                MuzzleFire_R_Particle.isPlaying)
+            if (MuzzleFire_L_Particle.isPlaying || MuzzleFire_R_Particle.isPlaying)
             {
                 MuzzleFire_L_Particle.Stop();
                 MuzzleFire_R_Particle.Stop(); 
@@ -184,4 +163,5 @@ public class Weapon_GattlingGun : Weapon
         tmpProjectile.GetComponent<Projectile>().FireProjectile(dir);
         GetComponent<Recoil>().WeaponRecoil();
     }
+    #endregion
 }
