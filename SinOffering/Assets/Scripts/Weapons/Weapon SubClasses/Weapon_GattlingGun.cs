@@ -65,7 +65,7 @@ public class Weapon_GattlingGun : Weapon
         */
     }
 
-    protected override void Update()
+    private void Update()
     {
         if ((Input.GetButton("Fire1") || Input.GetAxis("RightTrigger") > 0 )&& weaponReady)
         {

@@ -146,10 +146,7 @@ public class InputHandler : MonoBehaviour
                     if (R_xRaw == 0)
                     {
                         if (_aimDir == 0)
-                        {
-                            //pc.FlipEntitySprite(pc.dir);
-                            //pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
-                        }
+                            _aimDir = pc.dir;
                         else
                         {
                             if (lastDirection != _aimDir)
@@ -161,24 +158,21 @@ public class InputHandler : MonoBehaviour
                     }
                     else
                     {
-                        pc.FlipEntitySprite(_aimDir);
+                        pc.FlipEntityAimingSprite(_aimDir);
                         if (_aimDir != 0) 
                         { 
                             pc.weaponManager.ModifyWeaponRotation(_aimDir, _aimDirection); 
                             SwapAimingSprite(_aimDir, _aimDirection);
                         }
-                       
                         pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
                     }
                     pc.EquippedWeapon.GetComponent<Weapon>().SetSpawnLoc();
                     lastDirection = _aimDir;
                 }
                 else
-                {
                     _aimDir = lastDirection = 0;
-                }
             }
-
+ 
             //Debug.Log("_aimDir" + _aimDir);   
             //Debug.Log("pc.Dir" + pc.dir);
 
@@ -186,12 +180,14 @@ public class InputHandler : MonoBehaviour
             // *** maybe make an idle command and it's added to the command list instead ***
             if (L_xRaw == 0)
             {
+
                 // maybe create a "IdleCommand" and move this there... idk yet
                 if (pc.IsGrounded && !aiming)
                 {
                     if (pc.state != Entity.State.Idle && !Input.GetButtonDown("Jump"))
                         pc.StateManager.EnterState(Entity.State.Idle);
                 }
+
                 pc.rb.velocity = new Vector3(0, pc.rb.velocity.y, 0);
             }
     
@@ -507,11 +503,7 @@ public class InputHandler : MonoBehaviour
     private void SwapAimingSprite(int dir, Vector3 angle)
     {
         var tmp = Quaternion.Euler(0, 0, GetTargetEuler(angle * dir, 45f));
-        //Debug.Log("tmp.z: " + angle.x);
-        //Debug.Log("tmp.eulerAngles.z: " + tmp.eulerAngles.z);
-
         float roundedFloat = Mathf.Round(tmp.eulerAngles.z);
-
 
         switch (roundedFloat)
         {
@@ -520,8 +512,6 @@ public class InputHandler : MonoBehaviour
                 if (angle.x > 0)
                 {
                     Debug.Log("angle.x > 0");
-                    // up-angle/facing-right: 45
-                    //if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Up"))
                     pc.animator.Play("Player_Shoot_Angled_Up")  ;
                 }
                 else

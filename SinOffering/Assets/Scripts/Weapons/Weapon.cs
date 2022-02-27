@@ -82,9 +82,7 @@ public abstract class Weapon : MonoBehaviour
         Recoil = GetComponent<Recoil>();
     }
     // might switch out fixedupdates for update
-    protected virtual void Update()
-    {
-    }
+
     protected virtual void FixedUpdate()
     {
         FireRateCheck();
@@ -180,7 +178,7 @@ public abstract class Weapon : MonoBehaviour
     {
         int tmpDir = pc.dir;
 
-        // if weapon not facing correcg direction
+        // if weapon not facing correct direction
         if (tmpDir != aimDirection)
             FlipWeaponSprite(tmpDir);
         MoveWeaponToSocket(tmpDir);
@@ -209,12 +207,10 @@ public abstract class Weapon : MonoBehaviour
     protected virtual void MoveWeaponToSocket(int dir)
     { 
         // player facing right
-
         if (dir == 1)
             WeaponSprite.transform.position = weaponManager.RHandSocket.position;
         else
             WeaponSprite.transform.position = weaponManager.LHandSocket.position;
-
     }
     
     // rescales weapoon on x-axis

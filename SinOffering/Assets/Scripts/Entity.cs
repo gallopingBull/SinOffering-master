@@ -276,73 +276,23 @@ public abstract class Entity : MonoBehaviour {
     // make this so it flips any sprite put into it
     public void FlipEntitySprite(int direction)
     {
-        //Debug.Log("1st. facingLeft: "+ facingLeft);
         if (GetComponent<PlayerController>().inputHandler.aiming)
         { 
             if (dir == direction)
                 return;
         }
-        //Debug.Log("2nd. facingLeft: " + facingLeft);
+
         facingLeft = direction > 0 ? false : true;
         ActorSprite.flipX = facingLeft;
         BloodActorSprite.flipX = facingLeft;
     }
-
-    #region oldFlipSprite
-
-    /*
-    public void FlipEntitySprite()
+    public void FlipEntityAimingSprite(int direction)
     {
-        // assign direction player is facing
-        if (Input.GetAxisRaw("Horizontal") > 0)
-        {
-            if (dir != 1)
-            {
-                dir = 1;
-                if (GetComponent<PlayerController>().inputHandler.aiming)
-                {
-                    facingLeft = GetComponent<PlayerController>().x_R_Raw > 0 ? false : true;
-                    ActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
-                    BloodActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
-                }
-                else
-                {
-                    facingLeft = false;
-                    ActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
-                    BloodActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
-                }
 
-                // flip weapon sprite
-                if (GetComponent<PlayerController>().EquippedWeapon != null)
-                    GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(dir);
-            }
-        }
-        if (Input.GetAxisRaw("Horizontal") < 0)
-        {
-            if (dir != -1)
-            {
-                dir = -1;
-                if (GetComponent<PlayerController>().inputHandler.aiming)
-                {
-                    facingLeft = GetComponent<PlayerController>().x_R_Raw > 0 ? false : true;
-                    ActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
-                    BloodActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
-                }
-                else
-                {
-                    facingLeft = true;
-                    ActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
-                    BloodActorSprite.GetComponent<SpriteRenderer>().flipX = facingLeft;
-                }
-             
-                // flip weapon sprite
-                if (GetComponent<PlayerController>().EquippedWeapon != null)
-                    GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(dir);
-            }
-        }
+        facingLeft = direction > 0 ? false : true;
+        ActorSprite.flipX = facingLeft;
+        BloodActorSprite.flipX = facingLeft;
     }
-    */
-    #endregion
 
 
     // Set default values for player parameters
