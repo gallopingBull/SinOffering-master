@@ -20,9 +20,11 @@ public class WeaponManager : MonoBehaviour {
         Invoke("InitWeapons", .2f);    
     }
 
-    private void LateUpdate()
+    private void Update()
     {
-        UpdateWeaponSocket();
+        if (pc.EquippedWeapon != null)
+            UpdateWeaponSocket();
+     
     }
 
     // give every weapon a default "temp" weaponattribute 
@@ -64,14 +66,21 @@ public class WeaponManager : MonoBehaviour {
                 tmpPos.x *= -handSocketOffsetValue;
                 mainHandSocket.localPosition= tmpPos;
             }
-            return;
+            
         }
-        if (pc.dir != 1)
+        else
         {
-            Vector3 tmpPos = mainHandSocket.localPosition;
-            tmpPos.x *= -handSocketOffsetValue;
-            mainHandSocket.localPosition = tmpPos;
+            if (pc.dir != 1)
+            {
+                Vector3 tmpPos = mainHandSocket.localPosition;
+                tmpPos.x *= -handSocketOffsetValue;
+                mainHandSocket.localPosition = tmpPos;
+            }
         }
+      
+
+        pc.EquippedWeapon.transform.position = mainHandSocket.position;
+
     }
 
     //https://github.com/mucahits/rotateintervally/blob/master/RotateIntervally.cs
@@ -94,13 +103,10 @@ public class WeaponManager : MonoBehaviour {
 
     public void ChangeWeapon()
     {
-        if (Input.GetButtonDown("SwapWeapon"))
-        {
-            if (CurWeapon != Weapons.Length - 1)
-                CurWeapon++;
-            else
-                CurWeapon = 0;
-        }
+        if (CurWeapon != Weapons.Length - 1)
+            CurWeapon++;
+        else
+            CurWeapon = 0;
         #region old - might delte later
         /*if (Input.GetAxis("ChangeWeapon") < 0)
         {

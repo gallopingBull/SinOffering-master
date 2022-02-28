@@ -318,7 +318,7 @@ public class InputHandler : MonoBehaviour
                     if ((Input.GetButton("Fire1") || Input.GetAxis("RightTrigger") == 1) &&
                         pc.EquippedWeapon != null)
                     {
-                        print("pressing trigger");
+                        //Debug.Log("pressing trigger");
                         if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
                             Commands.Add(fireCommand);
                     }   
@@ -496,7 +496,7 @@ public class InputHandler : MonoBehaviour
         switch (roundedFloat)
         {
             case 45:
-                Debug.Log("case 45:");
+                //Debug.Log("case 45:");
                 if (angle.x > 0)
                 {
                     Debug.Log("angle.x > 0");
@@ -504,7 +504,7 @@ public class InputHandler : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("angle.x < 0");
+                    //Debug.Log("angle.x < 0");
                     // down-angle/facing-left: 45
                     //.9238796
                     pc.animator.Play("Player_Shoot_Angled_Down");
@@ -518,22 +518,22 @@ public class InputHandler : MonoBehaviour
                 // center/facing-right: 0
 
 
-                Debug.Log("case 0:");
+                //Debug.Log("case 0:");
                 pc.animator.Play("Player_Shoot");
                 break;
 
             case 270:
-                Debug.Log("case 270:");
+                //Debug.Log("case 270:");
                 if (angle.x > 0)
                 {
-                    Debug.Log("angle.x > 0");
+                    //Debug.Log("angle.x > 0");
                     // down/facing-right: 270
                     if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Down"))
                         pc.animator.Play("Player_Shoot_Down");
                 }
                 else
                 {
-                    Debug.Log("angle.x < 0");
+                    //Debug.Log("angle.x < 0");
                     // up/facing-left: 270  
                     if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Up"))
                         pc.animator.Play("Player_Shoot_Up");
@@ -541,17 +541,17 @@ public class InputHandler : MonoBehaviour
                 break;
 
             case 315:
-                Debug.Log("case 315:");
+                //Debug.Log("case 315:");
                 if (angle.x > 0)
                 {
-                    Debug.Log("angle.x > 0");
+                    //Debug.Log("angle.x > 0");
                     // down-angle/facing-right: 315
                     if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Down"))
                         pc.animator.Play("Player_Shoot_Angled_Down");
                 }
                 else
                 {
-                    Debug.Log("angle.x < 0");
+                    //Debug.Log("angle.x < 0");
                     // up-angle/facing-left: 315
                     if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Up"))
                         pc.animator.Play("Player_Shoot_Angled_Up");
@@ -560,17 +560,17 @@ public class InputHandler : MonoBehaviour
 
 
             case 90:
-                Debug.Log("case 90:");
+                //Debug.Log("case 90:");
                 if (angle.x > 0)
                 {
-                    Debug.Log("angle.x > 0");
+                    //Debug.Log("angle.x > 0");
                     // up/facing-right: 90
                     if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Down"))
                         pc.animator.Play("Player_Shoot_Down");
                 }
                 else
                 {
-                    Debug.Log("angle.x < 0");
+                    //Debug.Log("angle.x < 0");
                     // down/facing-left: 90
                     if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Up"))
                         pc.animator.Play("Player_Shoot_Up");

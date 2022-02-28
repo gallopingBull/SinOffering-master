@@ -161,6 +161,12 @@ public abstract class Weapon : MonoBehaviour
     {
         MaxAmmo = Ammo;
         FlipWeaponSprite(pc.dir);
+        /*
+        if (pc.inputHandler.aiming)
+            ResetPosition(pc.inputHandler._aimDir);
+        else
+            ResetPosition(pc.dir);
+        */
     }
 
     public void SetWeaponAttributeFields()
@@ -177,7 +183,6 @@ public abstract class Weapon : MonoBehaviour
     public void ResetPosition(int aimDirection)
     {       
         FlipWeaponSprite(aimDirection);   
-        MoveWeaponToSocket();
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
         
@@ -195,12 +200,12 @@ public abstract class Weapon : MonoBehaviour
             if (BloodSprite != null)
                 BloodSprite.flipX = true;
         }
-            
-        MoveWeaponToSocket();
+
     }
     protected virtual void MoveWeaponToSocket()
     {
-        transform.position = weaponManager.mainHandSocket.position;
+    
+        //transform.position = weaponManager.mainHandSocket.position;
     }
     
     // rescales weapoon on x-axis

@@ -14382,10 +14382,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4244841998149482820, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7930721911905566486, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -14433,10 +14429,6 @@ PrefabInstance:
     - target: {fileID: 7930721911905566504, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930721911905566511, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}
-      propertyPath: handSocketOffsetValue
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 627e72457b6c5634b9215c0bfa4f2706, type: 3}

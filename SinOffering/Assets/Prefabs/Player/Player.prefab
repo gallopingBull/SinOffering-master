@@ -118,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 484881914}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.196, y: 0.3497, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7930721911066637039}
   m_RootOrder: 2
@@ -1483,10 +1483,8 @@ MonoBehaviour:
   - {fileID: 7930721911553112601}
   - {fileID: 3141151859236867302}
   - {fileID: 7930721910731512545}
-  LHandSocket: {fileID: 7930721911565912309}
-  RHandSocket: {fileID: 7930721911102940779}
   mainHandSocket: {fileID: 484881915}
-  handSocketOffsetValue: 1.1
+  handSocketOffsetValue: 1
 --- !u!114 &7930721911905566482
 MonoBehaviour:
   m_ObjectHideFlags: 0
