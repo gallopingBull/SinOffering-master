@@ -1485,6 +1485,8 @@ MonoBehaviour:
   - {fileID: 7930721910731512545}
   LHandSocket: {fileID: 7930721911565912309}
   RHandSocket: {fileID: 7930721911102940779}
+  mainHandSocket: {fileID: 484881915}
+  handSocketOffsetValue: 1.1
 --- !u!114 &7930721911905566482
 MonoBehaviour:
   m_ObjectHideFlags: 0

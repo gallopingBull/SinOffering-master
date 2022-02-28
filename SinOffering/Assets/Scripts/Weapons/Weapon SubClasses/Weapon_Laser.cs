@@ -31,22 +31,9 @@ public class Weapon_Laser : Weapon {
                      AmmountCamShake, SmoothTransition);
     }
 
-    protected override void MoveWeaponToSocket(int dir)
+    protected override void MoveWeaponToSocket()
     {
         //print("moce to socket called in weapoin_laser");
-        if (dir == 1)
-        {
-            lr.enabled = false;
-            WeaponSprite.transform.position = pc.weaponManager.GetComponent<WeaponManager>().LHandSocket.position;
-        }
-        else
-        {
-            lr.enabled = false;
-            WeaponSprite.transform.position = pc.weaponManager.GetComponent<WeaponManager>().RHandSocket.position;
-        }
-        if (!lr.enabled)
-            lr.enabled = true;
-
         //lr.transform.position = GetMuzzleDirection().transform.position;
     }
 

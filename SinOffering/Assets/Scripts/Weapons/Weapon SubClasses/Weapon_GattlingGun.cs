@@ -41,13 +41,12 @@ public class Weapon_GattlingGun : Weapon
         ModifyEntitySpeed(JumpSpeedModifier, RunSpeedModifier);
     }
 
-    protected override void MoveWeaponToSocket(int dir)
+    /*
+    protected override void MoveWeaponToSocket()
     {
-        if (dir == 1)
-            transform.position = pc.weaponManager.LHandSocket.position;
-        else
-            transform.position = pc.weaponManager.RHandSocket.position;
-    }
+        //transform.position = pc.weaponManager.RHandSocket.position;
+
+    }*/
 
     private void Update()
     {

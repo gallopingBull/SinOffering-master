@@ -110,7 +110,8 @@ public class StateManager : MonoBehaviour
                 pc.animator.Play("Player_Evade_Back");
                 pc.DisableInput();
                 pc.rb.velocity = Vector3.zero;
-
+                if (pc.EquippedWeapon != null)
+                    pc.EquippedWeapon.SetActive(false);
                 //pc.InputDelay.evadeDelay =
                 //pc.InputDelay.MAXEvadeDelay;
                 pc.state = Entity.State.evading;
@@ -260,7 +261,8 @@ public class StateManager : MonoBehaviour
                     GetComponent<EvadeCommand>().EvadeCount = 0;
                     GetComponent<EvadeCommand>().AirEvadeCount = 0; 
                 }
-
+                if (pc.EquippedWeapon != null)
+                    pc.EquippedWeapon.SetActive(true);
                 break;
             case Entity.State.meleeing:
                 //GetComponent<PlayerController>().ps.Stop();

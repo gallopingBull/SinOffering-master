@@ -6,9 +6,10 @@ public class WeaponManager : MonoBehaviour {
     public int CurWeapon;
     public bool WeaponEquipped = false;
     public GameObject[] Weapons;
-    public Transform LHandSocket, RHandSocket; 
-    public Transform mainHandSocket; 
-
+    
+    public Transform mainHandSocket;
+    [SerializeField]
+    private float handSocketOffsetValue = 1.25f;
     private PlayerController pc; 
 
     // Use this for initialization
@@ -21,7 +22,7 @@ public class WeaponManager : MonoBehaviour {
 
     private void LateUpdate()
     {
-        //UpdateWeaponSocket();
+        UpdateWeaponSocket();
     }
 
     // give every weapon a default "temp" weaponattribute 
@@ -59,25 +60,17 @@ public class WeaponManager : MonoBehaviour {
         {
             if (pc.inputHandler._aimDir != 1)
             {
-                Vector3 tmpPos = pc.EquippedWeapon.transform.localPosition;
-                //Vector3 tmpRot = pc.EquippedWeapon.transform.eulerAngles;
-                tmpPos.x *= -100;
-                //tmpRot.z *= -1;
-                //Debug.Log("tmp.x: " + tmpPos.x);
-                pc.EquippedWeapon.transform.localPosition = tmpPos;
+                Vector3 tmpPos = mainHandSocket.localPosition;
+                tmpPos.x *= -handSocketOffsetValue;
+                mainHandSocket.localPosition= tmpPos;
             }
             return;
         }
         if (pc.dir != 1)
         {
-            //Debug.Log("in update");   
-            Vector3 tmpPos = pc.EquippedWeapon.transform.localPosition;
-            //Vector3 tmpRot = pc.EquippedWeapon.transform.eulerAngles;
-            tmpPos.x *= -100;
-            //tmpRot.z *= -1;
-            //Debug.Log("tmp.x: " + tmpPos.x);
-            pc.EquippedWeapon.transform.localPosition = tmpPos;
-            //pc.EquippedWeapon.transform.eulerAngles = tmpRot;
+            Vector3 tmpPos = mainHandSocket.localPosition;
+            tmpPos.x *= -handSocketOffsetValue;
+            mainHandSocket.localPosition = tmpPos;
         }
     }
 

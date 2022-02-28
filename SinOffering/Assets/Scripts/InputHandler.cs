@@ -120,7 +120,7 @@ public class InputHandler : MonoBehaviour
                     aiming = false;
                     pc.StateManager.EnterState(Entity.State.Idle);
                     // reset weapon position/rotation to default with movement direction
-                    pc.EquippedWeapon.GetComponent<Weapon>().ResetPosition(pc.dir);
+                    pc.EquippedWeapon.GetComponent<Weapon>().ResetPosition(_aimDir);
                 }
 
                 if (aiming)
@@ -278,7 +278,11 @@ public class InputHandler : MonoBehaviour
 
                 // change weapons
                 if (Input.GetButtonDown("SwapWeapon"))
-                    pc.weaponManager.GetComponent<WeaponManager>().ChangeWeapon();
+                {
+                    pc.weaponManager.ChangeWeapon();
+                    pc.StateManager.EnterState(pc.state);
+                }
+                    
 
                 #region select weapons with numeric keys -- delete later
                 if (Input.GetKey(KeyCode.Alpha1))

@@ -175,14 +175,9 @@ public abstract class Weapon : MonoBehaviour
     }
         
     public void ResetPosition(int aimDirection)
-    {
-        int tmpDir = pc.dir;
-
-        // if weapon not facing correct direction
-        if (tmpDir != aimDirection)
-            FlipWeaponSprite(tmpDir);
-        
-        MoveWeaponToSocket(tmpDir);
+    {       
+        FlipWeaponSprite(aimDirection);   
+        MoveWeaponToSocket();
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
         
@@ -201,15 +196,11 @@ public abstract class Weapon : MonoBehaviour
                 BloodSprite.flipX = true;
         }
             
-        MoveWeaponToSocket(dir);
+        MoveWeaponToSocket();
     }
-    protected virtual void MoveWeaponToSocket(int dir)
-    { 
-        // player facing right
-        if (dir == 1)
-            transform.position = weaponManager.RHandSocket.position;
-        else
-            transform.position = weaponManager.LHandSocket.position;
+    protected virtual void MoveWeaponToSocket()
+    {
+        transform.position = weaponManager.mainHandSocket.position;
     }
     
     // rescales weapoon on x-axis
