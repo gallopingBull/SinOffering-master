@@ -58,13 +58,15 @@ public class WeaponManager : MonoBehaviour {
 
     private void UpdateWeaponSocket()
     {
+        Vector3 tmpPos = mainHandSocket.localPosition;
         if (pc.inputHandler.aiming)
         {
             if (pc.inputHandler._aimDir != 1)
             {
-                Vector3 tmpPos = mainHandSocket.localPosition;
+                Debug.Log("calling UpdateWeaponSocket() from aiming condition");
+              
                 tmpPos.x *= -handSocketOffsetValue;
-                mainHandSocket.localPosition= tmpPos;
+
             }
             
         }
@@ -72,13 +74,15 @@ public class WeaponManager : MonoBehaviour {
         {
             if (pc.dir != 1)
             {
-                Vector3 tmpPos = mainHandSocket.localPosition;
+                Debug.Log("calling UpdateWeaponSocket() from non-aiming condition");
+
+
                 tmpPos.x *= -handSocketOffsetValue;
-                mainHandSocket.localPosition = tmpPos;
+           
             }
         }
-      
 
+        mainHandSocket.localPosition = tmpPos;
         pc.EquippedWeapon.transform.position = mainHandSocket.position;
 
     }
