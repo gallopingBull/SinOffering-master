@@ -202,3 +202,22 @@ public class ISlice : MonoBehaviour
             PlayerController.instance.GetComponent<DashCommand>().targets.Remove(enemy);
     }
 }
+
+
+interface ISliceTest
+{
+
+    //Vector2 origin, end, dir;
+    
+    LayerMask Layermask { get; set; }
+    GameObject BloodTrailParticle { get; set; }
+    List<GameObject> GameObjectsToCut { get; set; }
+    float SphereCastRadius { get; set; }
+
+    public void Slice(Vector2 lineStart, Vector2 lineEnd, int layerMask = Physics2D.AllLayers, List<GameObject> targets = null, Vector2 _dir = new Vector2());
+    public bool HitCounts(RaycastHit2D hit);
+    public void InitGibs(SpriteCutterOutput output, GameObject go);
+    public void OnDrawGizmos();
+    public Vector2 RandomGibForce();
+    public void RemoveEnemyFromLists(GameObject enemy);
+}

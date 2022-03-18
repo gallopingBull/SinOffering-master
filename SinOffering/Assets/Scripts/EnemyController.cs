@@ -92,7 +92,7 @@ public class EnemyController : Entity {
         GetComponentInChildren<SpriteRenderer>().sprite = slicedSprite;
     }
 
-    protected override void InitActor()
+    protected override void InitEntity()
     {
         Target = GameObject.Find("Player");
         if (isAggro)
@@ -277,7 +277,7 @@ public class EnemyController : Entity {
         {
             curtime++;
             yield return new WaitForSeconds(FireDamageRate);
-            Damage(FireDamageAmmount);
+            Damaged(FireDamageAmmount);
 
             if (curtime >= MaxFireTime)
                 break;

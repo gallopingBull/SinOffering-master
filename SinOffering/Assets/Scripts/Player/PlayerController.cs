@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCustomer
@@ -32,7 +33,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     public float yRaw;
 
     [SerializeField]
-    private PlayerAttributes attributes = new PlayerAttributes();
+    private PlayerAttributes _attributes = new PlayerAttributes();
 
     [HideInInspector]
     public bool AbilitiesEnabled = true; // turn off when player in areas that they can't use special abilities
@@ -43,11 +44,9 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     public bool JumpButtonHeldDown = false;
 
     //[HideInInspector]
-    public float delay = 0f; // delay between jump input    
+    public float delay = 0f; // delay between jump input        
     //[HideInInspector]
-    public float MAX_delay = .3f; // delay between jump input
-    //[HideInInspector]
-    public bool delayComplete = true;
+    public const float MAX_DELAY = .3f; // delay between jump input
 
     //weapons variables
     public SpriteRenderer MeleeSprite;
@@ -57,8 +56,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     [HideInInspector]
     public WeaponManager weaponManager;
 
-    [HideInInspector]
-    public ParticleSystem ps;
+    private ParticleSystem _particleSystem;
 
 
     public AudioClip jumpClip, landClip, dashClip;
@@ -72,7 +70,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
 
 
-    public PlayerAttributes Attributes { get => attributes; set => attributes = value; }
+    public PlayerAttributes Attributes { get => _attributes; set => _attributes = value; }
 
 
     #endregion
@@ -80,7 +78,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     #region functions
 
     private void Awake() { instance = this; }
-    // Update is called once per frame
+
     // ***USE ONLY FOR PHYSICS CALCULATIONS*** \\\
     protected override void FixedUpdate()
     {
@@ -124,7 +122,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         }
     }
 
-    protected override void InitActor()
+    protected override void InitEntity()
     {
         StateManager = GetComponent<StateManager>();
 
@@ -140,9 +138,15 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         animator = GetComponentInChildren<Animator>();
         inputHandler = GetComponent<InputHandler>();
         weaponManager = GetComponent<WeaponManager>();
-        ps = GetComponent<ParticleSystem>(); 
+        _particleSystem = GetComponent<ParticleSystem>(); 
         InputDelay = GetComponent<InputDelay>();
     }
+    /*
+    public override void Damaged(float damageValue)
+    {
+        base.Damaged(damageValue);
+
+    }*/
 
     // Called when Player has been killed.
     public override void Killed()
@@ -324,7 +328,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     public void SetPersistentPlayerAttributeData(PlayerAttributes _attributes)
     {
-        attributes = _attributes;
+        this._attributes = _attributes;
         SetAttributeValues();
     }
      
@@ -333,20 +337,20 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         var dataBase = AttributeDatabase._instance.GetAttributeDatabase();
 
         int maxLength = dataBase["health"].AttributeDataList.Length;
-        if (attributes.HealthAttributeLevel < maxLength)
-            Health = dataBase["health"].AttributeDataList[attributes.HealthAttributeLevel].AttributeValue;
+        if (_attributes.HealthAttributeLevel < maxLength)
+            Health = dataBase["health"].AttributeDataList[_attributes.HealthAttributeLevel].AttributeValue;
         
         maxLength = dataBase["speed"].AttributeDataList.Length;
-        if (attributes.SpeedAttributeLevel < maxLength)
-            Speed = dataBase["speed"].AttributeDataList[attributes.SpeedAttributeLevel].AttributeValue;
+        if (_attributes.SpeedAttributeLevel < maxLength)
+            Speed = dataBase["speed"].AttributeDataList[_attributes.SpeedAttributeLevel].AttributeValue;
 
         maxLength = dataBase["mana"].AttributeDataList.Length;
-        if (attributes.ManaAttributeLevel < maxLength)
-            Mana = dataBase["mana"].AttributeDataList[attributes.ManaAttributeLevel].AttributeValue;
+        if (_attributes.ManaAttributeLevel < maxLength)
+            Mana = dataBase["mana"].AttributeDataList[_attributes.ManaAttributeLevel].AttributeValue;
 
         maxLength = dataBase["strength"].AttributeDataList.Length;
-        if (attributes.StrengthAttributeLevel < maxLength)
-            Strength = dataBase["strength"].AttributeDataList[attributes.StrengthAttributeLevel].AttributeValue;
+        if (_attributes.StrengthAttributeLevel < maxLength)
+            Strength = dataBase["strength"].AttributeDataList[_attributes.StrengthAttributeLevel].AttributeValue;
     }
 
     // store functions (might want to move these interfaces in to their own class,
@@ -423,29 +427,29 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         switch (_upgradeType)
         {
             case AttributeUpgradeTypes.UpgradeType.health:
-                attributes.HealthAttributeLevel++;
+                _attributes.HealthAttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.mana:
-                attributes.ManaAttributeLevel++;
+                _attributes.ManaAttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.strength:
-                attributes.StrengthAttributeLevel++;
+                _attributes.StrengthAttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.speed:
-                attributes.SpeedAttributeLevel++;
+                _attributes.SpeedAttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.dashAttack:
-                attributes.DashAttack_AttributeLevel++;
+                _attributes.DashAttack_AttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.dashSlam:
-                attributes.DashSlam_AttributeLevel++;
+                _attributes.DashSlam_AttributeLevel++;
                 break;
             case AttributeUpgradeTypes.UpgradeType.postDashAttack:
-                attributes.PostDashAttack_AttributeLevel++;
+                _attributes.PostDashAttack_AttributeLevel++;
                 break;
 
             case AttributeUpgradeTypes.UpgradeType.evade:
-                attributes.EvadeAttributeLevel++;
+                _attributes.EvadeAttributeLevel++;
                 break;
 
             default:

@@ -81,7 +81,7 @@ public class Projectile_Laser : Projectile
         //if (other.gameObject.tag == "Player") { }
         if (other.gameObject.tag == "Enemy")
         {
-            other.gameObject.GetComponentInParent<Entity>().Damage(DamageAmmount);
+            other.gameObject.GetComponentInParent<Entity>().Damaged(DamageAmmount);
             EnableImpactParticle(GetComponent<Transform>(), other.gameObject.tag);
         }
 

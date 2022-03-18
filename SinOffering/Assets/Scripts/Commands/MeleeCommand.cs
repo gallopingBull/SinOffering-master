@@ -58,7 +58,7 @@ public class MeleeCommand : ICommand {
                     if (!hitEnemies[i].gameObject.GetComponent<EnemyController>().dying)
                     {
                         //hitEnemies[i].gameObject.GetComponent<EnemyController>().Damage(.5f);
-                        hitEnemies[i].gameObject.GetComponent<EnemyController>().Damage(10f);
+                        hitEnemies[i].gameObject.GetComponent<EnemyController>().Damaged(10f);
                     }       
                 }
             }

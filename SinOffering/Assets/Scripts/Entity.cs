@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -87,11 +88,21 @@ public abstract class Entity : MonoBehaviour {
     //[HideInInspector]
     public int BloodCount = 0;
 
+
+
+    //public delegate void OnDamaged(float i);
+    //public OnDamaged onDamaged;
+    //public event Action<float> onDamageAction; 
+
+    //public delegate void OnKilled();
+    //public OnKilled onKilled; 
+
+
     #endregion
 
     #region functions
     protected abstract void FixedUpdate();
-    protected abstract void InitActor();
+    protected abstract void InitEntity();
     public abstract void Killed();
 
     private void Start()
@@ -99,7 +110,7 @@ public abstract class Entity : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         gameManager = GameManager.instance;
         camManager = CameraManager.instance; 
-        InitActor();
+        InitEntity();
     }
 
     protected virtual void CheckIfFalling()
@@ -218,13 +229,12 @@ public abstract class Entity : MonoBehaviour {
     }
 
     // Called when actor has taken damaged.
-    public void Damage(float _damageValue)
+    public virtual void Damaged(float damageValue)
     {
         if (!isInvincible)
         {
             StartCoroutine("DamageIndicator");
-            Health -= _damageValue;
-
+            Health -= damageValue;
             if (gameObject.name != "Player")
             {
                 Vector3 tmpVel = new Vector3(.5f, -.25f, 0);
@@ -233,10 +243,8 @@ public abstract class Entity : MonoBehaviour {
                 CanMove = false;
             }
             else
-            {
-                HUDManager._instance.UpdateHealthBar(_damageValue);
-            }
- 
+                GameEvents.OnDamageEvent?.Invoke(damageValue);
+
             if (Health <= 1)
                 Killed();
         }
@@ -337,3 +345,11 @@ public abstract class Entity : MonoBehaviour {
     #endregion
 }
 
+
+public static class GameEvents
+{
+    static public Action<float> OnDamageEvent;
+    static public Action OnKilledEvent;
+    static public Action<int> OnManaUpdateEvent;
+    static public Action<int> OnCurrencyUpdateEvent;
+}

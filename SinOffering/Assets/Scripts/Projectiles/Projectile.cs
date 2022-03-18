@@ -46,7 +46,7 @@ public  class Projectile : MonoBehaviour
             //print("other: " + other.name);
             if (other.gameObject.tag == "Enemy")
             {
-                other.gameObject.GetComponentInParent<Entity>().Damage(DamageAmmount);
+                other.gameObject.GetComponentInParent<Entity>().Damaged(DamageAmmount);
                 other.gameObject.GetComponentInParent<RecoilTest>().WeaponRecoil(direction);   
 
                 EnableImpactParticle(GetComponent<Transform>(), other.gameObject.tag);

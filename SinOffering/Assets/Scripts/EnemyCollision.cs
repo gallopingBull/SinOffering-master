@@ -29,7 +29,7 @@ public class EnemyCollision : MonoBehaviour {
         }
         if (col.gameObject.tag == "Player" && !parent.dying)
         {
-            col.GetComponent<Entity>().Damage(1);
+            col.GetComponent<Entity>().Damaged(1);
         }
     }
 }

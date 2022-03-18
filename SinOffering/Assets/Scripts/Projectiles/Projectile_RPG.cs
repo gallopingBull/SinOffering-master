@@ -52,7 +52,7 @@ public class Projectile_RPG : Projectile
             if (other.gameObject.tag == "Enemy")
             {
                 blownUp = true;
-                other.gameObject.GetComponentInParent<Entity>().Damage(DamageAmmount);
+                other.gameObject.GetComponentInParent<Entity>().Damaged(DamageAmmount);
                 other.gameObject.GetComponentInParent<RecoilTest>().WeaponRecoil(direction);
 
                 EnableImpactParticle(GetComponent<Transform>(), other.gameObject.tag);
