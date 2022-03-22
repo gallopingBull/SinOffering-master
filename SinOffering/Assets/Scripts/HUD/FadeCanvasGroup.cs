@@ -3,69 +3,65 @@ using UnityEngine;
 
 public class FadeCanvasGroup : MonoBehaviour
 {
-    [HideInInspector]
-    //public static FadeCanvasGroup _instance;
-    private CanvasGroup canvasGroup;
-    //private Queue<CanvasGroup> canvasGroups;
-
-    private bool fadeEnabled = false;
-  
-    private float targetAlpha;
-    private float currentAlpha;
     [SerializeField]
-    private float fadeDuration = 2;
-
+    private float _fadeDuration = 2;
+    
+    static private bool _fadeEnabled = false;
+    static private float _targetAlpha;
+    static private float _currentAlpha;
+    static private CanvasGroup _canvasGroup;
+ 
     private void Awake()
     {
-        // if (_instance != null)
-        //   return;
-        //_instance = this;
-        if (canvasGroup != null)
-            return;
-
-        canvasGroup = GetComponent<CanvasGroup>();
+        //_canvasGroup = GetComponent<CanvasGroup>();
         //canvasGroups = new Queue<CanvasGroup>();
     }
 
     private void FixedUpdate()
     {
-        if (fadeEnabled)
+        if (_fadeEnabled)
         {
             // fade in/out calculation
             // magic number, test to see if it reeally makes a difference when scaling faderate time
-            currentAlpha = Mathf.MoveTowards(currentAlpha, targetAlpha, fadeDuration * Time.fixedDeltaTime *1.15f); 
-            canvasGroup.alpha = currentAlpha;
-            if (currentAlpha == targetAlpha)
-                fadeEnabled = false;
+            _currentAlpha = Mathf.MoveTowards(_currentAlpha, _targetAlpha, _fadeDuration * Time.fixedDeltaTime *1.15f); 
+            _canvasGroup.alpha = _currentAlpha;
+            if (_currentAlpha == _targetAlpha)
+            {
+                _fadeEnabled = false;
+                _canvasGroup = null;
+            }      
         } 
     }
 
     public void FadeInCanvasGroup()
     {
-        currentAlpha = 0;
-        targetAlpha = 1;
-        fadeEnabled = true;
+        
+        _currentAlpha = 0;
+        _targetAlpha = 1;
+        _fadeEnabled = true;
     }
     public void FadeOutCanvasGroup()
     {
-        currentAlpha = 1;
-        targetAlpha = 0;
-        fadeEnabled = true;
+        _currentAlpha = 1;
+        _targetAlpha = 0;
+        _fadeEnabled = true;
     }
-    public void FadeInCanvasGroup(CanvasGroup canvas)
+    static public void FadeInCanvasGroup(CanvasGroup canvas)
     {
-        currentAlpha = 0;
-        targetAlpha = 1;
-        canvasGroup = canvas;
-        fadeEnabled = true;
+        Debug.Log("calling FadeIn from: " + canvas.name);
+        _canvasGroup = canvas;
+        _currentAlpha = 0;
+        _targetAlpha = 1;
+        _fadeEnabled = true;
     }
 
-    public void FadeOutCanvasGroup(CanvasGroup canvas) 
+    static public void FadeOutCanvasGroup(CanvasGroup canvas) 
     {
-        currentAlpha = 1;
-        targetAlpha = 0;
-        canvasGroup = canvas;
-        fadeEnabled = true;
+        Debug.Log("calling FadeIn from: " + canvas.name);
+        _canvasGroup = canvas;
+        _currentAlpha = 1;
+        _targetAlpha = 0;
+        _fadeEnabled = true;
     }
 
     #region queue testing

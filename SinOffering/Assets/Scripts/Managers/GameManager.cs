@@ -318,7 +318,6 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
         enemyManager.GetComponentInChildren<EnemySpawner>().DisableSpawner();
         GameFailedPanel.SetActive(true);
 
-
         if (_offeringData.gameMode == GameMode.randomGunBoxes)
             _pointsText.GetComponentInParent<CanvasGroup>().alpha = 0;
 
@@ -378,12 +377,11 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
             SpawnCrate();
     }
 
-
     public void IncrementSilver(int value)
     {
         _offeringResults.totalSilverAccrued += value; 
         TotalSilver += value;
-        HUDManager._instance.SetUIObjectValues();
+        GameEvents.OnCurrencyUpdateEvent?.Invoke(TotalSilver);
     }
 
     public void IncrementKillCount(int value)
@@ -400,9 +398,10 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
 
     public void DecrementSilver(int value)
     {
-        //_offeringResults.totalSilverAccrued -= value; // maybe an enemy that steals some silver during combat
+        // maybe an enemy that steals some silver during combat
+        //_offeringResults.totalSilverAccrued -= value; 
         TotalSilver -= value;
-        HUDManager._instance.SetUIObjectValues();
+        GameEvents.OnCurrencyUpdateEvent?.Invoke(TotalSilver);
     }
 
     private void SpawnCrate()

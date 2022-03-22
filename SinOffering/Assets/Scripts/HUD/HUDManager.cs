@@ -7,7 +7,6 @@ using TMPro;
 using UnityEngine;
 
 // manager class that handles singleton instance of player HUD
-
 public class HUDManager : MonoBehaviour
 {
     #region variables
@@ -16,9 +15,6 @@ public class HUDManager : MonoBehaviour
 
     private PlayerController pc;
 
-    // reference to GO that UI Canvas is nested in.
-    [SerializeField]
-    private GameObject _hudGO;
     // reference to canvas group alpha value for HUD gameobject.
     public CanvasGroup hud_CanvasGroup;
 
@@ -58,13 +54,11 @@ public class HUDManager : MonoBehaviour
         if (_instance != null)
             return;
         _instance = this;
-
-        //fadeCanvas = FadeCanvasGroup._instance;
         _currentScene = SceneManager.GetActiveScene();
     }
+    
     void Start()
     {
-        _hudGO = transform.Find("HUD").gameObject;
         pc = PlayerController.instance;
         hud_CanvasGroup = GetComponent<CanvasGroup>();
         SetUIObjects();
@@ -72,6 +66,7 @@ public class HUDManager : MonoBehaviour
         if (_currentScene.name == "HubScene")
             HideHUD();
     }
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.H))
@@ -81,10 +76,17 @@ public class HUDManager : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.OnDamageEvent += HandleHealthBar;
+        GameEvents.OnManaUpdateEvent += UpdateManaBar;
+        GameEvents.OnCurrencyUpdateEvent += UpdateSilverValue;
+        GameEvents.OnFaithUpdateEvent += UpdateFaithValue;
     }
+
     private void OnDisable()
     {
         GameEvents.OnDamageEvent -= HandleHealthBar;
+        GameEvents.OnManaUpdateEvent -= UpdateManaBar;
+        GameEvents.OnCurrencyUpdateEvent -= UpdateSilverValue;
+        GameEvents.OnFaithUpdateEvent -= UpdateFaithValue;
     }
 
     private void SetUIObjects()
@@ -94,8 +96,9 @@ public class HUDManager : MonoBehaviour
         _silverText = GameObject.Find("Text_Silver_HUD").GetComponent<TextMeshProUGUI>();
         _faithText = GameObject.Find("Text_FaithTotal_HUD").GetComponent<TextMeshProUGUI>();
     }
+    
     public void SetUIObjectValues()
-    {
+    {   
         _healthValue = pc.Health / 100; // change 100 to maxHealth
         _healthBar.fillAmount = _healthValue;
 
@@ -116,38 +119,20 @@ public class HUDManager : MonoBehaviour
         else
             HideHUD();
     }
-    private void DisplayHUD()   
-    {
-        SetUIObjectValues();
-        GetComponent<FadeCanvasGroup>().FadeInCanvasGroup();
-    }
+    
+    private void DisplayHUD() => FadeCanvasGroup.FadeInCanvasGroup(hud_CanvasGroup);
 
-    public void HideHUD()
-    {
-        GetComponent<FadeCanvasGroup>().FadeOutCanvasGroup();
-    }
+    public void HideHUD() => FadeCanvasGroup.FadeOutCanvasGroup(hud_CanvasGroup);
 
-    public void HandleHealthBar(float value)
-    {
-        _healthValue = pc.Health / 100;// change 100 to maxHealth
-        _healthBar.fillAmount = _healthValue;
-    }
+    public void HandleHealthBar(float value) => _healthBar.fillAmount =  value / 100;
 
     void UpdateManaBar(float value)
     {
-        _manaValue = pc.Mana;
+        _manaValue = value;
         _manaBar.fillAmount = _manaValue / 100; // change 100 to maxMana
     }
-    void UpdateSilverValue(int value)
-    {
-        silverValue = GameManager.instance.TotalSilver;
-        _silverText.text = silverValue.ToString();
 
-    }
-    void UpdateFaithValue(int value)
-    {
-        _faithValue = GameManager.instance.TotalCurrentFaith;
-        _faithText.text = _faithValue.ToString();
-    }
+    void UpdateSilverValue(int value) => _silverText.text = value.ToString();
+    void UpdateFaithValue(int value) => _faithText.text = value.ToString();
     #endregion
 }

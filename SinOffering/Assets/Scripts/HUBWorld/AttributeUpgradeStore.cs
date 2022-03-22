@@ -186,10 +186,7 @@ public class AttributeUpgradeStore : MonoBehaviour
     }
 
     // customer/player is assigned at store trigger (DisplayButton.cs)
-    public void AssignCustomer(IAttributeStoreCustomer _customer)
-    {
-        customer = _customer;
-    }
+    public void AssignCustomer(IAttributeStoreCustomer _customer) => customer = _customer;
 
     private int GetRespecCost()
     {

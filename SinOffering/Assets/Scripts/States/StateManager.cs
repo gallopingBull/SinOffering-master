@@ -6,15 +6,10 @@ public class StateManager : MonoBehaviour
 {
     private PlayerController pc;
     private int hitCount = 0;
-    private void Awake()
-    {
-        pc = GetComponent<PlayerController>();
-    }
+    private void Awake() => pc = GetComponent<PlayerController>();
     public void EnterState(Entity.State _state)
     {
         ExitState(pc.state);
-        //Debug.Log("exiting state: " + pc.state);
-        //Debug.Log("entering state: " + _state);
         switch (_state)
         {
             case Entity.State.Idle:
@@ -53,7 +48,7 @@ public class StateManager : MonoBehaviour
                     pc.CanDoubleJump = true;
                 
                 pc.jumpCount++;
-                Debug.Log("pc.jumpCount: " + pc.jumpCount);     
+                //Debug.Log("pc.jumpCount: " + pc.jumpCount);     
                 break;
 
             case Entity.State.dashing:
@@ -92,7 +87,6 @@ public class StateManager : MonoBehaviour
                     if (pc.inputHandler.aiming)
                         break;
                     pc.animator.Play("Player_Run_Shoot");
-
                 }
                     
                 break;
@@ -118,12 +112,12 @@ public class StateManager : MonoBehaviour
                 pc.isInvincible = true;
                 pc.jumpEnabled = false;
                 pc.CanDoubleJump = false;
-                //GetComponent<PlayerController>().ps.Play();
+                // play particles
                 pc.rb.useGravity = false;
 
                 GetComponent<DashCommand>().DisableCollisions();
-                GetComponent<DashCommand>().ChangeRigidbodyValues(); //adjust entity's rigigidbody values in order to dash correctly
-
+                //adjust entity's rigigidbody values in order to dash correctly
+                GetComponent<DashCommand>().ChangeRigidbodyValues(); 
                 SoundManager.PlaySound(pc.dashClip);
                 break;
 
@@ -185,16 +179,13 @@ public class StateManager : MonoBehaviour
                 //pc.isInvincible = true;
                 pc.jumpEnabled = false;
                 pc.CanDoubleJump = false;
-                //GetComponent<PlayerController>().ps.Play();
-                //pc.rb.useGravity = false;
-
-                //EnterState(Entity.State.Idle);
-
-                //GetComponent<DashCommand>().DisableCollisions();
-                //GetComponent<DashCommand>().ChangeRigidbodyValues(); //adjust entity's rigigidbody values in order to dash correctly
-
+                // play particle
                 //SoundManager.PlaySound(pc.dashClip);
 
+                //pc.rb.useGravity = false;
+                //EnterState(Entity.State.Idle);
+                //GetComponent<DashCommand>().DisableCollisions();
+                //GetComponent<DashCommand>().ChangeRigidbodyValues(); //adjust entity's rigigidbody values in order to dash correctly
 
                 break;
         }

@@ -109,6 +109,9 @@ public class SaveSystem : MonoBehaviour
         gameManager.TotalSilver = _gameData.TotalSilver;
         gameManager.TotalCurrentFaith = _gameData.TotalFaith;
         gameManager.TotalFaithSpent = _gameData.TotalFaithSpent;
+
+        GameEvents.OnCurrencyUpdateEvent?.Invoke(gameManager.TotalSilver);
+        GameEvents.OnFaithUpdateEvent?.Invoke(gameManager.TotalCurrentFaith);
     }
     private void SavePlayerSettings()
     {

@@ -5,7 +5,8 @@ using UnityEngine;
 
 public abstract class Entity : MonoBehaviour {
     #region variables
-    public float Health = 3;
+    [SerializeField]
+    private float _health = 3;
 
     //Movement Variables
     public float Speed = 0;
@@ -64,8 +65,6 @@ public abstract class Entity : MonoBehaviour {
     protected CameraManager camManager;
     public List<Collider> colliders;
 
-
-
     //foot dust trail variables
     [SerializeField]
     protected bool EnableDustTrails = false; //field for user to toggle dust trails from inspector 
@@ -74,7 +73,6 @@ public abstract class Entity : MonoBehaviour {
     protected int dustTrailIndex = 0;
 
     protected int curSteps;
-
 
     public float AmmountToGround = .75f;
     [SerializeField]
@@ -88,6 +86,8 @@ public abstract class Entity : MonoBehaviour {
     //[HideInInspector]
     public int BloodCount = 0;
 
+    public float Health { get => _health; set => _health = value; }
+
 
 
     //public delegate void OnDamaged(float i);
@@ -96,7 +96,6 @@ public abstract class Entity : MonoBehaviour {
 
     //public delegate void OnKilled();
     //public OnKilled onKilled; 
-
 
     #endregion
 
@@ -234,7 +233,7 @@ public abstract class Entity : MonoBehaviour {
         if (!isInvincible)
         {
             StartCoroutine("DamageIndicator");
-            Health -= damageValue;
+            _health -= damageValue;
             if (gameObject.name != "Player")
             {
                 Vector3 tmpVel = new Vector3(.5f, -.25f, 0);
@@ -243,16 +242,18 @@ public abstract class Entity : MonoBehaviour {
                 CanMove = false;
             }
             else
-                GameEvents.OnDamageEvent?.Invoke(damageValue);
+                GameEvents.OnDamageEvent?.Invoke(_health);
 
-            if (Health <= 1)
+
+            if (_health <= 1)
                 Killed();
         }
     }
 
     private IEnumerator DamageIndicator()
     {
-        if (ActorSprite != null) {
+        if (ActorSprite != null) 
+        {
             ActorSprite.color = Color.red;
             yield return new WaitForSeconds(.05f);
             ActorSprite.color = Color.white;
@@ -272,12 +273,8 @@ public abstract class Entity : MonoBehaviour {
         foreach (Transform mask in transforms)
         {
             if (mask.name == "Blood Sprite Mask(Clone)")
-            {
-                //print("removing mask from" + gameObject.name);
                 MaskDecalPool.instance.DeParentMasks(mask.gameObject);
-            }
         }
-        //print("finshed removing mask(s) from: " + gameObject.name);
     }
 
     // flip enity's sprite
@@ -285,10 +282,8 @@ public abstract class Entity : MonoBehaviour {
     public void FlipEntitySprite(int direction)
     {
         if (GetComponent<PlayerController>().inputHandler.aiming)
-        { 
             if (dir == direction)
                 return;
-        }
 
         facingLeft = direction > 0 ? false : true;
         ActorSprite.flipX = facingLeft;
@@ -296,7 +291,6 @@ public abstract class Entity : MonoBehaviour {
     }
     public void FlipEntityAimingSprite(int direction)
     {
-
         facingLeft = direction > 0 ? false : true;
         ActorSprite.flipX = facingLeft;
         BloodActorSprite.flipX = facingLeft;
@@ -318,7 +312,6 @@ public abstract class Entity : MonoBehaviour {
 
     protected void SpawnDustTrail()
     {
-        //print(gameObject.name + " spawming dust trail");
         if (dustTrailIndex <= 2)
         {
             GameObject tmp; 
@@ -350,6 +343,7 @@ public static class GameEvents
 {
     static public Action<float> OnDamageEvent;
     static public Action OnKilledEvent;
-    static public Action<int> OnManaUpdateEvent;
+    static public Action<float> OnManaUpdateEvent;
     static public Action<int> OnCurrencyUpdateEvent;
+    static public Action<int> OnFaithUpdateEvent;
 }

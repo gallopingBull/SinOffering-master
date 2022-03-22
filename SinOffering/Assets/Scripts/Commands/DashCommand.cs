@@ -619,6 +619,7 @@ public class DashCommand : ICommand
             if (ManaUI.fillAmount > 0)
             {
                 pc.Mana -= 25f;
+                //GameEvents.OnManaUpdateEvent();
                 ManaUI.fillAmount -= DashManaCost/200;
             }
         }

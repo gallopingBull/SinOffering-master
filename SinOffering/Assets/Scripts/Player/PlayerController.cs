@@ -98,7 +98,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     {
         if (inputHandler)
             InputHandler();
-
         // spawn dust trails
         if (state == State.running && IsGrounded)
         {
@@ -316,15 +315,9 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         }
     }   
 
-    public void EnableInput()
-    {
-        InputEnabled = true;
-    }
+    public void EnableInput() => InputEnabled = true;
 
-    public void DisableInput()
-    {
-        InputEnabled = false;
-    }
+    public void DisableInput() => InputEnabled = false;
 
     public void SetPersistentPlayerAttributeData(PlayerAttributes _attributes)
     {
@@ -366,17 +359,16 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         }
         //Debug.Log("Purchased: " + _weaponName);
     }
+    
     bool IWeaponStoreCustomer.CanPurchaseWeapon(int _price)
     {
         // check if already purchased or if
         // player has enough silver for weapon
-
         if (gameManager.TotalSilver < _price)
             return false;
 
         gameManager.TotalSilver -= _price;
         return true;
-
     }
     void IWeaponStoreCustomer.PurchaseWeaponUpgrade(string _weaponName, WeaponUpgradeTypes.UpgradeType upgradeType)
     {

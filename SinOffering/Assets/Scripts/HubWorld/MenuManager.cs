@@ -39,7 +39,6 @@ public class MenuManager : MonoBehaviour
     private void Start()
     {
         weaponDatabase = WeaponDatabase._instance.GetWeaponDatabase();
-        //fadeCanvas = FadeCanvasGroup._instance;
     }
     private void Update()
     {
@@ -214,7 +213,8 @@ public class MenuManager : MonoBehaviour
         // play some buttton animation 
         // play some exit menu transition animation 
         //fadeCanvas.FadeOutCanvasGroup(menus[index].GetComponent<CanvasGroup>());
-        menus[index].GetComponent<FadeCanvasGroup>().FadeOutCanvasGroup();
+        FadeCanvasGroup.FadeOutCanvasGroup(menus[index].GetComponent<CanvasGroup>());
+        //menus[index].GetComponent<FadeCanvasGroup>().FadeOutCanvasGroup();
 
         menus[index].SetActive(false);
     }
@@ -225,10 +225,8 @@ public class MenuManager : MonoBehaviour
         Debug.Log("dispalying: " + menus[index].GetComponent<CanvasGroup>());
         
         // change alpha value of canvas group here
-        menus[index].GetComponent<FadeCanvasGroup>().FadeInCanvasGroup();
-        //fadeCanvas.FadeInCanvasGroup(menus[index].GetComponent<CanvasGroup>());
-
-
+        //menus[index].GetComponent<FadeCanvasGroup>().FadeInCanvasGroup();
+        FadeCanvasGroup.FadeInCanvasGroup(menus[index].GetComponent<CanvasGroup>());
     }
     private void InitStore(GameObject menu, UpgradeMenu _menu)
     { 

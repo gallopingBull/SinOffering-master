@@ -50,9 +50,7 @@ public class JumpCommand : ICommand {
             {
                 //print("jumping from falling state");
                 // zero out y velocity
-                pc.rb.velocity = new Vector3(pc.rb.velocity.x, 0,
-                    pc.rb.velocity.z);
-
+                pc.rb.velocity = new Vector3(pc.rb.velocity.x, 0, pc.rb.velocity.z);
                 pc.rb.AddForce(Vector3.up * pc.JumpSpeed);
                 // change state
                 pc.StateManager.EnterState(Entity.State.Jumping);
