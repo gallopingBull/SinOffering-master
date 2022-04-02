@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 3287130404471829012}
   - component: {fileID: 3287130404471829013}
   - component: {fileID: 1681878333}
-  - component: {fileID: 7670498163338891045}
-  - component: {fileID: 60877989}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -48,35 +46,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 0
-  MaxPoints: 10
+  paused: 0
+  gameCompleted: 0
+  _spawnLocs: []
   GameWonPanel: {fileID: 0}
   GameFailedPanel: {fileID: 0}
   pauseMenu: {fileID: 0}
-  paused: 0
-  SpawnCrates: 0
-  spawnLocs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Crate: {fileID: 1059059042186422, guid: d4d2f17a34301b74ea6db02cca7fdc78, type: 3}
-  gameCompleted: 0
+  gameModeSelected: 0
+  inGame: 0
+  inLobbby: 0
+  _offeringData: {fileID: 0}
   RadialMenu: {fileID: 4139423232871032276, guid: 204277bab980b0f499b39a81c4fd8d50, type: 3}
-  lights:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   camManager: {fileID: 0}
   TotalSilver: 100000
   curSilver: 10
-  TotalFaith: 10000
-  currentFaith: 10
+  TotalCurrentFaith: 10000
+  TotalFaithSpent: 500
   TotalEnemyKills: 0
   CurEnemyKills: 0
   TotalDeaths: 0
@@ -90,6 +75,7 @@ MonoBehaviour:
   CurLosses: 0
   TotalLosses: 0
   CurGameTime: 0
+  s_CurGameTime: 
   TotalGameTime: 0
 --- !u!114 &3287130404471829013
 MonoBehaviour:
@@ -103,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e14c22d6fba95448a8da86105a35f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  LevelIndex: 0
 --- !u!114 &1681878333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,29 +102,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b0efc4fce45f04e8c0494a1b9cdf2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7670498163338891045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3287130404471829014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7a5bdeae0266414789b2ec2efd6250d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeTotal: 0.25
---- !u!114 &60877989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3287130404471829014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae0b85bbe4735047a28d6ab8300de48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeDuration: 2

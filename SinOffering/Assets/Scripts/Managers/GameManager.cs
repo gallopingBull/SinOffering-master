@@ -124,7 +124,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    // called second
+    // called seconds
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         currentScene = SceneManager.GetActiveScene();

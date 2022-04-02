@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
@@ -119,11 +116,21 @@ public class HUDManager : MonoBehaviour
         else
             HideHUD();
     }
-    
-    private void DisplayHUD() => FadeCanvasGroup.FadeInCanvasGroup(hud_CanvasGroup);
 
-    public void HideHUD() => FadeCanvasGroup.FadeOutCanvasGroup(hud_CanvasGroup);
-
+    private void DisplayHUD() 
+    {
+        if (FadeCanvasGroup.Instance != null)
+            FadeCanvasGroup.Instance.FadeInCanvasGroup(hud_CanvasGroup);
+        else
+            hud_CanvasGroup.alpha = 1;
+    }
+    public void HideHUD()
+    {
+        if (FadeCanvasGroup.Instance != null)
+            FadeCanvasGroup.Instance.FadeOutCanvasGroup(hud_CanvasGroup);
+        else
+            hud_CanvasGroup.alpha = 0;
+    }
     public void HandleHealthBar(float value) => _healthBar.fillAmount =  value / 100;
 
     void UpdateManaBar(float value)

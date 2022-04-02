@@ -4634,7 +4634,6 @@ GameObject:
   - component: {fileID: 7958722023040977975}
   - component: {fileID: 8314961651854712129}
   - component: {fileID: 4389968161499321359}
-  - component: {fileID: 4389968162849806682}
   m_Layer: 0
   m_Name: Panel_LobbyTemplate
   m_TagString: Untagged
@@ -4715,19 +4714,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &4389968162849806682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9014498896867188292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae0b85bbe4735047a28d6ab8300de48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeDuration: 2
 --- !u!1 &9140475444701982305
 GameObject:
   m_ObjectHideFlags: 0

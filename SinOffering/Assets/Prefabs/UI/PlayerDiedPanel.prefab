@@ -585,7 +585,6 @@ GameObject:
   - component: {fileID: 8587472977218714249}
   - component: {fileID: 6316830382024703943}
   - component: {fileID: 324248609983219745}
-  - component: {fileID: 3443135380766692458}
   m_Layer: 19
   m_Name: Header_Panel_Resources_AndExit
   m_TagString: Untagged
@@ -651,19 +650,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &3443135380766692458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1129089246223116641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae0b85bbe4735047a28d6ab8300de48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeDuration: 2
 --- !u!1 &1206722453391109767
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +662,6 @@ GameObject:
   - component: {fileID: 5191957703857375207}
   - component: {fileID: 7966999961329815320}
   - component: {fileID: 9220372923337042373}
-  - component: {fileID: 3642466089264034923}
   m_Layer: 0
   m_Name: Panel_OfferingSlelection
   m_TagString: Untagged
@@ -758,19 +743,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &3642466089264034923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1206722453391109767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae0b85bbe4735047a28d6ab8300de48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeDuration: 2
 --- !u!1 &1357653448741411475
 GameObject:
   m_ObjectHideFlags: 0

@@ -47,7 +47,8 @@ public class AttributeUpgradeStore : MonoBehaviour
         //currentFaithProgressBar = GameObject.Find("Panel_ProgressBar_Current").GetComponent<Image>();
         //unlockedFaithProgressBar = GameObject.Find("Panel_ProgressBar_Unlocked").GetComponent<Image>();
         #endregion
-    }   
+    }
+
     private void Update()
     {
         if (Input.GetKey(KeyCode.T))
@@ -72,6 +73,7 @@ public class AttributeUpgradeStore : MonoBehaviour
         }
     }
 
+    
     public void InitAttributeUpgradeStore(GameObject _menu)
     {
         // buttons for weapon or upgrades that haven't been purchased yet

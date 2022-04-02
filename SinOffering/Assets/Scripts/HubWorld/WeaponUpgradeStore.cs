@@ -21,7 +21,6 @@ public class WeaponUpgradeStore : MonoBehaviour
     private void Start()
     {
         weaponDatabase = WeaponDatabase._instance.GetWeaponDatabase();
-        //weaponDatabase = GameObject.Find("WeaponDatabase").GetComponent<Database>();
     }
 
     public void InitWeaponUpgradeStore(GameObject _menu)
@@ -114,7 +113,6 @@ public class WeaponUpgradeStore : MonoBehaviour
 
     private void PurchaseWeaponUpgrade(string _weaponName, WeaponUpgradeTypes.UpgradeType upgradeType, PurchaseUpgradeButtonUI _button)
     {
-
         WeaponData weaponData = weaponDatabase[_weaponName] as WeaponData;
         var attributes = weaponData.AttributeDataList;
         Weapon weapon = null;

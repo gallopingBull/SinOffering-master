@@ -64,9 +64,7 @@ public class WeaponManager : MonoBehaviour {
             if (pc.inputHandler._aimDir != 1)
             {
                 Debug.Log("calling UpdateWeaponSocket() from aiming condition");
-              
                 tmpPos.x *= -handSocketOffsetValue;
-
             }
             
         }
@@ -75,10 +73,7 @@ public class WeaponManager : MonoBehaviour {
             if (pc.dir != 1)
             {
                 Debug.Log("calling UpdateWeaponSocket() from non-aiming condition");
-
-
                 tmpPos.x *= -handSocketOffsetValue;
-           
             }
         }
 

@@ -204,7 +204,6 @@ public abstract class Weapon : MonoBehaviour
     }
     protected virtual void MoveWeaponToSocket()
     {
-    
         //transform.position = weaponManager.mainHandSocket.position;
     }
     
