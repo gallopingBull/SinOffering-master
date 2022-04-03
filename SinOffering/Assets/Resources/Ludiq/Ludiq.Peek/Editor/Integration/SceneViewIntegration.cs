@@ -1,6 +1,7 @@
 ﻿using Ludiq.Peek;
 using Ludiq.PeekCore;
 using UnityEditor;
+using UnityEngine;
 using UnityObject = UnityEngine.Object;
 
 [assembly: InitializeAfterPlugins(typeof(SceneViewIntegration))]
@@ -33,9 +34,34 @@ namespace Ludiq.Peek
 			GuiCallback.Process();
 
 			used = false;
+			
+			// Optim: we don't care about MouseMove because we get constant Repaint anyway
+#if UNITY_2021_2_OR_NEWER
+			// In the new scene view with toolbars, it seems Repaint doesn't get sent constantly without Always Refresh enabled
+			if (sceneView.sceneViewState.alwaysRefreshEnabled && Event.current.type == EventType.MouseMove)
+			{
+				return;
+			}
+#else
+			if (Event.current.type == EventType.MouseMove)
+			{
+				return;
+			}
+#endif
 
+			// Optim: we don't use Layout, skip for another massive boost
+			if (Event.current.type == EventType.Layout)
+			{
+				// TODO: We can't do this optims because the fact that we call GetControlID in 
+				// ToolControl.DropdownToggle offsets the IDs across events and thus
+				// breaks the handles. We'd need to do like in Bolt, AKA fetch all the CIDs
+				// on all events, but don't render anything after that.
+
+				// return;
+			}
+			
 			Tabs.OnSceneGUI(sceneView);
-
+			
 			SceneToolbars.OnSceneGUI(sceneView);
 			
 			Probe.OnSceneGUI(sceneView);

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Messaging;
 using UnityEditor;
 using UnityEngine;
 #if UNITY_2019_1_OR_NEWER
@@ -33,7 +32,13 @@ namespace Ludiq.Peek
 
 		public ToolbarWindow window { get; private set; }
 
-		public Rect screenPosition { get; set; }
+		private Rect _screenPosition;
+
+		public Rect screenPosition
+		{
+			get => _screenPosition;
+			set => _screenPosition = value;
+		}
 
 		public Rect guiPosition
 		{
@@ -361,7 +366,7 @@ namespace Ludiq.Peek
 			}
 
 			var combination = mapping.keyCombinationSequence.FirstOrDefault();
-			
+
 			if (combination.keyCode == KeyCode.None)
 			{
 				return null;
@@ -426,15 +431,24 @@ namespace Ludiq.Peek
 
 		public void DrawInSceneView()
 		{
-			GUILayout.BeginArea(guiPosition);
-			GUILayout.BeginHorizontal();
+			var x = guiPosition.x;
 
 			if (isDraggable)
 			{
 				var handleStyle = PeekStyles.SceneViewTool(true, toolbar.Count == 0);
 				var handleContent = LudiqGUIUtility.TempContent(PeekPlugin.Icons.toolbarDragHandle?[IconSize.Small]);
-				var handlePosition = GUILayoutUtility.GetRect(handleContent, handleStyle);
 				var handleControlId = GUIUtility.GetControlID(FocusType.Passive);
+				var handleSize = handleStyle.CalcSize(handleContent);
+
+				var handlePosition = new Rect
+				(
+					x,
+					guiPosition.y,
+					handleSize.x,
+					handleSize.y
+				);
+
+				x = handlePosition.xMax;
 
 				EditorGUIUtility.AddCursorRect(handlePosition, MouseCursor.MoveArrow, handleControlId);
 
@@ -472,7 +486,7 @@ namespace Ludiq.Peek
 			var delayedTooltips = ListPool<DelayedTooltip>.New();
 
 			var shortcutIndex = 1;
-
+			
 			for (var i = 0; i < toolbar.Count; i++)
 			{
 				var tool = toolbar[i];
@@ -508,17 +522,33 @@ namespace Ludiq.Peek
 
 				var isFirst = i == 0;
 				var isLast = i == toolbar.Count - 1;
+				var size = toolControl.GetSceneViewSize(isFirst, isLast);
 
+				// Note: I don't remember why in 2020 we only updated the GUI position on Repaint.
+				// But in 2021 it breaks the behaviour when clicking.
+				// I'm not removing the check before because I can't remember why I put it there.
+#if !UNITY_2021_2_OR_NEWER
+				if (e.type == EventType.Repaint)
+#endif
+				{
+					toolControl.guiPosition = new Rect
+					(
+						x,
+						guiPosition.y,
+						size.x,
+						size.y
+					);
+				}
+
+				x = toolControl.guiPosition.xMax;
+				
 				var delayedTooltip = toolControl.DrawInSceneView(isFirst && !isDraggable, isLast);
-
+				
 				if (delayedTooltip.HasValue)
 				{
 					delayedTooltips.Add(delayedTooltip.Value);
 				}
 			}
-
-			GUILayout.EndHorizontal();
-			GUILayout.EndArea();
 
 			foreach (var delayedTooltip in delayedTooltips)
 			{

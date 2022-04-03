@@ -87,6 +87,14 @@ namespace Ludiq.Peek
 		{
 			base.OnEnable();
 
+			// Unity keeps a cache of SerializedProperty to PropertyDrawer
+			// which it releases on InspectorWindow.OnEnable, among other places.
+			// This seems required to make sure that properties don't rely on their
+			// SerializedProperty to be disposed, which happens when we dispose the
+			// editor in DisposeEditors. This can cause an issue like this:
+			// https://support.ludiq.io/communities/41/topics/5577-
+			UnityEditorDynamic.ScriptAttributeUtility.ClearGlobalCache();
+
 			minSize = new Vector2(200, 16);
 			maxSize = new Vector2(4000, 4000);
 			autoRepaintOnSceneChange = true;

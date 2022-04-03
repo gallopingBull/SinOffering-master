@@ -653,7 +653,7 @@ namespace Ludiq.Peek
 
 				if (renderer is MeshRenderer meshRenderer)
 				{
-					var mesh = renderer.GetComponent<MeshFilter>()?.sharedMesh;
+					var mesh = renderer.GetComponent<MeshFilter>().AsUnityNull()?.sharedMesh;
 
 					if (mesh == null)
 					{
@@ -707,11 +707,6 @@ namespace Ludiq.Peek
 #if PROBUILDER_4_OR_NEWER
 				PeekProBuilderIntegration.DrawHighlight(proBuilderHighlight);
 #endif
-
-				if (e.type == EventType.KeyDown && e.keyCode == KeyCode.Alpha0)
-				{
-					Selection.activeGameObject = sceneView.camera.gameObject;
-				}
 
 				var shortcut = PeekPlugin.Configuration.probeShortcut;
 

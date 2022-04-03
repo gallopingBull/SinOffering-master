@@ -5,8 +5,6 @@ using Ludiq.PeekCore;
 using UnityEngine;
 using UnityObject = UnityEngine.Object;
 
-[assembly: InitializeAfterPlugins(typeof(SceneDeselectIntegration))]
-
 namespace Ludiq.Peek
 {
 	// ReSharper disable once RedundantUsingDirective

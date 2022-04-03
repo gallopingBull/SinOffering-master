@@ -16,26 +16,22 @@ public class HUDManager : MonoBehaviour
     public CanvasGroup hud_CanvasGroup;
 
     // reference to health bar UI.
-    [SerializeField]
-    private Image _healthBar;
+    [SerializeField] Image _healthBar;
     // reference to health value from playercontroller.
     private float _healthValue;
 
     // reference to mana bar UI
-    [SerializeField]
-    private Image _manaBar;
+    [SerializeField] Image _manaBar;
     // reference to mana value from playercontroller.
     private float _manaValue;
 
     // reference to silver text UI.
-    [SerializeField]
-    private TextMeshProUGUI _silverText;
+    [SerializeField] TextMeshProUGUI _silverText;
     // reference to silver value from game manager.
     private int silverValue = 0;
 
     // reference to faith text UI.
-    [SerializeField]
-    public TextMeshProUGUI _faithText;
+    [SerializeField] TextMeshProUGUI _faithText;
     // reference to faith value from game manager.
     private int _faithValue = 0;
 
@@ -53,7 +49,26 @@ public class HUDManager : MonoBehaviour
         _instance = this;
         _currentScene = SceneManager.GetActiveScene();
     }
-    
+    private void OnEnable()
+    {
+        GameEvents.OnDamageEvent += HandleHealthBar;
+        GameEvents.OnManaUpdateEvent += UpdateManaBar;
+        GameEvents.OnCurrencyUpdateEvent += UpdateSilverValue;
+        GameEvents.OnFaithUpdateEvent += UpdateFaithValue;
+
+        UIEvents.OnStoreMenuOpened += HideHUD;
+        UIEvents.OnStoreMenuClosed += DisplayHUD;
+    }
+    private void OnDisable()
+    {
+        GameEvents.OnDamageEvent -= HandleHealthBar;
+        GameEvents.OnManaUpdateEvent -= UpdateManaBar;
+        GameEvents.OnCurrencyUpdateEvent -= UpdateSilverValue;
+        GameEvents.OnFaithUpdateEvent -= UpdateFaithValue;
+        
+        UIEvents.OnStoreMenuOpened -= HideHUD;
+        UIEvents.OnStoreMenuClosed -= DisplayHUD;
+    }
     void Start()
     {
         pc = PlayerController.instance;
@@ -63,37 +78,18 @@ public class HUDManager : MonoBehaviour
         if (_currentScene.name == "HubScene")
             HideHUD();
     }
-    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.H))
             ToggleHUD();
     }
-
-    private void OnEnable()
-    {
-        GameEvents.OnDamageEvent += HandleHealthBar;
-        GameEvents.OnManaUpdateEvent += UpdateManaBar;
-        GameEvents.OnCurrencyUpdateEvent += UpdateSilverValue;
-        GameEvents.OnFaithUpdateEvent += UpdateFaithValue;
-    }
-
-    private void OnDisable()
-    {
-        GameEvents.OnDamageEvent -= HandleHealthBar;
-        GameEvents.OnManaUpdateEvent -= UpdateManaBar;
-        GameEvents.OnCurrencyUpdateEvent -= UpdateSilverValue;
-        GameEvents.OnFaithUpdateEvent -= UpdateFaithValue;
-    }
-
     private void SetUIObjects()
     {
         _healthBar = GameObject.Find("HealthBar_Fill").GetComponent<Image>();
         _manaBar = GameObject.Find("ManaBar_Fill").GetComponent<Image>();
         _silverText = GameObject.Find("Text_Silver_HUD").GetComponent<TextMeshProUGUI>();
         _faithText = GameObject.Find("Text_FaithTotal_HUD").GetComponent<TextMeshProUGUI>();
-    }
-    
+    } 
     public void SetUIObjectValues()
     {   
         _healthValue = pc.Health / 100; // change 100 to maxHealth
@@ -108,7 +104,6 @@ public class HUDManager : MonoBehaviour
         _faithValue = GameManager.instance.TotalCurrentFaith;
         _faithText.text = _faithValue.ToString();
     }
-
     void ToggleHUD()
     {
         if (hud_CanvasGroup.alpha == 0)
@@ -116,29 +111,26 @@ public class HUDManager : MonoBehaviour
         else
             HideHUD();
     }
-
     private void DisplayHUD() 
     {
-        if (FadeCanvasGroup.Instance != null)
-            FadeCanvasGroup.Instance.FadeInCanvasGroup(hud_CanvasGroup);
+        if (UIEvents.OnHUDDisplay != null)
+            UIEvents.OnHUDDisplay(hud_CanvasGroup);
         else
             hud_CanvasGroup.alpha = 1;
     }
     public void HideHUD()
     {
-        if (FadeCanvasGroup.Instance != null)
-            FadeCanvasGroup.Instance.FadeOutCanvasGroup(hud_CanvasGroup);
+        if (UIEvents.OnHUDHide != null)
+            UIEvents.OnHUDHide(hud_CanvasGroup);
         else
-            hud_CanvasGroup.alpha = 0;
+            hud_CanvasGroup.alpha = 0;           
     }
     public void HandleHealthBar(float value) => _healthBar.fillAmount =  value / 100;
-
     void UpdateManaBar(float value)
     {
         _manaValue = value;
         _manaBar.fillAmount = _manaValue / 100; // change 100 to maxMana
     }
-
     void UpdateSilverValue(int value) => _silverText.text = value.ToString();
     void UpdateFaithValue(int value) => _faithText.text = value.ToString();
     #endregion

@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEditor.ShortcutManagement;
 using UnityEngine;
 using UnityEngine.Profiling;
+using UnityEngine.SceneManagement;
 using UnityObject = UnityEngine.Object;
 
 namespace Ludiq.Peek
@@ -93,7 +94,38 @@ namespace Ludiq.Peek
 
 								if (_hit != null)
 								{
-									instance.transform.SetParent(_hit.Value.transform.parent, true);
+									var parenting = PeekPlugin.Configuration.creatorParenting;
+									
+									Transform parent = null;
+
+									if (parenting == CreatorParenting.Root)
+									{
+										parent = null;
+									}
+									else if (parenting == CreatorParenting.Sibling)
+									{
+										parent = _hit.Value.transform.parent;
+									}
+									else if (parenting == CreatorParenting.SiblingOutsidePrefabs)
+									{
+										parent = _hit.Value.transform.parent;
+
+										while (parent != null && PrefabUtility.IsPartOfPrefabInstance(parent))
+										{
+											parent = parent.parent;
+										}
+									}
+									else if (parenting == CreatorParenting.Child)
+									{
+										parent = _hit.Value.transform;
+									}
+
+									if (parent != null)
+									{
+										Undo.MoveGameObjectToScene(instance, parent.gameObject.scene, "Creator");
+									}
+
+									instance.transform.SetParent(parent, true);
 								}
 
 								instance.transform.position = _point;

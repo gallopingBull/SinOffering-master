@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Collections;
 using Cinemachine;
-using UnityEngine.UI;
 using UnityEngine;
 
 // weapon/ability menu manager
@@ -10,6 +9,7 @@ public class MenuManager : MonoBehaviour
     #region variables
     [HideInInspector]
     public bool EnablePrompt = true;
+    private bool _inMenu = false;
     [HideInInspector]
     public enum UpgradeMenu
     {
@@ -30,8 +30,6 @@ public class MenuManager : MonoBehaviour
 
     private Dictionary<string, WeaponData> weaponDatabase;
     private WeaponData weaponData;
-
-    //private FadeCanvasGroup fadeCanvas;
     #endregion
 
     #region functions
@@ -62,19 +60,21 @@ public class MenuManager : MonoBehaviour
         switch (currentMenu)
         {
             case UpgradeMenu.StoreSelectionMenu:
+                if (!_inMenu)
+                {
+                    _inMenu = true;
+                    UIEvents.OnStoreMenuOpened?.Invoke();
+                }
                 EnablePrompt = false;
                 SwitchCamera((int)currentMenu);
                 yield return new WaitForSeconds(Delay/2);
                 DisplayMenu((int)currentMenu);
-                if (HUDManager._instance.hud_CanvasGroup.alpha != 0)
-                    HUDManager._instance.HideHUD();
 
                 break;
 
             case UpgradeMenu.WeaponPurchaseMenu:
                 SwitchCamera((int)currentMenu);
                 yield return new WaitForSeconds(Delay);
-
                 DisplayMenu((int)currentMenu);
                 InitStore(menus[(int)currentMenu], currentMenu);
                 break;
@@ -82,7 +82,6 @@ public class MenuManager : MonoBehaviour
             case UpgradeMenu.WeaponUpgradeMenu:
                 SwitchCamera((int)currentMenu);
                 yield return new WaitForSeconds(Delay / 2);
-
                 DisplayMenu((int)currentMenu);
                 InitStore(menus[(int)currentMenu], currentMenu);
                 break;
@@ -90,23 +89,16 @@ public class MenuManager : MonoBehaviour
             case UpgradeMenu.AbilityUpgradeMenu:
                 EnablePrompt = false;
                 SwitchCamera(0);
+                UIEvents.OnStoreMenuOpened?.Invoke();
                 yield return new WaitForSeconds(Delay);
-
                 DisplayMenu(0);
-                if(HUDManager._instance.hud_CanvasGroup.alpha != 0)
-                    HUDManager._instance.HideHUD();
-
                 InitStore(menus[0], currentMenu);
                 break;
 
             case UpgradeMenu.OfferingSelectionMenu:
                 EnablePrompt = false;
-                //SwitchCamera(0);
                 yield return new WaitForSeconds(Delay);
                 DisplayMenu(0);
-                if (HUDManager._instance.hud_CanvasGroup.alpha != 0)
-                    HUDManager._instance.HideHUD();
-
                 InitStore(menus[0], currentMenu);
                 break;
 
@@ -133,6 +125,8 @@ public class MenuManager : MonoBehaviour
                     PlayerController.instance.EnableInput();
                     closeMenu = false;
                     EnablePrompt = true;
+                    _inMenu = false;
+                    UIEvents.OnStoreMenuClosed?.Invoke();
                 }
                 break;
 
@@ -161,7 +155,6 @@ public class MenuManager : MonoBehaviour
 
             default:
                 break;
-
 
             case UpgradeMenu.OfferingSelectionMenu:
                 HideMenu(0);
@@ -196,25 +189,21 @@ public class MenuManager : MonoBehaviour
     {
         CanvasGroup menu = menus[index].GetComponent<CanvasGroup>();
         // play some buttton animation 
-        // play some exit menu transition animation 
-        // change alpha value of canvas group here.
-        if (FadeCanvasGroup.Instance != null)
-            FadeCanvasGroup.Instance.FadeOutCanvasGroup(menu);
+        if (UIEvents.OnMenuClosed != null)
+            UIEvents.OnMenuClosed(menu);
         else
             menu.alpha = 0;
-
         menus[index].SetActive(false);
     }
     private void DisplayMenu(int index)
-    {
+    {        
         CanvasGroup menu = menus[index].GetComponent<CanvasGroup>();
-        
         // play some enter menu transition animation 
         menus[index].SetActive(true);
-        
+
         // change alpha value of canvas group here.
-        if (FadeCanvasGroup.Instance != null)
-            FadeCanvasGroup.Instance.FadeInCanvasGroup(menu);
+        if (UIEvents.OnMenuOpened != null)
+            UIEvents.OnMenuOpened(menu);
         else
             menu.alpha = 1;
     }

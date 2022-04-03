@@ -1,7 +1,11 @@
 ﻿using System.Reflection;
 using Ludiq.PeekCore.ReflectionMagic;
 using UnityEditor;
+#if UNITY_2021_2_OR_NEWER
+using UnityEditor.SceneManagement;
+#else
 using UnityEditor.Experimental.SceneManagement;
+#endif
 
 namespace Ludiq.PeekCore
 {
@@ -43,6 +47,8 @@ namespace Ludiq.PeekCore
 
 		public static readonly dynamic AssetPreview;
 
+		public static readonly dynamic ScriptAttributeUtility;
+
 		static UnityEditorDynamic()
 		{
 			UnityEditorAssembly = typeof(UnityEditor.Editor).Assembly;
@@ -67,6 +73,7 @@ namespace Ludiq.PeekCore
 			SearchUtility = UnityEditorAssembly.GetType("UnityEditor.SearchUtility", true).AsDynamicType();
 			SceneView = typeof(SceneView).AsDynamicType();
 			AssetPreview = typeof(AssetPreview).AsDynamicType();
+			ScriptAttributeUtility = UnityEditorAssembly.GetType("UnityEditor.ScriptAttributeUtility", true).AsDynamicType();
 		}
 	}
 }

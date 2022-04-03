@@ -147,7 +147,24 @@ namespace Ludiq.Peek
 		[EditorPref]
 		[InspectorLabel("Creator")]
 		public SceneViewDisplay enableCreator { get; set; } = SceneViewDisplay.Always;
-		
+
+		/// <summary>
+		/// Where the creator should place new objects in the hierarchy.
+		/// Root: At the root.
+		/// Sibling: After the object under the cursor, if any.
+		/// Sibling Outside Prefabs: Like siblings, but never within a prefab instance.
+		/// </summary>
+		[EditorPref]
+		[InspectorLabel("Creator Parenting")]
+		public CreatorParenting creatorParenting { get; set; } = CreatorParenting.SiblingOutsidePrefabs;
+
+		/// <summary>
+		/// Whether the replacer should preserve the scale.
+		/// </summary>
+		[EditorPref]
+		[InspectorLabel("Preserve Scale on Replace")]
+		public bool preserveScaleOnReplace { get; set; } = false;
+
 		/// <summary>
 		/// Whether pressing Escape should clear the selection. 
 		/// </summary>
