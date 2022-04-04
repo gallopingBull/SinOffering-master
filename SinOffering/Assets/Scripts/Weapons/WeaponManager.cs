@@ -1,19 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// Maybe change the name of this class to WeaponInventory.cs
-public class WeaponManager : MonoBehaviour {
+
+/// <summary>
+/// Maybe change the name of this class to WeaponInventory.cs
+/// </summary>
+
+public class WeaponManager : MonoBehaviour 
+{
     public int CurWeapon;
     public bool WeaponEquipped = false;
     public GameObject[] Weapons;
-    
     public Transform mainHandSocket;
-    [SerializeField]
-    private float handSocketOffsetValue = 1.25f;
-    private PlayerController pc; 
+
+    [SerializeField] float _handSocketOffsetValue = 1.25f;
+    private PlayerController _pc; 
 
     // Use this for initialization
-    void Awake () { pc = GetComponent<PlayerController>(); }
+    void Awake () { _pc = GetComponent<PlayerController>(); }
 
     private void Start()
     {
@@ -22,7 +26,7 @@ public class WeaponManager : MonoBehaviour {
 
     private void Update()
     {
-        if (pc.EquippedWeapon != null)
+        if (_pc.EquippedWeapon != null)
             UpdateWeaponSocket();
      
     }
@@ -37,48 +41,48 @@ public class WeaponManager : MonoBehaviour {
             Weapons[i].GetComponent<Weapon>().SetTempAttributeData();
         }
     }
+    
     public void EquipWeapon(int newWeapon)
     {   
-        if (pc.EquippedWeapon != null)
+        if (_pc.EquippedWeapon != null)
         {
-            pc.ResetSpeed(); //reset player to default speed
-            pc.EquippedWeapon.SetActive(false);
+            _pc.ResetSpeed(); //reset player to default speed
+            _pc.EquippedWeapon.SetActive(false);
         }
         
         CurWeapon = newWeapon;
-        pc.EquippedWeapon = Weapons[CurWeapon];
+        _pc.EquippedWeapon = Weapons[CurWeapon];
         // set weapon position/rotation
-        pc.EquippedWeapon.SetActive(true);
-        pc.EquippedWeapon.GetComponent<Weapon>().InitWeapon();
+        _pc.EquippedWeapon.SetActive(true);
+        _pc.EquippedWeapon.GetComponent<Weapon>().InitWeapon();
         WeaponEquipped = true;
         // have the weapon call InitWeapon()
         // wihtin itself instead
     }
     
-
     private void UpdateWeaponSocket()
     {
         Vector3 tmpPos = mainHandSocket.localPosition;
-        if (pc.inputHandler.aiming)
+        if (_pc.inputHandler.aiming)
         {
-            if (pc.inputHandler._aimDir != 1)
+            if (_pc.inputHandler._aimDir != 1)
             {
                 Debug.Log("calling UpdateWeaponSocket() from aiming condition");
-                tmpPos.x *= -handSocketOffsetValue;
+                tmpPos.x *= -_handSocketOffsetValue;
             }
             
         }
         else
         {
-            if (pc.dir != 1)
+            if (_pc.dir != 1)
             {
                 Debug.Log("calling UpdateWeaponSocket() from non-aiming condition");
-                tmpPos.x *= -handSocketOffsetValue;
+                tmpPos.x *= -_handSocketOffsetValue;
             }
         }
 
         mainHandSocket.localPosition = tmpPos;
-        pc.EquippedWeapon.transform.position = mainHandSocket.position;
+        _pc.EquippedWeapon.transform.position = mainHandSocket.position;
 
     }
 

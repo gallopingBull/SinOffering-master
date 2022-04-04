@@ -1,48 +1,49 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 using UnityEngine;
+
+/// <summary>
+/// class for store that allows player to purchase weapon upgrades.
+/// </summary>
 
 public class WeaponUpgradeStore : MonoBehaviour
 {
-    private IWeaponStoreCustomer customer;
-    private Dictionary<string, WeaponData> weaponDatabase;
-    private Navigation[] firstSelectedButton = null;
+    private IWeaponStoreCustomer _customer;
+    private Dictionary<string, WeaponData> _weaponDatabase;
+    private Navigation[] _firstSelectedButton = null;
 
     private bool weapon_Selection_Buttons_Initialized = false;
-    private Button[] menuButtons = null;
-    private VerticalLayoutGroup[] upgradePanels;
+    private Button[] _menuButtons = null;
+    private VerticalLayoutGroup[] _upgradePanels;
 
-    private HUDManager hm;
-    private GameObject silverValueUI;
+    private HUDManager _hm;
+    private GameObject _silverValueUI;
 
     private void Start()
     {
-        weaponDatabase = WeaponDatabase._instance.GetWeaponDatabase();
+        _weaponDatabase = WeaponDatabase._instance.GetWeaponDatabase();
     }
 
-    public void InitWeaponUpgradeStore(GameObject _menu)
+    public void InitWeaponUpgradeStore(GameObject menu)
     {
         Navigation navi;
 
         // initialize buttons only for weapons that have been purchased
         // in the "weapon selection panel" 
         if (!weapon_Selection_Buttons_Initialized)
-            SetMenuButttons(_menu);
+            SetMenuButttons(menu);
 
     
-        for (int i = 0; i < menuButtons.Length; i++)
+        for (int i = 0; i < _menuButtons.Length; i++)
         {
             var weapons = PlayerController.instance.weaponManager.Weapons;  
-            var button = menuButtons[i].gameObject.GetComponent<WeaponNameUpgradeButtonUI>();
+            var button = _menuButtons[i].gameObject.GetComponent<WeaponNameUpgradeButtonUI>();
 
-            navi = menuButtons[i].navigation;
+            navi = _menuButtons[i].navigation;
             if (!weapon_Selection_Buttons_Initialized)
             {
-                firstSelectedButton[i] = navi;
-                if (i == menuButtons.Length - 1)
+                _firstSelectedButton[i] = navi;
+                if (i == _menuButtons.Length - 1)
                     weapon_Selection_Buttons_Initialized = true;
             }
 
@@ -54,35 +55,35 @@ public class WeaponUpgradeStore : MonoBehaviour
                     if (!weapons[j].GetComponent<Weapon>().WeaponAttributes.WeaponPurchased)
                     {
                         navi.selectOnRight = null;
-                        menuButtons[i].navigation = navi;
+                        _menuButtons[i].navigation = navi;
                     }
 
                     else
-                        menuButtons[i].navigation = firstSelectedButton[i];
+                        _menuButtons[i].navigation = _firstSelectedButton[i];
 
                     break;
                 }
             }
         }
         //ResetMenu();
-        InitUpgradeSelectionButtons(_menu.transform.Find("Panel_WeaponSelectionButtons").gameObject);
+        InitUpgradeSelectionButtons(menu.transform.Find("Panel_WeaponSelectionButtons").gameObject);
     }
 
-    // initialize upgrade buttons only for weapons that have been purchased
-    // in the "weapon upgrade panel" 
-    private void InitUpgradeSelectionButtons(GameObject _menu)
+    // initialize upgrade buttons only for weapons that
+    // have been purchased in the "weapon upgrade panel" 
+    private void InitUpgradeSelectionButtons(GameObject menu)
     {
-        upgradePanels =
-          _menu.transform.Find("Weapon Upgrades").GetComponentsInChildren<VerticalLayoutGroup>(true);
+        _upgradePanels =
+          menu.transform.Find("Weapon Upgrades").GetComponentsInChildren<VerticalLayoutGroup>(true);
 
         var weapons = PlayerController.instance.weaponManager.Weapons;
 
-        for (int i = 0; i <  upgradePanels.Length; i++)
+        for (int i = 0; i <  _upgradePanels.Length; i++)
         {
             if (i > weapons.Length)
                 return;
 
-            PurchaseUpgradeButtonUI[] upgradeButton = upgradePanels[i].gameObject.GetComponentsInChildren<PurchaseUpgradeButtonUI>();
+            PurchaseUpgradeButtonUI[] upgradeButton = _upgradePanels[i].gameObject.GetComponentsInChildren<PurchaseUpgradeButtonUI>();
 
             for (int j = 0; j < upgradeButton.Length; j++)
             {
@@ -91,7 +92,7 @@ public class WeaponUpgradeStore : MonoBehaviour
                 if (weapons[i].GetComponent<Weapon>().WeaponAttributes.WeaponPurchased)
                 {
                     WeaponData weaponData;
-                    weaponData = weaponDatabase[weaponName] as WeaponData;
+                    weaponData = _weaponDatabase[weaponName] as WeaponData;
 
                     upgradeButton[j].GetComponent<Button>().interactable = true;
                     if(!upgradeButton[j].ButtonInit)
@@ -101,19 +102,19 @@ public class WeaponUpgradeStore : MonoBehaviour
         }
     }
 
-    public void InitUpgradeButton(PurchaseUpgradeButtonUI _button, ScriptableObject _data, Weapon _weapon)
+    public void InitUpgradeButton(PurchaseUpgradeButtonUI button, ScriptableObject data, Weapon weapon)
     {
-        PurchaseUpgradeButtonUI tmpButton = _button;
+        PurchaseUpgradeButtonUI tmpButton = button;
 
-        tmpButton.InitUpgradeButton(_weapon, _data);
+        tmpButton.InitUpgradeButton(weapon, data);
 
-        tmpButton.Upgrade_Button.onClick.AddListener(() => PurchaseWeaponUpgrade(_weapon.GetWeaponName(), 
-            _button.UpgradeType, _button)); 
+        tmpButton.Upgrade_Button.onClick.AddListener(() => PurchaseWeaponUpgrade(weapon.GetWeaponName(), 
+            button.UpgradeType, button)); 
     }
 
-    private void PurchaseWeaponUpgrade(string _weaponName, WeaponUpgradeTypes.UpgradeType upgradeType, PurchaseUpgradeButtonUI _button)
+    private void PurchaseWeaponUpgrade(string weaponName, WeaponUpgradeTypes.UpgradeType upgradeType, PurchaseUpgradeButtonUI button)
     {
-        WeaponData weaponData = weaponDatabase[_weaponName] as WeaponData;
+        WeaponData weaponData = _weaponDatabase[weaponName] as WeaponData;
         var attributes = weaponData.AttributeDataList;
         Weapon weapon = null;
 
@@ -125,7 +126,7 @@ public class WeaponUpgradeStore : MonoBehaviour
         // get weapon/weapon attribute/and weapon attribute level
         for (int i = 0; i < weapons.Length; i++)
         {
-            if (weapons[i].GetComponent<Weapon>().GetWeaponName() == _weaponName)
+            if (weapons[i].GetComponent<Weapon>().GetWeaponName() == weaponName)
             {
                 weapon = weapons[i].GetComponent<Weapon>();
                 weaponAttributeLvl =
@@ -149,46 +150,41 @@ public class WeaponUpgradeStore : MonoBehaviour
             }
         }
 
-        if (customer.CanPurchaseWeapon(price) && weaponAttributeLvl <= 2)
+        if (_customer.CanPurchaseWeapon(price) && weaponAttributeLvl <= 2)
         {
-            customer.PurchaseWeaponUpgrade(_weaponName, upgradeType);
+            _customer.PurchaseWeaponUpgrade(weaponName, upgradeType);
             Debug.Log("purchased upgrade: " + upgradeType + " || " 
                 + " Level: " + weaponAttributeLvl 
-                + " || weaponType: " + _weaponName);
+                + " || weaponType: " + weaponName);
 
             // refactor or find another method to change the button color
             // when upgrade is purchased. I think maybe applying
             // some observer patter for buttons. idk...
-            _button.InitUpgradeButton(weapon, weaponData);
+            button.InitUpgradeButton(weapon, weaponData);
         }
-        silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI();
-        hm.SetUIObjectValues();
+        _silverValueUI.GetComponent<DisplaySilverTotal>().SetSilverValueUI();
+        _hm.SetUIObjectValues();
     }
 
     // customer/player is assigned at store trigger (DisplayButton.cs)
-    public void AssignCustomer(IWeaponStoreCustomer _customer)
-    {
-        customer = _customer;
-    }
+    public void AssignCustomer(IWeaponStoreCustomer customer) => _customer = customer;
 
-    private void SetMenuButttons(GameObject _menu)
+    private void SetMenuButttons(GameObject menu)
     {
-        menuButtons =
-           _menu.transform.Find("Panel_WeaponSelectionButtons").transform.Find("Weapon Selection Buttons").GetComponentsInChildren<Button>();
-        firstSelectedButton = new Navigation[menuButtons.Length];
-        silverValueUI = GameObject.Find("Text_SilverValue");
-        hm = HUDManager._instance;
-        
+        _menuButtons =
+           menu.transform.Find("Panel_WeaponSelectionButtons").transform.Find("Weapon Selection Buttons").GetComponentsInChildren<Button>();
+        _firstSelectedButton = new Navigation[_menuButtons.Length];
+        _silverValueUI = GameObject.Find("Text_SilverValue");
+        _hm = HUDManager._instance; 
     }
-
 
     public void ResetMenu()
     {   
-        for (int i = upgradePanels.Length-1; i > 0; i--)
+        for (int i = _upgradePanels.Length-1; i > 0; i--)
         {
             if (i == 0)
                 return;
-            upgradePanels[i].gameObject.SetActive(false); 
+            _upgradePanels[i].gameObject.SetActive(false); 
         }
     }   
 }

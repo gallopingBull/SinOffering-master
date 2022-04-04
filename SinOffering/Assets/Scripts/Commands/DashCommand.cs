@@ -143,7 +143,7 @@ public class DashCommand : ICommand
 
         
         if (Input.GetAxis("LeftTrigger") == 0 &&
-              !GameManager.instance.gameCompleted)
+              !GameManager.Instance.GameCompleted)
         {
             //print("dash completed and left trigger released");
             if (dashState == DashState.completed && ppm.ppEnabled == true)
@@ -251,7 +251,7 @@ public class DashCommand : ICommand
             }
 
             if (Input.GetButtonDown("Melee") && isValid
-                && !GameManager.instance.gameCompleted && 
+                && !GameManager.Instance.GameCompleted && 
                 (direction.x != 0 || direction.y != 0) && 
                 pc.inputHandler.dashDelayComplete)
             {

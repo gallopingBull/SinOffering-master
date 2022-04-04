@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// singleton class that controls main player avater.
+/// </summary>
 public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCustomer
 {
     #region variables

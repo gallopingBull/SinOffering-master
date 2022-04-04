@@ -1,6 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+/// <summary>
+/// abstract base weapon class for guns.
+/// </summary>
 
 public abstract class Weapon : MonoBehaviour
 {

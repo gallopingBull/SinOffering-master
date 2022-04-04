@@ -3,7 +3,10 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
 
-// manager class that handles singleton instance of player HUD
+/// <summary>
+/// manager class that handles singleton instance of player HUD.
+/// </summary>
+
 public class HUDManager : MonoBehaviour
 {
     #region variables
@@ -49,6 +52,7 @@ public class HUDManager : MonoBehaviour
         _instance = this;
         _currentScene = SceneManager.GetActiveScene();
     }
+    
     private void OnEnable()
     {
         GameEvents.OnDamageEvent += HandleHealthBar;
@@ -59,6 +63,7 @@ public class HUDManager : MonoBehaviour
         UIEvents.OnStoreMenuOpened += HideHUD;
         UIEvents.OnStoreMenuClosed += DisplayHUD;
     }
+    
     private void OnDisable()
     {
         GameEvents.OnDamageEvent -= HandleHealthBar;
@@ -69,6 +74,7 @@ public class HUDManager : MonoBehaviour
         UIEvents.OnStoreMenuOpened -= HideHUD;
         UIEvents.OnStoreMenuClosed -= DisplayHUD;
     }
+    
     void Start()
     {
         pc = PlayerController.instance;
@@ -78,11 +84,13 @@ public class HUDManager : MonoBehaviour
         if (_currentScene.name == "HubScene")
             HideHUD();
     }
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.H))
             ToggleHUD();
     }
+    
     private void SetUIObjects()
     {
         _healthBar = GameObject.Find("HealthBar_Fill").GetComponent<Image>();
@@ -90,6 +98,7 @@ public class HUDManager : MonoBehaviour
         _silverText = GameObject.Find("Text_Silver_HUD").GetComponent<TextMeshProUGUI>();
         _faithText = GameObject.Find("Text_FaithTotal_HUD").GetComponent<TextMeshProUGUI>();
     } 
+    
     public void SetUIObjectValues()
     {   
         _healthValue = pc.Health / 100; // change 100 to maxHealth
@@ -98,12 +107,13 @@ public class HUDManager : MonoBehaviour
         _manaValue = pc.Mana;
         _manaBar.fillAmount = _manaValue / 100; // change 100 to maxMana
 
-        silverValue = GameManager.instance.TotalSilver;
+        silverValue = GameManager.Instance.TotalSilver;
         _silverText.text = silverValue.ToString();
 
-        _faithValue = GameManager.instance.TotalCurrentFaith;
+        _faithValue = GameManager.Instance.TotalCurrentFaith;
         _faithText.text = _faithValue.ToString();
     }
+    
     void ToggleHUD()
     {
         if (hud_CanvasGroup.alpha == 0)
@@ -111,6 +121,7 @@ public class HUDManager : MonoBehaviour
         else
             HideHUD();
     }
+    
     private void DisplayHUD() 
     {
         if (UIEvents.OnHUDDisplay != null)
@@ -118,6 +129,7 @@ public class HUDManager : MonoBehaviour
         else
             hud_CanvasGroup.alpha = 1;
     }
+    
     public void HideHUD()
     {
         if (UIEvents.OnHUDHide != null)
@@ -125,13 +137,17 @@ public class HUDManager : MonoBehaviour
         else
             hud_CanvasGroup.alpha = 0;           
     }
+    
     public void HandleHealthBar(float value) => _healthBar.fillAmount =  value / 100;
+    
     void UpdateManaBar(float value)
     {
         _manaValue = value;
         _manaBar.fillAmount = _manaValue / 100; // change 100 to maxMana
     }
+    
     void UpdateSilverValue(int value) => _silverText.text = value.ToString();
+    
     void UpdateFaithValue(int value) => _faithText.text = value.ToString();
     #endregion
 }

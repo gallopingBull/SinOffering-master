@@ -1,35 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class EnemyCollision : MonoBehaviour {
+/// <summary>
+/// helper class for enemy 3D colliders to correctly collide with other 3D colliders in the scene.
+/// </summary>
 
-    EnemyController parent;
+public class EnemyCollision : MonoBehaviour 
+{
+    private EnemyController _parent;
 
-    private void Awake() { parent = GetComponentInParent<EnemyController>(); }
+    private void Awake() { _parent = GetComponentInParent<EnemyController>(); }
 
-    void OnTriggerEnter(Collider col)
+    private void OnTriggerEnter(Collider col)
     {
         //Debug.Log(gameObject.name + " hit " + col.gameObject.name + " : EnemyController.cs");
         if (col.gameObject.tag == "Wall")
         {
-            if (!parent.facingLeft)
-            {
-                parent.facingLeft = true;
-            }
+            if (!_parent.facingLeft)
+                _parent.facingLeft = true;
             else
-            {
-                parent.facingLeft = false;
-            }
+                _parent.facingLeft = false;
         }
         if (col.gameObject.tag == "Bullet")
-        {
-            print("enemy hit by projectile");
-            //Killed();
-        }
-        if (col.gameObject.tag == "Player" && !parent.dying)
-        {
+            Debug.Log("enemy hit by projectile"); //Killed();
+        if (col.gameObject.tag == "Player" && !_parent.dying)
             col.GetComponent<Entity>().Damaged(1);
-        }
     }
 }

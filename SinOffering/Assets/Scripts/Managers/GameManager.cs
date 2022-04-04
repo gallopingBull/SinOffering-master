@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
 using System;
@@ -9,10 +7,10 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
 {
     #region variables
 
-    public int points; // points player currently has
-    public bool paused;
+    public int Points; // points player currently has
+    public bool Paused;
 
-    public bool gameCompleted;
+    public bool GameCompleted;
 
     #region delete these after moving them into gameModeAttribuites
     private int _maxPoints = 0; // this should be referemce to MaxPoint value in _offeringData
@@ -32,9 +30,9 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
 
     //[HideInInspector]
     // create game states
-    public bool gameModeSelected = false; 
-    public bool inGame = false; 
-    public bool inLobbby = false; 
+    public bool GameModeSelected = false; 
+    public bool InGame = false; 
+    public bool InLobbby = false; 
 
     private IMatchCompletedMenu _client = null;
 
@@ -48,14 +46,13 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     //[HideInInspector]
     public GameObject RadialMenu;
     //[HideInInspector]
-    public static GameManager instance;
+    private static GameManager _instance;
     private GameObject enemyManager;
 
     [HideInInspector]
     public CameraManager camManager;
     private Scene currentScene;
     private Scene lobbyScene;
-
 
     //private bool _weaponsEnabled = true;
     //private bool _dashAbilityEnabled = true;
@@ -111,6 +108,9 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     [HideInInspector]
     public float TotalGameTime;
 
+    public static GameManager Instance { get => _instance; }
+
+
     #endregion
 
     #endregion
@@ -150,15 +150,16 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
         if (currentScene.name != "MainMenu")
             SetMenus();
     }
+    
     private void Awake()
     {
         //pointsText = GameObject.Find("Text_PointsHUD").GetComponent<Text>();
-        if (instance != null)
+        if (_instance != null)
         {
             Destroy(this.gameObject.transform.parent.gameObject);
             return;
         }
-        instance = this;
+        _instance = this;
         DontDestroyOnLoad(this.gameObject.transform.parent.gameObject);
     }
     
@@ -173,7 +174,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
 	
 	void FixedUpdate () 
     {
-        if (!paused && !gameCompleted)
+        if (!Paused && !GameCompleted)
         {
             CurGameTime += Time.deltaTime; 
             //Debug.Log("curGameTime: " + CurGameTime);
@@ -181,7 +182,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
             // only have this here to check if time attack mode is completed
             // since I cant have an update loop in a scriptable oject
             
-            if (_offeringData != null && inGame)
+            if (_offeringData != null && InGame)
             {
                 if (_offeringData.gameMode == GameMode.timeAttack)
                     _timeText.text = ElapsedTime(Time.time);
@@ -207,7 +208,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
                     _timeText.gameObject.SetActive(false);
                 _pointsText = GameObject.Find("Text_PointsHUD").GetComponent<Text>();   
                 _pointsText.GetComponentInParent<CanvasGroup>().alpha = 1;
-                points = 0;
+                Points = 0;
                 RandomGunMode tmpRand = (RandomGunMode)_offeringData.matchSetting;
                 _spawnCrates = tmpRand.SpawnCrates;
                 _spawnLocs = tmpRand.spawnLocs;
@@ -222,7 +223,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
                     _timeText.gameObject.SetActive(false);
                 _pointsText = GameObject.Find("Text_PointsHUD").GetComponent<Text>();
                 _pointsText.GetComponentInParent<CanvasGroup>().alpha = 1;
-                points = 0;
+                Points = 0;
                 RandomGunModeExtreme tmpRandEx = (RandomGunModeExtreme)_offeringData.matchSetting;
                 _spawnCrates = tmpRandEx.SpawnCrates;
                 _spawnLocs = tmpRandEx.spawnLocs;
@@ -271,14 +272,14 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
             default:
                 break;
         }
-        gameCompleted = false; 
+        GameCompleted = false; 
 
-        inGame = true;
+        InGame = true;
     }
   
     private void WonGame()
     {
-        gameModeSelected = false;
+        GameModeSelected = false;
         if (Time.timeScale != 1f)
         {
             Time.timeScale = 1f;
@@ -286,8 +287,8 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
                 RadialMenu.SetActive(false);
         }
 
-        inGame = false;
-        gameCompleted = true;
+        InGame = false;
+        GameCompleted = true;
         enemyManager.GetComponentInChildren<EnemySpawner>().enableSpawn = false;
         enemyManager.GetComponentInChildren<EnemySpawner>().DisableSpawner();
 
@@ -312,8 +313,8 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
 
     public void FailedGame()
     {
-        inGame = false;
-        gameCompleted = true;
+        InGame = false;
+        GameCompleted = true;
         enemyManager.GetComponentInChildren<EnemySpawner>().enableSpawn = false;
         enemyManager.GetComponentInChildren<EnemySpawner>().DisableSpawner();
         GameFailedPanel.SetActive(true);
@@ -335,8 +336,8 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
 
     public void QuitGame()
     {
-        inGame = false;
-        gameCompleted = true;
+        InGame = false;
+        GameCompleted = true;
         enemyManager.GetComponentInChildren<EnemySpawner>().enableSpawn = false;
         enemyManager.GetComponentInChildren<EnemySpawner>().DisableSpawner();
         GameFailedPanel.SetActive(true);
@@ -361,6 +362,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
     {
         GetComponent<LoadScene>().ReloadCurrentScene();
     }
+    
     private void ReturnToLobby()
     {
         // add lobby scene in parameter
@@ -369,9 +371,9 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
 
     public void AddPoint()
     {
-        points++;
-        _pointsText.text = points.ToString();
-        if (points >= _maxPoints)
+        Points++;
+        _pointsText.text = Points.ToString();
+        if (Points >= _maxPoints)
             WonGame();
         else
             SpawnCrate();
@@ -463,6 +465,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
         //Debug.Log("elapsedTime: "+ elapsedTime);
         return timeText;
     }
+    
     string FormatTime(float time)
     {
         int intTime = (int)time;
@@ -476,7 +479,7 @@ public class GameManager : MonoBehaviour, IGameModeSelectionMenu
 
     void IGameModeSelectionMenu.SetOfferingData(OfferingData offeringData)
     {
-        gameModeSelected = true; // this is only used for offering gate object
+        GameModeSelected = true; // this is only used for offering gate object
         _offeringData = offeringData;
         _gameMode = _offeringData.gameMode;
     }
@@ -496,6 +499,7 @@ public enum GameMode
     meleeOnly,
     weaponsOnly
 }
+
 public struct MatchResultData
 {
     public string favoriteWeapon;

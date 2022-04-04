@@ -2,24 +2,23 @@ using TMPro;
 using UnityEngine;
 
 /// <summary>
-/// gets and sets silver value into UI for stores. 
+/// gets and sets silver value into store's UI menu. 
 /// </summary>
 
 public class DisplaySilverTotal : MonoBehaviour
 {
     private TextMeshProUGUI SilverValue_Text;
+    private GameManager _gameManager;
 
     void Awake()
     { 
         SilverValue_Text = GetComponent<TextMeshProUGUI>();
     }
-    private void OnEnable()
-    {
-        SetSilverValueUI();
-    }
+    
+    private void OnEnable() => SetSilverValueUI();
+    
     public void SetSilverValueUI()
     {
-        SilverValue_Text.text = 
-            GameManager.instance.TotalSilver.ToString();
+        SilverValue_Text.text = _gameManager.TotalSilver.ToString();
     }
 }

@@ -1,42 +1,40 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
-using UnityEngine;
+﻿using UnityEngine;
+
+/// <summary>
+/// pause functionality that pauses game. 
+/// </summary>
 
 public class Pause : MonoBehaviour
 {
-    private GameManager gm;
-
+    private GameManager _gm;
 
     private void Start()
     {
-        gm = GameManager.instance; 
+        _gm = GameManager.Instance; 
     }
-
 
     public void PauseGame()
     {
         // add some bool in base class for menus when theyre genericed so they can get checked of theyrective all at once.
-        if (gm.GameWonPanel != null)
+        if (_gm.GameWonPanel != null)
         {
-            if (!gm.GameWonPanel.activeInHierarchy && !gm.paused)
+            if (!_gm.GameWonPanel.activeInHierarchy && !_gm.Paused)
             {
                 print("paused");
-                gm.paused = true;
+                _gm.Paused = true;
                 Time.timeScale = 0f;
                 PlayerController.instance.DisableInput();
-                gm.pauseMenu.SetActive(true);
+                _gm.pauseMenu.SetActive(true);
                 //hud.SetActive(false);
             }
             else
             {
-                if (gm.paused)
+                if (_gm.Paused)
                 {
-                    gm.paused = false;
+                    _gm.Paused = false;
                     Time.timeScale = 1f;
                     PlayerController.instance.EnableInput();
-                    gm.pauseMenu.SetActive(false);
+                    _gm.pauseMenu.SetActive(false);
                     //hud.SetActive(true);
                 }
             }
@@ -44,25 +42,22 @@ public class Pause : MonoBehaviour
         }
         else
         {
-
-            if (!gm.paused)
+            if (!_gm.Paused)
             {
                 print("paused");
-                gm.paused = true;
+                _gm.Paused = true;
                 Time.timeScale = 0f;
                 PlayerController.instance.DisableInput();
-                gm.pauseMenu.SetActive(true);
+                _gm.pauseMenu.SetActive(true);
                 //hud.SetActive(false);
             }
             else
             {
-                gm.paused = false;
+                _gm.Paused = false;
                 Time.timeScale = 1f;
                 PlayerController.instance.EnableInput();
-                gm.pauseMenu.SetActive(false);
+                _gm.pauseMenu.SetActive(false);
             }
         }
-
     }
-
 }

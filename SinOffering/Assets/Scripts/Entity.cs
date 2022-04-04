@@ -107,7 +107,7 @@ public abstract class Entity : MonoBehaviour {
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        gameManager = GameManager.instance;
+        gameManager = GameManager.Instance;
         camManager = CameraManager.instance; 
         InitEntity();
     }

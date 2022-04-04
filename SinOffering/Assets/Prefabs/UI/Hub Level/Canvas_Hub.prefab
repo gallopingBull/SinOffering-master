@@ -224,12 +224,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnablePrompt: 1
-  currentMenu: 0
-  menus:
+  CurrentMenu: 0
+  Menus:
   - {fileID: 7899523039531747729}
   - {fileID: 1079665464}
   - {fileID: 7901715163448871958}
-  menuCameras:
+  MenuCameras:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -306,10 +306,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnablePrompt: 1
-  currentMenu: 0
-  menus:
+  CurrentMenu: 0
+  Menus:
   - {fileID: 2861440563842144025}
-  menuCameras:
+  MenuCameras:
   - {fileID: 0}
   Delay: 1
 --- !u!114 &7033210989046257667
@@ -324,16 +324,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772c02684dff49646ac7f1503b2e10b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuButtons: []
-  menu: {fileID: 0}
-  maxFaithReq: 25000
+  MenuButtons: []
+  Menu: {fileID: 0}
+  _maxFaithReq: 25000
   BaseRespecCost: 250
   AdjustRespecCost: 0
   respecCost_Text: {fileID: 9221770111955621670}
   totalFaithSpentProgressBar: {fileID: 4941292144542329380}
   unlockedFaithProgressBar: {fileID: 4941292143678304274}
-  buttonprogressBar: {fileID: 3140807364957011386}
-  chargeTimeMax: 3
+  ButtonProgressBar: {fileID: 3140807364957011386}
+  _chargeTimeMax: 3
 --- !u!225 &755181076
 CanvasGroup:
   m_ObjectHideFlags: 0

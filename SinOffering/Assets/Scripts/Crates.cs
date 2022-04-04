@@ -1,34 +1,34 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Crates : MonoBehaviour {
+/// <summary>
+/// crates that are instantiated into random locations in arena and
+/// gives the player a random weapon.
+/// </summary>
 
+public class Crates : MonoBehaviour 
+{
     public Weapon[] Weapons;
-    public int spawnLoc;
-    public AudioClip crateObtainedClip;
+    public int SpawnLoc;
+    public AudioClip CrateObtainedClip;
 
-    private PlayerController player;
-    private GameManager gameManager;
+    private PlayerController _player;
+    private GameManager _gameManager;
 
-    private int maxWeaponIndex;
-
-    [SerializeField]
+    [SerializeField] bool _isAlter;
+    private int _maxWeaponIndex;
     public int EnemyKilledMAX;
-    private int curkill;
-    private int difference;
-    [SerializeField]
-    private bool isAlter;
+    private int _curkill;
+    private int _difference;
 
-    private int randWeapon;
-    private int prevWeapon;
+    private int _randWeapon;
+    private int _prevWeapon;
 
 
     private void Awake()
     {
-        player = PlayerController.instance;
-        gameManager = GameManager.instance;
-        difference = gameManager.CurEnemyKills;
+        _player = PlayerController.instance;
+        _gameManager = GameManager.Instance;
+        _difference = _gameManager.CurEnemyKills;
     }
 
     private void Start()
@@ -38,23 +38,22 @@ public class Crates : MonoBehaviour {
 
     private void OnTriggerEnter(Collider col)
     {
-        //print("Crates.cs || colliding with: " + col.gameObject.tag);
         if (col.gameObject.tag == "Player")
         {
-            if (isAlter)
+            if (_isAlter)
             {
-                curkill = (gameManager.CurEnemyKills - difference);
-                if (curkill >= EnemyKilledMAX)
+                _curkill = (_gameManager.CurEnemyKills - _difference);
+                if (_curkill >= EnemyKilledMAX)
                 {
-                    SoundManager.PlaySound(crateObtainedClip);
-                    gameManager.AddPoint();
+                    SoundManager.PlaySound(CrateObtainedClip);
+                    _gameManager.AddPoint();
                     GenerateWeapon();
                 }
             }
             else
             {
-                SoundManager.PlaySound(crateObtainedClip);
-                gameManager.AddPoint();
+                SoundManager.PlaySound(CrateObtainedClip);
+                _gameManager.AddPoint();
                 GenerateWeapon();
             }
         }
@@ -62,24 +61,21 @@ public class Crates : MonoBehaviour {
 
     private void GenerateWeapon()
     {
-        maxWeaponIndex = player.weaponManager.GetComponent<WeaponManager>().Weapons.Length - 1;
-        randWeapon = Random.Range(0, maxWeaponIndex);
+        _maxWeaponIndex = _player.weaponManager.GetComponent<WeaponManager>().Weapons.Length - 1;
+        _randWeapon = Random.Range(0, _maxWeaponIndex);
 
-        while (player.weaponManager.GetComponent<WeaponManager>().CurWeapon == randWeapon)
-            randWeapon = Random.Range(0, maxWeaponIndex);
+        while (_player.weaponManager.GetComponent<WeaponManager>().CurWeapon == _randWeapon)
+            _randWeapon = Random.Range(0, _maxWeaponIndex);
 
-        prevWeapon = player.weaponManager.GetComponent<WeaponManager>().CurWeapon;
-        player.weaponManager.GetComponent<WeaponManager>().EquipWeapon(randWeapon);
+        _prevWeapon = _player.weaponManager.GetComponent<WeaponManager>().CurWeapon;
+        _player.weaponManager.GetComponent<WeaponManager>().EquipWeapon(_randWeapon);
         Destroy(gameObject);
     }
 
     private void AddCrateToCamTargets()
     {
-        if (gameManager.camManager == null)
-        {
-            Debug.Log("gameManager == null");
+        if (_gameManager.camManager == null)
             return;
-        }
-        gameManager.camManager.AddCameraTargets(gameObject.transform, 40f);
+        _gameManager.camManager.AddCameraTargets(gameObject.transform, 40f);
     }
 }

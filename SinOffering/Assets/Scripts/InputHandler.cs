@@ -15,7 +15,8 @@ public class InputHandler : MonoBehaviour
     [SerializeField]
     public List<ICommand> Commands;
     
-    private PlayerController pc; //reference to main Player Controller
+    private PlayerController _pc; //reference to main Player Controller
+    private GameManager _gameManager; //reference to main Player Controller
 
     // left stick values
     [HideInInspector]
@@ -76,7 +77,8 @@ public class InputHandler : MonoBehaviour
     #region functions
     void Awake()
     {
-        pc = GetComponent<PlayerController>();
+        _pc = GetComponent<PlayerController>();
+        _gameManager = GameManager.Instance;
         jumpCommand = GetComponent<JumpCommand>();
         moveCommand = GetComponent<MoveCommand>();
         fireCommand = GetComponent<FireCommand>();
@@ -91,7 +93,7 @@ public class InputHandler : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick button 7")))
             GetComponent<Pause>().PauseGame();
 
-        if (pc.InputEnabled)
+        if (_pc.InputEnabled)
         {
             #region get move direction
             L_xRaw = Input.GetAxisRaw("Horizontal");
@@ -102,25 +104,25 @@ public class InputHandler : MonoBehaviour
             //InputDelay.InputDelayHandler(state); // manages delay timers for several different input/actions
             #endregion
 
-            int lastDirection = pc.dir;
-            if (L_xRaw > 0 && pc.dir != 1)
-                pc.dir = 1;
-            if (L_xRaw < 0 && pc.dir != -1)
-                pc.dir = -1;
+            int lastDirection = _pc.dir;
+            if (L_xRaw > 0 && _pc.dir != 1)
+                _pc.dir = 1;
+            if (L_xRaw < 0 && _pc.dir != -1)
+                _pc.dir = -1;
 
             #endregion
 
             // if weapon is equipped
-            if (pc.weaponManager.WeaponEquipped)
+            if (_pc.weaponManager.WeaponEquipped)
             {
                 if (Input.GetButton("AimWeapon") && !aiming)
                     aiming = true;
                 if (Input.GetButtonUp("AimWeapon"))
                 {
                     aiming = false;
-                    pc.StateManager.EnterState(Entity.State.Idle);
+                    _pc.StateManager.EnterState(Entity.State.Idle);
                     // reset weapon position/rotation to default with movement direction
-                    pc.EquippedWeapon.GetComponent<Weapon>().ResetPosition(_aimDir);
+                    _pc.EquippedWeapon.GetComponent<Weapon>().ResetPosition(_aimDir);
                 }
 
                 if (aiming)
@@ -143,27 +145,27 @@ public class InputHandler : MonoBehaviour
                     if (R_xRaw == 0)
                     {
                         if (_aimDir == 0)
-                            _aimDir = pc.dir;
+                            _aimDir = _pc.dir;
                         else
                         {
                             if (lastDirection != _aimDir)
                             {
-                                pc.FlipEntitySprite(_aimDir);
-                                pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
+                                _pc.FlipEntitySprite(_aimDir);
+                                _pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
                             }
                         }
                     }
                     else
                     {
-                        pc.FlipEntityAimingSprite(_aimDir);
+                        _pc.FlipEntityAimingSprite(_aimDir);
                         if (_aimDir != 0) 
                         { 
-                            pc.weaponManager.ModifyWeaponRotation(_aimDir, _aimDirection); 
+                            _pc.weaponManager.ModifyWeaponRotation(_aimDir, _aimDirection); 
                             SwapAimingSprite(_aimDir, _aimDirection);
                         }
-                        pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
+                        _pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
                     }
-                    pc.EquippedWeapon.GetComponent<Weapon>().SetSpawnLoc();
+                    _pc.EquippedWeapon.GetComponent<Weapon>().SetSpawnLoc();
                     lastDirection = _aimDir;
                 }
                 else
@@ -175,12 +177,12 @@ public class InputHandler : MonoBehaviour
             if (L_xRaw == 0)
             {
                 // maybe create a "IdleCommand" and move this there... idk yet
-                if (pc.IsGrounded && !aiming)
+                if (_pc.IsGrounded && !aiming)
                 {
-                    if (pc.state != Entity.State.Idle && !Input.GetButtonDown("Jump"))
-                        pc.StateManager.EnterState(Entity.State.Idle);
+                    if (_pc.state != Entity.State.Idle && !Input.GetButtonDown("Jump"))
+                        _pc.StateManager.EnterState(Entity.State.Idle);
                 }
-                pc.rb.velocity = new Vector3(0, pc.rb.velocity.y, 0);
+                _pc.rb.velocity = new Vector3(0, _pc.rb.velocity.y, 0);
             }
     
             // Handles player's horizontal movement
@@ -189,21 +191,21 @@ public class InputHandler : MonoBehaviour
                 // assign direction player is facing (maybe move this)
                 if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
                 {
-                    pc.FlipEntitySprite(pc.dir);
+                    _pc.FlipEntitySprite(_pc.dir);
                     // flip weapon sprite
-                    if (pc.weaponManager.WeaponEquipped)
+                    if (_pc.weaponManager.WeaponEquipped)
                         if (!aiming)
-                            pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(pc.dir);
+                            _pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_pc.dir);
                     Commands.Add(moveCommand);
                 }   
             }
 
-            if (pc.AbilitiesEnabled)
+            if (_pc.AbilitiesEnabled)
             {
                 if (Input.GetButtonUp("Jump"))
                 {
-                    if (pc.button != null && pc.button.activeSelf)
-                        pc.button.SetActive(false);
+                    if (_pc.button != null && _pc.button.activeSelf)
+                        _pc.button.SetActive(false);
                 }
                 // Handles Jumping
                 if (Input.GetButtonDown("Jump"))
@@ -216,11 +218,11 @@ public class InputHandler : MonoBehaviour
                     #endregion
 
                     #region TEST UI
-                    if (pc.button != null && !pc.button.activeSelf)
-                        pc.button.SetActive(true);
+                    if (_pc.button != null && !_pc.button.activeSelf)
+                        _pc.button.SetActive(true);
                     #endregion
                     
-                    if (pc.jumpEnabled && jumpDelayComplete)
+                    if (_pc.jumpEnabled && jumpDelayComplete)
                     {
                         if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
                             Commands.Add(jumpCommand);
@@ -228,11 +230,11 @@ public class InputHandler : MonoBehaviour
                 }
 
                 // Dash Attack
-                if (Input.GetAxis("LeftTrigger") == 1 && !GameManager.instance.gameCompleted)
+                if (Input.GetAxis("LeftTrigger") == 1 && !_gameManager.GameCompleted)
                     Commands.Add(dashCommand);
 
                 // Melee Attack
-                if (Input.GetButtonDown("Melee") && !GameManager.instance.gameCompleted)
+                if (Input.GetButtonDown("Melee") && !_gameManager.GameCompleted)
                     Commands.Add(meleeCommand);
 
 
@@ -279,8 +281,8 @@ public class InputHandler : MonoBehaviour
                 // change weapons
                 if (Input.GetButtonDown("SwapWeapon"))
                 {
-                    pc.weaponManager.ChangeWeapon();
-                    pc.StateManager.EnterState(pc.state);
+                    _pc.weaponManager.ChangeWeapon();
+                    _pc.StateManager.EnterState(_pc.state);
                 }
                     
 
@@ -310,13 +312,13 @@ public class InputHandler : MonoBehaviour
                 #endregion
                 
                 // Fire Weapon
-                if (pc.EquippedWeapon != null)
+                if (_pc.EquippedWeapon != null)
                 {
                     if (Input.GetButtonUp("Fire1") || Input.GetAxis("RightTrigger") == 0)
-                        pc.EquippedWeapon.GetComponent<Weapon>().ReleaseTrigger();
+                        _pc.EquippedWeapon.GetComponent<Weapon>().ReleaseTrigger();
 
                     if ((Input.GetButton("Fire1") || Input.GetAxis("RightTrigger") == 1) &&
-                        pc.EquippedWeapon != null)
+                        _pc.EquippedWeapon != null)
                     {
                         //Debug.Log("pressing trigger");
                         if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
@@ -331,7 +333,7 @@ public class InputHandler : MonoBehaviour
 
     public void InputDelay()
     {
-        switch (pc.state)
+        switch (_pc.state)
         {
             case Entity.State.Jumping:
                 if (jumpDelay > 0f)
@@ -458,17 +460,17 @@ public class InputHandler : MonoBehaviour
     private void OnDrawGizmos()
     {
         // crappy condition to ignore null error from pc while in editor
-        if (pc == null)
+        if (_pc == null)
             return;
 
-        if (pc.EquippedWeapon != null)
+        if (_pc.EquippedWeapon != null)
         {
-            _origin = pc.EquippedWeapon.GetComponent<Weapon>().spawnLoc.transform.position;
+            _origin = _pc.EquippedWeapon.GetComponent<Weapon>().spawnLoc.transform.position;
 
             // aim direction
             if (aiming && _origin != null)
             {
-                Quaternion currentRotation = pc.EquippedWeapon.GetComponent<Weapon>().spawnLoc.transform.localRotation;
+                Quaternion currentRotation = _pc.EquippedWeapon.GetComponent<Weapon>().spawnLoc.transform.localRotation;
                 Vector3 currentEulerAngles = currentRotation * Vector3.right;
 
                 Gizmos.color = Color.red;
@@ -500,14 +502,14 @@ public class InputHandler : MonoBehaviour
                 if (angle.x > 0)
                 {
                     Debug.Log("angle.x > 0");
-                    pc.animator.Play("Player_Shoot_Angled_Up")  ;
+                    _pc.animator.Play("Player_Shoot_Angled_Up")  ;
                 }
                 else
                 {
                     //Debug.Log("angle.x < 0");
                     // down-angle/facing-left: 45
                     //.9238796
-                    pc.animator.Play("Player_Shoot_Angled_Down");
+                    _pc.animator.Play("Player_Shoot_Angled_Down");
                     //if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Down"))
                 }
                 break;
@@ -519,7 +521,7 @@ public class InputHandler : MonoBehaviour
 
 
                 //Debug.Log("case 0:");
-                pc.animator.Play("Player_Shoot");
+                _pc.animator.Play("Player_Shoot");
                 break;
 
             case 270:
@@ -528,15 +530,15 @@ public class InputHandler : MonoBehaviour
                 {
                     //Debug.Log("angle.x > 0");
                     // down/facing-right: 270
-                    if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Down"))
-                        pc.animator.Play("Player_Shoot_Down");
+                    if (!_pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Down"))
+                        _pc.animator.Play("Player_Shoot_Down");
                 }
                 else
                 {
                     //Debug.Log("angle.x < 0");
                     // up/facing-left: 270  
-                    if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Up"))
-                        pc.animator.Play("Player_Shoot_Up");
+                    if (!_pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Up"))
+                        _pc.animator.Play("Player_Shoot_Up");
                 }
                 break;
 
@@ -546,15 +548,15 @@ public class InputHandler : MonoBehaviour
                 {
                     //Debug.Log("angle.x > 0");
                     // down-angle/facing-right: 315
-                    if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Down"))
-                        pc.animator.Play("Player_Shoot_Angled_Down");
+                    if (!_pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Down"))
+                        _pc.animator.Play("Player_Shoot_Angled_Down");
                 }
                 else
                 {
                     //Debug.Log("angle.x < 0");
                     // up-angle/facing-left: 315
-                    if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Up"))
-                        pc.animator.Play("Player_Shoot_Angled_Up");
+                    if (!_pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Up"))
+                        _pc.animator.Play("Player_Shoot_Angled_Up");
                 }
                 break;
 
@@ -565,15 +567,15 @@ public class InputHandler : MonoBehaviour
                 {
                     //Debug.Log("angle.x > 0");
                     // up/facing-right: 90
-                    if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Down"))
-                        pc.animator.Play("Player_Shoot_Down");
+                    if (!_pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Down"))
+                        _pc.animator.Play("Player_Shoot_Down");
                 }
                 else
                 {
                     //Debug.Log("angle.x < 0");
                     // down/facing-left: 90
-                    if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Up"))
-                        pc.animator.Play("Player_Shoot_Up");
+                    if (!_pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Up"))
+                        _pc.animator.Play("Player_Shoot_Up");
                 }
 
                 break; 
@@ -595,7 +597,7 @@ public class InputHandler : MonoBehaviour
     
     public void ModifyWeaponRotation(int dir, Vector3 angle)
     {
-        pc.EquippedWeapon.transform.rotation =
+        _pc.EquippedWeapon.transform.rotation =
             Quaternion.Euler(0, 0, GetTargetEuler(angle * dir, 45f));
     }
 }

@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// class for generic ammo that drops in scene after enemy is killed.
+/// </summary>
+
 public class AmmoDrop : MonoBehaviour
 {
-    private PlayerController player;
-    private GameManager gm;
-    public AudioClip audioObtainedClip;
+    private PlayerController _player;
+    private GameManager _gm;
+    public AudioClip AudioObtainedClip;
 
     private void Start()
     {
-        gm = GameManager.instance;
-        player = PlayerController.instance;
+        _gm = GameManager.Instance;
+        _player = PlayerController.instance;
         Invoke("AddToCamTargets", .1f);
     }
 
@@ -17,27 +21,15 @@ public class AmmoDrop : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            if (player.EquippedWeapon != null)
+            if (_player.EquippedWeapon != null)
             {
-                SoundManager.PlaySound(audioObtainedClip); 
-                player.EquippedWeapon.GetComponent<Weapon>().ReloadWeapon();
+                SoundManager.PlaySound(AudioObtainedClip); 
+                _player.EquippedWeapon.GetComponent<Weapon>().ReloadWeapon();
             }
             Destroy(gameObject);
         }
     }
 
-    private void AddToCamTargets()
-    {
-        gm.camManager.AddCameraTargets(transform, .5f);
-        #region testing
-        /*
-        if (MultiTargetCam.instance.enabled &&
-            MultiTargetCam.instance.AddCrates)
-        {
-            MultiTargetCam.instance.targets.Add(gameObject.transform);
-        }*/
-        #endregion
-
-    }
+    private void AddToCamTargets() => _gm.camManager.AddCameraTargets(transform, .5f);
 }
 

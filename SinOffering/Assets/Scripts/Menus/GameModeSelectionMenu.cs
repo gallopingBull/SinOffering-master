@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
 using UnityEngine;
+
+/// <summary>
+/// get and set generic game mode data from offfering database to offering selection menu.
+/// </summary>
 
 public class GameModeSelectionMenu : MonoBehaviour
 {
@@ -16,7 +18,8 @@ public class GameModeSelectionMenu : MonoBehaviour
 
     public Transform spawnParent;
 
-    private HUDManager hm;
+    private HUDManager _hm;
+    private GameManager _gameManager;
 
     [SerializeField]
     private GameMode _gameMode;
@@ -34,23 +37,22 @@ public class GameModeSelectionMenu : MonoBehaviour
     private void Start()
     {
         offeringDatabase = OfferingDatabase._instance.GetOfferingDatabase();
-        hm = HUDManager._instance;
+        _hm = HUDManager._instance;
+        _gameManager = GameManager.Instance;
         SetClient();
         InitMenu();
     }
 
     public void SetClient()
     {
-        _client = GameObject.Find("GameManager").GetComponent<GameManager>();
+        _client = _gameManager;
     }
 
     // called when button is played
     public void SendOfferingData(OfferingData offeringData)
     {
-        Debug.Log("setting data in GameManager()");
         if (_client == null)
             return;
-
         Debug.Log("gameMode: " + offeringData.ToString());
         _client.SetOfferingData(offeringData);
     }
@@ -100,12 +102,11 @@ public class GameModeSelectionMenu : MonoBehaviour
         SendOfferingData(_offeringData));
     }
 
-    private void GameModeSelected()
+    private void SetGameModeSelected()
     {
-        GameManager.instance.gameModeSelected = true;
+        _gameManager.GameModeSelected = true;
     }
 }
-
 
 public interface IGameModeSelectionMenu
 {

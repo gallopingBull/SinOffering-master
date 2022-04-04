@@ -1,24 +1,25 @@
 using UnityEngine;
 
+/// <summary>
+/// helper class that handles collision detection for silver drop
+/// so player can pick silver up. 
+/// </summary>
+
 public class SilverDrop : MonoBehaviour
 {
-    private GameManager gm;
-    [SerializeField]
-    private int value = 0;
+    private GameManager _gm;
+    [SerializeField] int _value = 0;
 
-    public AudioClip audioObtainedClip;
+    public AudioClip AudioObtainedClip;
 
-    private void Start()
-    {
-        gm = GameManager.instance;
-    }
+    private void Start() => _gm = GameManager.Instance;
 
     private void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Player")
         {
-            SoundManager.PlaySound(audioObtainedClip);
-            gm.IncrementSilver(value);
+            SoundManager.PlaySound(AudioObtainedClip);
+            _gm.IncrementSilver(_value);
             Destroy(gameObject);
         }
     }

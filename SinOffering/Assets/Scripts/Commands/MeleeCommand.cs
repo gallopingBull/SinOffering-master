@@ -2,20 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 
+/// <summary>
+/// command for melee attack that's invoked by InputHandler.cs. implements melee attack behavior.
+/// </summary>
 
-public class MeleeCommand : ICommand {
-
+public class MeleeCommand : ICommand 
+{
+    [SerializeField] float attackRange = 1;
+    
     public Transform[] AttackPoints;
-    [SerializeField]
-    private float attackRange = 1;
     public LayerMask enemyLayer;
-
     public List<Collider> hitEnemies = new List<Collider>();
+
     private void Awake()
     {
         pc = GetComponent<PlayerController>();
     }
     public override void Execute() { MeleeAttack(); }
+    
     public override void Redo()
     {
 
@@ -27,12 +31,10 @@ public class MeleeCommand : ICommand {
         {
             if (pc.dir != 1)
             {
-                //Debug.Log("in update");   
                 Vector3 tmpPos = pc.MeleeSprite.gameObject.transform.localPosition;
                 Vector3 tmpRot = pc.MeleeSprite.gameObject.transform.eulerAngles;
                 tmpPos.x *= -1;
                 tmpRot.z *= -1;
-                //Debug.Log("tmp.x: " + tmpPos.x);
                 pc.MeleeSprite.gameObject.transform.localPosition = tmpPos;
                 pc.MeleeSprite.gameObject.transform.eulerAngles = tmpRot;
             }
@@ -42,7 +44,6 @@ public class MeleeCommand : ICommand {
     public void MeleeAttack()
     {
         // return if reached max attack count
-       
         if (pc.IsGrounded) //check if not in state jump state
         {
             pc.StateManager.EnterState(Entity.State.meleeing);

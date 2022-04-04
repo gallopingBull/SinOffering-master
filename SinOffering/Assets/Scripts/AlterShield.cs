@@ -1,37 +1,38 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
+/// <summary>
+/// shield behavior for alters that can kill player until shield is removed
+/// by completing required killcount / _killRequired /
+/// </summary>
 
 public class AlterShield : MonoBehaviour
 {
-    GameManager gameManager;
-
-    private int curkill;
-    private int difference;
-    private int killRequired;
-    // Start is called before the first frame update
+    private GameManager _gameManager;
+    private int _curKillCount;
+    private int _difference;
+    private int _killRequired = 3;
+    
     void Awake()
     {
-        gameManager = GameManager.instance;
-        killRequired = GetComponentInParent<Crates>().EnemyKilledMAX;
-        difference = gameManager.CurEnemyKills;
+        _gameManager = GameManager.Instance;
+        _killRequired = GetComponentInParent<Crates>().EnemyKilledMAX;
+        _difference = _gameManager.CurEnemyKills;
     }
 
     private void Update()
     {
-        curkill = (gameManager.CurEnemyKills - difference);
-        if (curkill >= killRequired)
+        _curKillCount = (_gameManager.CurEnemyKills - _difference);
+        if (_curKillCount >= _killRequired)
             Destroy(gameObject);
     }
+
     private void OnTriggerEnter(Collider col)
     {
-        //print("AlterShield.cs ||colliding with: " + col.gameObject.name);
         if (col.gameObject.name == "Player")
         {
-            if (curkill < killRequired)
+            if (_curKillCount < _killRequired)
             {
-                //print("kill player");
-                Debug.Log("killing player from altershiekd.cs");
+                Debug.Log("killing player from altershield.cs");
                 col.gameObject.GetComponent<PlayerController>().Killed();
             }
         }

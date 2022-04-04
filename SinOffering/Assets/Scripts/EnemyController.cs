@@ -45,7 +45,7 @@ public class EnemyController : Entity {
     // Update is called once per frame
     protected override void FixedUpdate()
     {
-        if (!isGhost && !gameManager.paused)
+        if (!isGhost && !gameManager.Paused)
         {
             CheckIfFalling();
             GravityModifier();
@@ -54,7 +54,7 @@ public class EnemyController : Entity {
     }
     private void Update()
     {
-        if (gameManager.paused)
+        if (gameManager.Paused)
             return;
         
         if (CanMove)

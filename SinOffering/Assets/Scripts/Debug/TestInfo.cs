@@ -1,64 +1,63 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
+﻿using UnityEngine.UI;
 using UnityEngine;
 
-public class TestInfo : MonoBehaviour {
+/// <summary>
+/// class displays performance, player, and game data for testing purposes only.
+/// </summary>
 
+public class TestInfo : MonoBehaviour
+{
     public GameObject DebuggerCanvas;
-    public Text stateText, velocity, point_Text, curWeapon_text, 
+    public Text stateText, velocity, point_Text, curWeapon_text,
         grounded_text, jumpEnabled_Text, jumpCount_Text, dashCount_Text;
 
-    private GameObject player;
-    private GameManager gm;
+    private PlayerController _player;
+    private GameManager _gm;
     public int TargetFrameRate = 60;
 
-    float deltaTime = 0.0f;
+    private float _deltaTime = 0.0f;
 
     public static bool EnableDebugInfo = true;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         //QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = TargetFrameRate;
-        player = GameObject.Find("Player");
-        gm = GameManager.instance;
+        _player = PlayerController.instance;
+        _gm = GameManager.Instance;
     }
+    
     //This displays testing data 
     private void DisplayPlayerControllerData()
     {
-        if (gm == null)
-        {
+        if (_gm == null)
             return;
-        }
-        if (!gm.gameCompleted && player != null)
+        if (!_gm.GameCompleted && _player != null)
         {
-            stateText.text = player.GetComponent<PlayerController>().state.ToString();
-            velocity.text = player.GetComponent<Entity>().rb.velocity.ToString();
-            point_Text.text = gm.points.ToString();
-            grounded_text.text = player.GetComponent<PlayerController>().IsGrounded.ToString();
-            jumpEnabled_Text.text = player.GetComponent<PlayerController>().jumpEnabled.ToString();
-            jumpCount_Text.text = player.GetComponent<PlayerController>().jumpCount.ToString();
-            dashCount_Text.text = player.GetComponent<DashCommand>().dashCount.ToString();
+            stateText.text = _player.state.ToString();
+            velocity.text = _player.rb.velocity.ToString();
+            point_Text.text = _gm.Points.ToString();
+            grounded_text.text = _player.IsGrounded.ToString();
+            jumpEnabled_Text.text = _player.jumpEnabled.ToString();
+            jumpCount_Text.text = _player.jumpCount.ToString();
+            dashCount_Text.text = _player.GetComponent<DashCommand>().dashCount.ToString();
 
-            if (player.GetComponent<PlayerController>().EquippedWeapon != null)
-            {
-                curWeapon_text.text = player.GetComponent<PlayerController>().EquippedWeapon.GetComponent<Weapon>().GetWeaponName();
-            }
+            if (_player.EquippedWeapon != null)
+                curWeapon_text.text = _player.EquippedWeapon.GetComponent<Weapon>().GetWeaponName();
             else
-            {
                 curWeapon_text.text = "no weapon";
-            }
+
         }
     }
 
     // Update is called once per frame
-    void Update () {
-
+    void Update()
+    {
         if (EnableDebugInfo)
             DisplayPlayerControllerData();
 
-        deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
+        _deltaTime += (Time.unscaledDeltaTime - _deltaTime) * 0.1f;
 
         if (Input.GetKeyDown(KeyCode.R) ||
         Input.GetKeyDown("joystick button 6"))
@@ -96,30 +95,22 @@ public class TestInfo : MonoBehaviour {
             style.alignment = TextAnchor.UpperRight;
             style.fontSize = h * 2 / 60;
 
-            float msec = deltaTime * 1000.0f;
-            float fps = 1.0f / deltaTime;
+            float msec = _deltaTime * 1000.0f;
+            float fps = 1.0f / _deltaTime;
             if (fps < 30)
-            {
                 style.normal.textColor = Color.yellow;
-            }
             else
             {
                 if (fps < 10)
-                {
                     style.normal.textColor = Color.red;
-                }
                 else
-                {
                     style.normal.textColor = Color.green;
-                }
             }
 
             string text = string.Format("{0:0.0} ms ({1:0.} fps)", msec, fps);
             GUI.Label(rect, text, style);
         }
         else
-        {
-            style.normal.textColor = Color.clear; 
-        }
+            style.normal.textColor = Color.clear;
     }
 }

@@ -1,12 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
+/// <summary>
+/// state manager for player controller class.
+/// </summary>
 
 public class StateManager : MonoBehaviour
 {
     private PlayerController pc;
     private int hitCount = 0;
+    
     private void Awake() => pc = GetComponent<PlayerController>();
+    
     public void EnterState(Entity.State _state)
     {
         ExitState(pc.state);
@@ -190,6 +194,7 @@ public class StateManager : MonoBehaviour
                 break;
         }
     }
+    
     public void ExitState(Entity.State _state)
     {
         switch (_state)
@@ -272,6 +277,7 @@ public class StateManager : MonoBehaviour
                 break;
         }
     }
+    
     // Updates state every frame - place in PlayerController's FixedUpdate();
     private void UpdateState()
     {

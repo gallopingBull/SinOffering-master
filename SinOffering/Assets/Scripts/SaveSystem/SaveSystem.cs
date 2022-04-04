@@ -1,20 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+/// <summary>
+/// singleton class that loads and saves game state/stats/progress and other pertinent data.
+/// </summary>
 
 public class SaveSystem : MonoBehaviour
 {
+    private static SaveSystem _instance;   
     private GameData _gameData = new GameData();
-    [HideInInspector]
-    public static SaveSystem _instance;
-
     private PlayerSettings _playerSettings = new PlayerSettings();
-
-    private GameManager gameManager;
-    private PlayerController player;
+    private GameManager _gameManager;
+    private PlayerController _player;
 
     public PlayerSettings PlayerSettings { get => _playerSettings; set => _playerSettings = value; }
     public GameData GameData { get => _gameData; set => _gameData = value; }
+    public static SaveSystem Instance { get => _instance; }
 
     private void Awake()
     {
@@ -24,10 +24,11 @@ public class SaveSystem : MonoBehaviour
 
     private void Start()
     {   
-        gameManager = GameManager.instance;
-        player = PlayerController.instance;
+        _gameManager = GameManager.Instance;
+        _player = PlayerController.instance;
         //InitData();
     }
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.K))
@@ -45,9 +46,9 @@ public class SaveSystem : MonoBehaviour
     public void SaveGameData()
     {
         _gameData.WeaponAttributesDatas.Clear();
-        for (int i = 0; i < player.weaponManager.Weapons.Length; i++)
+        for (int i = 0; i < _player.weaponManager.Weapons.Length; i++)
         {
-            var curWeapon = player.weaponManager.Weapons[i].GetComponent<Weapon>().WeaponAttributes;
+            var curWeapon = _player.weaponManager.Weapons[i].GetComponent<Weapon>().WeaponAttributes;
             
             if (!curWeapon.WeaponPurchased)
                 continue;
@@ -56,19 +57,19 @@ public class SaveSystem : MonoBehaviour
         }
 
         _gameData.PlayerAttributes = new PlayerAttributes();
-        _gameData.PlayerAttributes = player.Attributes;
+        _gameData.PlayerAttributes = _player.Attributes;
        
 
-        _gameData.TotalWins = _gameData.TotalWins + gameManager.CurWins;
-        _gameData.TotalLosses = _gameData.TotalLosses + gameManager.CurLosses;
-        _gameData.TotalGamesPlayed = _gameData.TotalGamesPlayed + gameManager.CurGamesPlayed;
-        _gameData.TotalGameTime = _gameData.TotalGameTime + gameManager.CurGameTime;
-        _gameData.TotalEnemyKills = _gameData.TotalEnemyKills + gameManager.CurEnemyKills;
-        _gameData.TotalDeaths = _gameData.TotalDeaths + gameManager.CurDeaths;
-        _gameData.TotalSuicides = _gameData.TotalSuicides + gameManager.CurSuicides;
-        _gameData.TotalSilver = gameManager.TotalSilver + gameManager.curSilver;
-        _gameData.TotalFaith = gameManager.TotalCurrentFaith;
-        _gameData.TotalFaithSpent = gameManager.TotalFaithSpent;
+        _gameData.TotalWins = _gameData.TotalWins + _gameManager.CurWins;
+        _gameData.TotalLosses = _gameData.TotalLosses + _gameManager.CurLosses;
+        _gameData.TotalGamesPlayed = _gameData.TotalGamesPlayed + _gameManager.CurGamesPlayed;
+        _gameData.TotalGameTime = _gameData.TotalGameTime + _gameManager.CurGameTime;
+        _gameData.TotalEnemyKills = _gameData.TotalEnemyKills + _gameManager.CurEnemyKills;
+        _gameData.TotalDeaths = _gameData.TotalDeaths + _gameManager.CurDeaths;
+        _gameData.TotalSuicides = _gameData.TotalSuicides + _gameManager.CurSuicides;
+        _gameData.TotalSilver = _gameManager.TotalSilver + _gameManager.curSilver;
+        _gameData.TotalFaith = _gameManager.TotalCurrentFaith;
+        _gameData.TotalFaithSpent = _gameManager.TotalFaithSpent;
 
         Debug.Log("Saving Game...");
         var json = JsonUtility.ToJson(_gameData);
@@ -86,33 +87,34 @@ public class SaveSystem : MonoBehaviour
         for (int i = 0; i < _gameData.WeaponAttributesDatas.Count; i++)
         {
             var curWeapon = _gameData.WeaponAttributesDatas[i];
-            for (int j = 0; j < player.weaponManager.Weapons.Length; j++) {
+            for (int j = 0; j < _player.weaponManager.Weapons.Length; j++) {
                 Debug.Log("curWeapon: " + curWeapon.weaponName);
-                if (curWeapon.weaponName != player.weaponManager.Weapons[j].GetComponent<Weapon>().GetWeaponName())
+                if (curWeapon.weaponName != _player.weaponManager.Weapons[j].GetComponent<Weapon>().GetWeaponName())
                     continue;
 
-                player.weaponManager.Weapons[j].GetComponent<Weapon>().WeaponAttributes.SetWeaponAttributeData(_gameData.WeaponAttributesDatas[i]);
-                player.weaponManager.Weapons[j].GetComponent<Weapon>().SetWeaponAttributeFields();
+                _player.weaponManager.Weapons[j].GetComponent<Weapon>().WeaponAttributes.SetWeaponAttributeData(_gameData.WeaponAttributesDatas[i]);
+                _player.weaponManager.Weapons[j].GetComponent<Weapon>().SetWeaponAttributeFields();
             }
         }
 
         //player.Attributes = _gameData.PlayerAttributes;
-        player.SetPersistentPlayerAttributeData(_gameData.PlayerAttributes);
+        _player.SetPersistentPlayerAttributeData(_gameData.PlayerAttributes);
 
-        gameManager.CurWins = _gameData.TotalWins;
-        gameManager.CurLosses = _gameData.TotalLosses;
-        gameManager.CurGamesPlayed = _gameData.TotalGamesPlayed;
-        gameManager.CurGameTime = _gameData.TotalGameTime;
-        gameManager.CurEnemyKills = _gameData.TotalEnemyKills;
-        gameManager.CurDeaths = _gameData.TotalDeaths;
-        gameManager.CurSuicides = _gameData.TotalSuicides;
-        gameManager.TotalSilver = _gameData.TotalSilver;
-        gameManager.TotalCurrentFaith = _gameData.TotalFaith;
-        gameManager.TotalFaithSpent = _gameData.TotalFaithSpent;
+        _gameManager.CurWins = _gameData.TotalWins;
+        _gameManager.CurLosses = _gameData.TotalLosses;
+        _gameManager.CurGamesPlayed = _gameData.TotalGamesPlayed;
+        _gameManager.CurGameTime = _gameData.TotalGameTime;
+        _gameManager.CurEnemyKills = _gameData.TotalEnemyKills;
+        _gameManager.CurDeaths = _gameData.TotalDeaths;
+        _gameManager.CurSuicides = _gameData.TotalSuicides;
+        _gameManager.TotalSilver = _gameData.TotalSilver;
+        _gameManager.TotalCurrentFaith = _gameData.TotalFaith;
+        _gameManager.TotalFaithSpent = _gameData.TotalFaithSpent;
 
-        GameEvents.OnCurrencyUpdateEvent?.Invoke(gameManager.TotalSilver);
-        GameEvents.OnFaithUpdateEvent?.Invoke(gameManager.TotalCurrentFaith);
+        GameEvents.OnCurrencyUpdateEvent?.Invoke(_gameManager.TotalSilver);
+        GameEvents.OnFaithUpdateEvent?.Invoke(_gameManager.TotalCurrentFaith);
     }
+    
     private void SavePlayerSettings()
     {
 

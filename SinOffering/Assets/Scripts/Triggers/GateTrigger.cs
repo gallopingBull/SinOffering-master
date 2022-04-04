@@ -1,26 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+/// <summary>
+/// helper class for GateBehavior.cs to detect collision for door objects.
+/// </summary>
 
 public class GateTrigger : MonoBehaviour
 {
-    public bool enableGate = false;
-    public bool isOfferingGate = false;
+    public bool EnableGate = false;
+    public bool IsOfferingGate = false;
     private GateBehavior _gate;
-
+    private GameManager _gameManager;
+    
     private void Start()
     {
         _gate = GetComponentInParent<GateBehavior>();
+        _gameManager = GameManager.Instance;
     }
-
 
     private void OnTriggerStay(Collider other)
     {
         if (other.name == "Player")
         {
-            if (isOfferingGate)
-                enableGate = GameManager.instance.gameModeSelected;
-            if (enableGate)
+            if (IsOfferingGate)
+                EnableGate = _gameManager.GameModeSelected;
+            if (EnableGate)
             {
                 if (Input.GetButtonDown("Jump"))
                 {
@@ -31,7 +34,6 @@ public class GateTrigger : MonoBehaviour
             }
         }
     }
-
 
     private void OnTriggerExit(Collider other)
     {

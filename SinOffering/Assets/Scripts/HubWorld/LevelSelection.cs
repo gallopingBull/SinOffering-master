@@ -1,20 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
 using Cinemachine;
 using UnityEngine;
 
-// open and close Level selection menu
+/// <summary>
+/// open and close Level selection menu.
+/// </summary>
+
 public class LevelSelection : MonoBehaviour
 {
-    private GameManager gameManager;
+    private GameManager _gameManager;
     public CinemachineVirtualCamera menuCamera;
     public GameObject menu;
 
     void Start()
     {
-        gameManager = GameManager.instance;
+        _gameManager = GameManager.Instance;
     }
     
     private void Update()
@@ -31,7 +30,6 @@ public class LevelSelection : MonoBehaviour
     private void OnEnable()
     {
         PlayerController.instance.DisableInput();
-
         if (menuCamera != null)
         {
             //CameraManager.instance.GetCurrentCam().Priority = 10;

@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
+
 /// <summary>
 /// class that handles fade in/out behavior for canvas UI elements.
 /// </summary>
+
 public class FadeCanvasGroup : MonoBehaviour
 {
     [SerializeField] float _fadeDuration = 2;
@@ -26,6 +28,7 @@ public class FadeCanvasGroup : MonoBehaviour
         UIEvents.OnMenuOpened += FadeInCanvasGroup;
         UIEvents.OnMenuClosed += FadeOutCanvasGroup;
     }
+    
     private void OnDisable()
     {
         UIEvents.OnHUDDisplay -= FadeInCanvasGroup;
@@ -33,11 +36,13 @@ public class FadeCanvasGroup : MonoBehaviour
         UIEvents.OnMenuOpened -= FadeInCanvasGroup;
         UIEvents.OnMenuClosed -= FadeOutCanvasGroup;
     }
+    
     private void FixedUpdate()
     {
         if (_fadeEnabled)
             Fade(Time.fixedDeltaTime);
     }
+    
     private void Fade(float deltaTime)
     {   
         _maxDelta = _fadeDuration * deltaTime * _fadeSpeed;
@@ -46,6 +51,7 @@ public class FadeCanvasGroup : MonoBehaviour
         if (_currentAlpha == _targetAlpha)
             DisableFade();
     }
+    
     private void FadeInCanvasGroup(CanvasGroup canvas)
     {
         if (!_canvases.Contains(canvas))
@@ -58,6 +64,7 @@ public class FadeCanvasGroup : MonoBehaviour
             _fadeEnabled = true;
         }
     }
+    
     private void FadeOutCanvasGroup(CanvasGroup canvas)
     {
         if (!_canvases.Contains(canvas))
@@ -70,6 +77,7 @@ public class FadeCanvasGroup : MonoBehaviour
             _fadeEnabled = true;
         }
     }
+    
     private void DisableFade()
     {
         _fadeEnabled = false;
