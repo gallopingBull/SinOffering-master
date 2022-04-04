@@ -13,6 +13,7 @@ public class DisplaySilverTotal : MonoBehaviour
     void Awake()
     { 
         SilverValue_Text = GetComponent<TextMeshProUGUI>();
+        _gameManager = GameManager.Instance;
     }
     
     private void OnEnable() => SetSilverValueUI();
