@@ -1,28 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnitySpriteCutter;
-using UnityEngine;
+﻿using UnityEngine;
+
+/// <summary>
+/// derived projectile class that handles projectile behavior
+/// for the disc launcher weapon.
+/// </summary>
 
 public class Projectile_Disc : Projectile
 {
-    private Vector3 startPos;
-    private Vector3 pos;
+    private Vector3 _pos;
 
-    private int impactCount = 0;
+    private int _impactCount = 0;
+    [SerializeField] int _maxImpacts = 3;
+
     public float SpeedBoost = 1.5f; //speed mulitplier added to velocity when disc makes impact with wall
 
+    #region test variables for sprite cutter
     public LayerMask layerMask;
-    private Vector2 sliceStart, sliceEnd;
+    //private Vector2 sliceStart, sliceEnd;
     public Sprite _sliceSprite;
-
+    #endregion
 
     public float cmShakeTime = .75f;
     public float cmShakeIntensity = 20;
 
     private void Start()
     {
-        startPos = transform.position;
-        pos = transform.position;
+        _pos = transform.position;
     }
 
     protected override void Awake()
@@ -33,14 +36,10 @@ public class Projectile_Disc : Projectile
     private void FixedUpdate()
     {
         if (direction == -1)
-        {
-            pos -= transform.right * Time.fixedDeltaTime * Speed; new Vector3(1, 0, startPos.z);
-        }
+            _pos -= transform.right * Time.fixedDeltaTime * Speed;
         //move right
         else
-        {
-            pos += transform.right * Time.fixedDeltaTime * Speed; new Vector3(1, 0, startPos.z);
-        }
+            _pos += transform.right * Time.fixedDeltaTime * Speed;
     }
     
     protected override void OnTriggerEnter(Collider other)
@@ -53,11 +52,12 @@ public class Projectile_Disc : Projectile
             if (direction ==1)
             {
                 print("moving right");
-                GetComponent<ISlice>().DiscSlice(transform.position, transform.position * -direction, layerMask);
+                GetComponent<SpriteCutter>().Slice(transform.position, transform.position * -direction, layerMask);
             }
-            else{
+            else
+            {
                 print("moving left");
-                GetComponent<ISlice>().DiscSlice(transform.position, 
+                GetComponent<SpriteCutter>().Slice(transform.position, 
                     new Vector2 (transform.position.x -  2, transform.position.y), layerMask);
             }
           
@@ -67,40 +67,23 @@ public class Projectile_Disc : Projectile
         if (other.gameObject.tag == "Player")
         {
             print("hit player");
-            if (impactCount == 0)
-            {
+            if (_impactCount == 0)
                 return;
-            }
-            //Debug.LogError("killing player from cprojectikedisc.cs");
-            /*
-            if (rb.velocity.x == 13)
-            {
-                print("moving right");
-                GetComponent<ISlice>().Slice(transform.position, transform.position * -direction, layerMask);
-            }
-            else
-            {
-                print("moving left");
-                GetComponent<ISlice>().Slice(transform.position, new Vector2(transform.position.x - 2, transform.position.y), layerMask);
-            }
-            other.gameObject.GetComponentInParent<Entity>().Killed();
-            */
         }
+
         if (other.gameObject.tag == "Wall" || other.gameObject.tag == "Floor")
         {
             print("in floor/wall condition");
             CameraShake.instance.Shake(cmShakeTime, cmShakeIntensity, false);
-            impactCount++;
+            _impactCount++;
             if (direction == -1)
-            {
                 direction = 1;
-
-            }
-            else { direction = -1; }
+            else
+                direction = -1;
             FireProjectile(direction);
-            
         }
-        if (impactCount == 3)
+        
+        if (_impactCount == _maxImpacts)
         {
             CameraShake.instance.Shake(cmShakeTime, cmShakeIntensity, true);
             EnableImpactParticle(GetComponent<Transform>(), other.gameObject.tag);
@@ -118,14 +101,10 @@ public class Projectile_Disc : Projectile
                 transform.localScale.z);
         }
 
-        if (impactCount == 0)
-        {
+        if (_impactCount == 0)
             rb.velocity = (transform.right * dir) * Speed;
-        }
         else
-        {
             rb.velocity = (transform.right * dir) * Speed * 1.5f;
-        }   
     }
         
     public override void DestroyProjectile()
@@ -134,15 +113,9 @@ public class Projectile_Disc : Projectile
         Destroy(gameObject);
     }
 
-    private void KillEnemy()
-    {
-
-    }
-
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-
         //Debug.DrawRay(origin, dir, Color.blue);
         //  Gizmos.DrawWireSphere(end, sphereCastRadius);
     }

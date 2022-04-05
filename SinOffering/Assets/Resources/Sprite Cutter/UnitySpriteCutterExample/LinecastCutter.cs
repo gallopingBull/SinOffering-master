@@ -30,7 +30,7 @@ public class LinecastCutter : MonoBehaviour {
 		}
 		
 		foreach ( GameObject go in gameObjectsToCut ) {
-			SpriteCutterOutput output = SpriteCutter.Cut( new SpriteCutterInput() {
+            SpriteCutterOutput output = UnitySpriteCutter.SpriteCutter.Cut( new SpriteCutterInput() {
 				lineStart = lineStart,
 				lineEnd = lineEnd,
 				gameObject = go,

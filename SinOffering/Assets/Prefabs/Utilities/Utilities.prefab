@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2377933880923421383}
   - component: {fileID: 2377933880923421382}
   - component: {fileID: 5378695164591027595}
+  - component: {fileID: 938349026859789263}
   m_Layer: 0
   m_Name: Utilities
   m_TagString: Untagged
@@ -59,3 +60,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeTotal: 0.25
+--- !u!114 &938349026859789263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2377933880923421381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408df7c8227c64747ac15af3025aa0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BloodTrailParticle: {fileID: 166404, guid: 52a15a989551b774cad29cb7a7cb3f5d, type: 3}

@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnitySpriteCutter;
 using UnityEngine.UI;
 using UnityEngine;
+
+/// <summary>
+/// command for dash attack that's invoked by InputHandler.cs. implements melee attack behavior.
+/// </summary>
 
 public class DashCommand : ICommand
 {
@@ -99,8 +102,8 @@ public class DashCommand : ICommand
         else
             EnableDashCommand = false;
     }
-    public override void Redo() { }
 
+    public override void Redo() { }
 
     private void Awake()
     {
@@ -186,7 +189,6 @@ public class DashCommand : ICommand
                 }
             }
         }
-
 
         if (EnableDashCommand)
         {
@@ -366,6 +368,7 @@ public class DashCommand : ICommand
             transform.position = origin + (direction.normalized * curHitDistance);
         }
     }
+
     private IEnumerator Dashing()
     {
         dashState = DashState.inDashAttack;
@@ -376,6 +379,7 @@ public class DashCommand : ICommand
             FreezeEnemies(targets); //freeze enemies that will be dash killed
             yield return new WaitForSeconds(.5f);
         }
+
         ppm.OnDash(.75f, 5f, true);
         DashToLocation();
         
@@ -396,7 +400,7 @@ public class DashCommand : ICommand
             Vector3 tmpDir = (direction.normalized * curHitDistance);
             Vector3 tmpEnd = origin + (direction.normalized * curHitDistance);
 
-            GetComponent<ISlice>().Slice(origin, tmpEnd, layerMask, targets, tmpDir);
+            GetComponent<SpriteCutter>().Slice(origin, tmpEnd, layerMask, targets, tmpDir);
             
             DestroyEnemies();
             yield return new WaitForSeconds(enemyTotal * .025f); // adds a small delay before ending slomo cinematic dash attack
@@ -420,6 +424,7 @@ public class DashCommand : ICommand
 
         StopCoroutine(Dashing());
     }
+    
     public void DisableCollisions()
     {
         foreach (Collider collider in m_Colliders)
@@ -450,7 +455,6 @@ public class DashCommand : ICommand
         if (targets != null)
             RemoveDashTags();
 
-        //RaycastHit2D[] hits = Physics2D.CircleCastAll(_origin, circleCastRadius, _dir,_hitDistance, layerMask);
         RaycastHit2D[] hits = Physics2D.RaycastAll(_origin,  _dir,_hitDistance, layerMask);
         foreach (RaycastHit2D hit in hits)
         {
@@ -476,6 +480,7 @@ public class DashCommand : ICommand
                         targets.Add(tmp.transform.parent.gameObject);
                     }
                 }
+
                 // maybe delete this
                 if (hit.distance > MaxDashDistanceDiff)
                     dashObstructed = false;
@@ -494,16 +499,11 @@ public class DashCommand : ICommand
 
         m_Hits = Physics2D.BoxCastAll(origin, BoxCastSize, 0,direction, MaxHitDistance, layerMask);
         
-        //print(m_Hits.Length);
         foreach (RaycastHit2D hit in m_Hits)
         {
-           //print(" name: " + hit.transform.gameObject.name + 
-             //   " || tag: " + hit.transform.gameObject.tag);
-            
             GameObject tmp = hit.transform.gameObject;
           
-            if ((hit.transform.gameObject.tag == "Floor" ||
-            hit.transform.gameObject.tag == "Wall"))
+            if ((hit.transform.gameObject.tag == "Floor" || hit.transform.gameObject.tag == "Wall"))
             {
                 if (hit.distance ==0)
                     dashObstructed = false;
@@ -511,7 +511,6 @@ public class DashCommand : ICommand
                     dashObstructed = true; //print("TOO CLOSE TO WALL - DASH FAILED");
                 else
                     dashObstructed = false; //print("far enough from  wall/ground to dash");
-
                 curHitDistance = hit.distance;
                 if (curHitDistance == 0)
                     print("shit");
@@ -544,6 +543,7 @@ public class DashCommand : ICommand
 
         CalculateDashAttackTargets(origin, direction, curHitDistance);
     }
+
     private void DashTrajectoryMarker(Vector3 hitLoc)
     {
         dashDestinationImage.transform.position = hitLoc;
@@ -558,6 +558,7 @@ public class DashCommand : ICommand
         else
             dashDestinationImage.GetComponent<SpriteRenderer>().flipX = false;
     }
+
     private void OnDrawGizmos()
     {
         // for dash trajectory
@@ -567,7 +568,6 @@ public class DashCommand : ICommand
 
             Debug.DrawRay(origin, direction.normalized * curHitDistance, Color.red);
             Gizmos.DrawWireCube(origin + (direction.normalized * curHitDistance), BoxCastSize);
-            //Gizmos.DrawWireSphere(origin + (direction.normalized * curHitDistance), circleCastDashRadius);
         }
         else
         {
@@ -575,40 +575,34 @@ public class DashCommand : ICommand
 
             Debug.DrawRay(origin, direction.normalized * curHitDistance, Color.green);
             Gizmos.DrawWireCube(origin + (direction.normalized * curHitDistance), BoxCastSize);
-            //Gizmos.DrawWireSphere(origin + (direction.normalized * curHitDistance), circleCastDashRadius);
         }
 
-        //for dash attack
+        // for dash attack
         Gizmos.color = Color.yellow;
         Debug.DrawRay(origin, direction.normalized * curHitDistance, Color.yellow);
         Gizmos.DrawWireSphere(origin + (direction.normalized * curHitDistance), circleCastRadius);
     }
 
-
     //** look into why this is using PC.yRaw and not yraw value from inputhandler **\\
     public void ChangeRigidbodyValues()
     {
         if (pc.yRaw < 0)
-        {
+        {   
+            //print("dashing down while falling");
+            //print("1st cond. || player drag: 1000 || player state: " + GetComponent<PlayerController>().state);
             if (pc.state == Entity.State.falling || pc.state == Entity.State.Jumping)
-            {
-                //print("dashing down while falling");
-                //print("1st cond. || player drag: 1000 || player state: " + GetComponent<PlayerController>().state);
+            { 
                 pc.rb.mass = .01f;
                 pc.rb.angularDrag = 100f;
                 pc.rb.drag = 1000f;
             }
         }
+        //print("2nd cond. || player drag: 15 || player state: " + GetComponent<PlayerController>().state);
         if (pc.yRaw < .001f && pc.state != Entity.State.running)
-        {
-            //print("2nd cond. || player drag: 15 || player state: " + GetComponent<PlayerController>().state);
             pc.rb.drag = 30;
-        }
+        //print("3rd cond. || player drag: 30 || player state: " + GetComponent<PlayerController>().state);
         else
-        {
-            //print("3rd cond. || player drag: 30 || player state: " + GetComponent<PlayerController>().state);
             pc.rb.drag = 30;
-        }
     }
 
     // displays and changes dash counter in UI
@@ -627,18 +621,19 @@ public class DashCommand : ICommand
 
     private IEnumerator AutoCoolDown()
     {
-        print("auto cooldown Called");
+        //print("auto cooldown Called");
         cr_active = true;
+        
         yield return new WaitForSeconds(CooldownDelay * 2f);
-        if (!InCooldown && pc.Mana < 200 &&
-            pc.state != Entity.State.dashing)
+        
+        if (!InCooldown && pc.Mana < 200 && pc.state != Entity.State.dashing)
         {
             print("auto cooldown - InCoolDown = true");
             InCooldown = true;
             StartCoroutine(CoolDown());
         }
 
-        print("StopCoroutine(AutoCoolDown())");
+        //print("StopCoroutine(AutoCoolDown())");
         cr_active = false;
         StopCoroutine(AutoCoolDown());
     }
@@ -686,6 +681,7 @@ public class DashCommand : ICommand
         }
         targets.Clear();
     }
+
     private void DestroyEnemies()
     {
         List<GameObject> tmpTargetList = targets;
@@ -713,11 +709,8 @@ public class DashCommand : ICommand
                     else
                     {
                         //print("Calling DashKilled() on this enemy target: " + targets[i].name);
-
                         if (tmpTargetList[i] == null)
-                        {
                             break;
-                        }
                         tmpTargetList[i].GetComponent<EnemyController>().DashKilled();
                     }
                 }
@@ -735,17 +728,12 @@ public class DashCommand : ICommand
             dashDestinationImage.SetActive(false);
             lr_DashTrajectory.gameObject.SetActive(false);
             lr_DashAttack.gameObject.SetActive(false);
-
             RemoveDashTags();
-
             isValid = false;
-
             dashButtonHeldTime = 0;
             Time.timeScale = 1;
             TimeScale.DisableSlomo();
         }
     }
-
     #endregion
-
 }

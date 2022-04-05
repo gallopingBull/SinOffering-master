@@ -1,7 +1,11 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+/// <summary>
+/// base abstract class used for any dyanmic gameobject in the scene
+/// that can move and be killed.
+/// </summary>
 
 public abstract class Entity : MonoBehaviour {
     #region variables
@@ -289,13 +293,13 @@ public abstract class Entity : MonoBehaviour {
         ActorSprite.flipX = facingLeft;
         BloodActorSprite.flipX = facingLeft;
     }
+    
     public void FlipEntityAimingSprite(int direction)
     {
         facingLeft = direction > 0 ? false : true;
         ActorSprite.flipX = facingLeft;
         BloodActorSprite.flipX = facingLeft;
     }
-
 
     // Set default values for player parameters
     protected void SetDefaultSpeed()

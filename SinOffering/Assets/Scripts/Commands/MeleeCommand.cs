@@ -8,7 +8,7 @@ using System.Linq;
 
 public class MeleeCommand : ICommand 
 {
-    [SerializeField] float attackRange = 1;
+    [SerializeField] float _attackRange = 1;
     
     public Transform[] AttackPoints;
     public LayerMask enemyLayer;
@@ -18,6 +18,7 @@ public class MeleeCommand : ICommand
     {
         pc = GetComponent<PlayerController>();
     }
+    
     public override void Execute() { MeleeAttack(); }
     
     public override void Redo()
@@ -49,7 +50,7 @@ public class MeleeCommand : ICommand
             pc.StateManager.EnterState(Entity.State.meleeing);
     
             for (int i = 0; i < AttackPoints.Length; i++)
-                hitEnemies = Physics.OverlapSphere(AttackPoints[i].position, attackRange, enemyLayer).ToList<Collider>();
+                hitEnemies = Physics.OverlapSphere(AttackPoints[i].position, _attackRange, enemyLayer).ToList<Collider>();
 
             if (hitEnemies != null)
             {
@@ -81,7 +82,7 @@ public class MeleeCommand : ICommand
             return;
 
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(AttackPoints[0].position, attackRange);
-        Gizmos.DrawWireSphere(AttackPoints[1].position, attackRange);
+        Gizmos.DrawWireSphere(AttackPoints[0].position, _attackRange);
+        Gizmos.DrawWireSphere(AttackPoints[1].position, _attackRange);
     }
 }
