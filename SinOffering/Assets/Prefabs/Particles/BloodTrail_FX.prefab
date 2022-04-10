@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 499110}
   - component: {fileID: 19808544}
   - component: {fileID: 19951176}
-  - component: {fileID: 631602241858409391}
   - component: {fileID: 631376326044441804}
   m_Layer: 0
   m_Name: BloodTrail_FX
@@ -512,7 +511,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 75
+    maxNumParticles: 20
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -4620,23 +4619,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &631602241858409391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 166404}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f9fee25c9020ad41843f756d303dccb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BloodSplat_Prefab: {fileID: 4915058164416637206, guid: 8782f60271a7dd948bb0c21664bf14bb, type: 3}
-  BloodSplat_Transform: {fileID: 0}
-  sounds: []
-  SoundCapResetSpeed: 0.55
-  MaxSounds: 3
 --- !u!114 &631376326044441804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4652,3 +4634,4 @@ MonoBehaviour:
   particleLauncher: {fileID: 19808544}
   splatDecalPool: {fileID: 0}
   splatterParticles: {fileID: 0}
+  maskDecalPool: {fileID: 0}

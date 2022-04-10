@@ -35,11 +35,7 @@ public class BloodSplat : MonoBehaviour
             timePassed = 0;
         }
     }
-    public void AssignParent(Transform _parent)
-    {
-        parent = _parent; 
-        
-    }
+    public void AssignParent(Transform _parent) => parent = _parent;
     /*
     private void OnParticleCollision(GameObject other)
     {

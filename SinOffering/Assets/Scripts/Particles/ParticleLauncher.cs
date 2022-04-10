@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,14 +5,14 @@ public class ParticleLauncher : MonoBehaviour
 {
     public ParticleSystem particleLauncher;
     public ParticleDecalPool splatDecalPool;
+    //these variables are used for the splat masks used
+    //only on player and enemies
+    public MaskDecalPool maskDecalPool;
+
 
     public ParticleSystem splatterParticles;
     private List<ParticleCollisionEvent> collisionEvents;
     
-    //these variables are used for the splat masks used
-    //only on player and enemies
-  
-    public MaskDecalPool maskDecalPool;
 
 
     // Start is called before the first frame update

@@ -41,10 +41,10 @@ public class SaveSystem : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.K))
         //    SaveGameData();
 
-        if (Input.GetKeyDown(KeyCode.L))
-            LoadGameData();
         //if (Input.GetKeyDown(KeyCode.L))
-        //    _ = LoadGameDataAsync();
+        //    LoadGameData();
+        if (Input.GetKeyDown(KeyCode.L))
+            _ = LoadGameDataAsync();
     }
 
     private void InitData()
@@ -52,6 +52,8 @@ public class SaveSystem : MonoBehaviour
 
     }
 
+
+    // non async save game data
     public void SaveGameData()
     {
         _gameData.WeaponAttributesDatas.Clear();
@@ -122,6 +124,7 @@ public class SaveSystem : MonoBehaviour
         return Task.CompletedTask;
     }
      
+    // non async load game data
     private void LoadGameData()
     {
         Debug.Log("Loading Game...");
