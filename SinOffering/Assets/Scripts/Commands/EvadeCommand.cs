@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EvadeCommand : ICommand {
+public class EvadeCommand : Command {
     
     
     [SerializeField]
@@ -44,7 +44,7 @@ public class EvadeCommand : ICommand {
     }
     private void Awake()
     {
-        pc = GetComponent<PlayerController>();
+        _pc = GetComponent<PlayerController>();
         evadeCollider = GameObject.Find("TmpCollider");
     }
 
@@ -53,7 +53,7 @@ public class EvadeCommand : ICommand {
         if (EvadeCount == EvadeCountMAX)
             return;
         
-        if (!pc.IsGrounded && AirEvadeUpgraded)
+        if (!_pc.IsGrounded && AirEvadeUpgraded)
         {
             if (AirEvadeCount == 1)
                 return;
@@ -62,12 +62,12 @@ public class EvadeCommand : ICommand {
 
         //pc.rb.velocity = Vector3.zero; 
         
-        pc.StateManager.EnterState(Entity.State.evading);
+        _pc.StateManager.EnterState(Entity.State.evading);
         EvadeCount++;
-        evadeCollider.transform.position = pc.transform.position;
-        evadeCollider.transform.parent = pc.transform;
+        evadeCollider.transform.position = _pc.transform.position;
+        evadeCollider.transform.parent = _pc.transform;
             
-        pc.rb.velocity = new Vector3(-pc.dir * evadeSpeed, 0, 0);
+        _pc.rb.velocity = new Vector3(-_pc.dir * evadeSpeed, 0, 0);
         
 
         StartCoroutine("EvadeComplete");
@@ -125,13 +125,13 @@ public class EvadeCommand : ICommand {
     {
         yield return new WaitForSeconds(.3f);
        
-        pc.StateManager.ExitState(Entity.State.evading);
+        _pc.StateManager.ExitState(Entity.State.evading);
 
         evadeCollider.transform.parent = null;
         evadeCollider.transform.position = new Vector3(100, 100, 100); // moving collider away to distant location when not in use
 
-        if (!pc.IsGrounded)
-            pc.StateManager.EnterState(Entity.State.falling);
+        if (!_pc.IsGrounded)
+            _pc.StateManager.EnterState(Entity.State.falling);
 
         StopCoroutine("EvadeComplete");
     }

@@ -7,9 +7,10 @@ using UnityEngine;
 /// command for dash attack that's invoked by InputHandler.cs. implements melee attack behavior.
 /// </summary>
 
-public class DashCommand : ICommand
+public class DashCommand : Command
 {
     #region variables
+    private PlayerController pc; 
     [HideInInspector]
     public enum DashState { init, inDashAttack, completed, disabled };
     //[HideInInspector]
@@ -118,8 +119,9 @@ public class DashCommand : ICommand
         ManaUI = GameObject.Find("ManaBar_Fill").GetComponent<Image>();
     }
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         ppm = PostProcessManager.intance;
         dashState = DashState.completed;
         RadialMenu.SetActive(false);

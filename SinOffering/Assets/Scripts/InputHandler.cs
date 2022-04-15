@@ -5,15 +5,15 @@ public class InputHandler : MonoBehaviour
 {
     #region variables
     //command list
-    private ICommand jumpCommand;
-    private ICommand fireCommand;
-    private ICommand moveCommand;
-    private ICommand dashCommand;
-    private ICommand evadeCommand;
-    private ICommand meleeCommand;
+    private Command _jumpCommand;
+    private Command _fireCommand;
+    private Command _moveCommand;
+    private Command _dashCommand;
+    private Command _evadeCommand;
+    private Command _meleeCommand;
 
     [SerializeField]
-    public List<ICommand> Commands;
+    public List<Command> Commands;
     
     private PlayerController _pc; //reference to main Player Controller
     private GameManager _gameManager; //reference to main Player Controller
@@ -79,16 +79,16 @@ public class InputHandler : MonoBehaviour
     {
         _pc = GetComponent<PlayerController>();
         _gameManager = GameManager.Instance;
-        jumpCommand = GetComponent<JumpCommand>();
-        moveCommand = GetComponent<MoveCommand>();
-        fireCommand = GetComponent<FireCommand>();
-        dashCommand = GetComponent<DashCommand>();
-        evadeCommand = GetComponent<EvadeCommand>();
-        meleeCommand = GetComponent<MeleeCommand>();
+        _jumpCommand = GetComponent<JumpCommand>();
+        _moveCommand = GetComponent<MoveCommand>();
+        _fireCommand = GetComponent<FireCommand>();
+        _dashCommand = GetComponent<DashCommand>();
+        _evadeCommand = GetComponent<EvadeCommand>();
+        _meleeCommand = GetComponent<MeleeCommand>();
         _boxCastSize = new Vector3(1, 1, 1);
     }
 
-    public List<ICommand> HandleInput()
+    public List<Command> HandleInput()
     {
         if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick button 7")))
             GetComponent<Pause>().PauseGame();
@@ -196,7 +196,7 @@ public class InputHandler : MonoBehaviour
                     if (_pc.weaponManager.WeaponEquipped)
                         if (!aiming)
                             _pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_pc.dir);
-                    Commands.Add(moveCommand);
+                    Commands.Add(_moveCommand);
                 }   
             }
 
@@ -225,17 +225,17 @@ public class InputHandler : MonoBehaviour
                     if (_pc.jumpEnabled && jumpDelayComplete)
                     {
                         if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
-                            Commands.Add(jumpCommand);
+                            Commands.Add(_jumpCommand);
                     }
                 }
 
                 // Dash Attack
                 if (Input.GetAxis("LeftTrigger") == 1 && !_gameManager.GameCompleted)
-                    Commands.Add(dashCommand);
+                    Commands.Add(_dashCommand);
 
                 // Melee Attack
                 if (Input.GetButtonDown("Melee") && !_gameManager.GameCompleted)
-                    Commands.Add(meleeCommand);
+                    Commands.Add(_meleeCommand);
 
 
                 // Evade/Dodge
@@ -253,7 +253,7 @@ public class InputHandler : MonoBehaviour
                             //Debug.Log("deactivate time: " + (evadeButtonPressedTime + MAXEvadeDelay));
                             #endregion
 
-                            //find  approaiate value to scale this down for when the player upgrades it
+                            // find  approaiate value to scale this down for when the player upgrades it
                             // the delay is suppose ot be shorter
                             evadeDelay = .3f;           
                             //Debug.Log("evadeDelay: "+ evadeDelay);
@@ -275,7 +275,7 @@ public class InputHandler : MonoBehaviour
                         evadeDelay = MAXEvadeDelay;
                         //Debug.Log("evadeDelay: " + evadeDelay);
                     }
-                    Commands.Add(evadeCommand);
+                    Commands.Add(_evadeCommand);
                 }
 
                 // change weapons
@@ -306,7 +306,7 @@ public class InputHandler : MonoBehaviour
                 if (Input.GetKey(KeyCode.Alpha5))
                 {
                     print("rewind time");
-                    moveCommand.Redo();
+                    _moveCommand.Redo();
                 }
 
                 #endregion
@@ -322,7 +322,7 @@ public class InputHandler : MonoBehaviour
                     {
                         //Debug.Log("pressing trigger");
                         if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
-                            Commands.Add(fireCommand);
+                            Commands.Add(_fireCommand);
                     }   
                 }
             }

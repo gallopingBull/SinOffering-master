@@ -6,7 +6,7 @@ using System.Linq;
 /// command for melee attack that's invoked by InputHandler.cs. implements melee attack behavior.
 /// </summary>
 
-public class MeleeCommand : ICommand 
+public class MeleeCommand : Command 
 {
     [SerializeField] float _attackRange = 1;
     
@@ -14,30 +14,24 @@ public class MeleeCommand : ICommand
     public LayerMask enemyLayer;
     public List<Collider> hitEnemies = new List<Collider>();
 
-    private void Awake()
-    {
-        pc = GetComponent<PlayerController>();
-    }
-    
-    public override void Execute() { MeleeAttack(); }
-    
+    public override void Execute() => MeleeAttack();
+
     public override void Redo()
     {
-
     }
 
     private void LateUpdate()
     {
-        if (pc.state == Entity.State.meleeing)
+        if (_pc.state == Entity.State.meleeing)
         {
-            if (pc.dir != 1)
+            if (_pc.dir != 1)
             {
-                Vector3 tmpPos = pc.MeleeSprite.gameObject.transform.localPosition;
-                Vector3 tmpRot = pc.MeleeSprite.gameObject.transform.eulerAngles;
+                Vector3 tmpPos = _pc.MeleeSprite.gameObject.transform.localPosition;
+                Vector3 tmpRot = _pc.MeleeSprite.gameObject.transform.eulerAngles;
                 tmpPos.x *= -1;
                 tmpRot.z *= -1;
-                pc.MeleeSprite.gameObject.transform.localPosition = tmpPos;
-                pc.MeleeSprite.gameObject.transform.eulerAngles = tmpRot;
+                _pc.MeleeSprite.gameObject.transform.localPosition = tmpPos;
+                _pc.MeleeSprite.gameObject.transform.eulerAngles = tmpRot;
             }
         }
     }
@@ -45,9 +39,9 @@ public class MeleeCommand : ICommand
     public void MeleeAttack()
     {
         // return if reached max attack count
-        if (pc.IsGrounded) //check if not in state jump state
+        if (_pc.IsGrounded) //check if not in state jump state
         {
-            pc.StateManager.EnterState(Entity.State.meleeing);
+            _pc.StateManager.EnterState(Entity.State.meleeing);
     
             for (int i = 0; i < AttackPoints.Length; i++)
                 hitEnemies = Physics.OverlapSphere(AttackPoints[i].position, _attackRange, enemyLayer).ToList<Collider>();
@@ -64,13 +58,12 @@ public class MeleeCommand : ICommand
                     }       
                 }
             }
-
             hitEnemies.Clear();
             return;
         }
 
         // melee from falling state
-        if (pc.state == Entity.State.falling || pc.state == Entity.State.Jumping)
+        if (_pc.state == Entity.State.falling || _pc.state == Entity.State.Jumping)
         {
         
         }

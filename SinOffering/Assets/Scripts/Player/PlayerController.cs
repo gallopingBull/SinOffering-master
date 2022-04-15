@@ -29,7 +29,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     [HideInInspector]
     public InputHandler inputHandler;
     [SerializeField]
-    private List<ICommand> commands;
+    private List<Command> commands;
 
     public float yRaw;
 

@@ -12,7 +12,6 @@ public class SaveSystem : MonoBehaviour
     private PlayerSettings _playerSettings = new PlayerSettings();
     private GameManager _gameManager;
     private PlayerController _player;
-
     public PlayerSettings PlayerSettings { get => _playerSettings; set => _playerSettings = value; }
     
     public GameData GameData { get => _gameData; set => _gameData = value; }
@@ -34,24 +33,21 @@ public class SaveSystem : MonoBehaviour
 
     private void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.K))
             _ = SaveGameDataAsync();
+        if (Input.GetKeyDown(KeyCode.L))
+            _ = LoadGameDataAsync();
 
         //if (Input.GetKeyDown(KeyCode.K))
         //    SaveGameData();
-
         //if (Input.GetKeyDown(KeyCode.L))
         //    LoadGameData();
-        if (Input.GetKeyDown(KeyCode.L))
-            _ = LoadGameDataAsync();
     }
 
     private void InitData()
     {
 
     }
-
 
     // non async save game data
     public void SaveGameData()
