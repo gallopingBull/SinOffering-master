@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// Maybe change the name of this class to WeaponInventory.cs
@@ -28,7 +26,6 @@ public class WeaponManager : MonoBehaviour
     {
         if (_pc.EquippedWeapon != null)
             UpdateWeaponSocket();
-     
     }
 
     // give every weapon a default "temp" weaponattribute 
@@ -67,7 +64,7 @@ public class WeaponManager : MonoBehaviour
         {
             if (_pc.inputHandler._aimDir != 1)
             {
-                Debug.Log("calling UpdateWeaponSocket() from aiming condition");
+                //Debug.Log("calling UpdateWeaponSocket() from aiming condition");
                 tmpPos.x *= -_handSocketOffsetValue;
             }
             
@@ -76,14 +73,13 @@ public class WeaponManager : MonoBehaviour
         {
             if (_pc.dir != 1)
             {
-                Debug.Log("calling UpdateWeaponSocket() from non-aiming condition");
+                //Debug.Log("calling UpdateWeaponSocket() from non-aiming condition");
                 tmpPos.x *= -_handSocketOffsetValue;
             }
         }
 
         mainHandSocket.localPosition = tmpPos;
         _pc.EquippedWeapon.transform.position = mainHandSocket.position;
-
     }
 
     //https://github.com/mucahits/rotateintervally/blob/master/RotateIntervally.cs
@@ -91,7 +87,7 @@ public class WeaponManager : MonoBehaviour
     public float GetTargetEuler(Vector3 touchPosition, float interval)
     {
         float currentAngle = Mathf.Atan2(touchPosition.y, touchPosition.x) * Mathf.Rad2Deg;
-        currentAngle = (currentAngle > 0) ? currentAngle : currentAngle + 360f;
+        currentAngle = ( currentAngle > 0) ? currentAngle : currentAngle + 360f;
 
         var region = (int)Mathf.Floor(currentAngle / interval);
 

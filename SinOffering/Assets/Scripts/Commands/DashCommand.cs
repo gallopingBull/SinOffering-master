@@ -122,7 +122,7 @@ public class DashCommand : Command
     protected override void Start()
     {
         base.Start();
-        ppm = PostProcessManager.intance;
+        ppm = PostProcessManager.instance;
         dashState = DashState.completed;
         RadialMenu.SetActive(false);
     }

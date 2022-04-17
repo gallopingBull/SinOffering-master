@@ -20,8 +20,8 @@ public class EnemyCollision : MonoBehaviour
             else
                 _parent.facingLeft = false;
         }
-        if (col.gameObject.tag == "Bullet")
-            Debug.Log("enemy hit by projectile"); //Killed();
+        //if (col.gameObject.tag == "Bullet")
+        //    Debug.Log("enemy hit by projectile");
         if (col.gameObject.tag == "Player" && !_parent.dying)
             col.GetComponent<Entity>().Damaged(1);
     }

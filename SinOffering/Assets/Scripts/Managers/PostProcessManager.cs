@@ -9,7 +9,7 @@ public class PostProcessManager : MonoBehaviour
 
     #region variables 
     [HideInInspector]
-    public static PostProcessManager intance;
+    public static PostProcessManager instance;
     private bool PostProcessEnabled = false;
     [HideInInspector]
     public bool ppEnabled = false; //public variable to check if any PP FX is active
@@ -34,7 +34,7 @@ public class PostProcessManager : MonoBehaviour
     #region functions
     private void Awake()
     {
-        intance = this;
+        instance = this;
     }
     // Start is called before the first frame update
     void Start()

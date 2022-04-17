@@ -81,11 +81,11 @@ public abstract class Weapon : MonoBehaviour
     {
         pc = PlayerController.instance;
         weaponManager = pc.weaponManager;
-        postProcessManager = PostProcessManager.intance;
+        postProcessManager = PostProcessManager.instance;
         Recoil = GetComponent<Recoil>();
     }
-    // might switch out fixedupdates for update
 
+    // might switch out fixedupdates for update
     protected virtual void FixedUpdate()
     {
         FireRateCheck();
@@ -120,7 +120,7 @@ public abstract class Weapon : MonoBehaviour
     {
         spawnLoc = GetMuzzleDirection();
     }
-
+        
     public virtual void ReleaseTrigger()
     {
         // this is a test funtion for Weapon_Gattling.cs
@@ -164,12 +164,6 @@ public abstract class Weapon : MonoBehaviour
     {
         MaxAmmo = Ammo;
         FlipWeaponSprite(pc.dir);
-        /*
-        if (pc.inputHandler.aiming)
-            ResetPosition(pc.inputHandler._aimDir);
-        else
-            ResetPosition(pc.dir);
-        */
     }
 
     public void SetWeaponAttributeFields()
@@ -184,7 +178,9 @@ public abstract class Weapon : MonoBehaviour
     }
         
     public void ResetPosition(int aimDirection)
-    {       
+    {
+        Debug.Log("ResetPosition");
+
         FlipWeaponSprite(aimDirection);   
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
@@ -194,17 +190,17 @@ public abstract class Weapon : MonoBehaviour
         if (dir == 1)
         {
             WeaponSprite.flipX = false;
-            if (BloodSprite != null)
+            if (BloodSprite)
                 BloodSprite.flipX = false;
         }
         else
         {
             WeaponSprite.flipX = true;
-            if (BloodSprite != null)
+            if (BloodSprite)
                 BloodSprite.flipX = true;
         }
-
     }
+    
     protected virtual void MoveWeaponToSocket()
     {
         //transform.position = weaponManager.mainHandSocket.position;
@@ -225,6 +221,7 @@ public abstract class Weapon : MonoBehaviour
 
         gameObject.transform.localPosition = tmpPos;
     }
+    
     protected GameObject GetMuzzleDirection()
     {
         int tmp = pc.dir;
@@ -289,10 +286,12 @@ public abstract class Weapon : MonoBehaviour
         else
             canFire = true;
     }
+    
     protected virtual void PPMCaller()
     {
         postProcessManager.OnFire(.5f, 1, true);
     }
+    
     protected Quaternion CalculateSpread()
     {
         Vector3 randDir = (Vector3.right).normalized;
