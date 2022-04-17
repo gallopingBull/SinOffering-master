@@ -40,7 +40,7 @@ public class StateManager : MonoBehaviour
                     if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Jump_Shoot"))
                         pc.animator.Play("Player_Jump_Shoot");
                 }
-                GetComponent<InputHandler>().jumpDelay = GetComponent<InputHandler>().MAXjumpDelay;
+                GetComponent<InputHandler>().jumpDelay = GetComponent<InputHandler>().MAXJumpDelay;
  
                 #region testing
                 //pc.InputDelay.jumpDelay = 

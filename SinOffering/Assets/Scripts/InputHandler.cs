@@ -15,8 +15,8 @@ public class InputHandler : MonoBehaviour
     [SerializeField]
     public List<Command> Commands;
     
-    private PlayerController _pc; //reference to main Player Controller
-    private GameManager _gameManager; //reference to main Player Controller
+    private PlayerController _pc; // reference to main Player Controller
+    private GameManager _gameManager; // reference to main Player Controller
 
     // left stick values
     [HideInInspector]
@@ -31,10 +31,10 @@ public class InputHandler : MonoBehaviour
     public float R_yRaw;
 
     //anything less than this value (.5f), joysticks become very "sensitive" along x axis
-    [Tooltip("Custom Deadzone for LeftJoystick")]
-    public float x_DeadZone = .75f;
-    [Tooltip("Custom Deadzone for RightJoystick")]
-    public float rs_deadZone = 0.9f;
+    [Tooltip("Custom Deadzone for Left Joystick")]
+    public float LS_DeadZone = .75f;
+    [Tooltip("Custom Deadzone for Right Joystick")]
+    public float RS_DeadZone = 0.9f;
 
     [HideInInspector]
     public bool aiming = false;
@@ -42,7 +42,6 @@ public class InputHandler : MonoBehaviour
     // direction player is facing while aiming
     [HideInInspector]
     public int _aimDir = 0;
-    public int _moveDir = 0;
 
     [Header("Input Delay Variables")]
     //[HideInInspector]
@@ -56,9 +55,9 @@ public class InputHandler : MonoBehaviour
 
     public float MAXEvadeDelay = .3f;
     [Tooltip("only used when a quick double evade is unlocked")]
-    public float MAXEvadeScale= .3f;     
+    public float MAXEvadeScale = .3f;     
     public float MAXDashDelay = .3f;
-    public float MAXjumpDelay = .3f;
+    public float MAXJumpDelay = .3f;
 
     //[HideInInspector]
     public bool evadeDelayComplete = true;
@@ -68,10 +67,9 @@ public class InputHandler : MonoBehaviour
     public bool jumpDelayComplete = true;
 
 
-
     // On draw gizmo properties
     private float _curHitDistance = 10f;
-    private float _circleCastRadius = 1f;
+    //private float _circleCastRadius = 1f;
     private Vector3 _origin;
     private Vector3 _boxCastSize;
 
@@ -127,7 +125,7 @@ public class InputHandler : MonoBehaviour
                     _rightStickAimDirection = new Vector2(R_xRaw, R_yRaw);
 
                     // overrides unity's default input deadzone settings
-                    if (_rightStickAimDirection.magnitude < rs_deadZone)
+                    if (_rightStickAimDirection.magnitude < RS_DeadZone)
                     {
                         _rightStickAimDirection = Vector2.zero;
                         if (_aimDir == 0)
@@ -140,7 +138,7 @@ public class InputHandler : MonoBehaviour
                         _pc.EquippedWeapon.GetComponent<Weapon>().SetSpawnLoc();
                     }
 
-                    else if (_rightStickAimDirection.magnitude > rs_deadZone)
+                    else if (_rightStickAimDirection.magnitude > RS_DeadZone)
                     {
                         _aimDir = _rightStickAimDirection.x > .22f ? 1 : -1;
 
@@ -173,7 +171,7 @@ public class InputHandler : MonoBehaviour
             {
                 // if no x-axis input registed, stop moving player  
                 // *** maybe make an idle command and it's added to the command list instead ***
-                if (_leftStickDirection.magnitude < x_DeadZone)
+                if (_leftStickDirection.magnitude < LS_DeadZone)
                 {
                     // maybe create a "IdleCommand" and move this there... idk yet
                     if (_pc.IsGrounded && !aiming)
@@ -185,11 +183,11 @@ public class InputHandler : MonoBehaviour
                 }
 
                 // Handles player's horizontal movement
-                if (_leftStickDirection.magnitude > x_DeadZone)
+                if (_leftStickDirection.magnitude > LS_DeadZone)
                 {
-                    if (_leftStickDirection.x > x_DeadZone && _pc.dir != 1)
+                    if (_leftStickDirection.x > LS_DeadZone && _pc.dir != 1)
                         _pc.dir = 1;
-                    else if (_leftStickDirection.x < -x_DeadZone && _pc.dir != -1)
+                    else if (_leftStickDirection.x < -LS_DeadZone && _pc.dir != -1)
                         _pc.dir = -1;
 
 

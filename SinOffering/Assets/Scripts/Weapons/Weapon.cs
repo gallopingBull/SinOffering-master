@@ -179,8 +179,6 @@ public abstract class Weapon : MonoBehaviour
         
     public void ResetPosition(int aimDirection)
     {
-        Debug.Log("ResetPosition");
-
         FlipWeaponSprite(aimDirection);   
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
