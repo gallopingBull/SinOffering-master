@@ -54,7 +54,7 @@ public class WeaponManager : MonoBehaviour
         _pc.EquippedWeapon.GetComponent<Weapon>().InitWeapon();
         WeaponEquipped = true;
         // have the weapon call InitWeapon()
-        // wihtin itself instead
+        // within itself instead
     }
     
     private void UpdateWeaponSocket()

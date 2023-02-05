@@ -59,7 +59,6 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     private ParticleSystem _particleSystem;
 
-
     public AudioClip jumpClip, landClip, dashClip;
     //[HideInInspector]
     public GameObject button;
@@ -69,10 +68,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     [HideInInspector]
     public InputDelay InputDelay;
 
-
-
     public PlayerAttributes Attributes { get => _attributes; set => _attributes = value; }
-
 
     #endregion
 
