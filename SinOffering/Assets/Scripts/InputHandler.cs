@@ -14,7 +14,7 @@ public class InputHandler : MonoBehaviour
 
     [SerializeField]
     public List<Command> Commands;
-    
+
     private PlayerController _pc; // reference to main Player Controller
     private GameManager _gameManager; // reference to main Player Controller
 
@@ -55,7 +55,7 @@ public class InputHandler : MonoBehaviour
 
     public float MAXEvadeDelay = .3f;
     [Tooltip("only used when a quick double evade is unlocked")]
-    public float MAXEvadeScale = .3f;     
+    public float MAXEvadeScale = .3f;
     public float MAXDashDelay = .3f;
     public float MAXJumpDelay = .3f;
 
@@ -104,6 +104,7 @@ public class InputHandler : MonoBehaviour
             // if weapon is equipped
             if (_pc.EquippedWeapon)
             {
+                // check if player is holding aim button/trigger.
                 if (Input.GetButton("AimWeapon") && !aiming)
                     aiming = true;
                 if (Input.GetButtonUp("AimWeapon"))
@@ -124,8 +125,8 @@ public class InputHandler : MonoBehaviour
                     R_yRaw = Input.GetAxisRaw("RightStick_Vertical");
                     _rightStickAimDirection = new Vector2(R_xRaw, R_yRaw);
 
-                    // overrides unity's default input deadzone settings
-                    if (_rightStickAimDirection.magnitude < RS_DeadZone)
+                    // detect whether right stick is moved.
+                    if (_rightStickAimDirection.magnitude < RS_DeadZone) // RS_DeadZone overrides unity's default input deadzone settings
                     {
                         _rightStickAimDirection = Vector2.zero;
                         if (_aimDir == 0)
@@ -150,11 +151,10 @@ public class InputHandler : MonoBehaviour
                         }
                         _pc.EquippedWeapon.GetComponent<Weapon>().FlipWeaponSprite(_aimDir);
                         _pc.EquippedWeapon.GetComponent<Weapon>().SetSpawnLoc();
-
                     }
                     lastDirection = _aimDir;
                 }
-          
+
                 // Fire Weapon
                 if (Input.GetButtonUp("Fire1") || Input.GetAxis("RightTrigger") == 0)
                     _pc.EquippedWeapon.GetComponent<Weapon>().ReleaseTrigger();
@@ -224,7 +224,7 @@ public class InputHandler : MonoBehaviour
                     if (_pc.button != null && !_pc.button.activeSelf)
                         _pc.button.SetActive(true);
                     #endregion
-                    
+
                     if (_pc.jumpEnabled && jumpDelayComplete)
                     {
                         if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
@@ -257,7 +257,7 @@ public class InputHandler : MonoBehaviour
 
                             // find  approaiate value to scale this down for when the player upgrades it
                             // the delay is suppose ot be shorter
-                            evadeDelay = .3f;           
+                            evadeDelay = .3f;
                             //Debug.Log("evadeDelay: "+ evadeDelay);
                         }
                         else
@@ -286,7 +286,7 @@ public class InputHandler : MonoBehaviour
                     _pc.weaponManager.ChangeWeapon();
                     _pc.StateManager.EnterState(_pc.state);
                 }
-                    
+
 
                 #region select weapons with numeric keys -- delete later
                 if (Input.GetKey(KeyCode.Alpha1))
@@ -312,8 +312,8 @@ public class InputHandler : MonoBehaviour
                 }
 
                 #endregion
-                
-               
+
+
             }
             return Commands;
         }
@@ -359,7 +359,7 @@ public class InputHandler : MonoBehaviour
                 //-- Condition should only be checked if player has fully upgraded
                 //evade ability...
                 if (Time.time > evadeButtonPressedTime + MAXEvadeDelay &&
-                    GetComponent<EvadeCommand>().EvadeCount == 1 && 
+                    GetComponent<EvadeCommand>().EvadeCount == 1 &&
                     evadeDelayComplete)
                 {
                     GetComponent<EvadeCommand>().EvadeCount = 0;
@@ -409,7 +409,7 @@ public class InputHandler : MonoBehaviour
                     //if (!evadeDelayComplete)
                     evadeDelayComplete = true;
                     evadeDelay = 0;
-                  
+
                 }
 
                 // reset evade counter if evade button
@@ -440,7 +440,7 @@ public class InputHandler : MonoBehaviour
 
             default:
                 break;
-                
+
         }
 
     }
@@ -479,20 +479,30 @@ public class InputHandler : MonoBehaviour
          */
     }
 
-
-    private void SwapAimingSprite(int dir, Vector3 angle)
+    // aimDir is the values for an angle.
+    private void SwapAimingSprite(int dir, Vector3 aimDir)
     {
-        var tmp = Quaternion.Euler(0, 0, GetTargetEuler(angle * dir, 45f));
+        var tmp = Quaternion.Euler(0, 0, GetTargetEuler(aimDir * dir, 45f));
         float roundedFloat = Mathf.Round(tmp.eulerAngles.z);
 
         switch (roundedFloat)
         {
+
+            case 0:
+                // center/facing-left: 0
+                // center/facing-right: 0
+
+
+                //Debug.Log("case 0:");
+                _pc.animator.Play("Player_Shoot");
+                break;
+
             case 45:
                 //Debug.Log("case 45:");
-                if (angle.x > 0)
+                if (aimDir.x > 0)
                 {
                     //Debug.Log("angle.x > 0");
-                    _pc.animator.Play("Player_Shoot_Angled_Up")  ;
+                    _pc.animator.Play("Player_Shoot_Angled_Up");
                 }
                 else
                 {
@@ -503,20 +513,14 @@ public class InputHandler : MonoBehaviour
                     //if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Down"))
                 }
                 break;
-           
-            
-            case 0:
-                // center/facing-left: 0
-                // center/facing-right: 0
 
 
-                //Debug.Log("case 0:");
-                _pc.animator.Play("Player_Shoot");
+            case 240:
                 break;
 
             case 270:
                 //Debug.Log("case 270:");
-                if (angle.x > 0)
+                if (aimDir.x > 0)
                 {
                     //Debug.Log("angle.x > 0");
                     // down/facing-right: 270
@@ -534,7 +538,7 @@ public class InputHandler : MonoBehaviour
 
             case 315:
                 //Debug.Log("case 315:");
-                if (angle.x > 0)
+                if (aimDir.x > 0)
                 {
                     //Debug.Log("angle.x > 0");
                     // down-angle/facing-right: 315
@@ -553,7 +557,7 @@ public class InputHandler : MonoBehaviour
 
             case 90:
                 //Debug.Log("case 90:");
-                if (angle.x > 0)
+                if (aimDir.x > 0)
                 {
                     //Debug.Log("angle.x > 0");
                     // up/facing-right: 90
@@ -568,13 +572,13 @@ public class InputHandler : MonoBehaviour
                         _pc.animator.Play("Player_Shoot_Up");
                 }
 
-                break; 
+                break;
 
             default:
                 break;
         }
     }
-        
+
     public float GetTargetEuler(Vector3 touchPosition, float interval)
     {
         float currentAngle = Mathf.Atan2(touchPosition.y, touchPosition.x) * Mathf.Rad2Deg;

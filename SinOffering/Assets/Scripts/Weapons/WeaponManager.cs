@@ -4,7 +4,7 @@
 /// Maybe change the name of this class to WeaponInventory.cs
 /// </summary>
 
-public class WeaponManager : MonoBehaviour 
+public class WeaponManager : MonoBehaviour
 {
     public int CurWeapon;
     public bool WeaponEquipped = false;
@@ -12,14 +12,14 @@ public class WeaponManager : MonoBehaviour
     public Transform mainHandSocket;
 
     [SerializeField] float _handSocketOffsetValue = 1.25f;
-    private PlayerController _pc; 
+    private PlayerController _pc;
 
     // Use this for initialization
-    void Awake () { _pc = GetComponent<PlayerController>(); }
+    void Awake() { _pc = GetComponent<PlayerController>(); }
 
     private void Start()
     {
-        Invoke("InitWeapons", .2f);    
+        Invoke("InitWeapons", .2f);
     }
 
     private void Update()
@@ -38,15 +38,15 @@ public class WeaponManager : MonoBehaviour
             Weapons[i].GetComponent<Weapon>().SetTempAttributeData();
         }
     }
-    
+
     public void EquipWeapon(int newWeapon)
-    {   
+    {
         if (_pc.EquippedWeapon != null)
         {
             _pc.ResetSpeed(); //reset player to default speed
             _pc.EquippedWeapon.SetActive(false);
         }
-        
+
         CurWeapon = newWeapon;
         _pc.EquippedWeapon = Weapons[CurWeapon];
         // set weapon position/rotation
@@ -56,7 +56,7 @@ public class WeaponManager : MonoBehaviour
         // have the weapon call InitWeapon()
         // within itself instead
     }
-    
+
     private void UpdateWeaponSocket()
     {
         Vector3 tmpPos = mainHandSocket.localPosition;
@@ -67,7 +67,7 @@ public class WeaponManager : MonoBehaviour
                 //Debug.Log("calling UpdateWeaponSocket() from aiming condition");
                 tmpPos.x *= -_handSocketOffsetValue;
             }
-            
+
         }
         else
         {
@@ -82,23 +82,22 @@ public class WeaponManager : MonoBehaviour
         mainHandSocket.localPosition = tmpPos;
         _pc.EquippedWeapon.transform.position = mainHandSocket.position;
     }
+    public void ModifyWeaponRotation(int dir, Vector3 angle)
+    {
+        Weapons[CurWeapon].transform.rotation =
+            Quaternion.Euler(0, 0, GetTargetEuler(angle * dir, 45f));
+    }
 
     //https://github.com/mucahits/rotateintervally/blob/master/RotateIntervally.cs
     // rotate intervally 
-    public float GetTargetEuler(Vector3 touchPosition, float interval)
+    public float GetTargetEuler(Vector3 dir, float interval)
     {
-        float currentAngle = Mathf.Atan2(touchPosition.y, touchPosition.x) * Mathf.Rad2Deg;
-        currentAngle = ( currentAngle > 0) ? currentAngle : currentAngle + 360f;
+        float currentAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        currentAngle = (currentAngle > 0) ? currentAngle : currentAngle + 360f;
 
         var region = (int)Mathf.Floor(currentAngle / interval);
 
         return region * interval;
-    }
-
-    public void ModifyWeaponRotation(int dir, Vector3 angle)
-    {
-        Weapons[CurWeapon].transform.rotation = 
-            Quaternion.Euler(0,0, GetTargetEuler(angle * dir, 45f) );
     }
 
     public void ChangeWeapon()
