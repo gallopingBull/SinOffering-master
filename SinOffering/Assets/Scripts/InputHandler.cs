@@ -480,98 +480,78 @@ public class InputHandler : MonoBehaviour
     }
 
     // aimDir is the values for an angle.
+    // TODO: Rename this method. It's doing more than one thing. 
+    // maybe replace
     private void SwapAimingSprite(int dir, Vector3 aimDir)
     {
+        //float intervals = GetInterval based on stick position instead.
         var tmp = Quaternion.Euler(0, 0, GetTargetEuler(aimDir * dir, 45f));
         float roundedFloat = Mathf.Round(tmp.eulerAngles.z);
 
+        Debug.Log($"dir: {dir} | aimDir: {aimDir}| roundedFloat:{roundedFloat}");
+        Debug.Log($"tmp: {tmp}");
         switch (roundedFloat)
         {
 
             case 0:
-                // center/facing-left: 0
                 // center/facing-right: 0
-
-
-                //Debug.Log("case 0:");
+                Debug.Log("case 0:");
                 _pc.animator.Play("Player_Shoot");
                 break;
 
-            case 45:
-                //Debug.Log("case 45:");
-                if (aimDir.x > 0)
-                {
-                    //Debug.Log("angle.x > 0");
-                    _pc.animator.Play("Player_Shoot_Angled_Up");
-                }
-                else
-                {
-                    //Debug.Log("angle.x < 0");
-                    // down-angle/facing-left: 45
-                    //.9238796
-                    _pc.animator.Play("Player_Shoot_Angled_Down");
-                    //if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Down"))
-                }
+            case 180:
+                // center/facing-left: 0
+
+                Debug.Log("case 180:");
+                _pc.animator.Play("Player_Shoot");
                 break;
 
-
-            case 240:
+            case 90:
+                Debug.Log("case 90:");
+                // this is weird. might have to change for 'dir' instead.
+                //Debug.Log("angle.x < 0");
+                // down/facing-left: 90
+                if (!_pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Up"))
+                    _pc.animator.Play("Player_Shoot_Up");
                 break;
 
             case 270:
-                //Debug.Log("case 270:");
-                if (aimDir.x > 0)
-                {
-                    //Debug.Log("angle.x > 0");
-                    // down/facing-right: 270
-                    if (!_pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Down"))
-                        _pc.animator.Play("Player_Shoot_Down");
-                }
+                Debug.Log("case 270:");
+                // down/facing-right: 270
+                if (!_pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Down"))
+                    _pc.animator.Play("Player_Shoot_Down");
+                break;
+
+            case 45:
+                Debug.Log("case 45:");
+                //Debug.Log("angle.x > 0");
+                if (dir == 1)
+                    _pc.animator.Play("Player_Shoot_Angled_Up");
                 else
-                {
-                    //Debug.Log("angle.x < 0");
-                    // up/facing-left: 270  
-                    if (!_pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Up"))
-                        _pc.animator.Play("Player_Shoot_Up");
-                }
+                    _pc.animator.Play("Player_Shoot_Angled_Down");
+                break;
+            case 135:
+                Debug.Log("case 135:");
+                //Debug.Log("angle.x > 0");
+                _pc.animator.Play("Player_Shoot_Angled_Up");
+
+                break;
+
+            case 225:
+                //Debug.Log("angle.x < 0");
+                // down-angle/facing-left: 45
+                //.9238796
+                Debug.Log("case 225:");
+                _pc.animator.Play("Player_Shoot_Angled_Down");
+                //if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Down"))
                 break;
 
             case 315:
-                //Debug.Log("case 315:");
-                if (aimDir.x > 0)
-                {
-                    //Debug.Log("angle.x > 0");
-                    // down-angle/facing-right: 315
-                    if (!_pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Down"))
-                        _pc.animator.Play("Player_Shoot_Angled_Down");
-                }
+                Debug.Log("case 315:");
+                if (dir == 1)
+                    _pc.animator.Play("Player_Shoot_Angled_Down");
                 else
-                {
-                    //Debug.Log("angle.x < 0");
-                    // up-angle/facing-left: 315
-                    if (!_pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Up"))
-                        _pc.animator.Play("Player_Shoot_Angled_Up");
-                }
-                break;
-
-
-            case 90:
-                //Debug.Log("case 90:");
-                if (aimDir.x > 0)
-                {
-                    //Debug.Log("angle.x > 0");
-                    // up/facing-right: 90
-                    if (!_pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Down"))
-                        _pc.animator.Play("Player_Shoot_Down");
-                }
-                else
-                {
-                    //Debug.Log("angle.x < 0");
-                    // down/facing-left: 90
-                    if (!_pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Up"))
-                        _pc.animator.Play("Player_Shoot_Up");
-                }
-
+                    _pc.animator.Play("Player_Shoot_Angled_Up");
                 break;
 
             default:

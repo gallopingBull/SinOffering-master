@@ -1208,7 +1208,7 @@ GameObject:
   - component: {fileID: 2791437912799178983}
   - component: {fileID: 944089160}
   m_Layer: 9
-  m_Name: Sprite_MegaMan
+  m_Name: Sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1674,8 +1674,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d05b4a873021a2842832ce92d9a32209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
-  Speed: 250
+  _health: 100
+  Speed: 200
   MaxSpeed: 10
   AccSpeed: 0.15
   DeAccSpeed: 0.15

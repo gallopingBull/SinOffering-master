@@ -78,7 +78,7 @@ public class WeaponManager : MonoBehaviour
             }
         }
 
-        Debug.Log($"tmpPos: {tmpPos}");
+        //Debug.Log($"tmpPos: {tmpPos}");
         mainHandSocket.localPosition = tmpPos;
         _pc.EquippedWeapon.transform.position = mainHandSocket.position;
     }
