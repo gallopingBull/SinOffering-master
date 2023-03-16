@@ -511,15 +511,19 @@ public class InputHandler : MonoBehaviour
                 // this is weird. might have to change for 'dir' instead.
                 //Debug.Log("angle.x < 0");
                 // down/facing-left: 90
-                if (!_pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Up"))
+                if (dir == 1)
                     _pc.animator.Play("Player_Shoot_Up");
+                else
+                    _pc.animator.Play("Player_Shoot_Down");
                 break;
 
             case 270:
                 Debug.Log("case 270:");
                 // down/facing-right: 270
-                if (!_pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Down"))
+                if (dir == 1)
                     _pc.animator.Play("Player_Shoot_Down");
+                else
+                    _pc.animator.Play("Player_Shoot_Up");
                 break;
 
             case 45:
@@ -532,8 +536,8 @@ public class InputHandler : MonoBehaviour
                 break;
             case 135:
                 Debug.Log("case 135:");
-                //Debug.Log("angle.x > 0");
-                _pc.animator.Play("Player_Shoot_Angled_Up");
+
+                //_pc.animator.Play("Player_Shoot_Angled_Up");
 
                 break;
 
@@ -542,7 +546,7 @@ public class InputHandler : MonoBehaviour
                 // down-angle/facing-left: 45
                 //.9238796
                 Debug.Log("case 225:");
-                _pc.animator.Play("Player_Shoot_Angled_Down");
+                //_pc.animator.Play("Player_Shoot_Angled_Down");
                 //if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Down"))
                 break;
 
