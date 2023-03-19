@@ -141,7 +141,10 @@ public class InputHandler : MonoBehaviour
 
                     else if (_rightStickAimDirection.magnitude > RS_DeadZone)
                     {
-                        _aimDir = _rightStickAimDirection.x > .22f ? 1 : -1;
+                        if (_rightStickAimDirection.x > 0)
+                            _aimDir = 1;
+                        else
+                            _aimDir = -1;
 
                         _pc.FlipEntityAimingSprite(_aimDir);
                         if (_aimDir != 0)
