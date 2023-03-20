@@ -36,6 +36,12 @@ public class InputHandler : MonoBehaviour
     [Tooltip("Custom Deadzone for Right Joystick")]
     public float RS_DeadZone = 0.9f;
 
+    // 
+    // 
+    [Tooltip(".22f is the desired value because it offers more grandularity but there's issues using " +
+    "it. Assigned to 0f in the inspector for now.")]
+    public float Aiming_DeadZone = .22f;
+
     [HideInInspector]
     public bool aiming = false;
     private Vector2 _rightStickAimDirection;
@@ -141,11 +147,22 @@ public class InputHandler : MonoBehaviour
 
                     else if (_rightStickAimDirection.magnitude > RS_DeadZone)
                     {
-                        if (_rightStickAimDirection.x > 0)
+                        if (_rightStickAimDirection.x > Aiming_DeadZone)
+                        {
+                            Debug.Log("flip right");
                             _aimDir = 1;
-                        else
-                            _aimDir = -1;
 
+                        }
+                        else if (_rightStickAimDirection.x < -Aiming_DeadZone)
+                        {
+                            Debug.Log("flip left");
+                            _aimDir = -1;
+                        }
+                        else
+                        {
+                            Debug.Log("neither");
+                        }
+                        Debug.Log($"_aimDir: {_aimDir}");
                         _pc.FlipEntityAimingSprite(_aimDir);
                         if (_aimDir != 0)
                         {
@@ -549,8 +566,11 @@ public class InputHandler : MonoBehaviour
                 // down-angle/facing-left: 45
                 //.9238796
                 Debug.Log("case 225:");
-                //_pc.animator.Play("Player_Shoot_Angled_Down");
-                //if (!pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Angled_Down"))
+                if (dir == 1)
+                    _pc.animator.Play("Player_Shoot_Down");
+                else
+                    _pc.animator.Play("Player_Shoot_Up");
+
                 break;
 
             case 315:
