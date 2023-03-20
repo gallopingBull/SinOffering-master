@@ -926,6 +926,9 @@ TextureImporter:
   - first:
       213: 964190643905233800
     second: Player_Run_Shoot_15
+  - first:
+      213: -1830786869913771413
+    second: playerSoma_308
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -5077,9 +5080,9 @@ TextureImporter:
         x: 178
         y: 1004
         width: 34
-        height: 44
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 43
+      alignment: 9
+      pivot: {x: 0.31, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5307,10 +5310,10 @@ TextureImporter:
         serializedVersion: 2
         x: 183
         y: 923
-        width: 34
+        width: 27
         height: 51
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.39, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5412,10 +5415,10 @@ TextureImporter:
         serializedVersion: 2
         x: 178
         y: 862
-        width: 34
-        height: 44
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 30
+        height: 43
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5517,9 +5520,9 @@ TextureImporter:
         serializedVersion: 2
         x: 178
         y: 783
-        width: 34
-        height: 44
-      alignment: 7
+        width: 22
+        height: 43
+      alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
