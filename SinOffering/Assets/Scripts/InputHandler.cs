@@ -148,21 +148,12 @@ public class InputHandler : MonoBehaviour
                     else if (_rightStickAimDirection.magnitude > RS_DeadZone)
                     {
                         if (_rightStickAimDirection.x > Aiming_DeadZone)
-                        {
-                            Debug.Log("flip right");
                             _aimDir = 1;
-
-                        }
                         else if (_rightStickAimDirection.x < -Aiming_DeadZone)
-                        {
-                            Debug.Log("flip left");
                             _aimDir = -1;
-                        }
                         else
-                        {
                             Debug.Log("neither");
-                        }
-                        Debug.Log($"_aimDir: {_aimDir}");
+
                         _pc.FlipEntityAimingSprite(_aimDir);
                         if (_aimDir != 0)
                         {

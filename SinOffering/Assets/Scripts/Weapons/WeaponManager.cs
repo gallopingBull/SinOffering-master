@@ -61,13 +61,14 @@ public class WeaponManager : MonoBehaviour
     {
         Vector3 tmpPos = mainHandSocket.localPosition;
         if (_pc.inputHandler.aiming)
-        {
-            if (_pc.inputHandler._aimDir != 1)
+        {   // aiming up
+            if (_pc.animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot_Up"))
+                return;
+            if (_pc.inputHandler._aimDir != 1 /*&& _pc.*/)
             {
                 //Debug.Log("calling UpdateWeaponSocket() from aiming condition");
                 tmpPos.x *= -_handSocketOffsetValue;
             }
-
         }
         else
         {
@@ -78,8 +79,10 @@ public class WeaponManager : MonoBehaviour
             }
         }
 
-        //Debug.Log($"tmpPos: {tmpPos}");
+        Debug.Log($"tmpPos.x: {tmpPos.x}");
+        Debug.Log($"_aimDir: {_pc.inputHandler._aimDir}");
         mainHandSocket.localPosition = tmpPos;
+        Debug.Log($"mainHandSocket: {mainHandSocket.name}");
         _pc.EquippedWeapon.transform.position = mainHandSocket.position;
     }
     public void ModifyWeaponRotation(int dir, Vector3 angle)
