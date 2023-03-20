@@ -644,7 +644,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5681888366023783760
 Transform:
   m_ObjectHideFlags: 0
@@ -1793,6 +1793,7 @@ MonoBehaviour:
   R_yRaw: 0
   LS_DeadZone: 0.75
   RS_DeadZone: 0.9
+  Aiming_DeadZone: 0
   aiming: 0
   _aimDir: 0
   evadeDelay: 0
