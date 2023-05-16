@@ -172,7 +172,7 @@ public class InputHandler : MonoBehaviour
 
                 if ((Input.GetButton("Fire1") || Input.GetAxis("RightTrigger") == 1))
                 {
-                    //Debug.Log("pressing trigger");
+                    Debug.Log("pressing right trigger");
                     if (GetComponent<DashCommand>().dashState == DashCommand.DashState.completed)
                         Commands.Add(_fireCommand);
                 }
@@ -244,8 +244,10 @@ public class InputHandler : MonoBehaviour
                 }
 
                 // Dash Attack
-                if (Input.GetAxis("LeftTrigger") == 1 && !_gameManager.GameCompleted)
+                if (Input.GetAxis("LeftTrigger") == 1 && !_gameManager.GameCompleted){
+                    Debug.Log("left trigger is being pulled");
                     Commands.Add(_dashCommand);
+                }
 
                 // Melee Attack
                 if (Input.GetButtonDown("Melee") && !_gameManager.GameCompleted)

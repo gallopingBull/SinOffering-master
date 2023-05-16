@@ -10,7 +10,7 @@ public class PlayerSettings : MonoBehaviour
     int resX, resY;
     int refreshRate;
     public bool fullScreenEnabled;
-    public static StereoRenderingPath stereoRenderingPath;
+    //public static StereoRenderingPath stereoRenderingPath;
 
     // Start is called before the first frame update
     void Start()
