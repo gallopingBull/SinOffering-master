@@ -97,6 +97,9 @@ public class InputHandler : MonoBehaviour
 
     public List<Command> HandleInput()
     {
+        Debug.Log($"left trigger: {Input.GetAxis("LeftTrigger")}");
+        Debug.Log($"right trigger: {Input.GetAxis("RightTrigger")}");
+        
         if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick button 7")))
             GetComponent<Pause>().PauseGame();
 
