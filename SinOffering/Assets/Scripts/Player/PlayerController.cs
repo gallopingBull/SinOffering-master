@@ -80,7 +80,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     protected override void FixedUpdate()
     {
         inputHandler.InputDelay();
-        
+
         #region testing
         //InputDelay2();
         //InputDelay.InputDelayHandler(state); // manages delay timers for several different input/actions
@@ -129,12 +129,12 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
             button.SetActive(false);
         }*/
         #endregion
-        
+
         SetDefaultSpeed();
         animator = GetComponentInChildren<Animator>();
         inputHandler = GetComponent<InputHandler>();
         weaponManager = GetComponent<WeaponManager>();
-        _particleSystem = GetComponent<ParticleSystem>(); 
+        _particleSystem = GetComponent<ParticleSystem>();
         InputDelay = GetComponent<InputDelay>();
     }
     /*
@@ -310,7 +310,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
                     StateManager.EnterState(State.falling);
             }
         }
-    }   
+    }
 
     public void EnableInput() => InputEnabled = true;
 
@@ -321,7 +321,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         this._attributes = _attributes;
         SetAttributeValues();
     }
-     
+
     private void SetAttributeValues()
     {
         var dataBase = AttributeDatabase._instance.GetAttributeDatabase();
@@ -329,7 +329,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         int maxLength = dataBase["health"].AttributeDataList.Length;
         if (_attributes.HealthAttributeLevel < maxLength)
             Health = dataBase["health"].AttributeDataList[_attributes.HealthAttributeLevel].AttributeValue;
-        
+
         maxLength = dataBase["speed"].AttributeDataList.Length;
         if (_attributes.SpeedAttributeLevel < maxLength)
             Speed = dataBase["speed"].AttributeDataList[_attributes.SpeedAttributeLevel].AttributeValue;
@@ -344,7 +344,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
     }
 
     // store functions (might want to move these interfaces in to their own class,
-    // and give playercontroller.cs its own instance of that cla ss)
+    // and give playercontroller.cs its own instance of that class)
     #region IWeaponStoreCustomer, IAttributeStoreCustomer
 
     void IWeaponStoreCustomer.PurchaseWeapon(string _weaponName)
@@ -356,7 +356,7 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
         }
         //Debug.Log("Purchased: " + _weaponName);
     }
-    
+
     bool IWeaponStoreCustomer.CanPurchaseWeapon(int _price)
     {
         // check if already purchased or if
@@ -460,5 +460,4 @@ public class PlayerController : Entity, IWeaponStoreCustomer, IAttributeStoreCus
 
     #endregion
 }
-   
- 
+
